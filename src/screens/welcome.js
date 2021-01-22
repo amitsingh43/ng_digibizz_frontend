@@ -307,60 +307,6 @@ const SuccessStories = () => {
 };
 
 const MobileView = () => {
-	const services = [
-		{
-			image: sell_online,
-			label: "Sell Online",
-		},
-		{
-			image: delivery_services,
-			label: "Delivery Services",
-		},
-		{
-			image: business_loans,
-			label: "Business Loans",
-		},
-		{
-			image: manage_stock,
-			label: "Manage Stock",
-		},
-		{
-			image: website,
-			label: "Create Website or mobile",
-		},
-		{
-			image: billing,
-			label: "Billing & Accounting",
-		},
-		{
-			image: digital_khata,
-			label: "Digital Khata",
-		},
-		{
-			image: tax,
-			label: "Tax Filing & Legal",
-		},
-		{
-			image: social_media,
-			label: "Social Media Marketing",
-		},
-		{
-			image: manage_payments,
-			label: "Manage Payments",
-		},
-		{
-			image: manage_staff,
-			label: "Manage Staff",
-		},
-		{
-			image: customer_loyalty,
-			label: "Customer Loyalty & promotions",
-		},
-		{
-			image: insurance,
-			label: "Insurance",
-		},
-	];
 	return (
 		<div className="mobile-view">
 			{services.map((service) => (
