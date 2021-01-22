@@ -1,0 +1,154 @@
+.section-main {
+	/* height: 100vh; */
+	position: relative;
+	color: #68696a;
+	padding-top: 20px;
+}
+
+.section-main .v-main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.step {
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	height: 90px;
+}
+
+.section-main .h-main {
+	display: none;
+}
+
+.section-main .h-main .circle {
+	width: 30px;
+	height: 30px;
+	margin: 10px 0px;
+	border-radius: 50%;
+	background-color: grey;
+	position: relative;
+}
+
+.section-main .h-main .line {
+	width: 17.5vw;
+	height: 1px;
+	background-color: grey;
+	position: absolute;
+	top: 15px;
+}
+
+.v-stepper {
+	position: relative;
+	/*   visibility: visible; */
+}
+
+/* regular step */
+.step .circle {
+	background-color: gray;
+	border: 3px solid gray;
+	border-radius: 100%;
+	width: 20px; /* +6 for border */
+	height: 20px;
+	display: inline-block;
+}
+
+.step .line {
+	top: 20px;
+	left: 10px;
+	height: 100%;
+
+	position: absolute;
+	border-left: 1px solid gray;
+}
+
+.step.active .circle {
+	visibility: visible;
+	background-color: white;
+	border-color: #28b04b;
+	border-width: 7px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: -5px;
+	top: -5px;
+}
+.step.active .content {
+	margin-left: 40px;
+	color: #28b04b;
+}
+
+.step.active .line {
+	top: 25px;
+}
+
+.step:last-child .line {
+	border-left: 3px solid white;
+	z-index: -1; /* behind the circle to completely hide */
+}
+
+.step .content {
+	margin-left: 20px;
+	font-size: 23px;
+	text-align: center;
+	line-height: 23px;
+	display: inline-block;
+}
+
+.below {
+	font-size: 13px;
+	text-align: center;
+	color: #28b04b;
+	position: relative;
+	line-height: 20px;
+	margin-top: 2000px;
+}
+
+@media (max-width: 75rem) {
+	.section-main {
+		padding: 0px;
+		height: auto;
+	}
+	.section-main .v-main {
+		display: none;
+	}
+
+	.section-main .h-main {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 20px;
+		/* font-size: 10px; */
+	}
+
+	.section-main .h-main .active {
+		width: 40px;
+		height: 40px;
+		margin-top: 5px;
+
+		background-color: white;
+		border: 10px solid #28b04b;
+	}
+
+	.section-main .h-main .row {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.section-main .h-main .active .line {
+		top: 9px;
+		width: 17vw;
+		left: 0vw;
+		z-index: -1;
+	}
+}
+
+@media (max-width: 48rem) {
+	.section-main .h-main {
+		font-size: 10px;
+	}
+}

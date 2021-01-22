@@ -1,0 +1,42 @@
+.understand-main {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #eaf7ed;
+	font-family: "Rubik";
+	padding: 20px;
+}
+.understand-main .row {
+	margin-left: 0px;
+}
+h4 {
+	color: #68696a;
+	font-size: 30px;
+	font-weight: bolder;
+	padding-bottom: 10px;
+}
+
+@media (min-width: 938px) and (max-width: 75rem) {
+	.card-view {
+		display: flex;
+		/* grid-template-columns: auto auto auto auto; */
+	}
+}
+
+@media (max-width: 48rem) {
+	.understand-main {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.understand-main h4 {
+		font-size: 25px;
+		padding: 0px 60px;
+		font-weight: bold;
+		margin-bottom: 30px;
+	}
+	.understand-main .row:nth-last-child(1) {
+		/* display: flex; */
+		width: 100%;
+		justify-content: center;
+	}
+}

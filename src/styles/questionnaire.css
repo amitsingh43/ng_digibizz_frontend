@@ -1,0 +1,129 @@
+html {
+	overflow: visible !important;
+	font-family: "Rubik", sans-serif !important;
+}
+.questions {
+	text-align: left;
+	padding: 10px 0px;
+	margin-left: -50px;
+	margin-bottom: 30px;
+	font-size: 18px;
+	color: #68696a;
+}
+
+.questions li {
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+.options {
+	position: relative;
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	margin-top: 10px;
+}
+
+.options label {
+	font-style: normal;
+	font-family: Rubik;
+	padding-left: 20px;
+	margin-top: 10px;
+	font-weight: normal;
+}
+
+input[type="radio"] {
+	/* -webkit-appearance: none; */
+	width: 15px;
+	height: 15px;
+	/* border: 1px solid gainsboro; */
+	border-radius: 50%;
+	/* outline: none; */
+	margin-top: 10px;
+}
+
+input[type="checkbox"] {
+	margin-top: 10px;
+	width: 15px;
+	height: 15px;
+}
+
+input[type="radio"]:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* background-color: black; */
+	border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+	background: #28b04b;
+	box-shadow: 0 0 5px 0px #28b04b inset;
+}
+input[type="checkbox"]:checked {
+	/* background-color: #28b04b; */
+}
+.back {
+	background-color: white;
+	color: #28b04b;
+	border-width: 0.5px;
+	border-style: double;
+	border-color: #28b04b;
+	text-decoration: none;
+}
+.main .row2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.main .a {
+	text-decoration: none;
+}
+
+@media (max-width: 75rem) {
+	.main {
+		float: none;
+		padding: 0px;
+	}
+	.main .row {
+		margin: 0px;
+		padding: 0px;
+	}
+	.col-sm-6 {
+		width: 50%;
+		float: left;
+	}
+	.questions {
+		padding: 0px;
+		margin: 20px 0px;
+		font-size: 15px;
+		line-height: 10px;
+	}
+	.ques {
+		/* margin-top: 170px; */
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+		margin: 0px;
+		padding: 20px 5px;
+	}
+	.options label {
+		top: 13px;
+	}
+
+	.main .row2 {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 48rem) {
+	.options label {
+		font-size: 12px;
+		top: 0px;
+		margin-left: 0px;
+		padding-left: 20px;
+	}
+}

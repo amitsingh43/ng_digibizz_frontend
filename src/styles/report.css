@@ -1,0 +1,10 @@
+.report-main {
+	background-color: rgba(229, 229, 229, 0.4);
+	padding-top: 20px;
+}
+
+@media (max-width: 48rem) {
+	.report-main {
+		padding: 0px;
+	}
+}

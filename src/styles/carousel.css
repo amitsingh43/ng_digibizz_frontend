@@ -1,0 +1,157 @@
+.carousel-main {
+	margin: -30px 0px 0px 0px;
+	font-family: "Rubik";
+}
+
+.carousel-main .row {
+	margin: 0px;
+	padding: 0px;
+}
+
+.carousel-main .col-lg-6,
+.carousel-main .col-lg-4 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.carousel-main .col-lg-4 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-direction: column;
+}
+
+.carousel-main .punctuation1,
+.carousel-main .punctuation2 {
+	width: 20px;
+	margin-left: 10px;
+}
+.carousel-main .punctuation1 {
+	float: left;
+	margin-right: 10px;
+}
+.carousel-main .punctuation2 {
+	clear: both;
+	margin-bottom: 30px;
+}
+
+.testimonial-main {
+	overflow-y: scroll;
+}
+.carousel-indicators {
+	/* margin-top: 2000px; */
+}
+.carousel-indicators li {
+	background-color: grey;
+	margin: 0px 10px;
+}
+
+.carousel-indicators .active {
+	background-color: green;
+	margin: 0px 10px;
+}
+.carousel-main .content {
+	padding: 40px;
+	/* height: 100%; */
+}
+
+.carousel-main h5 {
+	color: #267a3b;
+	font-size: large;
+	font-weight: bolder;
+}
+
+.carousel-main .row {
+	margin-top: 50px;
+}
+
+.carousel-main .item .col-lg-6,
+.carousel-main .item .col-lg-4 {
+	background-color: white;
+	height: 400px;
+}
+
+.carousel-main .item {
+	padding-left: 0px;
+	margin-left: 0px;
+	height: fit-content;
+	box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-main .industry {
+	color: black;
+	font-weight: bold;
+	padding: 10px 0px;
+}
+
+.carousel-main p {
+	font-size: 15px;
+	line-height: 27px;
+	/* padding: 20px; */
+}
+
+.carousel-main img {
+	/* width: inherit; */
+	object-fit: cover;
+}
+
+.view-more {
+	color: #267a3b;
+	font-weight: bold;
+}
+
+@media (min-width: 48rem) and (max-width: 75rem) {
+	.carousel-main {
+		margin: 0px 40px;
+	}
+	.carousel-main .carousel-inner {
+		display: flex;
+		width: 100%;
+		background-color: white;
+		/* margin: 0px 10px; */
+	}
+	.carousel-main .content {
+		/* padding: 0px; */
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+	.carousel-main .carousel-inner .img-responsive {
+		width: 350px;
+	}
+	.carousel-main h5 {
+		font-size: medium;
+	}
+	.carousel-main p {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 48rem) {
+	.carousel-main {
+		margin: 0px 40px;
+	}
+	.carousel-main img {
+		width: 100vw;
+	}
+	.carousel-main h5 {
+		margin: 30px 0px 0px 30px;
+	}
+	.carousel-main p {
+		margin: 0px 0px 0px 30px;
+	}
+	.carousel-main .item {
+		background-color: white;
+		padding: 0px;
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+	}
+	.carousel-main .item .col-lg-6,
+	.carousel-main .item .col-lg-4 {
+		background-color: transparent;
+	}
+	.view-more {
+		padding-left: 30px;
+		margin-top: 50px;
+	}
+}

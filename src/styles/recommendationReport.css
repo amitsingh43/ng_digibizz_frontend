@@ -1,0 +1,153 @@
+.recommend-main {
+	/* margin: 0px; */
+	/* padding: 0px; */
+	position: relative;
+	color: #68696a;
+	padding-top: 30px;
+	margin: 0px 20px;
+	margin-bottom: 30px;
+}
+
+.recommend-main .row {
+	margin: 0px;
+	padding: 0px;
+}
+
+.recommend-main .container {
+	text-align: center;
+}
+
+.recommend-main h3 {
+	font-size: 30px;
+}
+
+.recommend-main .card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+	color: #68696a;
+	font-size: 13px;
+	margin: 0px 20px;
+	text-align: center;
+	word-spacing: 6px;
+	line-height: 20px;
+	height: 30rem;
+	text-align: center;
+	border-radius: 20px;
+	/* box-shadow: 1px 1px 1px #d1d1d1; */
+}
+
+.recommend-main .button-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin: 20px 0px;
+	cursor: pointer;
+}
+
+.recommend-main .row {
+	position: relative;
+}
+
+.recommend-main .row p {
+	color: #28b04b;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	cursor: pointer;
+}
+
+.recommend-main .container h4 {
+	font-weight: normal;
+	color: black;
+	font-family: "Rubik";
+	font-size: 20px;
+	margin-top: 50px;
+}
+
+.recommend-main .percentagee img {
+	height: 65px;
+}
+
+.recommend-main .download-btn img {
+	height: 18px;
+	padding-left: 20px;
+}
+
+.recommend-main .percentagee div {
+	height: 100px;
+	/* position: absolute; */
+	/* padding: 0px 20px; */
+	/* transform: translateX(-50%); */
+}
+
+.recommend-main .percentagee img {
+	/* height: 40px; */
+	/* padding: 0px 20px 10px 20px; */
+	/* top: -40px; */
+	/* height: 50px; */
+	position: relative;
+	margin-top: 20px;
+	/* border-radius: 50%; */
+}
+
+.download-btn {
+	background-color: #28b04b;
+	height: fit-content;
+	border-radius: 30px;
+	padding: 10px;
+	color: white;
+	line-height: 30px;
+	width: 25%;
+	/* font-weight: bold; */
+}
+
+.card span {
+	line-height: 20px;
+	text-align: center;
+	/* margin: 10px 40px 10px 50px; */
+}
+
+@media (min-width: 48rem) and (max-width: 1200px) {
+	.recommend-main .card {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		height: 22rem;
+	}
+
+	.recommend-main .percentagee div {
+		left: 0px;
+	}
+}
+
+@media (max-width: 48rem) {
+	.recommend-main {
+		padding: 0px 10px;
+	}
+	.recommend-main h3 {
+		text-align: center;
+		font-weight: bolder;
+		font-size: 23px;
+		margin-bottom: 20px;
+	}
+	.recommend-main .card {
+		margin: 0px 0px;
+		height: 31rem;
+		text-align: center;
+	}
+	.recommend-main .percentagee div {
+		left: 0px;
+	}
+	.download-btn {
+		width: 50%;
+		margin-left: 0px;
+		padding: 10px 0px;
+	}
+	.recommend-main .container h4 {
+		text-align: center;
+		font-size: 13px;
+		/* float: left; */
+	}
+}

@@ -1,0 +1,104 @@
+html {
+	font-family: "Rubik", sans-serif !important;
+}
+
+.main-report .business-name {
+	font-size: 23px;
+	word-spacing: 5px;
+	line-height: 30px;
+	color: #68696a;
+}
+
+.main-report .score {
+	color: #28b04b;
+	font-size: 70px;
+	font-weight: normal;
+	font-family: "Rubik";
+	margin-bottom: 60px;
+}
+
+.main-report .namaste {
+	color: #68696a;
+	margin: 5px;
+	font-size: 27px;
+	line-height: 40px;
+}
+.main-report .name {
+	color: #28b04b;
+	font-size: 40px;
+	line-height: 60px;
+	font-weight: bolder;
+
+	font-family: "Rubik";
+}
+
+.main-report .btns,
+.btns-small {
+	background-color: #28b04b;
+	font-family: "Rubik";
+	cursor: pointer;
+	border-radius: 20px;
+	padding: 15px 40px;
+	margin: 0px 20px;
+	color: white;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.main-report {
+	background-color: #eaf7ed;
+	text-align: center;
+	line-height: 25px;
+	padding: 20px;
+	margin: 0px 20px;
+}
+
+.btns-small {
+	display: none;
+}
+
+.main-report .report-img {
+	margin: 0px 0px 30px 0px;
+}
+
+.main-report .btns img {
+	height: 18px;
+	padding-left: 20px;
+}
+
+.main-report .happy {
+	padding: 0px 15vw;
+	padding-top: 30px;
+	color: #28b04b;
+	line-height: 30px;
+	font-size: 20px;
+	font-family: "Rubik";
+	font-weight: lighter;
+}
+
+@media (max-width: 48rem) {
+	.main-report .btns {
+		display: none;
+	}
+	.main-report .btns-small {
+		display: block;
+		width: 75%;
+		padding: 15px 20px;
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	.main-report .btns-small img {
+		float: right;
+	}
+	.main-report .happy {
+		margin: 30px 0px;
+		padding: 0px;
+		font-size: 17px;
+		font-weight: normal;
+	}
+	.main-report .outer-btn {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+}
