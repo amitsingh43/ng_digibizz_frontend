@@ -73,9 +73,9 @@ const ServiceIcon = (props) => {
 };
 
 const ExploreOurServices = () => {
-	const services1 = services.splice(0, 5);
-	const services2 = services.splice(5, 11);
-	const services3 = services.splice(11, 13);
+	const services1 = services.slice(0, 5);
+	const services2 = services.slice(5, 10);
+	const services3 = services.slice(10, 13);
 	return (
 		<div className="container">
 			<div className="heading">Explore our services</div>
