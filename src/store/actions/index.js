@@ -13,6 +13,7 @@ import {
 	SET_QUESTIONS,
 	GET_QUESTIONS,
 	SET_RECOMMENDATIONS,
+	SET_RESULTS,
 } from "../actionTypes/index";
 import { _get, _post } from "../api";
 
@@ -506,7 +507,7 @@ const report = {
 };
 
 const { questionnaire, lead } = respone;
-const { recommendations } = report;
+export const { recommendations, section_results, questionnaire_take } = report;
 
 export const increment = () => {
 	return {
@@ -567,7 +568,7 @@ export const get_api_call = () => async (dispatch) => {
 		const response = await _get();
 		dispatch(set_user_details(response));
 	} catch (error) {
-		console.log(error);
+		alert(error);
 	}
 };
 export function post_api_call() {
@@ -597,7 +598,7 @@ export const get_questions_from_api = () => async (dispatch) => {
 	try {
 		await dispatch(set_questions(questionnaire));
 	} catch (error) {
-		console.log(error);
+		alert(error);
 	}
 };
 export const set_recommendations_write = (recommendations) => {
@@ -610,9 +611,18 @@ export const set_recommendations = () => async (dispatch) => {
 	try {
 		await dispatch(set_recommendations_write(recommendations));
 	} catch (error) {
-		console.log(error);
+		alert(error);
 	}
 };
 export const test_user = () => (dispatch) => {
 	dispatch(set_user_details(lead));
+};
+export const set_results = (results) => {
+	return {
+		type: SET_RESULTS,
+		payload: results,
+	};
+};
+export const dispatch_results = () => (dispatch) => {
+	dispatch(set_results({ section_results, questionnaire_take }));
 };

@@ -93,7 +93,6 @@ function Home({
 			turnover: turnover,
 			businessName: businessName,
 		});
-		console.log(user);
 		history.push("/questionnaire");
 		_back();
 	};

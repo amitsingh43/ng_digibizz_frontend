@@ -6,7 +6,7 @@ import digital_transactions from "../assets/sections/digital_transactions.svg";
 import digital_operations from "../assets/sections/digital_operations.svg";
 import digital_engagement from "../assets/sections/digital_engagement.svg";
 
-function UnderstandReport() {
+function UnderstandReport({ section_results }) {
 	const cardData = [
 		{
 			title: "Digital Discovery",
@@ -15,7 +15,7 @@ function UnderstandReport() {
 			image: digital_discovery,
 		},
 		{
-			title: "Digital Fullfilment",
+			title: "Digital Fulfillment",
 			desc:
 				"Recommends the best practices to be adopted for the best buyer experience such as partnerships with delivery platforms. ",
 			image: digital_fulfillment,
@@ -43,9 +43,15 @@ function UnderstandReport() {
 		<div className="understand-main">
 			<h4>Understand your Digit-o-Meter Score</h4>
 			<div className="row card-view">
-				{cardData.map((card) => (
-					<Card image={card.image} title={card.title} desc={card.desc} />
-				))}
+				{Object.keys(section_results).length > 0 &&
+					cardData.map((card) => (
+						<Card
+							image={card.image}
+							title={card.title}
+							desc={card.desc}
+							score={section_results[card.title]}
+						/>
+					))}
 			</div>
 		</div>
 	);

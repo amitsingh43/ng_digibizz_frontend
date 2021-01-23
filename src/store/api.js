@@ -2,7 +2,6 @@ import axiosInstance from "../util/axiosInstance";
 
 export const _get = async (ENDPOINT = "/movies.json") => {
 	try {
-		console.log(axiosInstance);
 		const respone = await axiosInstance.get(ENDPOINT);
 		return respone;
 	} catch (error) {

@@ -35,7 +35,7 @@ function Questionnaire({
 	const submit = () => {
 		var final = [];
 		answers.filter((answer) => final.push(answer.id));
-		console.log(final);
+		alert(final);
 	};
 	const next = () => {
 		if (topicCounter < 5) {

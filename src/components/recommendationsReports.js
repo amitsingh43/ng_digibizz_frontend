@@ -1,13 +1,20 @@
 import "../styles/recommendationReport.css";
 import download from "../assets/download.svg";
-import social_media from "../assets/services/social_media.svg";
 import { services } from "../store/services_mapping";
+import { useEffect, useState } from "react";
 
 const Percetage = (props) => {
+	const { name } = props;
+	// alert(name);
+	const [image, setImage] = useState(null);
+	let ss = services.find((service) => service.tag === name);
+	useEffect(() => {
+		setImage(ss.image);
+	}, [ss]);
 	return (
 		<div className="percentagee ">
 			<div className="justify-content-md-center">
-				<img src={props.img} />
+				<img src={image} />
 			</div>
 		</div>
 	);
@@ -20,11 +27,7 @@ const RecCard = ({ recommendations }) => {
 			{results &&
 				results.map((recommendation) => (
 					<div className="col-lg-2 col-xs-6 card">
-						<Percetage
-							img={require("../assets/services/" +
-								recommendation.category +
-								".svg")}
-						/>
+						<Percetage name={recommendation.category} />
 						{recommendation.name}
 					</div>
 				))}

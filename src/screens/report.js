@@ -9,6 +9,8 @@ import {
 	header_digital_status,
 	test_user,
 	set_recommendations,
+	section_results,
+	questionnaire_take,
 } from "../store/actions";
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
@@ -24,19 +26,23 @@ function Report({
 		set_recommendations();
 	}, []);
 	const history = useHistory();
-	console.log(userDetails);
-	if (userDetails.user === 1) {
+	if (userDetails.user === null) {
 		history.push("/knowStatus");
 		return <div>Redirecting</div>;
 	} else {
 		header_digital_status();
 		return (
 			<div className="report-main">
-				{userDetails.user && <MainReport userDetails={userDetails} />}
+				{userDetails.user && (
+					<MainReport
+						questionnaire_take={questionnaire_take}
+						userDetails={userDetails}
+					/>
+				)}
 				{recommendations && (
 					<RecommendationsReports recommendations={recommendations} />
 				)}
-				<UnderstandReport />
+				<UnderstandReport section_results={section_results} />
 				<Testimonials />
 				<Footer />
 			</div>

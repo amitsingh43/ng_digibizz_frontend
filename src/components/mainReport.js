@@ -2,8 +2,9 @@ import "../styles/mainReport.css";
 import email_icon from "../assets/email.svg";
 import download from "../assets/download.svg";
 import report from "../assets/report.svg";
-function MainReport({ userDetails }) {
+function MainReport({ userDetails, questionnaire_take }) {
 	const { full_name, business_name, email } = userDetails.user;
+	const { percentage } = questionnaire_take;
 	return (
 		<div className="main-report">
 			<div className="namaste">Namaste!</div>
@@ -14,7 +15,7 @@ function MainReport({ userDetails }) {
 			<div className="report-img">
 				<img alt="report" src={report} />
 			</div>
-			<div className="score">65%</div>
+			<div className="score">{percentage}%</div>
 			<div>
 				<span className="btns">
 					Download Report

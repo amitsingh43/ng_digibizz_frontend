@@ -32,7 +32,6 @@ const ServicesCategory = () => {
 
 const PartnerCard = (props) => {
 	const { title, description, image, subTitle, backgroundColor } = props;
-	console.log(image);
 	return (
 		<div className=" col-md-5  partner-card ">
 			<div className=" col-md-4" style={{ backgroundColor: backgroundColor }}>

@@ -1,19 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/welcome.css";
 import welcome_bg from "../assets/welcome_bg.png";
-import sell_online from "../assets/services/sell_online.svg";
-import delivery_services from "../assets/services/delivery_services.svg";
-import business_loans from "../assets/services/business_loans.svg";
-import manage_stock from "../assets/services/manage_stock.svg";
-import website from "../assets/services/website.svg";
-import billing from "../assets/services/billing.svg";
-import digital_khata from "../assets/services/digital_khata.svg";
-import tax from "../assets/services/tax.svg";
-import social_media from "../assets/services/social_media.svg";
-import manage_payments from "../assets/services/manage_payments.svg";
-import manage_staff from "../assets/services/manage_staff.svg";
-import customer_loyalty from "../assets/services/customer_loyalty.svg";
-import insurance from "../assets/services/insurance.svg";
 import digital_discovery from "../assets/sections/digital_discovery.svg";
 import digital_fulfillment from "../assets/sections/digital_fulfillment.svg";
 import digital_transactions from "../assets/sections/digital_transactions.svg";
@@ -329,9 +316,7 @@ function Welcome({
 	header_reset();
 	useEffect(() => {
 		window.scrollTo(0, 0);
-		console.log(get_api_call());
 	}, []);
-	console.log(userDetails);
 	return (
 		<div>
 			<div className="welcome">

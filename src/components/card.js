@@ -1,9 +1,10 @@
 import "../styles/card.css";
-const Percetage = () => {
+const Percetage = ({ score }) => {
+	const { percentage } = score;
 	return (
 		<div className="percent">
 			<div>
-				<span>55%</span>
+				<span>{percentage}%</span>
 			</div>
 		</div>
 	);
@@ -11,9 +12,9 @@ const Percetage = () => {
 function Card(props) {
 	return (
 		<div className="card-main col-lg-2 ">
-			<Percetage />
+			<Percetage score={props.score} />
 			<div className="img-title">
-				<img src={props.image} alt="Digital Engagement" />
+				<img src={props.image} alt="Section" />
 				<h6>{props.title}</h6>
 			</div>
 			<p>{props.desc}</p>
