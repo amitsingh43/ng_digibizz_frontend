@@ -5,6 +5,8 @@ import userDetails from "./userDetails";
 import answers from "./answers";
 import questionsList from "./questions";
 import recommendations from "./recommendations";
+import masterData from "./masterData";
+import setResults from "./setResults";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
@@ -15,6 +17,8 @@ const allReducers = combineReducers({
 	answers: answers,
 	questionsList: questionsList,
 	recommendations: recommendations,
+	masterData: masterData,
+	setResults: setResults,
 });
 
 export default allReducers;

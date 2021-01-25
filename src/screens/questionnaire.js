@@ -7,7 +7,7 @@ import {
 	header_digital_status,
 	decrement,
 	add_answer,
-	get_questions_from_api,
+	post_answers,
 } from "../store/actions";
 import Footer from "../components/main/footer";
 import { useEffect } from "react";
@@ -20,12 +20,11 @@ function Questionnaire({
 	add_answer,
 	answers,
 	questionsList,
-	get_questions_from_api,
+	post_answers,
 }) {
 	const history = useHistory();
 	useEffect(() => {
 		window.scrollTo(0, 0);
-		get_questions_from_api();
 	}, []);
 	// if (userDetails.user === null) {
 	// 	history.push("/knowStatus");
@@ -35,7 +34,12 @@ function Questionnaire({
 	const submit = () => {
 		var final = [];
 		answers.filter((answer) => final.push(answer.id));
-		alert(final);
+		const body = {
+			lead_id: localStorage.getItem("lead_id"),
+			answers: final,
+		};
+		console.log(body);
+		post_answers(body, history);
 	};
 	const next = () => {
 		if (topicCounter < 5) {
@@ -43,7 +47,7 @@ function Questionnaire({
 			window.scrollTo(0, 0);
 		} else {
 			submit();
-			history.replace("/report");
+			// history.replace("/report");
 		}
 	};
 	const _back = () => {
@@ -146,5 +150,5 @@ export default connect(mapStateToProps, {
 	header_digital_status,
 	decrement,
 	add_answer,
-	get_questions_from_api,
+	post_answers,
 })(Questionnaire);

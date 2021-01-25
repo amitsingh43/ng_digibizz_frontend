@@ -21,7 +21,6 @@ const TopContent = () => {
 const DetailedCard = () => {
 	const [showVideo, toggleVideo] = useState(false);
 	const videoID = "ETNQ0BXkyQU";
-	var img = require("../assets/success_bg.jpg");
 	return (
 		<div className="col-lg-10 detailed-card-1">
 			<div className="col-lg-6 left-content">
@@ -56,7 +55,8 @@ const DetailedCard = () => {
 			<div
 				className="img-responsive col-lg-6 col-xs-12 thumbnail"
 				style={{
-					backgroundImage: img,
+					backgroundImage: `url(${SUCCESSDATA[0].image})`,
+					border: 0,
 				}}
 			>
 				{showVideo && (

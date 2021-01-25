@@ -14,11 +14,7 @@ import TestimonialsCarousal from "../components/testimonialsCarousal";
 import Footer from "../components/main/footer";
 import { services } from "../store/services_mapping";
 import { Link } from "react-router-dom";
-import {
-	header_reset,
-	homepage_decrement,
-	get_api_call,
-} from "../store/actions";
+import { header_reset, homepage_decrement } from "../store/actions";
 import { connect } from "react-redux";
 import knowledge_1 from "../assets/welcome/knowledge_1.svg";
 import knowledge_2 from "../assets/welcome/knowledge_2.svg";
@@ -307,12 +303,7 @@ const MobileView = () => {
 	);
 };
 
-function Welcome({
-	header_reset,
-	homepage_decrement,
-	get_api_call,
-	userDetails,
-}) {
+function Welcome({ header_reset, homepage_decrement, userDetails }) {
 	header_reset();
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -349,5 +340,4 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
 	header_reset,
 	homepage_decrement,
-	get_api_call,
 })(Welcome);

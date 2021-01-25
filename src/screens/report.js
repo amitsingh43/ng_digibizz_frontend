@@ -5,26 +5,16 @@ import Testimonials from "../components/testimonials";
 import Footer from "../components/main/footer";
 import "../styles/report.css";
 import { connect } from "react-redux";
-import {
-	header_digital_status,
-	test_user,
-	set_recommendations,
-	section_results,
-	questionnaire_take,
-} from "../store/actions";
+import { header_digital_status } from "../store/actions";
 import { useHistory } from "react-router-dom";
-import { useEffect } from "react";
 function Report({
 	header_digital_status,
 	userDetails,
-	test_user,
-	set_recommendations,
 	recommendations,
+	percentage,
+	section_results,
+	lead_id,
 }) {
-	useEffect(() => {
-		test_user();
-		set_recommendations();
-	}, []);
 	const history = useHistory();
 	if (userDetails.user === null) {
 		history.push("/knowStatus");
@@ -35,7 +25,8 @@ function Report({
 			<div className="report-main">
 				{userDetails.user && (
 					<MainReport
-						questionnaire_take={questionnaire_take}
+						lead_id={lead_id}
+						percentage={percentage}
 						userDetails={userDetails}
 					/>
 				)}
@@ -51,14 +42,17 @@ function Report({
 }
 
 const mapStateToProps = (state) => {
+	const { setResults } = state;
+	const { section_results, percentage, recommendations, lead_id } = setResults;
 	return {
 		userDetails: state.userDetails,
-		recommendations: state.recommendations,
+		recommendations,
+		section_results,
+		lead_id,
+		percentage,
 	};
 };
 
 export default connect(mapStateToProps, {
 	header_digital_status,
-	set_recommendations,
-	test_user,
 })(Report);

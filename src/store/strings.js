@@ -10,8 +10,6 @@ import stwo from "../assets/success_stories/two.svg";
 import sthree from "../assets/success_stories/three.svg";
 import near_store from "../assets/partners/near_store.svg";
 import magic_pin from "../assets/partners/magic_pin.svg";
-import swiggy from "../assets/partners/swiggy.svg";
-import zomato from "../assets/partners/zomato.svg";
 import mobicommerce from "../assets/partners/mobicommerce.svg";
 import snapbizz from "../assets/partners/snapbizz.svg";
 import flobiz from "../assets/partners/flobiz.svg";
@@ -318,6 +316,6 @@ export const PARTNERS = [
 				backgroundColor: "#FFF",
 			},
 		],
-		tag: "business_loan",
+		tag: "business_loans",
 	},
 ];

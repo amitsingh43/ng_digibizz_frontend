@@ -4,6 +4,7 @@ import { services } from "../store/services_mapping";
 import "../styles/digitalServices.css";
 import Footer from "../components/main/footer";
 import { PARTNERS } from "../store/strings";
+import { useEffect } from "react";
 const TopContent = () => {
 	return (
 		<div className="col-md-12 top-content">
@@ -13,6 +14,9 @@ const TopContent = () => {
 };
 
 const ServicesCategory = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<div className="service-category">
 			<div className="one">

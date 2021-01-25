@@ -2,6 +2,7 @@ import "../styles/recommendationReport.css";
 import download from "../assets/download.svg";
 import { services } from "../store/services_mapping";
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Percetage = (props) => {
 	const { name } = props;
@@ -21,7 +22,8 @@ const Percetage = (props) => {
 };
 
 const RecCard = ({ recommendations }) => {
-	const results = recommendations[0];
+	const results = recommendations;
+	const history = useHistory();
 	return (
 		<div className="row ">
 			{results &&
@@ -29,6 +31,14 @@ const RecCard = ({ recommendations }) => {
 					<div className="col-lg-2 col-xs-6 card">
 						<Percetage name={recommendation.category} />
 						{recommendation.name}
+						<p
+							style={{ wordSpacing: 0 }}
+							onClick={() =>
+								history.push(`/services#${recommendation.category}`)
+							}
+						>
+							Know more
+						</p>
 					</div>
 				))}
 			{/* <div className="col-lg-2 col-xs-6 card">
@@ -73,7 +83,7 @@ const DetailView = () => {
 		<div className="container">
 			<h4>For more detailed recommendations please download the report.</h4>
 			<div className="button-container">
-				<div className="download-btn">
+				<div className="download-btn" onClick={() => alert("Downloading")}>
 					Download Report
 					<img src={download} alt="download" />
 				</div>

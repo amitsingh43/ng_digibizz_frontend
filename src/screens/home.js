@@ -7,10 +7,11 @@ import {
 	homepage_decrement,
 	header_digital_status,
 	set_user_details,
+	get_master_data,
+	post_user_details,
 } from "../store/actions";
 import "../styles/home.css";
 import Footer from "../components/main/footer";
-import axios from "axios";
 
 import {
 	TELL_ABOUT_YOU,
@@ -29,11 +30,13 @@ function Home({
 	homepage_decrement,
 	header_digital_status,
 	set_user_details,
+	get_master_data,
+	cities,
+	industries,
+	turnoverValues,
+	post_user_details,
 }) {
 	const cookies = new Cookies();
-	if (cookies.get("cat")) {
-		alert("cat");
-	}
 	header_digital_status();
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
@@ -45,44 +48,6 @@ function Home({
 	const history = useHistory();
 	const [isChecked, setCheck] = useState(false);
 	const [more, showmore] = useState(false);
-	const cities = [
-		{
-			name: "Chennai",
-			id: 1,
-		},
-		{
-			name: "Agra",
-			id: 2,
-		},
-	];
-	const industries = [
-		{
-			id: 1,
-			name: "Food",
-		},
-		{
-			id: 2,
-			name: "Agra",
-		},
-	];
-	const turnoverValues = [
-		{
-			id: 1,
-			name: "2 - 5 Lakhs",
-		},
-		{
-			id: 2,
-			name: "5 - 10 Lakhs",
-		},
-		{
-			id: 3,
-			name: "10 - 20 Lakhs",
-		},
-		{
-			id: 4,
-			name: "20 - 50 Lakhs",
-		},
-	];
 	const Navigate = () => {
 		const user = set_user_details({
 			name: name,
@@ -101,22 +66,31 @@ function Home({
 		if (!isChecked) {
 			alert("Please accept Terms and conditions");
 			return;
-		}
-
-		try {
-			// const response = await axios.post("https://app.advancesuite.in:3028");
-			return _next();
-		} catch (err) {
-			alert(err);
+		} else {
+			_next();
 		}
 	};
 
 	const _next = () => {
 		if (homepageCounter < 2) {
+			if (name.length === 0 && mobile.length !== 10 && email.length === 0) {
+				alert("please enter the fields");
+				return;
+			}
 			homepage_increment();
 			window.scrollTo(0, 0);
 		} else {
-			Navigate();
+			const body = {
+				cities_master_id: city,
+				industry_master_id: industry,
+				annual_turnover_master_id: turnover,
+				full_name: name,
+				email: email,
+				mobile: mobile,
+				business_name: businessName,
+			};
+			console.log(body);
+			post_user_details(body, Navigate);
 		}
 	};
 	const _back = () => {
@@ -124,6 +98,7 @@ function Home({
 	};
 	useEffect(() => {
 		window.scrollTo(0, 0);
+		get_master_data();
 	}, []);
 	return (
 		<div>
@@ -156,7 +131,6 @@ function Home({
 									type="text"
 									className="col-xs-12"
 									id="name"
-									placeholder="Bharat"
 									value={name}
 									onChange={(e) => setName(e.target.value)}
 								/>
@@ -168,7 +142,6 @@ function Home({
 									id="phone"
 									type="phone"
 									className="col-xs-12"
-									placeholder="(+91) 93459 42220"
 									value={mobile}
 									onChange={(e) => {
 										if (e.target.value.length <= 10) {
@@ -189,7 +162,7 @@ function Home({
 										Select
 									</option>
 									{cities.map((city) => (
-										<option value={city.id}>{city.name}</option>
+										<option value={city._id}>{city.name}</option>
 									))}
 								</select>
 								<div style={{ marginTop: 40 }}></div>
@@ -200,7 +173,6 @@ function Home({
 									id="business-name"
 									type="text"
 									className="col-xs-12"
-									placeholder="MANE CLOTHING STORE"
 									value={businessName}
 									onChange={(e) => setBusinessName(e.target.value)}
 								/>
@@ -219,7 +191,6 @@ function Home({
 									type="email"
 									id="mail"
 									className="col-xs-12"
-									placeholder="bharath.official96@gmail.com"
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
 								/>
@@ -239,7 +210,7 @@ function Home({
 										Select
 									</option>
 									{industries.map((industry) => (
-										<option value={industry.id}>{industry.name}</option>
+										<option value={industry._id}>{industry.name}</option>
 									))}
 								</select>
 
@@ -258,7 +229,7 @@ function Home({
 											Select
 										</option>
 										{turnoverValues.map((range) => (
-											<option value={range.id}>{range.name}</option>
+											<option value={range._id}>{range.name}</option>
 										))}
 									</select>
 								</div>
@@ -346,8 +317,13 @@ function Home({
 }
 
 const mapStateToProps = (state) => {
+	const { homepageCounter, masterData } = state;
+	const { cities, industries, turnoverValues } = masterData;
 	return {
-		homepageCounter: state.homepageCounter,
+		homepageCounter,
+		cities,
+		industries,
+		turnoverValues,
 	};
 };
 export default connect(mapStateToProps, {
@@ -355,4 +331,6 @@ export default connect(mapStateToProps, {
 	homepage_decrement,
 	header_digital_status,
 	set_user_details,
+	get_master_data,
+	post_user_details,
 })(Home);

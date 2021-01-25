@@ -4,7 +4,8 @@ const initialState = [];
 const recommendations = (state = initialState, action) => {
 	switch (action.type) {
 		case SET_RECOMMENDATIONS:
-			return [...state, action.payload];
+			state = [action.payload];
+			return state;
 		default:
 			return state;
 	}
