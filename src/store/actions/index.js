@@ -15,6 +15,7 @@ import {
 	SET_RECOMMENDATIONS,
 	SET_RESULTS,
 	SET_MASTER_DATA,
+	RESET_QUESTIONNAIRE,
 } from "../actionTypes/index";
 import axios from "axios";
 import { _get, _post } from "../api";
@@ -27,6 +28,12 @@ export const increment = () => {
 export const decrement = () => {
 	return {
 		type: DECREMENT,
+	};
+};
+
+export const reset_questionnaire = () => {
+	return {
+		type: RESET_QUESTIONNAIRE,
 	};
 };
 
@@ -130,11 +137,6 @@ export const post_user_details = (
 	ENDPOINT = "/api/save_lead"
 ) => async (dispatch) => {
 	try {
-		// if (localStorage.getItem("lead_id")) {
-		// 	alert(localStorage.getItem("lead_id"));
-		// 	Navigate();
-		// 	return;
-		// }
 		const response = await _post(ENDPOINT, body);
 		const { lead, questionnaire } = response;
 		localStorage.setItem("lead_id", lead._id);
@@ -154,21 +156,57 @@ export const post_answers = (
 	try {
 		const response = await _post(ENDPOINT, options);
 		const { questionnaire_take } = response;
-		console.log(response);
-		const { section_results, recommendations } = questionnaire_take;
+		const { recommendations } = questionnaire_take;
 		dispatch(set_recommendations_write(recommendations));
 		dispatch(set_results(questionnaire_take));
+		dispatch(reset_questionnaire());
+		localStorage.setItem("report", "true");
 		history.replace("/report");
 	} catch (error) {
 		alert(error);
 	}
 };
 
-export const downloadReport = () => {
+export const get_questions = (
+	lead_id,
+	ENDPOINT = "/api/get_questionnaire?lead_id="
+) => async (dispatch) => {
+	try {
+		const response = await _get(ENDPOINT + lead_id);
+		const { lead, questionnaire } = response;
+		dispatch(set_user_details(lead));
+		dispatch(reset_questionnaire());
+		dispatch(set_questions(questionnaire));
+	} catch (error) {}
+};
+
+export const get_results = (
+	lead_id,
+	ENDPOINT = "/api/get_results?lead_id="
+) => async (dispatch) => {
+	try {
+		const response = await _get(ENDPOINT + lead_id);
+		const { questionnaire_take, lead } = response;
+		const { recommendations } = questionnaire_take;
+		dispatch(set_recommendations_write(recommendations));
+		dispatch(set_results(questionnaire_take));
+		dispatch(set_user_details(lead));
+		dispatch(reset_questionnaire());
+	} catch (error) {
+		alert(error);
+	}
+};
+
+export const downloadReport = (downloadText, setDownloadText) => {
+	if (downloadText === "Downloading...") {
+		return;
+	}
 	console.log("STARTED");
 	const method = "GET";
+	setDownloadText("Downloading...");
 	const url =
-		"https://uat.advancesuite.in:3061/api/download_report?lead_id=hg4axgylxrclm1_vx6xl1g";
+		"https://uat.advancesuite.in:3061/api/download_report?lead_id=" +
+		localStorage.getItem("lead_id");
 	axios
 		.request({
 			url,
@@ -176,6 +214,7 @@ export const downloadReport = () => {
 			responseType: "blob", //important
 		})
 		.then(({ data }) => {
+			setDownloadText("Download Report");
 			const downloadUrl = window.URL.createObjectURL(new Blob([data]));
 			const link = document.createElement("a");
 			link.href = downloadUrl;

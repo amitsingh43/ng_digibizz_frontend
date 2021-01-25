@@ -1,4 +1,8 @@
-import { INCREMENT, DECREMENT } from "../actionTypes/index";
+import {
+	INCREMENT,
+	DECREMENT,
+	RESET_QUESTIONNAIRE,
+} from "../actionTypes/index";
 const questionCounter = (state = 1, action) => {
 	switch (action.type) {
 		case INCREMENT:
@@ -7,6 +11,9 @@ const questionCounter = (state = 1, action) => {
 		case DECREMENT:
 			if (state === 1) return state;
 			return state - 1;
+		case RESET_QUESTIONNAIRE:
+			state = 1;
+			return state;
 		default:
 			return state;
 	}
