@@ -7,9 +7,9 @@ import {
 	homepage_increment,
 	homepage_decrement,
 	header_digital_status,
-	set_user_details,
 	get_master_data,
 	post_user_details,
+	add_error,
 } from "../store/actions";
 import "../styles/home.css";
 import Footer from "../components/main/footer";
@@ -30,12 +30,12 @@ function Home({
 	homepage_increment,
 	homepage_decrement,
 	header_digital_status,
-	set_user_details,
 	get_master_data,
 	cities,
 	industries,
 	turnoverValues,
 	post_user_details,
+	add_error,
 }) {
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -61,22 +61,13 @@ function Home({
 		return <h1>Redirecting</h1>;
 	}
 	const Navigate = () => {
-		const user = set_user_details({
-			name: name,
-			email: email,
-			mobile: mobile,
-			city: city,
-			industry: industry,
-			turnover: turnover,
-			businessName: businessName,
-		});
 		history.push("/questionnaire");
 		_back();
 	};
 
 	const submitLead = async () => {
 		if (!isChecked) {
-			alert("Please accept Terms and conditions");
+			add_error("Please accept Terms and conditions");
 			return;
 		} else {
 			_next();
@@ -85,8 +76,15 @@ function Home({
 
 	const _next = () => {
 		if (homepageCounter < 2) {
-			if (name.length === 0 && mobile.length !== 10 && email.length === 0) {
-				alert("please enter the fields");
+			var NumberRegex = /^[0-9]*$/;
+			if (name.length === 0) {
+				add_error("Please enter name");
+				return;
+			} else if (mobile.length !== 10 || !NumberRegex.test(mobile)) {
+				add_error("Please enter a valid mobile number");
+				return;
+			} else if (email.length === 0) {
+				add_error("Please enter a valid email");
 				return;
 			}
 			homepage_increment();
@@ -286,10 +284,9 @@ function Home({
 				)}
 				<div className="row row3">
 					<div className="col-lg-5" style={{ marginRight: 30 }}></div>
-					{/* {homepageCounter === 2 && (
-					<Link>
+					{homepageCounter === 2 && (
 						<div className="col-lg-3 col-xs-12">
-							<div onClick={_back}>
+							<div className="outer-button" onClick={_back}>
 								<div
 									className="button"
 									style={{
@@ -304,17 +301,14 @@ function Home({
 								</div>
 							</div>
 						</div>
-					</Link>
-				)} */}
-					<div className="col-lg-3">
-						{/* <Link> */}
+					)}
+					<div className="col-lg-3 col-xs-12">
 						<div className="outer-button">
 							<div className="button" onClick={submitLead}>
 								{homepageCounter === 1 && "Next"}
 								{homepageCounter === 2 && "Check your digital score"}
 							</div>
 						</div>
-						{/* </Link> */}
 					</div>
 				</div>
 			</div>
@@ -337,7 +331,7 @@ export default connect(mapStateToProps, {
 	homepage_increment,
 	homepage_decrement,
 	header_digital_status,
-	set_user_details,
 	get_master_data,
 	post_user_details,
+	add_error,
 })(Home);

@@ -17,12 +17,6 @@
 	cursor: pointer;
 }
 
-@media (max-widht: 48rem) {
-	.fixed-bottom {
-		text-align: center;
-		height: 100px;
-	}
-}
 @media (min-width: 48rem) and (max-width: 75rem) {
 	.fixed-bottom {
 		bottom: -60px;
@@ -47,18 +41,22 @@
 @media (max-width: 48rem) {
 	.fixed-bottom {
 		text-align: center;
-		padding: 10px 0px;
+		padding: 20px 0px;
+		display: flex;
+		height: fit-content;
+		flex-direction: column;
 		font-size: 15px;
-	}
-	.fixed-bottom span {
-		float: none;
-		padding: 0px 5px;
+		line-height: 30px;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
 	}
 	.fixed-bottom img {
 		height: 40px;
 	}
 	.fixed-bottom .images {
-		padding: 0px 0px 20px 0px;
-		background-color: black;
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
 	}
 }
