@@ -7,6 +7,7 @@ import questionsList from "./questions";
 import recommendations from "./recommendations";
 import masterData from "./masterData";
 import setResults from "./setResults";
+import errorMessage from "./errorMessage";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
@@ -19,6 +20,7 @@ const allReducers = combineReducers({
 	recommendations: recommendations,
 	masterData: masterData,
 	setResults: setResults,
+	errorMessage: errorMessage,
 });
 
 export default allReducers;

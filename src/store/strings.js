@@ -32,7 +32,7 @@ export const TERMS_AND_CONDITIONS_1 = "I hearby consent to ";
 export const TERMS_AND_CONDITIONS_2 =
 	"to receive information / service etc for marketing purpose through telephone or email or SMS directly or through any service provider.";
 export const TERMS_AND_CONDITIONS_DETAILED =
-	"One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy";
+	"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
 export const KNOWLEDGE_CENTER = [
 	{
 		heading:
@@ -256,20 +256,6 @@ export const PARTNERS = [
 		tag: "create_website_and_app",
 	},
 	{
-		category: "Customer Service",
-		data: [
-			{
-				title: "Syrow",
-				subTitle: "Upto 15% Sign-up discount on Customer Service Packages.",
-				description:
-					"Streamline your customer interaction with Syrow’s omnichannel customer experience management system",
-				image: syrow,
-				backgroundColor: "#01AFEF",
-			},
-		],
-		tag: "customer_service",
-	},
-	{
 		category: "Customer Loyalty & Promotions",
 		data: [
 			{
@@ -279,6 +265,14 @@ export const PARTNERS = [
 					"Streamline your customer interaction with Syrow’s omnichannel customer experience management system",
 				image: magic_pin,
 				backgroundColor: "#2E108E",
+			},
+			{
+				title: "Syrow",
+				subTitle: "Upto 15% Sign-up discount on Customer Service Packages.",
+				description:
+					"Streamline your customer interaction with Syrow’s omnichannel customer experience management system",
+				image: syrow,
+				backgroundColor: "#01AFEF",
 			},
 		],
 		tag: "customer_loyalty_and_promotions",

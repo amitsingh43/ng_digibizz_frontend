@@ -16,9 +16,13 @@ import {
 	SET_RESULTS,
 	SET_MASTER_DATA,
 	RESET_QUESTIONNAIRE,
+	ADD_ERROR,
+	CLEAR_ERROR,
 } from "../actionTypes/index";
 import axios from "axios";
+import { toast } from "react-toastify";
 import { _get, _post } from "../api";
+import filedownload from "js-file-download";
 
 export const increment = () => {
 	return {
@@ -127,8 +131,33 @@ export const get_master_data = () => async (dispatch) => {
 		const turnoverValues = await _get("/master_data/get_annual_turnovers");
 		dispatch(set_master_data({ industries, cities, turnoverValues }));
 	} catch (error) {
-		alert(error);
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+
+		dispatch(add_error(message));
+		// show_toast(message);
 	}
+};
+
+export const add_error = (error) => {
+	return {
+		type: ADD_ERROR,
+		payload: error,
+	};
+};
+
+export const clear_error = () => {
+	return {
+		type: CLEAR_ERROR,
+	};
 };
 
 export const post_user_details = (
@@ -138,13 +167,26 @@ export const post_user_details = (
 ) => async (dispatch) => {
 	try {
 		const response = await _post(ENDPOINT, body);
+		console.log(response);
 		const { lead, questionnaire } = response;
 		localStorage.setItem("lead_id", lead._id);
 		dispatch(set_user_details(lead));
 		dispatch(set_questions(questionnaire));
 		Navigate();
 	} catch (error) {
-		alert(error);
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+
+		dispatch(add_error(message));
+		// show_toast(message);
 	}
 };
 
@@ -163,7 +205,19 @@ export const post_answers = (
 		localStorage.setItem("report", "true");
 		history.replace("/report");
 	} catch (error) {
-		alert(error);
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+
+		dispatch(add_error(message));
+		// show_toast(message);
 	}
 };
 
@@ -177,7 +231,21 @@ export const get_questions = (
 		dispatch(set_user_details(lead));
 		dispatch(reset_questionnaire());
 		dispatch(set_questions(questionnaire));
-	} catch (error) {}
+	} catch (error) {
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+
+		dispatch(add_error(message));
+		// show_toast(message);
+	}
 };
 
 export const get_results = (
@@ -193,7 +261,19 @@ export const get_results = (
 		dispatch(set_user_details(lead));
 		dispatch(reset_questionnaire());
 	} catch (error) {
-		alert(error);
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+
+		dispatch(add_error(message));
+		// show_toast(message);
 	}
 };
 
@@ -215,12 +295,18 @@ export const downloadReport = (downloadText, setDownloadText) => {
 		})
 		.then(({ data }) => {
 			setDownloadText("Download Report");
-			const downloadUrl = window.URL.createObjectURL(new Blob([data]));
-			const link = document.createElement("a");
-			link.href = downloadUrl;
-			link.setAttribute("download", "report.pdf"); //any other extension
-			document.body.appendChild(link);
-			link.click();
-			link.remove();
+			filedownload(data, "DiGiBizz Score Report.pdf");
 		});
+};
+
+export const show_toast = (error) => {
+	toast.error(error, {
+		position: "bottom-left",
+		autoClose: 3000,
+		hideProgressBar: false,
+		closeOnClick: true,
+		pauseOnHover: true,
+		draggable: true,
+		progress: undefined,
+	});
 };

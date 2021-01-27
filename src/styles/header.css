@@ -3,7 +3,7 @@
 }
 #header-main {
 	background-color: white;
-	padding: 5px 0px 5px 40px;
+	padding: 15px 0px 15px 40px;
 }
 
 #header-main .a {
@@ -39,11 +39,14 @@
 
 .navbar-right .a {
 	font-weight: bold;
-	font-size: smaller;
+	font-size: 17px;
 }
 
 @media (max-width: 48rem) {
 	#header-main {
 		padding: 10px 0px 10px 25px;
+	}
+	.navbar-right .a {
+		font-size: smaller;
 	}
 }

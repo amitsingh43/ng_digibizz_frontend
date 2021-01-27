@@ -155,7 +155,7 @@ select {
 	.home-container {
 		background-size: 100% 100%;
 		padding: 0px;
-		margin: 0px 30px;
+		margin: 0px 25px;
 		text-align: left;
 	}
 	.about {
@@ -166,7 +166,13 @@ select {
 		margin: 0px;
 	}
 	.home-container .row3 {
+		padding: 0px 30px;
 		margin-top: 0px;
+		margin-bottom: 30px;
+	}
+	.home-container .row3 .col-xs-12 {
+		padding: 0px;
+		margin: 0px;
 	}
 	.row {
 		width: 100%;
@@ -208,9 +214,11 @@ select {
 		margin-top: 20px;
 	}
 	.button {
+		width: 100%;
 		font-size: 15px;
-		padding: 10px;
-		width: 68%;
+		padding: 15px;
+		margin-top: 30px;
+		margin-bottom: 0px;
 	}
 	.outer-button {
 		display: flex;
@@ -229,6 +237,8 @@ select {
 	}
 	.home-container .row3 {
 		margin-top: 0px;
+		margin: 0px;
+		padding: 0px;
 	}
 	.mandatory {
 		display: none;

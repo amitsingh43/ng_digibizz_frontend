@@ -37,7 +37,10 @@ const RecCard = ({ recommendations }) => {
 						<p
 							style={{ wordSpacing: 0 }}
 							onClick={() =>
-								history.push(`/services#${recommendation.category}`)
+								history.push({
+									pathname: "/services",
+									state: { id: recommendation.category },
+								})
 							}
 						>
 							Know more

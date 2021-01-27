@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MainReport from "../components/mainReport";
 import UnderstandReport from "../components/understandReport";
 import RecommendationsReports from "../components/recommendationsReports";
@@ -6,11 +6,7 @@ import Testimonials from "../components/testimonials";
 import Footer from "../components/main/footer";
 import "../styles/report.css";
 import { connect } from "react-redux";
-import {
-	header_digital_status,
-	get_results,
-	downloadReport,
-} from "../store/actions";
+import { header_digital_status, get_results } from "../store/actions";
 import { useHistory } from "react-router-dom";
 function Report({
 	header_digital_status,
@@ -26,6 +22,13 @@ function Report({
 		get_results(localStorage.getItem("lead_id"));
 	}
 	const history = useHistory();
+	if (
+		localStorage.getItem("lead_id") &&
+		localStorage.getItem("report") !== "true"
+	) {
+		history.push("/questionnaire");
+		return <div>Redirecting</div>;
+	}
 	if (localStorage.getItem("lead_id") === null) {
 		history.push("/knowStatus");
 		return <div>Redirecting</div>;
