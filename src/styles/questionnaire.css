@@ -13,13 +13,11 @@ html {
 
 .questions li {
 	line-height: 25px;
-	margin-bottom: 20px;
 }
 .options {
 	position: relative;
 	display: flex;
 	align-items: center;
-	/* justify-content: center; */
 	margin-top: 10px;
 }
 
@@ -27,17 +25,14 @@ html {
 	font-style: normal;
 	font-family: Rubik;
 	padding-left: 20px;
-	margin-top: 10px;
+	margin-top: 15px;
 	font-weight: normal;
 }
 
 input[type="radio"] {
-	/* -webkit-appearance: none; */
 	width: 15px;
 	height: 15px;
-	/* border: 1px solid gainsboro; */
 	border-radius: 50%;
-	/* outline: none; */
 	margin-top: 10px;
 }
 
@@ -60,9 +55,6 @@ input[type="radio"]:checked:before {
 	background: #28b04b;
 	box-shadow: 0 0 5px 0px #28b04b inset;
 }
-input[type="checkbox"]:checked {
-	/* background-color: #28b04b; */
-}
 .back {
 	background-color: white;
 	color: #28b04b;
@@ -72,8 +64,8 @@ input[type="checkbox"]:checked {
 	text-decoration: none;
 }
 .main .row2 {
-	margin: 0px;
-	padding: 0px;
+	/* margin: 0px; */
+	/* padding: 0px; */
 }
 
 .main .a {
@@ -104,18 +96,15 @@ input[type="checkbox"]:checked {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		align-items: center;
+		/* align-items: center; */
 		margin: 0px;
-		padding: 20px 5px;
-	}
-	.options label {
-		top: 13px;
+		padding: 20px 25px;
 	}
 
 	.main .row2 {
 		display: flex;
 		width: 100%;
-		justify-content: center;
+		/* justify-content: center; */
 	}
 }
 
@@ -125,5 +114,8 @@ input[type="checkbox"]:checked {
 		top: 0px;
 		margin-left: 0px;
 		padding-left: 20px;
+	}
+	.ques {
+		padding: 0px;
 	}
 }
