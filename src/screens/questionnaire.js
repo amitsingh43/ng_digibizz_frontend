@@ -28,6 +28,7 @@ function Questionnaire({
 	const history = useHistory();
 	useEffect(() => {
 		window.scrollTo(0, 0);
+		header_digital_status();
 		if (questionsList.length === 0 && localStorage.getItem("lead_id")) {
 			get_questions(localStorage.getItem("lead_id"));
 		}
@@ -40,7 +41,6 @@ function Questionnaire({
 		history.push("/report");
 		return <div>Redirecting</div>;
 	}
-	header_digital_status();
 	const submit = () => {
 		var final = [];
 		answers.filter((answer) => final.push(answer.id));
@@ -48,7 +48,6 @@ function Questionnaire({
 			lead_id: localStorage.getItem("lead_id"),
 			answers: final,
 		};
-		console.log(body);
 		post_answers(body, history);
 	};
 	const next = () => {

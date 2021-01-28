@@ -39,9 +39,9 @@ function Home({
 }) {
 	useEffect(() => {
 		window.scrollTo(0, 0);
+		header_digital_status();
 		get_master_data();
 	}, []);
-	header_digital_status();
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [mobile, setMobile] = useState("");

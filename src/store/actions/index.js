@@ -167,7 +167,6 @@ export const post_user_details = (
 ) => async (dispatch) => {
 	try {
 		const response = await _post(ENDPOINT, body);
-		console.log(response);
 		const { lead, questionnaire } = response;
 		localStorage.setItem("lead_id", lead._id);
 		dispatch(set_user_details(lead));
@@ -281,7 +280,6 @@ export const downloadReport = (downloadText, setDownloadText) => {
 	if (downloadText === "Downloading...") {
 		return;
 	}
-	console.log("STARTED");
 	const method = "GET";
 	setDownloadText("Downloading...");
 	const url =

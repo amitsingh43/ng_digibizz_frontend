@@ -7,7 +7,6 @@ import report2 from "../assets/report2.svg";
 import report3 from "../assets/report3.svg";
 import report4 from "../assets/report4.svg";
 import { downloadReport } from "../store/actions";
-var finalReport = "";
 function MainReport({
 	userDetails,
 	percentage,
@@ -27,7 +26,7 @@ function MainReport({
 		} else {
 			setReportImg(report4);
 		}
-	}, []);
+	}, [percentage]);
 	return (
 		<div className="main-report">
 			<div className="namaste">Namaste!</div>
