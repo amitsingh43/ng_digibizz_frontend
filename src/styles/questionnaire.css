@@ -109,11 +109,18 @@ input[type="radio"]:checked:before {
 }
 
 @media (max-width: 48rem) {
+	input[type="radio"] {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		margin-top: 10px;
+	}
 	.options label {
 		font-size: 12px;
 		top: 0px;
 		margin-left: 0px;
 		padding-left: 20px;
+		line-height: 20px;
 	}
 	.ques {
 		padding: 0px;

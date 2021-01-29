@@ -50,6 +50,7 @@ function Questionnaire({
 		};
 		post_answers(body, history);
 	};
+
 	const next = () => {
 		if (topicCounter < 5) {
 			increment();
@@ -111,7 +112,7 @@ function Questionnaire({
 									<li key={question._id}>{question.name}</li>
 									{question.questionnaire_section_answers.map((option) => (
 										<div className="options">
-											<input {...inputProps(question, option)} />
+											<input {...inputProps(question, option)} required />
 											<label name={option._id}>{option.name}</label>
 										</div>
 									))}
