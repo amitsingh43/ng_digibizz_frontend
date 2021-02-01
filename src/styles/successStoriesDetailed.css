@@ -234,6 +234,9 @@ hr {
 }
 
 @media (max-width: 48rem) {
+	.success-stories-detailed {
+		padding: 0px;
+	}
 	.success-stories-detailed .main-content .heading {
 		font-size: 20px;
 		font-weight: bolder;

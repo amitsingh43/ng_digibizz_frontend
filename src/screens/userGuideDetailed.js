@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { header_user_guide } from "../store/actions";
 import Footer from "../components/main/footer";
+import Disclaimer from "../components/main/disclaimer";
 import "../styles/successStoriesDetailed.css";
 import { KNOWLEDGE_CENTER } from "../store/strings";
 import { useHistory } from "react-router-dom";
@@ -252,6 +253,7 @@ function UserGuideDetailed({ header_user_guide, match }) {
 					<MainContent heading={knowledge.heading} desc={knowledge.desc} />
 				</div>
 			</div>
+			<Disclaimer />
 			<Footer />
 		</div>
 	);

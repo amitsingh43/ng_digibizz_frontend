@@ -30,9 +30,9 @@ function MainReport({
 	return (
 		<div className="main-report">
 			<div className="namaste">Namaste!</div>
-			<div className="name">Dear {full_name}</div>
+			<div className="name">{full_name}</div>
 			<div className="business-name">
-				Here is the Digital-Score of your business, {business_name}
+				Here is the Digital Score of your business, {business_name}
 			</div>
 			<div className="report-img">
 				<img alt="report" src={reportImg} />

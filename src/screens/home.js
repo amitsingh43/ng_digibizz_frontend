@@ -52,6 +52,7 @@ function Home({
 	const history = useHistory();
 	const [isChecked, setCheck] = useState(false);
 	const [more, showmore] = useState(false);
+	const [mrOrMs, setMrOrMs] = useState("Mr.");
 	if (localStorage.getItem("report")) {
 		history.push("/report");
 		return <h1>Redirecting</h1>;
@@ -75,6 +76,7 @@ function Home({
 	};
 
 	const _next = () => {
+		var full_name = mrOrMs + " " + name;
 		if (homepageCounter < 2) {
 			var NumberRegex = /^[0-9]*$/;
 			if (name.length === 0) {
@@ -94,7 +96,7 @@ function Home({
 				cities_master_id: city,
 				industry_master_id: industry,
 				annual_turnover_master_id: turnover,
-				full_name: name,
+				full_name: full_name,
 				email: email,
 				mobile: mobile,
 				business_name: businessName,
@@ -132,6 +134,13 @@ function Home({
 								<div className="heading">
 									Full Name<span>*</span>
 								</div>
+								<select
+									id="mr-or-mrs"
+									onChange={(e) => setMrOrMs(e.target.value)}
+								>
+									<option value="Mr.">Mr.</option>
+									<option value="Mrs.">Mrs.</option>
+								</select>
 								<input
 									type="text"
 									className="col-xs-12"

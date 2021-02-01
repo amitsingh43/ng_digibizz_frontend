@@ -22,7 +22,8 @@ import {
 import axios from "axios";
 import { toast } from "react-toastify";
 import { _get, _post } from "../api";
-import filedownload from "js-file-download";
+// import filedownload from "js-file-download";
+var FileSaver = require("file-saver");
 
 export const increment = () => {
 	return {
@@ -293,7 +294,11 @@ export const downloadReport = (downloadText, setDownloadText) => {
 		})
 		.then(({ data }) => {
 			setDownloadText("Download Report");
-			filedownload(data, "DiGiBizz Score Report.pdf");
+			// filedownload(data, "DiGiBizz Score Report.pdf");
+			var blob = new Blob([data], { type: "application/pdf" });
+			console.log(blob);
+			FileSaver.saveAs(blob, "DiGibizz Score Report.pdf");
+			console.log(window.location.href);
 		});
 };
 
