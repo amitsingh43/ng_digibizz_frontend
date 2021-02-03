@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
-import Cookies from "universal-cookie";
 import {
 	homepage_increment,
 	homepage_decrement,
@@ -36,6 +35,7 @@ function Home({
 	turnoverValues,
 	post_user_details,
 	add_error,
+	gender,
 }) {
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -52,7 +52,7 @@ function Home({
 	const history = useHistory();
 	const [isChecked, setCheck] = useState(false);
 	const [more, showmore] = useState(false);
-	const [mrOrMs, setMrOrMs] = useState("Mr.");
+	const [mrOrMs, setMrOrMs] = useState("nilhtyvtvw5sh-mabht5aa");
 	if (localStorage.getItem("report")) {
 		history.push("/report");
 		return <h1>Redirecting</h1>;
@@ -67,6 +67,10 @@ function Home({
 	};
 
 	const submitLead = async () => {
+		if (mrOrMs === "") {
+			add_error("Please select Mr or Mrs Or Miss");
+			return;
+		}
 		if (!isChecked) {
 			add_error("Please accept Terms and conditions");
 			return;
@@ -76,7 +80,6 @@ function Home({
 	};
 
 	const _next = () => {
-		var full_name = mrOrMs + " " + name;
 		if (homepageCounter < 2) {
 			var NumberRegex = /^[0-9]*$/;
 			if (name.length === 0) {
@@ -96,10 +99,11 @@ function Home({
 				cities_master_id: city,
 				industry_master_id: industry,
 				annual_turnover_master_id: turnover,
-				full_name: full_name,
+				full_name: name,
 				email: email,
 				mobile: mobile,
 				business_name: businessName,
+				gender_master_id: mrOrMs,
 			};
 			post_user_details(body, Navigate);
 		}
@@ -138,8 +142,19 @@ function Home({
 									id="mr-or-mrs"
 									onChange={(e) => setMrOrMs(e.target.value)}
 								>
-									<option value="Mr.">Mr.</option>
-									<option value="Mrs.">Mrs.</option>
+									{gender.length > 0 && (
+										<option
+											value="nilhtyvtvw5sh-mabht5aa"
+											selected
+											disabled
+											hidden
+										>
+											Mr.
+										</option>
+									)}
+									{gender.map((gen) => (
+										<option value={gen._id}>{gen.name}</option>
+									))}
 								</select>
 								<input
 									type="text"
@@ -328,12 +343,13 @@ function Home({
 
 const mapStateToProps = (state) => {
 	const { homepageCounter, masterData } = state;
-	const { cities, industries, turnoverValues } = masterData;
+	const { cities, industries, turnoverValues, gender } = masterData;
 	return {
 		homepageCounter,
 		cities,
 		industries,
 		turnoverValues,
+		gender,
 	};
 };
 export default connect(mapStateToProps, {

@@ -130,7 +130,8 @@ export const get_master_data = () => async (dispatch) => {
 		const industries = await _get("/master_data/get_industries");
 		const cities = await _get("/master_data/get_cities");
 		const turnoverValues = await _get("/master_data/get_annual_turnovers");
-		dispatch(set_master_data({ industries, cities, turnoverValues }));
+		const gender = await _get("/master_data/get_genders");
+		dispatch(set_master_data({ industries, cities, turnoverValues, gender }));
 	} catch (error) {
 		let message = "Something went wrong! Please try later.";
 
@@ -184,7 +185,6 @@ export const post_user_details = (
 		) {
 			message = error.response.data.message;
 		}
-
 		dispatch(add_error(message));
 		// show_toast(message);
 	}
@@ -242,7 +242,7 @@ export const get_questions = (
 		) {
 			message = error.response.data.message;
 		}
-
+		localStorage.clear();
 		dispatch(add_error(message));
 		// show_toast(message);
 	}
@@ -271,7 +271,7 @@ export const get_results = (
 		) {
 			message = error.response.data.message;
 		}
-
+		localStorage.clear();
 		dispatch(add_error(message));
 		// show_toast(message);
 	}

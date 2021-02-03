@@ -96,6 +96,11 @@ function Questionnaire({
 
 		return a;
 	};
+	const _selectAll = (name, listOfAnswers) => {
+		listOfAnswers.forEach((ans) => {
+			updateAnswers(name, ans._id, "checkbox");
+		});
+	};
 	return (
 		<div className="main">
 			<div className="row">
@@ -110,6 +115,25 @@ function Questionnaire({
 							].map((question) => (
 								<div className="questions">
 									<li key={question._id}>{question.name}</li>
+									{/* {question.multiple && (
+										<div className="options">
+											<input
+												id={question._id}
+												value={topicCounter}
+												name={topicCounter}
+												type="checkbox"
+												onChange={() =>
+													_selectAll(
+														question.name,
+														question.questionnaire_section_answers
+													)
+												}
+											/>
+											<label name={question._id}>
+												Select All {topicCounter}
+											</label>
+										</div>
+									)} */}
 									{question.questionnaire_section_answers.map((option) => (
 										<div className="options">
 											<input {...inputProps(question, option)} required />
