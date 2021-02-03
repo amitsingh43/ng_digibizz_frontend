@@ -1,5 +1,10 @@
 import { SET_MASTER_DATA } from "../actionTypes";
-const initialState = { cities: [], industries: [], turnoverValues: [] };
+const initialState = {
+	cities: [],
+	industries: [],
+	turnoverValues: [],
+	gender: [],
+};
 const masterData = (state = initialState, action) => {
 	switch (action.type) {
 		case SET_MASTER_DATA:
