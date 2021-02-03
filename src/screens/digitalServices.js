@@ -48,16 +48,16 @@ const PartnerCard = (props) => {
 	} = props;
 	const history = useHistory();
 	const _availNow = () => {
-		if (user === null) {
+		if (localStorage.getItem("lead_id")) {
+			alert("CLicked");
+		} else {
 			history.push({
 				pathname: "/reg",
 				state: {
 					data: { title, description, image, subTitle, tag },
 				},
 			});
-			return;
 		}
-		alert("CLicked");
 	};
 	return (
 		<div className=" col-md-5  partner-card ">

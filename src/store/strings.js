@@ -18,7 +18,10 @@ import smartech from "../assets/partners/smartech.svg";
 import pinnacle from "../assets/partners/pinnacle.svg";
 import syrow from "../assets/partners/syrow.svg";
 import digit from "../assets/partners/digit.svg";
-import religare from "../assets/partners/religare.svg";
+import care from "../assets/partners/care.svg";
+import razorpay from "../assets/partners/razorpay.svg";
+import vyapar from "../assets/partners/vyapar.svg";
+import ok_credit from "../assets/partners/ok_credit.svg";
 import neogrowth from "../assets/partners/neogrowth.svg";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
@@ -1346,161 +1349,157 @@ export const KNOWLEDGE_CENTER = [
 			{
 				type: "content",
 				list: null,
-
 				heading: null,
 				content:
-					"The internet is not a stranger to anyone. Every business either has a website that tells potential customers about itself or has an eCommerce site. While many businesses have realised the importance of taking their business online, it is still a relatively new arena.",
+					"Establishing a new company or business may seem like a daunting proposition. But the fact is that the procedure to register a company, if explained well, can be extremely simple and convenient to follow. It can incorporate great benefits for the individual and the economy at large, so starting up a new business is a boon. Let us understand the appropriate procedure for new company registration:",
 			},
 			{
 				type: "content",
 				list: null,
-
-				heading: null,
+				heading: "About Company Registration:",
 				content:
-					"New territory brings in new challenges. If you were opening a physical store in a high-crime neighbourhood, you would put certain security measures in place to prevent theft or other criminal attacks. The same logic applies to online businesses as well.",
+					"It is mandatory to register a new company to avail authenticity and to enhance its credibility. Registration protects the company against personal obligations, covers the company’s assets, enhances its chances to develop, and improves customer attraction.",
 			},
 			{
-				type: "left",
-				image: onee,
+				type: "content",
+				list: [
+					"Private Limited Company",
+					"Public Limited Company",
+					"One Person Company",
+					"Limited Liability Partnership",
+					"Partnership Firm",
+					"Sole Proprietorship",
+					"NGO/Trust",
+					"Nidhi Company",
+				],
+				heading: "Business structures that a company can be registered as are:",
 				content:
 					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.Here are a few tips to help you secure business and prevent cyber frauds.",
 			},
 			{
-				content:
-					"Strong cybersecurity is indispensable for every organisation and even more so for an e-commerce site. Strong cybersecurity measures involve a strong authentication mechanism, Infrastructure security like firewall, anti-virus, anti-malware and continuous backing up of data to a secure location.",
-				heading: "Employ Strong Cybersecurity",
+				content: null,
+				heading: "What is the process of a Pvt Ltd company? ",
 				type: "content",
 				list: null,
 			},
 			{
 				content:
-					"Most online scams and cyber fraud start by hacking into your database and capturing sensitive information. If you can prevent phishing scams right at the bud, it would prevent a lot of trouble at a later stage.",
-				heading: null,
+					"This is the first step to register the company under the Companies Act, 2006. To obtain the DIN, the Director must visit the MCA website and create an account on it. He would need to fill the DIN form and pay the relevant fees for it. Secured payment can be made online. This information should be percolated to the ROC – Registrar of Corporate.",
+				heading: "Step 1: Procure DIN - Director Identification Number",
 				type: "content",
 				list: null,
 			},
 			{
-				type: "content",
+				heading: "Step 2: Procure DSC - Digital Signature Certificate (DSC)",
 				list: null,
-
-				heading: null,
 				content:
-					"You must also ensure that you are compliant with the PCI Data Security Standards or PCI DSS. These standards are designed to ensure that your customers data is protected from cyber-attacks and credit card scams.",
-			},
-			{
-				heading: "Educate Employees",
-				list: null,
-
-				content:
-					"All your employees play a role in preventing cyber fraud. But for them to stop phishing scams, social engineering, they should know what to look for. You can start by arranging training for all existing employees on how to identify cyber fraud and what they can do to stop them. The material should also become a part of all onboarding training for new employees.",
+					"As per the Information Act 2000, a valid digital signature on all the documents is required.",
 				type: "content",
 			},
 			{
 				type: "content",
 				list: null,
-
-				heading: null,
+				heading: "Step 3: Register as a new user on the MCA website",
 				content:
-					"You should also educate them about using only secure computers for logging into work and the importance of choosing a secure password.",
+					"This does not require any additional fees and can be done conveniently through the MCA website.",
 			},
 			{
-				heading: "Establish Rules for Strong Passwords",
+				heading: "Step 4: Apply for a CIC - company incorporation certificate.",
 				content:
-					"Whether it is employees or customers, everyone uses passwords to access various parts of the website. They protect sensitive information. Most leaks or cyber frauds occur due to weak passwords. People often use passwords that can be guessed easily. Many continue to use “password” as their password.",
+					"Finally, the director must apply for the CIC – Company Incorporation certificate, which would incorporate the name of the company, address, details of directors and staff, information about shares, etc.",
 				type: "content",
 				list: null,
 			},
 			{
-				type: "right",
-				image: twoo,
+				type: "content",
+				heading: "When is a company said to be registered? ",
+				list: null,
 				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.  Here are a few tips to help you secure business and prevent cyber frauds.",
+					"Once all the forms are submitted, the MCA will verify and approve the application and send a confirmation email confirming the registration.",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "Look for Suspicious Return Orders from Customers",
+				heading: "How much does it cost to register a Pvt Ltd company?",
 				content:
-					"Many cases of internet fraud involve customers placing an order and then either returning it or cancelling the order and asking for a refund in some other payment method. Many even return the items after a single use and claim that it has never been used.",
+					"To incorporate and start a new business under Private Limited Company hugely varies from a Service way as far as the cost is concerned. The Incorporation cost of a Private Limited Company is approximately Rs. 15000, Annual maintenance cost – Minimum Rs. 15000 (varies), Average fees for changes – Rs. 5000 (depends on the kind), and Penalties, miscellaneous charges, and Interest – Rs. 6000. So around a total of Rs. 40-50000 may be incurred to initialize a registration of a Pvt Ltd Company.",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: null,
+				heading: "Obtaining Licenses?",
 				content:
-					"You can spot such behaviour when a customer has an unusually large number of returns for seemingly silly reasons. You can cancel such customer accounts and bar them from making further purchases after issuing a few warnings.",
+					"The next step is obtaining business licenses to initiate the new SME. Getting a business license is based on multiple factors like the type, sector, and place of business, number of employees, etc. Some of the commonly obtained licenses are:",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "Beware of Fraudulent Calls",
-				content:
-					"Just as there are phishing scams where you get calls asking for your personal banking details, there are phishing scams that ask for sensitive information from businesses.  Most of these calls claim they are from some regulatory government body. They may claim that you have not filed something, or your licenses are expiring, etc.",
+				heading: "How to get a business license? ",
+				content: "Various ways are:",
 			},
 			{
-				type: "left",
-				image: threee,
+				type: "content",
+				heading: "1. Company or LLP Registration",
+				list: null,
 				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.  Here are a few tips to help you secure business and prevent cyber frauds.",
+					"Any business with an annual turnover of more than Rs.20 lakhs must obtain a Company or LLP registration to have a separate legal identity. This also helps stakeholders to get the benefit of limited liability protection, makes the business easily transferable, and ensures the perpetual existence of the entity.",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: null,
+				heading: "2. Shops & Establishment",
 				content:
-					"Advise all your employees to not divulge any information, tell the caller they will call back and then contact the respective department regarding the call. If it is an authentic call, then the department can handle it professionally.",
+					"Again, a mandatory license to obtain from the Government monitors the conduct of the trading activity, thus ensuring safety in the neighborhood. This is regulated by the municipality, and an extra fee is charged for it.",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "Use Software That Detects Cyber Fraud",
-				content:
-					"With advancements and AI and ML, there are many software that can detect suspicious behaviour from within the organisation as well as from outside. Monitoring user behaviour and detecting anomalous behaviour in time can save you a lot of trouble.",
+				heading: "How to get a business permit",
+				content: "Various ways are available:",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: null,
+				heading: "1. GST Registration",
 				content:
-					"There are many cases when the customers account gets hacked, and businesses are caught between the credit card company and the customer. You can avoid such situations by using software that detects suspicious activity.",
+					"Registration of Goods and Services Tax is mandatory for any business to levy, collect, and deposit GST. He should further file periodical GST returns and comply with the norms.",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "Pay Special Attention to Urgent Orders",
+				heading: "2. Import Export Code",
 				content:
-					"When you get a huge urgent order, most businesses rush to complete the order. Many things can be overlooked when you rush. You may forego certain basic security protocols, and criminals use this situation to gain access to sensitive information.",
+					"Any SME dealing in Import and Export business must obtain the Import or Export Code, which is a unique code for the specific establishment registered with the DGFT. It is a PAN based registration.",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: null,
+				heading: "3. Drug License",
 				content:
-					"When you do get urgent orders, pay close attention to what you reveal. You should always follow the established security protocol irrespective of how urgent the order is.",
+					"It is mandatory for establishments trading in pharmaceutical items, to obtain a wholesale drug license or a retail license.",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "Regular Security Checks",
+				heading: "4. PSARA",
 				content:
-					"You have put up a strong firewall and enabled powerful antivirus. However, cybercriminals are always one step ahead. There are new forms of threat and new viruses/malwares that pop up regularly. You must run sanity &amp; security checks on your websites, defences and re-evaluate your security measures from time to time.",
+					"This license should be obtained by security businesses providing private security guards from the competent authority.",
 			},
 			{
 				type: "content",
 				list: null,
-
-				heading: null,
+				heading: "5. Udyog Aadhar Registration",
 				content:
-					"A security auditor might be the best person to figure out if there are any vulnerabilities that need to be fixed.",
+					"This is a registration to be applied by SMEs based on their investment in plant & machinery. This is imperative as it can provide various subsidies and schemes provided by the Government to enhance the SME sector.",
 			},
 			{
 				type: "content",
@@ -1517,6 +1516,201 @@ export const KNOWLEDGE_CENTER = [
 				heading: null,
 				content:
 					"The only way to prevent cyber fraud is to stay hyper-vigilant. Make sure you follow all the tips given above. In addition to this, there are many insurance companies that offer insurance against cyber fraud for businesses. You can consider taking such an insurance as an added protection.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "6. FSSAI License or Registration",
+				content:
+					"Food safety and standard authority of India licenses are mandatory for retail stores, trade outlets, restaurants, and kiosks to verify standardization of food products nationwide.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Under FSSAI, the license or registration is divided into three categories, namely:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "7. Gumastha license",
+				content:
+					"This is for businesses that need to be established in the state of Maharashtra.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "8. Other Licenses and Registrations",
+				content:
+					"There could be a few other businesses that require approval from regulatory bodies like the Reserve Bank of India, IRDAI, etc., to operate. Some even need to obtain permits from the pollution control board, fire department, or local healthcare system, depending on the nature of the business.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Trademark Registration",
+				content:
+					"Trademark is a brand name, logo, website name, product name, or a punch line that provides a distinct recognition to businesses through which customers can distinguish the products or services of one establishment from another. One can contact a Trademark consultant/agent to seek assistance in registering his company.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"By paying a Trademark fee (which varies), the director can file a trademark application with the Indian Trademark Registry and protect his trademark. Trademark is an intellectual property that can be sold for a price.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Features: With Company Trademark registration, it obtains protection against competitors who try to copy the trademark, makes the SME a registered brand, helps in the expansion of business and growth, image building and credibility in the Market, and in building trust in customers.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Forms of Trademarks – It can be in the form of word marks, logos, specific colors, 3D Marks, or Sound Marks",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Requirements of business trademark registration – The business must submit the Identity proof of the Trademark owner, prepare a One-page authorization letter, conduct a free Legal search report, create a Soft copy of the Logo and Complete the online process to use the Trademark.",
+			},
+			{
+				type: "content",
+				list: [
+					"Manufacturing: Class 1 to 34",
+					"Trading: Class 35",
+					"Services: Class 35 to 45",
+				],
+				heading: "What is the procedure for the registration of the company?",
+				content:
+					"Step 1 – Identify the appropriate class of trademark under which the business name registration will be done from the available 45 classes of various business segments which are categorized into:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 2 – Choose the appropriate package and pay the relevant fees after submitting the required documents on the official web portal.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 3 – To get a detailed trademark check conducted and verified and then to sign a one-page authority letter after which the application for the trademark registry should be filed.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 4 – Apply to the IPR Department, provide acknowledgement & continuously track the status of the trademark.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 5 – SMEs can use the (TM) mark after the Trademark application is filed, and an acknowledgement receipt is procured. (R) mark can be used when the trademark company name is registered.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 6 – Trademark should be renewed every 10 years to use it for an indefinite period.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Taxation Help",
+				content:
+					"Taxes are the amount of money that is paid to the Government at specified rates and periodically. There are mainly two types of Taxes, direct tax and indirect tax governed by CBDT - Central Board of Direct Taxes and CBEC - Central Board of Excise and Customs.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading:
+					"Direct Taxes are the personal liability of the individual like:",
+				content:
+					"		1.		Income Tax or TDS to be paid by businesses earning above a minimum amount which is beyond the tax exemption limit.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		2.		Capital Gains Tax derived from the sale of the property and categorized as short-term capital gains and Long Term Capital Gains",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		3.		Securities Transaction Tax levied on the sale of shares and securities traded in the Indian Stock Exchange.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		4.		Perquisite Tax on the perks and facilities provided by the employer to the employees of the company",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		5.		Corporate Tax which depends on the revenue earned by a company further bifurcated into Minimum Alternative Tax, Fringe Benefits Tax, Dividend Distribution Tax, and Banking Cash Transaction Tax",
+			},
+			{
+				type: "content",
+				list: null,
+				heading:
+					"Indirect Taxes are levied on goods and services and now come under GST – Goods and Services Tax. This comprises:",
+				content:
+					"		1.		Sales Tax which is levied on the sale of a product/service.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		2.		Service Tax to be levied on the customer services provided by an entity",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		3.		Value Added Tax is a commercial tax levied at all the stages of the supply chain.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		4.		Customs Duty and Octroi Tax if goods are imported/exported from/to another country.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		5.		Excise Duty which is levied on all the goods manufactured or produced in India",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Conclusion",
+				content:
+					"Thus, having complete knowledge of the registration process, licenses and permits and taxation ensures a great start to digitally launch your own business. The above-mentioned information will help the applicant in staying abreast with the necessities and the developments in the regulations and follow the appropriate procedure to digitally start his/ her own small business in India.",
 			},
 		],
 	},
@@ -1557,7 +1751,7 @@ export const PARTNERS = [
 				description:
 					"Go digital in minutes with an easy plug and play integration with your POS.",
 				image: near_store,
-				backgroundColor: "#0A803D",
+				backgroundColor: "#fff",
 			},
 			{
 				title: "Magicpin",
@@ -1565,7 +1759,7 @@ export const PARTNERS = [
 				description:
 					"Platform where users and merchants in a locality discover, interact, and transact.",
 				image: magic_pin,
-				backgroundColor: "#2E108E",
+				backgroundColor: "#fff",
 			},
 			{
 				title: "MobiCommerce",
@@ -1573,33 +1767,39 @@ export const PARTNERS = [
 				description:
 					"MobiCommerce provides e-commerce development services and solutions for all",
 				image: mobicommerce,
-				backgroundColor: "#263992",
+				backgroundColor: "#fff",
 			},
 		],
 		tag: "sell_online",
 	},
-	// {
-	// 	category: "Delivery Services",
-	// 	data: [
-	// 		{
-	// 			title: "Lorem Ipsum",
-	// 			subTitle: null,
-	// 			description:
-	// 				"I was able to learn a large amount in a short amount of time. The practical nature helped me understand what we were trying to do, and how to achieve it.",
-	// 			image: swiggy,
-	// 			backgroundColor: "#F58934",
-	// 		},
-	// 		{
-	// 			title: "Lorem Ipsum",
-	// 			subTitle: null,
-	// 			description:
-	// 				"I was able to learn a large amount in a short amount of time. The practical nature helped me understand what we were trying to do, and how to achieve it.",
-	// 			image: zomato,
-	// 			backgroundColor: "#E23744",
-	// 		},
-	// 	],
-	// 	tag: "delivery_services",
-	// },
+	{
+		category: "Delivery Services",
+		data: [
+			{
+				title: "Near.Store",
+				subTitle: "33% Discount on the Near.Store Dongle",
+				description:
+					"Go digital in minutes with an easy plug and play integration with your POS.",
+				image: near_store,
+				backgroundColor: "#fff",
+			},
+		],
+		tag: "delivery_services",
+	},
+	{
+		category: "Business Loans",
+		data: [
+			{
+				title: "NeoGrowth",
+				subTitle: "Collateral free business Loans up to 75 lakhs",
+				description:
+					"Fund your dreams with NeoGrowth’s flexible business loans",
+				image: neogrowth,
+				backgroundColor: "#000",
+			},
+		],
+		tag: "business_loans",
+	},
 	{
 		category: "Manage Stock",
 		data: [
@@ -1609,7 +1809,7 @@ export const PARTNERS = [
 				description:
 					"Snapbizz enables you to go online by managing business operations at ease",
 				image: snapbizz,
-				backgroundColor: "#13BDF0",
+				backgroundColor: "#fff",
 			},
 			{
 				title: "Flobiz",
@@ -1617,7 +1817,7 @@ export const PARTNERS = [
 				description:
 					"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
 				image: flobiz,
-				backgroundColor: "#715EE0",
+				backgroundColor: "#fff",
 			},
 			{
 				title: "Accunity Services",
@@ -1625,24 +1825,81 @@ export const PARTNERS = [
 				description:
 					"Empower yourself with robust web, software & SEO solutions",
 				image: accunity,
-				backgroundColor: "#01AFEF",
+				backgroundColor: "#fff",
 			},
 		],
 		tag: "manage_stock",
 	},
 	{
-		category: "Digital Screens",
+		category: "Create Website or Mobile App",
 		data: [
 			{
-				title: "Smartech Electronic Systems",
-				subTitle: "10% off on orders placed",
+				title: "Accunity Services",
+				subTitle: "10% off on all our services.",
 				description:
-					"Now flash your promotions & offers on LED digital displays",
-				image: smartech,
-				backgroundColor: "#F1F8FF",
+					"Empower yourself with robust web, software & SEO solutions",
+				image: accunity,
+				backgroundColor: "#fff",
+			},
+			{
+				title: "MobiCommerce",
+				subTitle: "Refer and get 10% discount on quotation.",
+				description:
+					"MobiCommerce provides e-commerce development services and solutions for all",
+				image: mobicommerce,
+				backgroundColor: "#fff",
+			},
+		],
+		tag: "create_website_and_app",
+	},
+	{
+		category: "Billing & Accounting",
+		data: [
+			{
+				title: "Accunity Services",
+				subTitle: "10% off on all our services.",
+				description:
+					"Empower yourself with robust web, software & SEO solutions",
+				image: accunity,
+				backgroundColor: "#fff",
+			},
+			{
+				title: "Snapbizz",
+				subTitle: "Upto 17% off on SnapBizz Billing solutions",
+				description:
+					"Snapbizz enables you to go online by managing business operations at ease",
+				image: snapbizz,
+				backgroundColor: "#fff",
+			},
+		],
+		tag: "billing_and_accounting",
+	},
+	{
+		category: "Digital Khata",
+		data: [
+			{
+				title: "OkCredit",
+				subTitle: "Upto XX% off on OkCredit services.",
+				description:
+					"Free digital Udhar-Khata app for businesses & shop owners and manage your in your preferred language.",
+				image: ok_credit,
+				backgroundColor: "#fff",
 			},
 		],
 		tag: "digital_khata",
+	},
+	{
+		category: "Tax Filing & Legal",
+		data: [
+			{
+				title: "Vyapar",
+				subTitle: "Upto XX% off on Vyapar services.",
+				description: "GST Billing Software for small businesses.",
+				image: vyapar,
+				backgroundColor: "#fff",
+			},
+		],
+		tag: "tax_fling_and_legal",
 	},
 	{
 		category: "Social Media & Digital Marketing",
@@ -1653,7 +1910,7 @@ export const PARTNERS = [
 				description:
 					"Pinnacle Management offers innovative and specialized marketing &communication solutions.",
 				image: pinnacle,
-				backgroundColor: "#8CD3E0",
+				backgroundColor: "#fff",
 			},
 			{
 				title: "Accunity Services",
@@ -1661,32 +1918,24 @@ export const PARTNERS = [
 				description:
 					"Empower yourself with robust web, software & SEO solutions",
 				image: accunity,
-				backgroundColor: "#01AFEF",
+				backgroundColor: "#fff",
 			},
 		],
 		tag: "social_media_marketing",
 	},
 	{
-		category: "Create Website & App",
+		category: "Manage Payments",
 		data: [
 			{
-				title: "Accunity Services",
-				subTitle: "10% off on all our services.",
+				title: "Razorpay",
+				subTitle: "Upto XX% off on Razorpay services.",
 				description:
-					"Empower yourself with robust web, software & SEO solutions",
-				image: accunity,
-				backgroundColor: "#01AFEF",
-			},
-			{
-				title: "MobiCommerce",
-				subTitle: "Refer and get 10% discount on quotation.",
-				description:
-					"MobiCommerce provides e-commerce development services and solutions for all",
-				image: mobicommerce,
-				backgroundColor: "#263992",
+					"All in One- Payment gateway that supports netbanking, credit, debit Cards, UPI etc.",
+				image: razorpay,
+				backgroundColor: "#fff",
 			},
 		],
-		tag: "create_website_and_app",
+		tag: "manage_payments",
 	},
 	{
 		category: "Customer Loyalty & Promotions",
@@ -1697,7 +1946,7 @@ export const PARTNERS = [
 				description:
 					"Streamline your customer interaction with Syrow’s omnichannel customer experience management system",
 				image: magic_pin,
-				backgroundColor: "#2E108E",
+				backgroundColor: "#fff",
 			},
 			{
 				title: "Syrow",
@@ -1705,7 +1954,15 @@ export const PARTNERS = [
 				description:
 					"Streamline your customer interaction with Syrow’s omnichannel customer experience management system",
 				image: syrow,
-				backgroundColor: "#01AFEF",
+				backgroundColor: "#fff",
+			},
+			{
+				title: "Smartech Electronic Systems",
+				subTitle: "10% off on orders placed.",
+				description:
+					"Now flash your promotions & offers on LED digital displays",
+				image: smartech,
+				backgroundColor: "#fff",
 			},
 		],
 		tag: "customer_loyalty_and_promotions",
@@ -1722,27 +1979,13 @@ export const PARTNERS = [
 				backgroundColor: "#000000",
 			},
 			{
-				title: "Religare",
-				subTitle: null,
-				description: "Complete Healthcare Plans For You & Your Family.",
-				image: religare,
-				backgroundColor: "#EEEDEB",
+				title: "Care",
+				subTitle: "Upto XX% off on care health insurances.",
+				description: "Complete healthcare plans for you & your family.",
+				image: care,
+				backgroundColor: "#fff",
 			},
 		],
 		tag: "insurance",
-	},
-	{
-		category: "Business Loan",
-		data: [
-			{
-				title: "NeoGrowth",
-				subTitle: "Collateral free business Loans up to 75 lakhs",
-				description:
-					"Fund your dreams with NeoGrowth’s flexible business loans",
-				image: neogrowth,
-				backgroundColor: "#FFF",
-			},
-		],
-		tag: "business_loans",
 	},
 ];
