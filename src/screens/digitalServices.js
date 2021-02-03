@@ -6,7 +6,7 @@ import "../styles/digitalServices.css";
 import Footer from "../components/main/footer";
 import { PARTNERS } from "../store/strings";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 const TopContent = () => {
 	return (
 		<div className="col-md-12 top-content">
@@ -37,7 +37,28 @@ const ServicesCategory = () => {
 };
 
 const PartnerCard = (props) => {
-	const { title, description, image, subTitle, backgroundColor } = props;
+	const {
+		title,
+		description,
+		image,
+		subTitle,
+		backgroundColor,
+		user,
+		tag,
+	} = props;
+	const history = useHistory();
+	const _availNow = () => {
+		if (user === null) {
+			history.push({
+				pathname: "/reg",
+				state: {
+					data: { title, description, image, subTitle, tag },
+				},
+			});
+			return;
+		}
+		alert("CLicked");
+	};
 	return (
 		<div className=" col-md-5  partner-card ">
 			<div className=" col-md-4" style={{ backgroundColor: backgroundColor }}>
@@ -52,15 +73,29 @@ const PartnerCard = (props) => {
 				<h3>{title}</h3>
 				{subTitle && <div className="sub-title">{subTitle}</div>}
 				<p>{description}</p>
-				<div className="avial-now">Avail now</div>
+				<div
+					className="avial-now"
+					onClick={() => {
+						if (title === "NeoGrowth") {
+							var win = window.open(
+								"https://www.neogrowth.in/register-form/",
+								"_blank"
+							);
+							win.focus();
+							return;
+						}
+						_availNow();
+					}}
+				>
+					Avail now
+				</div>
 			</div>
 		</div>
 	);
 };
 
 const Services = (props) => {
-	const cardData = props.cardData;
-	const heading = props.heading;
+	const { user, cardData, heading } = props;
 	return (
 		<div className="col-md-12 col-lg-12">
 			<div style={{ display: "flex", alignItems: "center" }}>
@@ -72,9 +107,11 @@ const Services = (props) => {
 				{cardData.map((data) => (
 					<div>
 						<PartnerCard
+							user={user}
 							subTitle={data.subTitle}
 							image={data.image}
 							title={data.title}
+							tag={data.tag}
 							description={data.description}
 							backgroundColor={data.backgroundColor}
 						/>
@@ -86,7 +123,7 @@ const Services = (props) => {
 	);
 };
 
-function DigitalServices({ header_digital_services }) {
+function DigitalServices({ header_digital_services, user }) {
 	const location = useLocation();
 	useEffect(() => {
 		header_digital_services();
@@ -103,7 +140,11 @@ function DigitalServices({ header_digital_services }) {
 			<div>
 				{PARTNERS.map((partner) => (
 					<div id={partner.tag} className="row sell-online">
-						<Services heading={partner.category} cardData={partner.data} />
+						<Services
+							user={user}
+							heading={partner.category}
+							cardData={partner.data}
+						/>
 					</div>
 				))}
 			</div>
@@ -112,4 +153,13 @@ function DigitalServices({ header_digital_services }) {
 	);
 }
 
-export default connect(null, { header_digital_services })(DigitalServices);
+const mapStateToProps = (state) => {
+	const { userDetails } = state;
+	return {
+		user: userDetails.user,
+	};
+};
+
+export default connect(mapStateToProps, { header_digital_services })(
+	DigitalServices
+);

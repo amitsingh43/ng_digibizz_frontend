@@ -101,4 +101,11 @@ html {
 		width: 100%;
 		justify-content: center;
 	}
+	.main-report .name,
+	.main-report .namaste,
+	.main-report .business-name {
+		font-size: 20px;
+		line-height: 32px;
+		word-spacing: normal;
+	}
 }

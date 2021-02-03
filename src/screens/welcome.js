@@ -312,10 +312,20 @@ const SuccessStories = () => {
 };
 
 const MobileView = () => {
+	const history = useHistory();
 	return (
 		<div className="mobile-view">
 			{services.map((service) => (
-				<div className="service">
+				<div
+					className="service"
+					style={{ cursor: "pointer" }}
+					onClick={() => {
+						history.push({
+							pathname: "/services",
+							state: { id: service.tag },
+						});
+					}}
+				>
 					<img src={service.image} alt="img" />
 					<div className="labell">{service.label}</div>
 				</div>

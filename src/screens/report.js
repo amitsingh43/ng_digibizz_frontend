@@ -4,6 +4,7 @@ import UnderstandReport from "../components/understandReport";
 import RecommendationsReports from "../components/recommendationsReports";
 import Testimonials from "../components/testimonials";
 import Footer from "../components/main/footer";
+import Disclaimer from "../components/main/disclaimer";
 import "../styles/report.css";
 import { connect } from "react-redux";
 import { header_digital_status, get_results } from "../store/actions";
@@ -56,6 +57,7 @@ function Report({
 					<UnderstandReport section_results={section_results} />
 				)}
 				<Testimonials />
+				<Disclaimer />
 				<Footer />
 			</div>
 		);
