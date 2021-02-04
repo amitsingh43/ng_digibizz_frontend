@@ -5,6 +5,9 @@ import four from "../assets/knowledge_portal/four.svg";
 import five from "../assets/knowledge_portal/five.svg";
 import six from "../assets/knowledge_portal/six.svg";
 import seven from "../assets/knowledge_portal/seven.svg";
+import eight from "../assets/knowledge_portal/eight.svg";
+import nine from "../assets/knowledge_portal/nine.svg";
+import ten from "../assets/knowledge_portal/ten.svg";
 import sone from "../assets/success_stories/one.svg";
 import stwo from "../assets/success_stories/two.svg";
 import sthree from "../assets/success_stories/three.svg";
@@ -26,6 +29,14 @@ import neogrowth from "../assets/partners/neogrowth.svg";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
+import two_two from "../assets/knowledge_portal/two/two.svg";
+import two_three from "../assets/knowledge_portal/two/three.svg";
+import four_one from "../assets/knowledge_portal/four/one.svg";
+import four_two from "../assets/knowledge_portal/four/two.svg";
+import four_three from "../assets/knowledge_portal/four/three.svg";
+import four_four from "../assets/knowledge_portal/four/four.svg";
+import four_five from "../assets/knowledge_portal/four/five.svg";
+import four_six from "../assets/knowledge_portal/four/six.svg";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -270,7 +281,7 @@ export const KNOWLEDGE_CENTER = [
 			},
 			{
 				type: "left",
-				image: onee,
+				image: two_two,
 				content:
 					"The biggest advantage that UPI offers over NEFT is that the money transfer is always instantaneous. NEFT transactions may take place instantaneously if both sender and recipient belong to the same bank and if the transfer is being initiated during working hours. Otherwise, it can take up to 12 hours to complete the transaction. The long duration of NEFT makes it unfit for making online purchases or for sending money for an emergency. With UPI, you will not face such delays.",
 			},
@@ -348,26 +359,14 @@ export const KNOWLEDGE_CENTER = [
 			{
 				type: "content",
 				list: null,
-
 				heading: "- Secure Transaction Mode",
-				content:
-					"All payments made via the UPI ID are extremely secure and encrypted. Making payments via UPI ID is also very secure for the payee. You are only sharing your virtual address. The virtual address does not contain your account details.",
+				content: "",
 			},
 			{
-				type: "content",
-				list: null,
-
-				heading: null,
+				type: "right",
+				image: two_three,
 				content:
-					"It can just be your phone number with and @upi suffix. You do not have to divulge any personal details while making the money transfer. ",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: null,
-				content:
-					"The authentication is done through an MPIN that you must enter on your device. It is easy to do so discreetly.",
+					"All payments made via the UPI ID are extremely secure and encrypted. Making payments via UPI ID is also very secure for the payee. You are only sharing your virtual address. The virtual address does not contain your account details. It can just be your phone number with and @upi suffix. You do not have to divulge any personal details while making the money transfer. The authentication is done through an MPIN that you must enter on your device. It is easy to do so discreetly.",
 			},
 			{
 				type: "content",
@@ -609,7 +608,7 @@ export const KNOWLEDGE_CENTER = [
 			},
 			{
 				type: "right",
-				image: twoo,
+				image: four_one,
 				content:
 					"Every small business owner also dreams of growing their business. You want to touch more hearts and influence the lives of more customers. If you are looking to grow your business but confused about how to do it, then have you considered taking the help of the digital medium?",
 			},
@@ -635,7 +634,7 @@ export const KNOWLEDGE_CENTER = [
 			},
 			{
 				type: "left",
-				image: onee,
+				image: four_two,
 				content:
 					"In addition to this, there are quite a lot of websites, and you need to optimize yours so that it stands out from the crowd. If your website does not rank well, then its purpose will be defeated, and it will end up draining your money. Websites for small businesses is not a practical idea as there are too many pitfalls. ",
 			},
@@ -654,7 +653,7 @@ export const KNOWLEDGE_CENTER = [
 					"Amazon encourages small businesses and offers various perks that makes it worthwhile. You can set up your online shop on Amazon by registering yourself as a seller. You can then set up your Amazon shop by listing your products and adding the appropriate details.",
 			},
 			{
-				image: onee,
+				image: four_three,
 				content:
 					"Just as you need to optimize your website so that it shows up on the first or second page of the search engine result, the Amazon product description should be optimized so that it appears on the first few pages of the search result. To do so, you need to find keywords that will help your product rank well. These keywords should be incorporated optimally in the product description.",
 				type: "right",
@@ -668,8 +667,28 @@ export const KNOWLEDGE_CENTER = [
 			},
 			{
 				type: "content",
-				list: null,
 				heading: "List Your Business on Google",
+				list: null,
+				content:
+					'In 2020, Google launched "Grow with Google Small Business hub" to help small and medium businesses. Apart from listing your business on Google Business, you should also consider registering with Google Pay for Business. ',
+			},
+			{
+				type: "content",
+				heading: null,
+				list: null,
+				content:
+					'Google Pay for Business offers plenty of incentives for small businesses. The "Nearby Stores" section helps customers discover stores that are closest to them. You can indicate your business hours and the products that are available. It will help local customers discover your business and attract genuine leads. ',
+			},
+			{
+				type: "left",
+				image: four_four,
+				content:
+					"The Promoted Pins feature on Google Maps is another great way to boost your business. When you avail this feature, your store shows up as a noticeable square-shaped pin on the map. The feature also boosts your discoverability and brings in more customers.Most of Google's services are either free, or they are priced very reasonably. You can afford these services and invest in them to watch your business grow.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "List Your Business With Delivery Partners",
 				content:
 					"Delivery partners such as Swiggy, Zomato, Dunzo, etc. are the easiest way to get discovered online and boost business. With the pandemic forcing people to stay indoors, many prefer to order essentials via these delivery partners.",
 			},
@@ -682,7 +701,7 @@ export const KNOWLEDGE_CENTER = [
 			},
 			{
 				type: "right",
-				image: onee,
+				image: four_five,
 				content:
 					"While Swiggy and Zomato were exclusively food delivery apps, they have started delivering other essential goods and offer pickup and drop services. Since most people already use Swiggy and Zomato apps regularly, they will discover your business with ease. Dunzo has always been offering pickup and drop services, and its user base shot up during the pandemic. The company's revenue grew four times in the year 2020. Registering your business on Dunzo is a surefire way for more customers to know about your business and get more orders. ",
 			},
@@ -708,7 +727,7 @@ export const KNOWLEDGE_CENTER = [
 			},
 			{
 				type: "left",
-				image: onee,
+				image: four_six,
 				content:
 					"It is impossible to ignore the power of social media in today's day and age. It is the cheapest way to market your business. You can reach out to influencers in your locality to talk about your business. You can slowly build followers who will eventually turn into customers. ",
 			},
@@ -1345,6 +1364,1130 @@ export const KNOWLEDGE_CENTER = [
 			"The procedure to register a company can be extremely simple and convenient to follow.",
 		image: seven,
 		id: 7,
+		sections: [
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Establishing a new company or business may seem like a daunting proposition. But the fact is that the procedure to register a company, if explained well, can be extremely simple and convenient to follow. It can incorporate great benefits for the individual and the economy at large, so starting up a new business is a boon. Let us understand the appropriate procedure for new company registration:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "About Company Registration:",
+				content:
+					"It is mandatory to register a new company to avail authenticity and to enhance its credibility. Registration protects the company against personal obligations, covers the company’s assets, enhances its chances to develop, and improves customer attraction.",
+			},
+			{
+				type: "content",
+				list: [
+					"Private Limited Company",
+					"Public Limited Company",
+					"One Person Company",
+					"Limited Liability Partnership",
+					"Partnership Firm",
+					"Sole Proprietorship",
+					"NGO/Trust",
+					"Nidhi Company",
+				],
+				heading: "Business structures that a company can be registered as are:",
+				content:
+					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.Here are a few tips to help you secure business and prevent cyber frauds.",
+			},
+			{
+				content: null,
+				heading: "What is the process of a Pvt Ltd company? ",
+				type: "content",
+				list: null,
+			},
+			{
+				content:
+					"This is the first step to register the company under the Companies Act, 2006. To obtain the DIN, the Director must visit the MCA website and create an account on it. He would need to fill the DIN form and pay the relevant fees for it. Secured payment can be made online. This information should be percolated to the ROC – Registrar of Corporate.",
+				heading: "Step 1: Procure DIN - Director Identification Number",
+				type: "content",
+				list: null,
+			},
+			{
+				heading: "Step 2: Procure DSC - Digital Signature Certificate (DSC)",
+				list: null,
+				content:
+					"As per the Information Act 2000, a valid digital signature on all the documents is required.",
+				type: "content",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Step 3: Register as a new user on the MCA website",
+				content:
+					"This does not require any additional fees and can be done conveniently through the MCA website.",
+			},
+			{
+				heading: "Step 4: Apply for a CIC - company incorporation certificate.",
+				content:
+					"Finally, the director must apply for the CIC – Company Incorporation certificate, which would incorporate the name of the company, address, details of directors and staff, information about shares, etc.",
+				type: "content",
+				list: null,
+			},
+			{
+				type: "content",
+				heading: "When is a company said to be registered? ",
+				list: null,
+				content:
+					"Once all the forms are submitted, the MCA will verify and approve the application and send a confirmation email confirming the registration.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How much does it cost to register a Pvt Ltd company?",
+				content:
+					"To incorporate and start a new business under Private Limited Company hugely varies from a Service way as far as the cost is concerned. The Incorporation cost of a Private Limited Company is approximately Rs. 15000, Annual maintenance cost – Minimum Rs. 15000 (varies), Average fees for changes – Rs. 5000 (depends on the kind), and Penalties, miscellaneous charges, and Interest – Rs. 6000. So around a total of Rs. 40-50000 may be incurred to initialize a registration of a Pvt Ltd Company.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "Obtaining Licenses?",
+				content:
+					"The next step is obtaining business licenses to initiate the new SME. Getting a business license is based on multiple factors like the type, sector, and place of business, number of employees, etc. Some of the commonly obtained licenses are:",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How to get a business license? ",
+				content: "Various ways are:",
+			},
+			{
+				type: "content",
+				heading: "1. Company or LLP Registration",
+				list: null,
+				content:
+					"Any business with an annual turnover of more than Rs.20 lakhs must obtain a Company or LLP registration to have a separate legal identity. This also helps stakeholders to get the benefit of limited liability protection, makes the business easily transferable, and ensures the perpetual existence of the entity.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "2. Shops & Establishment",
+				content:
+					"Again, a mandatory license to obtain from the Government monitors the conduct of the trading activity, thus ensuring safety in the neighborhood. This is regulated by the municipality, and an extra fee is charged for it.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How to get a business permit",
+				content: "Various ways are available:",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "1. GST Registration",
+				content:
+					"Registration of Goods and Services Tax is mandatory for any business to levy, collect, and deposit GST. He should further file periodical GST returns and comply with the norms.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "2. Import Export Code",
+				content:
+					"Any SME dealing in Import and Export business must obtain the Import or Export Code, which is a unique code for the specific establishment registered with the DGFT. It is a PAN based registration.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "3. Drug License",
+				content:
+					"It is mandatory for establishments trading in pharmaceutical items, to obtain a wholesale drug license or a retail license.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "4. PSARA",
+				content:
+					"This license should be obtained by security businesses providing private security guards from the competent authority.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "5. Udyog Aadhar Registration",
+				content:
+					"This is a registration to be applied by SMEs based on their investment in plant & machinery. This is imperative as it can provide various subsidies and schemes provided by the Government to enhance the SME sector.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "Stay Protected, Stay Safe!",
+				content:
+					"Cyber fraud is a menace that every business must deal with. The only solution is constant vigilance. Your security systems must always be up to date, and employees need regular training on how to avoid internet scams.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: null,
+				content:
+					"The only way to prevent cyber fraud is to stay hyper-vigilant. Make sure you follow all the tips given above. In addition to this, there are many insurance companies that offer insurance against cyber fraud for businesses. You can consider taking such an insurance as an added protection.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "6. FSSAI License or Registration",
+				content:
+					"Food safety and standard authority of India licenses are mandatory for retail stores, trade outlets, restaurants, and kiosks to verify standardization of food products nationwide.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Under FSSAI, the license or registration is divided into three categories, namely:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "7. Gumastha license",
+				content:
+					"This is for businesses that need to be established in the state of Maharashtra.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "8. Other Licenses and Registrations",
+				content:
+					"There could be a few other businesses that require approval from regulatory bodies like the Reserve Bank of India, IRDAI, etc., to operate. Some even need to obtain permits from the pollution control board, fire department, or local healthcare system, depending on the nature of the business.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Trademark Registration",
+				content:
+					"Trademark is a brand name, logo, website name, product name, or a punch line that provides a distinct recognition to businesses through which customers can distinguish the products or services of one establishment from another. One can contact a Trademark consultant/agent to seek assistance in registering his company.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"By paying a Trademark fee (which varies), the director can file a trademark application with the Indian Trademark Registry and protect his trademark. Trademark is an intellectual property that can be sold for a price.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Features: With Company Trademark registration, it obtains protection against competitors who try to copy the trademark, makes the SME a registered brand, helps in the expansion of business and growth, image building and credibility in the Market, and in building trust in customers.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Forms of Trademarks – It can be in the form of word marks, logos, specific colors, 3D Marks, or Sound Marks",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Requirements of business trademark registration – The business must submit the Identity proof of the Trademark owner, prepare a One-page authorization letter, conduct a free Legal search report, create a Soft copy of the Logo and Complete the online process to use the Trademark.",
+			},
+			{
+				type: "content",
+				list: [
+					"Manufacturing: Class 1 to 34",
+					"Trading: Class 35",
+					"Services: Class 35 to 45",
+				],
+				heading: "What is the procedure for the registration of the company?",
+				content:
+					"Step 1 – Identify the appropriate class of trademark under which the business name registration will be done from the available 45 classes of various business segments which are categorized into:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 2 – Choose the appropriate package and pay the relevant fees after submitting the required documents on the official web portal.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 3 – To get a detailed trademark check conducted and verified and then to sign a one-page authority letter after which the application for the trademark registry should be filed.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 4 – Apply to the IPR Department, provide acknowledgement & continuously track the status of the trademark.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 5 – SMEs can use the (TM) mark after the Trademark application is filed, and an acknowledgement receipt is procured. (R) mark can be used when the trademark company name is registered.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 6 – Trademark should be renewed every 10 years to use it for an indefinite period.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Taxation Help",
+				content:
+					"Taxes are the amount of money that is paid to the Government at specified rates and periodically. There are mainly two types of Taxes, direct tax and indirect tax governed by CBDT - Central Board of Direct Taxes and CBEC - Central Board of Excise and Customs.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading:
+					"Direct Taxes are the personal liability of the individual like:",
+				content:
+					"		1.		Income Tax or TDS to be paid by businesses earning above a minimum amount which is beyond the tax exemption limit.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		2.		Capital Gains Tax derived from the sale of the property and categorized as short-term capital gains and Long Term Capital Gains",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		3.		Securities Transaction Tax levied on the sale of shares and securities traded in the Indian Stock Exchange.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		4.		Perquisite Tax on the perks and facilities provided by the employer to the employees of the company",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		5.		Corporate Tax which depends on the revenue earned by a company further bifurcated into Minimum Alternative Tax, Fringe Benefits Tax, Dividend Distribution Tax, and Banking Cash Transaction Tax",
+			},
+			{
+				type: "content",
+				list: null,
+				heading:
+					"Indirect Taxes are levied on goods and services and now come under GST – Goods and Services Tax. This comprises:",
+				content:
+					"		1.		Sales Tax which is levied on the sale of a product/service.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		2.		Service Tax to be levied on the customer services provided by an entity",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		3.		Value Added Tax is a commercial tax levied at all the stages of the supply chain.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		4.		Customs Duty and Octroi Tax if goods are imported/exported from/to another country.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		5.		Excise Duty which is levied on all the goods manufactured or produced in India",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Conclusion",
+				content:
+					"Thus, having complete knowledge of the registration process, licenses and permits and taxation ensures a great start to digitally launch your own business. The above-mentioned information will help the applicant in staying abreast with the necessities and the developments in the regulations and follow the appropriate procedure to digitally start his/ her own small business in India.",
+			},
+		],
+	},
+	{
+		heading: "Top 5 government loan schemes for small businesses in India.",
+		desc:
+			"This article will discuss the top 5 government loan schemes that can aid your business to reach greater heights.",
+		image: eight,
+		id: 8,
+		sections: [
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Establishing a new company or business may seem like a daunting proposition. But the fact is that the procedure to register a company, if explained well, can be extremely simple and convenient to follow. It can incorporate great benefits for the individual and the economy at large, so starting up a new business is a boon. Let us understand the appropriate procedure for new company registration:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "About Company Registration:",
+				content:
+					"It is mandatory to register a new company to avail authenticity and to enhance its credibility. Registration protects the company against personal obligations, covers the company’s assets, enhances its chances to develop, and improves customer attraction.",
+			},
+			{
+				type: "content",
+				list: [
+					"Private Limited Company",
+					"Public Limited Company",
+					"One Person Company",
+					"Limited Liability Partnership",
+					"Partnership Firm",
+					"Sole Proprietorship",
+					"NGO/Trust",
+					"Nidhi Company",
+				],
+				heading: "Business structures that a company can be registered as are:",
+				content:
+					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.Here are a few tips to help you secure business and prevent cyber frauds.",
+			},
+			{
+				content: null,
+				heading: "What is the process of a Pvt Ltd company? ",
+				type: "content",
+				list: null,
+			},
+			{
+				content:
+					"This is the first step to register the company under the Companies Act, 2006. To obtain the DIN, the Director must visit the MCA website and create an account on it. He would need to fill the DIN form and pay the relevant fees for it. Secured payment can be made online. This information should be percolated to the ROC – Registrar of Corporate.",
+				heading: "Step 1: Procure DIN - Director Identification Number",
+				type: "content",
+				list: null,
+			},
+			{
+				heading: "Step 2: Procure DSC - Digital Signature Certificate (DSC)",
+				list: null,
+				content:
+					"As per the Information Act 2000, a valid digital signature on all the documents is required.",
+				type: "content",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Step 3: Register as a new user on the MCA website",
+				content:
+					"This does not require any additional fees and can be done conveniently through the MCA website.",
+			},
+			{
+				heading: "Step 4: Apply for a CIC - company incorporation certificate.",
+				content:
+					"Finally, the director must apply for the CIC – Company Incorporation certificate, which would incorporate the name of the company, address, details of directors and staff, information about shares, etc.",
+				type: "content",
+				list: null,
+			},
+			{
+				type: "content",
+				heading: "When is a company said to be registered? ",
+				list: null,
+				content:
+					"Once all the forms are submitted, the MCA will verify and approve the application and send a confirmation email confirming the registration.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How much does it cost to register a Pvt Ltd company?",
+				content:
+					"To incorporate and start a new business under Private Limited Company hugely varies from a Service way as far as the cost is concerned. The Incorporation cost of a Private Limited Company is approximately Rs. 15000, Annual maintenance cost – Minimum Rs. 15000 (varies), Average fees for changes – Rs. 5000 (depends on the kind), and Penalties, miscellaneous charges, and Interest – Rs. 6000. So around a total of Rs. 40-50000 may be incurred to initialize a registration of a Pvt Ltd Company.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "Obtaining Licenses?",
+				content:
+					"The next step is obtaining business licenses to initiate the new SME. Getting a business license is based on multiple factors like the type, sector, and place of business, number of employees, etc. Some of the commonly obtained licenses are:",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How to get a business license? ",
+				content: "Various ways are:",
+			},
+			{
+				type: "content",
+				heading: "1. Company or LLP Registration",
+				list: null,
+				content:
+					"Any business with an annual turnover of more than Rs.20 lakhs must obtain a Company or LLP registration to have a separate legal identity. This also helps stakeholders to get the benefit of limited liability protection, makes the business easily transferable, and ensures the perpetual existence of the entity.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "2. Shops & Establishment",
+				content:
+					"Again, a mandatory license to obtain from the Government monitors the conduct of the trading activity, thus ensuring safety in the neighborhood. This is regulated by the municipality, and an extra fee is charged for it.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How to get a business permit",
+				content: "Various ways are available:",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "1. GST Registration",
+				content:
+					"Registration of Goods and Services Tax is mandatory for any business to levy, collect, and deposit GST. He should further file periodical GST returns and comply with the norms.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "2. Import Export Code",
+				content:
+					"Any SME dealing in Import and Export business must obtain the Import or Export Code, which is a unique code for the specific establishment registered with the DGFT. It is a PAN based registration.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "3. Drug License",
+				content:
+					"It is mandatory for establishments trading in pharmaceutical items, to obtain a wholesale drug license or a retail license.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "4. PSARA",
+				content:
+					"This license should be obtained by security businesses providing private security guards from the competent authority.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "5. Udyog Aadhar Registration",
+				content:
+					"This is a registration to be applied by SMEs based on their investment in plant & machinery. This is imperative as it can provide various subsidies and schemes provided by the Government to enhance the SME sector.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "Stay Protected, Stay Safe!",
+				content:
+					"Cyber fraud is a menace that every business must deal with. The only solution is constant vigilance. Your security systems must always be up to date, and employees need regular training on how to avoid internet scams.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: null,
+				content:
+					"The only way to prevent cyber fraud is to stay hyper-vigilant. Make sure you follow all the tips given above. In addition to this, there are many insurance companies that offer insurance against cyber fraud for businesses. You can consider taking such an insurance as an added protection.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "6. FSSAI License or Registration",
+				content:
+					"Food safety and standard authority of India licenses are mandatory for retail stores, trade outlets, restaurants, and kiosks to verify standardization of food products nationwide.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Under FSSAI, the license or registration is divided into three categories, namely:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "7. Gumastha license",
+				content:
+					"This is for businesses that need to be established in the state of Maharashtra.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "8. Other Licenses and Registrations",
+				content:
+					"There could be a few other businesses that require approval from regulatory bodies like the Reserve Bank of India, IRDAI, etc., to operate. Some even need to obtain permits from the pollution control board, fire department, or local healthcare system, depending on the nature of the business.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Trademark Registration",
+				content:
+					"Trademark is a brand name, logo, website name, product name, or a punch line that provides a distinct recognition to businesses through which customers can distinguish the products or services of one establishment from another. One can contact a Trademark consultant/agent to seek assistance in registering his company.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"By paying a Trademark fee (which varies), the director can file a trademark application with the Indian Trademark Registry and protect his trademark. Trademark is an intellectual property that can be sold for a price.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Features: With Company Trademark registration, it obtains protection against competitors who try to copy the trademark, makes the SME a registered brand, helps in the expansion of business and growth, image building and credibility in the Market, and in building trust in customers.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Forms of Trademarks – It can be in the form of word marks, logos, specific colors, 3D Marks, or Sound Marks",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Requirements of business trademark registration – The business must submit the Identity proof of the Trademark owner, prepare a One-page authorization letter, conduct a free Legal search report, create a Soft copy of the Logo and Complete the online process to use the Trademark.",
+			},
+			{
+				type: "content",
+				list: [
+					"Manufacturing: Class 1 to 34",
+					"Trading: Class 35",
+					"Services: Class 35 to 45",
+				],
+				heading: "What is the procedure for the registration of the company?",
+				content:
+					"Step 1 – Identify the appropriate class of trademark under which the business name registration will be done from the available 45 classes of various business segments which are categorized into:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 2 – Choose the appropriate package and pay the relevant fees after submitting the required documents on the official web portal.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 3 – To get a detailed trademark check conducted and verified and then to sign a one-page authority letter after which the application for the trademark registry should be filed.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 4 – Apply to the IPR Department, provide acknowledgement & continuously track the status of the trademark.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 5 – SMEs can use the (TM) mark after the Trademark application is filed, and an acknowledgement receipt is procured. (R) mark can be used when the trademark company name is registered.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 6 – Trademark should be renewed every 10 years to use it for an indefinite period.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Taxation Help",
+				content:
+					"Taxes are the amount of money that is paid to the Government at specified rates and periodically. There are mainly two types of Taxes, direct tax and indirect tax governed by CBDT - Central Board of Direct Taxes and CBEC - Central Board of Excise and Customs.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading:
+					"Direct Taxes are the personal liability of the individual like:",
+				content:
+					"		1.		Income Tax or TDS to be paid by businesses earning above a minimum amount which is beyond the tax exemption limit.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		2.		Capital Gains Tax derived from the sale of the property and categorized as short-term capital gains and Long Term Capital Gains",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		3.		Securities Transaction Tax levied on the sale of shares and securities traded in the Indian Stock Exchange.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		4.		Perquisite Tax on the perks and facilities provided by the employer to the employees of the company",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		5.		Corporate Tax which depends on the revenue earned by a company further bifurcated into Minimum Alternative Tax, Fringe Benefits Tax, Dividend Distribution Tax, and Banking Cash Transaction Tax",
+			},
+			{
+				type: "content",
+				list: null,
+				heading:
+					"Indirect Taxes are levied on goods and services and now come under GST – Goods and Services Tax. This comprises:",
+				content:
+					"		1.		Sales Tax which is levied on the sale of a product/service.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		2.		Service Tax to be levied on the customer services provided by an entity",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		3.		Value Added Tax is a commercial tax levied at all the stages of the supply chain.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		4.		Customs Duty and Octroi Tax if goods are imported/exported from/to another country.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		5.		Excise Duty which is levied on all the goods manufactured or produced in India",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Conclusion",
+				content:
+					"Thus, having complete knowledge of the registration process, licenses and permits and taxation ensures a great start to digitally launch your own business. The above-mentioned information will help the applicant in staying abreast with the necessities and the developments in the regulations and follow the appropriate procedure to digitally start his/ her own small business in India.",
+			},
+		],
+	},
+	{
+		heading: "How to improve CIBIL score.",
+		desc: "The 'All-You-Need-to-Know' Guide to Improving CIBIL Score.",
+		image: nine,
+		id: 9,
+		sections: [
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Establishing a new company or business may seem like a daunting proposition. But the fact is that the procedure to register a company, if explained well, can be extremely simple and convenient to follow. It can incorporate great benefits for the individual and the economy at large, so starting up a new business is a boon. Let us understand the appropriate procedure for new company registration:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "About Company Registration:",
+				content:
+					"It is mandatory to register a new company to avail authenticity and to enhance its credibility. Registration protects the company against personal obligations, covers the company’s assets, enhances its chances to develop, and improves customer attraction.",
+			},
+			{
+				type: "content",
+				list: [
+					"Private Limited Company",
+					"Public Limited Company",
+					"One Person Company",
+					"Limited Liability Partnership",
+					"Partnership Firm",
+					"Sole Proprietorship",
+					"NGO/Trust",
+					"Nidhi Company",
+				],
+				heading: "Business structures that a company can be registered as are:",
+				content:
+					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.Here are a few tips to help you secure business and prevent cyber frauds.",
+			},
+			{
+				content: null,
+				heading: "What is the process of a Pvt Ltd company? ",
+				type: "content",
+				list: null,
+			},
+			{
+				content:
+					"This is the first step to register the company under the Companies Act, 2006. To obtain the DIN, the Director must visit the MCA website and create an account on it. He would need to fill the DIN form and pay the relevant fees for it. Secured payment can be made online. This information should be percolated to the ROC – Registrar of Corporate.",
+				heading: "Step 1: Procure DIN - Director Identification Number",
+				type: "content",
+				list: null,
+			},
+			{
+				heading: "Step 2: Procure DSC - Digital Signature Certificate (DSC)",
+				list: null,
+				content:
+					"As per the Information Act 2000, a valid digital signature on all the documents is required.",
+				type: "content",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Step 3: Register as a new user on the MCA website",
+				content:
+					"This does not require any additional fees and can be done conveniently through the MCA website.",
+			},
+			{
+				heading: "Step 4: Apply for a CIC - company incorporation certificate.",
+				content:
+					"Finally, the director must apply for the CIC – Company Incorporation certificate, which would incorporate the name of the company, address, details of directors and staff, information about shares, etc.",
+				type: "content",
+				list: null,
+			},
+			{
+				type: "content",
+				heading: "When is a company said to be registered? ",
+				list: null,
+				content:
+					"Once all the forms are submitted, the MCA will verify and approve the application and send a confirmation email confirming the registration.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How much does it cost to register a Pvt Ltd company?",
+				content:
+					"To incorporate and start a new business under Private Limited Company hugely varies from a Service way as far as the cost is concerned. The Incorporation cost of a Private Limited Company is approximately Rs. 15000, Annual maintenance cost – Minimum Rs. 15000 (varies), Average fees for changes – Rs. 5000 (depends on the kind), and Penalties, miscellaneous charges, and Interest – Rs. 6000. So around a total of Rs. 40-50000 may be incurred to initialize a registration of a Pvt Ltd Company.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "Obtaining Licenses?",
+				content:
+					"The next step is obtaining business licenses to initiate the new SME. Getting a business license is based on multiple factors like the type, sector, and place of business, number of employees, etc. Some of the commonly obtained licenses are:",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How to get a business license? ",
+				content: "Various ways are:",
+			},
+			{
+				type: "content",
+				heading: "1. Company or LLP Registration",
+				list: null,
+				content:
+					"Any business with an annual turnover of more than Rs.20 lakhs must obtain a Company or LLP registration to have a separate legal identity. This also helps stakeholders to get the benefit of limited liability protection, makes the business easily transferable, and ensures the perpetual existence of the entity.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "2. Shops & Establishment",
+				content:
+					"Again, a mandatory license to obtain from the Government monitors the conduct of the trading activity, thus ensuring safety in the neighborhood. This is regulated by the municipality, and an extra fee is charged for it.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "How to get a business permit",
+				content: "Various ways are available:",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "1. GST Registration",
+				content:
+					"Registration of Goods and Services Tax is mandatory for any business to levy, collect, and deposit GST. He should further file periodical GST returns and comply with the norms.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "2. Import Export Code",
+				content:
+					"Any SME dealing in Import and Export business must obtain the Import or Export Code, which is a unique code for the specific establishment registered with the DGFT. It is a PAN based registration.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "3. Drug License",
+				content:
+					"It is mandatory for establishments trading in pharmaceutical items, to obtain a wholesale drug license or a retail license.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "4. PSARA",
+				content:
+					"This license should be obtained by security businesses providing private security guards from the competent authority.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "5. Udyog Aadhar Registration",
+				content:
+					"This is a registration to be applied by SMEs based on their investment in plant & machinery. This is imperative as it can provide various subsidies and schemes provided by the Government to enhance the SME sector.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: "Stay Protected, Stay Safe!",
+				content:
+					"Cyber fraud is a menace that every business must deal with. The only solution is constant vigilance. Your security systems must always be up to date, and employees need regular training on how to avoid internet scams.",
+			},
+			{
+				type: "content",
+				list: null,
+
+				heading: null,
+				content:
+					"The only way to prevent cyber fraud is to stay hyper-vigilant. Make sure you follow all the tips given above. In addition to this, there are many insurance companies that offer insurance against cyber fraud for businesses. You can consider taking such an insurance as an added protection.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "6. FSSAI License or Registration",
+				content:
+					"Food safety and standard authority of India licenses are mandatory for retail stores, trade outlets, restaurants, and kiosks to verify standardization of food products nationwide.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Under FSSAI, the license or registration is divided into three categories, namely:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "7. Gumastha license",
+				content:
+					"This is for businesses that need to be established in the state of Maharashtra.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "8. Other Licenses and Registrations",
+				content:
+					"There could be a few other businesses that require approval from regulatory bodies like the Reserve Bank of India, IRDAI, etc., to operate. Some even need to obtain permits from the pollution control board, fire department, or local healthcare system, depending on the nature of the business.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Trademark Registration",
+				content:
+					"Trademark is a brand name, logo, website name, product name, or a punch line that provides a distinct recognition to businesses through which customers can distinguish the products or services of one establishment from another. One can contact a Trademark consultant/agent to seek assistance in registering his company.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"By paying a Trademark fee (which varies), the director can file a trademark application with the Indian Trademark Registry and protect his trademark. Trademark is an intellectual property that can be sold for a price.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Features: With Company Trademark registration, it obtains protection against competitors who try to copy the trademark, makes the SME a registered brand, helps in the expansion of business and growth, image building and credibility in the Market, and in building trust in customers.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Forms of Trademarks – It can be in the form of word marks, logos, specific colors, 3D Marks, or Sound Marks",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Requirements of business trademark registration – The business must submit the Identity proof of the Trademark owner, prepare a One-page authorization letter, conduct a free Legal search report, create a Soft copy of the Logo and Complete the online process to use the Trademark.",
+			},
+			{
+				type: "content",
+				list: [
+					"Manufacturing: Class 1 to 34",
+					"Trading: Class 35",
+					"Services: Class 35 to 45",
+				],
+				heading: "What is the procedure for the registration of the company?",
+				content:
+					"Step 1 – Identify the appropriate class of trademark under which the business name registration will be done from the available 45 classes of various business segments which are categorized into:",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 2 – Choose the appropriate package and pay the relevant fees after submitting the required documents on the official web portal.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 3 – To get a detailed trademark check conducted and verified and then to sign a one-page authority letter after which the application for the trademark registry should be filed.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 4 – Apply to the IPR Department, provide acknowledgement & continuously track the status of the trademark.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 5 – SMEs can use the (TM) mark after the Trademark application is filed, and an acknowledgement receipt is procured. (R) mark can be used when the trademark company name is registered.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"Step 6 – Trademark should be renewed every 10 years to use it for an indefinite period.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Taxation Help",
+				content:
+					"Taxes are the amount of money that is paid to the Government at specified rates and periodically. There are mainly two types of Taxes, direct tax and indirect tax governed by CBDT - Central Board of Direct Taxes and CBEC - Central Board of Excise and Customs.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading:
+					"Direct Taxes are the personal liability of the individual like:",
+				content:
+					"		1.		Income Tax or TDS to be paid by businesses earning above a minimum amount which is beyond the tax exemption limit.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		2.		Capital Gains Tax derived from the sale of the property and categorized as short-term capital gains and Long Term Capital Gains",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		3.		Securities Transaction Tax levied on the sale of shares and securities traded in the Indian Stock Exchange.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		4.		Perquisite Tax on the perks and facilities provided by the employer to the employees of the company",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		5.		Corporate Tax which depends on the revenue earned by a company further bifurcated into Minimum Alternative Tax, Fringe Benefits Tax, Dividend Distribution Tax, and Banking Cash Transaction Tax",
+			},
+			{
+				type: "content",
+				list: null,
+				heading:
+					"Indirect Taxes are levied on goods and services and now come under GST – Goods and Services Tax. This comprises:",
+				content:
+					"		1.		Sales Tax which is levied on the sale of a product/service.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		2.		Service Tax to be levied on the customer services provided by an entity",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		3.		Value Added Tax is a commercial tax levied at all the stages of the supply chain.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		4.		Customs Duty and Octroi Tax if goods are imported/exported from/to another country.",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: null,
+				content:
+					"		5.		Excise Duty which is levied on all the goods manufactured or produced in India",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Conclusion",
+				content:
+					"Thus, having complete knowledge of the registration process, licenses and permits and taxation ensures a great start to digitally launch your own business. The above-mentioned information will help the applicant in staying abreast with the necessities and the developments in the regulations and follow the appropriate procedure to digitally start his/ her own small business in India.",
+			},
+		],
+	},
+	{
+		heading: "Scale up your business with collateral free business loan.",
+		desc:
+			"Plan exactly how you’ll use your loan amount and how you’ll pay it off.",
+		image: ten,
+		id: 10,
 		sections: [
 			{
 				type: "content",
