@@ -63,6 +63,7 @@ const DetailedCard = ({ story }) => {
 			>
 				{showVideo && story.type === "video" && (
 					<iframe
+						style={{ width: "100%", height: "100%" }}
 						title="jfdsjj"
 						frameborder="0"
 						wmode="Opaque"
