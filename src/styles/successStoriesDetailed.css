@@ -31,7 +31,7 @@
 
 .user-guide-top-image img {
 	width: auto;
-	box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 }
 
 .success-stories-detailed .detailed-card-1 {
@@ -39,7 +39,7 @@
 	margin: 0px;
 	padding: 0px;
 	width: 100%;
-	box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 }
 
 .success-stories-detailed .detailed-card-1 .left-content {
@@ -112,6 +112,21 @@
 	object-fit: cover;
 }
 
+.success-stories-detailed .bgimage {
+	height: 410px;
+	padding: 0px;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.success-stories-detailed .bgimage .play-button {
+	cursor: pointer;
+	width: 50px;
+}
+
 .thumbnail {
 	height: 410px;
 	padding: 0px;
@@ -140,8 +155,9 @@ hr {
 	background-color: white;
 	width: 100%;
 	/* margin: 0px 130px 50px 90px; */
-	box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 	padding: 20px 60px;
+	margin-bottom: 50px;
 }
 
 .success-stories-detailed .main-content .heading {
@@ -269,7 +285,7 @@ hr {
 	.success-stories-detailed .detailed-card-1 .left-content {
 		padding: 0px;
 	}
-	.success-stories-detailed .detailed-card-1 .thumbnail {
+	.success-stories-detailed .detailed-card-1 .bgimage {
 		/* width: 100%; */
 		margin-top: 20px;
 	}

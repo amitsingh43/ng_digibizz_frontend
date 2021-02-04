@@ -7,9 +7,6 @@ import Disclaimer from "../components/main/disclaimer";
 import "../styles/successStoriesDetailed.css";
 import { KNOWLEDGE_CENTER } from "../store/strings";
 import { useHistory } from "react-router-dom";
-import onee from "../assets/knowledge_portal/one/one.svg";
-import twoo from "../assets/knowledge_portal/one/two.svg";
-import threee from "../assets/knowledge_portal/one/three.svg";
 const TopContent = ({ heading }) => {
 	return (
 		<div className="top-content">

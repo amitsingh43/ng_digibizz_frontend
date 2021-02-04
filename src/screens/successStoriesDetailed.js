@@ -8,18 +8,19 @@ import Footer from "../components/main/footer";
 import "../styles/successStoriesDetailed.css";
 import play_logo from "../assets/youtube.svg";
 import { SUCCESSDATA } from "../store/strings";
-const TopContent = () => {
+import { useHistory } from "react-router-dom";
+const TopContent = ({ story }) => {
 	return (
 		<div className="top-content">
 			<div>
 				{"Success Stories    >>   "}
-				<span>JOS ALUKAS</span>
+				<span>{story.topContent}</span>
 			</div>
 		</div>
 	);
 };
 
-const DetailedCard = () => {
+const DetailedCard = ({ story }) => {
 	const [showVideo, toggleVideo] = useState(false);
 	const videoID = "ETNQ0BXkyQU";
 	return (
@@ -29,14 +30,14 @@ const DetailedCard = () => {
 					<div className="col-lg-4 img-div">
 						<img
 							className="col-lg-12 col-xs-4 profile-pic"
-							src={SUCCESSDATA[0].image}
+							src={story.image}
 							alt="profile_picture"
 						/>
 					</div>
 					<div className="col-lg-8 col-xs-8 title-div">
 						<div className="row title">
-							<h3>{SUCCESSDATA[0].name}</h3>
-							<div>{SUCCESSDATA[0].heading}</div>
+							<h3>{story.name}</h3>
+							<div>{story.heading}</div>
 						</div>
 					</div>
 				</div>
@@ -44,7 +45,7 @@ const DetailedCard = () => {
 					<hr />
 					<img className="punctuation1" alt="punctuation1" src={punctuation1} />
 					<p>
-						{SUCCESSDATA[0].content}
+						{story.content}
 						<img
 							className="punctuation2"
 							alt="punctuation2"
@@ -54,13 +55,13 @@ const DetailedCard = () => {
 				</div>
 			</div>
 			<div
-				className="img-responsive col-lg-6 col-xs-12 thumbnail"
+				className="img-responsive col-lg-6 col-xs-12 bgimage"
 				style={{
-					backgroundImage: `url(${SUCCESSDATA[0].image})`,
+					backgroundImage: `url(${story.image})`,
 					border: 0,
 				}}
 			>
-				{showVideo && (
+				{showVideo && story.type === "video" && (
 					<iframe
 						title="jfdsjj"
 						frameborder="0"
@@ -74,7 +75,7 @@ const DetailedCard = () => {
 						<h1 style={{ zIndex: 99, color: "yellow" }}>Close</h1>
 					</iframe>
 				)}
-				{!showVideo && (
+				{!showVideo && story.type === "video" && (
 					<img
 						onClick={() => toggleVideo(!showVideo)}
 						className="play-button"
@@ -87,43 +88,64 @@ const DetailedCard = () => {
 	);
 };
 
-const MainContent = () => {
+const Content = ({ data }) => {
+	const { heading, desc, list } = data;
+	return (
+		<div>
+			<h3>{heading}</h3>
+			{desc && desc.map((para) => <p style={{ color: "#68696A" }}>{para}</p>)}
+			{list && (
+				<ul>
+					{list.map((point) => (
+						<li>
+							<span style={{ color: "black", fontWeight: "bold" }}>
+								{point.bullet}
+							</span>
+							{point.content}
+						</li>
+					))}
+				</ul>
+			)}
+		</div>
+	);
+};
+
+const MainContent = ({ story }) => {
+	const { blog } = story;
 	const styles = { fontSize: 16, lineHeight: 2 };
 	return (
 		<div className="main-content col-lg-10" style={styles}>
-			<p style={{ fontSize: 13, marginTop: 30 }}>
-				Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-				laying out print, graphic or web designs. The passage is attributed to
-				an unknown typesetter in the 15th century who is thought to have
-				scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
-				type specimen book. It usually begins with: “Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-				et dolore magna aliqua.” The purpose of lorem ipsum is to create a
-				natural looking block of text (sentence, paragraph, page, etc.) that
-				doesn't distract from the layout. A practice not without controversy,
-				laying out pages with meaningless filler text can be very useful when
-				the focus is meant to be on design, not content.
+			<p style={{ marginTop: 30 }}>
+				{blog.map((data) => (
+					<Content data={data} />
+				))}
 			</p>
 		</div>
 	);
 };
 
-function SuccessStoriesDetailed({ header_success_stories }) {
+function SuccessStoriesDetailed({ header_success_stories, match }) {
 	useEffect(() => {
 		header_success_stories();
 		window.scrollTo(0, 0);
 	}, []);
+	const history = useHistory();
+	const story = SUCCESSDATA.find((data) => data.id == match.params.id);
+	if (story === undefined) {
+		history.push("/successStories");
+		return <h1>Redirecting</h1>;
+	}
 	return (
 		<div style={{ background: "rgba(229, 229, 229, 0.4)" }}>
 			<div className="success-stories-detailed">
 				<div className="row">
-					<TopContent />
+					<TopContent story={story} />
 				</div>
 				<div className="row">
-					<DetailedCard />
+					<DetailedCard story={story} />
 				</div>
 				<div className="row">
-					<MainContent />
+					<MainContent story={story} />
 				</div>
 			</div>
 			<Footer />

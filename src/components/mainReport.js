@@ -13,7 +13,7 @@ function MainReport({
 	downloadText,
 	setDownloadText,
 }) {
-	const { full_name, email, business_name } = userDetails.user;
+	const { full_name, email, business_name, gender } = userDetails.user;
 	const [reportImg, setReportImg] = useState(report1);
 	useEffect(() => {
 		var intPercent = parseInt(percentage);
@@ -30,7 +30,9 @@ function MainReport({
 	return (
 		<div className="main-report">
 			<div className="namaste">Namaste!</div>
-			<div className="name">{full_name}</div>
+			<div className="name">
+				{gender} {full_name}
+			</div>
 			<div className="business-name">
 				Here is the Digital Score of your business, {business_name}
 			</div>

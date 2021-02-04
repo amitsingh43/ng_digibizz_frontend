@@ -360,3 +360,4 @@ src/store/api.js
 Search for the keywords to learn more about each warning.
 To ignore, add // eslint-disable-next-line to the line before.
 
+sudo: unable to read password: Input/output error

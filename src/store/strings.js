@@ -1745,366 +1745,168 @@ export const KNOWLEDGE_CENTER = [
 				list: null,
 				heading: null,
 				content:
-					"Establishing a new company or business may seem like a daunting proposition. But the fact is that the procedure to register a company, if explained well, can be extremely simple and convenient to follow. It can incorporate great benefits for the individual and the economy at large, so starting up a new business is a boon. Let us understand the appropriate procedure for new company registration:",
+					"he small businesses of the 21st century have a lot going on. Due to the continuous cycle of ups and downs of the economy, running small and mid-sized businesses (SMBs) require more focus and innovation - which translates into a frequent need for investment. ",
 			},
 			{
 				type: "content",
 				list: null,
-				heading: "About Company Registration:",
+				heading: null,
 				content:
-					"It is mandatory to register a new company to avail authenticity and to enhance its credibility. Registration protects the company against personal obligations, covers the company’s assets, enhances its chances to develop, and improves customer attraction.",
+					"As small and medium enterprises are the backbone of the economic development of India, the government is keen to help them with several subsidies and loan schemes. This article will discuss the top 5 government loan schemes that can aid your business to reach greater heights. ",
 			},
 			{
+				type: "content",
+				list: null,
+				heading: "1. Pradhan Mantri Mudra Yojana (PMMY)",
+				content:
+					'Micro-units Development and Refinance Agency, shortly known as MUDRA, is an organisation established by the Indian government to offer financial assistance to SMBs. The Pradhan Mantri Mudra Yojana (PMMY) comes under MUDRA and is a small scale industry loan by the central government that strives to "fund the unfunded".',
+			},
+			{
+				content:
+					"This scheme offers small business loans to a wide range of sectors and business activities. Micro, Small and Medium Enterprises (MSMEs) can avail loans up to 10 lakhs without collateral. This scheme is frequently referred to as MUDRA loans and Non-Corporate Small Business Segment (NCSB) such as the following can apply. ",
+				heading: "What Is the Eligibility for Mudra Loan? ",
 				type: "content",
 				list: [
-					"Private Limited Company",
-					"Public Limited Company",
-					"One Person Company",
-					"Limited Liability Partnership",
-					"Partnership Firm",
-					"Sole Proprietorship",
-					"NGO/Trust",
-					"Nidhi Company",
+					"Fruits or vegetable vendors",
+					"Repair shops",
+					"Artisans",
+					"Small industries",
+					"Truck operators",
+					"Small manufacturing units",
+					"Shopkeepers",
 				],
-				heading: "Business structures that a company can be registered as are:",
-				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.Here are a few tips to help you secure business and prevent cyber frauds.",
-			},
-			{
-				content: null,
-				heading: "What is the process of a Pvt Ltd company? ",
-				type: "content",
-				list: null,
 			},
 			{
 				content:
-					"This is the first step to register the company under the Companies Act, 2006. To obtain the DIN, the Director must visit the MCA website and create an account on it. He would need to fill the DIN form and pay the relevant fees for it. Secured payment can be made online. This information should be percolated to the ROC – Registrar of Corporate.",
-				heading: "Step 1: Procure DIN - Director Identification Number",
-				type: "content",
-				list: null,
-			},
-			{
-				heading: "Step 2: Procure DSC - Digital Signature Certificate (DSC)",
-				list: null,
-				content:
-					"As per the Information Act 2000, a valid digital signature on all the documents is required.",
-				type: "content",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Step 3: Register as a new user on the MCA website",
-				content:
-					"This does not require any additional fees and can be done conveniently through the MCA website.",
-			},
-			{
-				heading: "Step 4: Apply for a CIC - company incorporation certificate.",
-				content:
-					"Finally, the director must apply for the CIC – Company Incorporation certificate, which would incorporate the name of the company, address, details of directors and staff, information about shares, etc.",
-				type: "content",
-				list: null,
-			},
-			{
-				type: "content",
-				heading: "When is a company said to be registered? ",
-				list: null,
-				content:
-					"Once all the forms are submitted, the MCA will verify and approve the application and send a confirmation email confirming the registration.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "How much does it cost to register a Pvt Ltd company?",
-				content:
-					"To incorporate and start a new business under Private Limited Company hugely varies from a Service way as far as the cost is concerned. The Incorporation cost of a Private Limited Company is approximately Rs. 15000, Annual maintenance cost – Minimum Rs. 15000 (varies), Average fees for changes – Rs. 5000 (depends on the kind), and Penalties, miscellaneous charges, and Interest – Rs. 6000. So around a total of Rs. 40-50000 may be incurred to initialize a registration of a Pvt Ltd Company.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "Obtaining Licenses?",
-				content:
-					"The next step is obtaining business licenses to initiate the new SME. Getting a business license is based on multiple factors like the type, sector, and place of business, number of employees, etc. Some of the commonly obtained licenses are:",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "How to get a business license? ",
-				content: "Various ways are:",
-			},
-			{
-				type: "content",
-				heading: "1. Company or LLP Registration",
-				list: null,
-				content:
-					"Any business with an annual turnover of more than Rs.20 lakhs must obtain a Company or LLP registration to have a separate legal identity. This also helps stakeholders to get the benefit of limited liability protection, makes the business easily transferable, and ensures the perpetual existence of the entity.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "2. Shops & Establishment",
-				content:
-					"Again, a mandatory license to obtain from the Government monitors the conduct of the trading activity, thus ensuring safety in the neighborhood. This is regulated by the municipality, and an extra fee is charged for it.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "How to get a business permit",
-				content: "Various ways are available:",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "1. GST Registration",
-				content:
-					"Registration of Goods and Services Tax is mandatory for any business to levy, collect, and deposit GST. He should further file periodical GST returns and comply with the norms.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "2. Import Export Code",
-				content:
-					"Any SME dealing in Import and Export business must obtain the Import or Export Code, which is a unique code for the specific establishment registered with the DGFT. It is a PAN based registration.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "3. Drug License",
-				content:
-					"It is mandatory for establishments trading in pharmaceutical items, to obtain a wholesale drug license or a retail license.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "4. PSARA",
-				content:
-					"This license should be obtained by security businesses providing private security guards from the competent authority.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "5. Udyog Aadhar Registration",
-				content:
-					"This is a registration to be applied by SMEs based on their investment in plant & machinery. This is imperative as it can provide various subsidies and schemes provided by the Government to enhance the SME sector.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "Stay Protected, Stay Safe!",
-				content:
-					"Cyber fraud is a menace that every business must deal with. The only solution is constant vigilance. Your security systems must always be up to date, and employees need regular training on how to avoid internet scams.",
-			},
-			{
-				type: "content",
-				list: null,
-
+					"In short, all types of trading, manufacturing, and service sector activities are eligible for a MUDRA loan.",
 				heading: null,
-				content:
-					"The only way to prevent cyber fraud is to stay hyper-vigilant. Make sure you follow all the tips given above. In addition to this, there are many insurance companies that offer insurance against cyber fraud for businesses. You can consider taking such an insurance as an added protection.",
-			},
-			{
 				type: "content",
 				list: null,
-				heading: "6. FSSAI License or Registration",
-				content:
-					"Food safety and standard authority of India licenses are mandatory for retail stores, trade outlets, restaurants, and kiosks to verify standardization of food products nationwide.",
 			},
 			{
-				type: "content",
-				list: null,
 				heading: null,
-				content:
-					"Under FSSAI, the license or registration is divided into three categories, namely:",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "7. Gumastha license",
-				content:
-					"This is for businesses that need to be established in the state of Maharashtra.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "8. Other Licenses and Registrations",
-				content:
-					"There could be a few other businesses that require approval from regulatory bodies like the Reserve Bank of India, IRDAI, etc., to operate. Some even need to obtain permits from the pollution control board, fire department, or local healthcare system, depending on the nature of the business.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Trademark Registration",
-				content:
-					"Trademark is a brand name, logo, website name, product name, or a punch line that provides a distinct recognition to businesses through which customers can distinguish the products or services of one establishment from another. One can contact a Trademark consultant/agent to seek assistance in registering his company.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"By paying a Trademark fee (which varies), the director can file a trademark application with the Indian Trademark Registry and protect his trademark. Trademark is an intellectual property that can be sold for a price.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Features: With Company Trademark registration, it obtains protection against competitors who try to copy the trademark, makes the SME a registered brand, helps in the expansion of business and growth, image building and credibility in the Market, and in building trust in customers.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Forms of Trademarks – It can be in the form of word marks, logos, specific colors, 3D Marks, or Sound Marks",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Requirements of business trademark registration – The business must submit the Identity proof of the Trademark owner, prepare a One-page authorization letter, conduct a free Legal search report, create a Soft copy of the Logo and Complete the online process to use the Trademark.",
-			},
-			{
-				type: "content",
 				list: [
-					"Manufacturing: Class 1 to 34",
-					"Trading: Class 35",
-					"Services: Class 35 to 45",
+					"Sishu Loans - For loan amount up to Rs. 50,000/-",
+					"Kishor Loans - For loan amount up to Rs. 5,00,000/-",
+					"Tarun Loans - For loan amount up to Rs. 10,00,000/-",
 				],
-				heading: "What is the procedure for the registration of the company?",
-				content:
-					"Step 1 – Identify the appropriate class of trademark under which the business name registration will be done from the available 45 classes of various business segments which are categorized into:",
+				content: "MUDRA loans are of three types: ",
+				type: "content",
 			},
 			{
 				type: "content",
 				list: null,
+				heading: "Can I Apply for Mudra Loan Online?",
+				content:
+					"Of course, yes. MUDRA loans can be availed both online and offline by contacting the eligible financial lenders such as non-banking financial institutions (NBFCs), private sector banks, and commercial and co-operative banks.",
+			},
+			{
 				heading: null,
 				content:
-					"Step 2 – Choose the appropriate package and pay the relevant fees after submitting the required documents on the official web portal.",
+					"The government also recently introduced the MUDRA card, which is essentially a debit card for your MUDRA loan account. Interestingly, unless you utilise a portion of the sanctioned amount, you won't be charged the interest.",
+				type: "content",
+				list: null,
+			},
+			{
+				type: "content",
+				heading: "2. SIDBI Make in India Soft Loan Fund for MSMEs (SMILE) ",
+				list: null,
+				content:
+					"This small business lending scheme is governed by the Small Industries Development Bank of India (SIDBI). SMILE is one of the best government loan schemes that aim to offer loans with below-market interest rates, also known as soft loans.",
 			},
 			{
 				type: "content",
 				list: null,
+
 				heading: null,
 				content:
-					"Step 3 – To get a detailed trademark check conducted and verified and then to sign a one-page authority letter after which the application for the trademark registry should be filed.",
+					"The minimum loan amount under this Indian government loan scheme for small business is Rs. 25 lakhs and is an ideal small scale industries loan from the government to meet the requisite debt-equity ratio for new MSMEs. The interest rate offered by SMILE scheme starts at 8.36%. ",
 			},
 			{
 				type: "content",
 				list: null,
+
 				heading: null,
 				content:
-					"Step 4 – Apply to the IPR Department, provide acknowledgement & continuously track the status of the trademark.",
+					"The scheme also comes with a moratorium period of 36 months and maximum repayment tenure of 10 years. New MSMEs, along with existing service and manufacturing sectors, can apply for this scheme. ",
+			},
+			{
+				type: "content",
+				heading: "3. MSME Business Loans for Start-ups in 59 Minutes ",
+				list: null,
+				content:
+					"This central government small scale industries loan is a boon to the MSME sector, and its interest rate starts from 8.50%. Although the actual process might take 8 to 12 days, your loan eligibility will be communicated in just 59 minutes.",
 			},
 			{
 				type: "content",
 				list: null,
+
 				heading: null,
 				content:
-					"Step 5 – SMEs can use the (TM) mark after the Trademark application is filed, and an acknowledgement receipt is procured. (R) mark can be used when the trademark company name is registered.",
+					"To be eligible for this government business loan, you must have GST verification, ownership related documents, KYC details and at least six months of bank history. Also, the interest rates are based on the nature of your business and credit rating. ",
 			},
 			{
 				type: "content",
 				list: null,
+
 				heading: null,
 				content:
-					"Step 6 – Trademark should be renewed every 10 years to use it for an indefinite period.",
+					'If you\'re wondering "How much loan can I get for small business?" then MSME business loans in 59 minutes may leave you wonderstruck. This scheme offers small scale business government loan of Rs. 1 lakh at the minimum and up to Rs. 5 crores. Also, there is a 3% reservation available for women entrepreneurs. ',
 			},
 			{
 				type: "content",
 				list: null,
-				heading: "Taxation Help",
+				heading: "4. Stand-Up India",
 				content:
-					"Taxes are the amount of money that is paid to the Government at specified rates and periodically. There are mainly two types of Taxes, direct tax and indirect tax governed by CBDT - Central Board of Direct Taxes and CBEC - Central Board of Excise and Customs.",
+					"Headed by Small Industries Development Bank of India (SIDBI), Stand-Up India is an initiative to provide government small business loans to women entrepreneurs and individuals under the SC/ST category.",
+			},
+			{
+				type: "content",
+				heading: null,
+				list: null,
+				content:
+					"Under this scheme, small businesses can avail loans between Rs. 10 lakh to Rs. 1 crore. The loan amount will cover around 75% of your business project, and its interest rate is calculated as Bank's MCLR + 3% + tenor premium.  ",
 			},
 			{
 				type: "content",
 				list: null,
+
+				heading: null,
+				content:
+					"Enterprises belonging to manufacturing, trading or servicing sectors are eligible for this scheme. If your company belongs to non-individual enterprises, at least 51% of its shares must belong to a woman or SC/ST entrepreneur to avail this loan. ",
+			},
+			{
+				type: "content",
+				list: null,
+
 				heading:
-					"Direct Taxes are the personal liability of the individual like:",
+					"5. Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) ",
 				content:
-					"		1.		Income Tax or TDS to be paid by businesses earning above a minimum amount which is beyond the tax exemption limit.",
+					"This government loans scheme was launched at the beginning of this century and offer central government small scale industries loan to the MSME sector. This scheme provides working capital loans, up to Rs. 10 lakhs without any collateral. You can also avail credit facilities up to Rs. 1 crore with the help of mortgage of your business land or assets. ",
 			},
 			{
 				type: "content",
 				list: null,
+
 				heading: null,
 				content:
-					"		2.		Capital Gains Tax derived from the sale of the property and categorized as short-term capital gains and Long Term Capital Gains",
+					"New or existing MSMEs engaged in service or manufacturing activities (except retail trade), agricultural and educational institutions and self-help groups are eligible for this scheme. ",
 			},
 			{
 				type: "content",
 				list: null,
+
+				heading: "In Conclusion ",
+				content:
+					'With initiatives like "Make In India" gaining more prevalence, the economy of SMEs, composed of nearly 42.50 million registered and unregistered businesses, is a crucial growth driver of the industry, contributing to almost 40% of India\'s GDP. ',
+			},
+			{
+				type: "content",
+				list: null,
+
 				heading: null,
 				content:
-					"		3.		Securities Transaction Tax levied on the sale of shares and securities traded in the Indian Stock Exchange.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		4.		Perquisite Tax on the perks and facilities provided by the employer to the employees of the company",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		5.		Corporate Tax which depends on the revenue earned by a company further bifurcated into Minimum Alternative Tax, Fringe Benefits Tax, Dividend Distribution Tax, and Banking Cash Transaction Tax",
-			},
-			{
-				type: "content",
-				list: null,
-				heading:
-					"Indirect Taxes are levied on goods and services and now come under GST – Goods and Services Tax. This comprises:",
-				content:
-					"		1.		Sales Tax which is levied on the sale of a product/service.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		2.		Service Tax to be levied on the customer services provided by an entity",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		3.		Value Added Tax is a commercial tax levied at all the stages of the supply chain.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		4.		Customs Duty and Octroi Tax if goods are imported/exported from/to another country.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		5.		Excise Duty which is levied on all the goods manufactured or produced in India",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Conclusion",
-				content:
-					"Thus, having complete knowledge of the registration process, licenses and permits and taxation ensures a great start to digitally launch your own business. The above-mentioned information will help the applicant in staying abreast with the necessities and the developments in the regulations and follow the appropriate procedure to digitally start his/ her own small business in India.",
+					"And the sector doesn't show any signs of slowing down - hence the continued support from the government. Even if your business doesn't fit well with the requirements of the listed loan schemes, don't worry! There are plenty of non-bank financial institutions (NBFCs) that offer business loans to enhance your business's growth potential. ",
 			},
 		],
 	},
@@ -2117,43 +1919,33 @@ export const KNOWLEDGE_CENTER = [
 			{
 				type: "content",
 				list: null,
-				heading: null,
+				heading: "Introduction",
 				content:
-					"Establishing a new company or business may seem like a daunting proposition. But the fact is that the procedure to register a company, if explained well, can be extremely simple and convenient to follow. It can incorporate great benefits for the individual and the economy at large, so starting up a new business is a boon. Let us understand the appropriate procedure for new company registration:",
+					"The world has fallen to hard times. Often, we lend money to people who cannot repay us. CIBIL is a private organisation that maintains credit records and assigns a credit score for the same. CIBIL helps to prevent NPAs by careful vetting of people, only allowing people with a good CIBIL score to get loans.",
 			},
 			{
 				type: "content",
 				list: null,
-				heading: "About Company Registration:",
-				content:
-					"It is mandatory to register a new company to avail authenticity and to enhance its credibility. Registration protects the company against personal obligations, covers the company’s assets, enhances its chances to develop, and improves customer attraction.",
+				heading: "What is an Excellent Credit Score? ",
+				content: "An excellent credit score is anything upwards of 800.",
 			},
 			{
 				type: "content",
-				list: [
-					"Private Limited Company",
-					"Public Limited Company",
-					"One Person Company",
-					"Limited Liability Partnership",
-					"Partnership Firm",
-					"Sole Proprietorship",
-					"NGO/Trust",
-					"Nidhi Company",
-				],
-				heading: "Business structures that a company can be registered as are:",
-				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.Here are a few tips to help you secure business and prevent cyber frauds.",
+				list: null,
+				heading: "What is a Bad Credit Score? ",
+				content: "A credit score below 500 is a bad credit score. ",
 			},
 			{
-				content: null,
-				heading: "What is the process of a Pvt Ltd company? ",
+				content:
+					"CIBIL scores range from 300 to 900. Only people with a CIBIL score above 750 can get a loan. ",
+				heading: "What is the Minimum CIBIL Score to Get a Loan? ",
 				type: "content",
 				list: null,
 			},
 			{
 				content:
-					"This is the first step to register the company under the Companies Act, 2006. To obtain the DIN, the Director must visit the MCA website and create an account on it. He would need to fill the DIN form and pay the relevant fees for it. Secured payment can be made online. This information should be percolated to the ROC – Registrar of Corporate.",
-				heading: "Step 1: Procure DIN - Director Identification Number",
+					"The further below you are from the target score of 750, the longer it will take for you to improve your credit score. There is no way to accurately determine how long it will take to improve your credit score, but it does take approximately 4-12 months to increase the credit score.",
+				heading: "How Long Does it Take to Improve the CIBIL Score? ",
 				type: "content",
 				list: null,
 			},
@@ -2167,318 +1959,119 @@ export const KNOWLEDGE_CENTER = [
 			{
 				type: "content",
 				list: null,
-				heading: "Step 3: Register as a new user on the MCA website",
+				heading: "Can you Fix Bad Credit? ",
 				content:
-					"This does not require any additional fees and can be done conveniently through the MCA website.",
+					"Yes, you can fix bad credit. Although it will be extremely difficult while paying high-interest rates, it is not impossible to fix bad credit.",
 			},
 			{
-				heading: "Step 4: Apply for a CIC - company incorporation certificate.",
+				heading: "How do I Clear my Bad Credit History? ",
 				content:
-					"Finally, the director must apply for the CIC – Company Incorporation certificate, which would incorporate the name of the company, address, details of directors and staff, information about shares, etc.",
+					"There are a few proven techniques to clear bad credit history. They are:",
 				type: "content",
-				list: null,
+				list: [
+					"Sometimes, expired bad credits are still on your credit report, which may be  pulling the credit score down. There might also be errors in the credit report. We need to discuss these issues with the credit bureau by filing a dispute, who will conduct an investigation, and clear the errors.",
+					"You can take a more direct approach by filing a dispute with the business who reported you to the credit bureau. The business will then investigate to find out and correct errors in your credit report.",
+					"If there are no errors and you are responsible for the bad report, it is wise to reach compliance. Offer money to the creditors to revoke the charges on your credit report. Plead for mercy explaining the reason for being late to clear dues.",
+				],
 			},
 			{
 				type: "content",
-				heading: "When is a company said to be registered? ",
+				heading: "Can I Pay to Clear my Credit History? ",
 				list: null,
 				content:
-					"Once all the forms are submitted, the MCA will verify and approve the application and send a confirmation email confirming the registration.",
+					"Yes, you can legally pay the creditor to clear credit history. ",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "How much does it cost to register a Pvt Ltd company?",
+				heading: "How Can I Clear my CIBIL Records? ",
 				content:
-					"To incorporate and start a new business under Private Limited Company hugely varies from a Service way as far as the cost is concerned. The Incorporation cost of a Private Limited Company is approximately Rs. 15000, Annual maintenance cost – Minimum Rs. 15000 (varies), Average fees for changes – Rs. 5000 (depends on the kind), and Penalties, miscellaneous charges, and Interest – Rs. 6000. So around a total of Rs. 40-50000 may be incurred to initialize a registration of a Pvt Ltd Company.",
+					"Firstly, get your copy of the CIBIL credit report. Analyse the report, and if you find errors, file a dispute resolution form to CIBIL for correction. Pay bills on time, avoid excessive debt and don’t go for minimum payments. If you are still facing problems in meeting deadlines, automate the transaction by approaching your bank. ",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "Obtaining Licenses?",
+				heading: "How Can I Solve CIBIL Problems? ",
 				content:
-					"The next step is obtaining business licenses to initiate the new SME. Getting a business license is based on multiple factors like the type, sector, and place of business, number of employees, etc. Some of the commonly obtained licenses are:",
+					"Maintaining a good CIBIL credit score is difficult. Even after focusing on the problems and working on the solutions, we eventually get something wrong. Let us look for solutions to these problems. ",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "How to get a business license? ",
-				content: "Various ways are:",
+				heading: "How to Improve the CIBIL Score after Cheque Bounce?",
+				content:
+					"Sometimes,  you might not have enough balance in your account, which will result in cheque bounce. It might be due to the financial problems you are currently struggling to cope with. Hence, you need to settle off the amount when your financial situation improves, giving you a fresh start.",
 			},
 			{
 				type: "content",
-				heading: "1. Company or LLP Registration",
+				heading: "How to Improve the CIBIL Score After Written Off? ",
 				list: null,
 				content:
-					"Any business with an annual turnover of more than Rs.20 lakhs must obtain a Company or LLP registration to have a separate legal identity. This also helps stakeholders to get the benefit of limited liability protection, makes the business easily transferable, and ensures the perpetual existence of the entity.",
+					"Firstly, you need to check if the account is incorrectly tagged in your name. Check if your loan account has yet to be closed by the lending institution. File a dispute form to CIBIL informing them about the problem. ",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "2. Shops & Establishment",
+				heading: "How to Improve CIBIL Score After Settlement? ",
 				content:
-					"Again, a mandatory license to obtain from the Government monitors the conduct of the trading activity, thus ensuring safety in the neighborhood. This is regulated by the municipality, and an extra fee is charged for it.",
+					"While relocating, it is wise to transfer the EMIs to the account that will be adequately funded and report the credit card agency to automate EMI payments before due dates. ",
 			},
 			{
 				type: "content",
 				list: null,
 
-				heading: "How to get a business permit",
-				content: "Various ways are available:",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "1. GST Registration",
+				heading: "How Long Does it Take to Rebuild Credit? ",
 				content:
-					"Registration of Goods and Services Tax is mandatory for any business to levy, collect, and deposit GST. He should further file periodical GST returns and comply with the norms.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "2. Import Export Code",
-				content:
-					"Any SME dealing in Import and Export business must obtain the Import or Export Code, which is a unique code for the specific establishment registered with the DGFT. It is a PAN based registration.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "3. Drug License",
-				content:
-					"It is mandatory for establishments trading in pharmaceutical items, to obtain a wholesale drug license or a retail license.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "4. PSARA",
-				content:
-					"This license should be obtained by security businesses providing private security guards from the competent authority.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "5. Udyog Aadhar Registration",
-				content:
-					"This is a registration to be applied by SMEs based on their investment in plant & machinery. This is imperative as it can provide various subsidies and schemes provided by the Government to enhance the SME sector.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "Stay Protected, Stay Safe!",
-				content:
-					"Cyber fraud is a menace that every business must deal with. The only solution is constant vigilance. Your security systems must always be up to date, and employees need regular training on how to avoid internet scams.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: null,
-				content:
-					"The only way to prevent cyber fraud is to stay hyper-vigilant. Make sure you follow all the tips given above. In addition to this, there are many insurance companies that offer insurance against cyber fraud for businesses. You can consider taking such an insurance as an added protection.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "6. FSSAI License or Registration",
-				content:
-					"Food safety and standard authority of India licenses are mandatory for retail stores, trade outlets, restaurants, and kiosks to verify standardization of food products nationwide.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Under FSSAI, the license or registration is divided into three categories, namely:",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "7. Gumastha license",
-				content:
-					"This is for businesses that need to be established in the state of Maharashtra.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "8. Other Licenses and Registrations",
-				content:
-					"There could be a few other businesses that require approval from regulatory bodies like the Reserve Bank of India, IRDAI, etc., to operate. Some even need to obtain permits from the pollution control board, fire department, or local healthcare system, depending on the nature of the business.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Trademark Registration",
-				content:
-					"Trademark is a brand name, logo, website name, product name, or a punch line that provides a distinct recognition to businesses through which customers can distinguish the products or services of one establishment from another. One can contact a Trademark consultant/agent to seek assistance in registering his company.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"By paying a Trademark fee (which varies), the director can file a trademark application with the Indian Trademark Registry and protect his trademark. Trademark is an intellectual property that can be sold for a price.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Features: With Company Trademark registration, it obtains protection against competitors who try to copy the trademark, makes the SME a registered brand, helps in the expansion of business and growth, image building and credibility in the Market, and in building trust in customers.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Forms of Trademarks – It can be in the form of word marks, logos, specific colors, 3D Marks, or Sound Marks",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Requirements of business trademark registration – The business must submit the Identity proof of the Trademark owner, prepare a One-page authorization letter, conduct a free Legal search report, create a Soft copy of the Logo and Complete the online process to use the Trademark.",
+					"A credit system is a trust-based approach which is simplified numerically with points. It is easy to repair damage to trust. However, rebuilding it takes time, and is a challenge in itself. So, while repairing the credit score will take from four to six months, it will take years to rebuild credit. Finally, it depends on the point target where we wish to bounce back. The higher the goal, the longer we need to wait to rebuild credit. There is no way to raise credit score instantly. However, bad credits falling from a credit report can raise credit score 100 points overnight. Let us explore some tricks to improve the credit score. ",
 			},
 			{
 				type: "content",
 				list: [
-					"Manufacturing: Class 1 to 34",
-					"Trading: Class 35",
-					"Services: Class 35 to 45",
+					"Correct credit report details",
+					"Involve and authorise family members with good credit to your account",
+					"Ask for higher credit and repay it",
+					"Negotiate with creditors to keep good credit standing",
 				],
-				heading: "What is the procedure for the registration of the company?",
+
+				heading: "How can I Raise my Credit Score in 30 Days?",
 				content:
-					"Step 1 – Identify the appropriate class of trademark under which the business name registration will be done from the available 45 classes of various business segments which are categorized into:",
+					"The following steps will guide you on how to improve credit score in 30 days.",
 			},
 			{
 				type: "content",
-				list: null,
-				heading: null,
+				list: [
+					"Set your credit report right",
+					"Pay bills by the due date",
+					"Clear as much debt as possible",
+					"Prefer secured credit cards over high-interest cards",
+					"Limit inquiries of your credit rating",
+					"Negotiate with lenders",
+				],
+
+				heading: "How can I Raise my Credit Score by 200 Points? ",
 				content:
-					"Step 2 – Choose the appropriate package and pay the relevant fees after submitting the required documents on the official web portal.",
+					"The following steps will guide you on how to raise credit score by 200 points.",
 			},
 			{
 				type: "content",
-				list: null,
-				heading: null,
+				list: [
+					"Make payments in time",
+					"Keep credit card balance low",
+					"Reduce debt to zero",
+					"Avoid using zero balance cards",
+					"Don’t open cards you don’t need",
+					"Diversify debt sources",
+					"Protect yourself from identity theft",
+					"Use a secured credit card",
+					"Dispute credit report errors",
+				],
+				heading: "How can I Improve my Bad Credit Score? ",
 				content:
-					"Step 3 – To get a detailed trademark check conducted and verified and then to sign a one-page authority letter after which the application for the trademark registry should be filed.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Step 4 – Apply to the IPR Department, provide acknowledgement & continuously track the status of the trademark.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Step 5 – SMEs can use the (TM) mark after the Trademark application is filed, and an acknowledgement receipt is procured. (R) mark can be used when the trademark company name is registered.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Step 6 – Trademark should be renewed every 10 years to use it for an indefinite period.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Taxation Help",
-				content:
-					"Taxes are the amount of money that is paid to the Government at specified rates and periodically. There are mainly two types of Taxes, direct tax and indirect tax governed by CBDT - Central Board of Direct Taxes and CBEC - Central Board of Excise and Customs.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading:
-					"Direct Taxes are the personal liability of the individual like:",
-				content:
-					"		1.		Income Tax or TDS to be paid by businesses earning above a minimum amount which is beyond the tax exemption limit.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		2.		Capital Gains Tax derived from the sale of the property and categorized as short-term capital gains and Long Term Capital Gains",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		3.		Securities Transaction Tax levied on the sale of shares and securities traded in the Indian Stock Exchange.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		4.		Perquisite Tax on the perks and facilities provided by the employer to the employees of the company",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		5.		Corporate Tax which depends on the revenue earned by a company further bifurcated into Minimum Alternative Tax, Fringe Benefits Tax, Dividend Distribution Tax, and Banking Cash Transaction Tax",
-			},
-			{
-				type: "content",
-				list: null,
-				heading:
-					"Indirect Taxes are levied on goods and services and now come under GST – Goods and Services Tax. This comprises:",
-				content:
-					"		1.		Sales Tax which is levied on the sale of a product/service.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		2.		Service Tax to be levied on the customer services provided by an entity",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		3.		Value Added Tax is a commercial tax levied at all the stages of the supply chain.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		4.		Customs Duty and Octroi Tax if goods are imported/exported from/to another country.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		5.		Excise Duty which is levied on all the goods manufactured or produced in India",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Conclusion",
-				content:
-					"Thus, having complete knowledge of the registration process, licenses and permits and taxation ensures a great start to digitally launch your own business. The above-mentioned information will help the applicant in staying abreast with the necessities and the developments in the regulations and follow the appropriate procedure to digitally start his/ her own small business in India.",
+					"The following steps will guide you on how to increase credit score to 500 points and how you need to proceed to increase the CIBIL score from 600 to 750. ",
 			},
 		],
 	},
@@ -2494,394 +2087,456 @@ export const KNOWLEDGE_CENTER = [
 				list: null,
 				heading: null,
 				content:
-					"Establishing a new company or business may seem like a daunting proposition. But the fact is that the procedure to register a company, if explained well, can be extremely simple and convenient to follow. It can incorporate great benefits for the individual and the economy at large, so starting up a new business is a boon. Let us understand the appropriate procedure for new company registration:",
+					"Whether your business is a startup or if you’re ready for expansion, you need funds to power your small business. But before you seek for a loan, you need to plan about exactly how you’ll use your loan amount and how you’ll pay it off. So, that you don’t fall into a situation where you can’t pay off unsecured business loan. Without a strategy on how to put the money to work, you’ll take up a loan that might become a burden on your shoulders.",
 			},
 			{
 				type: "content",
 				list: null,
-				heading: "About Company Registration:",
-				content:
-					"It is mandatory to register a new company to avail authenticity and to enhance its credibility. Registration protects the company against personal obligations, covers the company’s assets, enhances its chances to develop, and improves customer attraction.",
-			},
-			{
-				type: "content",
-				list: [
-					"Private Limited Company",
-					"Public Limited Company",
-					"One Person Company",
-					"Limited Liability Partnership",
-					"Partnership Firm",
-					"Sole Proprietorship",
-					"NGO/Trust",
-					"Nidhi Company",
-				],
-				heading: "Business structures that a company can be registered as are:",
-				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.Here are a few tips to help you secure business and prevent cyber frauds.",
-			},
-			{
+				heading:
+					"Read on to know how an unsecured business loan can scale up your business: ",
 				content: null,
-				heading: "What is the process of a Pvt Ltd company? ",
+			},
+			{
+				type: "content",
+				list: null,
+				heading: "Expansion",
+				content:
+					"Many small business owners seek for funding when they want to power expansion plans. With unsecured business loans for startup you can move into a bigger office, or to an economically feasible location or investing in a new product line. A financial support from NeoGrowth can help to meet your urgent need for expansion, despite of low credit score.",
+			},
+			{
+				content:
+					"Businesses might fall into a shortage of funds to keep a smooth flow in the day-to-day operations like employee benefits, transportation, travel, taxes, rent, repairs, and more. At these times, unsecured business loans for self employed come into play to fulfil your requirements and keep the business growing.",
+				heading: "Smooth Cash Flow",
 				type: "content",
 				list: null,
 			},
 			{
 				content:
-					"This is the first step to register the company under the Companies Act, 2006. To obtain the DIN, the Director must visit the MCA website and create an account on it. He would need to fill the DIN form and pay the relevant fees for it. Secured payment can be made online. This information should be percolated to the ROC – Registrar of Corporate.",
-				heading: "Step 1: Procure DIN - Director Identification Number",
+					"Advertising is often a huge expense, though it eventually pays off very well. It is definitely the best way to grow your business. So, hire an advertising agency and increase sales with innovative campaigns.",
+				heading: "Marketing Cost",
 				type: "content",
 				list: null,
 			},
 			{
-				heading: "Step 2: Procure DSC - Digital Signature Certificate (DSC)",
+				heading: "Equipment Financing",
 				list: null,
 				content:
-					"As per the Information Act 2000, a valid digital signature on all the documents is required.",
+					"The requirement for machines and equipment can emerge at any time. The right type of equipment directly affects the quality and quantity of the products. Tackle such situations with an instant unsecured business loan from NeoGrowth.",
 				type: "content",
 			},
 			{
 				type: "content",
 				list: null,
-				heading: "Step 3: Register as a new user on the MCA website",
+				heading: "Inventory Purchase",
 				content:
-					"This does not require any additional fees and can be done conveniently through the MCA website.",
+					"As a safety stock, it is crucial to have the minimum inventory in your warehouse. This will keep the smooth flow of supply. When there’s a demand for your products/services in the market, you should never fall short of finance. At this point, an unsecured loan from NeoGrowth could help you to buy the necessary inventories to meet the higher demand of your customers.",
 			},
 			{
-				heading: "Step 4: Apply for a CIC - company incorporation certificate.",
+				heading: "Timely Opportunities",
 				content:
-					"Finally, the director must apply for the CIC – Company Incorporation certificate, which would incorporate the name of the company, address, details of directors and staff, information about shares, etc.",
+					"Many businesses wait for the most favorable season when they make the maximum revenue in the year. You shouldn’t fall short of funds at this period of the year to buy inventories. For opportunities like these, get an unsecured loan from NeoGrowth and meet your milestones.",
 				type: "content",
 				list: null,
 			},
 			{
 				type: "content",
-				heading: "When is a company said to be registered? ",
-				list: null,
-				content:
-					"Once all the forms are submitted, the MCA will verify and approve the application and send a confirmation email confirming the registration.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "How much does it cost to register a Pvt Ltd company?",
-				content:
-					"To incorporate and start a new business under Private Limited Company hugely varies from a Service way as far as the cost is concerned. The Incorporation cost of a Private Limited Company is approximately Rs. 15000, Annual maintenance cost – Minimum Rs. 15000 (varies), Average fees for changes – Rs. 5000 (depends on the kind), and Penalties, miscellaneous charges, and Interest – Rs. 6000. So around a total of Rs. 40-50000 may be incurred to initialize a registration of a Pvt Ltd Company.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "Obtaining Licenses?",
-				content:
-					"The next step is obtaining business licenses to initiate the new SME. Getting a business license is based on multiple factors like the type, sector, and place of business, number of employees, etc. Some of the commonly obtained licenses are:",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "How to get a business license? ",
-				content: "Various ways are:",
-			},
-			{
-				type: "content",
-				heading: "1. Company or LLP Registration",
-				list: null,
-				content:
-					"Any business with an annual turnover of more than Rs.20 lakhs must obtain a Company or LLP registration to have a separate legal identity. This also helps stakeholders to get the benefit of limited liability protection, makes the business easily transferable, and ensures the perpetual existence of the entity.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "2. Shops & Establishment",
-				content:
-					"Again, a mandatory license to obtain from the Government monitors the conduct of the trading activity, thus ensuring safety in the neighborhood. This is regulated by the municipality, and an extra fee is charged for it.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "How to get a business permit",
-				content: "Various ways are available:",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "1. GST Registration",
-				content:
-					"Registration of Goods and Services Tax is mandatory for any business to levy, collect, and deposit GST. He should further file periodical GST returns and comply with the norms.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "2. Import Export Code",
-				content:
-					"Any SME dealing in Import and Export business must obtain the Import or Export Code, which is a unique code for the specific establishment registered with the DGFT. It is a PAN based registration.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "3. Drug License",
-				content:
-					"It is mandatory for establishments trading in pharmaceutical items, to obtain a wholesale drug license or a retail license.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "4. PSARA",
-				content:
-					"This license should be obtained by security businesses providing private security guards from the competent authority.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "5. Udyog Aadhar Registration",
-				content:
-					"This is a registration to be applied by SMEs based on their investment in plant & machinery. This is imperative as it can provide various subsidies and schemes provided by the Government to enhance the SME sector.",
-			},
-			{
-				type: "content",
-				list: null,
-
-				heading: "Stay Protected, Stay Safe!",
-				content:
-					"Cyber fraud is a menace that every business must deal with. The only solution is constant vigilance. Your security systems must always be up to date, and employees need regular training on how to avoid internet scams.",
-			},
-			{
-				type: "content",
-				list: null,
-
 				heading: null,
-				content:
-					"The only way to prevent cyber fraud is to stay hyper-vigilant. Make sure you follow all the tips given above. In addition to this, there are many insurance companies that offer insurance against cyber fraud for businesses. You can consider taking such an insurance as an added protection.",
-			},
-			{
-				type: "content",
 				list: null,
-				heading: "6. FSSAI License or Registration",
 				content:
-					"Food safety and standard authority of India licenses are mandatory for retail stores, trade outlets, restaurants, and kiosks to verify standardization of food products nationwide.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Under FSSAI, the license or registration is divided into three categories, namely:",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "7. Gumastha license",
-				content:
-					"This is for businesses that need to be established in the state of Maharashtra.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "8. Other Licenses and Registrations",
-				content:
-					"There could be a few other businesses that require approval from regulatory bodies like the Reserve Bank of India, IRDAI, etc., to operate. Some even need to obtain permits from the pollution control board, fire department, or local healthcare system, depending on the nature of the business.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Trademark Registration",
-				content:
-					"Trademark is a brand name, logo, website name, product name, or a punch line that provides a distinct recognition to businesses through which customers can distinguish the products or services of one establishment from another. One can contact a Trademark consultant/agent to seek assistance in registering his company.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"By paying a Trademark fee (which varies), the director can file a trademark application with the Indian Trademark Registry and protect his trademark. Trademark is an intellectual property that can be sold for a price.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Features: With Company Trademark registration, it obtains protection against competitors who try to copy the trademark, makes the SME a registered brand, helps in the expansion of business and growth, image building and credibility in the Market, and in building trust in customers.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Forms of Trademarks – It can be in the form of word marks, logos, specific colors, 3D Marks, or Sound Marks",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Requirements of business trademark registration – The business must submit the Identity proof of the Trademark owner, prepare a One-page authorization letter, conduct a free Legal search report, create a Soft copy of the Logo and Complete the online process to use the Trademark.",
-			},
-			{
-				type: "content",
-				list: [
-					"Manufacturing: Class 1 to 34",
-					"Trading: Class 35",
-					"Services: Class 35 to 45",
-				],
-				heading: "What is the procedure for the registration of the company?",
-				content:
-					"Step 1 – Identify the appropriate class of trademark under which the business name registration will be done from the available 45 classes of various business segments which are categorized into:",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Step 2 – Choose the appropriate package and pay the relevant fees after submitting the required documents on the official web portal.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Step 3 – To get a detailed trademark check conducted and verified and then to sign a one-page authority letter after which the application for the trademark registry should be filed.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Step 4 – Apply to the IPR Department, provide acknowledgement & continuously track the status of the trademark.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Step 5 – SMEs can use the (TM) mark after the Trademark application is filed, and an acknowledgement receipt is procured. (R) mark can be used when the trademark company name is registered.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"Step 6 – Trademark should be renewed every 10 years to use it for an indefinite period.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Taxation Help",
-				content:
-					"Taxes are the amount of money that is paid to the Government at specified rates and periodically. There are mainly two types of Taxes, direct tax and indirect tax governed by CBDT - Central Board of Direct Taxes and CBEC - Central Board of Excise and Customs.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading:
-					"Direct Taxes are the personal liability of the individual like:",
-				content:
-					"		1.		Income Tax or TDS to be paid by businesses earning above a minimum amount which is beyond the tax exemption limit.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		2.		Capital Gains Tax derived from the sale of the property and categorized as short-term capital gains and Long Term Capital Gains",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		3.		Securities Transaction Tax levied on the sale of shares and securities traded in the Indian Stock Exchange.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		4.		Perquisite Tax on the perks and facilities provided by the employer to the employees of the company",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		5.		Corporate Tax which depends on the revenue earned by a company further bifurcated into Minimum Alternative Tax, Fringe Benefits Tax, Dividend Distribution Tax, and Banking Cash Transaction Tax",
-			},
-			{
-				type: "content",
-				list: null,
-				heading:
-					"Indirect Taxes are levied on goods and services and now come under GST – Goods and Services Tax. This comprises:",
-				content:
-					"		1.		Sales Tax which is levied on the sale of a product/service.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		2.		Service Tax to be levied on the customer services provided by an entity",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		3.		Value Added Tax is a commercial tax levied at all the stages of the supply chain.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		4.		Customs Duty and Octroi Tax if goods are imported/exported from/to another country.",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: null,
-				content:
-					"		5.		Excise Duty which is levied on all the goods manufactured or produced in India",
-			},
-			{
-				type: "content",
-				list: null,
-				heading: "Conclusion",
-				content:
-					"Thus, having complete knowledge of the registration process, licenses and permits and taxation ensures a great start to digitally launch your own business. The above-mentioned information will help the applicant in staying abreast with the necessities and the developments in the regulations and follow the appropriate procedure to digitally start his/ her own small business in India.",
+					"Are unsecured business loans safe? It is, if you’ve a blueprint of how you will be using your funds. So, before you apply for a business loan make sure you have a well-thought plan and have set milestones for success.",
 			},
 		],
 	},
 ];
 export const SUCCESSDATA = [
 	{
+		id: 1,
 		name: "Ms. Reshma Deokar",
 		heading: "Advait Medical & General Store, Mumbai",
 		image: sone,
 		type: "video",
+		topContent: "Reshma Deokar",
 		content:
-			"I am glad that diGibizz has supported a woman entrepreneur like me to upgrade my business at the right time and compete with the fast-evolving pharmacy sector. Today, me & my business have grown more stronger with their support",
+			"In the fast-evolving pharma sector, diGibizz has supported a woman entrepreneur like me at the right time to upgrade my business. Today, my business has grown to the next level with their support.",
+		blog: [
+			{
+				heading: "Executive Summary",
+				desc: [
+					"This case study has been written to examine the effect that DiGibizz, by NeoGrowth has had on the transformation of small businesses.",
+					"We will study the case of N.S. Stores, a grocery supermarket belonging to the Small and Medium Enterprise (SME) category. This business run by Chetan and Nikita Saha was doing well but could improve exponentially more if it had the required resources. Processes like book-keeping and billing were not digitized. This caused certain inefficiencies in the business process which hindered the growth of the business.",
+					"DiGibizz was instrumental in transforming N.S. Stores and improving its revenue and growth by up to 30%. Thanks to their digitization of various processes like billing and stocktake. DiGibizz also helped finance the business with the help of NeoGrowth.",
+					"With the help of GlobalLinker, N.S. Stores were able to put themselves on the map and were able to compete with the various SME's in the market.",
+				],
+				list: null,
+			},
+			{
+				heading: "Background",
+				desc: [
+					"When Reshma's wedding plans were fixed; she was faced with a choice - to join a job or start a business. Finally, she chose to open a business. She started a pharmacy and named it Advait Medical. The store was doing reasonably well, but Reshma felt that it could perform much better.",
+					"NeoGrowth had visited Advait Medical to see how they could transform the store. The team looked to evaluate the store using the proprietary Digit-O-Meter scanning mechanism to look for effective solutions. With the help of this tool, NeoGrowth was able to evaluate the store and subsequently found plenty of opportunities for growth with Advait Medical.",
+				],
+				list: null,
+			},
+			{
+				heading: "Case Evaluation",
+				desc: null,
+				list: [
+					{
+						bullet: "Tough competition from larger pharmacies - ",
+						content:
+							"Reshma faced tough competition from other pharmacies that were part of bigger corporations. They had bigger stores, more stock and stronger market reputation.",
+					},
+					{
+						bullet: "Discounts offered by online pharmacies - ",
+						content:
+							"Larger pharmacies that had online stores were able to offer their customers bigger discounts.",
+					},
+					{
+						bullet: "Difficulties in the procurement of stock - ",
+						content:
+							"At times, it was challenging for Reshma to receive the stock that she needed to run her pharmacy. This meant that customers had to resort to buying from Reshma's competitors.",
+					},
+					{
+						bullet: "Logo and tagline needed improvement - ",
+						content:
+							"The logo is what a customer can relate to in a brand and creates the identity for a company. Neogrowth felt that Reshma's store could benefit much more if Advait Medical had a more prominent logo and tagline.",
+					},
+					{
+						bullet:
+							"Customers prefer to shop remotely because of the pandemic - ",
+						content:
+							"Since the start of the pandemic, customers would rather shop online because of the fear of infection from COVID-19.",
+					},
+					{
+						bullet: "Manual record-keeping - ",
+						content:
+							"Manually handling records is slow and time-consuming. This reduced the efficiency of running Reshma's store when compared to more intuitive, automatic digital solutions.",
+					},
+					{
+						bullet: "Difficulties with taking stock of products - ",
+						content:
+							"Reshma was performing manual stocktake of her products which were both difficult and time-consuming. It was also prone to human error and did not allow her much insight and statistics about her store's sales.",
+					},
+					{
+						bullet: "Inefficient billing because of lack of digitisation - ",
+						content:
+							"Reshma was performing her billing and invoice process manually without any Point Of Sale system. This was both cumbersome and inefficient for her.",
+					},
+					{
+						bullet: "No social media presence - ",
+						content:
+							"The lack of social media presence on popular social media sites like Facebook and Instagram meant that Advait Medical was missing out on customer reach. Not only this, but Reshma's customers were unable to receive offers and updates. ",
+					},
+					{
+						bullet: "Need for business financing - ",
+						content:
+							"Reshma found it difficult to renovate and scale her businesses without adequate financing. She needed help in the form of a small business loan.",
+					},
+				],
+			},
+			{
+				heading: "Proposed Solutions",
+				desc: [
+					"After a thorough evaluation, it was clear that Neogrowth could help Reshma improve her store. Considering all the observations from Reshma's Advait Medical, Neogrowth was able to develop a few solutions to help digitise and improve the business.",
+					"After evaluation, diGibizz proposed the following solutions - ",
+				],
+				list: [
+					{
+						bullet: "Digit-O-Meter report suggestions - ",
+						content:
+							"Using NeoGrowth’ s Digit-O-Meter, a proprietary scanning mechanism, it was possible to understand the areas where Reshma's store needed improvement. Data was fed into the algorithm, and it was able to throw several suggestions that could help make the store more efficient and easier to manage.",
+					},
+					{
+						bullet: "Revised business logo and tagline - ",
+						content:
+							"NeoGrowth was able to understand the necessity of having a strong brand presence in the market. It would help to differentiate her store from other medical stores in the area. A prominent and pleasant logo of a heart was developed and the tagline for the company was revised to 'Advait Medical - We Care For You!'",
+					},
+					{
+						bullet: "Snapbizz digital solutions - ",
+						content:
+							"Using Snapbizz, NeoGrowth can empower SMEs to completely digitise their business operations for more efficiency and ease of use. The diGibizz platform processes everything from billing, customer information and stock counts. This would also help make it easier to understand the trends for different products in Reshma's store.",
+					},
+					{
+						bullet: "Neogrowth credit lending - ",
+						content:
+							"Neogrowth Credit Pvt. Ltd. empowers small businesses by providing credit facilities in the form of small business loans to eligible businesses. Reshma was able to secure funding from Neogrowth, helping her finance the needs of Advait Medical. ",
+					},
+					{
+						bullet: "Digihealth Redbook - ",
+						content:
+							"Neogrowth implemented the use of Digihealth Redbook, a pharmacy management system that stores and handles information related to medicine, stock, etc. The app was able to provide Reshma with alerts and notifications about the status of her stock and sales at her store. This was made possible thanks to a powerful artificial intelligence algorithm developed by diGibizz.",
+					},
+					{
+						bullet: "MagicPin - ",
+						content:
+							"Magicpin is an effective online tool that brings customers coupons and offers on medicines. Using Magicpin, Reshma could find discounts on products, make orders, and get them delivered as well.",
+					},
+					{
+						bullet: "Social media presence establishment - ",
+						content:
+							"Neogrowth was able to establish their social media accounts on Facebook and Instagram. This was effective because it increased the reach and customer awareness for Advait Medical. Customers were then able to receive updates, offers and contact Reshma online.",
+					},
+				],
+			},
+			{
+				heading: "Conclusion",
+				desc: [
+					"The story of Reshma and her store Advait Medical is one of hard work and success. After her wedding plans were fixed, she chose to open her pharmacy and provide pharmaceutical products to customers in her locality. However, the competition from bigger pharmacies, the lack of an online presence and the inability to accept online payments were all challenges that Reshma faced.",
+					"With the help of NeoGrowth Credit Pvt. Ltd., Reshma was able to transform her store from the ground up. Neogrowth helped develop a new logo and tagline, 'Advait Medical - We Care For You!' which provided the store with a strong identity.",
+					"Further, important digitisation solutions were implemented like creating social media accounts and implementing the use of Digihealth Redbook, a pharmacy management system. Using Magicpin, Reshma was able to provide medicines to her customers at discounted rates, by finding applicable coupon codes.",
+					"With all these solutions being implemented, Reshma overcame many of the initial hurdles that she struggled with. With aid from Neogrowth, she was able to receive the financial and consulting help she needed to take her store to new heights, with a fully digital Point of Sale system, social media accounts, discount coupons and home delivery.",
+				],
+				list: null,
+			},
+		],
 	},
 	{
+		id: 2,
 		name: "Mr. Yogesh Dale",
 		heading: "Redz Clothing Collection, Nashik",
 		image: stwo,
 		type: "video",
+		topContent: "Yogesh Dale",
 		content:
-			"Apparel business suffered a lot during the pandemic. Thanks to diGibizz, I am able to appropriately channelize my sales through social media marketing & generate higher revenue. I am a small town boy with big aspirations, which are further fulfilled by diGibizz",
+			"In the fast-evolving pharma sector, diGibizz has supported a woman entrepreneur like me at the right time to upgrade my business. Today, my business has grown to the next level with their support.",
+		blog: [
+			{
+				heading: "Executive Summary",
+				desc: [
+					"This case study was written to examine the strong effect that DiGibizz by NeoGrowth has had on the transformation of small businesses. DiGibizz aims to empower SMEs by digitising their business operations. NeoGrowth Credit supports small businesses by providing them with the credit they need to grow and take care of inventory expenses.",
+					"With the help of this financing, NeoGrowth aims to change the lives of small business owners everywhere by giving them the purchasing power they need. This case takes place in the city of Nashik, Maharashtra. It is a prosperous land with a healthy economy for trade. Many people come here to make their dreams come true. Here, there are small and big businesses for everybody which offers ample opportunity for everyone.",
+					"Due to the abundant economic activity of Nashik, many people in business come to Nashik in the hopes of one day becoming highly successful entrepreneurs. Yogesh is one of many such entrepreneurs that relocated to Nashik for exactly this reason. He opened his shop at the Tibetan Welfare Association Market, Nashik.",
+					"He started Redz Collection - Fashion for Men, a clothing and apparel store. The store had a striking stock of designs and colours, but there were still some shortfalls. For starters, it was not very different from the many stores there; in fact, it was even hard to tell one from another. Yogesh was joined by his cousin, and they both worked tirelessly to get the business up and running. Over time they both realised that being one with their customer database was important.",
+					"DiGibizz was able to provide Yogesh with the financial support he needed in the form of a small business loan. This allowed him to take care of business expenses, including inventory, overheads, etc. It also allowed him the ability to expand his store. Besides this, DiGibizz was able to help Yogesh set-up his store on WhatsApp, allowing him to sell digitally to a wider customer base.",
+					"Additionally, a bright and conspicuous LED signage board was introduced to differentiate Redz Collections from the hundreds of other stores at the Tibetan Welfare Association Market, Nashik.",
+				],
+				list: null,
+			},
+			{
+				heading: "Background",
+				desc: [
+					"Nasik is a state full of business opportunities. Yogesh's store Redz Collection's was started with the aim of bringing high-quality clothing and textiles, he did succeed. His stock was of high quality, and he was able to manage his operations successfully.",
+					"However, it suffered from lack of digitisation and inventory processing. Not only this, but Yogesh did not have an online store to sell to customers remotely. The store only accepted cash and not digital payments. Everything was done manually.",
+					"Especially considering the current scenario due to COVID-19, it was difficult to maintain sales and revenue with the severely reduced foot traffic in and around the store. The pandemic had surely hit the business and Yogesh was looking for a way to sell his products remotely.",
+					"While the store was able to perform moderately well, it could benefit from solutions that DiGibizz could implement for them. NeoGrowth visited the store to see how they could help take Redz Collections to the next level.",
+				],
+				list: null,
+			},
+			{
+				heading: "Case Evaluation",
+				desc: null,
+				list: [
+					{
+						bullet: "Indistinguishable from Other Stores - ",
+						content:
+							"Redz Collections is situated in the busy Tibetan Welfare Association, which meant that there were nearly 200 other stores within the same complex. This meant that it was harder to differentiate the store from others.",
+					},
+					{
+						bullet: "Lack of storefront presence to passers-by - ",
+						content:
+							"Since the store was in this busy complex, it did not have enough of a presence to passers-by.",
+					},
+					{
+						bullet: "Reduced Customer Traffic Since the Pandemic - ",
+						content:
+							"COVID-19 has played a part in reducing the amount of foot traffic to stores in the area. Overall sales and revenue suffered because of stay-at-home orders.",
+					},
+					{
+						bullet: "Inconspicuous Signage - ",
+						content:
+							"Redz Collections had a clear signage, but an LED display would help to make it more conspicuous.",
+					},
+					{
+						bullet: "Lack of Digitisation - ",
+						content:
+							"Physically taking stock of products without barcodes and a digitised Point of Sale system made it harder to stay efficient and keep track of stock.",
+					},
+					{
+						bullet: "Business Finance Requirements - ",
+						content:
+							"The need for extra finance that could help them expand their operations and free up liquid capital.",
+					},
+				],
+			},
+			{
+				heading: "Proposed Solutions",
+				desc: [
+					"NeoGrowth was able to study the case of Redz Collections on an individual basis. There were certain aspects of the business that DiGibizz was able to pick up on to improve for the future. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
+					"After considering the current business practices and future possibilities, diGibizz proposed the following solutions -",
+				],
+				list: [
+					{
+						bullet: "Snapbizz Digital Solutions - ",
+						content:
+							"Snapbizz makes it possible to digitise the entire billing and Point of Sale system. It also stores customer and billing information.",
+					},
+					{
+						bullet: "DiGibizz Small Business Loan - ",
+						content:
+							"diGibizz helps small business by providing small business loans to deserving SMEs.",
+					},
+					{
+						bullet: "More Effective Signage - ",
+						content:
+							"Redz Collections was able to benefit from more bright, dynamic signage, diGibizz suggested LED sign boards to bring more customers to the store.",
+					},
+					{
+						bullet: "Accepting UPI Payments - ",
+						content:
+							"Yogesh was able to start accepting UPI payments to his store via a QR code. This meant that his store was able to move cashless and that he can now receive money directly into his bank account from his customers. ",
+					},
+					{
+						bullet: "Digitisation Processes - ",
+						content:
+							"Customer information, billing, stock details and much more were digitised to make the entire sales process faster and more efficient. Customers could now pay using a QR code, allowing Yogesh to receive payments in a much easier manner.",
+					},
+					{
+						bullet: "Selling on WhatsApp - ",
+						content:
+							"DiGibizz proposed Yogesh to begin selling on WhatsApp. This was able to help him reach more customers and maintain his business, even under pandemic situations.",
+					},
+				],
+			},
+			{
+				heading: "Conclusion",
+				desc: [
+					"Redz Collections is a shop in the Tibetan Welfare Association. They faced many challenges while carrying out their business. For starters, there was not much to distinguish their store from the others in the entire complex. Not to mention the fact that Yogesh had a great collection of clothing but lacked the exposure to sell his products online.",
+					"Not only this, but diGibizz observed that the store could benefit from digitisation that would allow a Point-of-Sale system. This would then help to improve their sales process and make stocktaking easier.",
+					"Further, diGibizz implemented Snapbizz, an easy-to-use and efficient POS system. This ensured that Redz Collections was able to store a database of all their products. Snapbizz makes it incredibly easy to store customer information like phone number, order information, etc. Not only this, but it can scan barcodes and keep track of inventory automatically.",
+					"Further, diGibizz by NeoGrowth was able to bring more attention and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts as well as offers to potential customers. This not only differentiated Yogesh's store from the rest at the Tibetan Welfare Association Market, but it also helped attract more customers over time.",
+					"At the outset, diGibizz by NeoGrowth aims to empower small businesses like Yogesh's. The end goal of the efforts by NeoGrowth Credit is to change the lives of families who can benefit from additional funding for their small business.",
+					"Since diGibizz was able to work on Redz Collections, their business has improved significantly, and operations are much easier to carry out. Not only this, but with the Snapbizz Point of Sale system, all the inventory and sales are well accounted for. These changes have played a large role in increasing the efficiency and overall quality of Yogesh's business, Redz Collections.",
+				],
+				list: null,
+			},
+		],
 	},
 	{
+		id: 3,
 		name: "Mr. Chetan Shah & Ms. Nikita Shah",
 		heading: "NS Grocery Store, Mumbai",
 		image: sthree,
 		type: "image",
+		topContent: "Chetan Shah",
 		content:
-			"Moving your store to a new place brings along new business problems. Thanks to diGibizz platform, today we are well equipped with all the solutions. diGibizz helped us overcome our biggest fear of using technology in operating our business",
+			"Moving business to a new location brings along new challenges. With support of diGibizz we are now well equipped digitally to provide faster and hassle-free services to our customers. ",
+		blog: [
+			{
+				heading: "Executive Summary",
+				desc: [
+					"This case study has been written to examine the effect that DiGibizz, by NeoGrowth has had on the transformation of small businesses.",
+					"We will study the case of N.S. Stores, a grocery supermarket belonging to the Small and Medium Enterprise (SME) category. This business run by Chetan and Nikita Saha was doing well but could improve exponentially more if it had the required resources. Processes like book-keeping and billing were not digitized. This caused certain inefficiencies in the business process which hindered the growth of the business.",
+					"DiGibizz was instrumental in transforming N.S. Stores and improving its revenue and growth by up to 30%. Thanks to their digitization of various processes like billing and stocktake. DiGibizz also helped finance the business with the help of NeoGrowth.",
+					"With the help of GlobalLinker, N.S. Stores were able to put themselves on the map and were able to compete with the various SME's in the market.",
+				],
+				list: null,
+			},
+			{
+				heading: "Background",
+				desc: [
+					"Chetan Saha had experience managing a grocery store for around 3 years. His wife, Nikita had inspired Chetan to open his own store since he held both knowledge and the experience to run it.",
+					"As a result of this, N.S. Stores was born. It is a grocery supermarket started by Chetan and Nikita with a variety of brands and products. Since they had started from scratch, they were doing everything manually. From taking stock of products to billing, every business practice was performed manually.",
+					"While the store was generating income, they found that customer traffic and sales could be improved. Apart from this, there were issues with storing customer information. To add to this, there was no interface to better understand how well products were moving and what needed to be changed.",
+				],
+				list: null,
+			},
+			{
+				heading: "Case Evaluation",
+				desc: null,
+				list: [
+					{
+						bullet: "Tough competition from larger businesses - ",
+						content:
+							"SMEs face tough competition from other larger businesses. Bigger enterprises have established sales and customer information systems that make it easier for them to bring in customers, spread awareness of their brand and sell online.",
+					},
+					{
+						bullet: "Lack of storefront presence to window shoppers - ",
+						content:
+							"While the location of the store was prominent and, on a corner,, the signage of N.S. Stores needed to be improved to gain more attention from local shoppers.",
+					},
+					{
+						bullet: "Customers prefer to shop remotely due to the pandemic - ",
+						content:
+							"Customers prefer to shop online due to the COVID-19 pandemic.",
+					},
+					{
+						bullet: "Ineffective signage - ",
+						content:
+							"The signage and banner for N.S. Stores had to be improved to get more attention and customer traffic.",
+					},
+					{
+						bullet: "Manual bookkeeping - ",
+						content:
+							"Manually performing bookkeeping is comparatively slow and tedious to automated solutions.",
+					},
+					{
+						bullet: "Difficulties with taking stock of products - ",
+						content:
+							"It’s hard to take stock of every single product when the entire process is performed manually.",
+					},
+					{
+						bullet: "Inefficient billing because of lack of digitization - ",
+						content:
+							"The billing process was done manually without any billing system. This was both cumbersome and time-consuming.",
+					},
+					{
+						bullet: "Need for business financing - ",
+						content:
+							"It’s difficult for businesses to renovate and scale their operations without adequate financing in the form of procurement of a small business loan.",
+					},
+				],
+			},
+			{
+				heading: "Proposed Solutions",
+				desc: [
+					"Many factors could be improved for N.S. Stores that would lead to better customer experiences, improve sales, and help the store receive more attention from potential customers.",
+					"To improve the business efficiency of N.S. Stores, diGiBizz proposed the following solutions - ",
+				],
+				list: [
+					{
+						bullet: "Snapbizz digital solutions - ",
+						content:
+							"Snapbizz is an efficient and easy-to-use cloud-connected Point of Sale Billing Machine.",
+					},
+					{
+						bullet: "DiGibizz small business loan - ",
+						content:
+							"DiGibizz provides financing in the form of loans for small businesses to help them stay liquid by improving cash flow and allowing them to expand their operations.",
+					},
+					{
+						bullet: "More effective signage - ",
+						content:
+							"DiGibizz was able to suggest LED sign boards and more prominent banners to help get more attention from potential visitors.",
+					},
+					{
+						bullet: "Implementation of digital processes - ",
+						content:
+							"Everything from billing, customer information, stocktake, and product information was digitized to help save time and energy. This greatly improved the efficiency of the store and helped make business operations much easier.",
+					},
+					{
+						bullet: "Register with GlobalLinker - ",
+						content:
+							"GlobalLinker is a global network for SMEs to communicate with each other and receive the services that they require. Financing, spreading awareness, and aiding in growth is the main objective for registering with GlobalLinker.",
+					},
+					{
+						bullet: "Creation of an online store - ",
+						content:
+							"Finally, diGibizz helped N.S. Stores solve their problems by creating an online store that would allow them to receive and fulfill orders online. This enabled them to perform business operations without the need for customers to be physically present",
+					},
+				],
+			},
+			{
+				heading: "Conclusion",
+				desc: [
+					"Chetan and Nikita Saha reached out to diGibizz by NeoGrowth to help improve their operations and expand their business. With the strong foundation of a neat and presentable grocery store, the stage was set to take N.S. Stores to the next level.",
+					"DiGibizz was able to identify several key factors required to be revamped. As discussed above, the billing, stock handling, and customer information databases needed to be digitally created. This will help the improve the efficiency of the business processes. DiGibizz was able to finance the requirements for N.S. Stores to help them upgrade their systems and put them on the digital map.",
+					"Furthermore, diGibizz was able to bring more visibility and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts & offers to potential customers.",
+					"DiGibizz introduced N.S. Stores to Snapbizz, a highly efficient online Point of Sale management system. This allowed them to take care of billing and discount related operations in a purely digitized manner. It made it far easier to understand the sales and customer patterns that the store was experiencing.",
+					"N.S. Stores was registered with GlobalLinker, a digital business network for SMEs. They help provide services and financing to businesses in different countries across the globe. Besides this, diGibizz was instrumental in creating an online store for N.S. Stores so that they could receive online orders and fulfill them with ease. With the help of the implementations by diGibizz, N.S. Stores were able to improve their revenue by up to 30%.",
+				],
+				list: null,
+			},
+		],
 	},
 ];
 export const PARTNERS = [

@@ -4,38 +4,51 @@ import { connect } from "react-redux";
 import "../../styles/successCard.css";
 import punctuation1 from "../../assets/punctuation1.svg";
 import punctuation2 from "../../assets/punctuation2.svg";
-function SuccessCard({ headerState, name, heading, image, content }) {
-  return (
-    <div className="success-card row">
-      <div className="item col-lg-10">
-        <Link className="a" to="/successStories/1">
-          <div className="containerr">
-            <img className="img-responsive col-lg-4" src={image} alt="Person" />
-            <span className="col-lg-8 content">
-              <h4>{name}</h4>
-              <p className="industry">{heading}</p>
+import youtube from "../../assets/youtube.svg";
+function SuccessCard({ headerState, name, heading, image, content, id, type }) {
+	return (
+		<div className="success-card row">
+			<div className="item col-lg-10">
+				<div className="containerr">
+					<div
+						className="thumbnail col-lg-5"
+						style={{
+							backgroundImage: `url(${image})`,
+							// width: 300,
+							// height: 300,
+						}}
+					>
+						{type === "video" && (
+							<img className="play-button" src={youtube} alt="Play bytton" />
+						)}
+					</div>
+					{/* <img className="img-responsive col-lg-4" src={image} alt="Person" /> */}
+					<span className="col-lg-7 content">
+						<h4>{name}</h4>
+						<p className="industry">{heading}</p>
 
-              <p className="">
-                <img className="punctuation1" alt="''" src={punctuation1} />
-                {content}
-                <img className="punctuation2" alt="''" src={punctuation2} />
-              </p>
-              <div className="view-more">
-                {headerState !== 3 && "View more"}
-                {headerState === 3 && "Read full story"}
-              </div>
-            </span>
-          </div>
-        </Link>
-      </div>
-    </div>
-  );
+						<p className="">
+							<img className="punctuation1" alt="''" src={punctuation1} />
+							{content}
+							<img className="punctuation2" alt="''" src={punctuation2} />
+						</p>
+						<Link className="a" to={`/successStories/${id}`}>
+							<div className="view-more">
+								{headerState !== 3 && "View more"}
+								{headerState === 3 && "Read full story"}
+							</div>
+						</Link>
+					</span>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 const mapStateToProps = (state) => {
-  return {
-    headerState: state.headerState,
-  };
+	return {
+		headerState: state.headerState,
+	};
 };
 
 export default connect(mapStateToProps, null)(SuccessCard);
