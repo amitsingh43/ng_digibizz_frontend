@@ -25,7 +25,7 @@ export const services = [
 	},
 	{
 		image: business_loans,
-		label: "Manage Loans",
+		label: "Business Loans",
 		tag: "business_loans",
 	},
 	{
