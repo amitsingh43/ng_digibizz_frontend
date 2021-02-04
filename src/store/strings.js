@@ -2318,7 +2318,7 @@ export const SUCCESSDATA = [
 		type: "video",
 		topContent: "Yogesh Dale",
 		content:
-			"In the fast-evolving pharma sector, diGibizz has supported a woman entrepreneur like me at the right time to upgrade my business. Today, my business has grown to the next level with their support.",
+			"I am a small-town boy with big aspirations; I own an apparel shop. During the pandemic, the apparel sector was hit the most. At this time diGibizz appropriately channelized my sales through various channels and helped me generate higher revenue. ",
 		blog: [
 			{
 				heading: "Executive Summary",

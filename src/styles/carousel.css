@@ -131,6 +131,7 @@
 @media (max-width: 48rem) {
 	.carousel-main {
 		margin: 0px 40px;
+		padding-top: 30px;
 	}
 	.carousel-main img {
 		width: 100vw;

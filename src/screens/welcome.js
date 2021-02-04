@@ -34,8 +34,7 @@ const SideText = (props) => {
 				Empowering Lives.
 			</h1>
 			<p>
-				Introducing Digit-o-Meter, a scoring mechanism for evaluating the
-				digital readiness of small businesses
+				Now upgrade your business with the help of our customised solutions.
 			</p>
 
 			<Link to="/knowStatus" onClick={() => props.homepage_decrement()}>
@@ -304,7 +303,7 @@ const UserGuide = () => {
 
 const SuccessStories = () => {
 	return (
-		<div>
+		<div style={{ width: "100%" }}>
 			<div className="heading">Success Stories</div>
 			<TestimonialsCarousal />
 		</div>

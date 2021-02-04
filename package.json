@@ -23,6 +23,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "dev": "export PORT=3060 && react-scripts start",
     "start": "export PORT=3060 && nohup react-scripts start &",
     "build": "react-scripts build",
     "test": "react-scripts test",
