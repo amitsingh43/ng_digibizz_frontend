@@ -103,19 +103,20 @@ function Questionnaire({
 	};
 	return (
 		<div className="main">
-			<div className="row">
-				<div className="col-lg-4 col-xs-12">
-					<SectonList section={topicCounter} />
-				</div>
-				<div className="col-lg-7 col-xs-12 ques">
-					<ol>
-						{questionsList.length > 0 &&
-							questionsList[topicCounter - 1][
-								"questionnaire_section_questions"
-							].map((question) => (
-								<div className="questions">
-									<li key={question._id}>{question.name}</li>
-									{/* {question.multiple && (
+			<div className="main-content-questions">
+				<div className="row">
+					<div className="col-lg-4 col-xs-12">
+						<SectonList section={topicCounter} />
+					</div>
+					<div className="col-lg-7 col-xs-12 ques">
+						<ol>
+							{questionsList.length > 0 &&
+								questionsList[topicCounter - 1][
+									"questionnaire_section_questions"
+								].map((question) => (
+									<div className="questions">
+										<li key={question._id}>{question.name}</li>
+										{/* {question.multiple && (
 										<div className="options">
 											<input
 												id={question._id}
@@ -134,33 +135,34 @@ function Questionnaire({
 											</label>
 										</div>
 									)} */}
-									{question.questionnaire_section_answers.map((option) => (
-										<div className="options">
-											<input {...inputProps(question, option)} required />
-											<label name={option._id}>{option.name}</label>
-										</div>
-									))}
-								</div>
-							))}
-					</ol>
-				</div>
-				<div className="col-lg-1"></div>
-			</div>
-			<div className="row row2">
-				<div className="col-lg-4"></div>
-				{topicCounter !== 1 && (
-					<div className="col-lg-2 col-sm-6">
-						<Link className="a">
-							<div className="button back" onClick={_back}>
-								Back
-							</div>
-						</Link>
+										{question.questionnaire_section_answers.map((option) => (
+											<div className="options">
+												<input {...inputProps(question, option)} required />
+												<label name={option._id}>{option.name}</label>
+											</div>
+										))}
+									</div>
+								))}
+						</ol>
 					</div>
-				)}
-				<div className="col-lg-2 col-sm-6">
-					<div className="button" onClick={next}>
-						{topicCounter < 5 && "Next"}
-						{topicCounter === 5 && "Submit"}
+					<div className="col-lg-1"></div>
+				</div>
+				<div className="row row2">
+					<div className="col-lg-4"></div>
+					{topicCounter !== 1 && (
+						<div className="col-lg-2 col-sm-6">
+							<Link className="a">
+								<div className="button back" onClick={_back}>
+									Back
+								</div>
+							</Link>
+						</div>
+					)}
+					<div className="col-lg-2 col-sm-6">
+						<div className="button" onClick={next}>
+							{topicCounter < 5 && "Next"}
+							{topicCounter === 5 && "Submit"}
+						</div>
 					</div>
 				</div>
 			</div>

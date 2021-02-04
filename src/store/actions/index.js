@@ -248,6 +248,69 @@ export const get_questions = (
 	}
 };
 
+export const update_lead = (body, ENDPOINT = "/api/update_lead") => async (
+	dispatch
+) => {
+	try {
+		const { lead } = await _post(ENDPOINT, body);
+		dispatch(set_user_details(lead));
+	} catch (error) {
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+		dispatch(add_error(message));
+	}
+};
+
+export const save_basic_details = (
+	body,
+	ENDPOINT = "/api/save_basic_details"
+) => async (dispatch) => {
+	try {
+		await _post(ENDPOINT, body);
+	} catch (error) {
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+		dispatch(add_error(message));
+	}
+};
+
+export const get_gender = (ENDPOINT = "/master_data/get_genders") => async (
+	dispatch
+) => {
+	try {
+		const gender = await _get(ENDPOINT);
+		dispatch(set_master_data({ gender }));
+	} catch (error) {
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+		dispatch(add_error(message));
+	}
+};
+
 export const get_results = (
 	lead_id,
 	ENDPOINT = "/api/get_results?lead_id="

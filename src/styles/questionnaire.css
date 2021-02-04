@@ -11,6 +11,10 @@ html {
 	color: #68696a;
 }
 
+.main-content-questions {
+	min-height: 95vh;
+}
+
 .questions li {
 	line-height: 25px;
 }

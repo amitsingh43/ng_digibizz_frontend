@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import "../styles/availNowRegistration.css";
 import Footer from "../components/main/footer";
-import { show_toast, header_digital_services } from "../store/actions";
+import {
+	show_toast,
+	header_digital_services,
+	get_gender,
+	save_basic_details,
+} from "../store/actions";
 import { connect } from "react-redux";
 
 const Logo = ({ state }) => {
@@ -21,7 +26,7 @@ const Logo = ({ state }) => {
 	);
 };
 
-const Button = () => {
+const Button = ({ mrOrMs, save_basic_details, partner }) => {
 	const _submit = () => {
 		const arr = [
 			{
@@ -42,11 +47,23 @@ const Button = () => {
 			},
 		];
 		var x = arr.find((val) => document.getElementById(val.id).value === "");
-		console.log(x);
+		if (document.getElementById("2").value.length !== 10) {
+			show_toast(`Please enter a valid mobile number`);
+			return;
+		}
 		if (x) {
 			show_toast(`Please enter your ${x.error}`);
 		} else {
 			// API CALL
+			const body = {
+				full_name: document.getElementById("1").value,
+				mobile: document.getElementById("2").value,
+				business_name: document.getElementById("3").value,
+				email: document.getElementById("4").value,
+				gender_master_id: mrOrMs,
+				partner_availed: partner,
+			};
+			save_basic_details(body);
 		}
 	};
 	return (
@@ -56,7 +73,7 @@ const Button = () => {
 	);
 };
 
-const Form = () => {
+const Form = ({ gender, save_basic_details, partner }) => {
 	const data1 = [
 		{ label: "Full Name", type: "text", id: "1" },
 		{ label: "Mobile number", type: "phone", id: "2" },
@@ -65,6 +82,7 @@ const Form = () => {
 		{ label: "Business Name", type: "text", id: "3" },
 		{ label: "Email id", type: "email", id: "4" },
 	];
+	const [mrOrMs, setMrOrMs] = useState("nilhtyvtvw5sh-mabht5aa");
 	return (
 		<div style={{ flex: 1, width: "100%" }}>
 			<h1>Inquire now</h1>
@@ -77,9 +95,23 @@ const Form = () => {
 							</label>
 							<br />
 							{sec.label === "Full Name" && (
-								<select>
-									<option>MR.</option>
-									<option>MRS.</option>
+								<select
+									// id="mr-or-mrs"
+									onChange={(e) => setMrOrMs(e.target.value)}
+								>
+									{gender.length > 0 && (
+										<option
+											value="nilhtyvtvw5sh-mabht5aa"
+											selected
+											disabled
+											hidden
+										>
+											Mr.
+										</option>
+									)}
+									{gender.map((gen) => (
+										<option value={gen._id}>{gen.name}</option>
+									))}
 								</select>
 							)}
 							<input
@@ -103,12 +135,21 @@ const Form = () => {
 					))}
 				</div>
 			</div>
-			<Button />
+			<Button
+				partner={partner}
+				mrOrMs={mrOrMs}
+				save_basic_details={save_basic_details}
+			/>
 		</div>
 	);
 };
 
-const AvailNowRegistration = ({ header_digital_services }) => {
+const AvailNowRegistration = ({
+	header_digital_services,
+	get_gender,
+	gender,
+	save_basic_details,
+}) => {
 	const location = useLocation();
 	const history = useHistory();
 	useEffect(() => {
@@ -117,6 +158,7 @@ const AvailNowRegistration = ({ header_digital_services }) => {
 		if (!location.state) {
 			history.push("/services");
 		}
+		get_gender();
 	}, []);
 	if (!location.state) {
 		return <h1>Redirecting</h1>;
@@ -127,11 +169,28 @@ const AvailNowRegistration = ({ header_digital_services }) => {
 				<div className="section">
 					<Logo state={location.state.data} />
 				</div>
-				<div className="section">{<Form />}</div>
+				<div className="section">
+					<Form
+						gender={gender}
+						partner={location.state.data.title}
+						save_basic_details={save_basic_details}
+					/>
+				</div>
 			</div>
 			<Footer />
 		</div>
 	);
 };
 
-export default connect(null, { header_digital_services })(AvailNowRegistration);
+const mapStateToProps = (state) => {
+	const { gender } = state.masterData;
+	return {
+		gender,
+	};
+};
+
+export default connect(mapStateToProps, {
+	header_digital_services,
+	get_gender,
+	save_basic_details,
+})(AvailNowRegistration);

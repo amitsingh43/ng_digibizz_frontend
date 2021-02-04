@@ -45,6 +45,7 @@ function Home({
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [mobile, setMobile] = useState("");
+	const [referralCode, setReferralCode] = useState("");
 	const [city, setCity] = useState("");
 	const [industry, setIndustry] = useState("");
 	const [turnover, setTurnover] = useState("");
@@ -83,7 +84,7 @@ function Home({
 		if (homepageCounter < 2) {
 			var NumberRegex = /^[0-9]*$/;
 			if (name.length === 0) {
-				add_error("Please enter name");
+				add_error("Please enter your full name");
 				return;
 			} else if (mobile.length !== 10 || !NumberRegex.test(mobile)) {
 				add_error("Please enter a valid mobile number");
@@ -104,6 +105,7 @@ function Home({
 				mobile: mobile,
 				business_name: businessName,
 				gender_master_id: mrOrMs,
+				referral_code: referralCode,
 			};
 			post_user_details(body, Navigate);
 		}
@@ -222,6 +224,16 @@ function Home({
 									className="col-xs-12"
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
+								/>
+								<div className="heading" style={{ marginTop: 100 }}>
+									Referral Code
+								</div>
+								<input
+									type="text"
+									id="referral"
+									className="col-xs-12"
+									value={referralCode}
+									onChange={(e) => setReferralCode(e.target.value)}
 								/>
 							</div>
 						)}

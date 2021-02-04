@@ -117,7 +117,7 @@ function UserGuideDetailed({ header_user_guide, match }) {
 					<TopContent heading={knowledge.heading} />
 				</div>
 				<div className="row ">
-					<Image image={knowledge.image} />
+					<Image image={knowledge.bg} />
 				</div>
 				<div className="row " style={{ paddingTop: 0 }}>
 					<MainContent

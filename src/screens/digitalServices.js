@@ -1,5 +1,5 @@
 import React from "react";
-import { header_digital_services } from "../store/actions";
+import { header_digital_services, update_lead } from "../store/actions";
 import { connect } from "react-redux";
 import { services } from "../store/services_mapping";
 import "../styles/digitalServices.css";
@@ -45,11 +45,16 @@ const PartnerCard = (props) => {
 		backgroundColor,
 		user,
 		tag,
+		update_lead,
 	} = props;
 	const history = useHistory();
 	const _availNow = () => {
 		if (localStorage.getItem("lead_id")) {
-			alert("CLicked");
+			const body = {
+				lead_id: localStorage.getItem("lead_id"),
+				partner_availed: title,
+			};
+			update_lead(body);
 		} else {
 			history.push({
 				pathname: "/reg",
@@ -95,7 +100,7 @@ const PartnerCard = (props) => {
 };
 
 const Services = (props) => {
-	const { user, cardData, heading } = props;
+	const { user, cardData, heading, update_lead } = props;
 	return (
 		<div className="col-md-12 col-lg-12">
 			<div style={{ display: "flex", alignItems: "center" }}>
@@ -107,6 +112,7 @@ const Services = (props) => {
 				{cardData.map((data) => (
 					<div>
 						<PartnerCard
+							update_lead={update_lead}
 							user={user}
 							subTitle={data.subTitle}
 							image={data.image}
@@ -123,7 +129,7 @@ const Services = (props) => {
 	);
 };
 
-function DigitalServices({ header_digital_services, user }) {
+function DigitalServices({ header_digital_services, user, update_lead }) {
 	const location = useLocation();
 	useEffect(() => {
 		header_digital_services();
@@ -144,6 +150,7 @@ function DigitalServices({ header_digital_services, user }) {
 							user={user}
 							heading={partner.category}
 							cardData={partner.data}
+							update_lead={update_lead}
 						/>
 					</div>
 				))}
@@ -160,6 +167,7 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default connect(mapStateToProps, { header_digital_services })(
-	DigitalServices
-);
+export default connect(mapStateToProps, {
+	header_digital_services,
+	update_lead,
+})(DigitalServices);

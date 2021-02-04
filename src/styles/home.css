@@ -240,18 +240,19 @@ select {
 		justify-content: center;
 	}
 	#mr-or-mrs {
-		width: 10%;
+		width: 20%;
 		z-index: 99;
 	}
 	.home-container #name {
-		margin-left: 10%;
-		width: 90%;
+		margin-left: 20%;
+		width: 80%;
 	}
 }
 
 @media (min-width: 48rem) and (max-width: 75rem) {
 	.home-container {
 		margin: 0px 20px;
+		min-height: 90vh;
 	}
 	.home-container .row1 {
 		padding: 0px;
