@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MainReport from "../components/mainReport";
 import UnderstandReport from "../components/understandReport";
 import RecommendationsReports from "../components/recommendationsReports";
@@ -18,10 +18,12 @@ function Report({
 	lead_id,
 	get_results,
 }) {
+	useEffect(() => {
+		if (localStorage.getItem("report") && userDetails.user === null) {
+			get_results(localStorage.getItem("lead_id"));
+		}
+	}, []);
 	const [downloadText, setDownloadText] = useState("Download Report");
-	if (localStorage.getItem("report") && userDetails.user === null) {
-		get_results(localStorage.getItem("lead_id"));
-	}
 	const history = useHistory();
 	if (
 		localStorage.getItem("lead_id") &&
