@@ -3,7 +3,7 @@
 	height: fit-content;
 	position: relative;
 	padding-bottom: 20px;
-	height: 23rem;
+	min-height: 23rem;
 	margin: 0px 20px;
 	border-radius: 10px;
 	box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
@@ -81,7 +81,7 @@
 		text-align: center;
 		margin: 40px 10px;
 		float: left;
-		width: 44%;
+		min-width: 44%;
 	}
 	.percentage div {
 		left: 70px;

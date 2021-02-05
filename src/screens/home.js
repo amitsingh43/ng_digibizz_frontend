@@ -21,7 +21,8 @@ import {
 	TERMS_AND_CONDITIONS_2,
 	COMPANY_NAME,
 	TERMS_AND_CONDITIONS_1,
-	TERMS_AND_CONDITIONS_DETAILED,
+	TERMS_AND_CONDITIONS_DETAILED1,
+	TERMS_AND_CONDITIONS_DETAILED2,
 } from "../store/strings";
 
 function Home({
@@ -335,7 +336,9 @@ function Home({
 								)}
 								{more && (
 									<p>
-										{TERMS_AND_CONDITIONS_DETAILED}
+										{TERMS_AND_CONDITIONS_DETAILED1}
+										<br />
+										{TERMS_AND_CONDITIONS_DETAILED2}
 										<span className="more" onClick={() => showmore(!more)}>
 											Less-
 										</span>

@@ -71,6 +71,12 @@ function Header({ headerState, header_reset, homepage_decrement }) {
 								Success Stories
 							</Link>
 						</li>
+						<li
+							style={{ cursor: "pointer" }}
+							onClick={() => localStorage.clear()}
+						>
+							<Link to="/">Logout</Link>
+						</li>
 					</ul>
 				</div>
 			</div>

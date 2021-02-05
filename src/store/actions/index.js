@@ -318,8 +318,8 @@ export const get_results = (
 	try {
 		const response = await _get(ENDPOINT + lead_id);
 		const { questionnaire_take, lead } = response;
-		const { recommendations } = questionnaire_take;
-		dispatch(set_recommendations_write(recommendations));
+		const { display_recommendations } = questionnaire_take;
+		dispatch(set_recommendations_write(display_recommendations));
 		dispatch(set_results(questionnaire_take));
 		dispatch(set_user_details(lead));
 		dispatch(reset_questionnaire());

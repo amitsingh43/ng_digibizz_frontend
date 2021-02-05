@@ -12,7 +12,7 @@ import { useHistory } from "react-router-dom";
 function Report({
 	header_digital_status,
 	userDetails,
-	recommendations,
+	display_recommendations,
 	percentage,
 	section_results,
 	lead_id,
@@ -48,11 +48,11 @@ function Report({
 						setDownloadText={setDownloadText}
 					/>
 				)}
-				{recommendations && (
+				{display_recommendations && (
 					<RecommendationsReports
 						downloadText={downloadText}
 						setDownloadText={setDownloadText}
-						recommendations={recommendations}
+						recommendations={display_recommendations}
 					/>
 				)}
 				{section_results && (
@@ -68,10 +68,15 @@ function Report({
 
 const mapStateToProps = (state) => {
 	const { setResults } = state;
-	const { section_results, percentage, recommendations, lead_id } = setResults;
+	const {
+		section_results,
+		percentage,
+		display_recommendations,
+		lead_id,
+	} = setResults;
 	return {
 		userDetails: state.userDetails,
-		recommendations,
+		display_recommendations,
 		section_results,
 		lead_id,
 		percentage,

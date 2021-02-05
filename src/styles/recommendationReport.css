@@ -32,7 +32,7 @@
 	text-align: center;
 	word-spacing: 6px;
 	line-height: 20px;
-	height: 30rem;
+	min-height: 30rem;
 	text-align: center;
 	border-radius: 20px;
 	/* box-shadow: 1px 1px 1px #d1d1d1; */
@@ -114,7 +114,7 @@
 		margin-left: 0px;
 		margin-right: 0px;
 		margin-top: 0px;
-		height: 22rem;
+		min-height: 22rem;
 	}
 
 	.recommend-main .percentagee div {
@@ -134,7 +134,7 @@
 	}
 	.recommend-main .card {
 		margin: 0px 0px;
-		height: 31rem;
+		min-height: 31rem;
 		text-align: center;
 	}
 	.recommend-main .percentagee div {
