@@ -4,21 +4,17 @@ import download from "../assets/download.svg";
 import { services } from "../store/services_mapping";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { downloadReport } from "../store/actions";
+import { downloadReport, show_toast } from "../store/actions";
 import axios from "axios";
 
 const Percetage = (props) => {
-	const { name } = props;
+	const { image_url } = props;
+	console.log(image_url);
 	// alert(name);
-	const [image, setImage] = useState(null);
-	let ss = services.find((service) => service.tag === name);
-	useEffect(() => {
-		setImage(ss.image);
-	}, [ss]);
 	return (
 		<div className="percentagee ">
 			<div className="justify-content-md-center">
-				<img src={image} />
+				<img src={image_url} />
 			</div>
 		</div>
 	);
@@ -32,7 +28,7 @@ const RecCard = ({ recommendations }) => {
 			{results &&
 				results.map((recommendation) => (
 					<div className="col-lg-2 col-xs-6 card">
-						<Percetage name={recommendation.category} />
+						<Percetage image_url={recommendation.image_url} />
 						{recommendation.name}
 						<p
 							style={{ wordSpacing: 0 }}
