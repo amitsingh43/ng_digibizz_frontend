@@ -42,6 +42,8 @@ function Home({
 		header_digital_status();
 		get_master_data();
 	}, []);
+	var sel = document.getElementById("city");
+	var text = sel ? sel.options[sel.selectedIndex].text : null;
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [mobile, setMobile] = useState("");
@@ -54,6 +56,7 @@ function Home({
 	const [isChecked, setCheck] = useState(false);
 	const [more, showmore] = useState(false);
 	const [mrOrMs, setMrOrMs] = useState("nilhtyvtvw5sh-mabht5aa");
+	const [otherCity, setOtherCity] = useState("");
 	if (localStorage.getItem("report")) {
 		history.push("/report");
 		return <h1>Redirecting</h1>;
@@ -96,6 +99,10 @@ function Home({
 			homepage_increment();
 			window.scrollTo(0, 0);
 		} else {
+			if (otherCity === "" && text === "Other") {
+				add_error("Please specify your city.");
+				return;
+			}
 			const body = {
 				cities_master_id: city,
 				industry_master_id: industry,
@@ -106,10 +113,12 @@ function Home({
 				business_name: businessName,
 				gender_master_id: mrOrMs,
 				referral_code: referralCode,
+				other_city: otherCity,
 			};
 			post_user_details(body, Navigate);
 		}
 	};
+
 	const _back = () => {
 		homepage_decrement();
 	};
@@ -193,9 +202,27 @@ function Home({
 										Select
 									</option>
 									{cities.map((city) => (
-										<option value={city._id}>{city.name}</option>
+										<option value={city._id}>
+											{city.name}
+											{}
+										</option>
 									))}
 								</select>
+								{text === "Other" && (
+									<div>
+										<div style={{ marginTop: 40 }}></div>
+										<div className="heading">
+											Please specify city<span>*</span>
+										</div>
+										<input
+											id="other-city"
+											type="text"
+											className="col-xs-12"
+											value={otherCity}
+											onChange={(e) => setOtherCity(e.target.value)}
+										/>
+									</div>
+								)}
 								<div style={{ marginTop: 40 }}></div>
 								<div className="heading">
 									Business name<span>*</span>
