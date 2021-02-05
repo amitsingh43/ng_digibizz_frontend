@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/understandReport.css";
 import Card from "../components/card";
 import digital_discovery from "../assets/sections/digital_discovery.svg";
@@ -46,12 +46,14 @@ function UnderstandReport({ section_results }) {
 			<div className="row card-view">
 				{Object.keys(section_results).length > 0 &&
 					cardData.map((card) => (
-						<Card
-							image={card.image}
-							title={card.title}
-							desc={card.desc}
-							score={section_results[card.title]}
-						/>
+						<div className={!section_results[card.title] ? "hide" : ""}>
+							<Card
+								image={card.image}
+								title={card.title}
+								desc={card.desc}
+								score={section_results[card.title]}
+							/>
+						</div>
 					))}
 			</div>
 		</div>

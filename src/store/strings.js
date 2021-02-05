@@ -47,6 +47,16 @@ import seven_bg from "../assets/knowledge_portal/backgrounds/seven.svg";
 import eight_bg from "../assets/knowledge_portal/backgrounds/eight.svg";
 import nine_bg from "../assets/knowledge_portal/backgrounds/nine.svg";
 import ten_bg from "../assets/knowledge_portal/backgrounds/ten.svg";
+import knowledge_1 from "../assets/welcome/knowledge_1.svg";
+import knowledge_2 from "../assets/welcome/knowledge_2.svg";
+import knowledge_3 from "../assets/welcome/knowledge_3.svg";
+import knowledge_4 from "../assets/welcome/knowledge_4.svg";
+import knowledge_5 from "../assets/welcome/knowledge_5.svg";
+import knowledge_6 from "../assets/welcome/knowledge_6.svg";
+import knowledge_7 from "../assets/welcome/knowledge_7.svg";
+import knowledge_8 from "../assets/welcome/knowledge_8.svg";
+import knowledge_9 from "../assets/welcome/knowledge_9.svg";
+import knowledge_10 from "../assets/welcome/knowledge_10.svg";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -69,6 +79,7 @@ export const KNOWLEDGE_CENTER = [
 		image: one,
 		bg: one_bg,
 		id: 1,
+		badge: knowledge_1,
 		sections: [
 			{
 				type: "content",
@@ -253,6 +264,7 @@ export const KNOWLEDGE_CENTER = [
 		image: two,
 		bg: two_bg,
 		id: 2,
+		badge: knowledge_2,
 		sections: [
 			{
 				type: "right",
@@ -422,6 +434,7 @@ export const KNOWLEDGE_CENTER = [
 		image: three,
 		bg: three_bg,
 		id: 3,
+		badge: knowledge_3,
 		sections: [
 			{
 				type: "content",
@@ -610,6 +623,7 @@ export const KNOWLEDGE_CENTER = [
 			"How to list yourself on online delivery platforms, manage table bookings and orders?",
 		image: four,
 		id: 4,
+		badge: knowledge_4,
 		bg: four_bg,
 		sections: [
 			{
@@ -774,6 +788,7 @@ export const KNOWLEDGE_CENTER = [
 		desc: "Perks of tying-up With food delivery partners.",
 		image: five,
 		id: 5,
+		badge: knowledge_5,
 		bg: five_bg,
 		sections: [
 			{
@@ -1105,6 +1120,7 @@ export const KNOWLEDGE_CENTER = [
 			"As the era of digitisation is taking over the world, it is imperative that you learn how to set up your own online shop.",
 		image: six,
 		id: 6,
+		badge: knowledge_6,
 		bg: six_bg,
 		sections: [
 			{
@@ -1380,6 +1396,7 @@ export const KNOWLEDGE_CENTER = [
 			"The procedure to register a company can be extremely simple and convenient to follow.",
 		image: seven,
 		id: 7,
+		badge: knowledge_7,
 		bg: seven_bg,
 		sections: [
 			{
@@ -1756,6 +1773,7 @@ export const KNOWLEDGE_CENTER = [
 			"This article will discuss the top 5 government loan schemes that can aid your business to reach greater heights.",
 		image: eight,
 		id: 8,
+		badge: knowledge_8,
 		bg: eight_bg,
 		sections: [
 			{
@@ -1933,6 +1951,7 @@ export const KNOWLEDGE_CENTER = [
 		desc: "The 'All-You-Need-to-Know' Guide to Improving CIBIL Score.",
 		image: nine,
 		id: 9,
+		badge: knowledge_9,
 		bg: nine_bg,
 		sections: [
 			{
@@ -2100,6 +2119,7 @@ export const KNOWLEDGE_CENTER = [
 			"Plan exactly how you’ll use your loan amount and how you’ll pay it off.",
 		image: ten,
 		id: 10,
+		badge: knowledge_10,
 		bg: ten_bg,
 		sections: [
 			{

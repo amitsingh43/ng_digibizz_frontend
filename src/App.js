@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/main/header";
 import Home from "./screens/home";
 import Welcome from "./screens/welcome";
@@ -15,20 +15,20 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { connect } from "react-redux";
 import { show_toast, clear_error } from "./store/actions";
+// import ExitPopUp from "./components/main/exitPopup";
 function App({ errorMessage, clear_error }) {
+	// const [showPopUp, togglePopUp] = useState(false);
+	window.onbeforeunload = (e) => {
+		// togglePopUp(!showPopUp);
+		// e.preventDefault();
+		// e.stopPropagation();
+		// return false;
+	};
 	useEffect(() => {
 		if (errorMessage !== "") {
 			show_toast(errorMessage);
 			clear_error();
 		}
-		// window.addEventListener("mouseout", (event) => {
-		// 	if (!event.relatedTarget) {
-		// 		alert("1");
-		// 	}
-		// });
-		// return () => {
-		// 	window.removeEventListener("mouseout", () => {});
-		// };
 	}, [errorMessage]);
 	return (
 		<div>
@@ -44,6 +44,7 @@ function App({ errorMessage, clear_error }) {
 					draggable
 					pauseOnHover
 				/>
+				{/* {showPopUp && <ExitPopUp />} */}
 				<Header />
 				<Switch>
 					<Route exact path={"/"} render={(props) => <Welcome {...props} />} />

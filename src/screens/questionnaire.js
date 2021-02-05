@@ -52,6 +52,10 @@ function Questionnaire({
 	};
 
 	const next = () => {
+		if (topicCounter === 4 && questionsList.length === 4) {
+			submit();
+			return;
+		}
 		if (topicCounter < 5) {
 			increment();
 			window.scrollTo(0, 0);
@@ -160,8 +164,12 @@ function Questionnaire({
 					)}
 					<div className="col-lg-2 col-sm-6">
 						<div className="button" onClick={next}>
-							{topicCounter < 5 && "Next"}
-							{topicCounter === 5 && "Submit"}
+							{((topicCounter < 5 && questionsList.length === 5) ||
+								(topicCounter < 4 && questionsList.length === 4)) &&
+								"Next"}
+							{((topicCounter === 5 && questionsList.length === 5) ||
+								(topicCounter == 4 && questionsList.length === 4)) &&
+								"Submit"}
 						</div>
 					</div>
 				</div>

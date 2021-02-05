@@ -39,7 +39,7 @@ function TestimonialsCarousal() {
 									{item.content}
 									<img className="punctuation2" alt="''" src={punctuation2} />
 								</p>
-								<Link to="/successStories">
+								<Link to={"/successStories/" + item.id}>
 									<div className="view-more">View more</div>
 								</Link>{" "}
 							</span>

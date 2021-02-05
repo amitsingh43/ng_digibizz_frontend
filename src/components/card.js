@@ -1,12 +1,9 @@
 import React from "react";
 import "../styles/card.css";
 const Percetage = ({ score }) => {
-	const { percentage } = score;
 	return (
 		<div className="percent">
-			<div>
-				<span>{percentage}%</span>
-			</div>
+			<div>{score !== undefined && <span>{score.percentage}%</span>}</div>
 		</div>
 	);
 };

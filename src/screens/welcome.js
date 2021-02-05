@@ -17,13 +17,7 @@ import { services } from "../store/services_mapping";
 import { Link, useHistory } from "react-router-dom";
 import { header_reset, homepage_decrement } from "../store/actions";
 import { connect } from "react-redux";
-import knowledge_1 from "../assets/welcome/knowledge_1.svg";
-import knowledge_2 from "../assets/welcome/knowledge_2.svg";
-import knowledge_3 from "../assets/welcome/knowledge_3.svg";
-import knowledge_4 from "../assets/welcome/knowledge_4.svg";
-import knowledge_5 from "../assets/welcome/knowledge_5.svg";
-import knowledge_6 from "../assets/welcome/knowledge_6.svg";
-import knowledge_7 from "../assets/welcome/knowledge_7.svg";
+import { KNOWLEDGE_CENTER } from "../store/strings";
 
 const SideText = (props) => {
 	return (
@@ -173,55 +167,13 @@ const Question = (props) => {
 const UserGuide = () => {
 	const [counter, setCounter] = useState(0);
 	const [viewMore, setViewMore] = useState(false);
-	const imageDesc = [
-		{
-			image: knowledge_1,
-			label:
-				"Tips for How to Avoid Online Frauds and do secure business on the go",
-		},
-		{
-			image: knowledge_2,
-			label: "What is UPI and benefits of using UPI",
-		},
-		{
-			image: knowledge_3,
-			label: "How to get discovered online",
-		},
-		{
-			image: knowledge_4,
-			label:
-				"How to list yourself on online delivery platforms, manage table bookings and orders",
-		},
-	];
-	const imageDesc1 = [
-		{
-			image: knowledge_4,
-			label:
-				"How to list yourself on online delivery platforms, manage table bookings and orders?",
-		},
-		{
-			image: knowledge_5,
-			label:
-				"How to tie-up with Online Delivery Partners like Dunzo, Swiggy, Zomato, etc?",
-		},
-		{
-			image: knowledge_6,
-			label:
-				"How to set up your online store with NowFloats, Amazon Easy, Whatsapp Business, Near Store, etc",
-		},
-		{
-			image: knowledge_7,
-			label:
-				"How to go about company registration, obtaining licenses, trademark registration, taxation help, etc",
-		},
-	];
 	const nextImage = () => {
-		if (counter === 0) {
+		if (counter === 0 || counter === 1) {
 			setCounter(counter + 1);
 		}
 	};
 	const previousImage = () => {
-		if (counter === 1) {
+		if (counter === 1 || counter === 2) {
 			setCounter(counter - 1);
 		}
 	};
@@ -240,14 +192,14 @@ const UserGuide = () => {
 				<div className="col-md-3 buttons">
 					<div
 						style={{
-							borderColor: counter === 1 ? "#c4c4c4" : "#28b04b",
-							cursor: counter === 1 ? "default" : "pointer",
+							borderColor: counter === 2 ? "#c4c4c4" : "#28b04b",
+							cursor: counter === 2 ? "default" : "pointer",
 						}}
 						className="next"
 						onClick={nextImage}
 					>
-						{counter !== 1 && <img src={right} alt="right" />}
-						{counter === 1 && <img src={right_inactive} alt="right" />}
+						{counter !== 2 && <img src={right} alt="right" />}
+						{counter === 2 && <img src={right_inactive} alt="right" />}
 					</div>
 					<div
 						className="back"
@@ -262,37 +214,28 @@ const UserGuide = () => {
 					</div>
 				</div>
 				<div className="row2-imgs">
-					{counter === 0 &&
-						imageDesc.map((image) => (
-							<div className="col-md-2 card" id="be-img">
-								<div
-									className={"bg-img"}
-									style={{ backgroundImage: `url(${image.image})` }}
-								>
-									<div className="img-label">{image.label}</div>
-								</div>
+					{KNOWLEDGE_CENTER.slice(
+						counter === 0 ? counter * 4 : counter * 4 - 2,
+						viewMore
+							? KNOWLEDGE_CENTER.length
+							: counter === 0
+							? counter * 4 + 4
+							: counter * 4 + 2
+					).map((image) => (
+						<div className="col-md-2 card" id="be-img">
+							<div
+								className="bg-img"
+								style={{ backgroundImage: `url(${image.badge})` }}
+							>
+								<div className="img-label">{image.heading}</div>
 							</div>
-						))}
-					{(counter === 1 || viewMore) &&
-						imageDesc1.map((image) => (
-							<div className="col-md-2 card">
-								<div
-									className={"bg-img"}
-									style={{ backgroundImage: `url(${image.image})` }}
-								>
-									<div className="img-label">{image.label}</div>
-								</div>
-							</div>
-						))}
+						</div>
+					))}
 				</div>
 				<div className="col-md-1"></div>
 			</div>
 			<div className="knowledge-view-more">
-				<div
-					className="view-more"
-					style={{ marginTop: viewMore ? 640 : 0 }}
-					onClick={() => setViewMore(!viewMore)}
-				>
+				<div className="view-more" onClick={() => setViewMore(!viewMore)}>
 					{!viewMore && "View More"}
 					{viewMore && "View Less"}
 				</div>

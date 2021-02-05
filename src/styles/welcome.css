@@ -229,7 +229,7 @@
 }
 
 .user-guide .row2 {
-	height: 350px;
+	height: fit-content;
 }
 
 .user-guide .row2 .buttons {
@@ -299,9 +299,6 @@
 	}
 	.success-stories1 {
 		margin-top: 30px;
-	}
-	.knowledge-view-more {
-		margin-top: 320px;
 	}
 }
 
