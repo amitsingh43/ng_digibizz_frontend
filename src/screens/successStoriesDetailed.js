@@ -22,7 +22,7 @@ const TopContent = ({ story }) => {
 
 const DetailedCard = ({ story }) => {
 	const [showVideo, toggleVideo] = useState(false);
-	const videoID = "ETNQ0BXkyQU";
+	const videoID = "LVUEIz-AAi4";
 	return (
 		<div className="col-lg-10 detailed-card-1">
 			<div className="col-lg-6 left-content">
