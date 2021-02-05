@@ -87,12 +87,11 @@ const PartnerCard = (props) => {
 								"_blank"
 							);
 							win.focus();
-							return;
 						}
 						_availNow();
 					}}
 				>
-					Avail now
+					{title === "NeoGrowth" ? "Apply now" : "Avail now"}
 				</div>
 			</div>
 		</div>

@@ -6,12 +6,14 @@ import report1 from "../assets/report1.svg";
 import report2 from "../assets/report2.svg";
 import report3 from "../assets/report3.svg";
 import report4 from "../assets/report4.svg";
-import { downloadReport } from "../store/actions";
+import { downloadReport, emailReport } from "../store/actions";
+import { connect } from "react-redux";
 function MainReport({
 	userDetails,
 	percentage,
 	downloadText,
 	setDownloadText,
+	emailReport,
 }) {
 	const { full_name, email, business_name, gender } = userDetails.user;
 	const [reportImg, setReportImg] = useState(report1);
@@ -50,10 +52,7 @@ function MainReport({
 						<img src={download} alt="download" />
 					</span>
 				</span>
-				<span
-					className="btns"
-					onClick={() => alert("Report has been emailed to you")}
-				>
+				<span className="btns" onClick={() => emailReport()}>
 					Email Report
 					<span>
 						<img src={email_icon} alt="email" />
@@ -71,7 +70,7 @@ function MainReport({
 					</div>
 				</div>
 				<div className="outer-btn">
-					<div className="btns-small" onClick={() => alert("emailed report")}>
+					<div className="btns-small" onClick={() => emailReport()}>
 						Email Report
 						<span>
 							<img src={email_icon} alt="download" />
@@ -88,4 +87,4 @@ function MainReport({
 	);
 }
 
-export default MainReport;
+export default connect(null, { emailReport })(MainReport);

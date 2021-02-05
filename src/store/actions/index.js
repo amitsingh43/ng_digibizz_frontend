@@ -362,17 +362,70 @@ export const downloadReport = (downloadText, setDownloadText) => {
 			console.log(blob);
 			FileSaver.saveAs(blob, "DiGibizz Score Report.pdf");
 			console.log(window.location.href);
+		})
+		.catch(({ error }) => {
+			setDownloadText("Download Report");
+			let message = "Something went wrong! Please try later.";
+
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+			show_toast(message);
 		});
 };
 
-export const show_toast = (error) => {
-	toast.error(error, {
-		position: "bottom-left",
-		autoClose: 3000,
-		hideProgressBar: false,
-		closeOnClick: true,
-		pauseOnHover: true,
-		draggable: true,
-		progress: undefined,
-	});
+export const emailReport = () => async (dispatch) => {
+	try {
+		const { message } = await _post(
+			"/api/email_report?lead_id=" + localStorage.getItem("lead_id")
+		);
+		show_toast(message, "SUCCESS");
+	} catch (error) {
+		let message = "Something went wrong! Please try later.";
+
+		if (
+			error &&
+			error.response &&
+			error.response.data &&
+			error.response.data.message
+		) {
+			message = error.response.data.message;
+		}
+		dispatch(add_error(message));
+	}
+};
+
+export const show_toast = (message, type = "ERROR") => {
+	switch (type) {
+		case "ERROR":
+			toast.error(message, {
+				position: "bottom-left",
+				autoClose: 3000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+			});
+			return;
+		case "SUCCESS":
+			toast.success(message, {
+				position: "top-center",
+				autoClose: 3000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+			});
+			return;
+		default:
+			toast(message);
+			return;
+	}
 };
