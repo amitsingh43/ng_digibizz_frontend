@@ -30,8 +30,8 @@ export const services = [
 	},
 	{
 		image: manage_stock,
-		label: "Manage Stock",
-		tag: "manage_stock",
+		label: "Inventory Management",
+		tag: "inventory_management",
 	},
 	{
 		image: create_website_and_app,

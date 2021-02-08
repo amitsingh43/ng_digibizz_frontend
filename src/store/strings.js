@@ -2641,7 +2641,7 @@ export const PARTNERS = [
 		tag: "business_loans",
 	},
 	{
-		category: "Manage Stock",
+		category: "Inventory Management",
 		data: [
 			{
 				title: "Snapbizz",
@@ -2668,7 +2668,7 @@ export const PARTNERS = [
 				backgroundColor: "#fff",
 			},
 		],
-		tag: "manage_stock",
+		tag: "inventory_management",
 	},
 	{
 		category: "Create Website or Mobile App",
