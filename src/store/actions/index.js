@@ -18,6 +18,7 @@ import {
 	RESET_QUESTIONNAIRE,
 	ADD_ERROR,
 	CLEAR_ERROR,
+	NONE_OF_THE_ABOVE,
 } from "../actionTypes/index";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -84,7 +85,12 @@ export const set_user_details = (details) => {
 		payload: details,
 	};
 };
-
+export const none_of_the_above = (answer_id) => {
+	return {
+		type: NONE_OF_THE_ABOVE,
+		payload: answer_id,
+	};
+};
 export const add_answer = (answer_id) => {
 	return {
 		type: ADD_ANSWER,

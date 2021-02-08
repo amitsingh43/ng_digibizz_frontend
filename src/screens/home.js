@@ -56,7 +56,7 @@ function Home({
 	const history = useHistory();
 	const [isChecked, setCheck] = useState(false);
 	const [more, showmore] = useState(false);
-	const [mrOrMs, setMrOrMs] = useState("nilhtyvtvw5sh-mabht5aa");
+	const [mrOrMs, setMrOrMs] = useState("");
 	const [otherCity, setOtherCity] = useState("");
 	if (localStorage.getItem("report")) {
 		history.push("/report");
@@ -72,10 +72,6 @@ function Home({
 	};
 
 	const submitLead = async () => {
-		if (mrOrMs === "") {
-			add_error("Please select Mr or Mrs Or Miss");
-			return;
-		}
 		if (!isChecked) {
 			add_error("Please accept Terms and conditions");
 			return;
@@ -104,6 +100,7 @@ function Home({
 				add_error("Please specify your city.");
 				return;
 			}
+			var GENDER = gender[0]._id ? gender[0]._id : "";
 			const body = {
 				cities_master_id: city,
 				industry_master_id: industry,
@@ -112,7 +109,7 @@ function Home({
 				email: email,
 				mobile: mobile,
 				business_name: businessName,
-				gender_master_id: mrOrMs,
+				gender_master_id: mrOrMs === "" ? GENDER : mrOrMs,
 				referral_code: referralCode,
 				other_city: otherCity,
 			};
@@ -151,16 +148,12 @@ function Home({
 									Full Name<span>*</span>
 								</div>
 								<select
+									value={gender.length > 0 ? gender[0]._id : ""}
 									id="mr-or-mrs"
 									onChange={(e) => setMrOrMs(e.target.value)}
 								>
 									{gender.length > 0 && (
-										<option
-											value="nilhtyvtvw5sh-mabht5aa"
-											selected
-											disabled
-											hidden
-										>
+										<option value={gender[0]._id} selected disabled hidden>
 											Mr.
 										</option>
 									)}

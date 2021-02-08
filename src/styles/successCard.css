@@ -17,7 +17,7 @@
 	justify-content: center;
 	align-items: center;
 	height: 350px;
-	object-fit: cover;
+	background-size: cover;
 }
 
 .success-card .punctuation1,
@@ -117,11 +117,6 @@
 	.view-more {
 		margin: 10px 0px 0px 10px;
 		font-size: 11px;
-	}
-	.success-card .thumbnail {
-		width: 100%;
-		height: auto;
-		object-fit: cover;
 	}
 }
 

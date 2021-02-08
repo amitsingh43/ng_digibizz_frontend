@@ -10,6 +10,7 @@ import {
 	add_answer,
 	post_answers,
 	get_questions,
+	none_of_the_above,
 } from "../store/actions";
 import Footer from "../components/main/footer";
 import { useEffect } from "react";
@@ -24,6 +25,7 @@ function Questionnaire({
 	questionsList,
 	post_answers,
 	get_questions,
+	none_of_the_above,
 }) {
 	const history = useHistory();
 	useEffect(() => {
@@ -80,6 +82,10 @@ function Questionnaire({
 		add_answer({ question, id, type });
 	};
 
+	const DESELECT_ALL = (question, id, type) => {
+		none_of_the_above({ question, id, type });
+	};
+
 	const inputProps = (question, option) => {
 		const a = {
 			type: question.multiple ? "checkbox" : "radio",
@@ -87,12 +93,17 @@ function Questionnaire({
 			// name: option.id,
 			name: question._id,
 			value: option._id,
-			onChange: (e) =>
-				updateAnswers(
-					question.name,
-					e.target.value,
-					question.multiple ? "checkbox" : "radio"
-				),
+			onChange: (e) => {
+				if (option.name === "None of the above") {
+					DESELECT_ALL(question.name, e.target.value, "none");
+				} else {
+					updateAnswers(
+						question.name,
+						e.target.value,
+						question.multiple ? "checkbox" : "radio"
+					);
+				}
+			},
 		};
 		if (isChecked(option._id) === true) {
 			a["checked"] = "true";
@@ -196,4 +207,5 @@ export default connect(mapStateToProps, {
 	add_answer,
 	post_answers,
 	get_questions,
+	none_of_the_above,
 })(Questionnaire);
