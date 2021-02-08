@@ -251,6 +251,7 @@ function Home({
 								</div>
 								<input
 									type="text"
+									placeholder="optional"
 									id="referral"
 									className="col-xs-12"
 									value={referralCode}
@@ -342,9 +343,9 @@ function Home({
 					</div>
 				)}
 				<div className="row row3">
-					<div className="col-lg-5" style={{ marginRight: 30 }}></div>
+					<div className="col-lg-5"></div>
 					{homepageCounter === 2 && (
-						<div className="col-lg-3 col-xs-12">
+						<div className="col-lg-3">
 							<div className="outer-button" onClick={_back}>
 								<div
 									className="button"
@@ -361,7 +362,7 @@ function Home({
 							</div>
 						</div>
 					)}
-					<div className="col-lg-3 col-xs-12">
+					<div className="col-lg-3">
 						<div className="outer-button">
 							<div className="button" onClick={submitLead}>
 								{homepageCounter === 1 && "Next"}

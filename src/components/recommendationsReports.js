@@ -1,20 +1,15 @@
 import React from "react";
 import "../styles/recommendationReport.css";
 import download from "../assets/download.svg";
-import { services } from "../store/services_mapping";
-import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { downloadReport, show_toast } from "../store/actions";
-import axios from "axios";
+import { downloadReport } from "../store/actions";
 
 const Percetage = (props) => {
 	const { image_url } = props;
-	console.log(image_url);
-	// alert(name);
 	return (
 		<div className="percentagee ">
 			<div className="justify-content-md-center">
-				<img src={image_url} />
+				<img src={image_url} alt="service" />
 			</div>
 		</div>
 	);
@@ -31,7 +26,7 @@ const RecCard = ({ recommendations }) => {
 						<Percetage image_url={recommendation.image_url} />
 						{recommendation.name}
 						<p
-							style={{ wordSpacing: 0 }}
+							style={{ wordSpacing: 0, fontSize: 17 }}
 							onClick={() =>
 								history.push({
 									pathname: "/services",

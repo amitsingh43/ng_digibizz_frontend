@@ -20,8 +20,11 @@ function TestimonialsCarousal() {
 						>
 							<div className="col-lg-1"></div>
 							<div
-								className="col-lg-4 img-responsive"
-								style={{ backgroundImage: `url(${item.image})` }}
+								className="col-lg-4 "
+								style={{
+									backgroundImage: `url(${item.image})`,
+									backgroundSize: "cover",
+								}}
 							>
 								{item.type === "video" && (
 									<img
