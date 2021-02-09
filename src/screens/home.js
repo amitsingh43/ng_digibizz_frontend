@@ -148,12 +148,11 @@ function Home({
 									Full Name<span>*</span>
 								</div>
 								<select
-									value={gender.length > 0 ? gender[0]._id : ""}
 									id="mr-or-mrs"
 									onChange={(e) => setMrOrMs(e.target.value)}
 								>
 									{gender.length > 0 && (
-										<option value={gender[0]._id} selected disabled hidden>
+										<option selected disabled hidden>
 											Mr.
 										</option>
 									)}

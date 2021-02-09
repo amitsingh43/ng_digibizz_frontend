@@ -259,6 +259,7 @@ export const update_lead = (body, ENDPOINT = "/api/update_lead") => async (
 ) => {
 	try {
 		const { lead } = await _post(ENDPOINT, body);
+		show_toast("Thank you", "SUCCESS");
 		dispatch(set_user_details(lead));
 	} catch (error) {
 		let message = "Something went wrong! Please try later.";

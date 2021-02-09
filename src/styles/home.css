@@ -1,6 +1,7 @@
 .home-container {
 	color: #68696a;
 	font-family: "Rubik", sans-serif;
+	min-height: 100vh;
 }
 
 .home-container a {
@@ -153,6 +154,8 @@ select {
 .more {
 	color: #28b04b;
 	float: right;
+	cursor: pointer;
+	font-weight: bold;
 }
 
 #mr-or-mrs {
