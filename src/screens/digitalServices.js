@@ -132,8 +132,18 @@ function DigitalServices({ header_digital_services, user, update_lead }) {
 	const location = useLocation();
 	useEffect(() => {
 		header_digital_services();
-		if (location.state) {
-			window.location.href = `#${location.state.id}`;
+		var PATH = "";
+		for (
+			var i = window.location.href.lastIndexOf("=");
+			i < window.location.href.length - 1;
+			i++
+		) {
+			if (i === -1) break;
+			PATH += window.location.href[i + 1];
+		}
+		if (location.state || PATH !== "") {
+			PATH = location.state ? location.state.id : PATH;
+			window.location.href = `#${PATH}`;
 		}
 	}, []);
 	return (
