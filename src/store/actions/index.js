@@ -26,9 +26,10 @@ import { _get, _post } from "../api";
 // import filedownload from "js-file-download";
 var FileSaver = require("file-saver");
 
-export const increment = () => {
+export const increment = (payload = 0) => {
 	return {
 		type: INCREMENT,
+		payload,
 	};
 };
 export const decrement = () => {

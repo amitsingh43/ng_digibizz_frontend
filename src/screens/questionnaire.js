@@ -1,5 +1,6 @@
 import React from "react";
 import SectonList from "../components/sectionList";
+import Loading from "../components/loading";
 import "../styles/questionnaire.css";
 import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
@@ -116,6 +117,9 @@ function Questionnaire({
 			updateAnswers(name, ans._id, "checkbox");
 		});
 	};
+	if (questionsList.length === 0) {
+		return <Loading />;
+	}
 	return (
 		<div className="main">
 			<div className="main-content-questions">

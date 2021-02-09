@@ -42,6 +42,7 @@
 
 .v-stepper {
 	position: relative;
+	cursor: pointer;
 	/*   visibility: visible; */
 }
 
@@ -78,6 +79,10 @@
 .step.active .content {
 	margin-left: 40px;
 	color: #28b04b;
+}
+
+.mid span {
+	cursor: pointer;
 }
 
 .step.active .line {

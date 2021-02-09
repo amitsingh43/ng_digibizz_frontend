@@ -4,6 +4,7 @@ import UnderstandReport from "../components/understandReport";
 import RecommendationsReports from "../components/recommendationsReports";
 import Testimonials from "../components/testimonials";
 import Footer from "../components/main/footer";
+import Loading from "../components/loading";
 import Disclaimer from "../components/main/disclaimer";
 import "../styles/report.css";
 import { connect } from "react-redux";
@@ -35,6 +36,9 @@ function Report({
 	if (localStorage.getItem("lead_id") === null) {
 		history.push("/knowStatus");
 		return <div>Redirecting</div>;
+	}
+	if (userDetails.user === null) {
+		return <Loading />;
 	} else {
 		header_digital_status();
 		return (

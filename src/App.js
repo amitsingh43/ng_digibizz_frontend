@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/main/header";
+import GotoTop from "./components/gotoTop";
 import Home from "./screens/home";
 import Welcome from "./screens/welcome";
 import Report from "./screens/report";
@@ -44,6 +45,7 @@ function App({ errorMessage, clear_error }) {
 					draggable
 					pauseOnHover
 				/>
+				<GotoTop />
 				{/* {showPopUp && <ExitPopUp />} */}
 				<Header />
 				<Switch>
