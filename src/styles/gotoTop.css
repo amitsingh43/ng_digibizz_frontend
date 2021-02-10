@@ -1,4 +1,24 @@
+#go-to-top {
+	width: 50px;
+	z-index: 1000;
+	height: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 100px;
+	right: 40px;
+	cursor: pointer;
+}
+
 @media (max-width: 576px) {
+	#go-to-top {
+		right: 20px;
+		bottom: 30px;
+	}
 	#go-to-top img {
 		width: 40px;
 		height: 40px;

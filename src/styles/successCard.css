@@ -79,6 +79,9 @@
 }
 
 @media (min-width: 48rem) and (max-width: 975px) {
+	.success-card .thumbnail {
+		height: 200px;
+	}
 	.success-card .punctuation1,
 	.success-card .punctuation2 {
 		width: 10px;
@@ -93,7 +96,7 @@
 		height: 200px;
 	}
 	.success-card .img-responsive {
-		height: 200px;
+		height: fit-content;
 	}
 	.success-card .content {
 		padding: 0px;
