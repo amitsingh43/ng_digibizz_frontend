@@ -65,7 +65,7 @@ const DetailedCard = ({ story }) => {
 					<iframe
 						style={{ width: "100%", height: "100%" }}
 						title="jfdsjj"
-						frameborder="0"
+						frameBorder="0"
 						wmode="Opaque"
 						src={
 							"https://www.youtube.com/embed/" +
@@ -94,11 +94,16 @@ const Content = ({ data }) => {
 	return (
 		<div>
 			<h3>{heading}</h3>
-			{desc && desc.map((para) => <p style={{ color: "#68696A" }}>{para}</p>)}
+			{desc &&
+				desc.map((para, index) => (
+					<p key={index} style={{ color: "#68696A" }}>
+						{para}
+					</p>
+				))}
 			{list && (
 				<ul>
-					{list.map((point) => (
-						<li>
+					{list.map((point, index) => (
+						<li key={index}>
 							<span style={{ color: "black", fontWeight: "bold" }}>
 								{point.bullet}
 							</span>
@@ -116,11 +121,9 @@ const MainContent = ({ story }) => {
 	const styles = { fontSize: 16, lineHeight: 2 };
 	return (
 		<div className="main-content col-lg-10" style={styles}>
-			<p style={{ marginTop: 30 }}>
-				{blog.map((data) => (
-					<Content data={data} />
-				))}
-			</p>
+			{blog.map((data, index) => (
+				<Content data={data} key={index} />
+			))}
 		</div>
 	);
 };

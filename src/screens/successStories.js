@@ -31,8 +31,8 @@ function SuccessStories({ header_success_stories }) {
 			<div className="top-content">
 				<Content />
 			</div>
-			{SUCCESSDATA.map((data) => (
-				<div className="success-content">
+			{SUCCESSDATA.map((data, index) => (
+				<div className="success-content" key={index}>
 					<SuccessCard
 						id={data.id}
 						name={data.name}

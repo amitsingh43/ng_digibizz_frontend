@@ -156,8 +156,10 @@ function Home({
 											Mr.
 										</option>
 									)}
-									{gender.map((gen) => (
-										<option value={gen._id}>{gen.name}</option>
+									{gender.map((gen, index) => (
+										<option value={gen._id} key={index}>
+											{gen.name}
+										</option>
 									))}
 								</select>
 								<input
@@ -194,8 +196,8 @@ function Home({
 									<option value={null} selected disabled hidden>
 										Select
 									</option>
-									{cities.map((city) => (
-										<option value={city._id}>
+									{cities.map((city, index) => (
+										<option value={city._id} key={index}>
 											{city.name}
 											{}
 										</option>
@@ -271,8 +273,10 @@ function Home({
 									<option value="" selected disabled hidden>
 										Select
 									</option>
-									{industries.map((industry) => (
-										<option value={industry._id}>{industry.name}</option>
+									{industries.map((industry, index) => (
+										<option value={industry._id} key={index}>
+											{industry.name}
+										</option>
 									))}
 								</select>
 
@@ -290,8 +294,10 @@ function Home({
 										<option value="" selected disabled hidden>
 											Select
 										</option>
-										{turnoverValues.map((range) => (
-											<option value={range._id}>{range.name}</option>
+										{turnoverValues.map((range, index) => (
+											<option value={range._id} key={index}>
+												{range.name}
+											</option>
 										))}
 									</select>
 								</div>

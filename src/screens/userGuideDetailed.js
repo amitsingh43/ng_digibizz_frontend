@@ -55,8 +55,8 @@ const OnlyContent = ({ heading, content, list }) => {
 			<p className="p">{content}</p>
 			{list && (
 				<ul>
-					{list.map((point) => (
-						<p>
+					{list.map((point, index) => (
+						<p key={index}>
 							<li className="p">{point}</li>
 						</p>
 					))}
@@ -70,8 +70,8 @@ const MainContent = ({ heading, desc, image, sections }) => {
 	return (
 		<div className="main-content col-lg-10 ">
 			<div className="heading">{heading}</div>
-			{sections.map((section) => (
-				<div>
+			{sections.map((section, index) => (
+				<div key={index}>
 					{section.type === "left" && (
 						<ImageContent
 							image={section.image}

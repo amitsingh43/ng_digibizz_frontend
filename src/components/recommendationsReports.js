@@ -21,8 +21,8 @@ const RecCard = ({ recommendations }) => {
 	return (
 		<div className="row ">
 			{results &&
-				results.map((recommendation) => (
-					<div className="col-lg-2 col-xs-6 card">
+				results.map((recommendation, index) => (
+					<div className="col-lg-2 col-xs-6 card" key={index}>
 						<Percetage image_url={recommendation.image_url} />
 						{recommendation.name}
 						<p

@@ -23,6 +23,7 @@ function Report({
 		if (localStorage.getItem("report") && userDetails.user === null) {
 			get_results(localStorage.getItem("lead_id"));
 		}
+		header_digital_status();
 	}, []);
 	const [downloadText, setDownloadText] = useState("Download Report");
 	const history = useHistory();
@@ -40,7 +41,6 @@ function Report({
 	if (userDetails.user === null) {
 		return <Loading />;
 	} else {
-		header_digital_status();
 		return (
 			<div className="report-main">
 				{userDetails.user && (

@@ -283,6 +283,7 @@ export const save_basic_details = (
 ) => async (dispatch) => {
 	try {
 		await _post(ENDPOINT, body);
+		show_toast("Thank you", "SUCCESS");
 	} catch (error) {
 		let message = "Something went wrong! Please try later.";
 

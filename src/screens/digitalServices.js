@@ -22,8 +22,9 @@ const ServicesCategory = () => {
 	return (
 		<div className="service-category">
 			<div className="one">
-				{services.map((service) => (
+				{services.map((service, index) => (
 					<div
+						key={index}
 						className="cat"
 						onClick={() => (window.location.hash = `#${service.tag}`)}
 					>
@@ -108,8 +109,8 @@ const Services = (props) => {
 			</div>
 			<span></span>
 			<div className="row justify-content-md-center partner-main">
-				{cardData.map((data) => (
-					<div>
+				{cardData.map((data, index) => (
+					<div key={index}>
 						<PartnerCard
 							update_lead={update_lead}
 							user={user}
@@ -153,8 +154,8 @@ function DigitalServices({ header_digital_services, user, update_lead }) {
 				<ServicesCategory />
 			</div>
 			<div>
-				{PARTNERS.map((partner) => (
-					<div id={partner.tag} className="row sell-online">
+				{PARTNERS.map((partner, index) => (
+					<div id={partner.tag} className="row sell-online" key={index}>
 						<Services
 							user={user}
 							heading={partner.category}

@@ -26,7 +26,7 @@ const Logo = ({ state }) => {
 	);
 };
 
-const Button = ({ mrOrMs, save_basic_details, partner }) => {
+const Button = ({ mrOrMs, save_basic_details, partner, gender }) => {
 	const _submit = () => {
 		const arr = [
 			{
@@ -55,12 +55,14 @@ const Button = ({ mrOrMs, save_basic_details, partner }) => {
 			show_toast(`Please enter your ${x.error}`);
 		} else {
 			// API CALL
+			var genderId =
+				gender.length > 0 && mrOrMs === "" ? gender[0]._id : mrOrMs;
 			const body = {
 				full_name: document.getElementById("1").value,
 				mobile: document.getElementById("2").value,
 				business_name: document.getElementById("3").value,
 				email: document.getElementById("4").value,
-				gender_master_id: mrOrMs,
+				gender_master_id: genderId,
 				partner_availed: partner,
 			};
 			save_basic_details(body);
@@ -82,7 +84,7 @@ const Form = ({ gender, save_basic_details, partner }) => {
 		{ label: "Business Name", type: "text", id: "3" },
 		{ label: "Email id", type: "email", id: "4" },
 	];
-	const [mrOrMs, setMrOrMs] = useState("nilhtyvtvw5sh-mabht5aa");
+	const [mrOrMs, setMrOrMs] = useState("");
 	return (
 		<div style={{ flex: 1, width: "100%" }}>
 			<h1>Inquire now</h1>
@@ -136,6 +138,7 @@ const Form = ({ gender, save_basic_details, partner }) => {
 				</div>
 			</div>
 			<Button
+				gender={gender}
 				partner={partner}
 				mrOrMs={mrOrMs}
 				save_basic_details={save_basic_details}

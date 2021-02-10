@@ -132,8 +132,8 @@ function Questionnaire({
 							{questionsList.length > 0 &&
 								questionsList[topicCounter - 1][
 									"questionnaire_section_questions"
-								].map((question) => (
-									<div className="questions">
+								].map((question, index) => (
+									<div className="questions" key={index}>
 										<li key={question._id}>{question.name}</li>
 										{/* {question.multiple && (
 										<div className="options">
@@ -154,12 +154,14 @@ function Questionnaire({
 											</label>
 										</div>
 									)} */}
-										{question.questionnaire_section_answers.map((option) => (
-											<div className="options">
-												<input {...inputProps(question, option)} required />
-												<label name={option._id}>{option.name}</label>
-											</div>
-										))}
+										{question.questionnaire_section_answers.map(
+											(option, index) => (
+												<div className="options" key={index}>
+													<input {...inputProps(question, option)} required />
+													<label name={option._id}>{option.name}</label>
+												</div>
+											)
+										)}
 									</div>
 								))}
 						</ol>

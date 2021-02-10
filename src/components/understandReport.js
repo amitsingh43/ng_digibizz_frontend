@@ -45,8 +45,11 @@ function UnderstandReport({ section_results }) {
 			<h4>Understand your Digit-o-Meter Score</h4>
 			<div className="row card-view">
 				{Object.keys(section_results).length > 0 &&
-					cardData.map((card) => (
-						<div className={!section_results[card.title] ? "hide" : ""}>
+					cardData.map((card, index) => (
+						<div
+							className={!section_results[card.title] ? "hide" : ""}
+							key={index}
+						>
 							<Card
 								image={card.image}
 								title={card.title}
