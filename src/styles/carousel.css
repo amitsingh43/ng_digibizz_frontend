@@ -102,6 +102,9 @@
 }
 
 @media (min-width: 48rem) and (max-width: 75rem) {
+	.carousel-main .person {
+		width: 50%;
+	}
 	.carousel-main {
 		margin: 0px 40px;
 	}

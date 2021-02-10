@@ -20,7 +20,7 @@ function TestimonialsCarousal() {
 						>
 							<div className="col-lg-1"></div>
 							<div
-								className="col-lg-4 "
+								className="col-lg-4 person"
 								style={{
 									backgroundImage: `url(${item.image})`,
 									backgroundSize: "cover",
