@@ -334,4 +334,7 @@ hr {
 	.right-img-content p {
 		padding: 20px 0px 0px 0px;
 	}
+	.success-stories-detailed .detailed-card-1 .profile-pic {
+		margin-right: 20px;
+	}
 }
