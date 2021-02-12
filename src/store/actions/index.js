@@ -19,6 +19,7 @@ import {
 	ADD_ERROR,
 	CLEAR_ERROR,
 	NONE_OF_THE_ABOVE,
+	RESET_STORE,
 } from "../actionTypes/index";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -111,6 +112,12 @@ export const get_section_questions = (counter) => {
 	};
 };
 
+export const reset_questions = () => {
+	return {
+		type: RESET_STORE,
+	};
+};
+
 export const set_recommendations_write = (recommendations) => {
 	return {
 		type: SET_RECOMMENDATIONS,
@@ -118,10 +125,22 @@ export const set_recommendations_write = (recommendations) => {
 	};
 };
 
+export const reset_recommendations = () => {
+	return {
+		type: RESET_STORE,
+	};
+};
+
 export const set_results = (results) => {
 	return {
 		type: SET_RESULTS,
 		payload: results,
+	};
+};
+
+export const reset_results = () => {
+	return {
+		type: RESET_STORE,
 	};
 };
 
@@ -197,6 +216,12 @@ export const post_user_details = (
 	}
 };
 
+export const reset_user = () => {
+	return {
+		type: RESET_STORE,
+	};
+};
+
 export const post_answers = (
 	options,
 	history,
@@ -226,6 +251,12 @@ export const post_answers = (
 		dispatch(add_error(message));
 		// show_toast(message);
 	}
+};
+
+export const reset_answers = () => {
+	return {
+		type: RESET_STORE,
+	};
 };
 
 export const get_questions = (
