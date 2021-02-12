@@ -371,7 +371,7 @@ function Home({
 						<div className="outer-button">
 							<div className="button" onClick={submitLead}>
 								{homepageCounter === 1 && "Next"}
-								{homepageCounter === 2 && "Check your digital score"}
+								{homepageCounter === 2 && "Check your Digital Score"}
 							</div>
 						</div>
 					</div>
