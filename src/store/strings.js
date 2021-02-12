@@ -2241,7 +2241,7 @@ export const SUCCESSDATA = [
 					{
 						bullet: "Logo and tagline needed improvement - ",
 						content:
-							"The logo is what a customer can relate to in a brand and creates the identity for a company. Neogrowth felt that Reshma's store could benefit much more if Advait Medical had a more prominent logo and tagline.",
+							"The logo is what a customer can relate to in a brand and creates the identity for a company. NeoGrowth felt that Reshma's store could benefit much more if Advait Medical had a more prominent logo and tagline.",
 					},
 					{
 						bullet:
@@ -2279,7 +2279,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Proposed Solutions",
 				desc: [
-					"After a thorough evaluation, it was clear that Neogrowth could help Reshma improve her store. Considering all the observations from Reshma's Advait Medical, Neogrowth was able to develop a few solutions to help digitise and improve the business.",
+					"After a thorough evaluation, it was clear that NeoGrowth could help Reshma improve her store. Considering all the observations from Reshma's Advait Medical, NeoGrowth was able to develop a few solutions to help digitise and improve the business.",
 					"After evaluation, diGibizz proposed the following solutions - ",
 				],
 				list: [
@@ -2299,14 +2299,14 @@ export const SUCCESSDATA = [
 							"Using Snapbizz, NeoGrowth can empower SMEs to completely digitise their business operations for more efficiency and ease of use. The diGibizz platform processes everything from billing, customer information and stock counts. This would also help make it easier to understand the trends for different products in Reshma's store.",
 					},
 					{
-						bullet: "Neogrowth credit lending - ",
+						bullet: "NeoGrowth credit lending - ",
 						content:
-							"Neogrowth Credit Pvt. Ltd. empowers small businesses by providing credit facilities in the form of small business loans to eligible businesses. Reshma was able to secure funding from Neogrowth, helping her finance the needs of Advait Medical. ",
+							"NeoGrowth Credit Pvt. Ltd. empowers small businesses by providing credit facilities in the form of small business loans to eligible businesses. Reshma was able to secure funding from NeoGrowth, helping her finance the needs of Advait Medical. ",
 					},
 					{
 						bullet: "Digihealth Redbook - ",
 						content:
-							"Neogrowth implemented the use of Digihealth Redbook, a pharmacy management system that stores and handles information related to medicine, stock, etc. The app was able to provide Reshma with alerts and notifications about the status of her stock and sales at her store. This was made possible thanks to a powerful artificial intelligence algorithm developed by diGibizz.",
+							"NeoGrowth implemented the use of Digihealth Redbook, a pharmacy management system that stores and handles information related to medicine, stock, etc. The app was able to provide Reshma with alerts and notifications about the status of her stock and sales at her store. This was made possible thanks to a powerful artificial intelligence algorithm developed by diGibizz.",
 					},
 					{
 						bullet: "MagicPin - ",
@@ -2316,7 +2316,7 @@ export const SUCCESSDATA = [
 					{
 						bullet: "Social media presence establishment - ",
 						content:
-							"Neogrowth was able to establish their social media accounts on Facebook and Instagram. This was effective because it increased the reach and customer awareness for Advait Medical. Customers were then able to receive updates, offers and contact Reshma online.",
+							"NeoGrowth was able to establish their social media accounts on Facebook and Instagram. This was effective because it increased the reach and customer awareness for Advait Medical. Customers were then able to receive updates, offers and contact Reshma online.",
 					},
 				],
 			},
@@ -2324,9 +2324,9 @@ export const SUCCESSDATA = [
 				heading: "Conclusion",
 				desc: [
 					"The story of Reshma and her store Advait Medical is one of hard work and success. After her wedding plans were fixed, she chose to open her pharmacy and provide pharmaceutical products to customers in her locality. However, the competition from bigger pharmacies, the lack of an online presence and the inability to accept online payments were all challenges that Reshma faced.",
-					"With the help of NeoGrowth Credit Pvt. Ltd., Reshma was able to transform her store from the ground up. Neogrowth helped develop a new logo and tagline, 'Advait Medical - We Care For You!' which provided the store with a strong identity.",
+					"With the help of NeoGrowth Credit Pvt. Ltd., Reshma was able to transform her store from the ground up. NeoGrowth helped develop a new logo and tagline, 'Advait Medical - We Care For You!' which provided the store with a strong identity.",
 					"Further, important digitisation solutions were implemented like creating social media accounts and implementing the use of Digihealth Redbook, a pharmacy management system. Using Magicpin, Reshma was able to provide medicines to her customers at discounted rates, by finding applicable coupon codes.",
-					"With all these solutions being implemented, Reshma overcame many of the initial hurdles that she struggled with. With aid from Neogrowth, she was able to receive the financial and consulting help she needed to take her store to new heights, with a fully digital Point of Sale system, social media accounts, discount coupons and home delivery.",
+					"With all these solutions being implemented, Reshma overcame many of the initial hurdles that she struggled with. With aid from NeoGrowth, she was able to receive the financial and consulting help she needed to take her store to new heights, with a fully digital Point of Sale system, social media accounts, discount coupons and home delivery.",
 				],
 				list: null,
 			},
@@ -2631,7 +2631,7 @@ export const PARTNERS = [
 		data: [
 			{
 				title: "NeoGrowth",
-				subTitle: "Collateral free business Loans up to 75 lakhs",
+				subTitle: "Collateral-free business Loans up to 75 lakhs",
 				description:
 					"Fund your dreams with NeoGrowth’s flexible business loans",
 				image: neogrowth,

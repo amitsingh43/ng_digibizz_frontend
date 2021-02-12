@@ -55,7 +55,7 @@ const DetailView = ({ downloadText, setDownloadText }) => {
 					<img src={download} alt="download" />
 				</div>
 			</div>
-			<p style={{ fontWeight: "normal" }}>
+			{/* <p style={{ fontWeight: "normal" }}>
 				Explore our services at{" "}
 				<span>
 					<a
@@ -66,7 +66,7 @@ const DetailView = ({ downloadText, setDownloadText }) => {
 						www.neogrowth.in/partners
 					</a>
 				</span>
-			</p>
+			</p> */}
 		</div>
 	);
 };

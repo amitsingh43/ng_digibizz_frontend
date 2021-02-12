@@ -248,11 +248,11 @@ function Home({
 									onChange={(e) => setEmail(e.target.value)}
 								/>
 								<div className="heading" style={{ marginTop: 100 }}>
-									Referral Code
+									Referral Code{" "}
+									<span style={{ color: "grey" }}>(optional)</span>
 								</div>
 								<input
 									type="text"
-									placeholder="optional"
 									id="referral"
 									className="col-xs-12"
 									value={referralCode}

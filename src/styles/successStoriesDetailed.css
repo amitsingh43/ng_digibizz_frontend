@@ -109,7 +109,7 @@
 
 .user-guide-top-image .thumbnail {
 	width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .success-stories-detailed .bgimage {
@@ -247,9 +247,16 @@ hr {
 	.success-stories-detailed .thumbnail {
 		/* width: 100px; */
 	}
+	.success-stories-detailed .detailed-card-1 .bgimage {
+		height: 410px;
+		width: 100%;
+	}
 }
 
 @media (max-width: 48rem) {
+	.user-guide-top-image .thumbnail {
+		height: auto;
+	}
 	.success-stories-detailed {
 		padding: 0px;
 	}
@@ -288,6 +295,10 @@ hr {
 	.success-stories-detailed .detailed-card-1 .bgimage {
 		/* width: 100%; */
 		margin-top: 20px;
+		height: 360px;
+
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 	.success-stories-detailed .main-content {
 		background-color: white;

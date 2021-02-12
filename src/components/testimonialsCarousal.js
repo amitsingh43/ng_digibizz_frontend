@@ -21,10 +21,9 @@ function TestimonialsCarousal() {
 						>
 							<div className="col-lg-1"></div>
 							<div
-								className="col-lg-4 person"
+								className="col-lg-5 person"
 								style={{
 									backgroundImage: `url(${item.image})`,
-									backgroundSize: "cover",
 								}}
 							>
 								{item.type === "video" && (
@@ -35,7 +34,7 @@ function TestimonialsCarousal() {
 									/>
 								)}
 							</div>
-							<span className="col-lg-6 content">
+							<span className="col-lg-5 content">
 								<h5>{item.name}</h5>
 								<p className="industry">{item.heading}</p>
 								<img className="punctuation1" alt="Person" src={punctuation1} />

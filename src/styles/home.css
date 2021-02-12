@@ -156,6 +156,7 @@ select {
 	float: right;
 	cursor: pointer;
 	font-weight: bold;
+	font-size: 14px;
 }
 
 #mr-or-mrs {
@@ -178,6 +179,7 @@ select {
 		padding: 0px;
 		margin: 0px 25px;
 		text-align: left;
+		min-height: fit-content;
 	}
 	.about {
 		margin-top: 20px;

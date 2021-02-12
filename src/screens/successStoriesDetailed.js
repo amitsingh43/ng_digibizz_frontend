@@ -28,11 +28,18 @@ const DetailedCard = ({ story }) => {
 			<div className="col-lg-6 left-content">
 				<div className="row img-title col-xs-12">
 					<div className="col-lg-4 img-div">
-						<img
+						<div
+							className="col-lg-12 col-xs-4 profile-pic"
+							style={{
+								backgroundImage: `url(${story.image})`,
+								backgroundSize: "contain",
+							}}
+						></div>
+						{/* <img
 							className="col-lg-12 col-xs-4 profile-pic"
 							src={story.image}
 							alt="profile_picture"
-						/>
+						/> */}
 					</div>
 					<div className="col-lg-8 col-xs-8 title-div">
 						<div className="row title">

@@ -42,7 +42,7 @@
 
 @media (max-width: 48rem) {
 	.user-card .bg {
-		width: 100%;
+		object-fit: cover;
 	}
 	.user-card .right {
 		padding: 20px;
