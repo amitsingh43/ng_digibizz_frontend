@@ -32,7 +32,7 @@ const SideText = (props) => {
 			</p>
 
 			<Link to="/knowStatus" onClick={() => props.homepage_decrement()}>
-				<div className="btn">Check your digital score</div>
+				<div className="btn">Check your Digital Score</div>
 			</Link>
 		</div>
 	);
