@@ -23,7 +23,7 @@ const SideText = (props) => {
 	return (
 		<div className="side-text">
 			<h1>
-				Transforming Business.
+				Transforming Businesses.
 				<br />
 				Empowering Lives.
 			</h1>
