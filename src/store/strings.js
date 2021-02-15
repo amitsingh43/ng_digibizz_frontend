@@ -2784,7 +2784,7 @@ export const PARTNERS = [
 				title: "Magicpin",
 				subTitle: null,
 				description:
-					"Streamline your customer interaction with Syrow’s omnichannel customer experience management system",
+					"Platform where users and merchants in a locality discover, interact, and transact.",
 				image: magic_pin,
 				backgroundColor: "#fff",
 			},
