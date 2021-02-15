@@ -207,6 +207,7 @@
 	visibility: visible;
 	opacity: 1;
 	transition: opacity 2s linear;
+	cursor: pointer;
 }
 
 .user-guide .img-label {
