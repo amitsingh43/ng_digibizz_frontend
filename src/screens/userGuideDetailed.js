@@ -8,9 +8,13 @@ import "../styles/successStoriesDetailed.css";
 import { KNOWLEDGE_CENTER } from "../store/strings";
 import { useHistory } from "react-router-dom";
 const TopContent = ({ heading }) => {
+	const history = useHistory();
 	return (
 		<div className="top-content">
-			<div>
+			<div
+				style={{ cursor: "pointer" }}
+				onClick={() => history.push("/knowledgePortal")}
+			>
 				User Guide{"    >>   "}
 				<span>{heading}</span>
 			</div>

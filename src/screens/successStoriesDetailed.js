@@ -10,9 +10,13 @@ import play_logo from "../assets/youtube.svg";
 import { SUCCESSDATA } from "../store/strings";
 import { useHistory } from "react-router-dom";
 const TopContent = ({ story }) => {
+	const history = useHistory();
 	return (
 		<div className="top-content">
-			<div>
+			<div
+				style={{ cursor: "pointer" }}
+				onClick={() => history.push("/successStories")}
+			>
 				{"Success Stories    >>   "}
 				<span>{story.topContent}</span>
 			</div>
