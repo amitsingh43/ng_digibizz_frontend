@@ -2587,27 +2587,44 @@ export const PARTNERS = [
 		data: [
 			{
 				title: "Near.Store",
-				subTitle: "33% Discount on the Near.Store Dongle",
-				description:
-					"Go digital in minutes with an easy plug and play integration with your POS.",
+				subTitle: [
+					"Store Digitization Dongle - INR 2400 + GST (Discounted from INR 3000 + GST )",
+					"Near Store Lite App / Dhandabook App - No Charge.",
+				],
+				description: [
+					"Create your online store without any app download or data entry.",
+					"Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
+				],
 				image: near_store,
 				backgroundColor: "#fff",
+				url: "https://www.ekasta.com",
 			},
-			{
-				title: "Magicpin",
-				subTitle: null,
-				description:
-					"Platform where users and merchants in a locality discover, interact, and transact.",
-				image: magic_pin,
-				backgroundColor: "#fff",
-			},
+			// {
+			// 	title: "Magicpin",
+			// 	subTitle: null,
+			// 	description:
+			// 		"Platform where users and merchants in a locality discover, interact, and transact.",
+			// 	image: magic_pin,
+			// 	backgroundColor: "#fff",
+			// 	url: "",
+			// },
 			{
 				title: "MobiCommerce",
-				subTitle: "Refer and get 10% discount on quotation.",
-				description:
-					"MobiCommerce provides e-commerce development services and solutions for all",
+				subTitle: [
+					"Mobicommerce - License (One time cost products) - 10% Discount on Quotation",
+					"SAAS Model ( Subscription Plans ) - 10% Discount on Subscription paln.",
+				],
+				description: [
+					"Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two.",
+					"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
+					"•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
+					"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
+					"•	Generate profits from the eCommerce website according to business and revenue models",
+					"•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
+				],
 				image: mobicommerce,
 				backgroundColor: "#fff",
+				url: "https://www.mobicommerce.net/contact-us/",
 			},
 		],
 		tag: "sell_online",
@@ -2617,11 +2634,17 @@ export const PARTNERS = [
 		data: [
 			{
 				title: "Near.Store",
-				subTitle: "33% Discount on the Near.Store Dongle",
-				description:
-					"Go digital in minutes with an easy plug and play integration with your POS.",
+				subTitle: [
+					"Store Digitization Dongle - INR 2400 + GST (Discounted from INR 3000 + GST )",
+					"Near Store Lite App / Dhandabook App - No Charge.",
+				],
+				description: [
+					"Create your online store without any app download or data entry.",
+					"Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
+				],
 				image: near_store,
 				backgroundColor: "#fff",
+				url: "https://www.ekasta.com",
 			},
 		],
 		tag: "delivery_services",
@@ -2631,11 +2654,13 @@ export const PARTNERS = [
 		data: [
 			{
 				title: "NeoGrowth",
-				subTitle: "Collateral-free business Loans up to 75 lakhs",
-				description:
+				subTitle: ["Collateral-free business Loans up to 75 lakhs"],
+				description: [
 					"Fund your dreams with NeoGrowth’s flexible business loans",
+				],
 				image: neogrowth,
 				backgroundColor: "#000",
+				url: "https://www.neogrowth.in/register-form/",
 			},
 		],
 		tag: "business_loans",
@@ -2645,49 +2670,65 @@ export const PARTNERS = [
 		data: [
 			{
 				title: "Snapbizz",
-				subTitle: "Upto 17% off on SnapBizz Billing solutions",
-				description:
-					"Snapbizz enables you to go online by managing business operations at ease",
+				subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
+				description: [
+					"Make your store a smart store",
+					"SnapBizz Store Solutions enables you to take your store online, attract new customers, sell more to your current customers and manage store operations with ease.",
+				],
 				image: snapbizz,
 				backgroundColor: "#fff",
+				url: "https://snapbizz.com/retailers-ng/",
 			},
-			{
-				title: "Flobiz",
-				subTitle: null,
-				description:
-					"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
-				image: flobiz,
-				backgroundColor: "#fff",
-			},
-			{
-				title: "Accunity Services",
-				subTitle: "10% off on all our services.",
-				description:
-					"Empower yourself with robust web, software & SEO solutions",
-				image: accunity,
-				backgroundColor: "#fff",
-			},
+			// {
+			// 	title: "Flobiz",
+			// 	subTitle: null,
+			// 	description:
+			// 		"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
+			// 	image: flobiz,
+			// 	backgroundColor: "#fff",
+			// 	url: "",
+			// },
+			// {
+			// 	title: "Accunity Services",
+			// 	subTitle: ["10% off on all our services."],
+			// 	description:
+			// 		"Empower yourself with robust web, software & SEO solutions",
+			// 	image: accunity,
+			// 	backgroundColor: "#fff",
+			// 	url: "",
+			// },
 		],
 		tag: "inventory_management",
 	},
 	{
 		category: "Create Website or Mobile App",
 		data: [
-			{
-				title: "Accunity Services",
-				subTitle: "10% off on all our services.",
-				description:
-					"Empower yourself with robust web, software & SEO solutions",
-				image: accunity,
-				backgroundColor: "#fff",
-			},
+			// {
+			// 	title: "Accunity Services",
+			// 	subTitle: ["10% off on all our services."],
+			// 	description:
+			// 		"Empower yourself with robust web, software & SEO solutions",
+			// 	image: accunity,
+			// 	backgroundColor: "#fff",
+			// 	url: "",
+			// },
 			{
 				title: "MobiCommerce",
-				subTitle: "Refer and get 10% discount on quotation.",
-				description:
-					"MobiCommerce provides e-commerce development services and solutions for all",
+				subTitle: [
+					"Mobicommerce - License (One time cost products) - 10% Discount on Quotation",
+					"SAAS Model ( Subscription Plans ) - 10% Discount on Subscription paln.",
+				],
+				description: [
+					"Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two.",
+					"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
+					"•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
+					"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
+					"•	Generate profits from the eCommerce website according to business and revenue models",
+					"•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
+				],
 				image: mobicommerce,
 				backgroundColor: "#fff",
+				url: "https://www.mobicommerce.net/contact-us/",
 			},
 		],
 		tag: "create_website_and_app",
@@ -2695,114 +2736,142 @@ export const PARTNERS = [
 	{
 		category: "Billing & Accounting",
 		data: [
-			{
-				title: "Accunity Services",
-				subTitle: "10% off on all our services.",
-				description:
-					"Empower yourself with robust web, software & SEO solutions",
-				image: accunity,
-				backgroundColor: "#fff",
-			},
+			// {
+			// 	title: "Accunity Services",
+			// 	subTitle: ["10% off on all our services."],
+			// 	description:
+			// 		"Empower yourself with robust web, software & SEO solutions",
+			// 	image: accunity,
+			// 	backgroundColor: "#fff",
+			// 	url: "",
+			// },
 			{
 				title: "Snapbizz",
-				subTitle: "Upto 17% off on SnapBizz Billing solutions",
-				description:
-					"Snapbizz enables you to go online by managing business operations at ease",
+				subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
+				description: [
+					"Make your store a smart store",
+					"SnapBizz Store Solutions enables you to take your store online, attract new customers, sell more to your current customers and manage store operations with ease.",
+				],
 				image: snapbizz,
 				backgroundColor: "#fff",
+				url: "https://snapbizz.com/retailers-ng/",
 			},
 		],
 		tag: "billing_and_accounting",
 	},
-	{
-		category: "Digital Khata",
-		data: [
-			{
-				title: "OkCredit",
-				subTitle: "Upto XX% off on OkCredit services.",
-				description:
-					"Free digital Udhar-Khata app for businesses & shop owners and manage your in your preferred language.",
-				image: ok_credit,
-				backgroundColor: "#fff",
-			},
-		],
-		tag: "digital_khata",
-	},
-	{
-		category: "Tax Filing & Legal",
-		data: [
-			{
-				title: "Vyapar",
-				subTitle: "Upto XX% off on Vyapar services.",
-				description: "GST Billing Software for small businesses.",
-				image: vyapar,
-				backgroundColor: "#fff",
-			},
-		],
-		tag: "tax_fling_and_legal",
-	},
+	// {
+	// 	category: "Digital Khata",
+	// 	data: [
+	// 		{
+	// 			title: "OkCredit",
+	// 			subTitle: ["Upto XX% off on OkCredit services."],
+	// 			description:
+	// 				"Free digital Udhar-Khata app for businesses & shop owners and manage your in your preferred language.",
+	// 			image: ok_credit,
+	// 			backgroundColor: "#fff",
+	// 			url: "",
+	// 		},
+	// 	],
+	// 	tag: "digital_khata",
+	// },
+	// {
+	// 	category: "Tax Filing & Legal",
+	// 	data: [
+	// 		{
+	// 			title: "Vyapar",
+	// 			subTitle: ["Upto XX% off on Vyapar services."],
+	// 			description: "GST Billing Software for small businesses.",
+	// 			image: vyapar,
+	// 			backgroundColor: "#fff",
+	// 			url: "",
+	// 		},
+	// 	],
+	// 	tag: "tax_fling_and_legal",
+	// },
 	{
 		category: "Social Media & Digital Marketing",
 		data: [
 			{
 				title: "Pinnacle Management & Utility Services",
-				subTitle: null,
-				description:
+				subTitle: [
+					"Social Media Marketing on FB & Instagram (10 Post each) - Rs 4000/- per month.",
+					"Business set-up procurement material (IT System, Signages, Security System, etc.) - As per requirement (Attractive offers).",
+					"Creative Designing (Business brochures, Universal QR Code, Visiting Card, etc.) - As per requirement (25% off for diGibizz referrals).",
+					"Business Promotion Activities (Offline Customer engagement, Events, Branding, etc.) - As per requirement (10% off for diGibizz referrals).",
+				],
+				description: [
 					"Pinnacle Management offers innovative and specialized marketing &communication solutions.",
+				],
 				image: pinnacle,
 				backgroundColor: "#fff",
+				url: "http://www.pinnaclemanagement.in/",
 			},
-			{
-				title: "Accunity Services",
-				subTitle: "10% off on all our services.",
-				description:
-					"Empower yourself with robust web, software & SEO solutions",
-				image: accunity,
-				backgroundColor: "#fff",
-			},
+			// {
+			// 	title: "Accunity Services",
+			// 	subTitle: ["10% off on all our services."],
+			// 	description:
+			// 		"Empower yourself with robust web, software & SEO solutions",
+			// 	image: accunity,
+			// 	backgroundColor: "#fff",
+			// 	url: "",
+			// },
 		],
 		tag: "social_media_marketing",
 	},
-	{
-		category: "Manage Payments",
-		data: [
-			{
-				title: "Razorpay",
-				subTitle: "Upto XX% off on Razorpay services.",
-				description:
-					"All in One- Payment gateway that supports netbanking, credit, debit Cards, UPI etc.",
-				image: razorpay,
-				backgroundColor: "#fff",
-			},
-		],
-		tag: "manage_payments",
-	},
+	// {
+	// 	category: "Manage Payments",
+	// 	data: [
+	// 		{
+	// 			title: "Razorpay",
+	// 			subTitle: ["Upto XX% off on Razorpay services."],
+	// 			description:
+	// 				"All in One- Payment gateway that supports netbanking, credit, debit Cards, UPI etc.",
+	// 			image: razorpay,
+	// 			backgroundColor: "#fff",
+	// 			url: "",
+	// 		},
+	// 	],
+	// 	tag: "manage_payments",
+	// },
 	{
 		category: "Customer Loyalty & Promotions",
 		data: [
-			{
-				title: "Magicpin",
-				subTitle: null,
-				description:
-					"Platform where users and merchants in a locality discover, interact, and transact.",
-				image: magic_pin,
-				backgroundColor: "#fff",
-			},
+			// {
+			// 	title: "Magicpin",
+			// 	subTitle: null,
+			// 	description:
+			// 		"Platform where users and merchants in a locality discover, interact, and transact.",
+			// 	image: magic_pin,
+			// 	backgroundColor: "#fff",
+			// 	url: "",
+			// },
 			{
 				title: "Syrow",
-				subTitle: "Upto 15% Sign-up discount on Customer Service Packages.",
-				description:
-					"Streamline your customer interaction with Syrow’s omnichannel customer experience management system",
+				subTitle: [
+					"Syro Customer Support Services : Upto 15% sign-up discount.",
+				],
+				description: [
+					"24/7 Phone, Email & Chat Support.",
+					"Now you can provide world class multilingual Customer Service from day one, and elevate Customer Experience through Syrow's AI + Human based Omnichannel Customer Support as a Service (CSaaS) platform. Domain experts from Syrow will help you in handling Calls, Emails, Tickets, Chats, WhatsApp etc round-the-clock, and you can monitor everything at your fingertips. Avail Syrow services on a shared platform at a very affordable price with zero CapEx, and low OpEx.",
+				],
 				image: syrow,
 				backgroundColor: "#fff",
+				url: "https://www.syrow.com/partner/NeoGrowth/mvs/",
 			},
 			{
 				title: "Smartech Electronic Systems",
-				subTitle: "10% off on orders placed.",
-				description:
-					"Now flash your promotions & offers on LED digital displays",
+				subTitle: [
+					"Red Colour LED Dsiplay : Rs. 2500/- per sq. ft.",
+					"Green Colour LED Dsiplay : Rs. 3000/- per sq. ft.",
+					"Multi Colour LED Dsiplay : Rs. 3500/- per sq. ft.",
+				],
+				description: [
+					"Now flash your promotions & offers on LED digital displays.",
+					"Your simple, easy to use and effective tool for attracting customers attention and promoting your products and services.",
+				],
 				image: smartech,
 				backgroundColor: "#fff",
+				url: "http://www.smartechelectronics.com/",
 			},
 		],
 		tag: "customer_loyalty_and_promotions",
@@ -2813,17 +2882,20 @@ export const PARTNERS = [
 			{
 				title: "GoDigit",
 				subTitle: null,
-				description:
-					"Secure yourself with GoDigit’s comprehensive insurance solutions",
+				description: [
+					"Digit Insurance is one of the leading General Insurance company in India on a mission to Make Insurance Simple for people.",
+				],
 				image: digit,
 				backgroundColor: "#000000",
+				url: "https://www.godigit.com/",
 			},
 			{
 				title: "Care",
-				subTitle: "Upto XX% off on care health insurances.",
-				description: "Complete healthcare plans for you & your family.",
+				subTitle: null,
+				description: [""],
 				image: care,
 				backgroundColor: "#fff",
+				url: "https://www.religareonline.com/",
 			},
 		],
 		tag: "insurance",

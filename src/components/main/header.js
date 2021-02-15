@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 import header_menu from "../../assets/header_menu.svg";
 import header_close from "../../assets/header_close.svg";
 import "../../styles/header.css";

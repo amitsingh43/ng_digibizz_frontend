@@ -92,7 +92,7 @@ h2 {
 	padding: 0px;
 	margin: 0px;
 	margin-top: 20px;
-	height: 300px;
+	min-height: 350px;
 	background-color: white;
 	border-radius: 10px;
 	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.1));
@@ -105,7 +105,7 @@ h2 {
 .services-main .partner-card .col-md-4 {
 	display: flex;
 	border-radius: 10px;
-	height: 100%;
+	min-height: 350px;
 	padding: 0px 20px;
 	justify-content: center;
 	align-items: center;
@@ -184,5 +184,8 @@ h2 {
 	}
 	.services-main .partner-card .col-md-4 {
 		width: 100%;
+	}
+	.services-main .partner-card .avial-now {
+		margin-bottom: 20px;
 	}
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { header_digital_services, update_lead } from "../store/actions";
 import { connect } from "react-redux";
 import { services } from "../store/services_mapping";
@@ -47,6 +47,7 @@ const PartnerCard = (props) => {
 		user,
 		tag,
 		update_lead,
+		url,
 	} = props;
 	const history = useHistory();
 	const _availNow = () => {
@@ -56,15 +57,25 @@ const PartnerCard = (props) => {
 				partner_availed: title,
 			};
 			update_lead(body);
+			window.open(url, "_blank");
 		} else {
 			history.push({
 				pathname: "/reg",
 				state: {
-					data: { title, description, image, subTitle, tag },
+					data: {
+						title,
+						description,
+						image,
+						subTitle,
+						tag,
+						url,
+						backgroundColor,
+					},
 				},
 			});
 		}
 	};
+	const [viewMore, toggleViewMore] = useState(false);
 	return (
 		<div className=" col-md-5  partner-card ">
 			<div className=" col-md-4" style={{ backgroundColor: backgroundColor }}>
@@ -77,18 +88,46 @@ const PartnerCard = (props) => {
 			</div>
 			<div className=" col-md-7">
 				<h3>{title}</h3>
-				{subTitle && <div className="sub-title">{subTitle}</div>}
-				<p>{description}</p>
+				{subTitle && (
+					<div className="sub-title">
+						Offers:
+						<ul style={{ marginTop: 10 }}>
+							{subTitle.map((offer) => (
+								<div style={{ marginBottom: 5 }}>
+									<li>{offer}</li>
+								</div>
+							))}
+						</ul>
+					</div>
+				)}
+				<p>{description[0]}</p>
+				{viewMore &&
+					description.map((val, index) => (
+						<p
+							style={{
+								padding: 0,
+								margin: 0,
+								marginTop: 15,
+								marginBottom: 15,
+								display: index === 0 ? "none" : "block",
+							}}
+						>
+							{val}
+						</p>
+					))}
+				<span
+					style={{
+						color: "#28b04b",
+						cursor: "pointer",
+						display: description.length === 1 ? "none" : "block",
+					}}
+					onClick={() => toggleViewMore(!viewMore)}
+				>
+					{viewMore ? "View Less-" : "View more+"}
+				</span>
 				<div
 					className="avial-now"
 					onClick={() => {
-						if (title === "NeoGrowth") {
-							var win = window.open(
-								"https://www.neogrowth.in/register-form/",
-								"_blank"
-							);
-							win.focus();
-						}
 						_availNow();
 					}}
 				>
@@ -118,6 +157,7 @@ const Services = (props) => {
 							image={data.image}
 							title={data.title}
 							tag={data.tag}
+							url={data.url}
 							description={data.description}
 							backgroundColor={data.backgroundColor}
 						/>

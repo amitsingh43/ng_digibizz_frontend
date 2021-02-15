@@ -83,13 +83,14 @@ function Home({
 	const _next = () => {
 		if (homepageCounter < 2) {
 			var NumberRegex = /^[0-9]*$/;
+			var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 			if (name.length === 0) {
 				add_error("Please enter your full name");
 				return;
 			} else if (mobile.length !== 10 || !NumberRegex.test(mobile)) {
 				add_error("Please enter a valid mobile number");
 				return;
-			} else if (email.length === 0) {
+			} else if (email.length === 0 || !emailRegex.test(email)) {
 				add_error("Please enter a valid email");
 				return;
 			}

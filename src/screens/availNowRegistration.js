@@ -11,22 +11,28 @@ import {
 import { connect } from "react-redux";
 
 const Logo = ({ state }) => {
-	const { description, image, subTitle, title } = state;
+	const { description, image, subTitle, title, backgroundColor } = state;
 	return (
 		<div className="logo-content">
 			<div className="align">
-				<img src={image} className="img-responsive" />
+				<div style={{ backgroundColor, borderRadius: 20 }}>
+					<img
+						style={{ backgroundColor, borderRadius: 20 }}
+						src={image}
+						className="img-responsive"
+					/>
+				</div>
 				<div className="mobile-card">
 					<div className="title">{title}</div>
 					<div className="subTitle">{subTitle}</div>
-					<div className="desc">{description}</div>
+					<div className="desc">{description[0]}</div>
 				</div>
 			</div>
 		</div>
 	);
 };
 
-const Button = ({ mrOrMs, save_basic_details, partner, gender }) => {
+const Button = ({ mrOrMs, save_basic_details, partner, gender, url }) => {
 	const _submit = () => {
 		const arr = [
 			{
@@ -66,6 +72,7 @@ const Button = ({ mrOrMs, save_basic_details, partner, gender }) => {
 				partner_availed: partner,
 			};
 			save_basic_details(body);
+			window.open(url, "_blank");
 		}
 	};
 	return (
@@ -75,7 +82,7 @@ const Button = ({ mrOrMs, save_basic_details, partner, gender }) => {
 	);
 };
 
-const Form = ({ gender, save_basic_details, partner }) => {
+const Form = ({ gender, save_basic_details, partner, url }) => {
 	const data1 = [
 		{ label: "Full Name", type: "text", id: "1" },
 		{ label: "Mobile number", type: "phone", id: "2" },
@@ -139,6 +146,7 @@ const Form = ({ gender, save_basic_details, partner }) => {
 			</div>
 			<Button
 				gender={gender}
+				url={url}
 				partner={partner}
 				mrOrMs={mrOrMs}
 				save_basic_details={save_basic_details}
@@ -176,6 +184,7 @@ const AvailNowRegistration = ({
 					<Form
 						gender={gender}
 						partner={location.state.data.title}
+						url={location.state.data.url}
 						save_basic_details={save_basic_details}
 					/>
 				</div>

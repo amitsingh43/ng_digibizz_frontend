@@ -1,7 +1,7 @@
 .home-container {
 	color: #68696a;
 	font-family: "Rubik", sans-serif;
-	min-height: 100vh;
+	min-height: 85vh;
 }
 
 .home-container a {
@@ -120,7 +120,7 @@ select {
 }
 
 .home-container .row3 {
-	margin-top: 170px;
+	margin-top: 0px;
 }
 
 .row3 a {
