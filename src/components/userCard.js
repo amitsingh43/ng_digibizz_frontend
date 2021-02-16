@@ -12,7 +12,7 @@ function UserCard(props) {
 					<div className="heading">{heading}</div>
 					<p className="content">{desc}</p>
 					<div style={{ width: "fit-content" }} className="read-more-outer">
-						<Link to={"/knowledgePortal/" + id}>
+						<Link to={"/knowledgeCenter/" + id}>
 							<div className="read-more">Read more</div>
 						</Link>
 					</div>

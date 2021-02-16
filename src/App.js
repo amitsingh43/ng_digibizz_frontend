@@ -68,12 +68,12 @@ function App({ errorMessage, clear_error }) {
 					/>
 					<Route
 						exact
-						path={"/knowledgePortal"}
+						path={"/knowledgeCenter"}
 						render={(props) => <UserGuide {...props} />}
 					/>
 					<Route
 						exact
-						path={"/knowledgePortal/:id"}
+						path={"/knowledgeCenter/:id"}
 						render={(props) => <UserGuideDetailed {...props} />}
 					/>
 					<Route

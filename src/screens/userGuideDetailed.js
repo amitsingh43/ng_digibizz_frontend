@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { connect } from "react-redux";
 import { header_user_guide } from "../store/actions";
 import Footer from "../components/main/footer";
+import go_back from "../assets/go_back.svg";
 import Disclaimer from "../components/main/disclaimer";
 import "../styles/successStoriesDetailed.css";
 import { KNOWLEDGE_CENTER } from "../store/strings";
@@ -11,25 +12,43 @@ const TopContent = ({ heading }) => {
 	const history = useHistory();
 	return (
 		<div className="top-content">
-			<div
-				style={{ cursor: "pointer" }}
-				onClick={() => history.push("/knowledgePortal")}
-			>
-				User Guide{"    >>   "}
-				<span>{heading}</span>
+			<div>
+				<div
+					style={{ cursor: "pointer", float: "left" }}
+					onClick={() => history.push("/knowledgeCenter")}
+				>
+					User Guide{"    >>   "}
+				</div>
+				<span style={{ clear: "both" }}>{heading}</span>
 			</div>
 		</div>
 	);
 };
 
 const Image = ({ image }) => {
+	const history = useHistory();
 	return (
-		<div className="img-responsive  user-guide-top-image">
+		<div
+			className="img-responsive  user-guide-top-image thumbnail"
+			style={{
+				backgroundImage: `url(${image})`,
+				position: "relative",
+				// backgroundSize: "contain",
+				backgroundRepeat: "no-repeat",
+			}}
+		>
 			<img
+				onClick={() => history.goBack()}
+				className="go_back"
+				src={go_back}
+				alt="go_back"
+				style={{ position: "absolute", left: 10, top: 10 }}
+			/>
+			{/* <img
 				className="img-responsive col-lg-10 col-xs-12 thumbnail"
 				src={image}
 				alt="thumbnail"
-			/>
+			/> */}
 		</div>
 	);
 };

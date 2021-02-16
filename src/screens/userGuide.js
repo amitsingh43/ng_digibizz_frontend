@@ -9,7 +9,7 @@ import "../styles/successStories.css";
 const Content = () => {
 	return (
 		<div>
-			<h1>Knowledge Portal</h1>
+			<h1>Knowledge Center</h1>
 			<div className="row">
 				<p className="col-lg-8">
 					Begin your business transformation journey now by browsing through our

@@ -8,6 +8,7 @@ import report3 from "../assets/report3.svg";
 import report4 from "../assets/report4.svg";
 import { downloadReport, emailReport } from "../store/actions";
 import { connect } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
 function MainReport({
 	userDetails,
 	percentage,
@@ -29,6 +30,7 @@ function MainReport({
 			setReportImg(report4);
 		}
 	}, [percentage]);
+	const history = useHistory();
 	return (
 		<div className="main-report">
 			<div className="namaste">Namaste!</div>
@@ -76,6 +78,23 @@ function MainReport({
 							<img src={email_icon} alt="download" />
 						</span>
 					</div>
+				</div>
+			</div>
+			<div className="start-again">
+				<div
+					className="btns-small btns u"
+					style={{ display: "block" }}
+					onClick={() => {
+						history.push("/");
+						localStorage.clear();
+						reset_answers();
+						reset_questions();
+						reset_user();
+						reset_results();
+						reset_recommendations();
+					}}
+				>
+					Start Again
 				</div>
 			</div>
 			<div className="happy">

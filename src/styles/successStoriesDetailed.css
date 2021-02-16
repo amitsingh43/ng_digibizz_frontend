@@ -27,11 +27,12 @@
 
 .user-guide-top-image {
 	/* margin: 0px 130px 0px 90px; */
-}
-
-.user-guide-top-image img {
 	width: auto;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+.user-guide-top-image .go_back {
+	display: none;
+	cursor: pointer;
 }
 
 .success-stories-detailed .detailed-card-1 {
@@ -266,6 +267,14 @@ hr {
 	}
 	.user-guide-top-image {
 		margin: 0px 0px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100vw;
+		height: 180px;
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0);
+	}
+	.user-guide-top-image .go_back {
+		display: block;
 	}
 	.success-stories-detailed .row {
 		padding: 10px;

@@ -75,9 +75,9 @@ function Header({
 						<li>
 							<Link
 								className={headerState === 2 ? "a active" : "a"}
-								to="/knowledgePortal"
+								to="/knowledgeCenter"
 							>
-								Knowledge Portal
+								Knowledge Center
 							</Link>
 						</li>
 						<li>
@@ -87,19 +87,6 @@ function Header({
 							>
 								Success Stories
 							</Link>
-						</li>
-						<li
-							style={{ cursor: "pointer" }}
-							onClick={() => {
-								localStorage.clear();
-								reset_answers();
-								reset_questions();
-								reset_user();
-								reset_results();
-								reset_recommendations();
-							}}
-						>
-							<Link to="/">Logout</Link>
 						</li>
 					</ul>
 				</div>

@@ -230,7 +230,7 @@ const UserGuide = () => {
 							className="col-md-2 card"
 							id="be-img"
 							key={image.heading}
-							onClick={() => history.push(`knowledgePortal/${image.id}`)}
+							onClick={() => history.push(`knowledgeCenter/${image.id}`)}
 						>
 							<div
 								className="bg-img"

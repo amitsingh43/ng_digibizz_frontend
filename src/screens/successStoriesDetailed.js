@@ -13,12 +13,14 @@ const TopContent = ({ story }) => {
 	const history = useHistory();
 	return (
 		<div className="top-content">
-			<div
-				style={{ cursor: "pointer" }}
-				onClick={() => history.push("/successStories")}
-			>
-				{"Success Stories    >>   "}
-				<span>{story.topContent}</span>
+			<div>
+				<div
+					style={{ cursor: "pointer", float: "left" }}
+					onClick={() => history.push("/successStories")}
+				>
+					{"Success Stories    >>   "}
+				</div>
+				<span style={{ clear: "both" }}>{story.topContent}</span>
 			</div>
 		</div>
 	);

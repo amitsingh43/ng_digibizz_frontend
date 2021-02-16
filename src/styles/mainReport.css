@@ -75,10 +75,45 @@ html {
 	font-family: "Rubik";
 	font-weight: lighter;
 }
+.main-report .start-again {
+	margin-top: 30px;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	padding: 0px;
+	/* margin: 0px; */
+}
+
+.main-report .start-again .u {
+	cursor: pointer;
+	padding: 0px;
+	margin: 0px;
+	background-color: #e75252;
+	color: white;
+	text-decoration: none;
+	font-size: 15px;
+	width: fit-content;
+	height: fit-content;
+	padding: 15px 40px;
+	border-radius: 25px;
+}
 
 @media (max-width: 48rem) {
 	.main-report .btns {
 		display: none;
+	}
+	.main-report .start-again {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		padding: 0px;
+		margin: 0px;
+	}
+	.main-report .start-again .u {
+		width: 75%;
+		padding: 15px 20px;
+		font-size: 20px;
+		margin-top: 20px;
 	}
 	.main-report .btns-small {
 		display: block;
