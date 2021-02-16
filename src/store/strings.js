@@ -2458,7 +2458,7 @@ export const SUCCESSDATA = [
 		name: "Mr. Chetan Shah & Ms. Nikita Shah",
 		heading: "NS Grocery Store, Mumbai",
 		image: sthree,
-		type: "image",
+		type: "video",
 		topContent: "Chetan Shah",
 		content:
 			"Moving business to a new location brings along new challenges. With support of diGibizz we are now well equipped digitally to provide faster and hassle-free services to our customers. ",

@@ -33,7 +33,7 @@ function MainReport({
 	const history = useHistory();
 	return (
 		<div className="main-report">
-			<div className="namaste">Namaste!</div>
+			<div className="namaste">Hello!</div>
 			<div className="name">
 				{gender} {full_name}
 			</div>
@@ -94,7 +94,7 @@ function MainReport({
 						reset_recommendations();
 					}}
 				>
-					Start Again
+					Exit
 				</div>
 			</div>
 			<div className="happy">

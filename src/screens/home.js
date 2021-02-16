@@ -12,6 +12,7 @@ import {
 } from "../store/actions";
 import "../styles/home.css";
 import Footer from "../components/main/footer";
+import TAndC from "../components/termsAndConditions";
 
 import {
 	TELL_ABOUT_YOU,
@@ -101,6 +102,10 @@ function Home({
 				add_error("Please specify your city.");
 				return;
 			}
+			if (!/^[A-Z0-9]+$/i.test(businessName)) {
+				add_error("Please enter a valid Business Name");
+				return;
+			}
 			var GENDER = gender[0]._id ? gender[0]._id : "";
 			const body = {
 				cities_master_id: city,
@@ -124,6 +129,7 @@ function Home({
 	return (
 		<div>
 			<div className="home-container">
+				{more && <TAndC showmore={showmore} />}
 				<div className="mandatory">
 					<span>* </span> All fields are mandatory
 				</div>
@@ -330,21 +336,9 @@ function Home({
 									</span>
 								</a>{" "}
 								{TERMS_AND_CONDITIONS_2}
-								{!more && (
-									<span className="more" onClick={() => showmore(!more)}>
-										More+
-									</span>
-								)}
-								{more && (
-									<p>
-										{TERMS_AND_CONDITIONS_DETAILED1}
-										<br />
-										{TERMS_AND_CONDITIONS_DETAILED2}
-										<span className="more" onClick={() => showmore(!more)}>
-											Less-
-										</span>
-									</p>
-								)}
+								<span className="more" onClick={() => showmore(!more)}>
+									{more ? "Less-" : "More+"}
+								</span>
 							</div>
 						</div>
 					</div>
