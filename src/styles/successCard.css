@@ -162,13 +162,10 @@
 		border: 0px;
 	}
 	.success-card h4 {
-		margin: 30px 0px 0px 30px;
+		margin: 0px 0px 0px 30px;
 	}
 	.success-card .industry {
 		margin: 0px 0px 0px 30px;
-	}
-	.success-card img {
-		/* width: 100%; */
 	}
 	.success-card .item {
 		margin-left: 0px;
@@ -176,5 +173,8 @@
 	}
 	.success-card .content p {
 		padding: 20px 20px 0px 20px;
+	}
+	.view-more {
+		margin: 0px 0px 0px 10px;
 	}
 }

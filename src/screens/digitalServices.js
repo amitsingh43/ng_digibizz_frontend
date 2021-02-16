@@ -102,6 +102,7 @@ const PartnerCard = (props) => {
 				)}
 				<p>{description[0]}</p>
 				{viewMore &&
+					false &&
 					description.map((val, index) => (
 						<p
 							style={{
@@ -120,6 +121,7 @@ const PartnerCard = (props) => {
 						color: "#28b04b",
 						cursor: "pointer",
 						display: description.length === 1 ? "none" : "block",
+						display: "none",
 					}}
 					onClick={() => toggleViewMore(!viewMore)}
 				>

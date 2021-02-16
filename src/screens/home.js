@@ -255,6 +255,7 @@ function Home({
 								<input
 									type="text"
 									id="referral"
+									autoComplete="off"
 									className="col-xs-12"
 									value={referralCode}
 									onChange={(e) => setReferralCode(e.target.value)}
