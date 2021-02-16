@@ -126,10 +126,12 @@ function Home({
 	const _back = () => {
 		homepage_decrement();
 	};
+	if (more) {
+		return <TAndC showmore={showmore} />;
+	}
 	return (
 		<div>
 			<div className="home-container">
-				{more && <TAndC showmore={showmore} />}
 				<div className="mandatory">
 					<span>* </span> All fields are mandatory
 				</div>
@@ -336,7 +338,13 @@ function Home({
 									</span>
 								</a>{" "}
 								{TERMS_AND_CONDITIONS_2}
-								<span className="more" onClick={() => showmore(!more)}>
+								<span
+									className="more"
+									onClick={() => {
+										showmore(!more);
+										window.scrollTo(0, 0);
+									}}
+								>
 									{more ? "Less-" : "More+"}
 								</span>
 							</div>
