@@ -127,7 +127,7 @@ function Home({
 		homepage_decrement();
 	};
 	if (more) {
-		return <TAndC showmore={showmore} />;
+		return <TAndC showmore={showmore} setCheck={setCheck} />;
 	}
 	return (
 		<div>

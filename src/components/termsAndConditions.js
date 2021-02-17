@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/tAndC.css";
 import Footer from "./main/footer";
-const TAndC = ({ showmore }) => {
+const TAndC = ({ showmore, setCheck }) => {
 	return (
 		<div style={{ width: "100vw", height: "100vh" }}>
 			<div
@@ -563,10 +563,18 @@ const TAndC = ({ showmore }) => {
 					</p>
 					<div
 						className="close"
-						onClick={() => showmore(false)}
-						style={{ float: "none", textAlign: "center" }}
+						onClick={() => {
+							showmore(false);
+							setCheck(true);
+						}}
+						style={{
+							float: "none",
+							textAlign: "center",
+							color: "#28b04b",
+							opacity: 1,
+						}}
 					>
-						Close
+						Accept
 					</div>
 				</div>
 				<div style={{ width: "10vw" }} onClick={() => showmore(false)}></div>

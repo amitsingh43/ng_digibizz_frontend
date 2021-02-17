@@ -18,6 +18,7 @@ import { Link, useHistory } from "react-router-dom";
 import { header_reset, homepage_decrement } from "../store/actions";
 import { connect } from "react-redux";
 import { KNOWLEDGE_CENTER } from "../store/strings";
+import welcome_youtube from "../assets/welcome/welcome_youtube.svg";
 
 const SideText = (props) => {
 	return (
@@ -34,6 +35,20 @@ const SideText = (props) => {
 			<Link to="/knowStatus" onClick={() => props.homepage_decrement()}>
 				<div className="btn">Check your Digital Score</div>
 			</Link>
+			<div className="watch-to-know-more">
+				<p
+					style={{
+						color: "#28B04B",
+						textDecoration: "underline",
+						paddingTop: 10,
+					}}
+				>
+					<span style={{ cursor: "pointer" }}>Watch to know more </span>
+					<span>
+						<img alt="play" src={welcome_youtube} />
+					</span>
+				</p>
+			</div>
 		</div>
 	);
 };
@@ -125,7 +140,7 @@ const TopContent = (props) => {
 const Question = (props) => {
 	const sectionIcons = [
 		{ image: digital_discovery, label: "Digital Discovery" },
-		{ image: digital_fulfillment, label: "Digital Fulfillment" },
+		{ image: digital_fulfillment, label: "Digital Fulfilment" },
 		{ image: digital_transactions, label: "Digital Transactions" },
 		{ image: digital_operations, label: "Digital Operations" },
 		{ image: digital_engagement, label: "Digital Engagement" },

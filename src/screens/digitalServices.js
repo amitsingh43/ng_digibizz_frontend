@@ -11,6 +11,11 @@ const TopContent = () => {
 	return (
 		<div className="col-md-12 top-content">
 			<h1>Explore Services</h1>
+			<p style={{ wordSpacing: "normal" }}>
+				Reimagine and transform your business with a full range of services
+				offered by our digital partners, crafted exclusively for you with
+				special offers and discounts.
+			</p>
 		</div>
 	);
 };
@@ -77,7 +82,10 @@ const PartnerCard = (props) => {
 	};
 	const [viewMore, toggleViewMore] = useState(false);
 	return (
-		<div className=" col-md-5  partner-card ">
+		<div
+			className=" col-md-5  partner-card "
+			style={{ backgroundColor: "#E9F7ED" }}
+		>
 			<div className=" col-md-4" style={{ backgroundColor: backgroundColor }}>
 				<img
 					style={{ borderRadius: 10 }}
