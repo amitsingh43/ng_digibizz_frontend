@@ -445,7 +445,7 @@ export const show_toast = (message, type = "ERROR") => {
 		case "ERROR":
 			toast.error(message, {
 				position: "bottom-left",
-				autoClose: 3000,
+				autoClose: 7000,
 				hideProgressBar: false,
 				closeOnClick: true,
 				pauseOnHover: true,

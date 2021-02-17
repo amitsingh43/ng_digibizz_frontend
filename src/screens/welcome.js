@@ -293,7 +293,7 @@ function Welcome({ header_reset, homepage_decrement, userDetails }) {
 		header_reset();
 	}, []);
 	return (
-		<div>
+		<div style={{ fontFamily: "Rubik" }}>
 			<div className="welcome">
 				<TopContent homepage_decrement={homepage_decrement} />
 			</div>

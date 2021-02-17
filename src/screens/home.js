@@ -102,7 +102,7 @@ function Home({
 				add_error("Please specify your city.");
 				return;
 			}
-			if (!/^[A-Z0-9]+$/i.test(businessName)) {
+			if (!/^[A-Za-z]+$/i.test(businessName)) {
 				add_error("Please enter a valid Business Name");
 				return;
 			}

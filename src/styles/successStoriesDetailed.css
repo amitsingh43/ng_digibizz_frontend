@@ -164,12 +164,12 @@ hr {
 .success-stories-detailed .main-content .heading {
 	color: #28b04b;
 	font-weight: bolder;
-	font-size: 30px;
+	font-size: 24px;
 	margin-bottom: 30px;
 }
 
 .success-stories-detailed .main-content .p {
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 100;
 	color: black;
 	line-height: 32px;
@@ -191,7 +191,7 @@ hr {
 }
 .img-content p,
 .right-img-content p {
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 100;
 	color: black;
 	padding: 0px 20px;
@@ -214,9 +214,6 @@ hr {
 	.success-stories-detailed .top-content {
 		text-align: center;
 		font-size: 28px;
-	}
-	.success-stories-detailed .main-content .heading {
-		font-size: 25px;
 	}
 	.success-stories-detailed .main-content .p,
 	.img-content p,
@@ -262,7 +259,6 @@ hr {
 		padding: 0px;
 	}
 	.success-stories-detailed .main-content .heading {
-		font-size: 20px;
 		font-weight: bolder;
 	}
 	.user-guide-top-image {
@@ -329,16 +325,13 @@ hr {
 	.right-img-content img {
 		width: 100%;
 	}
-	.success-stories-detailed .main-content .heading {
-		font-size: 21px;
-	}
 	.only-content .section-heading {
 		font-size: 17px;
 	}
 	.success-stories-detailed .main-content .p,
 	.img-content p,
 	.right-img-content p {
-		font-size: 15px;
+		font-size: 16px;
 	}
 	.img-content p,
 	.right-img-content p {
