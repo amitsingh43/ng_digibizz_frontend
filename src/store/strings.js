@@ -14,6 +14,8 @@ import sthree from "../assets/success_stories/three.svg";
 import near_store from "../assets/partners/near_store.svg";
 import magic_pin from "../assets/partners/magic_pin.svg";
 import mobicommerce from "../assets/partners/mobicommerce.svg";
+import apna_co from "../assets/partners/apna_co.png";
+import brandpulse from "../assets/partners/brandpulse.jpg";
 import snapbizz from "../assets/partners/snapbizz.svg";
 import flobiz from "../assets/partners/flobiz.svg";
 import accunity from "../assets/partners/accunity.svg";
@@ -2860,7 +2862,7 @@ export const PARTNERS = [
 					"Creating opportunities for Bharat.",
 					"At apna - we are building what we call the LinkedIn for Bharat - a professional social network optimized for India's frontline - and offering them opportunities in terms of jobs, gigs, skills, and advice on starting a business.",
 				],
-				image: razorpay,
+				image: apna_co,
 				backgroundColor: "#fff",
 				url: "https://l.apna.co/e/digibizz",
 			},
@@ -2910,7 +2912,7 @@ export const PARTNERS = [
 					"Earn Revenue through Digital Display Advertising in your Business Premises.",
 					"We offer you Digital Display solution which will help you earn money from advertisement displayed in your business premises. Our free to use content management system for display advertisement will digitally transform your business and also add revenue to it.",
 				],
-				image: smartech,
+				image: brandpulse,
 				backgroundColor: "#fff",
 				url: "https://www.brandppulse.com",
 			},
