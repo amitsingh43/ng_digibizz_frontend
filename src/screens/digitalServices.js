@@ -86,7 +86,10 @@ const PartnerCard = (props) => {
 			className=" col-md-5  partner-card "
 			style={{ backgroundColor: "#E9F7ED" }}
 		>
-			<div className=" col-md-4" style={{ backgroundColor: backgroundColor }}>
+			<div
+				className=" col-md-4"
+				style={{ backgroundColor: backgroundColor, width: 200 }}
+			>
 				<img
 					style={{ borderRadius: 10 }}
 					className="img-responsive"

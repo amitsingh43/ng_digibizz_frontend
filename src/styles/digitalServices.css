@@ -187,12 +187,15 @@ h2 {
 		margin-left: 30px;
 	}
 	.services-main .partner-card .col-md-4 {
-		/* width: 100%; */
-	}
-	.services-main .partner-card .col-md-4 .img-responsive {
-		width: auto;
+		width: 200px;
 	}
 	.services-main .partner-card .avial-now {
 		margin-bottom: 20px;
+	}
+	.services-main .partner-card .img-responsive {
+		max-width: 180px;
+	}
+	.services-main .partner-card .col-md-4 .img-responsive {
+		width: auto;
 	}
 }
