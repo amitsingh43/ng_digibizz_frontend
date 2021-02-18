@@ -63,6 +63,12 @@
 	font-weight: bold;
 }
 
+.user-guide p {
+	font-size: 24px;
+	color: rgba(104, 105, 106, 1);
+	margin-bottom: 30px;
+}
+
 .success-stories1 .heading {
 	margin-left: 37%;
 }
@@ -244,7 +250,6 @@
 .user-guide .row2 .buttons {
 	display: flex;
 	flex-direction: column;
-	height: 400px;
 	justify-content: center;
 	align-items: center;
 }
@@ -375,6 +380,10 @@
 }
 
 @media (max-width: 48rem) {
+	.user-guide p {
+		font-size: 18px;
+		margin-bottom: 0px;
+	}
 	.welcome .side-text .watch-to-know-more {
 		width: 100%;
 	}

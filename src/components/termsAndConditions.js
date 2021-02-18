@@ -574,7 +574,7 @@ const TAndC = ({ showmore, setCheck }) => {
 							opacity: 1,
 						}}
 					>
-						Accept
+						I Agree
 					</div>
 				</div>
 				<div style={{ width: "10vw" }} onClick={() => showmore(false)}></div>
