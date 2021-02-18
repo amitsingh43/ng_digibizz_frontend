@@ -18,11 +18,11 @@ export const services = [
 		label: "Sell Online",
 		tag: "sell_online",
 	},
-	{
-		image: delivery_services,
-		label: "Delivery Services",
-		tag: "delivery_services",
-	},
+	// {
+	// 	image: delivery_services,
+	// 	label: "Delivery Services",
+	// 	tag: "delivery_services",
+	// },
 	{
 		image: business_loans,
 		label: "Business Loans",
@@ -43,11 +43,11 @@ export const services = [
 		label: "Billing & Accounting",
 		tag: "billing_and_accounting",
 	},
-	{
-		image: digital_khata,
-		label: "Digital Khata",
-		tag: "digital_khata",
-	},
+	// {
+	// 	image: digital_khata,
+	// 	label: "Digital Khata",
+	// 	tag: "digital_khata",
+	// },
 	{
 		image: tax_fling_and_legal,
 		label: "Tax Filing & Legal",
@@ -58,11 +58,11 @@ export const services = [
 		label: "Social Media Marketing",
 		tag: "social_media_marketing",
 	},
-	{
-		image: manage_payments,
-		label: "Manage Payments",
-		tag: "manage_payments",
-	},
+	// {
+	// 	image: manage_payments,
+	// 	label: "Manage Payments",
+	// 	tag: "manage_payments",
+	// },
 	{
 		image: manage_staff,
 		label: "Manage Staff",
