@@ -22,12 +22,12 @@ import accunity from "../assets/partners/accunity.svg";
 import smartech from "../assets/partners/smartech.svg";
 import pinnacle from "../assets/partners/pinnacle.svg";
 import syrow from "../assets/partners/syrow.svg";
-import digit from "../assets/partners/digit.svg";
+import digit from "../assets/partners/digit.jpg";
 import care from "../assets/partners/care.svg";
 import razorpay from "../assets/partners/razorpay.svg";
 import vyapar from "../assets/partners/vyapar.svg";
 import ok_credit from "../assets/partners/ok_credit.svg";
-import neogrowth from "../assets/partners/neogrowth.svg";
+import neogrowth from "../assets/partners/neogrowth.jpg";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -2664,7 +2664,7 @@ export const PARTNERS = [
 					"Grow your business with quick & hassle-free business loans from NeoGrowth. Quick Disbursal, Door-Step service, Minimum Documentation, Dedicated Customer Support are some of our key features.",
 				],
 				image: neogrowth,
-				backgroundColor: "#000",
+				backgroundColor: "#fff",
 				url: "https://www.neogrowth.in/register-form/",
 			},
 		],
@@ -2915,7 +2915,7 @@ export const PARTNERS = [
 					"Secure yourself with GoDigit’s comprehensive insurance solutions",
 				],
 				image: digit,
-				backgroundColor: "#000000",
+				backgroundColor: "#fff",
 				url: "https://www.godigit.com/",
 			},
 			{

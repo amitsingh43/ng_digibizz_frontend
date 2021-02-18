@@ -111,11 +111,12 @@
 }
 
 .welcome .side-text .watch-to-know-more {
+	font-size: 18px;
 	width: fit-content;
 }
 
 .welcome .side-text .watch-to-know-more img {
-	height: 25px;
+	height: 18px;
 	margin-left: 10px;
 }
 .welcome h1 {
@@ -397,8 +398,11 @@
 		margin-bottom: 0px;
 		padding: 0px;
 	}
+	.welcome .side-text .watch-to-know-more span {
+		font-size: 14px;
+	}
 	.welcome .side-text .watch-to-know-more img {
-		height: 16px;
+		height: 14px;
 		width: auto;
 	}
 	.user-guide p {

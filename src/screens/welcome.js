@@ -29,7 +29,8 @@ const SideText = (props) => {
 				Empowering Lives.
 			</h1>
 			<p>
-				Now upgrade your business with the help of our customised solutions.{"	"}
+				Now upgrade your business with the help of our <br />
+				customised solutions.{"	"}
 				<span
 					className="watch-to-know-more"
 					style={{
