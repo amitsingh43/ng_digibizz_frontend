@@ -35,7 +35,7 @@ export const services = [
 	},
 	{
 		image: create_website_and_app,
-		label: "Create Website or mobile app",
+		label: "Create Website or Mobile App",
 		tag: "create_website_and_app",
 	},
 	{
@@ -70,7 +70,7 @@ export const services = [
 	},
 	{
 		image: customer_loyalty_and_promotions,
-		label: "Customer Loyalty & promotions",
+		label: "Customer Loyalty & Promotions",
 		tag: "customer_loyalty_and_promotions",
 	},
 	{
