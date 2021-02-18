@@ -263,6 +263,8 @@ function Home({
 								<input
 									type="text"
 									id="referral"
+									readOnly
+									onFocus={(e) => e.target.removeAttribute("readonly")}
 									autoComplete="off"
 									className="col-xs-12"
 									value={referralCode}
