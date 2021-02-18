@@ -15,6 +15,7 @@ import near_store from "../assets/partners/near_store.svg";
 import magic_pin from "../assets/partners/magic_pin.svg";
 import mobicommerce from "../assets/partners/mobicommerce.svg";
 import apna_co from "../assets/partners/apna_co.png";
+import vakilsearch from "../assets/partners/vakilsearch.png";
 import brandpulse from "../assets/partners/brandpulse.jpg";
 import snapbizz from "../assets/partners/snapbizz.svg";
 import flobiz from "../assets/partners/flobiz.svg";
@@ -2583,350 +2584,270 @@ export const SUCCESSDATA = [
 		],
 	},
 ];
+
+const NEAR_STORE = {
+	title: "Near.Store",
+	subTitle: [
+		"Near.Store Lite / Dhandabook App for Free & Store Digitalization Dongle - INR 2400 + GST",
+	],
+	description: [
+		"Create your online store in minutes with our plug and play device .",
+		"Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
+	],
+	image: near_store,
+	backgroundColor: "#fff",
+	url: "https://www.ekasta.com",
+};
+const ACCUNITY_SERVICES = {
+	title: "Accunity Services",
+	subTitle: ["10% off on all our services."],
+	description: [
+		"Billing & Accounting Software Services for Small Businesses.",
+		"Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
+	],
+	image: accunity,
+	backgroundColor: "#fff",
+	url: "http://accunityservices.com/msme.html",
+};
+const MOBICOMMERCE = {
+	title: "MobiCommerce",
+	subTitle: [
+		"10% discount on quotation for Mobicommerce - License (One time cost products) & SAAS Model (Subscription Plans)",
+	],
+	description: [
+		"Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two",
+		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
+		"•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
+		"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
+		"•	Generate profits from the eCommerce website according to business and revenue models",
+		"•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
+	],
+	image: mobicommerce,
+	backgroundColor: "#fff",
+	url: "https://www.mobicommerce.net/contact-us/",
+};
+const MAGICPIN = {
+	title: "Magicpin",
+	subTitle: ["Upto XX% off on Magic Pin services"],
+	description: [
+		"Platform where users and merchants in a locality discover, interact, and transact.",
+	],
+	image: magic_pin,
+	backgroundColor: "#fff",
+	url: "",
+};
+const NEOGROWTH = {
+	title: "NeoGrowth",
+	subTitle: ["Collateral-free business Loans up to 75 lakhs"],
+	description: [
+		"Fund your dreams with NeoGrowth’s flexible business loans!",
+		"Grow your business with quick & hassle-free business loans from NeoGrowth. Quick Disbursal, Door-Step service, Minimum Documentation, Dedicated Customer Support are some of our key features.",
+	],
+	image: neogrowth,
+	backgroundColor: "#fff",
+	url: "https://www.neogrowth.in",
+};
+const FLOBIZ = {
+	title: "Flobiz",
+	subTitle: ["Upto XX% off on Flobiz solutions."],
+	description: [
+		"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
+	],
+	image: flobiz,
+	backgroundColor: "#fff",
+	url: "",
+};
+const SNAPBIZZ = {
+	title: "Snapbizz",
+	subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
+	description: [
+		"Make your store a smart store",
+		"SnapBizz Store Solutions enables you to take your store online, attract new customers, sell more to your current customers and manage store operations with ease.",
+	],
+	image: snapbizz,
+	backgroundColor: "#fff",
+	url: "https://snapbizz.com/retailers-ng/",
+};
+const OK_CREDIT = {
+	title: "OkCredit",
+	subTitle: ["Upto XX% off on OkCredit services."],
+	description: [
+		"Free digital Udhar-Khata app for businesses & shop owners and manage your in your preferred language.",
+	],
+	image: ok_credit,
+	backgroundColor: "#fff",
+	url: "",
+};
+const VYAPAR = {
+	title: "Vyapar",
+	subTitle: ["Upto XX% off on Vyapar services."],
+	description: ["GST Billing Software for small businesses."],
+	image: vyapar,
+	backgroundColor: "#fff",
+	url: "",
+};
+const PINNACLE = {
+	title: "Pinnacle Management & Utility Services",
+	subTitle: [
+		"Upto 25% discount on Social Media Marketing, Creative Designing, Business Setup & Promotional Services",
+	],
+	description: [
+		"Taking brands from Local to Global.",
+		"We believe in transforming your business with Creativity & Diversity. Our services include creation of Business Display Material, Offline & Online Business promotions, Procurement of Business Set-up IT Systems & others.",
+	],
+	image: pinnacle,
+	backgroundColor: "#fff",
+	url: "http://www.pinnaclemanagement.in/",
+};
+const RAZORPAY = {
+	title: "Razorpay",
+	subTitle: ["Upto XX% off on Razorpay services."],
+	description: [
+		"All in One- Payment gateway that supports netbanking, credit, debit Cards, UPI etc.",
+	],
+	image: razorpay,
+	backgroundColor: "#fff",
+	url: "",
+};
+const APNA_CO = {
+	title: "Apna.co",
+	subTitle: ["Hire from Apna for FREE"],
+	description: [
+		"Creating opportunities for Bharat.",
+		"At apna - we are building what we call the LinkedIn for Bharat - a professional social network optimized for India's frontline - and offering them opportunities in terms of jobs, gigs, skills, and advice on starting a business.",
+	],
+	image: apna_co,
+	backgroundColor: "#fff",
+	url: "https://l.apna.co/e/digibizz",
+};
+const SYROW = {
+	title: "Syrow",
+	subTitle: ["Upto 15% sign-up discount on Customer Support Services"],
+	description: [
+		"24/7 Phone, Email & Chat Support.",
+		"Now you can provide world class multilingual Customer Service from day one, and elevate Customer Experience through Syrow's AI + Human based Omnichannel Customer Support as a Service (CSaaS) platform. Domain experts from Syrow will help you in handling Calls, Emails, Tickets, Chats, WhatsApp etc round-the-clock, and you can monitor everything at your fingertips. Avail Syrow services on a shared platform at a very affordable price with zero CapEx, and low OpEx.",
+	],
+	image: syrow,
+	backgroundColor: "#fff",
+	url: "https://www.syrow.com/partner/NeoGrowth/mvs/",
+};
+const SMARTECH = {
+	title: "Smartech Electronic Systems",
+	subTitle: ["Upto 15% discount on LED Display Screens for store promotion"],
+	description: [
+		"Your simple, easy to use and effective digital tool for attracting customer's attention and promoting products and services in your store",
+	],
+	image: smartech,
+	backgroundColor: "#fff",
+	url: "http://www.smartechelectronics.com/",
+};
+const GO_DIGIT = {
+	title: "GoDigit",
+	subTitle: ["Make Insurance Simple"],
+	description: [
+		"Digit Makes Insurance Simple for People & Businesses. We are one of the leading General Insurance companies in India who believe in protecting what you love.  ",
+	],
+	image: digit,
+	backgroundColor: "#fff",
+	url: "https://www.godigit.com/",
+};
+const CARE = {
+	title: "Care",
+	subTitle: ["Get health cover for you & your family at an affordable price"],
+	description: ["Secure your family's health with Care Health Insurance"],
+	image: care,
+	backgroundColor: "#fff",
+	url: "https://www.religareonline.com/",
+};
+const VAKIL_SEARCH = {
+	title: "VakilSearch",
+	subTitle: ["Exclusive Pricing for diGibizz Customers"],
+	description: [
+		"Vakilsearch is a technology powered platform for all legal, compliance and accounting needs.",
+		"a. Vakilsearch is a technology powered platform for all legal, compliance and accounting needs. We are India's largest platform, with a dominant market share of 10% in setting up new businesses and 4% in trademark applications. More than 5 lakh clients rely on us for their compliance management, accounting and legal needs",
+		"b.Simple dashboards powered by cutting-edge technology  provide real-time status updates. High levels of automation allows us to keep our prices low up to 75% more affordable than other professionals. 400+ member team with experts across domains  including Lawyers, Chartered Accountants and Company  Secretaries makes us a one-stop solution.",
+	],
+	image: vakilsearch,
+	backgroundColor: "#fff",
+	url: "https://vakilsearch-vs.typeform.com/to/Em9Ir6ag",
+};
+const BRANDPULSE = {
+	title: "Brandppulse Marketing Services Pvt Ltd",
+	subTitle: [
+		"Free Advertisement Display System for existing TVs in Store & Special discounts for buying new Screens (TV)",
+	],
+	description: [
+		"Earn Revenue through Digital Display Advertising in your Business Premises.",
+		"We offer you Digital Display solution which will help you earn money from advertisement displayed in your business premises. Our free to use content management system for display advertisement will digitally transform your business and also add revenue to it.",
+	],
+	image: brandpulse,
+	backgroundColor: "#fff",
+	url: "https://www.brandppulse.com",
+};
 export const PARTNERS = [
 	{
 		category: "Sell Online",
-		data: [
-			{
-				title: "MobiCommerce",
-				subTitle: ["Refer and get 10% discount on quotation."],
-				description: [
-					"MobiCommerce provides e-commerce development services and solutions for all",
-					"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
-					"•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
-					"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
-					"•	Generate profits from the eCommerce website according to business and revenue models",
-					"•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
-				],
-				image: mobicommerce,
-				backgroundColor: "#fff",
-				url: "https://www.mobicommerce.net/contact-us/",
-			},
-			{
-				title: "Near.Store",
-				subTitle: ["33% Discount on the Near.Store Dongle"],
-				description: [
-					"Go digital in minutes with an easy plug and play integration with your POS.",
-					"Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
-				],
-				image: near_store,
-				backgroundColor: "#fff",
-				url: "https://www.ekasta.com",
-			},
-			// {
-			// 	title: "Accunity Services",
-			// 	subTitle: ["10% off on all our services."],
-			// 	description: [
-			// 		"Empower yourself with robust web, software & SEO solutions",
-			// 	],
-			// 	image: accunity,
-			// 	backgroundColor: "#fff",
-			// 	url: "http://accunityservices.com/msme.html",
-			// },
-			{
-				title: "Magicpin",
-				subTitle: ["Upto XX% off on Magic Pin services"],
-				description: [
-					"Platform where users and merchants in a locality discover, interact, and transact.",
-				],
-				image: magic_pin,
-				backgroundColor: "#fff",
-				url: "",
-			},
-		],
+		data: [MOBICOMMERCE, NEAR_STORE, ACCUNITY_SERVICES, SNAPBIZZ],
 		tag: "sell_online",
 	},
-	{
-		category: "Delivery Services",
-		data: [
-			{
-				title: "Near.Store",
-				subTitle: ["33% Discount on the Near.Store Dongle"],
-				description: [
-					"Go digital in minutes with an easy plug and play integration with your POS.",
-					"Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
-				],
-				image: near_store,
-				backgroundColor: "#fff",
-				url: "https://www.ekasta.com",
-			},
-		],
-		tag: "delivery_services",
-	},
+	// {
+	// 	category: "Delivery Services",
+	// 	data: [NEAR_STORE],
+	// 	tag: "delivery_services",
+	// },
 	{
 		category: "Business Loans",
-		data: [
-			{
-				title: "NeoGrowth",
-				subTitle: ["Collateral-free business Loans up to 75 lakhs"],
-				description: [
-					"Fund your dreams with NeoGrowth’s flexible business loans",
-					"Grow your business with quick & hassle-free business loans from NeoGrowth. Quick Disbursal, Door-Step service, Minimum Documentation, Dedicated Customer Support are some of our key features.",
-				],
-				image: neogrowth,
-				backgroundColor: "#fff",
-				url: "https://www.neogrowth.in/register-form/",
-			},
-		],
+		data: [NEOGROWTH],
 		tag: "business_loans",
 	},
 	{
 		category: "Inventory Management",
-		data: [
-			{
-				title: "Snapbizz",
-				subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
-				description: [
-					"Make your store a smart store",
-					"SnapBizz Store Solutions enables you to take your store online, attract new customers, sell more to your current customers and manage store operations with ease.",
-				],
-				image: snapbizz,
-				backgroundColor: "#fff",
-				url: "https://snapbizz.com/retailers-ng/",
-			},
-			{
-				title: "Flobiz",
-				subTitle: ["Upto XX% off on Flobiz solutions."],
-				description: [
-					"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
-				],
-				image: flobiz,
-				backgroundColor: "#fff",
-				url: "",
-			},
-			{
-				title: "Accunity Services",
-				subTitle: ["10% off on all our services."],
-				description: [
-					"Empower yourself with robust web, software & SEO solutions",
-				],
-				image: accunity,
-				backgroundColor: "#fff",
-				url: "http://accunityservices.com/msme.html",
-			},
-		],
+		data: [SNAPBIZZ],
 		tag: "inventory_management",
 	},
 	{
 		category: "Create Website or Mobile App",
-		data: [
-			{
-				title: "Accunity Services",
-				subTitle: ["10% off on all our services."],
-				description: [
-					"Empower yourself with robust web, software & SEO solutions",
-				],
-				image: accunity,
-				backgroundColor: "#fff",
-				url: "http://accunityservices.com/msme.html",
-			},
-			{
-				title: "MobiCommerce",
-				subTitle: ["Refer and get 10% discount on quotation."],
-				description: [
-					"MobiCommerce provides e-commerce development services and solutions for all",
-					"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
-					"•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
-					"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
-					"•	Generate profits from the eCommerce website according to business and revenue models",
-					"•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
-				],
-				image: mobicommerce,
-				backgroundColor: "#fff",
-				url: "https://www.mobicommerce.net/contact-us/",
-			},
-		],
+		data: [MOBICOMMERCE, ACCUNITY_SERVICES, PINNACLE],
 		tag: "create_website_and_app",
 	},
 	{
 		category: "Billing & Accounting",
-		data: [
-			{
-				title: "Accunity Services",
-				subTitle: ["10% off on all our services."],
-				description: [
-					"Empower yourself with robust web, software & SEO solutions",
-				],
-				image: accunity,
-				backgroundColor: "#fff",
-				url: "http://accunityservices.com/msme.html",
-			},
-			{
-				title: "Snapbizz",
-				subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
-				description: [
-					"Make your store a smart store",
-					"SnapBizz Store Solutions enables you to take your store online, attract new customers, sell more to your current customers and manage store operations with ease.",
-				],
-				image: snapbizz,
-				backgroundColor: "#fff",
-				url: "https://snapbizz.com/retailers-ng/",
-			},
-		],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES],
 		tag: "billing_and_accounting",
 	},
-	{
-		category: "Digital Khata",
-		data: [
-			{
-				title: "OkCredit",
-				subTitle: ["Upto XX% off on OkCredit services."],
-				description: [
-					"Free digital Udhar-Khata app for businesses & shop owners and manage your in your preferred language.",
-				],
-				image: ok_credit,
-				backgroundColor: "#fff",
-				url: "",
-			},
-		],
-		tag: "digital_khata",
-	},
+	// {
+	// 	category: "Digital Khata",
+	// 	data: [OK_CREDIT],
+	// 	tag: "digital_khata",
+	// },
 	{
 		category: "Tax Filing & Legal",
-		data: [
-			{
-				title: "Vyapar",
-				subTitle: ["Upto XX% off on Vyapar services."],
-				description: ["GST Billing Software for small businesses."],
-				image: vyapar,
-				backgroundColor: "#fff",
-				url: "",
-			},
-		],
+		data: [VAKIL_SEARCH],
 		tag: "tax_fling_and_legal",
 	},
 	{
 		category: "Social Media & Digital Marketing",
-		data: [
-			{
-				title: "Pinnacle Management & Utility Services",
-				subTitle: ["Upto XX% off on Pinnacle Services."],
-				description: [
-					"Pinnacle Management offers innovative and specialized marketing &communication solutions.",
-					"We believe in transforming your business with Creativity & Diversity. Our services include creation of Business Display Material, Offline & Online Business promotions, Procurement of Business Set-up IT Systems & others.",
-				],
-				image: pinnacle,
-				backgroundColor: "#fff",
-				url: "http://www.pinnaclemanagement.in/",
-			},
-			{
-				title: "Accunity Services",
-				subTitle: ["10% off on all our services."],
-				description: [
-					"Empower yourself with robust web, software & SEO solutions",
-				],
-				image: accunity,
-				backgroundColor: "#fff",
-				url: "http://accunityservices.com/msme.html",
-			},
-		],
+		data: [ACCUNITY_SERVICES, PINNACLE],
 		tag: "social_media_marketing",
 	},
-	{
-		category: "Manage Payments",
-		data: [
-			{
-				title: "Razorpay",
-				subTitle: ["Upto XX% off on Razorpay services."],
-				description: [
-					"All in One- Payment gateway that supports netbanking, credit, debit Cards, UPI etc.",
-				],
-				image: razorpay,
-				backgroundColor: "#fff",
-				url: "",
-			},
-		],
-		tag: "manage_payments",
-	},
+	// {
+	// 	category: "Manage Payments",
+	// 	data: [RAZORPAY],
+	// 	tag: "manage_payments",
+	// },
 	{
 		category: "Manage Staff",
-		data: [
-			{
-				title: "Apna.co",
-				subTitle: ["Hire from Apna for FREE"],
-				description: [
-					"Creating opportunities for Bharat.",
-					"At apna - we are building what we call the LinkedIn for Bharat - a professional social network optimized for India's frontline - and offering them opportunities in terms of jobs, gigs, skills, and advice on starting a business.",
-				],
-				image: apna_co,
-				backgroundColor: "#fff",
-				url: "https://l.apna.co/e/digibizz",
-			},
-		],
+		data: [APNA_CO],
 		tag: "manage_staff",
 	},
 	{
 		category: "Customer Loyalty & Promotions",
-		data: [
-			{
-				title: "Syrow",
-				subTitle: ["Upto 15% sign-up discount on Customer Support Services"],
-				description: [
-					"24/7 Phone, Email & Chat Support.",
-					"Now you can provide world class multilingual Customer Service from day one, and elevate Customer Experience through Syrow's AI + Human based Omnichannel Customer Support as a Service (CSaaS) platform. Domain experts from Syrow will help you in handling Calls, Emails, Tickets, Chats, WhatsApp etc round-the-clock, and you can monitor everything at your fingertips. Avail Syrow services on a shared platform at a very affordable price with zero CapEx, and low OpEx.",
-				],
-				image: syrow,
-				backgroundColor: "#fff",
-				url: "https://www.syrow.com/partner/NeoGrowth/mvs/",
-			},
-			{
-				title: "Magicpin",
-				subTitle: ["Upto XX% off on Magic Pin services."],
-				description: [
-					"Platform where users and merchants in a locality discover, interact, and transact.",
-				],
-				image: magic_pin,
-				backgroundColor: "#fff",
-				url: "",
-			},
-			{
-				title: "Smartech Electronic Systems",
-				subTitle: ["10% off on orders placed."],
-				description: [
-					"Now flash your promotions & offers on LED digital displays",
-				],
-				image: smartech,
-				backgroundColor: "#fff",
-				url: "http://www.smartechelectronics.com/",
-			},
-			// {
-			// 	title: "Brandppulse Marketing Services Pvt Ltd",
-			// 	subTitle: [
-			// 		"Free Advertisement Display System for existing TVs in Store & Special discounts for buying new Screens (TV)",
-			// 	],
-			// 	description: [
-			// 		"Earn Revenue through Digital Display Advertising in your Business Premises.",
-			// 		"We offer you Digital Display solution which will help you earn money from advertisement displayed in your business premises. Our free to use content management system for display advertisement will digitally transform your business and also add revenue to it.",
-			// 	],
-			// 	image: brandpulse,
-			// 	backgroundColor: "#fff",
-			// 	url: "https://www.brandppulse.com",
-			// },
-		],
+		data: [SYROW, BRANDPULSE, SMARTECH, ACCUNITY_SERVICES],
 		tag: "customer_loyalty_and_promotions",
 	},
 	{
 		category: "Insurance",
-		data: [
-			{
-				title: "GoDigit",
-				subTitle: ["Upto XX% off on GoDigit."],
-				description: [
-					"Secure yourself with GoDigit’s comprehensive insurance solutions",
-				],
-				image: digit,
-				backgroundColor: "#fff",
-				url: "https://www.godigit.com/",
-			},
-			{
-				title: "Care",
-				subTitle: ["Upto XX% off on care health insurances."],
-				description: ["Complete healthcare plans for you & your family."],
-				image: care,
-				backgroundColor: "#fff",
-				url: "https://www.religareonline.com/",
-			},
-		],
+		data: [CARE, GO_DIGIT],
 		tag: "insurance",
 	},
 ];

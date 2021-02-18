@@ -24,7 +24,7 @@ const RecCard = ({ recommendations }) => {
 				results.map((recommendation, index) => (
 					<div className="col-lg-2 col-xs-6 card" key={index}>
 						<Percetage image_url={recommendation.image_url} />
-						{recommendation.name}
+						<div style={{ height: "fit-content" }}>{recommendation.name}</div>
 						<p
 							style={{ wordSpacing: 0, fontSize: 17 }}
 							onClick={() =>
@@ -34,7 +34,9 @@ const RecCard = ({ recommendations }) => {
 								})
 							}
 						>
+							<br />
 							Know more
+							<br />
 						</p>
 					</div>
 				))}

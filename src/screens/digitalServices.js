@@ -31,7 +31,9 @@ const ServicesCategory = () => {
 					<div
 						key={index}
 						className="cat"
-						onClick={() => (window.location.hash = `#${service.tag}`)}
+						onClick={() => {
+							window.location.hash = `#${service.tag}`;
+						}}
 					>
 						<img src={service.image} />
 						<div className="labell">{service.label}</div>
@@ -86,10 +88,7 @@ const PartnerCard = (props) => {
 			className=" col-md-5  partner-card "
 			style={{ backgroundColor: "#E9F7ED" }}
 		>
-			<div
-				className=" col-md-4"
-				style={{ backgroundColor: backgroundColor, width: 220 }}
-			>
+			<div className=" col-md-4" style={{ backgroundColor: backgroundColor }}>
 				<img
 					style={{ borderRadius: 10 }}
 					className="img-responsive"
@@ -101,16 +100,18 @@ const PartnerCard = (props) => {
 				<h3>{title}</h3>
 				{subTitle && (
 					<div className="sub-title">
-						{subTitle.map((offer) => (
-							<div style={{ marginBottom: 5 }}>{offer}</div>
+						{subTitle.map((offer, index) => (
+							<div key={index} style={{ marginBottom: 5 }}>
+								{offer}
+							</div>
 						))}
 					</div>
 				)}
 				<p>{description[0]}</p>
 				{viewMore &&
-					false &&
 					description.map((val, index) => (
 						<p
+							key={index}
 							style={{
 								padding: 0,
 								margin: 0,
@@ -127,7 +128,6 @@ const PartnerCard = (props) => {
 						color: "#28b04b",
 						cursor: "pointer",
 						display: description.length === 1 ? "none" : "block",
-						display: "none",
 					}}
 					onClick={() => toggleViewMore(!viewMore)}
 				>
@@ -176,9 +176,9 @@ const Services = (props) => {
 		</div>
 	);
 };
-
 function DigitalServices({ header_digital_services, user, update_lead }) {
 	const location = useLocation();
+	const history = useHistory();
 	useEffect(() => {
 		header_digital_services();
 		var PATH = "";
