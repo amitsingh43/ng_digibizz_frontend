@@ -88,7 +88,7 @@ const PartnerCard = (props) => {
 		>
 			<div
 				className=" col-md-4"
-				style={{ backgroundColor: backgroundColor, width: 200 }}
+				style={{ backgroundColor: backgroundColor, width: 220 }}
 			>
 				<img
 					style={{ borderRadius: 10 }}
