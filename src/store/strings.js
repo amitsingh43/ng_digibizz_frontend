@@ -2207,10 +2207,11 @@ export const SUCCESSDATA = [
 			{
 				heading: "Executive Summary",
 				desc: [
-					"This case study has been written to examine the effect that DiGibizz, by NeoGrowth has had on the transformation of small businesses.",
-					"We will study the case of N.S. Stores, a grocery supermarket belonging to the Small and Medium Enterprise (SME) category. This business run by Chetan and Nikita Saha was doing well but could improve exponentially more if it had the required resources. Processes like book-keeping and billing were not digitized. This caused certain inefficiencies in the business process which hindered the growth of the business.",
-					"DiGibizz was instrumental in transforming N.S. Stores and improving its revenue and growth by up to 30%. Thanks to their digitization of various processes like billing and stocktake. DiGibizz also helped finance the business with the help of NeoGrowth.",
-					"With the help of GlobalLinker, N.S. Stores were able to put themselves on the map and were able to compete with the various SME's in the market.",
+					"This case study was written to examine the strong effect that DiGibizz by NeoGrowth has had on the lives of small business owners in India. Mrs Reshma Deokar started her store named 'Advait Medical' soon after her wedding plans were fixed. She aimed to do business by providing medicines and other supplies to the people of her locality.",
+					"Initially, she faced many difficulties in running the store. Firstly, due to cash constraints, she could not perform business operations to her full potential. There were difficulties in sourcing stock for her store, which eventually caused her relationships with customers to suffer.",
+					"Secondly, she faced tough competition from bigger pharmacies that could offer massive discounts on their products. Being a small business that had started without much financial support, Reshma simply could not afford to compete with them. Her competition was also selling their products online, which was the norm ever since the COVID-19 pandemic hit. This meant that more customers were shopping remotely online instead of coming into the store.",
+					"NeoGrowth Credit Limited aims to empower businesses like Reshma's by providing them with the means to meet their capital requirements. Not only this, but the DiGibizz platform by NeoGrowth looks to completely digitise many of the business processes that can be made more efficient. DiGibizz can manage billing, inventory, customer information and much more.",
+					"Thanks to diGibizz, NeoGrowth was able to transform Advait Medical into a fully digitised store. This meant that the store was now complete with order processing, invoicing, customer databases and the ability to accept online payments. With the help of diGibizz, SMEs like Reshma's can digitise and enable themselves to grow and reach more customers.",
 				],
 				list: null,
 			},
