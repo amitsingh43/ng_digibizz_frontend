@@ -2471,7 +2471,7 @@ export const SUCCESSDATA = [
 				heading: "Executive Summary",
 				desc: [
 					"This case study has been written to examine the effect that DiGibizz, by NeoGrowth has had on the transformation of small businesses.",
-					"We will study the case of N.S. Stores, a grocery supermarket belonging to the Small and Medium Enterprise (SME) category. This business run by Chetan and Nikita Saha was doing well but could improve exponentially more if it had the required resources. Processes like book-keeping and billing were not digitized. This caused certain inefficiencies in the business process which hindered the growth of the business.",
+					"We will study the case of N.S. Stores, a grocery supermarket belonging to the Small and Medium Enterprise (SME) category. This business run by Chetan and Nikita Shah was doing well but could improve exponentially more if it had the required resources. Processes like book-keeping and billing were not digitized. This caused certain inefficiencies in the business process which hindered the growth of the business.",
 					"DiGibizz was instrumental in transforming N.S. Stores and improving its revenue and growth by up to 30%. Thanks to their digitization of various processes like billing and stocktake. DiGibizz also helped finance the business with the help of NeoGrowth.",
 					"With the help of GlobalLinker, N.S. Stores were able to put themselves on the map and were able to compete with the various SME's in the market.",
 				],
@@ -2480,7 +2480,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Background",
 				desc: [
-					"Chetan Saha had experience managing a grocery store for around 3 years. His wife, Nikita had inspired Chetan to open his own store since he held both knowledge and the experience to run it.",
+					"Chetan Shah had experience managing a grocery store for around 3 years. His wife, Nikita had inspired Chetan to open his own store since he held both knowledge and the experience to run it.",
 					"As a result of this, N.S. Stores was born. It is a grocery supermarket started by Chetan and Nikita with a variety of brands and products. Since they had started from scratch, they were doing everything manually. From taking stock of products to billing, every business practice was performed manually.",
 					"While the store was generating income, they found that customer traffic and sales could be improved. Apart from this, there were issues with storing customer information. To add to this, there was no interface to better understand how well products were moving and what needed to be changed.",
 				],
@@ -2574,7 +2574,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Conclusion",
 				desc: [
-					"Chetan and Nikita Saha reached out to diGibizz by NeoGrowth to help improve their operations and expand their business. With the strong foundation of a neat and presentable grocery store, the stage was set to take N.S. Stores to the next level.",
+					"Chetan and Nikita Shah reached out to diGibizz by NeoGrowth to help improve their operations and expand their business. With the strong foundation of a neat and presentable grocery store, the stage was set to take N.S. Stores to the next level.",
 					"DiGibizz was able to identify several key factors required to be revamped. As discussed above, the billing, stock handling, and customer information databases needed to be digitally created. This will help improve the efficiency of the business processes. DiGibizz was able to finance the requirements for N.S. Stores to help them upgrade their systems and put them on the digital map.",
 					"Furthermore, diGibizz was able to bring more visibility and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts & offers to potential customers.",
 					"DiGibizz introduced N.S. Stores to Snapbizz, a highly efficient online Point of Sale management system. This allowed them to take care of billing and discount related operations in a purely digitized manner. It made it far easier to understand the sales and customer patterns that the store was experiencing.",
