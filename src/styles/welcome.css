@@ -105,6 +105,11 @@
 	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.36);
 }
 
+.welcome .side-text p {
+	font-size: 22px;
+	line-height: 35px;
+}
+
 .welcome .side-text .watch-to-know-more {
 	width: fit-content;
 }
@@ -380,6 +385,22 @@
 }
 
 @media (max-width: 48rem) {
+	.welcome .side-text p {
+		font-size: 15px;
+		line-height: 25px;
+	}
+	.welcome .side-text .watch-to-know-more {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin-top: 20px;
+		margin-bottom: 0px;
+		padding: 0px;
+	}
+	.welcome .side-text .watch-to-know-more img {
+		height: 16px;
+		width: auto;
+	}
 	.user-guide p {
 		font-size: 18px;
 		margin-bottom: 0px;

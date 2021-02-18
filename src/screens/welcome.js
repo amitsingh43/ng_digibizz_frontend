@@ -29,20 +29,18 @@ const SideText = (props) => {
 				Empowering Lives.
 			</h1>
 			<p>
-				Now upgrade your business with the help of our customised solutions.
-				<span className="watch-to-know-more">
-					<p
-						style={{
-							color: "#28B04B",
-							textDecoration: "underline",
-							// paddingTop: 10,
-						}}
-					>
-						<span style={{ cursor: "pointer" }}>Watch to know more </span>
-						<span>
-							<img alt="play" src={welcome_youtube} />
-						</span>
-					</p>
+				Now upgrade your business with the help of our customised solutions.{"	"}
+				<span
+					className="watch-to-know-more"
+					style={{
+						color: "#28B04B",
+						textDecoration: "underline",
+						// paddingTop: 10,
+					}}
+				>
+					<span style={{ cursor: "pointer" }}>
+						Watch to know more <img alt="play" src={welcome_youtube} />
+					</span>
 				</span>
 			</p>
 			<Link to="/knowStatus" onClick={() => props.homepage_decrement()}>

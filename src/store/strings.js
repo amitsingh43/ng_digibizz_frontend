@@ -2589,11 +2589,9 @@ export const PARTNERS = [
 		data: [
 			{
 				title: "MobiCommerce",
-				subTitle: [
-					"10% discount on Mobicommerce - License (One time cost products) quotation & SAAS Model (Subscription Plans)",
-				],
+				subTitle: ["Refer and get 10% discount on quotation."],
 				description: [
-					"Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two.",
+					"MobiCommerce provides e-commerce development services and solutions for all",
 					"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
 					"•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
 					"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
@@ -2606,36 +2604,35 @@ export const PARTNERS = [
 			},
 			{
 				title: "Near.Store",
-				subTitle: [
-					"Near.Store Lite / Dhandabook App for Free & Store Digitalization Dongle - INR 2400 + GST",
-				],
+				subTitle: ["33% Discount on the Near.Store Dongle"],
 				description: [
-					"Create your online store without any app download or data entry.",
+					"Go digital in minutes with an easy plug and play integration with your POS.",
 					"Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
 				],
 				image: near_store,
 				backgroundColor: "#fff",
 				url: "https://www.ekasta.com",
 			},
-			{
-				title: "Accunity Services",
-				subTitle: ["10% off on all our services."],
-				description: [
-					"Empower yourself with robust web, software & SEO solutions",
-				],
-				image: accunity,
-				backgroundColor: "#fff",
-				url: "http://accunityservices.com/msme.html",
-			},
 			// {
-			// 	title: "Magicpin",
-			// 	subTitle: null,
-			// 	description:
-			// 		"Platform where users and merchants in a locality discover, interact, and transact.",
-			// 	image: magic_pin,
+			// 	title: "Accunity Services",
+			// 	subTitle: ["10% off on all our services."],
+			// 	description: [
+			// 		"Empower yourself with robust web, software & SEO solutions",
+			// 	],
+			// 	image: accunity,
 			// 	backgroundColor: "#fff",
-			// 	url: "",
+			// 	url: "http://accunityservices.com/msme.html",
 			// },
+			{
+				title: "Magicpin",
+				subTitle: ["Upto XX% off on Magic Pin services"],
+				description: [
+					"Platform where users and merchants in a locality discover, interact, and transact.",
+				],
+				image: magic_pin,
+				backgroundColor: "#fff",
+				url: "",
+			},
 		],
 		tag: "sell_online",
 	},
@@ -2644,12 +2641,9 @@ export const PARTNERS = [
 		data: [
 			{
 				title: "Near.Store",
-				subTitle: [
-					"Store Digitization Dongle - INR 2400 + GST (Discounted from INR 3000 + GST )",
-					"Near Store Lite App / Dhandabook App - No Charge.",
-				],
+				subTitle: ["33% Discount on the Near.Store Dongle"],
 				description: [
-					"Create your online store without any app download or data entry.",
+					"Go digital in minutes with an easy plug and play integration with your POS.",
 					"Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
 				],
 				image: near_store,
@@ -2690,46 +2684,47 @@ export const PARTNERS = [
 				backgroundColor: "#fff",
 				url: "https://snapbizz.com/retailers-ng/",
 			},
-			// {
-			// 	title: "Flobiz",
-			// 	subTitle: null,
-			// 	description:
-			// 		"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
-			// 	image: flobiz,
-			// 	backgroundColor: "#fff",
-			// 	url: "",
-			// },
-			// {
-			// 	title: "Accunity Services",
-			// 	subTitle: ["10% off on all our services."],
-			// 	description:
-			// 		"Empower yourself with robust web, software & SEO solutions",
-			// 	image: accunity,
-			// 	backgroundColor: "#fff",
-			// 	url: "",
-			// },
+			{
+				title: "Flobiz",
+				subTitle: ["Upto XX% off on Flobiz solutions."],
+				description: [
+					"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
+				],
+				image: flobiz,
+				backgroundColor: "#fff",
+				url: "",
+			},
+			{
+				title: "Accunity Services",
+				subTitle: ["10% off on all our services."],
+				description: [
+					"Empower yourself with robust web, software & SEO solutions",
+				],
+				image: accunity,
+				backgroundColor: "#fff",
+				url: "http://accunityservices.com/msme.html",
+			},
 		],
 		tag: "inventory_management",
 	},
 	{
 		category: "Create Website or Mobile App",
 		data: [
-			// {
-			// 	title: "Accunity Services",
-			// 	subTitle: ["10% off on all our services."],
-			// 	description:
-			// 		"Empower yourself with robust web, software & SEO solutions",
-			// 	image: accunity,
-			// 	backgroundColor: "#fff",
-			// 	url: "",
-			// },
+			{
+				title: "Accunity Services",
+				subTitle: ["10% off on all our services."],
+				description: [
+					"Empower yourself with robust web, software & SEO solutions",
+				],
+				image: accunity,
+				backgroundColor: "#fff",
+				url: "http://accunityservices.com/msme.html",
+			},
 			{
 				title: "MobiCommerce",
-				subTitle: [
-					"10% discount on Mobicommerce - License (One time cost products) quotation & SAAS Model (Subscription Plans)",
-				],
+				subTitle: ["Refer and get 10% discount on quotation."],
 				description: [
-					"Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two.",
+					"MobiCommerce provides e-commerce development services and solutions for all",
 					"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
 					"•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
 					"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
@@ -2746,15 +2741,16 @@ export const PARTNERS = [
 	{
 		category: "Billing & Accounting",
 		data: [
-			// {
-			// 	title: "Accunity Services",
-			// 	subTitle: ["10% off on all our services."],
-			// 	description:
-			// 		"Empower yourself with robust web, software & SEO solutions",
-			// 	image: accunity,
-			// 	backgroundColor: "#fff",
-			// 	url: "",
-			// },
+			{
+				title: "Accunity Services",
+				subTitle: ["10% off on all our services."],
+				description: [
+					"Empower yourself with robust web, software & SEO solutions",
+				],
+				image: accunity,
+				backgroundColor: "#fff",
+				url: "http://accunityservices.com/msme.html",
+			},
 			{
 				title: "Snapbizz",
 				subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
@@ -2766,58 +2762,47 @@ export const PARTNERS = [
 				backgroundColor: "#fff",
 				url: "https://snapbizz.com/retailers-ng/",
 			},
-			{
-				title: "Accunity Services",
-				subTitle: ["10% off on all our services."],
-				description: [
-					"Empower yourself with robust web, software & SEO solutions",
-				],
-				image: accunity,
-				backgroundColor: "#fff",
-				url: "http://accunityservices.com/msme.html",
-			},
 		],
 		tag: "billing_and_accounting",
 	},
-	// {
-	// 	category: "Digital Khata",
-	// 	data: [
-	// 		{
-	// 			title: "OkCredit",
-	// 			subTitle: ["Upto XX% off on OkCredit services."],
-	// 			description:
-	// 				"Free digital Udhar-Khata app for businesses & shop owners and manage your in your preferred language.",
-	// 			image: ok_credit,
-	// 			backgroundColor: "#fff",
-	// 			url: "",
-	// 		},
-	// 	],
-	// 	tag: "digital_khata",
-	// },
-	// {
-	// 	category: "Tax Filing & Legal",
-	// 	data: [
-	// 		{
-	// 			title: "Vyapar",
-	// 			subTitle: ["Upto XX% off on Vyapar services."],
-	// 			description: "GST Billing Software for small businesses.",
-	// 			image: vyapar,
-	// 			backgroundColor: "#fff",
-	// 			url: "",
-	// 		},
-	// 	],
-	// 	tag: "tax_fling_and_legal",
-	// },
+	{
+		category: "Digital Khata",
+		data: [
+			{
+				title: "OkCredit",
+				subTitle: ["Upto XX% off on OkCredit services."],
+				description: [
+					"Free digital Udhar-Khata app for businesses & shop owners and manage your in your preferred language.",
+				],
+				image: ok_credit,
+				backgroundColor: "#fff",
+				url: "",
+			},
+		],
+		tag: "digital_khata",
+	},
+	{
+		category: "Tax Filing & Legal",
+		data: [
+			{
+				title: "Vyapar",
+				subTitle: ["Upto XX% off on Vyapar services."],
+				description: ["GST Billing Software for small businesses."],
+				image: vyapar,
+				backgroundColor: "#fff",
+				url: "",
+			},
+		],
+		tag: "tax_fling_and_legal",
+	},
 	{
 		category: "Social Media & Digital Marketing",
 		data: [
 			{
 				title: "Pinnacle Management & Utility Services",
-				subTitle: [
-					"Upto 25% discount on Social Media Marketing, Creative Designing, Business Setup & Promotional Services",
-				],
+				subTitle: ["Upto XX% off on Pinnacle Services."],
 				description: [
-					"Taking brands from Local to Global (Global + Local).",
+					"Pinnacle Management offers innovative and specialized marketing &communication solutions.",
 					"We believe in transforming your business with Creativity & Diversity. Our services include creation of Business Display Material, Offline & Online Business promotions, Procurement of Business Set-up IT Systems & others.",
 				],
 				image: pinnacle,
@@ -2837,21 +2822,22 @@ export const PARTNERS = [
 		],
 		tag: "social_media_marketing",
 	},
-	// {
-	// 	category: "Manage Payments",
-	// 	data: [
-	// 		{
-	// 			title: "Razorpay",
-	// 			subTitle: ["Upto XX% off on Razorpay services."],
-	// 			description:
-	// 				"All in One- Payment gateway that supports netbanking, credit, debit Cards, UPI etc.",
-	// 			image: razorpay,
-	// 			backgroundColor: "#fff",
-	// 			url: "",
-	// 		},
-	// 	],
-	// 	tag: "manage_payments",
-	// },
+	{
+		category: "Manage Payments",
+		data: [
+			{
+				title: "Razorpay",
+				subTitle: ["Upto XX% off on Razorpay services."],
+				description: [
+					"All in One- Payment gateway that supports netbanking, credit, debit Cards, UPI etc.",
+				],
+				image: razorpay,
+				backgroundColor: "#fff",
+				url: "",
+			},
+		],
+		tag: "manage_payments",
+	},
 	{
 		category: "Manage Staff",
 		data: [
@@ -2872,50 +2858,6 @@ export const PARTNERS = [
 	{
 		category: "Customer Loyalty & Promotions",
 		data: [
-			// {
-			// 	title: "Magicpin",
-			// 	subTitle: null,
-			// 	description:
-			// 		"Platform where users and merchants in a locality discover, interact, and transact.",
-			// 	image: magic_pin,
-			// 	backgroundColor: "#fff",
-			// 	url: "",
-			// },
-			{
-				title: "Accunity Services",
-				subTitle: ["10% off on all our services."],
-				description: [
-					"Empower yourself with robust web, software & SEO solutions",
-				],
-				image: accunity,
-				backgroundColor: "#fff",
-				url: "http://accunityservices.com/msme.html",
-			},
-			{
-				title: "Smartech Electronic Systems",
-				subTitle: [
-					"Upto 15% discount on LED Display Screens for store promotion",
-				],
-				description: [
-					"Your simple, easy to use and effective digital tool for attracting customer's attention and promoting products and services in your store",
-				],
-				image: smartech,
-				backgroundColor: "#fff",
-				url: "http://www.smartechelectronics.com/",
-			},
-			{
-				title: "Brandppulse Marketing Services Pvt Ltd",
-				subTitle: [
-					"Free Advertisement Display System for existing TVs in Store & Special discounts for buying new Screens (TV)",
-				],
-				description: [
-					"Earn Revenue through Digital Display Advertising in your Business Premises.",
-					"We offer you Digital Display solution which will help you earn money from advertisement displayed in your business premises. Our free to use content management system for display advertisement will digitally transform your business and also add revenue to it.",
-				],
-				image: brandpulse,
-				backgroundColor: "#fff",
-				url: "https://www.brandppulse.com",
-			},
 			{
 				title: "Syrow",
 				subTitle: ["Upto 15% sign-up discount on Customer Support Services"],
@@ -2927,6 +2869,39 @@ export const PARTNERS = [
 				backgroundColor: "#fff",
 				url: "https://www.syrow.com/partner/NeoGrowth/mvs/",
 			},
+			{
+				title: "Magicpin",
+				subTitle: ["Upto XX% off on Magic Pin services."],
+				description: [
+					"Platform where users and merchants in a locality discover, interact, and transact.",
+				],
+				image: magic_pin,
+				backgroundColor: "#fff",
+				url: "",
+			},
+			{
+				title: "Smartech Electronic Systems",
+				subTitle: ["10% off on orders placed."],
+				description: [
+					"Now flash your promotions & offers on LED digital displays",
+				],
+				image: smartech,
+				backgroundColor: "#fff",
+				url: "http://www.smartechelectronics.com/",
+			},
+			// {
+			// 	title: "Brandppulse Marketing Services Pvt Ltd",
+			// 	subTitle: [
+			// 		"Free Advertisement Display System for existing TVs in Store & Special discounts for buying new Screens (TV)",
+			// 	],
+			// 	description: [
+			// 		"Earn Revenue through Digital Display Advertising in your Business Premises.",
+			// 		"We offer you Digital Display solution which will help you earn money from advertisement displayed in your business premises. Our free to use content management system for display advertisement will digitally transform your business and also add revenue to it.",
+			// 	],
+			// 	image: brandpulse,
+			// 	backgroundColor: "#fff",
+			// 	url: "https://www.brandppulse.com",
+			// },
 		],
 		tag: "customer_loyalty_and_promotions",
 	},
@@ -2935,9 +2910,9 @@ export const PARTNERS = [
 		data: [
 			{
 				title: "GoDigit",
-				subTitle: null,
+				subTitle: ["Upto XX% off on GoDigit."],
 				description: [
-					"Digit Insurance is one of the leading General Insurance company in India on a mission to make Insurance Simple for people.",
+					"Secure yourself with GoDigit’s comprehensive insurance solutions",
 				],
 				image: digit,
 				backgroundColor: "#000000",
@@ -2945,8 +2920,8 @@ export const PARTNERS = [
 			},
 			{
 				title: "Care",
-				subTitle: null,
-				description: [""],
+				subTitle: ["Upto XX% off on care health insurances."],
+				description: ["Complete healthcare plans for you & your family."],
 				image: care,
 				backgroundColor: "#fff",
 				url: "https://www.religareonline.com/",

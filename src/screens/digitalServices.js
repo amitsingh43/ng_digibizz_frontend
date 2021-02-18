@@ -101,14 +101,9 @@ const PartnerCard = (props) => {
 				<h3>{title}</h3>
 				{subTitle && (
 					<div className="sub-title">
-						Offers:
-						<ul style={{ marginTop: 10 }}>
-							{subTitle.map((offer) => (
-								<div style={{ marginBottom: 5 }}>
-									<li>{offer}</li>
-								</div>
-							))}
-						</ul>
+						{subTitle.map((offer) => (
+							<div style={{ marginBottom: 5 }}>{offer}</div>
+						))}
 					</div>
 				)}
 				<p>{description[0]}</p>
