@@ -2206,7 +2206,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Executive Summary",
 				desc: [
-					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the lives of small business owners in India.",
+					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the lives of small business owners in India. Mrs Reshma Deokar started her store named 'Advait Medical' soon after her wedding plans were fixed. She aimed to do business by providing medicines and other supplies to the people of her locality.",
 					"Initially, she faced many difficulties in running the store. Firstly, due to cash constraints, she could not perform business operations to her full potential. There were difficulties in sourcing stock for her store, which eventually caused her relationships with customers to suffer.",
 					"Secondly, she faced tough competition from bigger pharmacies that could offer massive discounts on their products. Being a small business that had started without much financial support, Reshma simply could not afford to compete with them. Her competition was also selling their products online, which was the norm ever since the COVID-19 pandemic hit. This meant that more customers were shopping remotely online instead of coming into the store.",
 					"NeoGrowth Credit Limited aims to empower businesses like Reshma's by providing them with the means to meet their capital requirements. Not only this, but the diGibizz platform by NeoGrowth looks to completely digitise many of the business processes that can be made more efficient. DiGibizz can manage billing, inventory, customer information and much more.",
@@ -2265,7 +2265,7 @@ export const SUCCESSDATA = [
 					{
 						bullet: "Inefficient billing because of lack of digitisation - ",
 						content:
-							"Reshma was performing her billing and invoice process manually without any Point Of Sale system. This was both cumbersome and inefficient for her.",
+							"Reshma was performing her billing and invoice process manually without any Point-of-Sale system. This was both cumbersome and inefficient for her.",
 					},
 					{
 						bullet: "No social media presence - ",
@@ -2282,7 +2282,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Proposed Solutions",
 				desc: [
-					"After a thorough evaluation, it was clear that NeoGrowth could help Reshma improve her store. Considering all the observations from Reshma's Advait Medical, NeoGrowth was able to develop a few solutions to help digitise and improve the business.",
+					"After a thorough evaluation, it was clear that NeoGrowth could help Reshma improve her store. Considering all the observations from Reshma's Advait Medical, NeoGrowth was able to develop a few solutions to help digitise and improve the business. ",
 					"After evaluation, diGibizz proposed the following solutions - ",
 				],
 				list: [
@@ -2317,10 +2317,15 @@ export const SUCCESSDATA = [
 							"Magicpin is an effective online tool that brings customers coupons and offers on medicines. Using Magicpin, Reshma could find discounts on products, make orders, and get them delivered as well.",
 					},
 					{
-						bullet: "Social media presence establishment - ",
+						bullet: "Accunity Services – ",
 						content:
-							"NeoGrowth was able to establish their social media accounts on Facebook and Instagram. This was effective because it increased the reach and customer awareness for Advait Medical. Customers were then able to receive updates, offers and contact Reshma online.",
+							"Accunity Services was able to establish their social media accounts on Facebook and Instagram. This was effective because it increased the reach and customer awareness for Advait Medical. Customers were then able to receive updates, offers and contact Reshma online.",
 					},
+					// {
+					// 	bullet: "Social media presence establishment - ",
+					// 	content:
+					// 		"NeoGrowth was able to establish their social media accounts on Facebook and Instagram. This was effective because it increased the reach and customer awareness for Advait Medical. Customers were then able to receive updates, offers and contact Reshma online.",
+					// },
 				],
 			},
 			{
