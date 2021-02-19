@@ -12,7 +12,7 @@ const Content = () => {
 			<h1>Success Stories</h1>
 			<div className="row">
 				<p className="col-lg-8">
-					Digibizz has created a long lasting impact on our customers on how
+					DiGibizz has created a long lasting impact on our customers on how
 					they manage their business every day. We help empower, enable and
 					transform small businesses in their digital journey towards growth.
 				</p>

@@ -79,7 +79,7 @@ export const KNOWLEDGE_CENTER = [
 	{
 		heading: "Tips to Avoid Online Frauds & Secure Business",
 		desc:
-			"Here are a few tips to help you secure business and prevent cyber frauds.",
+			"Here are a few tips to help you secure business and prevent cyber frauds-",
 		image: one,
 		bg: one_bg,
 		id: 1,
@@ -125,7 +125,7 @@ export const KNOWLEDGE_CENTER = [
 
 				heading: null,
 				content:
-					"You must also ensure that you are compliant with the PCI Data Security Standards or PCI DSS. These standards are designed to ensure that your customer's data is protected from cyber-attacks and credit card scams.",
+					"You must also ensure that you are compliant with the PCI Data Security Standards or PCI DSS. These standards are designed to ensure that your customers' data is protected from cyber-attacks and credit card scams.",
 			},
 			{
 				heading: "Educate Employees",
@@ -185,7 +185,7 @@ export const KNOWLEDGE_CENTER = [
 				type: "left",
 				image: threee,
 				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.  Here are a few tips to help you secure business and prevent cyber frauds.",
+					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams. Here are a few tips to help you secure business and prevent cyber frauds.",
 			},
 			{
 				type: "content",
@@ -787,8 +787,7 @@ export const KNOWLEDGE_CENTER = [
 		],
 	},
 	{
-		heading:
-			"How to tie-up with Delivery Partners like Dunzo, Swiggy, Zomato, etc",
+		heading: "How to tie-up with Delivery Partners?",
 		desc: "Perks of tying-up With food delivery partners.",
 		image: five,
 		id: 5,
@@ -1118,8 +1117,7 @@ export const KNOWLEDGE_CENTER = [
 		],
 	},
 	{
-		heading:
-			"How to set up your online store with NowFloats, Amazon Easy, WhatsApp Business, Near.Store, etc.?",
+		heading: "How to set up your business online?",
 		desc:
 			"As the era of digitisation is taking over the world, it is imperative that you learn how to set up your own online shop.",
 		image: six,
@@ -1772,7 +1770,7 @@ export const KNOWLEDGE_CENTER = [
 		],
 	},
 	{
-		heading: "Top 5 government loan schemes for small businesses in India.",
+		heading: "Top 5 government loan schemes for small businesses in India",
 		desc:
 			"This article will discuss the top 5 government loan schemes that can aid your business to reach greater heights.",
 		image: eight,
@@ -2208,10 +2206,10 @@ export const SUCCESSDATA = [
 			{
 				heading: "Executive Summary",
 				desc: [
-					"This case study was written to examine the strong effect that DiGibizz by NeoGrowth has had on the lives of small business owners in India. Mrs Reshma Deokar started her store named 'Advait Medical' soon after her wedding plans were fixed. She aimed to do business by providing medicines and other supplies to the people of her locality.",
+					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the lives of small business owners in India. This case study was written to examine the strong effect that DiGibizz by NeoGrowth has had on the lives of small business owners in India. Mrs Reshma Deokar started her store named 'Advait Medical' soon after her wedding plans were fixed. She aimed to do business by providing medicines and other supplies to the people of her locality.",
 					"Initially, she faced many difficulties in running the store. Firstly, due to cash constraints, she could not perform business operations to her full potential. There were difficulties in sourcing stock for her store, which eventually caused her relationships with customers to suffer.",
 					"Secondly, she faced tough competition from bigger pharmacies that could offer massive discounts on their products. Being a small business that had started without much financial support, Reshma simply could not afford to compete with them. Her competition was also selling their products online, which was the norm ever since the COVID-19 pandemic hit. This meant that more customers were shopping remotely online instead of coming into the store.",
-					"NeoGrowth Credit Limited aims to empower businesses like Reshma's by providing them with the means to meet their capital requirements. Not only this, but the DiGibizz platform by NeoGrowth looks to completely digitise many of the business processes that can be made more efficient. DiGibizz can manage billing, inventory, customer information and much more.",
+					"NeoGrowth Credit Limited aims to empower businesses like Reshma's by providing them with the means to meet their capital requirements. Not only this, but the diGibizz platform by NeoGrowth looks to completely digitise many of the business processes that can be made more efficient. DiGibizz can manage billing, inventory, customer information and much more.",
 					"Thanks to diGibizz, NeoGrowth was able to transform Advait Medical into a fully digitised store. This meant that the store was now complete with order processing, invoicing, customer databases and the ability to accept online payments. With the help of diGibizz, SMEs like Reshma's can digitise and enable themselves to grow and reach more customers.",
 				],
 				list: null,
@@ -2351,11 +2349,11 @@ export const SUCCESSDATA = [
 			{
 				heading: "Executive Summary",
 				desc: [
-					"This case study was written to examine the strong effect that DiGibizz by NeoGrowth has had on the transformation of small businesses. DiGibizz aims to empower SMEs by digitising their business operations. NeoGrowth Credit supports small businesses by providing them with the credit they need to grow and take care of inventory expenses.",
+					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the transformation of small businesses. DiGibizz aims to empower SMEs by digitising their business operations. NeoGrowth Credit supports small businesses by providing them with the credit they need to grow and take care of inventory expenses.",
 					"With the help of this financing, NeoGrowth aims to change the lives of small business owners everywhere by giving them the purchasing power they need. This case takes place in the city of Nashik, Maharashtra. It is a prosperous land with a healthy economy for trade. Many people come here to make their dreams come true. Here, there are small and big businesses for everybody which offers ample opportunity for everyone.",
 					"Due to the abundant economic activity of Nashik, many people in business come to Nashik in the hopes of one day becoming highly successful entrepreneurs. Yogesh is one of many such entrepreneurs that relocated to Nashik for exactly this reason. He opened his shop at the Tibetan Welfare Association Market, Nashik.",
 					"He started Redz Collection - Fashion for Men, a clothing and apparel store. The store had a striking stock of designs and colours, but there were still some shortfalls. For starters, it was not very different from the many stores there; in fact, it was even hard to tell one from another. Yogesh was joined by his cousin, and they both worked tirelessly to get the business up and running. Over time they both realised that being one with their customer database was important.",
-					"DiGibizz was able to provide Yogesh with the financial support he needed in the form of a small business loan. This allowed him to take care of business expenses, including inventory, overheads, etc. It also allowed him the ability to expand his store. Besides this, DiGibizz was able to help Yogesh set-up his store on WhatsApp, allowing him to sell digitally to a wider customer base.",
+					"DiGibizz was able to provide Yogesh with the financial support he needed in the form of a small business loan. This allowed him to take care of business expenses, including inventory, overheads, etc. It also allowed him the ability to expand his store. Besides this, diGibizz was able to help Yogesh set-up his store on WhatsApp, allowing him to sell digitally to a wider customer base.",
 					"Additionally, a bright and conspicuous LED signage board was introduced to differentiate Redz Collections from the hundreds of other stores at the Tibetan Welfare Association Market, Nashik.",
 				],
 				list: null,
@@ -2366,7 +2364,7 @@ export const SUCCESSDATA = [
 					"Nasik is a state full of business opportunities. Yogesh's store Redz Collection's was started with the aim of bringing high-quality clothing and textiles, he did succeed. His stock was of high quality, and he was able to manage his operations successfully.",
 					"However, it suffered from lack of digitisation and inventory processing. Not only this, but Yogesh did not have an online store to sell to customers remotely. The store only accepted cash and not digital payments. Everything was done manually.",
 					"Especially considering the current scenario due to COVID-19, it was difficult to maintain sales and revenue with the severely reduced foot traffic in and around the store. The pandemic had surely hit the business and Yogesh was looking for a way to sell his products remotely.",
-					"While the store was able to perform moderately well, it could benefit from solutions that DiGibizz could implement for them. NeoGrowth visited the store to see how they could help take Redz Collections to the next level.",
+					"While the store was able to perform moderately well, it could benefit from solutions that diGibizz could implement for them. NeoGrowth visited the store to see how they could help take Redz Collections to the next level.",
 				],
 				list: null,
 			},
@@ -2409,7 +2407,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Proposed Solutions",
 				desc: [
-					"NeoGrowth was able to study the case of Redz Collections on an individual basis. There were certain aspects of the business that DiGibizz was able to pick up on to improve for the future. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
+					"NeoGrowth was able to study the case of Redz Collections on an individual basis. There were certain aspects of the business that diGibizz was able to pick up on to improve for the future. There were certain aspects of the business that DiGibizz was able to pick up on to improve for the future. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
 					"After considering the current business practices and future possibilities, diGibizz proposed the following solutions -",
 				],
 				list: [
@@ -2473,7 +2471,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Executive Summary",
 				desc: [
-					"This case study has been written to examine the effect that DiGibizz, by NeoGrowth has had on the transformation of small businesses.",
+					"This case study has been written to examine the effect that diGibizz, by NeoGrowth has had on the transformation of small businesses.",
 					"We will study the case of N.S. Stores, a grocery supermarket belonging to the Small and Medium Enterprise (SME) category. This business run by Chetan and Nikita Shah was doing well but could improve exponentially more if it had the required resources. Processes like book-keeping and billing were not digitized. This caused certain inefficiencies in the business process which hindered the growth of the business.",
 					"DiGibizz was instrumental in transforming N.S. Stores and improving its revenue and growth by up to 30%. Thanks to their digitization of various processes like billing and stocktake. DiGibizz also helped finance the business with the help of NeoGrowth.",
 					"With the help of GlobalLinker, N.S. Stores were able to put themselves on the map and were able to compete with the various SME's in the market.",
@@ -2539,7 +2537,7 @@ export const SUCCESSDATA = [
 				heading: "Proposed Solutions",
 				desc: [
 					"Many factors could be improved for N.S. Stores that would lead to better customer experiences, improve sales, and help the store receive more attention from potential customers.",
-					"To improve the business efficiency of N.S. Stores, diGiBizz proposed the following solutions - ",
+					"To improve the business efficiency of N.S. Stores, diGiBizz proposed the following solutions -",
 				],
 				list: [
 					{
@@ -2602,11 +2600,22 @@ const NEAR_STORE = {
 	backgroundColor: "#fff",
 	url: "https://www.ekasta.com",
 };
-const ACCUNITY_SERVICES = {
+const ACCUNITY_SERVICES1 = {
 	title: "Accunity Services",
 	subTitle: ["10% off on all our services."],
 	description: [
-		"Billing & Accounting Software Services for Small Businesses.",
+		"List your business on digital selling platforms to boost your sales.",
+		"Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
+	],
+	image: accunity,
+	backgroundColor: "#fff",
+	url: "http://accunityservices.com/msme.html",
+};
+const ACCUNITY_SERVICES2 = {
+	title: "Accunity Services",
+	subTitle: ["10% off on all our services."],
+	description: [
+		"Digital Marketing & Social Media Management for Small Businesses.",
 		"Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
 	],
 	image: accunity,
@@ -2791,7 +2800,7 @@ const BRANDPULSE = {
 export const PARTNERS = [
 	{
 		category: "Sell Online",
-		data: [MOBICOMMERCE, NEAR_STORE, ACCUNITY_SERVICES, SNAPBIZZ],
+		data: [MOBICOMMERCE, NEAR_STORE, ACCUNITY_SERVICES1, SNAPBIZZ],
 		tag: "sell_online",
 	},
 	// {
@@ -2811,12 +2820,12 @@ export const PARTNERS = [
 	},
 	{
 		category: "Create Website or Mobile App",
-		data: [MOBICOMMERCE, ACCUNITY_SERVICES, PINNACLE],
+		data: [MOBICOMMERCE, ACCUNITY_SERVICES2, PINNACLE],
 		tag: "create_website_and_app",
 	},
 	{
 		category: "Billing & Accounting",
-		data: [SNAPBIZZ, ACCUNITY_SERVICES],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES2],
 		tag: "billing_and_accounting",
 	},
 	// {
@@ -2831,7 +2840,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Social Media & Digital Marketing",
-		data: [ACCUNITY_SERVICES, PINNACLE],
+		data: [ACCUNITY_SERVICES2, PINNACLE],
 		tag: "social_media_marketing",
 	},
 	// {
@@ -2846,7 +2855,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Customer Loyalty & Promotions",
-		data: [SYROW, BRANDPULSE, SMARTECH, ACCUNITY_SERVICES],
+		data: [SYROW, BRANDPULSE, SMARTECH, ACCUNITY_SERVICES1],
 		tag: "customer_loyalty_and_promotions",
 	},
 	{

@@ -11,7 +11,12 @@ function TestimonialsCarousal() {
 	const history = useHistory();
 	return (
 		<div className="carousel-main">
-			<div id="myCarousel" className="carousel slide" data-ride="carousel">
+			<div
+				id="myCarousel"
+				className="carousel slide"
+				data-ride="carousel"
+				data-interval="4000"
+			>
 				<div className="row carousel-inner">
 					{SUCCESSDATA.map((item, index) => (
 						<div

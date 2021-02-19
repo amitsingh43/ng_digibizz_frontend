@@ -96,7 +96,10 @@ const PartnerCard = (props) => {
 					alt="partner"
 				/>
 			</div>
-			<div className=" col-md-7">
+			<div
+				className=" col-md-7"
+				style={{ overflowY: viewMore ? "scroll" : "hidden" }}
+			>
 				<h3>{title}</h3>
 				{subTitle && (
 					<div className="sub-title">

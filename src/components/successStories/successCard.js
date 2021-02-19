@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import "../../styles/successCard.css";
 import punctuation1 from "../../assets/punctuation1.svg";
 import punctuation2 from "../../assets/punctuation2.svg";
 import youtube from "../../assets/youtube.svg";
 function SuccessCard({ headerState, name, heading, image, content, id, type }) {
+	const history = useHistory();
 	return (
 		<div className="success-card row">
 			<div className="item col-lg-10">
@@ -19,7 +20,12 @@ function SuccessCard({ headerState, name, heading, image, content, id, type }) {
 						}}
 					>
 						{type === "video" && (
-							<img className="play-button" src={youtube} alt="Play bytton" />
+							<img
+								className="play-button"
+								src={youtube}
+								alt="Play bytton"
+								onClick={() => history.push(`successStories/${id}`)}
+							/>
 						)}
 					</div>
 					{/* <img className="img-responsive col-lg-4" src={image} alt="Person" /> */}

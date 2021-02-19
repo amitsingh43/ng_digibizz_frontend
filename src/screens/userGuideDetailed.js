@@ -17,7 +17,7 @@ const TopContent = ({ heading }) => {
 					style={{ cursor: "pointer", float: "left" }}
 					onClick={() => history.push("/knowledgeCenter")}
 				>
-					User Guide{"    >>   "}
+					Knowledge Center{"    >>   "}
 				</div>
 				<span style={{ clear: "both" }}>{heading}</span>
 			</div>
