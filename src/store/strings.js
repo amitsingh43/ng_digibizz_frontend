@@ -2296,11 +2296,11 @@ export const SUCCESSDATA = [
 						content:
 							"NeoGrowth was able to understand the necessity of having a strong brand presence in the market. It would help to differentiate her store from other medical stores in the area. A prominent and pleasant logo of a heart was developed and the tagline for the company was revised to 'Advait Medical - We Care For You!'",
 					},
-					{
-						bullet: "Snapbizz digital solutions - ",
-						content:
-							"Using Snapbizz, NeoGrowth can empower SMEs to completely digitise their business operations for more efficiency and ease of use. The diGibizz platform processes everything from billing, customer information and stock counts. This would also help make it easier to understand the trends for different products in Reshma's store.",
-					},
+					// {
+					// 	bullet: "Snapbizz digital solutions - ",
+					// 	content:
+					// 		"Using Snapbizz, NeoGrowth can empower SMEs to completely digitise their business operations for more efficiency and ease of use. The diGibizz platform processes everything from billing, customer information and stock counts. This would also help make it easier to understand the trends for different products in Reshma's store.",
+					// },
 					{
 						bullet: "NeoGrowth credit lending - ",
 						content:
@@ -2369,7 +2369,7 @@ export const SUCCESSDATA = [
 					"Nasik is a state full of business opportunities. Yogesh's store Redz Collection's was started with the aim of bringing high-quality clothing and textiles. To a larger extent, he did succeed. His stock was of high quality, and he was able to manage his operations successfully. ",
 					"However, it suffered from lack of digitisation and inventory processing. Not only this, but Yogesh did not have an online store to sell to customers remotely. The store only accepted cash and not digital payments. Everything was done manually.",
 					"Especially considering the current scenario due to COVID-19, it was difficult to maintain sales and revenue with the severely reduced foot traffic in and around the store. The pandemic had surely hit the business, and Yogesh was looking for a way to sell his products remotely.",
-					"While the store was able to perform moderately well, it could benefit from solutions that diGibizz could implement for them. Neogrowth visited the store to see how they could help take Redz Collections to the next level.",
+					"While the store was able to perform moderately well, it could benefit from solutions that diGibizz could implement for them. NeoGrowth visited the store to see how they could help take Redz Collections to the next level.",
 				],
 				list: null,
 			},
@@ -2412,7 +2412,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Proposed Solutions",
 				desc: [
-					"Neogrowth was able to study the case of Redz Collections on an individual basis. There were certain aspects of the business that diGibizz was able to pick up on to improve for the future. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
+					"NeoGrowth was able to study the case of Redz Collections on an individual basis. There were certain aspects of the business that diGibizz was able to pick up on to improve for the future. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
 					"After considering the current business practices and future possibilities, diGibizz proposed the following solutions - ",
 				],
 				list: [
@@ -2459,8 +2459,8 @@ export const SUCCESSDATA = [
 					"Redz Collections is a shop in the Tibetan Welfare Association. They faced many challenges while carrying out their business. For starters, there wasn't much to distinguish their store from the others in the entire complex. Not to mention the fact that Yogesh had a great collection of clothing but lacked the exposure to sell his products online.",
 					"Not only this, but diGibizz observed that the store could benefit from digitisation that would allow a Point Of Sale system. This would then help to improve their sales process and make stocktaking easier.",
 					"Further, diGibizz implemented WiseInvoice POS software, an easy-to-use and efficient POS system. This ensured that Redz Collections was able to store a database of all their products. WiseInvoice makes it incredibly easy to store customer information like phone number, order information, etc. Not only this, but it can scan barcodes and keep track of inventory automatically.",
-					"Further, diGibizz by Neogrowth was able to bring more attention and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts as well as offers to potential customers. This not only differentiated Yogesh's store from the rest at the Tibetan Welfare Association Market, but it also helped attract more customers over time.",
-					"At the outset, diGibizz by Neogrowth aims to empower small businesses like Yogesh's. The end goal of the efforts by Neogrowth Credit is to change the lives of families who can benefit from additional funding for their small business.",
+					"Further, diGibizz by NeoGrowth was able to bring more attention and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts as well as offers to potential customers. This not only differentiated Yogesh's store from the rest at the Tibetan Welfare Association Market, but it also helped attract more customers over time.",
+					"At the outset, diGibizz by NeoGrowth aims to empower small businesses like Yogesh's. The end goal of the efforts by NeoGrowth Credit is to change the lives of families who can benefit from additional funding for their small business.",
 					"Since diGibizz was able to work on Redz Collections, their business has improved significantly, and operations are much easier to carry out. Not only this but with the PayU payment gateway, Yogesh's customers now have a wide variety of payment modes through which they can perform their transactions. These changes have played a large role in increasing the efficiency and overall quality of Yogesh's business, Redz Collections.",
 				],
 				list: null,
