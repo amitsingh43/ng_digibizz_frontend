@@ -188,11 +188,12 @@ h2 {
 	}
 	.services-main .partner-card {
 		display: flex;
-		min-height: 350px;
+		min-height: 400px;
 		width: 100%;
 	}
 	.services-main .partner-card .col-md-7 {
 		padding: 10px 10px 0px 10px;
+		min-height: 400px;
 	}
 	.hr {
 		height: 0.9px;
@@ -202,6 +203,7 @@ h2 {
 	}
 	.services-main .partner-card .col-md-4 {
 		width: 32vw;
+		height: 400px;
 	}
 	.services-main .partner-card .avial-now {
 		margin-bottom: 20px;
