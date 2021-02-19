@@ -2350,7 +2350,7 @@ export const SUCCESSDATA = [
 				heading: "Executive Summary",
 				desc: [
 					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the transformation of small businesses. DiGibizz aims to empower SMEs by digitising their business operations. NeoGrowth Credit supports small businesses by providing them with the credit they need to grow and take care of inventory expenses.",
-					"With the help of this financing, NeoGrowth aims to change the lives of small business owners everywhere by giving them the purchasing power they need. This case takes place in the city of Nashik, Maharashtra. It is a prosperous land with a healthy economy for trade. Many people come here to make their dreams come true. Here, there are small and big businesses for everybody which offers ample opportunity for everyone.",
+					"With the help of this financing, NeoGrowth aims to change the lives of small business owners everywhere by giving them the purchasing power they need. This case takes place in the city of Nashik, Maharashtra. It is a prosperous land with a healthy economy for trade. Many people come here to make their dreams come true. Here, there are small and big businesses for everybody, which offers ample opportunity for everyone.",
 					"Due to the abundant economic activity of Nashik, many people in business come to Nashik in the hopes of one day becoming highly successful entrepreneurs. Yogesh is one of many such entrepreneurs that relocated to Nashik for exactly this reason. He opened his shop at the Tibetan Welfare Association Market, Nashik.",
 					"He started Redz Collection - Fashion for Men, a clothing and apparel store. The store had a striking stock of designs and colours, but there were still some shortfalls. For starters, it was not very different from the many stores there; in fact, it was even hard to tell one from another. Yogesh was joined by his cousin, and they both worked tirelessly to get the business up and running. Over time they both realised that being one with their customer database was important.",
 					"DiGibizz was able to provide Yogesh with the financial support he needed in the form of a small business loan. This allowed him to take care of business expenses, including inventory, overheads, etc. It also allowed him the ability to expand his store. Besides this, diGibizz was able to help Yogesh set-up his store on WhatsApp, allowing him to sell digitally to a wider customer base.",
@@ -2361,10 +2361,10 @@ export const SUCCESSDATA = [
 			{
 				heading: "Background",
 				desc: [
-					"Nasik is a state full of business opportunities. Yogesh's store Redz Collection's was started with the aim of bringing high-quality clothing and textiles, he did succeed. His stock was of high quality, and he was able to manage his operations successfully.",
+					"Nasik is a state full of business opportunities. Yogesh's store Redz Collection's was started with the aim of bringing high-quality clothing and textiles. To a larger extent, he did succeed. His stock was of high quality, and he was able to manage his operations successfully. ",
 					"However, it suffered from lack of digitisation and inventory processing. Not only this, but Yogesh did not have an online store to sell to customers remotely. The store only accepted cash and not digital payments. Everything was done manually.",
-					"Especially considering the current scenario due to COVID-19, it was difficult to maintain sales and revenue with the severely reduced foot traffic in and around the store. The pandemic had surely hit the business and Yogesh was looking for a way to sell his products remotely.",
-					"While the store was able to perform moderately well, it could benefit from solutions that diGibizz could implement for them. NeoGrowth visited the store to see how they could help take Redz Collections to the next level.",
+					"Especially considering the current scenario due to COVID-19, it was difficult to maintain sales and revenue with the severely reduced foot traffic in and around the store. The pandemic had surely hit the business, and Yogesh was looking for a way to sell his products remotely.",
+					"While the store was able to perform moderately well, it could benefit from solutions that diGibizz could implement for them. Neogrowth visited the store to see how they could help take Redz Collections to the next level.",
 				],
 				list: null,
 			},
@@ -2395,7 +2395,7 @@ export const SUCCESSDATA = [
 					{
 						bullet: "Lack of Digitisation - ",
 						content:
-							"Physically taking stock of products without barcodes and a digitised Point of Sale system made it harder to stay efficient and keep track of stock.",
+							"Physically taking stock of products without bar codes and a digitised Point of Sale system made it harder to stay efficient and keep track of stock.",
 					},
 					{
 						bullet: "Business Finance Requirements - ",
@@ -2407,34 +2407,39 @@ export const SUCCESSDATA = [
 			{
 				heading: "Proposed Solutions",
 				desc: [
-					"NeoGrowth was able to study the case of Redz Collections on an individual basis. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
-					"After considering the current business practices and future possibilities, diGibizz proposed the following solutions -",
+					"Neogrowth was able to study the case of Redz Collections on an individual basis. There were certain aspects of the business that diGibizz was able to pick up on to improve for the future. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
+					"After considering the current business practices and future possibilities, diGibizz proposed the following solutions - ",
 				],
 				list: [
-					{
-						bullet: "Snapbizz Digital Solutions - ",
-						content:
-							"Snapbizz makes it possible to digitise the entire billing and Point of Sale system. It also stores customer and billing information.",
-					},
+					// {
+					// 	bullet: "Snapbizz Digital Solutions - ",
+					// 	content:
+					// 		"Snapbizz makes it possible to digitise the entire billing and Point of Sale system. It also stores customer and billing information.",
+					// },
 					{
 						bullet: "DiGibizz Small Business Loan - ",
 						content:
-							"diGibizz helps small business by providing small business loans to deserving SMEs.",
+							"DiGibizz helps small businesses by providing small business loans to deserving SMEs.",
 					},
 					{
 						bullet: "More Effective Signage - ",
 						content:
-							"Redz Collections was able to benefit from more bright, dynamic signage, diGibizz suggested LED signboards to bring more customers to the store.",
+							"Redz Collections was able to benefit from more bright, dynamic signage; diGibizz suggested LED signboards to bring more customers to the store. This was done in partnership with Brandpulse Marketing Pvt. Ltd. and Smartech Electronic Systems.",
 					},
 					{
 						bullet: "Accepting UPI Payments - ",
 						content:
-							"Yogesh was able to start accepting UPI payments to his store via a QR code. This meant that his store was able to move cashless and that he can now receive money directly into his bank account from his customers. ",
+							"With the help of Pinnacle Management, NeoGrowth created a branded QR code panel, because of which Yogesh was able to start accepting UPI payments to his store. This meant that his store was able to move cashless and that he can now receive money directly into his bank account from his customers. ",
+					},
+					{
+						bullet: "PayU Payment Gateway Solutions - ",
+						content:
+							"Yogesh can now forward a PayU link via WhatsApp, email, etc., where his customers can pay through over 100 payment modes.",
 					},
 					{
 						bullet: "Digitisation Processes - ",
 						content:
-							"Customer information, billing, stock details and much more were digitised to make the entire sales process faster and more efficient. Customers could now pay using a QR code, allowing Yogesh to receive payments in a much easier manner.",
+							"Customer information, billing, stock details and much more were digitised with the help of Accunity Services. As a result, the entire sales process became much faster and much more efficient. Customers could now pay using a QR code, allowing Yogesh to receive payments in a much easier manner.",
 					},
 					{
 						bullet: "Selling on WhatsApp - ",
@@ -2446,12 +2451,12 @@ export const SUCCESSDATA = [
 			{
 				heading: "Conclusion",
 				desc: [
-					"Redz Collections is a shop in the Tibetan Welfare Association. They faced many challenges while carrying out their business. For starters, there was not much to distinguish their store from the others in the entire complex. Not to mention the fact that Yogesh had a great collection of clothing but lacked the exposure to sell his products online.",
-					"Not only this, but diGibizz observed that the store could benefit from digitisation that would allow a Point-of-Sale system. This would then help to improve their sales process and make stocktaking easier.",
-					"Further, diGibizz implemented Snapbizz, an easy-to-use and efficient POS system. This ensured that Redz Collections was able to store a database of all their products. Snapbizz makes it incredibly easy to store customer information like phone number, order information, etc. Not only this, but it can scan barcodes and keep track of inventory automatically.",
-					"Further, diGibizz by NeoGrowth was able to bring more attention and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts as well as offers to potential customers. This not only differentiated Yogesh's store from the rest at the Tibetan Welfare Association Market, but it also helped attract more customers over time.",
-					"At the outset, diGibizz by NeoGrowth aims to empower small businesses like Yogesh's. The end goal of the efforts by NeoGrowth Credit is to change the lives of families who can benefit from additional funding for their small business.",
-					"Since diGibizz was able to work on Redz Collections, their business has improved significantly, and operations are much easier to carry out. Not only this, but with the Snapbizz Point of Sale system, all the inventory and sales are well accounted for. These changes have played a large role in increasing the efficiency and overall quality of Yogesh's business, Redz Collections.",
+					"Redz Collections is a shop in the Tibetan Welfare Association. They faced many challenges while carrying out their business. For starters, there wasn't much to distinguish their store from the others in the entire complex. Not to mention the fact that Yogesh had a great collection of clothing but lacked the exposure to sell his products online.",
+					"Not only this, but diGibizz observed that the store could benefit from digitisation that would allow a Point Of Sale system. This would then help to improve their sales process and make stocktaking easier.",
+					"Further, diGibizz implemented WiseInvoice POS software, an easy-to-use and efficient POS system. This ensured that Redz Collections was able to store a database of all their products. WiseInvoice makes it incredibly easy to store customer information like phone number, order information, etc. Not only this, but it can scan barcodes and keep track of inventory automatically.",
+					"Further, diGibizz by Neogrowth was able to bring more attention and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts as well as offers to potential customers. This not only differentiated Yogesh's store from the rest at the Tibetan Welfare Association Market, but it also helped attract more customers over time.",
+					"At the outset, diGibizz by Neogrowth aims to empower small businesses like Yogesh's. The end goal of the efforts by Neogrowth Credit is to change the lives of families who can benefit from additional funding for their small business.",
+					"Since diGibizz was able to work on Redz Collections, their business has improved significantly, and operations are much easier to carry out. Not only this but with the PayU payment gateway, Yogesh's customers now have a wide variety of payment modes through which they can perform their transactions. These changes have played a large role in increasing the efficiency and overall quality of Yogesh's business, Redz Collections.",
 				],
 				list: null,
 			},
@@ -2471,19 +2476,18 @@ export const SUCCESSDATA = [
 			{
 				heading: "Executive Summary",
 				desc: [
-					"This case study has been written to examine the effect that diGibizz, by NeoGrowth has had on the transformation of small businesses.",
-					"We will study the case of N.S. Stores, a grocery supermarket belonging to the Small and Medium Enterprise (SME) category. This business run by Chetan and Nikita Shah was doing well but could improve exponentially more if it had the required resources. Processes like book-keeping and billing were not digitized. This caused certain inefficiencies in the business process which hindered the growth of the business.",
-					"DiGibizz was instrumental in transforming N.S. Stores and improving its revenue and growth by up to 30%. Thanks to their digitization of various processes like billing and stocktake. DiGibizz also helped finance the business with the help of NeoGrowth.",
-					"With the help of GlobalLinker, N.S. Stores were able to put themselves on the map and were able to compete with the various SME's in the market.",
+					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the transformation of small businesses.",
+					"We will study the case of N.S. Stores, a grocery supermarket belonging to the Small and Medium Enterprise (SME) category. The small business run by Chetan and Nikita Shah was doing well but could improve far more if it had the required resources. Processes like bookkeeping and billing were not digitized. This caused certain inefficiencies in the business process, which hindered the growth of the business.",
+					"DiGibizz was instrumental in transforming N.S. Stores and improving its revenue and growth by up to 30%. This is thanks to their digitization of various processes like billing and stocktake. Also, thanks to diGibizz, they were able to obtain financing from diGibizz with the help of NeoGrowth.",
 				],
 				list: null,
 			},
 			{
 				heading: "Background",
 				desc: [
-					"Chetan Shah had experience managing a grocery store for around 3 years. His wife, Nikita had inspired Chetan to open his own store since he held both knowledge and the experience to run it.",
-					"As a result of this, N.S. Stores was born. It is a grocery supermarket started by Chetan and Nikita with a variety of brands and products. Since they had started from scratch, they were doing everything manually. From taking stock of products to billing, every business practice was performed manually.",
-					"While the store was generating income, they found that customer traffic and sales could be improved. Apart from this, there were issues with storing customer information. To add to this, there was no interface to better understand how well products were moving and what needed to be changed.",
+					"Chetan Shah had experience managing a grocery store for around 3 years. His wife, Nikita, had inspired Chetan to open his own store since he held both the knowledge and the experience to run it.",
+					"With this, N.S. Stores was born. It is a grocery supermarket started by Chetan and Nikita with a variety of brands and products. Since they had started from scratch, they were doing everything manually. From taking stock of products to billing, every business practice was performed manually.",
+					"While the store was generating income, they found that the customer traffic and sales could be much improved. Apart from this, there were issues with storing customer information. To add to this, there was no interface to better understand how well products were moving and what needed to be changed.",
 				],
 				list: null,
 			},
@@ -2497,14 +2501,15 @@ export const SUCCESSDATA = [
 							"SMEs face tough competition from other larger businesses. Bigger enterprises have established sales and customer information systems that make it easier for them to bring in customers, spread awareness of their brand and sell online.",
 					},
 					{
-						bullet: "Lack of storefront presence to window shoppers - ",
+						bullet: "Lack of storefront presence to passers-by - ",
 						content:
 							"While the location of the store was prominent and, on a corner, the signage of N.S. Stores needed to be improved to gain more attention from local shoppers.",
 					},
 					{
-						bullet: "Customers prefer to shop remotely due to the pandemic - ",
+						bullet:
+							"Customers prefer to shop remotely because of the pandemic - ",
 						content:
-							"Customers prefer to shop online due to the COVID-19 pandemic.",
+							"Customers prefer to shop online because of the fear of infection from COVID-19.",
 					},
 					{
 						bullet: "Ineffective signage - ",
@@ -2514,12 +2519,12 @@ export const SUCCESSDATA = [
 					{
 						bullet: "Manual bookkeeping - ",
 						content:
-							"Manually performing bookkeeping is comparatively slow and tedious to automated solutions.",
+							"Manually performing bookkeeping is comparatively slow and tedious as compared to automatic solutions.",
 					},
 					{
 						bullet: "Difficulties with taking stock of products - ",
 						content:
-							"It’s hard to take stock of every single product when the entire process is performed manually.",
+							"It is hard to take stock of every single product when the entire process is performed manually.",
 					},
 					{
 						bullet: "Inefficient billing because of lack of digitization - ",
@@ -2529,15 +2534,15 @@ export const SUCCESSDATA = [
 					{
 						bullet: "Need for business financing - ",
 						content:
-							"It’s difficult for businesses to renovate and scale their operations without adequate financing in the form of procurement of a small business loan.",
+							"It is difficult for businesses to renovate and scale their operations without adequate financing in the form of procurement of a small business loan.",
 					},
 				],
 			},
 			{
 				heading: "Proposed Solutions",
 				desc: [
-					"Many factors could be improved for N.S. Stores that would lead to better customer experiences, improve sales, and help the store receive more attention from potential customers.",
-					"To improve the business efficiency of N.S. Stores, diGiBizz proposed the following solutions -",
+					"Many factors could be improved regarding N.S. Stores that would lead to better customer experiences, improve sales, and help the store receive more attention from potential customers.",
+					"To improve the situation of N.S. Stores, diGibizz proposed the following solutions - ",
 				],
 				list: [
 					{
@@ -2560,11 +2565,11 @@ export const SUCCESSDATA = [
 						content:
 							"Everything from billing, customer information, stocktake, and product information was digitized to help save time and energy. This greatly improved the efficiency of the store and helped make business operations much easier.",
 					},
-					{
-						bullet: "Register with GlobalLinker - ",
-						content:
-							"GlobalLinker is a global network for SMEs to communicate with each other and receive the services that they require. Financing, spreading awareness, and aiding in growth is the main objective for registering with GlobalLinker.",
-					},
+					// {
+					// 	bullet: "Register with GlobalLinker - ",
+					// 	content:
+					// 		"GlobalLinker is a global network for SMEs to communicate with each other and receive the services that they require. Financing, spreading awareness, and aiding in growth is the main objective for registering with GlobalLinker.",
+					// },
 					{
 						bullet: "Creation of an online store - ",
 						content:
@@ -2576,10 +2581,10 @@ export const SUCCESSDATA = [
 				heading: "Conclusion",
 				desc: [
 					"Chetan and Nikita Shah reached out to diGibizz by NeoGrowth to help improve their operations and expand their business. With the strong foundation of a neat and presentable grocery store, the stage was set to take N.S. Stores to the next level.",
-					"DiGibizz was able to identify several key factors required to be revamped. As discussed above, the billing, stock handling, and customer information databases needed to be digitally created. This will help improve the efficiency of the business processes. DiGibizz was able to finance the requirements for N.S. Stores to help them upgrade their systems and put them on the digital map.",
-					"Furthermore, diGibizz was able to bring more visibility and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts & offers to potential customers.",
-					"DiGibizz introduced N.S. Stores to Snapbizz, a highly efficient online Point of Sale management system. This allowed them to take care of billing and discount related operations in a purely digitized manner. It made it far easier to understand the sales and customer patterns that the store was experiencing.",
-					"N.S. Stores was registered with GlobalLinker, a digital business network for SMEs. They help provide services and financing to businesses in different countries across the globe. Besides this, diGibizz was instrumental in creating an online store for N.S. Stores so that they could receive online orders and fulfil them with ease. With the help of the implementations by diGibizz, N.S. Stores were able to improve their revenue by up to 30%.",
+					"DiGibizz was able to identify several key factors required to be revamped. As discussed above, the billing, stock handling, and customer information databases needed to be created completely digitally. This would help to make business processes more efficient. DiGibizz was able to finance the requirements for N.S. Stores to help them upgrade their systems and put them on the digital map.",
+					"Further, diGibizz by NeoGrowth was able to bring more attention and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts and offers to potential customers.",
+					"DiGibizz had introduced N.S. Stores to Snapbizz, a highly efficient online Point of Sale management system. This allowed them to take care of billing and discount related operations in a purely digitized manner. It made it far easier to understand the sales and customer patterns that the store was experiencing.",
+					"Besides this, diGibizz was instrumental in creating an online store for N.S. Stores so that they could receive online orders and fulfil them with ease. With the help of the implementations by diGibizz, N.S. Stores were able to improve the customer footfall by 30%.",
 				],
 				list: null,
 			},
