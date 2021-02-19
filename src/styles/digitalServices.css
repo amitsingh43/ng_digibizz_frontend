@@ -140,7 +140,6 @@ h2 {
 .services-main .partner-card .img-responsive {
 	width: 250px;
 }
-
 @media (min-width: 48rem) and (max-width: 75rem) {
 	.services-main .top-content {
 		text-align: center;
@@ -153,6 +152,16 @@ h2 {
 
 	.services-main .partner-card {
 		display: flex;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1240px) {
+	.services-main .partner-card .col-md-7,
+	.services-main .partner-card {
+		max-height: 420px;
+	}
+	.services-main .partner-card .col-md-4 {
+		height: 420px;
 	}
 }
 
