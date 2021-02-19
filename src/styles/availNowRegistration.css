@@ -198,7 +198,10 @@
 		align-items: center;
 	}
 	.avail-now-reg .logo-content img {
-		width: 50%;
+		width: 32vw;
+	}
+	.avail-now-reg .img-responsive {
+		max-width: fit-content;
 	}
 	.avail-now-reg .mobile-card {
 		display: flex;
