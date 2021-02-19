@@ -2733,7 +2733,7 @@ const SYROW = {
 	],
 	image: syrow,
 	backgroundColor: "#fff",
-	url: "https://www.syrow.com/partner/NeoGrowth/mvs/",
+	url: "https://www.syrow.com/partner/neogrowth/mvz/",
 };
 const SMARTECH = {
 	title: "Smartech Electronic Systems",
