@@ -18,6 +18,11 @@ const Percetage = (props) => {
 const RecCard = ({ recommendations }) => {
 	const results = recommendations;
 	const history = useHistory();
+	const excludeReports = [
+		"delivery_services",
+		"digital_khata",
+		"manage_payments",
+	];
 	return (
 		<div className="row ">
 			{results &&
@@ -26,7 +31,13 @@ const RecCard = ({ recommendations }) => {
 						<Percetage image_url={recommendation.image_url} />
 						<div style={{ height: "fit-content" }}>{recommendation.name}</div>
 						<p
-							style={{ wordSpacing: 0, fontSize: 17 }}
+							style={{
+								wordSpacing: 0,
+								fontSize: 17,
+								display: excludeReports.includes(recommendation.category)
+									? "none"
+									: "block",
+							}}
 							onClick={() =>
 								history.push({
 									pathname: "/services",

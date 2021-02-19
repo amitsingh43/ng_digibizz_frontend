@@ -2622,6 +2622,17 @@ const ACCUNITY_SERVICES2 = {
 	backgroundColor: "#fff",
 	url: "http://accunityservices.com/msme.html",
 };
+const ACCUNITY_SERVICES3 = {
+	title: "Accunity Services",
+	subTitle: ["10% off on all our services."],
+	description: [
+		"Billing & Accounting Software Services for Small Businesses.",
+		"Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
+	],
+	image: accunity,
+	backgroundColor: "#fff",
+	url: "http://accunityservices.com/msme.html",
+};
 const MOBICOMMERCE = {
 	title: "MobiCommerce",
 	subTitle: [
@@ -2825,7 +2836,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Billing & Accounting",
-		data: [SNAPBIZZ, ACCUNITY_SERVICES2],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES3],
 		tag: "billing_and_accounting",
 	},
 	// {
