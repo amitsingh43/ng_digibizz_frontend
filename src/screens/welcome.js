@@ -39,7 +39,15 @@ const SideText = (props) => {
 						// paddingTop: 10,
 					}}
 				>
-					<span style={{ cursor: "pointer" }}>
+					<span
+						style={{ cursor: "pointer" }}
+						onClick={() =>
+							window.open(
+								"https://www.youtube.com/watch?v=fW-eU-7SfMk&feature=youtu.be",
+								"_blank"
+							)
+						}
+					>
 						Watch to know more <img alt="play" src={welcome_youtube} />
 					</span>
 				</span>
@@ -413,7 +421,6 @@ function Welcome({ header_reset, homepage_decrement, userDetails }) {
 			<div className="success-stories1">
 				<SuccessStories />
 			</div>
-			<Footer />
 		</div>
 	);
 }

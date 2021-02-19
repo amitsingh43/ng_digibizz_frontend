@@ -583,7 +583,6 @@ const TAndC = ({ showmore, setCheck }) => {
 				style={{ width: "100vw", height: "10vh" }}
 				onClick={() => showmore(false)}
 			></div>
-			<Footer />
 		</div>
 	);
 };

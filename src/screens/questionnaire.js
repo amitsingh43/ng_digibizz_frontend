@@ -194,7 +194,6 @@ function Questionnaire({
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

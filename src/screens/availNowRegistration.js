@@ -189,7 +189,6 @@ const AvailNowRegistration = ({
 					/>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 };

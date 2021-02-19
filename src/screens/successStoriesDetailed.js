@@ -82,7 +82,7 @@ const DetailedCard = ({ story }) => {
 						wmode="Opaque"
 						src={
 							"https://www.youtube.com/embed/" +
-							videoID +
+							story.videoID +
 							"?modestbranding=1&autoplay=1&controls=0&rel=0&wmode=transparent"
 						}
 					>
@@ -165,7 +165,6 @@ function SuccessStoriesDetailed({ header_success_stories, match }) {
 					<MainContent story={story} />
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

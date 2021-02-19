@@ -2201,6 +2201,7 @@ export const SUCCESSDATA = [
 		image: sone,
 		type: "video",
 		topContent: "Reshma Deokar",
+		videoID: "Wp1xQBTQtOI",
 		content:
 			"In the fast-evolving pharma sector, diGibizz has supported a woman entrepreneur like me at the right time to upgrade my business. Today, my business has grown to the next level with their support.",
 		blog: [
@@ -2343,6 +2344,7 @@ export const SUCCESSDATA = [
 		image: stwo,
 		type: "video",
 		topContent: "Yogesh Dale",
+		videoID: "HRKHix8IbQE",
 		content:
 			"I am a small-town boy with big aspirations; I own an apparel shop. During the pandemic, the apparel sector was hit the most. At this time diGibizz appropriately channelized my sales through various channels and helped me generate higher revenue. ",
 		blog: [
@@ -2464,6 +2466,7 @@ export const SUCCESSDATA = [
 		image: sthree,
 		type: "video",
 		topContent: "Chetan Shah",
+		videoID: "0LSB83c-Eng",
 		content:
 			"Moving business to a new location brings along new challenges. With support of diGibizz we are now well equipped digitally to provide faster and hassle-free services to our customers. ",
 		blog: [

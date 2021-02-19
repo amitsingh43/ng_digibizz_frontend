@@ -213,7 +213,6 @@ function DigitalServices({ header_digital_services, user, update_lead }) {
 					</div>
 				))}
 			</div>
-			<Footer />
 		</div>
 	);
 }

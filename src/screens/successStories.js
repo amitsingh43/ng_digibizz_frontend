@@ -43,7 +43,6 @@ function SuccessStories({ header_success_stories }) {
 					/>
 				</div>
 			))}
-			<Footer />
 		</div>
 	);
 }

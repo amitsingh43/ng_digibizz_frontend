@@ -17,6 +17,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { connect } from "react-redux";
 import { show_toast, clear_error } from "./store/actions";
+import Footer from "./components/main/footer";
 // import ExitPopUp from "./components/main/exitPopup";
 function App({ errorMessage, clear_error }) {
 	// const [showPopUp, togglePopUp] = useState(false);
@@ -33,7 +34,7 @@ function App({ errorMessage, clear_error }) {
 		}
 	}, [errorMessage]);
 	return (
-		<div>
+		<div style={{ minHeight: "100vh" }}>
 			<Router>
 				<ToastContainer
 					position="bottom-left"
@@ -97,6 +98,7 @@ function App({ errorMessage, clear_error }) {
 						render={(props) => <AvailNowRegistration {...props} />}
 					/>
 				</Switch>
+				<Footer />
 			</Router>
 		</div>
 	);

@@ -77,7 +77,6 @@ function Report({
 						third-party providers of products or services.
 					</p>
 				</div>
-				<Footer />
 			</div>
 		);
 	}

@@ -151,7 +151,6 @@ function UserGuideDetailed({ header_user_guide, match }) {
 				</div>
 			</div>
 			<Disclaimer />
-			<Footer />
 		</div>
 	);
 }

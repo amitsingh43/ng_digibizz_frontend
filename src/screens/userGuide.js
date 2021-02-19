@@ -41,7 +41,6 @@ function UserGuide({ header_user_guide, headerState, set_user_guide_details }) {
 					/>
 				</div>
 			))}
-			<Footer />
 		</div>
 	);
 }

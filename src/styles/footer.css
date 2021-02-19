@@ -19,7 +19,6 @@
 
 @media (min-width: 48rem) and (max-width: 75rem) {
 	.fixed-bottom {
-		bottom: -60px;
 		text-align: center;
 		padding: 10px 0;
 		line-height: normal;
@@ -36,6 +35,15 @@
 	}
 	.col-lg-5 {
 		width: 35%;
+	}
+}
+
+@media (min-width: 1201px) and (max-width: 1333px) {
+	.fixed-bottom .col-lg-5 {
+		width: 30vw;
+	}
+	.fixed-bottom .col-lg-4 {
+		width: 40vw;
 	}
 }
 
