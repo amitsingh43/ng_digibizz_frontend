@@ -27,11 +27,12 @@
 
 .user-guide-top-image {
 	/* margin: 0px 130px 0px 90px; */
-}
-
-.user-guide-top-image img {
 	width: auto;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+.user-guide-top-image .go_back {
+	display: none;
+	cursor: pointer;
 }
 
 .success-stories-detailed .detailed-card-1 {
@@ -109,7 +110,7 @@
 
 .user-guide-top-image .thumbnail {
 	width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .success-stories-detailed .bgimage {
@@ -163,12 +164,12 @@ hr {
 .success-stories-detailed .main-content .heading {
 	color: #28b04b;
 	font-weight: bolder;
-	font-size: 30px;
+	font-size: 24px;
 	margin-bottom: 30px;
 }
 
 .success-stories-detailed .main-content .p {
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 100;
 	color: black;
 	line-height: 32px;
@@ -190,7 +191,7 @@ hr {
 }
 .img-content p,
 .right-img-content p {
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 100;
 	color: black;
 	padding: 0px 20px;
@@ -213,9 +214,6 @@ hr {
 	.success-stories-detailed .top-content {
 		text-align: center;
 		font-size: 28px;
-	}
-	.success-stories-detailed .main-content .heading {
-		font-size: 25px;
 	}
 	.success-stories-detailed .main-content .p,
 	.img-content p,
@@ -247,18 +245,33 @@ hr {
 	.success-stories-detailed .thumbnail {
 		/* width: 100px; */
 	}
+	.success-stories-detailed .detailed-card-1 .bgimage {
+		height: 410px;
+		width: 100%;
+	}
 }
 
 @media (max-width: 48rem) {
+	.user-guide-top-image .thumbnail {
+		height: auto;
+	}
 	.success-stories-detailed {
 		padding: 0px;
 	}
 	.success-stories-detailed .main-content .heading {
-		font-size: 20px;
 		font-weight: bolder;
 	}
 	.user-guide-top-image {
 		margin: 0px 0px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 100vw;
+		height: 180px;
+		border: 0px;
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0);
+	}
+	.user-guide-top-image .go_back {
+		display: block;
 	}
 	.success-stories-detailed .row {
 		padding: 10px;
@@ -288,6 +301,10 @@ hr {
 	.success-stories-detailed .detailed-card-1 .bgimage {
 		/* width: 100%; */
 		margin-top: 20px;
+		height: 360px;
+
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 	.success-stories-detailed .main-content {
 		background-color: white;
@@ -308,19 +325,19 @@ hr {
 	.right-img-content img {
 		width: 100%;
 	}
-	.success-stories-detailed .main-content .heading {
-		font-size: 21px;
-	}
 	.only-content .section-heading {
 		font-size: 17px;
 	}
 	.success-stories-detailed .main-content .p,
 	.img-content p,
 	.right-img-content p {
-		font-size: 15px;
+		font-size: 16px;
 	}
 	.img-content p,
 	.right-img-content p {
 		padding: 20px 0px 0px 0px;
+	}
+	.success-stories-detailed .detailed-card-1 .profile-pic {
+		margin-right: 20px;
 	}
 }

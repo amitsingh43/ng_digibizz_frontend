@@ -18,11 +18,11 @@ export const services = [
 		label: "Sell Online",
 		tag: "sell_online",
 	},
-	{
-		image: delivery_services,
-		label: "Delivery Services",
-		tag: "delivery_services",
-	},
+	// {
+	// 	image: delivery_services,
+	// 	label: "Delivery Services",
+	// 	tag: "delivery_services",
+	// },
 	{
 		image: business_loans,
 		label: "Business Loans",
@@ -35,7 +35,7 @@ export const services = [
 	},
 	{
 		image: create_website_and_app,
-		label: "Create Website or mobile app",
+		label: "Create Website or Mobile App",
 		tag: "create_website_and_app",
 	},
 	{
@@ -43,11 +43,11 @@ export const services = [
 		label: "Billing & Accounting",
 		tag: "billing_and_accounting",
 	},
-	{
-		image: digital_khata,
-		label: "Digital Khata",
-		tag: "digital_khata",
-	},
+	// {
+	// 	image: digital_khata,
+	// 	label: "Digital Khata",
+	// 	tag: "digital_khata",
+	// },
 	{
 		image: tax_fling_and_legal,
 		label: "Tax Filing & Legal",
@@ -58,11 +58,11 @@ export const services = [
 		label: "Social Media Marketing",
 		tag: "social_media_marketing",
 	},
-	{
-		image: manage_payments,
-		label: "Manage Payments",
-		tag: "manage_payments",
-	},
+	// {
+	// 	image: manage_payments,
+	// 	label: "Manage Payments",
+	// 	tag: "manage_payments",
+	// },
 	{
 		image: manage_staff,
 		label: "Manage Staff",
@@ -70,7 +70,7 @@ export const services = [
 	},
 	{
 		image: customer_loyalty_and_promotions,
-		label: "Customer Loyalty & promotions",
+		label: "Customer Loyalty & Promotions",
 		tag: "customer_loyalty_and_promotions",
 	},
 	{

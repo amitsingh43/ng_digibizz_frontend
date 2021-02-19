@@ -19,3 +19,4 @@ export const RESET_QUESTIONNAIRE = "RESET_QUESTIONNAIRE";
 export const ADD_ERROR = "ADD_ERROR";
 export const CLEAR_ERROR = "CLEAR_ERROR";
 export const NONE_OF_THE_ABOVE = "NONE_OF_THE_ABOVE";
+export const RESET_STORE = "RESET_STORE";

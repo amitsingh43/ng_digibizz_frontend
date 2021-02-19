@@ -92,7 +92,7 @@ h2 {
 	padding: 0px;
 	margin: 0px;
 	margin-top: 20px;
-	height: 300px;
+	max-height: 350px;
 	background-color: white;
 	border-radius: 10px;
 	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.1));
@@ -105,7 +105,7 @@ h2 {
 .services-main .partner-card .col-md-4 {
 	display: flex;
 	border-radius: 10px;
-	height: 100%;
+	height: 350px;
 	padding: 0px 20px;
 	justify-content: center;
 	align-items: center;
@@ -117,6 +117,7 @@ h2 {
 }
 
 .services-main .partner-card .col-md-7 {
+	max-height: 350px;
 	padding: 20px;
 }
 
@@ -136,7 +137,9 @@ h2 {
 	background-color: #28b04b;
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-
+.services-main .partner-card .img-responsive {
+	width: 250px;
+}
 @media (min-width: 48rem) and (max-width: 75rem) {
 	.services-main .top-content {
 		text-align: center;
@@ -152,6 +155,16 @@ h2 {
 	}
 }
 
+@media (min-width: 992px) and (max-width: 1240px) {
+	.services-main .partner-card .col-md-7,
+	.services-main .partner-card {
+		max-height: 420px;
+	}
+	.services-main .partner-card .col-md-4 {
+		height: 420px;
+	}
+}
+
 @media (max-width: 48rem) {
 	.services-main {
 		margin: 0px;
@@ -164,6 +177,9 @@ h2 {
 	.services-main .top-content {
 		text-align: center;
 	}
+	.services-main .top-content p {
+		padding-right: 20px;
+	}
 
 	.services-main .service-category .one {
 		display: grid;
@@ -172,6 +188,8 @@ h2 {
 	}
 	.services-main .partner-card {
 		display: flex;
+		min-height: 350px;
+		width: 100%;
 	}
 	.services-main .partner-card .col-md-7 {
 		padding: 10px 10px 0px 10px;
@@ -183,6 +201,15 @@ h2 {
 		margin-left: 30px;
 	}
 	.services-main .partner-card .col-md-4 {
-		width: 100%;
+		width: 32vw;
+	}
+	.services-main .partner-card .avial-now {
+		margin-bottom: 20px;
+	}
+	.services-main .partner-card .img-responsive {
+		max-width: 30vw;
+	}
+	.services-main .partner-card .col-md-4 .img-responsive {
+		width: auto;
 	}
 }

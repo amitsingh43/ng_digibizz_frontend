@@ -1,9 +1,12 @@
-import { ADD_ANSWER, NONE_OF_THE_ABOVE } from "../actionTypes";
+import { ADD_ANSWER, NONE_OF_THE_ABOVE, RESET_STORE } from "../actionTypes";
 
 const initialState = [];
 
 const answers = (state = initialState, action) => {
 	switch (action.type) {
+		case RESET_STORE:
+			state = initialState;
+			return state;
 		case NONE_OF_THE_ABOVE:
 			let with_none = [...state].filter((val) => {
 				let id = val.id;

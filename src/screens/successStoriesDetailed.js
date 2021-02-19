@@ -10,11 +10,17 @@ import play_logo from "../assets/youtube.svg";
 import { SUCCESSDATA } from "../store/strings";
 import { useHistory } from "react-router-dom";
 const TopContent = ({ story }) => {
+	const history = useHistory();
 	return (
 		<div className="top-content">
 			<div>
-				{"Success Stories    >>   "}
-				<span>{story.topContent}</span>
+				<div
+					style={{ cursor: "pointer", float: "left" }}
+					onClick={() => history.push("/successStories")}
+				>
+					{"Success Stories    >>   "}
+				</div>
+				<span style={{ clear: "both" }}>{story.topContent}</span>
 			</div>
 		</div>
 	);
@@ -28,11 +34,18 @@ const DetailedCard = ({ story }) => {
 			<div className="col-lg-6 left-content">
 				<div className="row img-title col-xs-12">
 					<div className="col-lg-4 img-div">
-						<img
+						<div
+							className="col-lg-12 col-xs-4 profile-pic"
+							style={{
+								backgroundImage: `url(${story.image})`,
+								backgroundSize: "contain",
+							}}
+						></div>
+						{/* <img
 							className="col-lg-12 col-xs-4 profile-pic"
 							src={story.image}
 							alt="profile_picture"
-						/>
+						/> */}
 					</div>
 					<div className="col-lg-8 col-xs-8 title-div">
 						<div className="row title">
@@ -61,7 +74,7 @@ const DetailedCard = ({ story }) => {
 					border: 0,
 				}}
 			>
-				{showVideo && story.type === "video" && (
+				{story.type === "video" && (
 					<iframe
 						style={{ width: "100%", height: "100%" }}
 						title="jfdsjj"
@@ -69,21 +82,21 @@ const DetailedCard = ({ story }) => {
 						wmode="Opaque"
 						src={
 							"https://www.youtube.com/embed/" +
-							videoID +
-							"?modestbranding=1&autoplay=1&controls=0&rel=0&wmode=transparent"
+							story.videoID +
+							"?modestbranding=1&autoplay=0&controls=0&rel=0&wmode=transparent"
 						}
 					>
 						<h1 style={{ zIndex: 99, color: "yellow" }}>Close</h1>
 					</iframe>
 				)}
-				{!showVideo && story.type === "video" && (
+				{/* {!showVideo && story.type === "video" && (
 					<img
 						onClick={() => toggleVideo(!showVideo)}
 						className="play-button"
 						src={play_logo}
 						alt="play_button"
 					/>
-				)}
+				)} */}
 			</div>
 		</div>
 	);
@@ -152,7 +165,6 @@ function SuccessStoriesDetailed({ header_success_stories, match }) {
 					<MainContent story={story} />
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

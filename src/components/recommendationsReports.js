@@ -18,15 +18,26 @@ const Percetage = (props) => {
 const RecCard = ({ recommendations }) => {
 	const results = recommendations;
 	const history = useHistory();
+	const excludeReports = [
+		"delivery_services",
+		"digital_khata",
+		"manage_payments",
+	];
 	return (
 		<div className="row ">
 			{results &&
 				results.map((recommendation, index) => (
 					<div className="col-lg-2 col-xs-6 card" key={index}>
 						<Percetage image_url={recommendation.image_url} />
-						{recommendation.name}
+						<div style={{ height: "fit-content" }}>{recommendation.name}</div>
 						<p
-							style={{ wordSpacing: 0, fontSize: 17 }}
+							style={{
+								wordSpacing: 0,
+								fontSize: 17,
+								display: excludeReports.includes(recommendation.category)
+									? "none"
+									: "block",
+							}}
 							onClick={() =>
 								history.push({
 									pathname: "/services",
@@ -34,7 +45,9 @@ const RecCard = ({ recommendations }) => {
 								})
 							}
 						>
+							<br />
 							Know more
+							<br />
 						</p>
 					</div>
 				))}
@@ -55,7 +68,7 @@ const DetailView = ({ downloadText, setDownloadText }) => {
 					<img src={download} alt="download" />
 				</div>
 			</div>
-			<p style={{ fontWeight: "normal" }}>
+			{/* <p style={{ fontWeight: "normal" }}>
 				Explore our services at{" "}
 				<span>
 					<a
@@ -66,7 +79,7 @@ const DetailView = ({ downloadText, setDownloadText }) => {
 						www.neogrowth.in/partners
 					</a>
 				</span>
-			</p>
+			</p> */}
 		</div>
 	);
 };

@@ -1,4 +1,4 @@
-import { SET_QUESTIONS, GET_QUESTIONS } from "../actionTypes";
+import { SET_QUESTIONS, GET_QUESTIONS, RESET_STORE } from "../actionTypes";
 
 const questionsList = (state = [], action) => {
 	switch (action.type) {
@@ -7,6 +7,9 @@ const questionsList = (state = [], action) => {
 			return state;
 		case GET_QUESTIONS:
 			return [...state];
+		case RESET_STORE:
+			state = [];
+			return state;
 		default:
 			return state;
 	}

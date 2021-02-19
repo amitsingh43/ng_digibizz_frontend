@@ -1,7 +1,7 @@
 .home-container {
 	color: #68696a;
 	font-family: "Rubik", sans-serif;
-	min-height: 100vh;
+	min-height: 85vh;
 }
 
 .home-container a {
@@ -120,7 +120,7 @@ select {
 }
 
 .home-container .row3 {
-	margin-top: 170px;
+	margin-top: 0px;
 }
 
 .row3 a {
@@ -156,6 +156,7 @@ select {
 	float: right;
 	cursor: pointer;
 	font-weight: bold;
+	font-size: 14px;
 }
 
 #mr-or-mrs {
@@ -178,6 +179,7 @@ select {
 		padding: 0px;
 		margin: 0px 25px;
 		text-align: left;
+		min-height: fit-content;
 	}
 	.about {
 		margin-top: 20px;

@@ -12,6 +12,7 @@ import {
 } from "../store/actions";
 import "../styles/home.css";
 import Footer from "../components/main/footer";
+import TAndC from "../components/termsAndConditions";
 
 import {
 	TELL_ABOUT_YOU,
@@ -83,13 +84,14 @@ function Home({
 	const _next = () => {
 		if (homepageCounter < 2) {
 			var NumberRegex = /^[0-9]*$/;
+			var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 			if (name.length === 0) {
 				add_error("Please enter your full name");
 				return;
 			} else if (mobile.length !== 10 || !NumberRegex.test(mobile)) {
 				add_error("Please enter a valid mobile number");
 				return;
-			} else if (email.length === 0) {
+			} else if (email.length === 0 || !emailRegex.test(email)) {
 				add_error("Please enter a valid email");
 				return;
 			}
@@ -98,6 +100,10 @@ function Home({
 		} else {
 			if (otherCity === "" && text === "Other") {
 				add_error("Please specify your city.");
+				return;
+			}
+			if (businessName.length === 0) {
+				add_error("Please enter a valid Business Name");
 				return;
 			}
 			var GENDER = gender[0]._id ? gender[0]._id : "";
@@ -120,6 +126,9 @@ function Home({
 	const _back = () => {
 		homepage_decrement();
 	};
+	if (more) {
+		return <TAndC showmore={showmore} setCheck={setCheck} />;
+	}
 	return (
 		<div>
 			<div className="home-container">
@@ -248,12 +257,15 @@ function Home({
 									onChange={(e) => setEmail(e.target.value)}
 								/>
 								<div className="heading" style={{ marginTop: 100 }}>
-									Referral Code
+									Referral Code{" "}
+									<span style={{ color: "grey" }}>(optional)</span>
 								</div>
 								<input
 									type="text"
-									placeholder="optional"
 									id="referral"
+									readOnly
+									onFocus={(e) => e.target.removeAttribute("readonly")}
+									autoComplete="off"
 									className="col-xs-12"
 									value={referralCode}
 									onChange={(e) => setReferralCode(e.target.value)}
@@ -328,21 +340,15 @@ function Home({
 									</span>
 								</a>{" "}
 								{TERMS_AND_CONDITIONS_2}
-								{!more && (
-									<span className="more" onClick={() => showmore(!more)}>
-										More+
-									</span>
-								)}
-								{more && (
-									<p>
-										{TERMS_AND_CONDITIONS_DETAILED1}
-										<br />
-										{TERMS_AND_CONDITIONS_DETAILED2}
-										<span className="more" onClick={() => showmore(!more)}>
-											Less-
-										</span>
-									</p>
-								)}
+								<span
+									className="more"
+									onClick={() => {
+										showmore(!more);
+										window.scrollTo(0, 0);
+									}}
+								>
+									{more ? "Less-" : "More+"}
+								</span>
 							</div>
 						</div>
 					</div>
@@ -371,13 +377,12 @@ function Home({
 						<div className="outer-button">
 							<div className="button" onClick={submitLead}>
 								{homepageCounter === 1 && "Next"}
-								{homepageCounter === 2 && "Check your digital score"}
+								{homepageCounter === 2 && "Check your Digital Score"}
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

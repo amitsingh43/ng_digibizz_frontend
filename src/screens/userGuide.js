@@ -9,7 +9,7 @@ import "../styles/successStories.css";
 const Content = () => {
 	return (
 		<div>
-			<h1>Knowledge Portal</h1>
+			<h1>Knowledge Center</h1>
 			<div className="row">
 				<p className="col-lg-8">
 					Begin your business transformation journey now by browsing through our
@@ -41,7 +41,6 @@ function UserGuide({ header_user_guide, headerState, set_user_guide_details }) {
 					/>
 				</div>
 			))}
-			<Footer />
 		</div>
 	);
 }

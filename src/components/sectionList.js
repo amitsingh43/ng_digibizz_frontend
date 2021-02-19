@@ -29,7 +29,7 @@ const VerticalList = (props) => {
 						<div className="line"></div>
 					</div>
 
-					<div className="content">Digital Fullfilment</div>
+					<div className="content">Digital Fulfilment</div>
 				</div>
 			)}
 
@@ -127,7 +127,7 @@ const HorizontalSectionList = (props) => {
 								: "col-lg-2 col-xs-2 content"
 						}
 					>
-						Digital Fullfilment
+						Digital Fulfilment
 					</span>
 				)}
 				<span
@@ -232,7 +232,7 @@ const HorizontalSectionList = (props) => {
 				</span>
 				{questionsList.length !== 4 && (
 					<span className="col-lg-2 col-xs-2 content">
-						{section === 2 && "Digital Fullfilment"}
+						{section === 2 && "Digital Fulfilment"}
 					</span>
 				)}
 				<span className="col-lg-2 col-xs-2 content">

@@ -10,7 +10,13 @@ function Footer() {
 			<div className="col-lg-5"></div>
 			<div className="col-lg-4 ">
 				© Copyright {new Date().getFullYear()} NeoGrowth, All Rights Reserved .
-				Disclaimer
+				<a
+					href="https://www.neogrowth.in/disclaimer/"
+					target="_blank"
+					style={{ textDecoration: "none", color: "white" }}
+				>
+					Disclaimer
+				</a>
 			</div>
 			<div className="images">
 				{" "}

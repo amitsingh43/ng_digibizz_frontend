@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { header_digital_services, update_lead } from "../store/actions";
 import { connect } from "react-redux";
 import { services } from "../store/services_mapping";
@@ -11,6 +11,11 @@ const TopContent = () => {
 	return (
 		<div className="col-md-12 top-content">
 			<h1>Explore Services</h1>
+			<p style={{ wordSpacing: "normal" }}>
+				Reimagine and transform your business with a full range of services
+				offered by our digital partners, crafted exclusively for you with
+				special offers and discounts.
+			</p>
 		</div>
 	);
 };
@@ -26,7 +31,9 @@ const ServicesCategory = () => {
 					<div
 						key={index}
 						className="cat"
-						onClick={() => (window.location.hash = `#${service.tag}`)}
+						onClick={() => {
+							window.location.hash = `#${service.tag}`;
+						}}
 					>
 						<img src={service.image} />
 						<div className="labell">{service.label}</div>
@@ -47,6 +54,7 @@ const PartnerCard = (props) => {
 		user,
 		tag,
 		update_lead,
+		url,
 	} = props;
 	const history = useHistory();
 	const _availNow = () => {
@@ -56,17 +64,30 @@ const PartnerCard = (props) => {
 				partner_availed: title,
 			};
 			update_lead(body);
+			window.open(url, "_blank");
 		} else {
 			history.push({
 				pathname: "/reg",
 				state: {
-					data: { title, description, image, subTitle, tag },
+					data: {
+						title,
+						description,
+						image,
+						subTitle,
+						tag,
+						url,
+						backgroundColor,
+					},
 				},
 			});
 		}
 	};
+	const [viewMore, toggleViewMore] = useState(false);
 	return (
-		<div className=" col-md-5  partner-card ">
+		<div
+			className=" col-md-5  partner-card "
+			style={{ backgroundColor: "#E9F7ED" }}
+		>
 			<div className=" col-md-4" style={{ backgroundColor: backgroundColor }}>
 				<img
 					style={{ borderRadius: 10 }}
@@ -75,20 +96,49 @@ const PartnerCard = (props) => {
 					alt="partner"
 				/>
 			</div>
-			<div className=" col-md-7">
+			<div
+				className=" col-md-7"
+				style={{ overflowY: viewMore ? "scroll" : "hidden" }}
+			>
 				<h3>{title}</h3>
-				{subTitle && <div className="sub-title">{subTitle}</div>}
-				<p>{description}</p>
+				{subTitle && (
+					<div className="sub-title">
+						{subTitle.map((offer, index) => (
+							<div key={index} style={{ marginBottom: 5 }}>
+								{offer}
+							</div>
+						))}
+					</div>
+				)}
+				<p>{description[0]}</p>
+				{viewMore &&
+					description.map((val, index) => (
+						<p
+							key={index}
+							style={{
+								padding: 0,
+								margin: 0,
+								marginTop: 15,
+								marginBottom: 15,
+								display: index === 0 ? "none" : "block",
+							}}
+						>
+							{val}
+						</p>
+					))}
+				<span
+					style={{
+						color: "#28b04b",
+						cursor: "pointer",
+						display: description.length === 1 ? "none" : "block",
+					}}
+					onClick={() => toggleViewMore(!viewMore)}
+				>
+					{viewMore ? "View Less-" : "View more+"}
+				</span>
 				<div
 					className="avial-now"
 					onClick={() => {
-						if (title === "NeoGrowth") {
-							var win = window.open(
-								"https://www.neogrowth.in/register-form/",
-								"_blank"
-							);
-							win.focus();
-						}
 						_availNow();
 					}}
 				>
@@ -118,6 +168,7 @@ const Services = (props) => {
 							image={data.image}
 							title={data.title}
 							tag={data.tag}
+							url={data.url}
 							description={data.description}
 							backgroundColor={data.backgroundColor}
 						/>
@@ -128,9 +179,9 @@ const Services = (props) => {
 		</div>
 	);
 };
-
 function DigitalServices({ header_digital_services, user, update_lead }) {
 	const location = useLocation();
+	const history = useHistory();
 	useEffect(() => {
 		header_digital_services();
 		var PATH = "";
@@ -165,7 +216,6 @@ function DigitalServices({ header_digital_services, user, update_lead }) {
 					</div>
 				))}
 			</div>
-			<Footer />
 		</div>
 	);
 }

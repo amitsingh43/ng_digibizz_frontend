@@ -16,7 +16,7 @@ function UnderstandReport({ section_results }) {
 			image: digital_discovery,
 		},
 		{
-			title: "Digital Fulfillment",
+			title: "Digital Fulfilment",
 			desc:
 				"Recommends the best practices to be adopted for the best buyer experience such as partnerships with delivery platforms. ",
 			image: digital_fulfillment,
@@ -24,7 +24,7 @@ function UnderstandReport({ section_results }) {
 		{
 			title: "Digital Transactions",
 			desc:
-				"Understands your current transaction process and provides key insights into the best digital financial instruments. ",
+				"Understands your current transaction processes and provides key insights into the best digital financial instruments.",
 			image: digital_transactions,
 		},
 		{

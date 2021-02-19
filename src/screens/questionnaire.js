@@ -95,7 +95,10 @@ function Questionnaire({
 			name: question._id,
 			value: option._id,
 			onChange: (e) => {
-				if (option.name === "None of the above") {
+				if (
+					option.name === "None of the Above" ||
+					option.name === "I don't deliver currently"
+				) {
 					DESELECT_ALL(question.name, e.target.value, "none");
 				} else {
 					updateAnswers(
@@ -191,7 +194,6 @@ function Questionnaire({
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }
