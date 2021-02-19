@@ -79,7 +79,7 @@ export const KNOWLEDGE_CENTER = [
 	{
 		heading: "Tips to Avoid Online Frauds & Secure Business",
 		desc:
-			"Here are a few tips to help you secure business and prevent cyber frauds-",
+			"Here are a few tips to help you secure business and prevent cyber frauds.",
 		image: one,
 		bg: one_bg,
 		id: 1,
@@ -103,7 +103,7 @@ export const KNOWLEDGE_CENTER = [
 				type: "left",
 				image: onee,
 				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams. Here are a few tips to help you secure business and prevent cyber frauds.",
+					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams. Here are a few tips to help you secure business and prevent cyber frauds-",
 			},
 			{
 				content:
@@ -155,7 +155,7 @@ export const KNOWLEDGE_CENTER = [
 				type: "right",
 				image: twoo,
 				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.  Here are a few tips to help you secure business and prevent cyber frauds.",
+					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams.  Here are a few tips to help you secure business and prevent cyber frauds-",
 			},
 			{
 				type: "content",
@@ -185,7 +185,7 @@ export const KNOWLEDGE_CENTER = [
 				type: "left",
 				image: threee,
 				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams. Here are a few tips to help you secure business and prevent cyber frauds.",
+					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams. Here are a few tips to help you secure business and prevent cyber frauds-",
 			},
 			{
 				type: "content",
@@ -1429,7 +1429,7 @@ export const KNOWLEDGE_CENTER = [
 				],
 				heading: "Business structures that a company can be registered as are:",
 				content:
-					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams. Here are a few tips to help you secure business and prevent cyber frauds.",
+					"You can think of your online store as a physical store located in a high-crime neighbourhood. With a significant increase in cyber fraud and phishing scams, the assumption is realistic. You need to employ a strong cybersecurity system and follow certain other steps to ensure that you do not become the victim of online scams. Here are a few tips to help you secure business and prevent cyber frauds-",
 			},
 			{
 				content: null,
@@ -2206,7 +2206,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Executive Summary",
 				desc: [
-					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the lives of small business owners in India. This case study was written to examine the strong effect that DiGibizz by NeoGrowth has had on the lives of small business owners in India. Mrs Reshma Deokar started her store named 'Advait Medical' soon after her wedding plans were fixed. She aimed to do business by providing medicines and other supplies to the people of her locality.",
+					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the lives of small business owners in India.",
 					"Initially, she faced many difficulties in running the store. Firstly, due to cash constraints, she could not perform business operations to her full potential. There were difficulties in sourcing stock for her store, which eventually caused her relationships with customers to suffer.",
 					"Secondly, she faced tough competition from bigger pharmacies that could offer massive discounts on their products. Being a small business that had started without much financial support, Reshma simply could not afford to compete with them. Her competition was also selling their products online, which was the norm ever since the COVID-19 pandemic hit. This meant that more customers were shopping remotely online instead of coming into the store.",
 					"NeoGrowth Credit Limited aims to empower businesses like Reshma's by providing them with the means to meet their capital requirements. Not only this, but the diGibizz platform by NeoGrowth looks to completely digitise many of the business processes that can be made more efficient. DiGibizz can manage billing, inventory, customer information and much more.",
@@ -2407,7 +2407,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Proposed Solutions",
 				desc: [
-					"NeoGrowth was able to study the case of Redz Collections on an individual basis. There were certain aspects of the business that diGibizz was able to pick up on to improve for the future. There were certain aspects of the business that DiGibizz was able to pick up on to improve for the future. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
+					"NeoGrowth was able to study the case of Redz Collections on an individual basis. Many of these situations include digitisation and the creation of databases for inventory and business operations.",
 					"After considering the current business practices and future possibilities, diGibizz proposed the following solutions -",
 				],
 				list: [
