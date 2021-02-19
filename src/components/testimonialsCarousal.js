@@ -5,9 +5,10 @@ import punctuation1 from "../assets/punctuation1.svg";
 import punctuation2 from "../assets/punctuation2.svg";
 
 import { SUCCESSDATA } from "../store/strings";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 function TestimonialsCarousal() {
 	const [currentDisplayed, setCurrentDisplay] = useState(0);
+	const history = useHistory();
 	return (
 		<div className="carousel-main">
 			<div id="myCarousel" className="carousel slide" data-ride="carousel">
@@ -28,7 +29,8 @@ function TestimonialsCarousal() {
 							>
 								{item.type === "video" && (
 									<img
-										style={{ width: 50, height: 50 }}
+										onClick={() => history.push(`successStories/${item.id}`)}
+										style={{ width: 50, height: 50, cursor: "pointer" }}
 										src={play_icon}
 										alt="play-icon"
 									/>

@@ -74,7 +74,7 @@ const DetailedCard = ({ story }) => {
 					border: 0,
 				}}
 			>
-				{showVideo && story.type === "video" && (
+				{story.type === "video" && (
 					<iframe
 						style={{ width: "100%", height: "100%" }}
 						title="jfdsjj"
@@ -83,20 +83,20 @@ const DetailedCard = ({ story }) => {
 						src={
 							"https://www.youtube.com/embed/" +
 							story.videoID +
-							"?modestbranding=1&autoplay=1&controls=0&rel=0&wmode=transparent"
+							"?modestbranding=1&autoplay=0&controls=0&rel=0&wmode=transparent"
 						}
 					>
 						<h1 style={{ zIndex: 99, color: "yellow" }}>Close</h1>
 					</iframe>
 				)}
-				{!showVideo && story.type === "video" && (
+				{/* {!showVideo && story.type === "video" && (
 					<img
 						onClick={() => toggleVideo(!showVideo)}
 						className="play-button"
 						src={play_logo}
 						alt="play_button"
 					/>
-				)}
+				)} */}
 			</div>
 		</div>
 	);
