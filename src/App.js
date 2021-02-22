@@ -12,14 +12,14 @@ import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
 import AvailNowRegistration from "./screens/availNowRegistration";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { connect } from "react-redux";
 import { show_toast, clear_error } from "./store/actions";
 import Footer from "./components/main/footer";
 // import ExitPopUp from "./components/main/exitPopup";
-function App({ errorMessage, clear_error }) {
+function App({ errorMessage, clear_error, history }) {
 	// const [showPopUp, togglePopUp] = useState(false);
 	window.onbeforeunload = (e) => {
 		// togglePopUp(!showPopUp);
@@ -35,7 +35,7 @@ function App({ errorMessage, clear_error }) {
 	}, [errorMessage]);
 	return (
 		<div style={{ minHeight: "100vh" }}>
-			<Router>
+			<Router history={history}>
 				<ToastContainer
 					position="bottom-left"
 					autoClose={5000}
@@ -78,14 +78,14 @@ function App({ errorMessage, clear_error }) {
 						render={(props) => <UserGuideDetailed {...props} />}
 					/>
 					<Route
-						exact
-						path={"/successStories"}
-						render={(props) => <SuccessStories {...props} />}
+						// exact
+						path={"/successStories/:id"}
+						render={(props) => <SuccessStoriesDetailed {...props} />}
 					/>
 					<Route
 						exact
-						path={"/successStories/:id"}
-						render={(props) => <SuccessStoriesDetailed {...props} />}
+						path={"/successStories"}
+						render={(props) => <SuccessStories {...props} />}
 					/>
 					<Route
 						exact
@@ -97,6 +97,7 @@ function App({ errorMessage, clear_error }) {
 						path={"/reg"}
 						render={(props) => <AvailNowRegistration {...props} />}
 					/>
+					<Route component={<div>No route</div>} />
 				</Switch>
 				<Footer />
 			</Router>

@@ -147,6 +147,7 @@ function SuccessStoriesDetailed({ header_success_stories, match }) {
 		window.scrollTo(0, 0);
 	}, []);
 	const history = useHistory();
+	if (!match) return <div>Hello</div>;
 	const story = SUCCESSDATA.find((data) => data.id == match.params.id);
 	if (story === undefined) {
 		history.push("/successStories");
