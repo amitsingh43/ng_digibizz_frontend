@@ -96,8 +96,8 @@ function Questionnaire({
 			value: option._id,
 			onChange: (e) => {
 				if (
-					option.name === "None of the Above" ||
-					option.name === "I don't deliver currently"
+					option.name.toLowerCase() === "none of the above" ||
+					option.name.toLowerCase() === "i don't deliver currently"
 				) {
 					DESELECT_ALL(question.name, e.target.value, "none");
 				} else {
