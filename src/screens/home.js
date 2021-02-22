@@ -85,10 +85,15 @@ function Home({
 		if (homepageCounter < 2) {
 			var NumberRegex = /^[0-9]*$/;
 			var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-			if (name.length === 0) {
+			var nameRegex = /^[a-zA-Z ]+$/;
+			if (name.length === 0 || !nameRegex.test(name)) {
 				add_error("Please enter your full name");
 				return;
-			} else if (mobile.length !== 10 || !NumberRegex.test(mobile)) {
+			} else if (
+				mobile.length !== 10 ||
+				!NumberRegex.test(mobile) ||
+				mobile[0] === "0"
+			) {
 				add_error("Please enter a valid mobile number");
 				return;
 			} else if (email.length === 0 || !emailRegex.test(email)) {
