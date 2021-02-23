@@ -7,6 +7,7 @@ import Footer from "../components/main/footer";
 import { PARTNERS } from "../store/strings";
 import { useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
+let counter = 0;
 const TopContent = () => {
 	return (
 		<div className="col-md-12 top-content">
@@ -21,9 +22,6 @@ const TopContent = () => {
 };
 
 const ServicesCategory = () => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
 	return (
 		<div className="service-category">
 			<div className="one">
@@ -32,6 +30,7 @@ const ServicesCategory = () => {
 						key={index}
 						className="cat"
 						onClick={() => {
+							counter = 0;
 							window.location.hash = `#${service.tag}`;
 						}}
 					>
@@ -179,10 +178,21 @@ const Services = (props) => {
 		</div>
 	);
 };
+
 function DigitalServices({ header_digital_services, user, update_lead }) {
 	const location = useLocation();
 	const history = useHistory();
+	window.onpopstate = function () {
+		if (counter) {
+			window.history.go(-1);
+			counter = 0;
+		}
+		if (window.location.href.includes("#")) {
+			counter++;
+		}
+	};
 	useEffect(() => {
+		// window.scrollTo(0, 0);
 		header_digital_services();
 		var PATH = "";
 		for (

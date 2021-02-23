@@ -86,8 +86,11 @@ function Home({
 			var NumberRegex = /^[0-9]*$/;
 			var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 			var nameRegex = /^[a-zA-Z ]+$/;
-			if (name.length === 0 || !nameRegex.test(name)) {
+			if (name.length === 0) {
 				add_error("Please enter your full name");
+				return;
+			} else if (!nameRegex.test(name)) {
+				add_error("Please enter a valid name");
 				return;
 			} else if (
 				mobile.length !== 10 ||
@@ -234,7 +237,7 @@ function Home({
 								)}
 								<div style={{ marginTop: 40 }}></div>
 								<div className="heading">
-									Business name<span>*</span>
+									Business Name<span>*</span>
 								</div>
 								<input
 									id="business-name"
@@ -362,28 +365,46 @@ function Home({
 					<div className="col-lg-5"></div>
 					{homepageCounter === 2 && (
 						<div className="col-lg-3">
-							<div className="outer-button" onClick={_back}>
-								<div
-									className="button"
-									style={{
-										backgroundColor: "white",
-										borderWidth: 1,
-										borderStyle: "double",
-										borderColor: "green",
-										color: "green",
+							<div className="outer-button">
+								<a
+									href=""
+									id="back"
+									onClick={(e) => {
+										e.preventDefault();
+										_back();
 									}}
 								>
-									Back
-								</div>
+									<div
+										className="button"
+										style={{
+											backgroundColor: "white",
+											borderWidth: 1,
+											borderStyle: "double",
+											borderColor: "green",
+											color: "green",
+										}}
+									>
+										Back
+									</div>
+								</a>
 							</div>
 						</div>
 					)}
 					<div className="col-lg-3">
 						<div className="outer-button">
-							<div className="button" onClick={submitLead}>
-								{homepageCounter === 1 && "Next"}
-								{homepageCounter === 2 && "Check your Digital Score"}
-							</div>
+							<a
+								id="next"
+								href=""
+								onClick={(e) => {
+									e.preventDefault();
+									submitLead();
+								}}
+							>
+								<div className="button">
+									{homepageCounter === 1 && "Next"}
+									{homepageCounter === 2 && "Check your Digital Score"}
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>

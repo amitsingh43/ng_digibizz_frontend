@@ -12,7 +12,7 @@ import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
 import AvailNowRegistration from "./screens/availNowRegistration";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { connect } from "react-redux";
