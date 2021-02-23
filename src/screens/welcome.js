@@ -66,10 +66,7 @@ const ServiceIcon = (props) => {
 	return (
 		<div
 			onClick={() => {
-				history.push({
-					pathname: "/services",
-					state: { id: tag },
-				});
+				window.location.href = window.location + `services#${tag}`;
 			}}
 			className="col-sm-4 col-md-2 s-icon"
 		>
