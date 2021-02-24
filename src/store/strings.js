@@ -29,6 +29,9 @@ import razorpay from "../assets/partners/razorpay.svg";
 import vyapar from "../assets/partners/vyapar.svg";
 import ok_credit from "../assets/partners/ok_credit.svg";
 import neogrowth from "../assets/partners/neogrowth.jpg";
+import digihealth from "../assets/partners/digihealth.png";
+import mybillbook from "../assets/partners/mybillbook.png";
+import payu from "../assets/partners/payu.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -67,7 +70,7 @@ export const TELL_ABOUT_YOU_DESC =
 	"We require some basic information from you before you begin your survey.";
 export const TELL_ABOUT_BUSINESS_DESC =
 	"Before you begin the survey, we would require some additional information from you. Please fill in the details below and you can begin the evaluation shortly.";
-export const COMPANY_NAME = "NeoGrowth Credit";
+export const COMPANY_NAME = "NeoGrowth Credit Pvt. Ltd.";
 export const TERMS_AND_CONDITIONS_1 = "I hearby consent to ";
 export const TERMS_AND_CONDITIONS_2 =
 	"to receive information / service etc for marketing purpose through telephone or email or SMS directly or through any service provider.";
@@ -2209,7 +2212,7 @@ export const SUCCESSDATA = [
 					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the lives of small business owners in India. Mrs Reshma Deokar started her store named 'Advait Medical' soon after her wedding plans were fixed. She aimed to do business by providing medicines and other supplies to the people of her locality.",
 					"Initially, she faced many difficulties in running the store. Firstly, due to cash constraints, she could not perform business operations to her full potential. There were difficulties in sourcing stock for her store, which eventually caused her relationships with customers to suffer.",
 					"Secondly, she faced tough competition from bigger pharmacies that could offer massive discounts on their products. Being a small business that had started without much financial support, Reshma simply could not afford to compete with them. Her competition was also selling their products online, which was the norm ever since the COVID-19 pandemic hit. This meant that more customers were shopping remotely online instead of coming into the store.",
-					"NeoGrowth Credit Limited aims to empower businesses like Reshma's by providing them with the means to meet their capital requirements. Not only this, but the diGibizz platform by NeoGrowth looks to completely digitise many of the business processes that can be made more efficient. DiGibizz can manage billing, inventory, customer information and much more.",
+					"NeoGrowth Credit Private Limited aims to empower businesses like Reshma's by providing them with the means to meet their capital requirements. Not only this, but the diGibizz platform by NeoGrowth looks to completely digitise many of the business processes that can be made more efficient. DiGibizz can manage billing, inventory, customer information and much more.",
 					"Thanks to diGibizz, NeoGrowth was able to transform Advait Medical into a fully digitised store. This meant that the store was now complete with order processing, invoicing, customer databases and the ability to accept online payments. With the help of diGibizz, SMEs like Reshma's can digitise and enable themselves to grow and reach more customers.",
 				],
 				list: null,
@@ -2354,7 +2357,7 @@ export const SUCCESSDATA = [
 			{
 				heading: "Executive Summary",
 				desc: [
-					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the transformation of small businesses. DiGibizz aims to empower SMEs by digitising their business operations. NeoGrowth Credit supports small businesses by providing them with the credit they need to grow and take care of inventory expenses.",
+					"This case study was written to examine the strong effect that diGibizz by NeoGrowth has had on the transformation of small businesses. DiGibizz aims to empower SMEs by digitising their business operations. NeoGrowth Credit Pvt. Ltd. supports small businesses by providing them with the credit they need to grow and take care of inventory expenses.",
 					"With the help of this financing, NeoGrowth aims to change the lives of small business owners everywhere by giving them the purchasing power they need. This case takes place in the city of Nashik, Maharashtra. It is a prosperous land with a healthy economy for trade. Many people come here to make their dreams come true. Here, there are small and big businesses for everybody, which offers ample opportunity for everyone.",
 					"Due to the abundant economic activity of Nashik, many people in business come to Nashik in the hopes of one day becoming highly successful entrepreneurs. Yogesh is one of many such entrepreneurs that relocated to Nashik for exactly this reason. He opened his shop at the Tibetan Welfare Association Market, Nashik.",
 					"He started Redz Collection - Fashion for Men, a clothing and apparel store. The store had a striking stock of designs and colours, but there were still some shortfalls. For starters, it was not very different from the many stores there; in fact, it was even hard to tell one from another. Yogesh was joined by his cousin, and they both worked tirelessly to get the business up and running. Over time they both realised that being one with their customer database was important.",
@@ -2460,7 +2463,7 @@ export const SUCCESSDATA = [
 					"Not only this, but diGibizz observed that the store could benefit from digitisation that would allow a Point Of Sale system. This would then help to improve their sales process and make stocktaking easier.",
 					"Further, diGibizz implemented WiseInvoice POS software, an easy-to-use and efficient POS system. This ensured that Redz Collections was able to store a database of all their products. WiseInvoice makes it incredibly easy to store customer information like phone number, order information, etc. Not only this, but it can scan barcodes and keep track of inventory automatically.",
 					"Further, diGibizz by NeoGrowth was able to bring more attention and business to the store by improving the signage of the business and adding a dynamic LED banner that displayed the store name and available discounts as well as offers to potential customers. This not only differentiated Yogesh's store from the rest at the Tibetan Welfare Association Market, but it also helped attract more customers over time.",
-					"At the outset, diGibizz by NeoGrowth aims to empower small businesses like Yogesh's. The end goal of the efforts by NeoGrowth Credit is to change the lives of families who can benefit from additional funding for their small business.",
+					"At the outset, diGibizz by NeoGrowth aims to empower small businesses like Yogesh's. The end goal of the efforts by NeoGrowth Credit Pvt. Ltd. is to change the lives of families who can benefit from additional funding for their small business.",
 					"Since diGibizz was able to work on Redz Collections, their business has improved significantly, and operations are much easier to carry out. Not only this but with the PayU payment gateway, Yogesh's customers now have a wide variety of payment modes through which they can perform their transactions. These changes have played a large role in increasing the efficiency and overall quality of Yogesh's business, Redz Collections.",
 				],
 				list: null,
@@ -2681,13 +2684,16 @@ const NEOGROWTH = {
 	backgroundColor: "#fff",
 	url: "https://www.neogrowth.in",
 };
-const FLOBIZ = {
-	title: "Flobiz",
-	subTitle: ["Upto XX% off on Flobiz solutions."],
-	description: [
-		"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
+const MYBILLBOOK = {
+	title: "myBillBook by Flobiz",
+	subTitle: [
+		"myBillBook Annual Plan (android & web application) - INR 799 for 12 months & additional 3 months free",
 	],
-	image: flobiz,
+	description: [
+		"MyBillBook is a free & easy to use mobile application that helps small & medium businesses.",
+		"To manage three key components of their day-to-day operations: GST billing/ invoicing, inventory/ stock management, party & outstanding management. Along with this, MyBillBook also takes care of several other types of business transactions (purchases, sale/ purchase returns, quotations/ estimates and expenses). MyBillBook is currently available in English, Hindi, Gujarati & Tamil.",
+	],
+	image: mybillbook,
 	backgroundColor: "#fff",
 	url: "",
 };
@@ -2818,6 +2824,30 @@ const BRANDPULSE = {
 	backgroundColor: "#fff",
 	url: "https://www.brandppulse.com",
 };
+const DIGI_HEALTH = {
+	title: "DigiHealth",
+	subTitle: null,
+	description: [
+		"Empowering Indian Retail Pharmacy against Online Pharmacies.",
+		"Join Digihealth and fight against online pharmacies. Get special rates on medicines, Pre-barcoded Inventory, a Mobile app for your customers to get online orders, India's number 1 pharmacy ERP solution.",
+	],
+	image: digihealth,
+	backgroundColor: "#fff",
+	url: "https://bandhan.digihealth.in/",
+};
+const PAYU = {
+	title: "PayU",
+	subTitle: [
+		"Special pricing to NeoGrowth referrals. Exclusive Transaction Charges with Zero Setup Fees",
+	],
+	description: [
+		"PayU offers easy integration and accepts payments through multiple modes and channels.",
+		"such as website/apps, offline solutions, payment links, and many more. Never miss a single payment again by allowing your customers to pay fast and easy.",
+	],
+	image: payu,
+	backgroundColor: "#fff",
+	url: "www.payu.in",
+};
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -2836,7 +2866,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Inventory Management",
-		data: [SNAPBIZZ],
+		data: [SNAPBIZZ, MYBILLBOOK],
 		tag: "inventory_management",
 	},
 	{
@@ -2846,7 +2876,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Billing & Accounting",
-		data: [SNAPBIZZ, ACCUNITY_SERVICES3],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH],
 		tag: "billing_and_accounting",
 	},
 	// {
@@ -2864,11 +2894,11 @@ export const PARTNERS = [
 		data: [ACCUNITY_SERVICES2, PINNACLE],
 		tag: "social_media_marketing",
 	},
-	// {
-	// 	category: "Manage Payments",
-	// 	data: [RAZORPAY],
-	// 	tag: "manage_payments",
-	// },
+	{
+		category: "Manage Payments",
+		data: [PAYU],
+		tag: "manage_payments",
+	},
 	{
 		category: "Manage Staff",
 		data: [APNA_CO],

@@ -8,6 +8,7 @@ import Report from "./screens/report";
 import Questionnaire from "./screens/questionnaire";
 import SuccessStories from "./screens/successStories";
 import DigitalServices from "./screens/digitalServices";
+import Partner from "./screens/partner";
 import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
@@ -18,14 +19,24 @@ import "react-toastify/dist/ReactToastify.css";
 import { connect } from "react-redux";
 import { show_toast, clear_error } from "./store/actions";
 import Footer from "./components/main/footer";
+import TagManager from "react-gtm-module";
+
 // import ExitPopUp from "./components/main/exitPopup";
-function App({ errorMessage, clear_error }) {
+function App({ errorMessage, clear_error, history }) {
 	// const [showPopUp, togglePopUp] = useState(false);
 	window.onbeforeunload = (e) => {
 		// togglePopUp(!showPopUp);
 		// e.preventDefault();
 		// e.stopPropagation();
 		// return false;
+	};
+
+	window.onload = () => {
+		const tagManagerArgs = {
+			gtmId: "GTM-P5JMSVV",
+		};
+
+		TagManager.initialize(tagManagerArgs);
 	};
 	useEffect(() => {
 		if (errorMessage !== "") {
@@ -35,7 +46,7 @@ function App({ errorMessage, clear_error }) {
 	}, [errorMessage]);
 	return (
 		<div style={{ minHeight: "100vh" }}>
-			<Router>
+			<Router history={history}>
 				<ToastContainer
 					position="bottom-left"
 					autoClose={5000}
@@ -78,14 +89,19 @@ function App({ errorMessage, clear_error }) {
 						render={(props) => <UserGuideDetailed {...props} />}
 					/>
 					<Route
+						// exact
+						path={"/successStories/:id"}
+						render={(props) => <SuccessStoriesDetailed {...props} />}
+					/>
+					<Route
 						exact
 						path={"/successStories"}
 						render={(props) => <SuccessStories {...props} />}
 					/>
 					<Route
 						exact
-						path={"/successStories/:id"}
-						render={(props) => <SuccessStoriesDetailed {...props} />}
+						path={"/services/:partner"}
+						render={(props) => <Partner {...props} />}
 					/>
 					<Route
 						exact

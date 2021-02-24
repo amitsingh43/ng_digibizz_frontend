@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import "../styles/availNowRegistration.css";
-import Footer from "../components/main/footer";
+import TAndC from "../components/termsAndConditions";
+import {
+	TERMS_AND_CONDITIONS_1,
+	TERMS_AND_CONDITIONS_2,
+	TERMS_AND_CONDITIONS_DETAILED1,
+	TERMS_AND_CONDITIONS_DETAILED2,
+	COMPANY_NAME,
+} from "../store/strings";
 import {
 	show_toast,
 	header_digital_services,
@@ -32,8 +39,19 @@ const Logo = ({ state }) => {
 	);
 };
 
-const Button = ({ mrOrMs, save_basic_details, partner, gender, url }) => {
+const Button = ({
+	mrOrMs,
+	save_basic_details,
+	partner,
+	gender,
+	url,
+	isChecked,
+}) => {
 	const _submit = () => {
+		if (!isChecked) {
+			show_toast("Please accept Terms and Conditions");
+			return;
+		}
 		const arr = [
 			{
 				id: "1",
@@ -76,13 +94,22 @@ const Button = ({ mrOrMs, save_basic_details, partner, gender, url }) => {
 		}
 	};
 	return (
-		<div className="button" onClick={_submit}>
+		<div className="button submit" onClick={_submit}>
 			Submit
 		</div>
 	);
 };
 
-const Form = ({ gender, save_basic_details, partner, url }) => {
+const Form = ({
+	gender,
+	save_basic_details,
+	partner,
+	url,
+	more,
+	showmore,
+	isChecked,
+	setCheck,
+}) => {
 	const data1 = [
 		{ label: "Full Name", type: "text", id: "1" },
 		{ label: "Mobile number", type: "phone", id: "2" },
@@ -144,13 +171,51 @@ const Form = ({ gender, save_basic_details, partner, url }) => {
 					))}
 				</div>
 			</div>
-			<Button
-				gender={gender}
-				url={url}
-				partner={partner}
-				mrOrMs={mrOrMs}
-				save_basic_details={save_basic_details}
-			/>
+			<div className="col-lg-7 col-xs-12 tc" style={{ width: "auto" }}>
+				<input
+					id="checkbox"
+					className="col-lg-1 col-xs-1"
+					type="checkbox"
+					defaultChecked={isChecked}
+					onChange={() => setCheck(!isChecked)}
+				/>
+				<div className="col-lg-11 col-xs-11">
+					{TERMS_AND_CONDITIONS_1}
+					<a
+						href="https://www.neogrowth.in"
+						target="_blank"
+						rel="noreferrer"
+						style={{
+							textDecoration: "none",
+							color: "grey",
+						}}
+					>
+						<span className="site">
+							<strong>{COMPANY_NAME}</strong>
+						</span>
+					</a>{" "}
+					{TERMS_AND_CONDITIONS_2}
+					<span
+						className="more"
+						onClick={() => {
+							showmore(!more);
+							window.scrollTo(0, 0);
+						}}
+					>
+						{more ? "Less-" : "More+"}
+					</span>
+				</div>
+			</div>
+			<div style={{ marginTop: 100 }}>
+				<Button
+					gender={gender}
+					url={url}
+					isChecked={isChecked}
+					partner={partner}
+					mrOrMs={mrOrMs}
+					save_basic_details={save_basic_details}
+				/>
+			</div>
 		</div>
 	);
 };
@@ -163,6 +228,8 @@ const AvailNowRegistration = ({
 }) => {
 	const location = useLocation();
 	const history = useHistory();
+	const [isChecked, setCheck] = useState(false);
+	const [more, showmore] = useState(false);
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		header_digital_services();
@@ -174,6 +241,9 @@ const AvailNowRegistration = ({
 	if (!location.state) {
 		return <h1>Redirecting</h1>;
 	}
+	if (more) {
+		return <TAndC showmore={showmore} setCheck={setCheck} />;
+	}
 	return (
 		<div>
 			<div className="avail-now-reg">
@@ -183,6 +253,10 @@ const AvailNowRegistration = ({
 				<div className="section">
 					<Form
 						gender={gender}
+						more={more}
+						isChecked={isChecked}
+						setCheck={setCheck}
+						showmore={showmore}
 						partner={location.state.data.title}
 						url={location.state.data.url}
 						save_basic_details={save_basic_details}

@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import reportWebVitals from "./reportWebVitals";
 import allReducers from "./store/reducers";
+import { createBrowserHistory } from "history";
 
 const store = createStore(
 	allReducers,
@@ -16,7 +17,7 @@ const store = createStore(
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<App />
+			<App history={history} />
 		</Provider>
 	</React.StrictMode>,
 	document.getElementById("root")

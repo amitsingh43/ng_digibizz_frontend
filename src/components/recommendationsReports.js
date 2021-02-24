@@ -18,11 +18,7 @@ const Percetage = (props) => {
 const RecCard = ({ recommendations }) => {
 	const results = recommendations;
 	const history = useHistory();
-	const excludeReports = [
-		"delivery_services",
-		"digital_khata",
-		"manage_payments",
-	];
+	const excludeReports = ["delivery_services", "digital_khata"];
 	return (
 		<div className="row ">
 			{results &&

@@ -313,8 +313,9 @@ export const save_basic_details = (
   ENDPOINT = "/api/save_basic_details"
 ) => async (dispatch) => {
   try {
-    await _post(ENDPOINT, body);
+    const { lead } = await _post(ENDPOINT, body);
     show_toast("Thank you", "SUCCESS");
+    dispatch(set_user_details(lead));
   } catch (error) {
     let message = "Something went wrong! Please try later.";
 
