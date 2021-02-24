@@ -46,18 +46,18 @@ function Home({
 	}, []);
 	var sel = document.getElementById("city");
 	var text = sel ? sel.options[sel.selectedIndex].text : null;
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [mobile, setMobile] = useState("");
-	const [referralCode, setReferralCode] = useState("");
-	const [city, setCity] = useState("");
-	const [industry, setIndustry] = useState("");
-	const [turnover, setTurnover] = useState("");
-	const [businessName, setBusinessName] = useState("");
+	const [name, setName] = useState(null);
+	const [email, setEmail] = useState(null);
+	const [mobile, setMobile] = useState(null);
+	const [referralCode, setReferralCode] = useState(null);
+	const [city, setCity] = useState(null);
+	const [industry, setIndustry] = useState(null);
+	const [turnover, setTurnover] = useState(null);
+	const [businessName, setBusinessName] = useState(null);
 	const history = useHistory();
 	const [isChecked, setCheck] = useState(false);
 	const [more, showmore] = useState(false);
-	const [mrOrMs, setMrOrMs] = useState("");
+	const [mrOrMs, setMrOrMs] = useState(null);
 	const [otherCity, setOtherCity] = useState("");
 	if (localStorage.getItem("report")) {
 		history.push("/report");
@@ -86,20 +86,21 @@ function Home({
 			var NumberRegex = /^[0-9]*$/;
 			var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 			var nameRegex = /^[a-zA-Z ]+$/;
-			if (name.length === 0) {
+			if (!name || name.length === 0) {
 				add_error("Please enter your full name");
 				return;
 			} else if (!nameRegex.test(name)) {
 				add_error("Please enter a valid name");
 				return;
 			} else if (
+				!mobile ||
 				mobile.length !== 10 ||
 				!NumberRegex.test(mobile) ||
 				mobile[0] === "0"
 			) {
 				add_error("Please enter a valid mobile number");
 				return;
-			} else if (email.length === 0 || !emailRegex.test(email)) {
+			} else if (!email || email.length === 0 || !emailRegex.test(email)) {
 				add_error("Please enter a valid email");
 				return;
 			}
@@ -110,8 +111,20 @@ function Home({
 				add_error("Please specify your city.");
 				return;
 			}
-			if (businessName.length === 0) {
+			if (!businessName || businessName.length === 0) {
 				add_error("Please enter a valid Business Name");
+				return;
+			}
+			if (!city) {
+				add_error("Please select your city");
+				return;
+			}
+			if (!industry) {
+				add_error("Please select your industry");
+				return;
+			}
+			if (!turnover) {
+				add_error("Please select your turnover");
 				return;
 			}
 			var GENDER = gender[0]._id ? gender[0]._id : "";
