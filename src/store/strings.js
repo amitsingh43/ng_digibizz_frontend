@@ -2685,7 +2685,7 @@ const NEOGROWTH = {
 	url: "https://www.neogrowth.in",
 };
 const MYBILLBOOK = {
-	title: "myBillBook",
+	title: "myBillBook by Flobiz",
 	subTitle: [
 		"myBillBook Annual Plan (android & web application) - INR 799 for 12 months & additional 3 months free",
 	],
