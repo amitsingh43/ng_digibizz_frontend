@@ -29,6 +29,9 @@ import razorpay from "../assets/partners/razorpay.svg";
 import vyapar from "../assets/partners/vyapar.svg";
 import ok_credit from "../assets/partners/ok_credit.svg";
 import neogrowth from "../assets/partners/neogrowth.jpg";
+import digihealth from "../assets/partners/digihealth.png";
+import mybillbook from "../assets/partners/mybillbook.png";
+import payu from "../assets/partners/payu.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -2828,7 +2831,7 @@ const DIGI_HEALTH = {
 		"Empowering Indian Retail Pharmacy against Online Pharmacies.",
 		"Join Digihealth and fight against online pharmacies. Get special rates on medicines, Pre-barcoded Inventory, a Mobile app for your customers to get online orders, India's number 1 pharmacy ERP solution.",
 	],
-	image: digit,
+	image: digihealth,
 	backgroundColor: "#fff",
 	url: "https://bandhan.digihealth.in/",
 };
@@ -2841,7 +2844,7 @@ const PAYU = {
 		"PayU offers easy integration and accepts payments through multiple modes and channels.",
 		"such as website/apps, offline solutions, payment links, and many more. Never miss a single payment again by allowing your customers to pay fast and easy.",
 	],
-	image: digit,
+	image: payu,
 	backgroundColor: "#fff",
 	url: "www.payu.in",
 };
