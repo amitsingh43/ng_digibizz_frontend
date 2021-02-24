@@ -43,7 +43,7 @@ const ServicesCategory = () => {
 	);
 };
 
-const PartnerCard = (props) => {
+export const PartnerCard = (props) => {
 	const {
 		title,
 		description,
@@ -131,7 +131,10 @@ const PartnerCard = (props) => {
 						cursor: "pointer",
 						display: description.length === 1 ? "none" : "block",
 					}}
-					onClick={() => toggleViewMore(!viewMore)}
+					onClick={() => {
+						history.push("/services/partner");
+						// toggleViewMore(!viewMore);
+					}}
 				>
 					{viewMore ? "View Less-" : "View more+"}
 				</span>

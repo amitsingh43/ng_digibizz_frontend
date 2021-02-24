@@ -2683,9 +2683,12 @@ const NEOGROWTH = {
 };
 const FLOBIZ = {
 	title: "Flobiz",
-	subTitle: ["Upto XX% off on Flobiz solutions."],
+	subTitle: [
+		"myBillBook Annual Plan (android & web application) - INR 799 for 12 months & additional 3 months free",
+	],
 	description: [
-		"Flobiz builds easy mobile billing solutions that accelerate your digital growth",
+		"MyBillBook is a free & easy to use mobile application that helps small & medium businesses.",
+		"To manage three key components of their day-to-day operations: GST billing/ invoicing, inventory/ stock management, party & outstanding management. Along with this, MyBillBook also takes care of several other types of business transactions (purchases, sale/ purchase returns, quotations/ estimates and expenses). MyBillBook is currently available in English, Hindi, Gujarati & Tamil.",
 	],
 	image: flobiz,
 	backgroundColor: "#fff",
@@ -2818,6 +2821,30 @@ const BRANDPULSE = {
 	backgroundColor: "#fff",
 	url: "https://www.brandppulse.com",
 };
+const DIGI_HEALTH = {
+	title: "DigiHealth",
+	subTitle: null,
+	description: [
+		"Empowering Indian Retail Pharmacy against Online Pharmacies.",
+		"Join Digihealth and fight against online pharmacies. Get special rates on medicines, Pre-barcoded Inventory, a Mobile app for your customers to get online orders, India's number 1 pharmacy ERP solution.",
+	],
+	image: digit,
+	backgroundColor: "#fff",
+	url: "https://bandhan.digihealth.in/",
+};
+const PAYU = {
+	title: "PayU",
+	subTitle: [
+		"Special pricing to NeoGrowth referrals. Exclusive Transaction Charges with Zero Setup Fees",
+	],
+	description: [
+		"PayU offers easy integration and accepts payments through multiple modes and channels.",
+		"such as website/apps, offline solutions, payment links, and many more. Never miss a single payment again by allowing your customers to pay fast and easy.",
+	],
+	image: digit,
+	backgroundColor: "#fff",
+	url: "www.payu.in",
+};
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -2836,7 +2863,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Inventory Management",
-		data: [SNAPBIZZ],
+		data: [SNAPBIZZ, FLOBIZ],
 		tag: "inventory_management",
 	},
 	{
@@ -2846,7 +2873,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Billing & Accounting",
-		data: [SNAPBIZZ, ACCUNITY_SERVICES3],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES3, FLOBIZ, DIGI_HEALTH],
 		tag: "billing_and_accounting",
 	},
 	// {
@@ -2864,11 +2891,11 @@ export const PARTNERS = [
 		data: [ACCUNITY_SERVICES2, PINNACLE],
 		tag: "social_media_marketing",
 	},
-	// {
-	// 	category: "Manage Payments",
-	// 	data: [RAZORPAY],
-	// 	tag: "manage_payments",
-	// },
+	{
+		category: "Manage Payments",
+		data: [PAYU],
+		tag: "manage_payments",
+	},
 	{
 		category: "Manage Staff",
 		data: [APNA_CO],

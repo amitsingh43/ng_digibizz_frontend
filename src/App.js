@@ -8,6 +8,7 @@ import Report from "./screens/report";
 import Questionnaire from "./screens/questionnaire";
 import SuccessStories from "./screens/successStories";
 import DigitalServices from "./screens/digitalServices";
+import Partner from "./screens/partner";
 import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
@@ -96,6 +97,11 @@ function App({ errorMessage, clear_error, history }) {
 						exact
 						path={"/reg"}
 						render={(props) => <AvailNowRegistration {...props} />}
+					/>
+					<Route
+						exact
+						path={"/services/partner"}
+						render={(props) => <Partner {...props} />}
 					/>
 					<Route component={<div>No route</div>} />
 				</Switch>

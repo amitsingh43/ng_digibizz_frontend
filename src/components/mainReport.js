@@ -6,7 +6,15 @@ import report1 from "../assets/report1.svg";
 import report2 from "../assets/report2.svg";
 import report3 from "../assets/report3.svg";
 import report4 from "../assets/report4.svg";
-import { downloadReport, emailReport } from "../store/actions";
+import {
+	downloadReport,
+	emailReport,
+	reset_answers,
+	reset_questions,
+	reset_user,
+	reset_results,
+	reset_recommendations,
+} from "../store/actions";
 import { connect } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 function MainReport({
@@ -15,6 +23,11 @@ function MainReport({
 	downloadText,
 	setDownloadText,
 	emailReport,
+	reset_answers,
+	reset_questions,
+	reset_user,
+	reset_results,
+	reset_recommendations,
 }) {
 	const { full_name, email, business_name, gender } = userDetails.user;
 	const [reportImg, setReportImg] = useState(report1);
@@ -106,4 +119,11 @@ function MainReport({
 	);
 }
 
-export default connect(null, { emailReport })(MainReport);
+export default connect(null, {
+	emailReport,
+	reset_answers,
+	reset_questions,
+	reset_user,
+	reset_results,
+	reset_recommendations,
+})(MainReport);
