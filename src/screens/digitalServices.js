@@ -43,7 +43,7 @@ const ServicesCategory = () => {
 	);
 };
 
-export const PartnerCard = (props) => {
+const PartnerCard = (props) => {
 	const {
 		title,
 		description,
@@ -54,6 +54,7 @@ export const PartnerCard = (props) => {
 		tag,
 		update_lead,
 		url,
+		heading,
 	} = props;
 	const history = useHistory();
 	const _availNow = () => {
@@ -132,7 +133,21 @@ export const PartnerCard = (props) => {
 						display: description.length === 1 ? "none" : "block",
 					}}
 					onClick={() => {
-						history.push("/services/partner");
+						history.push({
+							pathname: `/services/${title}`,
+							state: {
+								data: {
+									title,
+									description,
+									image,
+									subTitle,
+									tag,
+									url,
+									backgroundColor,
+									heading,
+								},
+							},
+						});
 						// toggleViewMore(!viewMore);
 					}}
 				>
@@ -170,6 +185,7 @@ const Services = (props) => {
 							image={data.image}
 							title={data.title}
 							tag={data.tag}
+							heading={heading}
 							url={data.url}
 							description={data.description}
 							backgroundColor={data.backgroundColor}

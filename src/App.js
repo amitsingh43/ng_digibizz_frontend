@@ -19,6 +19,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { connect } from "react-redux";
 import { show_toast, clear_error } from "./store/actions";
 import Footer from "./components/main/footer";
+import TagManager from "react-gtm-module";
+
 // import ExitPopUp from "./components/main/exitPopup";
 function App({ errorMessage, clear_error, history }) {
 	// const [showPopUp, togglePopUp] = useState(false);
@@ -27,6 +29,14 @@ function App({ errorMessage, clear_error, history }) {
 		// e.preventDefault();
 		// e.stopPropagation();
 		// return false;
+	};
+
+	window.onload = () => {
+		const tagManagerArgs = {
+			gtmId: "GTM-P5JMSVV",
+		};
+
+		TagManager.initialize(tagManagerArgs);
 	};
 	useEffect(() => {
 		if (errorMessage !== "") {
@@ -90,6 +100,11 @@ function App({ errorMessage, clear_error, history }) {
 					/>
 					<Route
 						exact
+						path={"/services/:partner"}
+						render={(props) => <Partner {...props} />}
+					/>
+					<Route
+						exact
 						path={"/services"}
 						render={(props) => <DigitalServices {...props} />}
 					/>
@@ -98,12 +113,6 @@ function App({ errorMessage, clear_error, history }) {
 						path={"/reg"}
 						render={(props) => <AvailNowRegistration {...props} />}
 					/>
-					<Route
-						exact
-						path={"/services/partner"}
-						render={(props) => <Partner {...props} />}
-					/>
-					<Route component={<div>No route</div>} />
 				</Switch>
 				<Footer />
 			</Router>

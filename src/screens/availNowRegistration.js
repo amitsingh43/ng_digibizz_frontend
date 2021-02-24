@@ -94,7 +94,7 @@ const Button = ({
 		}
 	};
 	return (
-		<div className="button" onClick={_submit}>
+		<div className="button submit" onClick={_submit}>
 			Submit
 		</div>
 	);
