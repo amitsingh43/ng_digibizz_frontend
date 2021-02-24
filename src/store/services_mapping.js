@@ -58,11 +58,11 @@ export const services = [
 		label: "Social Media Marketing",
 		tag: "social_media_marketing",
 	},
-	// {
-	// 	image: manage_payments,
-	// 	label: "Manage Payments",
-	// 	tag: "manage_payments",
-	// },
+	{
+		image: manage_payments,
+		label: "Manage Payments",
+		tag: "manage_payments",
+	},
 	{
 		image: manage_staff,
 		label: "Manage Staff",
