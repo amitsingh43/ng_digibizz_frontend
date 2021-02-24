@@ -2685,12 +2685,12 @@ const NEOGROWTH = {
 	url: "https://www.neogrowth.in",
 };
 const MYBILLBOOK = {
-	title: "myBillBook by Flobiz",
+	title: "My BillBook",
 	subTitle: [
 		"myBillBook Annual Plan (android & web application) - INR 799 for 12 months & additional 3 months free",
 	],
 	description: [
-		"MyBillBook is a free & easy to use mobile application that helps small & medium businesses.",
+		"My BillBook, a product of Flobiz is a free & easy to use mobile application that helps small & medium businesses.",
 		"To manage three key components of their day-to-day operations: GST billing/ invoicing, inventory/ stock management, party & outstanding management. Along with this, MyBillBook also takes care of several other types of business transactions (purchases, sale/ purchase returns, quotations/ estimates and expenses). MyBillBook is currently available in English, Hindi, Gujarati & Tamil.",
 	],
 	image: mybillbook,
