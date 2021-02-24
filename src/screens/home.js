@@ -115,18 +115,18 @@ function Home({
 				add_error("Please enter a valid Business Name");
 				return;
 			}
-			if (!city) {
-				add_error("Please select your city");
-				return;
-			}
-			if (!industry) {
-				add_error("Please select your industry");
-				return;
-			}
-			if (!turnover) {
-				add_error("Please select your turnover");
-				return;
-			}
+			// if (!city) {
+			// 	add_error("Please select your city");
+			// 	return;
+			// }
+			// if (!industry) {
+			// 	add_error("Please select your industry");
+			// 	return;
+			// }
+			// if (!turnover) {
+			// 	add_error("Please select your turnover");
+			// 	return;
+			// }
 			var GENDER = gender[0]._id ? gender[0]._id : "";
 			const body = {
 				cities_master_id: city,
