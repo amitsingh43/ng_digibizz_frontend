@@ -2684,8 +2684,8 @@ const NEOGROWTH = {
 	backgroundColor: "#fff",
 	url: "https://www.neogrowth.in",
 };
-const FLOBIZ = {
-	title: "Flobiz",
+const MYBILLBOOK = {
+	title: "myBillBook",
 	subTitle: [
 		"myBillBook Annual Plan (android & web application) - INR 799 for 12 months & additional 3 months free",
 	],
@@ -2693,7 +2693,7 @@ const FLOBIZ = {
 		"MyBillBook is a free & easy to use mobile application that helps small & medium businesses.",
 		"To manage three key components of their day-to-day operations: GST billing/ invoicing, inventory/ stock management, party & outstanding management. Along with this, MyBillBook also takes care of several other types of business transactions (purchases, sale/ purchase returns, quotations/ estimates and expenses). MyBillBook is currently available in English, Hindi, Gujarati & Tamil.",
 	],
-	image: flobiz,
+	image: mybillbook,
 	backgroundColor: "#fff",
 	url: "",
 };
@@ -2866,7 +2866,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Inventory Management",
-		data: [SNAPBIZZ, FLOBIZ],
+		data: [SNAPBIZZ, MYBILLBOOK],
 		tag: "inventory_management",
 	},
 	{
@@ -2876,7 +2876,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Billing & Accounting",
-		data: [SNAPBIZZ, ACCUNITY_SERVICES3, FLOBIZ, DIGI_HEALTH],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH],
 		tag: "billing_and_accounting",
 	},
 	// {
