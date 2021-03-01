@@ -416,13 +416,11 @@ export const downloadReport = (downloadText, setDownloadText) => {
       console.log(data);
       // filedownload(data, "DiGiBizz Score Report.pdf");
       var blob = new Blob([data], { type: "application/pdf" });
-      console.log(blob);
       FileSaver.saveAs(blob, "DiGibizz Score Report.pdf");
-      console.log(window.location.href);
     })
     .catch((err) => {
       setDownloadText("Download Report");
-      let message = "Something went wrong! Please try later.";
+      let message = "Report not yet ready. Please try in a few seconds.";
       // console.log(error);
 
       if (
@@ -433,7 +431,7 @@ export const downloadReport = (downloadText, setDownloadText) => {
       ) {
         message = err.response.data.message;
       }
-      show_toast(message);
+      show_toast(message, "INFO");
     });
 };
 
@@ -474,6 +472,17 @@ export const show_toast = (message, type = "ERROR") => {
     case "SUCCESS":
       toast.success(message, {
         position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      return;
+    case "INFO":
+      toast.info(message, {
+        position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
