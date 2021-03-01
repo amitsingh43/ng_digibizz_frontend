@@ -420,7 +420,6 @@ export const downloadReport = (downloadText, setDownloadText) => {
 			console.log(window.location.href);
 		})
 		.catch((err) => {
-			alert(JSON.stringify(err.response));
 			setDownloadText("Download Report");
 			let message = "Something went wrong! Please try later.";
 			// console.log(error);
