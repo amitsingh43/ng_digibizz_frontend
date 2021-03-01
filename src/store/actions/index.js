@@ -299,13 +299,14 @@ export const update_lead = (body, ENDPOINT = "/api/update_lead") => async (
 				localStorage.setItem("NG LOAN LEADS", "true");
 				Tracking.trackEvent("CLICK", "NG LOAN LEADS", "APPLY NOW");
 			}
+			show_toast("Thank you, someone will get in touch with you", "SUCCESS");
 		} else {
 			if (!localStorage.getItem("body.partner_availed")) {
 				localStorage.setItem(body.partner_availed, "true");
 				Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
 			}
+			show_toast("Thank you", "SUCCESS");
 		}
-		show_toast("Thank you", "SUCCESS");
 		dispatch(set_user_details(lead));
 	} catch (error) {
 		let message = "Something went wrong! Please try later.";

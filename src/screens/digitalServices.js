@@ -64,7 +64,9 @@ const PartnerCard = (props) => {
 				partner_availed: title,
 			};
 			update_lead(body);
-			window.open(url, "_blank");
+			if (title !== "NeoGrowth") {
+				window.open(url, "_blank");
+			}
 		} else {
 			history.push({
 				pathname: "/reg",
