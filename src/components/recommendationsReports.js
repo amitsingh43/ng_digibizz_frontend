@@ -23,7 +23,24 @@ const RecCard = ({ recommendations }) => {
 		<div className="row ">
 			{results &&
 				results.map((recommendation, index) => (
-					<div className="col-lg-2 col-xs-6 card" key={index}>
+					<div
+						className="col-lg-2 col-xs-6 card"
+						key={index}
+						style={{
+							cursor: excludeReports.includes(recommendation.category)
+								? "default"
+								: "pointer",
+						}}
+						onClick={
+							excludeReports.includes(recommendation.category)
+								? () => {}
+								: () =>
+										history.push({
+											pathname: "/services",
+											state: { id: recommendation.category },
+										})
+						}
+					>
 						<Percetage image_url={recommendation.image_url} />
 						<div style={{ height: "fit-content" }}>{recommendation.name}</div>
 						<p
@@ -34,12 +51,6 @@ const RecCard = ({ recommendations }) => {
 									? "none"
 									: "block",
 							}}
-							onClick={() =>
-								history.push({
-									pathname: "/services",
-									state: { id: recommendation.category },
-								})
-							}
 						>
 							<br />
 							Know more

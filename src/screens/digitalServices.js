@@ -3,10 +3,10 @@ import { header_digital_services, update_lead } from "../store/actions";
 import { connect } from "react-redux";
 import { services } from "../store/services_mapping";
 import "../styles/digitalServices.css";
-import Footer from "../components/main/footer";
 import { PARTNERS } from "../store/strings";
 import { useEffect } from "react";
 import { useHistory, useLocation } from "react-router-dom";
+import Tracking from "../util/tracking";
 let counter = 0;
 const TopContent = () => {
 	return (

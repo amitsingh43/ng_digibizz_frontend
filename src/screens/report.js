@@ -24,6 +24,7 @@ function Report({
 			get_results(localStorage.getItem("lead_id"));
 		}
 		header_digital_status();
+		window.scrollTo(0, 0);
 	}, []);
 	const [downloadText, setDownloadText] = useState("Download Report");
 	const history = useHistory();

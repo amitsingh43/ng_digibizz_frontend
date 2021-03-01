@@ -24,6 +24,7 @@ import {
 import axios from "axios";
 import { toast } from "react-toastify";
 import { _get, _post } from "../api";
+import Tracking from "../../util/tracking";
 // import filedownload from "js-file-download";
 var FileSaver = require("file-saver");
 
@@ -197,6 +198,7 @@ export const post_user_details = (
 		const response = await _post(ENDPOINT, body);
 		const { lead, questionnaire } = response;
 		localStorage.setItem("lead_id", lead._id);
+		Tracking.trackEvent("CLICK", "REGISTER USER", "REGISTER");
 		dispatch(set_user_details(lead));
 		dispatch(set_questions(questionnaire));
 		Navigate();
@@ -231,6 +233,7 @@ export const post_answers = (
 		const response = await _post(ENDPOINT, options);
 		const { questionnaire_take } = response;
 		const { recommendations } = questionnaire_take;
+		Tracking.trackEvent("CLICK", "ASSESSED CUSTOMERS", "SUBMIT");
 		dispatch(set_recommendations_write(recommendations));
 		dispatch(set_results(questionnaire_take));
 		dispatch(reset_questionnaire());
@@ -291,6 +294,17 @@ export const update_lead = (body, ENDPOINT = "/api/update_lead") => async (
 ) => {
 	try {
 		const { lead } = await _post(ENDPOINT, body);
+		if (body.partner_availed === "NeoGrowth") {
+			if (!localStorage.getItem("NG LOAN LEADS")) {
+				localStorage.setItem("NG LOAN LEADS", "true");
+				Tracking.trackEvent("CLICK", "NG LOAN LEADS", "APPLY NOW");
+			}
+		} else {
+			if (!localStorage.getItem("body.partner_availed")) {
+				localStorage.setItem(body.partner_availed, "true");
+				Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
+			}
+		}
 		show_toast("Thank you", "SUCCESS");
 		dispatch(set_user_details(lead));
 	} catch (error) {
@@ -397,24 +411,27 @@ export const downloadReport = (downloadText, setDownloadText) => {
 			responseType: "blob", //important
 		})
 		.then(({ data }) => {
-			setDownloadText("Download Report");
+			setDownloadText("Downloaded Report");
+			console.log(data);
 			// filedownload(data, "DiGiBizz Score Report.pdf");
 			var blob = new Blob([data], { type: "application/pdf" });
 			console.log(blob);
 			FileSaver.saveAs(blob, "DiGibizz Score Report.pdf");
 			console.log(window.location.href);
 		})
-		.catch(({ error }) => {
+		.catch((err) => {
+			alert(JSON.stringify(err.response));
 			setDownloadText("Download Report");
 			let message = "Something went wrong! Please try later.";
+			// console.log(error);
 
 			if (
-				error &&
-				error.response &&
-				error.response.data &&
-				error.response.data.message
+				err &&
+				err.response &&
+				err.response.data &&
+				err.response.data.message
 			) {
-				message = error.response.data.message;
+				message = err.response.data.message;
 			}
 			show_toast(message);
 		});
