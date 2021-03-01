@@ -35,7 +35,7 @@ function App({ errorMessage, clear_error, history }) {
 
 	window.onload = () => {
 		const tagManagerArgs = {
-			gtmId: "GTM-ND3D7FG",
+			// gtmId: "GTM-ND3D7FG",
 		};
 
 		TagManager.initialize(tagManagerArgs);
@@ -47,8 +47,8 @@ function App({ errorMessage, clear_error, history }) {
 		}
 	}, [errorMessage]);
 	useEffect(() => {
-		Tracking.init();
-		Tracking.pageView();
+		// Tracking.init();
+		// Tracking.pageView();
 		if (!localStorage.getItem("VISITED")) {
 			localStorage.setItem("VISITED", "true");
 			Tracking.trackEvent("PAGE VIEW", "PLATFORM VISIT");
