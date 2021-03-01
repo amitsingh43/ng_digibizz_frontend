@@ -2789,7 +2789,7 @@ const GO_DIGIT = {
 	],
 	image: digit,
 	backgroundColor: "#fff",
-	url: "https://www.godigit.com/",
+	url: "https://www.godigit.com/partner/neo-growth",
 };
 const CARE = {
 	title: "Care",

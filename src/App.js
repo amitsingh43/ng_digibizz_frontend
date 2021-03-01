@@ -21,6 +21,8 @@ import { show_toast, clear_error } from "./store/actions";
 import Footer from "./components/main/footer";
 import TagManager from "react-gtm-module";
 
+import Tracking from "./util/tracking";
+
 // import ExitPopUp from "./components/main/exitPopup";
 function App({ errorMessage, clear_error, history }) {
 	// const [showPopUp, togglePopUp] = useState(false);
@@ -33,7 +35,7 @@ function App({ errorMessage, clear_error, history }) {
 
 	window.onload = () => {
 		const tagManagerArgs = {
-			gtmId: "GTM-P5JMSVV",
+			gtmId: "GTM-ND3D7FG",
 		};
 
 		TagManager.initialize(tagManagerArgs);
@@ -44,6 +46,15 @@ function App({ errorMessage, clear_error, history }) {
 			clear_error();
 		}
 	}, [errorMessage]);
+	useEffect(() => {
+		Tracking.init();
+		Tracking.pageView();
+		if (!localStorage.getItem("VISITED")) {
+			localStorage.setItem("VISITED", "true");
+			Tracking.trackEvent("PAGE VIEW", "PLATFORM VISIT");
+		}
+	}, []);
+
 	return (
 		<div style={{ minHeight: "100vh" }}>
 			<Router history={history}>

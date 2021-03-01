@@ -19,7 +19,7 @@ import { header_reset, homepage_decrement } from "../store/actions";
 import { connect } from "react-redux";
 import { KNOWLEDGE_CENTER } from "../store/strings";
 import welcome_youtube from "../assets/welcome/welcome_youtube.svg";
-
+import Tracking from "../util/tracking";
 const SideText = (props) => {
 	return (
 		<div className="side-text">
@@ -52,7 +52,17 @@ const SideText = (props) => {
 					</span>
 				</span>
 			</p>
-			<Link to="/knowStatus" onClick={() => props.homepage_decrement()}>
+			<Link
+				to="/knowStatus"
+				onClick={() => {
+					props.homepage_decrement();
+					Tracking.trackEvent(
+						"CHECK SCORE",
+						"Check your Digital Score",
+						"WELCOME_PAGE"
+					);
+				}}
+			>
 				<div className="btn">Check your Digital Score</div>
 			</Link>
 		</div>
@@ -79,7 +89,7 @@ const ServiceIcon = (props) => {
 const ExploreOurServices = () => {
 	const services1 = services.slice(0, 5);
 	const services2 = services.slice(5, 10);
-	const services3 = services.slice(10, 13);
+	const services3 = services.slice(10, services.length);
 	return (
 		<div className="container">
 			<div className="heading">Explore our services</div>
@@ -111,8 +121,8 @@ const ExploreOurServices = () => {
 				))}
 				<div className="col-md-1 col-sm-1"></div>
 			</div>
-			<div id="viiewmore" className="row icons">
-				<div className="col-md-3 col-sm-1"></div>
+			<div className="row icons">
+				<div className="col-md-5 col-sm-1"></div>
 				{services3.map((service) => (
 					<ServiceIcon
 						tag={service.tag}
@@ -160,7 +170,14 @@ const Question = (props) => {
 				<Link
 					style={{ textDecoration: "none" }}
 					to="/knowStatus"
-					onClick={() => props.homepage_decrement()}
+					onClick={() => {
+						props.homepage_decrement();
+						// Tracking.trackEvent(
+						// 	"CLICK",
+						// 	"Check your Digital Score",
+						// 	"WELCOME_PAGE"
+						// );
+					}}
 				>
 					<div className="check-digital-score-btn">
 						Check your Digital Score

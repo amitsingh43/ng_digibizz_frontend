@@ -415,7 +415,7 @@ function Home({
 							>
 								<div className="button">
 									{homepageCounter === 1 && "Next"}
-									{homepageCounter === 2 && "Check your Digital Score"}
+									{homepageCounter === 2 && "Register"}
 								</div>
 							</a>
 						</div>
