@@ -136,7 +136,7 @@ function Home({
 				email: email,
 				mobile: mobile,
 				business_name: businessName,
-				gender_master_id: mrOrMs === "" ? GENDER : mrOrMs,
+				gender_master_id: mrOrMs ? GENDER : mrOrMs,
 				referral_code: referralCode,
 				other_city: otherCity,
 			};
