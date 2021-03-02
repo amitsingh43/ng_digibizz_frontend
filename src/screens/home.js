@@ -412,11 +412,20 @@ function Home({
 									e.preventDefault();
 									submitLead();
 								}}
+								style={{ display: homepageCounter === 1 ? "block" : "none" }}
 							>
-								<div className="button">
-									{homepageCounter === 1 && "Next"}
-									{homepageCounter === 2 && "Register"}
-								</div>
+								<div className="button">Next</div>
+							</a>
+							<a
+								id="register"
+								href=""
+								onClick={(e) => {
+									e.preventDefault();
+									submitLead();
+								}}
+								style={{ display: homepageCounter === 2 ? "block" : "none" }}
+							>
+								<div className="button">Register</div>
 							</a>
 						</div>
 					</div>

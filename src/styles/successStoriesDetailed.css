@@ -344,3 +344,9 @@ hr {
 		margin-right: 20px;
 	}
 }
+
+@media (max-width: 414px) {
+	.success-stories-detailed .detailed-card-1 .title-desc p {
+		font-size: 4vw;
+	}
+}
