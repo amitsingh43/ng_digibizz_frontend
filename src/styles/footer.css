@@ -17,6 +17,10 @@
 	cursor: pointer;
 }
 
+.fixed-bottom .gap {
+	width: 35vw;
+}
+
 @media (min-width: 48rem) and (max-width: 75rem) {
 	.fixed-bottom {
 		text-align: center;
@@ -40,10 +44,13 @@
 
 @media (min-width: 1201px) and (max-width: 1333px) {
 	.fixed-bottom .col-lg-5 {
-		width: 30vw;
+		width: 45vw;
 	}
 	.fixed-bottom .col-lg-4 {
 		width: 40vw;
+	}
+	.fixed-bottom .gap {
+		width: 30vw;
 	}
 }
 

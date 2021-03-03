@@ -7,15 +7,22 @@ import linkedin from "../../assets/linkedin.svg";
 function Footer() {
 	return (
 		<div className="fixed-bottom">
-			<div className="col-lg-5"></div>
-			<div className="col-lg-4 ">
+			<div className="col-lg-5 gap"></div>
+			<div className="col-lg-5 ">
 				© Copyright {new Date().getFullYear()} NeoGrowth, All Rights Reserved .
 				<a
 					href="https://www.neogrowth.in/disclaimer/"
 					target="_blank"
 					style={{ textDecoration: "none", color: "white" }}
 				>
-					Disclaimer
+					{" Disclaimer ."}
+				</a>
+				<a
+					href="https://www.neogrowth.in/disclaimer/"
+					target="_blank"
+					style={{ textDecoration: "none", color: "white" }}
+				>
+					{" Privacy Policy"}
 				</a>
 			</div>
 			<div className="images">
