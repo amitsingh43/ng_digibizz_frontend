@@ -182,6 +182,7 @@ function Questionnaire({
 							</Link>
 						</div>
 					)}
+
 					<div className="col-lg-2 col-sm-6">
 						<div className="button" onClick={next}>
 							{((topicCounter < 5 && questionsList.length === 5) ||
