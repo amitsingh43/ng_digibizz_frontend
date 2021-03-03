@@ -18,7 +18,7 @@ function Footer() {
 					{" Disclaimer ."}
 				</a>
 				<a
-					href="https://www.neogrowth.in/disclaimer/"
+					href="https://www.neogrowth.in/privacypolicy/"
 					target="_blank"
 					style={{ textDecoration: "none", color: "white" }}
 				>
