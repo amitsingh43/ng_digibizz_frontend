@@ -19,6 +19,7 @@ import { header_reset, homepage_decrement } from "../store/actions";
 import { connect } from "react-redux";
 import { KNOWLEDGE_CENTER } from "../store/strings";
 import welcome_youtube from "../assets/welcome/welcome_youtube.svg";
+import ReactPixel from "react-facebook-pixel";
 import Tracking from "../util/tracking";
 const SideText = (props) => {
 	return (
@@ -56,11 +57,6 @@ const SideText = (props) => {
 				to="/knowStatus"
 				onClick={() => {
 					props.homepage_decrement();
-					Tracking.trackEvent(
-						"CHECK SCORE",
-						"Check your Digital Score",
-						"WELCOME_PAGE"
-					);
 				}}
 			>
 				<div className="btn">Check your Digital Score</div>
@@ -172,6 +168,8 @@ const Question = (props) => {
 					to="/knowStatus"
 					onClick={() => {
 						props.homepage_decrement();
+						// alert(1);
+						// ReactPixel.trackCustom("KEERTHAN_TESTING");
 						// Tracking.trackEvent(
 						// 	"CLICK",
 						// 	"Check your Digital Score",
@@ -415,6 +413,11 @@ function Welcome({ header_reset, homepage_decrement, userDetails }) {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		header_reset();
+		const options = {
+			autoConfig: true, // set pixel's autoConfig
+			debug: false, // enable logs
+		};
+		// ReactPixel.init("281787519125313", options);
 	}, []);
 	return (
 		<div style={{ fontFamily: "Rubik" }}>
