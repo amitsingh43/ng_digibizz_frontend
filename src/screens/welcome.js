@@ -168,8 +168,8 @@ const Question = (props) => {
 					to="/knowStatus"
 					onClick={() => {
 						props.homepage_decrement();
-						alert(1);
-						ReactPixel.trackCustom("KEERTHAN_TESTING");
+						// alert(1);
+						// ReactPixel.trackCustom("KEERTHAN_TESTING");
 						// Tracking.trackEvent(
 						// 	"CLICK",
 						// 	"Check your Digital Score",
@@ -417,7 +417,7 @@ function Welcome({ header_reset, homepage_decrement, userDetails }) {
 			autoConfig: true, // set pixel's autoConfig
 			debug: false, // enable logs
 		};
-		ReactPixel.init("281787519125313", options);
+		// ReactPixel.init("281787519125313", options);
 	}, []);
 	return (
 		<div style={{ fontFamily: "Rubik" }}>
