@@ -405,28 +405,33 @@ function Home({
 					)}
 					<div className="col-lg-3">
 						<div className="outer-button">
-							<a
-								id="next"
-								href=""
-								onClick={(e) => {
-									e.preventDefault();
-									submitLead();
-								}}
-								style={{ display: homepageCounter === 1 ? "block" : "none" }}
-							>
-								<div className="button">Next</div>
-							</a>
-							<a
-								id="register"
-								href=""
-								onClick={(e) => {
-									e.preventDefault();
-									submitLead();
-								}}
-								style={{ display: homepageCounter === 2 ? "block" : "none" }}
-							>
-								<div className="button">Register</div>
-							</a>
+							{homepageCounter === 1 && (
+								<a
+									id="next"
+									href=""
+									onClick={(e) => {
+										e.preventDefault();
+										submitLead();
+									}}
+									style={{ display: "block" }}
+								>
+									<div className="button">Next</div>
+								</a>
+							)}
+
+							{homepageCounter === 2 && (
+								<a
+									id="register"
+									href=""
+									onClick={(e) => {
+										e.preventDefault();
+										submitLead();
+									}}
+									style={{ display: "block" }}
+								>
+									<div className="button">Register</div>
+								</a>
+							)}
 						</div>
 					</div>
 				</div>
