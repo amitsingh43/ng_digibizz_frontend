@@ -1043,8 +1043,7 @@ export const KNOWLEDGE_CENTER = [
 				type: "content",
 				list: null,
 				heading: null,
-				content:
-					"Select Add Restaurant after providing the necessary information.",
+				content: "Select Add Restaurant after providing the necessary information.",
 			},
 			{
 				type: "content",
@@ -1349,8 +1348,7 @@ export const KNOWLEDGE_CENTER = [
 					"Have never registered for GST - If you have not yet registered for GST, it is imperative to get one to start an eCommerce store on Amazon. However, you do not require a GST number to sell books on Amazon.",
 				],
 				heading: null,
-				content:
-					"You must update tax details as per the options mentioned below ",
+				content: "You must update tax details as per the options mentioned below ",
 			},
 			{
 				type: "content",
@@ -1694,8 +1692,7 @@ export const KNOWLEDGE_CENTER = [
 			{
 				type: "content",
 				list: null,
-				heading:
-					"Direct Taxes are the personal liability of the individual like:",
+				heading: "Direct Taxes are the personal liability of the individual like:",
 				content:
 					"		1.		Income Tax or TDS to be paid by businesses earning above a minimum amount which is beyond the tax exemption limit.",
 			},
@@ -1732,8 +1729,7 @@ export const KNOWLEDGE_CENTER = [
 				list: null,
 				heading:
 					"Indirect Taxes are levied on goods and services and now come under GST – Goods and Services Tax. This comprises:",
-				content:
-					"		1.		Sales Tax which is levied on the sale of a product/service.",
+				content: "		1.		Sales Tax which is levied on the sale of a product/service.",
 			},
 			{
 				type: "content",
@@ -2021,8 +2017,7 @@ export const KNOWLEDGE_CENTER = [
 				type: "content",
 				heading: "Can I Pay to Clear my Credit History? ",
 				list: null,
-				content:
-					"Yes, you can legally pay the creditor to clear credit history. ",
+				content: "Yes, you can legally pay the creditor to clear credit history. ",
 			},
 			{
 				type: "content",
@@ -2250,8 +2245,7 @@ export const SUCCESSDATA = [
 							"The logo is what a customer can relate to in a brand and creates the identity for a company. NeoGrowth felt that Reshma's store could benefit much more if Advait Medical had a more prominent logo and tagline.",
 					},
 					{
-						bullet:
-							"Customers prefer to shop remotely because of the pandemic - ",
+						bullet: "Customers prefer to shop remotely because of the pandemic - ",
 						content:
 							"Since the start of the pandemic, customers would rather shop online because of the fear of infection from COVID-19.",
 					},
@@ -2514,8 +2508,7 @@ export const SUCCESSDATA = [
 							"While the location of the store was prominent and, on a corner, the signage of N.S. Stores needed to be improved to gain more attention from local shoppers.",
 					},
 					{
-						bullet:
-							"Customers prefer to shop remotely because of the pandemic - ",
+						bullet: "Customers prefer to shop remotely because of the pandemic - ",
 						content:
 							"Customers prefer to shop online because of the fear of infection from COVID-19.",
 					},
@@ -2838,15 +2831,21 @@ const DIGI_HEALTH = {
 const PAYU = {
 	title: "PayU",
 	subTitle: [
-		"Special pricing to NeoGrowth referrals. Exclusive Transaction Charges with Zero Setup Fees",
+		"Zero Transaction Charges, Setup Fee, AMC & Zero Charges on Salary, Vendor Payments. Priority Onboarding. (*T&C)",
 	],
 	description: [
-		"PayU offers easy integration and accepts payments through multiple modes and channels.",
-		"such as website/apps, offline solutions, payment links, and many more. Never miss a single payment again by allowing your customers to pay fast and easy.",
+		"PayU offers easy integration and accepts payments through multiple modes and channels. Such as website/apps, offline solutions, payment links, and many more. Never miss a single payment again by allowing your customers to pay fast and easy.",
+		"T&C:",
+		"• Benefit of free transactions up to Rs.50000 Value. ",
+		"• Benefit needs to be used within 3 months, else will get lapsed.",
+		"• Standard rates of 2% shall be charged post free transactions.",
+		"• On Salary, Vendor Pay, ZERO charges applicable for march’21 only post which standard charges shall be applicable.",
+		"• PayU will charge initially and return the charged amount in subsequent month as transaction waiver.",
 	],
 	image: payu,
 	backgroundColor: "#fff",
-	url: "www.payu.in",
+	url:
+		"https://onboarding.payumoney.com/app/account?partner_name=Jiten&partner_source=Affiliate+Links&partner_uuid=11eb-0f9f-cfbe6f0c-aa8c-0a696b110fde&source=Partner",
 };
 export const PARTNERS = [
 	{
