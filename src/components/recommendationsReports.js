@@ -34,11 +34,7 @@ const RecCard = ({ recommendations }) => {
 						onClick={
 							excludeReports.includes(recommendation.category)
 								? () => {}
-								: () =>
-										history.push({
-											pathname: "/services",
-											state: { id: recommendation.category },
-										})
+								: () => window.open(`/services#${recommendation.category}`, "_blank")
 						}
 					>
 						<Percetage image_url={recommendation.image_url} />
