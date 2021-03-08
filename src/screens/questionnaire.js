@@ -110,6 +110,16 @@ function Questionnaire({
 
 	const DESELECT_ALL = (question, id, type) => {
 		none_of_the_above({ question, id, type });
+		var x = answered.find((val) => val.question === question && val.id === id);
+		if (x !== undefined) {
+			answered.splice(answered.indexOf(x), 1);
+		} else {
+			answered.push({
+				question: question,
+				id: id,
+				section: topicCounter - 1,
+			});
+		}
 	};
 
 	const inputProps = (question, option) => {
