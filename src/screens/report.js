@@ -60,21 +60,18 @@ function Report({
 						recommendations={display_recommendations}
 					/>
 				)}
-				{section_results && (
-					<UnderstandReport section_results={section_results} />
-				)}
+				{section_results && <UnderstandReport section_results={section_results} />}
 				<Testimonials />
 				<div className="disclaimer-main">
 					<p>
 						<span>Disclaimer: </span>
-						The information provided in this document is for general
-						informational purposes only and is provided in good faith. Under no
-						circumstance shall we have any liability to you for any loss or
-						damage of any kind incurred as a result of the use of these
-						third-party services. Your use of these products / services and your
-						reliance on any information related to these services is solely at
-						your own risk. We will not be a party to or in any way be
-						responsible for monitoring any transaction between you and
+						The information provided in this document is for general informational
+						purposes only and is provided in good faith. Under no circumstance shall
+						we have any liability to you for any loss or damage of any kind incurred
+						as a result of the use of these third-party services. Your use of these
+						products / services and your reliance on any information related to these
+						services is solely at your own risk. We will not be a party to or in any
+						way be responsible for monitoring any transaction between you and
 						third-party providers of products or services.
 					</p>
 				</div>

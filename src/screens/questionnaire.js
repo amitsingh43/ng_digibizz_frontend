@@ -12,9 +12,11 @@ import {
 	post_answers,
 	get_questions,
 	none_of_the_above,
+	show_toast,
 } from "../store/actions";
 import Footer from "../components/main/footer";
 import { useEffect } from "react";
+var answered = [];
 function Questionnaire({
 	topicCounter,
 	increment,
@@ -55,6 +57,19 @@ function Questionnaire({
 	};
 
 	const next = () => {
+		var ss = [];
+		answered.forEach((val) => {
+			if (val.section === topicCounter - 1) {
+				ss.push(val);
+			}
+		});
+		if (
+			ss.length <
+			questionsList[topicCounter - 1]["questionnaire_section_questions"].length
+		) {
+			show_toast("Please answer all the questions");
+			return;
+		}
 		if (topicCounter === 4 && questionsList.length === 4) {
 			submit();
 			return;
@@ -81,6 +96,16 @@ function Questionnaire({
 	};
 	const updateAnswers = (question, id, type) => {
 		add_answer({ question, id, type });
+		var x = answered.find((val) => val.question === question && val.id === id);
+		if (x !== undefined) {
+			answered.splice(answered.indexOf(x), 1);
+		} else {
+			answered.push({
+				question: question,
+				id: id,
+				section: topicCounter - 1,
+			});
+		}
 	};
 
 	const DESELECT_ALL = (question, id, type) => {
@@ -133,12 +158,11 @@ function Questionnaire({
 					<div className="col-lg-7 col-xs-12 ques">
 						<ol>
 							{questionsList.length > 0 &&
-								questionsList[topicCounter - 1][
-									"questionnaire_section_questions"
-								].map((question, index) => (
-									<div className="questions" key={index}>
-										<li key={question._id}>{question.name}</li>
-										{/* {question.multiple && (
+								questionsList[topicCounter - 1]["questionnaire_section_questions"].map(
+									(question, index) => (
+										<div className="questions" key={index}>
+											<li key={question._id}>{question.name}</li>
+											{/* {question.multiple && (
 										<div className="options">
 											<input
 												id={question._id}
@@ -157,16 +181,15 @@ function Questionnaire({
 											</label>
 										</div>
 									)} */}
-										{question.questionnaire_section_answers.map(
-											(option, index) => (
+											{question.questionnaire_section_answers.map((option, index) => (
 												<div className="options" key={index}>
 													<input {...inputProps(question, option)} required />
 													<label name={option._id}>{option.name}</label>
 												</div>
-											)
-										)}
-									</div>
-								))}
+											))}
+										</div>
+									)
+								)}
 						</ol>
 					</div>
 					<div className="col-lg-1"></div>

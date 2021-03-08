@@ -103,10 +103,7 @@ function RecommendationReport({
 				<RecCard recommendations={recommendations} />
 			</div>
 			<div>
-				<DetailView
-					setDownloadText={setDownloadText}
-					downloadText={downloadText}
-				/>
+				<DetailView setDownloadText={setDownloadText} downloadText={downloadText} />
 			</div>
 		</div>
 	);
