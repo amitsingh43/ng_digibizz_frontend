@@ -11,7 +11,7 @@ import {
 	add_error,
 } from "../store/actions";
 import "../styles/home.css";
-import Footer from "../components/main/footer";
+import ContestTAndC from "../components/contestTAndC";
 import TAndC from "../components/termsAndConditions";
 
 import {
@@ -25,9 +25,7 @@ import {
 	TERMS_AND_CONDITIONS_DETAILED1,
 	TERMS_AND_CONDITIONS_DETAILED2,
 } from "../store/strings";
-import { TopContent } from "./welcome";
-import "../styles/welcome.css";
-import contest_banner from "../assets/contest_banner.jpg";
+import contest_banner from "../assets/contest_banner.png";
 
 function Home({
 	homepageCounter,
@@ -155,11 +153,6 @@ function Home({
 	}
 	return (
 		<div>
-			{homepageCounter === 1 && (
-				<div className="welcome">
-					<TopContent />
-				</div>
-			)}
 			<div className="home-container">
 				<div className="mandatory">
 					<span>* </span> All fields are mandatory
@@ -429,6 +422,9 @@ function Home({
 							)}
 						</div>
 					</div>
+				</div>
+				<div className="row">
+					<ContestTAndC />
 				</div>
 			</div>
 		</div>

@@ -16,7 +16,7 @@ import {
 } from "../store/actions";
 import Footer from "../components/main/footer";
 import { useEffect } from "react";
-import contest_banner from "../assets/contest_banner.jpg";
+import contest_banner from "../assets/contest_banner.png";
 var answered = [];
 function Questionnaire({
 	topicCounter,
