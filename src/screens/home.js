@@ -25,6 +25,9 @@ import {
 	TERMS_AND_CONDITIONS_DETAILED1,
 	TERMS_AND_CONDITIONS_DETAILED2,
 } from "../store/strings";
+import { TopContent } from "./welcome";
+import "../styles/welcome.css";
+import contest_banner from "../assets/contest_banner.jpg";
 
 function Home({
 	homepageCounter,
@@ -152,6 +155,11 @@ function Home({
 	}
 	return (
 		<div>
+			{homepageCounter === 1 && (
+				<div className="welcome">
+					<TopContent />
+				</div>
+			)}
 			<div className="home-container">
 				<div className="mandatory">
 					<span>* </span> All fields are mandatory
@@ -166,6 +174,7 @@ function Home({
 							{homepageCounter === 1 && TELL_ABOUT_YOU_DESC}
 							{homepageCounter === 2 && TELL_ABOUT_BUSINESS_DESC}
 						</p>
+						<img src={contest_banner} className="contest-banner" />
 					</div>
 					<div className="col-lg-2"></div>
 					<div className="mandatory-small">
@@ -177,10 +186,7 @@ function Home({
 								<div className="heading">
 									Full Name<span>*</span>
 								</div>
-								<select
-									id="mr-or-mrs"
-									onChange={(e) => setMrOrMs(e.target.value)}
-								>
+								<select id="mr-or-mrs" onChange={(e) => setMrOrMs(e.target.value)}>
 									{gender.length > 0 && (
 										<option selected disabled hidden>
 											Mr.
@@ -278,8 +284,7 @@ function Home({
 									onChange={(e) => setEmail(e.target.value)}
 								/>
 								<div className="heading" style={{ marginTop: 100 }}>
-									Referral Code{" "}
-									<span style={{ color: "grey" }}>(optional)</span>
+									Referral Code <span style={{ color: "grey" }}>(optional)</span>
 								</div>
 								<input
 									type="text"
@@ -299,10 +304,7 @@ function Home({
 								<div className="heading">
 									Industry<span>*</span>
 								</div>
-								<select
-									id="industry"
-									onChange={(e) => setIndustry(e.target.value)}
-								>
+								<select id="industry" onChange={(e) => setIndustry(e.target.value)}>
 									<option value="" selected disabled hidden>
 										Select
 									</option>
@@ -320,10 +322,7 @@ function Home({
 									<div className="heading">
 										Annual Turnover<span>*</span>
 									</div>
-									<select
-										id="turnover"
-										onChange={(e) => setTurnover(e.target.value)}
-									>
+									<select id="turnover" onChange={(e) => setTurnover(e.target.value)}>
 										<option value="" selected disabled hidden>
 											Select
 										</option>
@@ -351,11 +350,7 @@ function Home({
 							/>
 							<div className="col-lg-11 col-xs-11">
 								{TERMS_AND_CONDITIONS_1}
-								<a
-									href="https://www.neogrowth.in"
-									target="_blank"
-									rel="noreferrer"
-								>
+								<a href="https://www.neogrowth.in" target="_blank" rel="noreferrer">
 									<span className="site">
 										<strong>{COMPANY_NAME}</strong>
 									</span>

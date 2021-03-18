@@ -16,6 +16,7 @@ import {
 } from "../store/actions";
 import Footer from "../components/main/footer";
 import { useEffect } from "react";
+import contest_banner from "../assets/contest_banner.jpg";
 var answered = [];
 function Questionnaire({
 	topicCounter,
@@ -163,7 +164,7 @@ function Questionnaire({
 			<div className="main-content-questions">
 				<div className="row">
 					<div className="col-lg-4 col-xs-12">
-						<SectonList section={topicCounter} />
+						<SectonList contest_banner={contest_banner} section={topicCounter} />
 					</div>
 					<div className="col-lg-7 col-xs-12 ques">
 						<ol>

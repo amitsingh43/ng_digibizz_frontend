@@ -21,7 +21,7 @@ import { KNOWLEDGE_CENTER } from "../store/strings";
 import welcome_youtube from "../assets/welcome/welcome_youtube.svg";
 import ReactPixel from "react-facebook-pixel";
 import Tracking from "../util/tracking";
-const SideText = (props) => {
+const SideText = ({ homepage_decrement, show_button }) => {
 	return (
 		<div className="side-text">
 			<h1>
@@ -32,35 +32,39 @@ const SideText = (props) => {
 			<p>
 				Now upgrade your business with the help of our <br />
 				customised solutions.{"	"}
-				<span
-					className="watch-to-know-more"
-					style={{
-						color: "#28B04B",
-						textDecoration: "underline",
-						// paddingTop: 10,
+				{show_button && homepage_decrement && (
+					<span
+						className="watch-to-know-more"
+						style={{
+							color: "#28B04B",
+							textDecoration: "underline",
+							// paddingTop: 10,
+						}}
+					>
+						<span
+							style={{ cursor: "pointer" }}
+							onClick={() =>
+								window.open(
+									"https://www.youtube.com/watch?v=fW-eU-7SfMk&feature=youtu.be",
+									"_blank"
+								)
+							}
+						>
+							Watch to know more <img alt="play" src={welcome_youtube} />
+						</span>
+					</span>
+				)}
+			</p>
+			{show_button && homepage_decrement && (
+				<Link
+					to="/knowStatus"
+					onClick={() => {
+						homepage_decrement();
 					}}
 				>
-					<span
-						style={{ cursor: "pointer" }}
-						onClick={() =>
-							window.open(
-								"https://www.youtube.com/watch?v=fW-eU-7SfMk&feature=youtu.be",
-								"_blank"
-							)
-						}
-					>
-						Watch to know more <img alt="play" src={welcome_youtube} />
-					</span>
-				</span>
-			</p>
-			<Link
-				to="/knowStatus"
-				onClick={() => {
-					props.homepage_decrement();
-				}}
-			>
-				<div className="btn">Check your Digital Score</div>
-			</Link>
+					<div className="btn">Check your Digital Score</div>
+				</Link>
+			)}
 		</div>
 	);
 };
@@ -90,8 +94,8 @@ const ExploreOurServices = () => {
 		<div className="container">
 			<div className="heading">Explore our services</div>
 			<p>
-				Reimagine and transform your business with a full range of services
-				offered by our digital partners.
+				Reimagine and transform your business with a full range of services offered
+				by our digital partners.
 			</p>
 			<div className="row icons">
 				<div className="col-md-1 col-sm-1"></div>
@@ -133,11 +137,14 @@ const ExploreOurServices = () => {
 	);
 };
 
-const TopContent = (props) => {
+export const TopContent = (props) => {
 	return (
 		<div className="top-content">
 			<div className="col-md-6">
-				<SideText homepage_decrement={props.homepage_decrement} />
+				<SideText
+					homepage_decrement={props.homepage_decrement}
+					show_button={true}
+				/>
 			</div>
 			<div className="col-md-6">
 				<img className="img-responsive" alt="bg" src={welcome_bg} />
@@ -158,8 +165,8 @@ const Question = (props) => {
 		<div className="container">
 			<div className="heading">Is your Business Digital Ready?</div>
 			<p>
-				Find out your digital readiness today in all aspects of your business,
-				with the help of our logical algorithm.
+				Find out your digital readiness today in all aspects of your business, with
+				the help of our logical algorithm.
 			</p>
 
 			<div className="check-digital-score-btn-outer">
@@ -177,9 +184,7 @@ const Question = (props) => {
 						// );
 					}}
 				>
-					<div className="check-digital-score-btn">
-						Check your Digital Score
-					</div>
+					<div className="check-digital-score-btn">Check your Digital Score</div>
 				</Link>
 			</div>
 			<div className="row section-icons">
@@ -219,8 +224,8 @@ const UserGuide1 = () => {
 			<div className="row" style={{ textAlign: "center" }}>
 				<div className="heading">Knowledge Center</div>
 				<p>
-					Know how to transform your business through our blogs and updates on
-					latest industry trends.
+					Know how to transform your business through our blogs and updates on latest
+					industry trends.
 				</p>
 			</div>
 			<div
