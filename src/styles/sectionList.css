@@ -158,7 +158,7 @@
 	}
 	.section-main .contest-banner {
 		width: 100%;
-		height: 40vw;
+		height: auto;
 		margin-top: 20px;
 		position: relative;
 	}

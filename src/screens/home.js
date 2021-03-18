@@ -423,9 +423,11 @@ function Home({
 						</div>
 					</div>
 				</div>
-				<div className="row">
-					<ContestTAndC />
-				</div>
+				{homepageCounter === 1 && (
+					<div className="row">
+						<ContestTAndC />
+					</div>
+				)}
 			</div>
 		</div>
 	);
