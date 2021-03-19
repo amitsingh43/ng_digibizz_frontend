@@ -92,7 +92,7 @@ h2 {
 	padding: 0px;
 	margin: 0px;
 	margin-top: 20px;
-	max-height: 350px;
+	max-height: 430px;
 	background-color: white;
 	border-radius: 10px;
 	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.1));
@@ -105,7 +105,7 @@ h2 {
 .services-main .partner-card .col-md-4 {
 	display: flex;
 	border-radius: 10px;
-	height: 350px;
+	height: 430px;
 	padding: 0px 20px;
 	justify-content: center;
 	align-items: center;
@@ -117,7 +117,7 @@ h2 {
 }
 
 .services-main .partner-card .col-md-7 {
-	max-height: 350px;
+	max-height: 430px;
 	padding: 20px;
 }
 
@@ -167,10 +167,10 @@ h2 {
 @media (min-width: 992px) and (max-width: 1413px) {
 	.services-main .partner-card .col-md-7,
 	.services-main .partner-card {
-		max-height: 400px;
+		max-height: 470px;
 	}
 	.services-main .partner-card .col-md-4 {
-		height: 400px;
+		height: 470px;
 	}
 }
 
@@ -197,12 +197,12 @@ h2 {
 	}
 	.services-main .partner-card {
 		display: flex;
-		min-height: 450px;
+		min-height: 550px;
 		width: 100%;
 	}
 	.services-main .partner-card .col-md-7 {
 		padding: 10px 10px 0px 10px;
-		min-height: 450px;
+		min-height: 550px;
 	}
 	.hr {
 		height: 0.9px;
@@ -212,7 +212,7 @@ h2 {
 	}
 	.services-main .partner-card .col-md-4 {
 		width: 32vw;
-		height: 450px;
+		height: 550px;
 	}
 	.services-main .partner-card .avial-now {
 		margin-bottom: 20px;

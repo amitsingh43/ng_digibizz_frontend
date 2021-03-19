@@ -112,9 +112,7 @@ const HorizontalSectionList = (props) => {
 				<div className="col-xs-1"></div>
 				<span
 					className={
-						section === 1
-							? "col-lg-2 col-xs-2 fade"
-							: "col-lg-2 col-xs-2 content"
+						section === 1 ? "col-lg-2 col-xs-2 fade" : "col-lg-2 col-xs-2 content"
 					}
 				>
 					Digital Discovery
@@ -122,9 +120,7 @@ const HorizontalSectionList = (props) => {
 				{questionsList.length !== 4 && (
 					<span
 						className={
-							section === 2
-								? "col-lg-2 col-xs-2 fade"
-								: "col-lg-2 col-xs-2 content"
+							section === 2 ? "col-lg-2 col-xs-2 fade" : "col-lg-2 col-xs-2 content"
 						}
 					>
 						Digital Fulfilment
@@ -269,6 +265,7 @@ function SectionList(props) {
 				questionsList={questionsList}
 				section={section}
 			/>
+			<img className="contest-banner" src={props.contest_banner} />
 		</div>
 	);
 }
