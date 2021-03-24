@@ -32,6 +32,7 @@ import neogrowth from "../assets/partners/neogrowth.jpg";
 import digihealth from "../assets/partners/digihealth.png";
 import mybillbook from "../assets/partners/mybillbook.png";
 import payu from "../assets/partners/payu.png";
+import space_of_joy from "../assets/partners/space_of_joy.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -2847,6 +2848,23 @@ const PAYU = {
 	url:
 		"https://onboarding.payumoney.com/app/account?partner_name=Jiten&partner_source=Affiliate+Links&partner_uuid=11eb-0f9f-cfbe6f0c-aa8c-0a696b110fde&source=Partner",
 };
+
+const SPACE_OF_JOY = {
+	title: "Space of Joy",
+	subTitle: ["FREE Décor Consultation + FLAT 10% OFF on total bill"],
+	description: [
+		"Give a new look to your business space with premium quality fully customizable décor products",
+		"• Space of Joy is a new-age décor brand with premium quality, highly customizable, make to order décor products with an end-to-end solution of conceptualization to installation services.",
+		"Our offerings include Wall Coverings, Wall Decals, Backlit Art, Canvas Art, Glass & Ceiling Décor, and Cut Letters.",
+		"• Whether it is your residential space, your office, or an outlet/shop, we are a one-stop solution for a quick revamp of your space with a range of designs and product solutions.",
+		"• With experience of working with MNCs for over 12 years, you can trust the quality of all our products and services.",
+		"• Super quick turnaround within 72 hours of order confirmation across the country",
+	],
+	image: space_of_joy,
+	backgroundColor: "#fff",
+	url: "https://myspaceofjoy.com/digibuzz-promo/",
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -2912,5 +2930,10 @@ export const PARTNERS = [
 		category: "Insurance",
 		data: [CARE, GO_DIGIT],
 		tag: "insurance",
+	},
+	{
+		category: "Business Decor",
+		data: [SPACE_OF_JOY],
+		tag: "business_decor",
 	},
 ];
