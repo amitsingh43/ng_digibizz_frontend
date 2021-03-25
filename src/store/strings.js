@@ -33,6 +33,7 @@ import digihealth from "../assets/partners/digihealth.png";
 import mybillbook from "../assets/partners/mybillbook.png";
 import payu from "../assets/partners/payu.png";
 import space_of_joy from "../assets/partners/space_of_joy.png";
+import pagar_book from "../assets/partners/pagar_book.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -2865,6 +2866,26 @@ const SPACE_OF_JOY = {
 	url: "https://myspaceofjoy.com/digibuzz-promo/",
 };
 
+const PAGARBOOK = {
+	title: "PagarBook",
+	subTitle: [
+		"• PB Premium App - INR 999",
+		"• PB Premium Desktop - INR1899",
+		"• PB Biometric - 20% Off",
+	],
+	description: [
+		"Employee Management at your Finger Tips:  India's Best Payroll and Attendance Management tool for Small & Medium Enterprises",
+		"At PagarBook, we are committed to solving the most challenging problems faced by the SME sector. ",
+		"We realized there is no promising solution to manage more than 100 million SME workforce in India. We are striving hard to make the life of SME owners and employees better every day.",
+		"• 2 Million + people use PagarBook to manage their employees.",
+		"• 10 Million + people get managed on PagarBook by their employer.",
+		"• 1 Country - 1 App created within India for every Indian. Serving with pride",
+	],
+	image: pagar_book,
+	backgroundColor: "#fff",
+	url: "https://pagarbook.com/blog/catalogue-neo-growth/",
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -2918,7 +2939,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Manage Staff",
-		data: [APNA_CO],
+		data: [APNA_CO, PAGARBOOK],
 		tag: "manage_staff",
 	},
 	{
