@@ -11,6 +11,7 @@ import manage_payments from "../assets/services/manage_payments.svg";
 import manage_staff from "../assets/services/manage_staff.svg";
 import customer_loyalty_and_promotions from "../assets/services/customer_loyalty_and_promotions.svg";
 import insurance from "../assets/services/insurance.svg";
+import business_decor from "../assets/services/business_decor.png";
 
 export const services = [
 	{
@@ -77,5 +78,10 @@ export const services = [
 		image: insurance,
 		label: "Insurance",
 		tag: "insurance",
+	},
+	{
+		image: business_decor,
+		label: "Business Decor",
+		tag: "business_decor",
 	},
 ];

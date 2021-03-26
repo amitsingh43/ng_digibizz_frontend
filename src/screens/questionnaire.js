@@ -18,6 +18,9 @@ import Footer from "../components/main/footer";
 import { useEffect } from "react";
 import contest_banner from "../assets/contest_banner.png";
 var answered = [];
+var distinct = [];
+var count = 0;
+var checked = {};
 function Questionnaire({
 	topicCounter,
 	increment,
@@ -100,16 +103,18 @@ function Questionnaire({
 		var x = answered.find((val) => val.question === question && val.id === id);
 		if (x !== undefined) {
 			answered.splice(answered.indexOf(x), 1);
+			distinct.splice(distinct.indexOf(x), 1);
 		} else {
 			answered.push({
 				question: question,
 				id: id,
 				section: topicCounter - 1,
+				type,
 			});
 		}
 	};
 
-	const DESELECT_ALL = (question, id, type) => {
+	const DESELECT_ALL = (question, id, type, optionName) => {
 		none_of_the_above({ question, id, type });
 		var x = answered.find((val) => val.question === question && val.id === id);
 		if (x !== undefined) {
@@ -119,6 +124,8 @@ function Questionnaire({
 				question: question,
 				id: id,
 				section: topicCounter - 1,
+				optionName,
+				type: "checkbox",
 			});
 		}
 	};
@@ -135,7 +142,12 @@ function Questionnaire({
 					option.name.toLowerCase() === "none of the above" ||
 					option.name.toLowerCase() === "i don't deliver currently"
 				) {
-					DESELECT_ALL(question.name, e.target.value, "none");
+					DESELECT_ALL(
+						question.name,
+						e.target.value,
+						"none",
+						option.name.toLowerCase()
+					);
 				} else {
 					updateAnswers(
 						question.name,
@@ -156,11 +168,70 @@ function Questionnaire({
 			updateAnswers(name, ans._id, "checkbox");
 		});
 	};
+	const getQuestionsLength = () => {
+		var length = 0;
+		questionsList.map((sections) => {
+			length += sections["questionnaire_section_questions"].length;
+		});
+		return length;
+	};
+
+	const getAnsweredQuestionsLength = () => {
+		answered.map((answer) => {
+			if (!distinct.includes(answer.question)) {
+				distinct.push(answer.question);
+			}
+		});
+		return distinct.length;
+	};
+
+	const autoPopulate = () => {
+		var xx = answered.filter((answer) => answer.section === topicCounter - 1);
+		xx.forEach((val) => {
+			if (val.type === "checkbox") {
+				if (val.optionName === "none of the above") {
+					count++;
+				}
+			}
+			if (val.type === "radio") {
+				count++;
+			}
+		});
+		if (
+			count !== 0 &&
+			count === xx.length &&
+			count ===
+				questionsList[topicCounter - 1]["questionnaire_section_questions"].length &&
+			topicCounter - 1 !== questionsList.length &&
+			!checked[topicCounter - 1]
+		) {
+			increment();
+			checked[topicCounter - 1] = true;
+			count = 0;
+		} else {
+			count = 0;
+		}
+	};
+
 	if (questionsList.length === 0) {
 		return <Loading />;
 	}
 	return (
 		<div className="main">
+			{autoPopulate()}
+			<React.Fragment>
+				<div style={{ height: 3, width: "100vw", backgroundColor: "grey" }}>
+					<div
+						style={{
+							height: 3,
+							width: `${
+								(100 * getAnsweredQuestionsLength()) / getQuestionsLength()
+							}vw`,
+							backgroundColor: "lightgreen",
+						}}
+					></div>
+				</div>
+			</React.Fragment>
 			<div className="main-content-questions">
 				<div className="row">
 					<div className="col-lg-4 col-xs-12">

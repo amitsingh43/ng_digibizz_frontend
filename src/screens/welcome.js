@@ -21,7 +21,12 @@ import { KNOWLEDGE_CENTER } from "../store/strings";
 import welcome_youtube from "../assets/welcome/welcome_youtube.svg";
 import ReactPixel from "react-facebook-pixel";
 import Tracking from "../util/tracking";
-const SideText = ({ homepage_decrement, show_button }) => {
+const SideText = ({
+	homepage_decrement,
+	show_button,
+	showVideo,
+	toggleVideo,
+}) => {
 	return (
 		<div className="side-text">
 			<h1>
@@ -43,11 +48,12 @@ const SideText = ({ homepage_decrement, show_button }) => {
 					>
 						<span
 							style={{ cursor: "pointer" }}
-							onClick={() =>
-								window.open(
-									"https://www.youtube.com/watch?v=fW-eU-7SfMk&feature=youtu.be",
-									"_blank"
-								)
+							onClick={
+								() => toggleVideo(!showVideo)
+								// window.open(
+								// 	"https://www.youtube.com/watch?v=fW-eU-7SfMk&feature=youtu.be",
+								// 	"_blank"
+								// )
 							}
 						>
 							Watch to know more <img alt="play" src={welcome_youtube} />
@@ -86,6 +92,27 @@ const ServiceIcon = (props) => {
 	);
 };
 
+const VideoModal = ({ showVideo, toggleVideo }) => (
+	<div
+		style={{ display: "flex", flexDirection: "row", height: "400px" }}
+		className="img-responsive"
+	>
+		<div style={{ cursor: "pointer" }} onClick={() => toggleVideo(!showVideo)}>
+			✘
+		</div>
+		<iframe
+			style={{ width: "100%", height: "100%" }}
+			title="jfdsjj"
+			frameBorder="0"
+			wmode="Opaque"
+			src={
+				"https://www.youtube.com/embed/fW-eU-7SfMk" +
+				"?modestbranding=1&autoplay=0&controls=0&rel=0&wmode=transparent"
+			}
+		/>
+	</div>
+);
+
 const ExploreOurServices = () => {
 	const services1 = services.slice(0, 5);
 	const services2 = services.slice(5, 10);
@@ -122,7 +149,7 @@ const ExploreOurServices = () => {
 				<div className="col-md-1 col-sm-1"></div>
 			</div>
 			<div className="row icons">
-				<div className="col-md-5 col-sm-1"></div>
+				<div className="col-md-4 col-sm-1"></div>
 				{services3.map((service) => (
 					<ServiceIcon
 						tag={service.tag}
@@ -138,16 +165,22 @@ const ExploreOurServices = () => {
 };
 
 export const TopContent = (props) => {
+	const [showVideo, toggleVideo] = useState(false);
 	return (
 		<div className="top-content">
 			<div className="col-md-6">
 				<SideText
 					homepage_decrement={props.homepage_decrement}
 					show_button={true}
+					showVideo={showVideo}
+					toggleVideo={toggleVideo}
 				/>
 			</div>
 			<div className="col-md-6">
-				<img className="img-responsive" alt="bg" src={welcome_bg} />
+				{!showVideo && <img className="img-responsive" alt="bg" src={welcome_bg} />}
+				{showVideo && (
+					<VideoModal toggleVideo={toggleVideo} showVideo={showVideo} />
+				)}
 			</div>
 		</div>
 	);
