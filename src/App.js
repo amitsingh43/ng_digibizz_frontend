@@ -38,7 +38,7 @@ function App({ errorMessage, clear_error, history }) {
 			gtmId: "GTM-ND3D7FG",
 		};
 
-		TagManager.initialize(tagManagerArgs);
+		// TagManager.initialize(tagManagerArgs);
 	};
 	useEffect(() => {
 		if (errorMessage !== "") {
@@ -84,11 +84,7 @@ function App({ errorMessage, clear_error, history }) {
 						path={"/questionnaire"}
 						render={(props) => <Questionnaire {...props} />}
 					/>
-					<Route
-						exact
-						path={"/report"}
-						render={(props) => <Report {...props} />}
-					/>
+					<Route exact path={"/report"} render={(props) => <Report {...props} />} />
 					<Route
 						exact
 						path={"/knowledgeCenter"}
