@@ -34,6 +34,7 @@ import mybillbook from "../assets/partners/mybillbook.png";
 import payu from "../assets/partners/payu.png";
 import space_of_joy from "../assets/partners/space_of_joy.png";
 import pagar_book from "../assets/partners/pagar_book.png";
+import easyfileitr from "../assets/partners/easyfileitr.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -2886,6 +2887,20 @@ const PAGARBOOK = {
 	url: "https://pagarbook.com/blog/catalogue-neo-growth/",
 };
 
+const EASY_FILE_ITR = {
+	title: "Easy File ITR",
+	subTitle: [
+		"Upto 15% sign-up discount on GST registration, GST Return Filings and Income Tax Return filings amongst other services.",
+	],
+	image: easyfileitr,
+	backgroundColor: "#fff",
+	description: [
+		"24/7 Phone, Email & Chat Support.",
+		" We offer accounting / GST / TDS/ Income Tax and auditing services across PAN India for all individuals and small to medium-sized businesses, corporates and assist finance and accounting professionals to reduce their workloads.",
+	],
+	url: "https://easyfileitr.com/",
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -2924,7 +2939,7 @@ export const PARTNERS = [
 	// },
 	{
 		category: "Tax Filing & Legal",
-		data: [VAKIL_SEARCH],
+		data: [VAKIL_SEARCH, EASY_FILE_ITR],
 		tag: "tax_fling_and_legal",
 	},
 	{

@@ -157,7 +157,7 @@
 		z-index: -1;
 	}
 	.section-main .contest-banner {
-		width: 100%;
+		width: 50%;
 		height: auto;
 		margin-top: 20px;
 		position: relative;
@@ -167,5 +167,8 @@
 @media (max-width: 48rem) {
 	.section-main .h-main {
 		font-size: 2.5vw;
+	}
+	.section-main .contest-banner {
+		width: 100%;
 	}
 }

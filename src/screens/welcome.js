@@ -177,7 +177,9 @@ export const TopContent = (props) => {
 				/>
 			</div>
 			<div className="col-md-6">
-				{!showVideo && <img className="img-responsive" alt="bg" src={welcome_bg} />}
+				{!showVideo && (
+					<img className="img-responsive banner" alt="bg" src={welcome_bg} />
+				)}
 				{showVideo && (
 					<VideoModal toggleVideo={toggleVideo} showVideo={showVideo} />
 				)}
