@@ -38,7 +38,7 @@ function App({ errorMessage, clear_error, history }) {
 			gtmId: "GTM-ND3D7FG",
 		};
 
-		// TagManager.initialize(tagManagerArgs);
+		TagManager.initialize(tagManagerArgs);
 	};
 	useEffect(() => {
 		if (errorMessage !== "") {
