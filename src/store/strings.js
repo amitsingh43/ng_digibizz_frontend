@@ -2922,7 +2922,7 @@ const NEOCASH_INSTA = {
 	subTitle: ["Get collateral free business loan of ₹ 1 lakh in 24 hours!"],
 	image: neocash_insta,
 	description: [
-		"Get collateral free business loan of ₹ 1 lakh in 24 hours!",
+		"Get your loan approved in less than 2 minutes",
 		"Enjoy attractive benefits like:",
 		"✅No Collateral required",
 		"✅Approval in less than 2 minutes",
