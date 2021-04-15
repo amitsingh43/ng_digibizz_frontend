@@ -72,6 +72,9 @@
 		width: 30vw;
 		height: 350px;
 	}
+	.partner-main-partner-card-partner img {
+		height: fit-content;
+	}
 	.partner-main-partner-card {
 		height: 350px;
 	}
