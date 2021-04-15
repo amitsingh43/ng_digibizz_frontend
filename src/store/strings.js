@@ -35,6 +35,8 @@ import payu from "../assets/partners/payu.png";
 import space_of_joy from "../assets/partners/space_of_joy.png";
 import pagar_book from "../assets/partners/pagar_book.png";
 import easyfileitr from "../assets/partners/easyfileitr.png";
+import hylo_biz from "../assets/partners/hylo_biz.png";
+import neocash_insta from "../assets/partners/neocash_insta.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -2901,6 +2903,41 @@ const EASY_FILE_ITR = {
 	url: "https://easyfileitr.com/",
 };
 
+const HYLO_BIZ = {
+	title: "Hylo.biz",
+	subTitle: [
+		"Life time free offer on SaaS fee waiver’ for customers who are onboarded till June.",
+	],
+	image: hylo_biz,
+	description: [
+		"Make Hylobiz your business assistant from invoicing to reconciliation! Onboard now",
+		"Know More about Hylobiz - https://www.hylo.biz/  and watch https://www.youtube.com/channel/UCHoDm2D46WhKUqNfeIo91Jg to get started now.",
+	],
+	backgroundColor: "#fff",
+	url: "https://www.hylo.biz/neobank/Login",
+};
+
+const NEOCASH_INSTA = {
+	title: "NeoCash Insta",
+	subTitle: ["Get collateral free business loan of ₹ 1 lakh in 24 hours!"],
+	image: neocash_insta,
+	description: [
+		"Get collateral free business loan of ₹ 1 lakh in 24 hours!",
+		"Enjoy attractive benefits like:",
+		"✅No Collateral required",
+		"✅Approval in less than 2 minutes",
+		"✅Only KYC documents required",
+		"✅ Easy repayment of ₹ 250 per day",
+		"Simple & Super-Fast Process:",
+		"1. Online Application",
+		"2. Instant Approval",
+		"3. Doorstep Document Collection",
+		"4. Get funds into your account",
+	],
+	backgroundColor: "#fff",
+	url: "insta.neogrowth.in?utm_source=diGibizz",
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -2914,7 +2951,7 @@ export const PARTNERS = [
 	// },
 	{
 		category: "Business Loans",
-		data: [NEOGROWTH],
+		data: [NEOGROWTH, NEOCASH_INSTA],
 		tag: "business_loans",
 	},
 	{
@@ -2929,7 +2966,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Billing & Accounting",
-		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH, HYLO_BIZ],
 		tag: "billing_and_accounting",
 	},
 	// {
