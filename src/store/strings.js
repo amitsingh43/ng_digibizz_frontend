@@ -2935,7 +2935,7 @@ const NEOCASH_INSTA = {
 		"4. Get funds into your account",
 	],
 	backgroundColor: "#fff",
-	url: "insta.neogrowth.in?utm_source=diGibizz",
+	url: "https://insta.neogrowth.in?utm_source=diGibizz",
 };
 
 export const PARTNERS = [
