@@ -2598,7 +2598,7 @@ export const SUCCESSDATA = [
 	},
 ];
 
-const NEAR_STORE = {
+export const NEAR_STORE = {
 	title: "Near.Store",
 	subTitle: [
 		"Near.Store Lite / Dhandabook App for Free & Store Digitalization Dongle - INR 2400 + GST",
@@ -2611,7 +2611,7 @@ const NEAR_STORE = {
 	backgroundColor: "#fff",
 	url: "https://www.ekasta.com",
 };
-const ACCUNITY_SERVICES1 = {
+export const ACCUNITY_SERVICES1 = {
 	title: "Accunity Services",
 	subTitle: ["10% off on all our services."],
 	description: [
@@ -2622,7 +2622,7 @@ const ACCUNITY_SERVICES1 = {
 	backgroundColor: "#fff",
 	url: "http://accunityservices.com/msme.html",
 };
-const ACCUNITY_SERVICES2 = {
+export const ACCUNITY_SERVICES2 = {
 	title: "Accunity Services",
 	subTitle: ["10% off on all our services."],
 	description: [
@@ -2633,7 +2633,7 @@ const ACCUNITY_SERVICES2 = {
 	backgroundColor: "#fff",
 	url: "http://accunityservices.com/msme.html",
 };
-const ACCUNITY_SERVICES3 = {
+export const ACCUNITY_SERVICES3 = {
 	title: "Accunity Services",
 	subTitle: ["10% off on all our services."],
 	description: [
@@ -2644,7 +2644,7 @@ const ACCUNITY_SERVICES3 = {
 	backgroundColor: "#fff",
 	url: "http://accunityservices.com/msme.html",
 };
-const MOBICOMMERCE = {
+export const MOBICOMMERCE = {
 	title: "MobiCommerce",
 	subTitle: [
 		"10% discount on quotation for Mobicommerce - License (One time cost products) & SAAS Model (Subscription Plans)",
@@ -2661,7 +2661,7 @@ const MOBICOMMERCE = {
 	backgroundColor: "#fff",
 	url: "https://www.mobicommerce.net/contact-us/",
 };
-const MAGICPIN = {
+export const MAGICPIN = {
 	title: "Magicpin",
 	subTitle: ["Upto XX% off on Magic Pin services"],
 	description: [
@@ -2671,7 +2671,7 @@ const MAGICPIN = {
 	backgroundColor: "#fff",
 	url: "",
 };
-const NEOGROWTH = {
+export const NEOGROWTH = {
 	title: "NeoGrowth",
 	subTitle: ["Collateral-free business Loans up to 75 lakhs"],
 	description: [
@@ -2682,7 +2682,7 @@ const NEOGROWTH = {
 	backgroundColor: "#fff",
 	url: "https://www.neogrowth.in",
 };
-const MYBILLBOOK = {
+export const MYBILLBOOK = {
 	title: "My BillBook",
 	subTitle: [
 		"myBillBook Annual Plan (android & web application) - INR 799 for 12 months & additional 3 months free",
@@ -2695,7 +2695,7 @@ const MYBILLBOOK = {
 	backgroundColor: "#fff",
 	url: "",
 };
-const SNAPBIZZ = {
+export const SNAPBIZZ = {
 	title: "Snapbizz",
 	subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
 	description: [
@@ -2706,7 +2706,7 @@ const SNAPBIZZ = {
 	backgroundColor: "#fff",
 	url: "https://snapbizz.com/retailers-ng/",
 };
-const OK_CREDIT = {
+export const OK_CREDIT = {
 	title: "OkCredit",
 	subTitle: ["Upto XX% off on OkCredit services."],
 	description: [
@@ -2716,7 +2716,7 @@ const OK_CREDIT = {
 	backgroundColor: "#fff",
 	url: "",
 };
-const VYAPAR = {
+export const VYAPAR = {
 	title: "Vyapar",
 	subTitle: ["Upto XX% off on Vyapar services."],
 	description: ["GST Billing Software for small businesses."],
@@ -2724,7 +2724,7 @@ const VYAPAR = {
 	backgroundColor: "#fff",
 	url: "",
 };
-const PINNACLE = {
+export const PINNACLE = {
 	title: "Pinnacle Management & Utility Services",
 	subTitle: [
 		"Upto 25% discount on Social Media Marketing, Creative Designing, Business Setup & Promotional Services",
@@ -2737,7 +2737,7 @@ const PINNACLE = {
 	backgroundColor: "#fff",
 	url: "http://www.pinnaclemanagement.in/",
 };
-const RAZORPAY = {
+export const RAZORPAY = {
 	title: "Razorpay",
 	subTitle: ["Upto XX% off on Razorpay services."],
 	description: [
@@ -2747,7 +2747,7 @@ const RAZORPAY = {
 	backgroundColor: "#fff",
 	url: "",
 };
-const APNA_CO = {
+export const APNA_CO = {
 	title: "Apna.co",
 	subTitle: ["Hire from Apna for FREE"],
 	description: [
@@ -2758,7 +2758,7 @@ const APNA_CO = {
 	backgroundColor: "#fff",
 	url: "https://l.apna.co/e/digibizz",
 };
-const SYROW = {
+export const SYROW = {
 	title: "Syrow",
 	subTitle: ["Upto 15% sign-up discount on Customer Support Services"],
 	description: [
@@ -2769,7 +2769,7 @@ const SYROW = {
 	backgroundColor: "#fff",
 	url: "https://www.syrow.com/partner/neogrowth/mvz/",
 };
-const SMARTECH = {
+export const SMARTECH = {
 	title: "Smartech Electronic Systems",
 	subTitle: ["Upto 15% discount on LED Display Screens for store promotion"],
 	description: [
@@ -2779,7 +2779,7 @@ const SMARTECH = {
 	backgroundColor: "#fff",
 	url: "http://www.smartechelectronics.com/",
 };
-const GO_DIGIT = {
+export const GO_DIGIT = {
 	title: "GoDigit",
 	subTitle: ["Make Insurance Simple"],
 	description: [
@@ -2789,7 +2789,7 @@ const GO_DIGIT = {
 	backgroundColor: "#fff",
 	url: "https://www.godigit.com/partner/neo-growth",
 };
-const CARE = {
+export const CARE = {
 	title: "Care",
 	subTitle: ["Get health cover for you & your family at an affordable price"],
 	description: ["Secure your family's health with Care Health Insurance"],
@@ -2797,7 +2797,7 @@ const CARE = {
 	backgroundColor: "#fff",
 	url: "https://www.religareonline.com/",
 };
-const VAKIL_SEARCH = {
+export const VAKIL_SEARCH = {
 	title: "VakilSearch",
 	subTitle: ["Exclusive Pricing for diGibizz Customers"],
 	description: [
@@ -2809,7 +2809,7 @@ const VAKIL_SEARCH = {
 	backgroundColor: "#fff",
 	url: "https://vakilsearch-vs.typeform.com/to/Em9Ir6ag",
 };
-const BRANDPULSE = {
+export const BRANDPULSE = {
 	title: "Brandppulse Marketing Services Pvt Ltd",
 	subTitle: [
 		"Free Advertisement Display System for existing TVs in Store & Special discounts for buying new Screens (TV)",
@@ -2822,7 +2822,7 @@ const BRANDPULSE = {
 	backgroundColor: "#fff",
 	url: "https://www.brandppulse.com",
 };
-const DIGI_HEALTH = {
+export const DIGI_HEALTH = {
 	title: "DigiHealth",
 	subTitle: null,
 	description: [
@@ -2833,7 +2833,7 @@ const DIGI_HEALTH = {
 	backgroundColor: "#fff",
 	url: "https://bandhan.digihealth.in/",
 };
-const PAYU = {
+export const PAYU = {
 	title: "PayU",
 	subTitle: [
 		"Zero Transaction Charges, Setup Fee, AMC & Zero Charges on Salary, Vendor Payments. Priority Onboarding. (*T&C)",
@@ -2853,7 +2853,7 @@ const PAYU = {
 		"https://onboarding.payumoney.com/app/account?partner_name=Jiten&partner_source=Affiliate+Links&partner_uuid=11eb-0f9f-cfbe6f0c-aa8c-0a696b110fde&source=Partner",
 };
 
-const SPACE_OF_JOY = {
+export const SPACE_OF_JOY = {
 	title: "Space of Joy",
 	subTitle: ["FREE Décor Consultation + FLAT 10% OFF on total bill"],
 	description: [
@@ -2869,7 +2869,7 @@ const SPACE_OF_JOY = {
 	url: "https://myspaceofjoy.com/digibuzz-promo/",
 };
 
-const PAGARBOOK = {
+export const PAGARBOOK = {
 	title: "PagarBook",
 	subTitle: [
 		"• PB Premium App - INR 999",
@@ -2889,7 +2889,7 @@ const PAGARBOOK = {
 	url: "https://pagarbook.com/blog/catalogue-neo-growth/",
 };
 
-const EASY_FILE_ITR = {
+export const EASY_FILE_ITR = {
 	title: "Easy File ITR",
 	subTitle: [
 		"Upto 15% sign-up discount on GST registration, GST Return Filings and Income Tax Return filings amongst other services.",
@@ -2903,7 +2903,7 @@ const EASY_FILE_ITR = {
 	url: "https://easyfileitr.com/",
 };
 
-const HYLO_BIZ = {
+export const HYLO_BIZ = {
 	title: "Hylo.biz",
 	subTitle: [
 		"Life time free offer on SaaS fee waiver’ for customers who are onboarded till June.",
@@ -2917,7 +2917,7 @@ const HYLO_BIZ = {
 	url: "https://www.hylo.biz/neobank/Login",
 };
 
-const NEOCASH_INSTA = {
+export const NEOCASH_INSTA = {
 	title: "NeoCash Insta",
 	subTitle: ["Get collateral free business loan of ₹ 1 lakh in 24 hours!"],
 	image: neocash_insta,

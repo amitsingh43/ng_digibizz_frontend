@@ -107,7 +107,7 @@ function App({ errorMessage, clear_error, history }) {
 					/>
 					<Route
 						exact
-						path={"/services/:partner"}
+						path={"/services/:category/:partner"}
 						render={(props) => <Partner {...props} />}
 					/>
 					<Route

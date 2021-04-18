@@ -1,0 +1,182 @@
+import {
+	NEAR_STORE,
+	ACCUNITY_SERVICES1,
+	ACCUNITY_SERVICES2,
+	ACCUNITY_SERVICES3,
+	MOBICOMMERCE,
+	MAGICPIN,
+	NEOGROWTH,
+	MYBILLBOOK,
+	SNAPBIZZ,
+	OK_CREDIT,
+	VYAPAR,
+	PINNACLE,
+	RAZORPAY,
+	APNA_CO,
+	SYROW,
+	SMARTECH,
+	GO_DIGIT,
+	CARE,
+	VAKIL_SEARCH,
+	BRANDPULSE,
+	DIGI_HEALTH,
+	PAYU,
+	SPACE_OF_JOY,
+	PAGARBOOK,
+	EASY_FILE_ITR,
+	HYLO_BIZ,
+	NEOCASH_INSTA,
+} from "./strings";
+
+export const partnerMapping = [
+	{
+		name: "mobicommerce",
+		partner: MOBICOMMERCE,
+		heading: "Sell Online",
+	},
+	{
+		name: "near store",
+		partner: NEAR_STORE,
+		heading: "Sell Online",
+	},
+	{
+		name: "accunity services",
+		partner: ACCUNITY_SERVICES1,
+		heading: "Sell Online",
+	},
+	{
+		name: "snapbizz",
+		partner: SNAPBIZZ,
+		heading: "Sell Online",
+	},
+	{
+		name: "neogrowth",
+		partner: NEOGROWTH,
+		heading: "Business Loans",
+	},
+	{
+		name: "neocash insta",
+		partner: NEOCASH_INSTA,
+		heading: "Business Loans",
+	},
+	{
+		name: "snapbizz",
+		partner: SNAPBIZZ,
+		heading: "Inventory Management",
+	},
+	{
+		name: "my billbook",
+		partner: MYBILLBOOK,
+		heading: "Inventory Management",
+	},
+	{
+		name: "mobicommerce",
+		partner: MOBICOMMERCE,
+		heading: "Create Website or Mobile App",
+	},
+	{
+		name: "accunity services",
+		partner: ACCUNITY_SERVICES2,
+		heading: "Create Website or Mobile App",
+	},
+	{
+		name: "pinnacle management & utility services",
+		partner: PINNACLE,
+		heading: "Create Website or Mobile App",
+	},
+	{
+		name: "snapbizz",
+		partner: SNAPBIZZ,
+		heading: "Billing & Accounting",
+	},
+	{
+		name: "accunity services",
+		partner: ACCUNITY_SERVICES3,
+		heading: "Billing & Accounting",
+	},
+	{
+		name: "my billbook",
+		partner: MYBILLBOOK,
+		heading: "Billing & Accounting",
+	},
+	{
+		name: "digihealth",
+		partner: DIGI_HEALTH,
+		heading: "Billing & Accounting",
+	},
+	{
+		name: "hylo biz",
+		partner: HYLO_BIZ,
+		heading: "Billing & Accounting",
+	},
+	{
+		name: "vakilsearch",
+		partner: VAKIL_SEARCH,
+		heading: "Tax Filing & Legal",
+	},
+	{
+		name: "easy file itr",
+		partner: EASY_FILE_ITR,
+		heading: "Tax Filing & Legal",
+	},
+	{
+		name: "accunity services",
+		partner: ACCUNITY_SERVICES2,
+		heading: "Social Media & Digital Marketing",
+	},
+	{
+		name: "pinnacle management & utility services",
+		partner: PINNACLE,
+		heading: "Social Media & Digital Marketing",
+	},
+	{
+		name: "payu",
+		partner: PAYU,
+		heading: "Manage Payments",
+	},
+	{
+		name: "apna co",
+		partner: APNA_CO,
+		heading: "Manage Staff",
+	},
+	{
+		name: "pagarbook",
+		partner: PAGARBOOK,
+		heading: "Manage Staff",
+	},
+	{
+		name: "syrow",
+		partner: SYROW,
+		heading: "Customer Loyalty & Promotions",
+	},
+	{
+		name: "brandppulse marketing services pvt ltd",
+		partner: BRANDPULSE,
+		heading: "Customer Loyalty & Promotions",
+	},
+	{
+		name: "smartech electronic systems",
+		partner: SMARTECH,
+		heading: "Customer Loyalty & Promotions",
+	},
+	{
+		name: "accunity services",
+		partner: ACCUNITY_SERVICES1,
+		heading: "Customer Loyalty & Promotions",
+	},
+	{
+		name: "care",
+		partner: CARE,
+		heading: "Insurance",
+	},
+	{
+		name: "godigit",
+		partner: GO_DIGIT,
+		heading: "Insurance",
+	},
+	{
+		name: "space of joy",
+		partner: SPACE_OF_JOY,
+		heading: "Business Decor",
+	},
+];
