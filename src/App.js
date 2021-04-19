@@ -117,7 +117,7 @@ function App({ errorMessage, clear_error, history }) {
 					/>
 					<Route
 						exact
-						path={"/reg"}
+						path={"/services/:category/:partner/reg"}
 						render={(props) => <AvailNowRegistration {...props} />}
 					/>
 				</Switch>
