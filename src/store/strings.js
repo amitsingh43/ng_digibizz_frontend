@@ -2923,7 +2923,7 @@ export const NEOCASH_INSTA = {
 		"Get your ₹ 1 lakh collateral free business loan approved in 2 minutes with daily repayment of ₹ 250.",
 	],
 	image: neocash_insta,
-	description: [""],
+	description: ["", ""],
 	backgroundColor: "#fff",
 	url: "https://insta.neogrowth.in?utm_source=diGibizz",
 };
