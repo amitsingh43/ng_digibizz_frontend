@@ -2919,21 +2919,11 @@ export const HYLO_BIZ = {
 
 export const NEOCASH_INSTA = {
 	title: "NeoCash Insta",
-	subTitle: ["Get collateral free business loan of ₹ 1 lakh in 24 hours!"],
-	image: neocash_insta,
-	description: [
-		"Get your loan approved in less than 2 minutes",
-		"Enjoy attractive benefits like:",
-		"✅No Collateral required",
-		"✅Approval in less than 2 minutes",
-		"✅Only KYC documents required",
-		"✅ Easy repayment of ₹ 250 per day",
-		"Simple & Super-Fast Process:",
-		"1. Online Application",
-		"2. Instant Approval",
-		"3. Doorstep Document Collection",
-		"4. Get funds into your account",
+	subTitle: [
+		"Get your ₹ 1 lakh collateral free business loan approved in 2 minutes with daily repayment of ₹ 250.",
 	],
+	image: neocash_insta,
+	description: [""],
 	backgroundColor: "#fff",
 	url: "https://insta.neogrowth.in?utm_source=diGibizz",
 };
@@ -2966,7 +2956,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Billing & Accounting",
-		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH, HYLO_BIZ],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH],
 		tag: "billing_and_accounting",
 	},
 	// {
@@ -2986,7 +2976,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Manage Payments",
-		data: [PAYU],
+		data: [PAYU, HYLO_BIZ],
 		tag: "manage_payments",
 	},
 	{

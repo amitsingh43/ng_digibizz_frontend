@@ -103,7 +103,7 @@ const Partner = ({ user, header_digital_services, update_lead }) => {
 		}
 	};
 	return (
-		<div className="partner-main">
+		<div className="partner-main" style={{ minHeight: "99vh" }}>
 			<div className="partner-main-title">
 				<span
 					style={{ color: "grey", fontWeight: "normal", cursor: "pointer" }}
