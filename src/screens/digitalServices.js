@@ -68,20 +68,7 @@ const PartnerCard = (props) => {
 				window.open(url, "_blank");
 			}
 		} else {
-			history.push({
-				pathname: "/reg",
-				state: {
-					data: {
-						title,
-						description,
-						image,
-						subTitle,
-						tag,
-						url,
-						backgroundColor,
-					},
-				},
-			});
+			history.push(`/services/${heading}/${title}/reg`);
 		}
 	};
 	const [viewMore, toggleViewMore] = useState(false);

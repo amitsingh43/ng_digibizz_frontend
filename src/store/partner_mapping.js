@@ -107,7 +107,7 @@ export const partnerMapping = [
 	{
 		name: "hylo biz",
 		partner: HYLO_BIZ,
-		heading: "Billing & Accounting",
+		heading: "Manage Payments",
 	},
 	{
 		name: "vakilsearch",

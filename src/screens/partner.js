@@ -86,20 +86,7 @@ const Partner = ({ user, header_digital_services, update_lead }) => {
 			update_lead(body);
 			window.open(url, "_blank");
 		} else {
-			history.push({
-				pathname: "/reg",
-				state: {
-					data: {
-						title,
-						description,
-						image,
-						subTitle,
-						tag,
-						url,
-						backgroundColor,
-					},
-				},
-			});
+			history.push(`/services/${heading}/${title}/reg`);
 		}
 	};
 	return (

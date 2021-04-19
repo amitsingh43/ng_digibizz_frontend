@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import "../styles/availNowRegistration.css";
 import TAndC from "../components/termsAndConditions";
 import {
@@ -9,6 +9,7 @@ import {
 	TERMS_AND_CONDITIONS_DETAILED2,
 	COMPANY_NAME,
 } from "../store/strings";
+import { partnerMapping } from "../store/partner_mapping";
 import {
 	show_toast,
 	header_digital_services,
@@ -79,8 +80,7 @@ const Button = ({
 			show_toast(`Please enter your ${x.error}`);
 		} else {
 			// API CALL
-			var genderId =
-				gender.length > 0 && mrOrMs === "" ? gender[0]._id : mrOrMs;
+			var genderId = gender.length > 0 && mrOrMs === "" ? gender[0]._id : mrOrMs;
 			const body = {
 				full_name: document.getElementById("1").value,
 				mobile: document.getElementById("2").value,
@@ -136,12 +136,7 @@ const Form = ({
 									onChange={(e) => setMrOrMs(e.target.value)}
 								>
 									{gender.length > 0 && (
-										<option
-											value="nilhtyvtvw5sh-mabht5aa"
-											selected
-											disabled
-											hidden
-										>
+										<option value="nilhtyvtvw5sh-mabht5aa" selected disabled hidden>
 											Mr.
 										</option>
 									)}
@@ -226,19 +221,25 @@ const AvailNowRegistration = ({
 	gender,
 	save_basic_details,
 }) => {
-	const location = useLocation();
 	const history = useHistory();
 	const [isChecked, setCheck] = useState(false);
 	const [more, showmore] = useState(false);
+	const { category, partner } = useParams();
+	let changedPartner = partner;
+	let data = partnerMapping.find(
+		(val) =>
+			val.heading === category &&
+			val.name === changedPartner.split(".").join(" ").toLowerCase()
+	);
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		header_digital_services();
-		if (!location.state) {
+		if (!data) {
 			history.push("/services");
 		}
 		get_gender();
 	}, []);
-	if (!location.state) {
+	if (!data) {
 		return <h1>Redirecting</h1>;
 	}
 	if (more) {
@@ -248,7 +249,7 @@ const AvailNowRegistration = ({
 		<div>
 			<div className="avail-now-reg">
 				<div className="section">
-					<Logo state={location.state.data} />
+					<Logo state={data.partner} />
 				</div>
 				<div className="section">
 					<Form
@@ -257,8 +258,8 @@ const AvailNowRegistration = ({
 						isChecked={isChecked}
 						setCheck={setCheck}
 						showmore={showmore}
-						partner={location.state.data.title}
-						url={location.state.data.url}
+						partner={data.partner.title}
+						url={data.partner.url}
 						save_basic_details={save_basic_details}
 					/>
 				</div>
