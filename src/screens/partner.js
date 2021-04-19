@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import "../styles/partner.css";
 import { connect } from "react-redux";
-import { Redirect, useHistory, useLocation } from "react-router-dom";
+import { Redirect, useHistory, useLocation, useParams } from "react-router-dom";
 import { header_digital_services, update_lead } from "../store/actions";
+import { partnerMapping } from "../store/partner_mapping";
 
 const PartnerCard = ({ image, offer, backgroundColor, title }) => {
 	return (
@@ -41,22 +42,41 @@ const PartnerCard = ({ image, offer, backgroundColor, title }) => {
 const Partner = ({ user, header_digital_services, update_lead }) => {
 	const location = useLocation();
 	const history = useHistory();
-	if (!location || !location.state) {
+	var { partner, category } = useParams();
+	var data = partnerMapping.find(
+		(val) => val.name === partner.toLowerCase() && val.heading === category
+	);
+	console.log(data);
+	if ((!location || !location.state) && !data) {
 		return <Redirect to="/services" />;
 	}
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		header_digital_services();
 	}, []);
-	var {
-		title,
-		description,
-		image,
-		subTitle,
-		tag,
-		url,
-		backgroundColor,
-	} = location.state.data;
+	if (location && location.state) {
+		var {
+			title,
+			description,
+			image,
+			subTitle,
+			tag,
+			url,
+			backgroundColor,
+			heading,
+		} = location.state.data;
+	} else {
+		var {
+			title,
+			description,
+			image,
+			subTitle,
+			tag,
+			url,
+			backgroundColor,
+		} = data.partner;
+		var { heading } = data;
+	}
 	const _availNow = () => {
 		if (localStorage.getItem("lead_id")) {
 			const body = {
@@ -83,13 +103,13 @@ const Partner = ({ user, header_digital_services, update_lead }) => {
 		}
 	};
 	return (
-		<div className="partner-main">
+		<div className="partner-main" style={{ minHeight: "99vh" }}>
 			<div className="partner-main-title">
 				<span
 					style={{ color: "grey", fontWeight: "normal", cursor: "pointer" }}
 					onClick={() => history.goBack()}
-				>{`Explore services  >>  ${location.state.data.heading}  >>`}</span>
-				<span>{`  ${location.state.data.title}`}</span>
+				>{`Explore services  >>  ${heading}  >>`}</span>
+				<span>{`  ${title}`}</span>
 			</div>
 			<div
 				style={{
@@ -100,14 +120,14 @@ const Partner = ({ user, header_digital_services, update_lead }) => {
 				}}
 			>
 				<PartnerCard
-					image={location.state.data.image}
-					title={location.state.data.title}
-					offer={location.state.data.subTitle}
-					backgroundColor={location.state.data.backgroundColor}
+					image={image}
+					title={title}
+					offer={subTitle}
+					backgroundColor={backgroundColor}
 				/>
 			</div>
 			<div style={{ marginTop: 70 }}>
-				{location.state.data.description.map((content) => (
+				{description.map((content) => (
 					<p>{content}</p>
 				))}
 			</div>
