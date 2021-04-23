@@ -21,7 +21,7 @@ var answered = [];
 var distinct = [];
 var count = 0;
 var checked = {};
-let prevState = -1;
+let prevTopicCounter = -1;
 function Questionnaire({
 	topicCounter,
 	increment,
@@ -78,11 +78,11 @@ function Questionnaire({
 
 	useEffect(() => {
 		if (
-			prevState != topicCounter &&
+			prevTopicCounter != topicCounter &&
 			questionsList[topicCounter - 1] &&
 			questionsList[topicCounter - 1].name
 		) {
-			prevState = topicCounter;
+			prevTopicCounter = topicCounter;
 			let sectionName = questionsList[topicCounter - 1].name
 				.split(" ")[1]
 				.toLowerCase();
