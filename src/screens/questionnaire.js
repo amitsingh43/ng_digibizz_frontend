@@ -36,7 +36,7 @@ function Questionnaire({
 	none_of_the_above,
 }) {
 	const history = useHistory();
-	const { name } = useParams();
+	const { section } = useParams();
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		header_digital_status();
@@ -63,7 +63,7 @@ function Questionnaire({
 	};
 
 	useEffect(() => {
-		let urlName = name;
+		let urlName = section;
 		if (questionsList[0] && questionsList[0].name) {
 			let data = questionsList.find((val) => {
 				let secName = val.name;
@@ -74,7 +74,7 @@ function Questionnaire({
 				history.replace(`/questionnaire/discovery`);
 			}
 		}
-	}, [name, questionsList]);
+	}, [section, questionsList]);
 
 	useEffect(() => {
 		if (

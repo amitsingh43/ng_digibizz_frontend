@@ -81,7 +81,7 @@ function App({ errorMessage, clear_error, history }) {
 					/>
 					<Route
 						exact
-						path={"/questionnaire/:name"}
+						path={"/questionnaire/:section"}
 						render={(props) => <Questionnaire {...props} />}
 					/>
 					<Route exact path={"/report"} render={(props) => <Report {...props} />} />
