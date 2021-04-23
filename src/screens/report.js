@@ -32,7 +32,7 @@ function Report({
 		localStorage.getItem("lead_id") &&
 		localStorage.getItem("report") !== "true"
 	) {
-		history.push("/questionnaire");
+		history.push("/questionnaire/discovery");
 		return <div>Redirecting</div>;
 	}
 	if (localStorage.getItem("lead_id") === null) {
