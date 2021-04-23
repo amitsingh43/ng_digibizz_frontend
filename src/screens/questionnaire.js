@@ -2,7 +2,7 @@ import React from "react";
 import SectonList from "../components/sectionList";
 import Loading from "../components/loading";
 import "../styles/questionnaire.css";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import {
 	increment,
@@ -21,6 +21,7 @@ var answered = [];
 var distinct = [];
 var count = 0;
 var checked = {};
+let prevState = -1;
 function Questionnaire({
 	topicCounter,
 	increment,
@@ -35,6 +36,7 @@ function Questionnaire({
 	none_of_the_above,
 }) {
 	const history = useHistory();
+	const { name } = useParams();
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		header_digital_status();
@@ -59,6 +61,34 @@ function Questionnaire({
 		};
 		post_answers(body, history);
 	};
+
+	useEffect(() => {
+		let urlName = name;
+		if (questionsList[0] && questionsList[0].name) {
+			let data = questionsList.find((val) => {
+				let secName = val.name;
+				secName = secName.split(" ")[1].toLowerCase();
+				return urlName === secName;
+			});
+			if (!data) {
+				history.replace(`/questionnaire/discovery`);
+			}
+		}
+	}, [name, questionsList]);
+
+	useEffect(() => {
+		if (
+			prevState != topicCounter &&
+			questionsList[topicCounter - 1] &&
+			questionsList[topicCounter - 1].name
+		) {
+			prevState = topicCounter;
+			let sectionName = questionsList[topicCounter - 1].name
+				.split(" ")[1]
+				.toLowerCase();
+			history.replace(`/questionnaire/${sectionName}`);
+		}
+	}, [topicCounter]);
 
 	const next = () => {
 		var ss = [];
