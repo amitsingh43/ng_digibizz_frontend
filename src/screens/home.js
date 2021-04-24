@@ -65,11 +65,11 @@ function Home({
 		return <h1>Redirecting</h1>;
 	}
 	if (localStorage.getItem("lead_id")) {
-		history.push("/questionnaire");
+		history.push("/questionnaire/discovery");
 		return <h1>Redirecting</h1>;
 	}
 	const Navigate = () => {
-		history.push("/questionnaire");
+		history.push("/questionnaire/discovery");
 		_back();
 	};
 
