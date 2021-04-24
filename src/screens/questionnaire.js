@@ -44,23 +44,6 @@ function Questionnaire({
 			get_questions(localStorage.getItem("lead_id"));
 		}
 	}, []);
-	if (localStorage.getItem("lead_id") === null) {
-		history.push("/knowStatus");
-		return <div>Redirecting</div>;
-	}
-	if (localStorage.getItem("report") === "true") {
-		history.push("/report");
-		return <div>Redirecting</div>;
-	}
-	const submit = () => {
-		var final = [];
-		answers.filter((answer) => final.push(answer.id));
-		const body = {
-			lead_id: localStorage.getItem("lead_id"),
-			answers: final,
-		};
-		post_answers(body, history);
-	};
 
 	useEffect(() => {
 		let urlName = section;
@@ -89,6 +72,24 @@ function Questionnaire({
 			history.replace(`/questionnaire/${sectionName}`);
 		}
 	}, [topicCounter]);
+
+	if (localStorage.getItem("lead_id") === null) {
+		history.push("/knowStatus");
+		return <div>Redirecting</div>;
+	}
+	if (localStorage.getItem("report") === "true") {
+		history.push("/report");
+		return <div>Redirecting</div>;
+	}
+	const submit = () => {
+		var final = [];
+		answers.filter((answer) => final.push(answer.id));
+		const body = {
+			lead_id: localStorage.getItem("lead_id"),
+			answers: final,
+		};
+		post_answers(body, history);
+	};
 
 	const next = () => {
 		var ss = [];
