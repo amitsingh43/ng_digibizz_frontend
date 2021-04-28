@@ -325,12 +325,14 @@ export const update_lead = (body, ENDPOINT = "/api/update_lead") => async (
 
 export const save_basic_details = (
   body,
+  url,
   ENDPOINT = "/api/save_basic_details"
 ) => async (dispatch) => {
   try {
     const { lead } = await _post(ENDPOINT, body);
     show_toast("Thank you", "SUCCESS");
     dispatch(set_user_details(lead));
+    window.open(url,"_blank");
   } catch (error) {
     let message = "Something went wrong! Please try later.";
 

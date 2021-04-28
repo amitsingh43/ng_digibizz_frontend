@@ -13,7 +13,7 @@ import { partnerMapping } from "../store/partner_mapping";
 import {
 	show_toast,
 	header_digital_services,
-	get_gender,
+	get_master_data,
 	save_basic_details,
 } from "../store/actions";
 import { connect } from "react-redux";
@@ -42,6 +42,9 @@ const Logo = ({ state }) => {
 
 const Button = ({
 	mrOrMs,
+	cityId,
+	cityName,
+	otherCityName,
 	save_basic_details,
 	partner,
 	gender,
@@ -66,11 +69,15 @@ const Button = ({
 				id: "3",
 				error: "business name",
 			},
-			{
-				id: "4",
-				error: "email",
-			},
 		];
+		if (!cityId) {
+			show_toast("Please select city");
+			return;
+		}
+		if (cityName === "Other" && !otherCityName) {
+			show_toast("Please specify city name");
+			return;
+		}
 		var x = arr.find((val) => document.getElementById(val.id).value === "");
 		if (document.getElementById("2").value.length !== 10) {
 			show_toast(`Please enter a valid mobile number`);
@@ -85,12 +92,13 @@ const Button = ({
 				full_name: document.getElementById("1").value,
 				mobile: document.getElementById("2").value,
 				business_name: document.getElementById("3").value,
-				email: document.getElementById("4").value,
+				// email: document.getElementById("4").value,
 				gender_master_id: genderId,
 				partner_availed: partner,
+				cities_master_id: cityId,
+				other_city: otherCityName,
 			};
-			save_basic_details(body);
-			window.open(url, "_blank");
+			save_basic_details(body, url);
 		}
 	};
 	return (
@@ -102,6 +110,7 @@ const Button = ({
 
 const Form = ({
 	gender,
+	cities,
 	save_basic_details,
 	partner,
 	url,
@@ -115,10 +124,13 @@ const Form = ({
 		{ label: "Mobile number", type: "phone", id: "2" },
 	];
 	const data2 = [
+		{ label: "City", type: "", id: "4" },
 		{ label: "Business Name", type: "text", id: "3" },
-		{ label: "Email id", type: "email", id: "4" },
 	];
 	const [mrOrMs, setMrOrMs] = useState("");
+	const [cityId, setCityId] = useState(null);
+	const [cityName, setCityName] = useState(null);
+	const [otherCityName, setOtherCityName] = useState(null);
 	return (
 		<div style={{ flex: 1, width: "100%" }}>
 			<h1>Inquire now</h1>
@@ -161,7 +173,40 @@ const Form = ({
 								<span>*</span>
 							</label>
 							<br />
-							<input type={sec.type} id={sec.id} />
+							{sec.label === "Business Name" && <input type={sec.type} id={sec.id} />}
+							{sec.label === "City" && (
+								<div>
+									<select
+										className={"citySelect"}
+										onChange={(e) => {
+											setCityId(e.target.value);
+											setCityName(cities.find((val) => val._id == e.target.value).name);
+										}}
+									>
+										<option selected disabled>
+											Select
+										</option>
+										{cities &&
+											cities.map((city) => (
+												<option key={city._id} value={city._id}>
+													{city.name}
+												</option>
+											))}
+									</select>
+									{cityName === "Other" && (
+										<div>
+											<br />
+											<label>Please specify city</label>
+											<span>*</span>
+											<br />
+											<input
+												value={otherCityName}
+												onChange={(e) => setOtherCityName(e.target.value)}
+											/>
+										</div>
+									)}
+								</div>
+							)}
 						</div>
 					))}
 				</div>
@@ -208,6 +253,9 @@ const Form = ({
 					isChecked={isChecked}
 					partner={partner}
 					mrOrMs={mrOrMs}
+					cityId={cityId}
+					cityName={cityName}
+					otherCityName={otherCityName}
 					save_basic_details={save_basic_details}
 				/>
 			</div>
@@ -217,8 +265,9 @@ const Form = ({
 
 const AvailNowRegistration = ({
 	header_digital_services,
-	get_gender,
+	get_master_data,
 	gender,
+	cities,
 	save_basic_details,
 }) => {
 	const history = useHistory();
@@ -237,7 +286,7 @@ const AvailNowRegistration = ({
 		if (!data) {
 			history.push("/services");
 		}
-		get_gender();
+		get_master_data();
 	}, []);
 	if (!data) {
 		return <h1>Redirecting</h1>;
@@ -254,6 +303,7 @@ const AvailNowRegistration = ({
 				<div className="section">
 					<Form
 						gender={gender}
+						cities={cities}
 						more={more}
 						isChecked={isChecked}
 						setCheck={setCheck}
@@ -269,14 +319,15 @@ const AvailNowRegistration = ({
 };
 
 const mapStateToProps = (state) => {
-	const { gender } = state.masterData;
+	const { gender, cities } = state.masterData;
 	return {
 		gender,
+		cities,
 	};
 };
 
 export default connect(mapStateToProps, {
 	header_digital_services,
-	get_gender,
+	get_master_data,
 	save_basic_details,
 })(AvailNowRegistration);

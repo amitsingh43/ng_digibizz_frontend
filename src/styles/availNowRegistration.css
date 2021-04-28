@@ -98,7 +98,8 @@
 	color: red;
 }
 
-.avail-now-reg .input-container input {
+.avail-now-reg .input-container input,
+.avail-now-reg .input-container .citySelect {
 	outline: none;
 	border: 0px;
 	flex: 1;
@@ -111,6 +112,10 @@
 	padding: 5px;
 	align-items: flex-end;
 	position: relative;
+}
+
+.avail-now-reg .input-container .citySelect {
+	padding-top: 0px;
 }
 
 .avail-now-reg select {
@@ -139,7 +144,8 @@
 		margin-left: 50px;
 		width: 150px;
 	}
-	.avail-now-reg .input-container input {
+	.avail-now-reg .input-container input,
+	.avail-now-reg .input-container .citySelect {
 		width: 200px;
 		font-size: medium;
 	}
@@ -185,7 +191,8 @@
 		padding: 0px;
 		margin: 30px 20px;
 	}
-	.avail-now-reg .input-container input {
+	.avail-now-reg .input-container input,
+	.avail-now-reg .input-container .citySelect {
 		width: 40vw;
 		font-size: medium;
 	}
