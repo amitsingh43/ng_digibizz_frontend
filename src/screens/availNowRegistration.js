@@ -98,7 +98,7 @@ const Button = ({
 				cities_master_id: cityId,
 				other_city: otherCityName,
 			};
-			save_basic_details(body, url);
+			save_basic_details(body, url, cityName);
 		}
 	};
 	return (
@@ -161,6 +161,7 @@ const Form = ({
 								className={`${sec.label === "Full Name" ? "name" : ""}`}
 								type={sec.type}
 								id={sec.id}
+								maxLength={sec.label === "Mobile number" ? 10 : "auto"}
 							/>
 						</div>
 					))}

@@ -65,7 +65,18 @@ const PartnerCard = (props) => {
 			};
 			update_lead(body);
 			if (title !== "NeoGrowth") {
-				window.open(url, "_blank");
+				if (title === "NeoCash Insta") {
+					window.open(
+						`${url}&name=${localStorage.getItem(
+							"name"
+						)}&mobile=${localStorage.getItem("mobile")}&city=${localStorage.getItem(
+							"cityName"
+						)}`,
+						"_blank"
+					);
+				} else {
+					window.open(url, "_blank");
+				}
 			}
 		} else {
 			history.push(`/services/${heading}/${title}/reg`);
