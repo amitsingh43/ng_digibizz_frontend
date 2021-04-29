@@ -2930,7 +2930,7 @@ export const NEOCASH_INSTA = {
 	image: neocash_insta,
 	description: ["", ""],
 	backgroundColor: "#fff",
-	url: "https://instauat.neogrowth.in?utm_source=diGibizz",
+	url: "https://insta.neogrowth.in?utm_source=diGibizz",
 };
 
 export const PARTNERS = [
