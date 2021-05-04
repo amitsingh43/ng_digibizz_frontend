@@ -84,7 +84,20 @@ const Partner = ({ user, header_digital_services, update_lead }) => {
 				partner_availed: title,
 			};
 			update_lead(body);
-			window.open(url, "_blank");
+			if (title != "NeoGrowth") {
+				if (title === "NeoCash Insta") {
+					window.open(
+						`${url}&name=${localStorage.getItem(
+							"name"
+						)}&mobile=${localStorage.getItem("mobile")}&city=${localStorage.getItem(
+							"cityName"
+						)}`,
+						"_blank"
+					);
+				} else {
+					window.open(url, "_blank");
+				}
+			}
 		} else {
 			history.push(`/services/${heading}/${title}/reg`);
 		}

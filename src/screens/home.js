@@ -70,7 +70,6 @@ function Home({
 	}
 	const Navigate = () => {
 		history.push("/questionnaire/discovery");
-		_back();
 	};
 
 	const submitLead = async () => {
@@ -83,71 +82,62 @@ function Home({
 	};
 
 	const _next = () => {
-		if (homepageCounter < 2) {
-			var NumberRegex = /^[0-9]*$/;
-			var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-			var nameRegex = /^[a-zA-Z ]+$/;
-			if (!name || name.length === 0) {
-				add_error("Please enter your full name");
-				return;
-			} else if (!nameRegex.test(name)) {
-				add_error("Please enter a valid name");
-				return;
-			} else if (
-				!mobile ||
-				mobile.length !== 10 ||
-				!NumberRegex.test(mobile) ||
-				mobile[0] === "0"
-			) {
-				add_error("Please enter a valid mobile number");
-				return;
-			} else if (!email || email.length === 0 || !emailRegex.test(email)) {
-				add_error("Please enter a valid email");
-				return;
-			}
-			homepage_increment();
-			window.scrollTo(0, 0);
-		} else {
-			if (otherCity === "" && text === "Other") {
-				add_error("Please specify your city.");
-				return;
-			}
-			if (!businessName || businessName.length === 0) {
-				add_error("Please enter a valid Business Name");
-				return;
-			}
-			// if (!city) {
-			// 	add_error("Please select your city");
-			// 	return;
-			// }
-			// if (!industry) {
-			// 	add_error("Please select your industry");
-			// 	return;
-			// }
-			// if (!turnover) {
-			// 	add_error("Please select your turnover");
-			// 	return;
-			// }
-			var GENDER = gender[0]._id ? gender[0]._id : "";
-			const body = {
-				cities_master_id: city,
-				industry_master_id: industry,
-				annual_turnover_master_id: turnover,
-				full_name: name,
-				email: email,
-				mobile: mobile,
-				business_name: businessName,
-				gender_master_id: !mrOrMs ? GENDER : mrOrMs,
-				referral_code: referralCode,
-				other_city: otherCity,
-			};
-			post_user_details(body, Navigate);
+		var NumberRegex = /^[0-9]*$/;
+		var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		var nameRegex = /^[a-zA-Z ]+$/;
+		if (!name || name.length === 0) {
+			add_error("Please enter your full name");
+			return;
+		} else if (!nameRegex.test(name)) {
+			add_error("Please enter a valid name");
+			return;
+		} else if (
+			!mobile ||
+			mobile.length !== 10 ||
+			!NumberRegex.test(mobile) ||
+			mobile[0] === "0"
+		) {
+			add_error("Please enter a valid mobile number");
+			return;
 		}
+		if (!businessName || businessName.length === 0) {
+			add_error("Please enter a valid Business Name");
+			return;
+		}
+		if (!industry) {
+			add_error("Please select your industry");
+			return;
+		}
+		if (!city) {
+			add_error("Please select your city");
+			return;
+		}
+		if (otherCity === "" && text === "Other") {
+			add_error("Please specify your city.");
+			return;
+		}
+		if (!email) {
+			add_error("Please enter an email address");
+			return;
+		}
+		if (!emailRegex.test(email)) {
+			add_error("Please enter a valid email address");
+			return;
+		}
+		var GENDER = gender[0]._id ? gender[0]._id : "";
+		const body = {
+			cities_master_id: city,
+			industry_master_id: industry,
+			full_name: name,
+			mobile: mobile,
+			business_name: businessName,
+			gender_master_id: !mrOrMs ? GENDER : mrOrMs,
+			referral_code: referralCode,
+			other_city: otherCity,
+		};
+		post_user_details(body, Navigate);
 	};
 
-	const _back = () => {
-		homepage_decrement();
-	};
 	if (more) {
 		return <TAndC showmore={showmore} setCheck={setCheck} />;
 	}
@@ -161,11 +151,11 @@ function Home({
 					<div className="col-lg-3 col-xs-12 about">
 						<h1>
 							{homepageCounter === 1 && TELL_ABOUT_YOU}
-							{homepageCounter === 2 && TELL_ABOUT_BUSINESS}
+							{/* {homepageCounter === 2 && TELL_ABOUT_BUSINESS} */}
 						</h1>
 						<p>
 							{homepageCounter === 1 && TELL_ABOUT_YOU_DESC}
-							{homepageCounter === 2 && TELL_ABOUT_BUSINESS_DESC}
+							{/* {homepageCounter === 2 && TELL_ABOUT_BUSINESS_DESC} */}
 						</p>
 						<img src={contest_banner} className="contest-banner" />
 					</div>
@@ -174,109 +164,88 @@ function Home({
 						<span>* </span> All fields are mandatory
 					</div>
 					<div className="col-lg-2  form" style={{ marginLeft: 15 }}>
-						{homepageCounter === 1 && (
-							<div>
-								<div className="heading">
-									Full Name<span>*</span>
-								</div>
-								<select id="mr-or-mrs" onChange={(e) => setMrOrMs(e.target.value)}>
-									{gender.length > 0 && (
-										<option selected disabled hidden>
-											Mr.
-										</option>
-									)}
-									{gender.map((gen, index) => (
-										<option value={gen._id} key={index}>
-											{gen.name}
-										</option>
-									))}
-								</select>
-								<input
-									type="text"
-									className="col-xs-12"
-									id="name"
-									value={name}
-									onChange={(e) => setName(e.target.value)}
-								/>
-								<div style={{ marginTop: 100 }}></div>
-								<div className="heading">
-									Mobile Number<span>*</span>
-								</div>
-								<input
-									id="phone"
-									type="phone"
-									className="col-xs-12"
-									value={mobile}
-									onChange={(e) => {
-										if (e.target.value.length <= 10) {
-											setMobile(e.target.value);
-										}
-									}}
-								/>
-								<div style={{ marginTop: 100 }}></div>
+						<div>
+							<div className="heading">
+								Full Name<span>*</span>
 							</div>
-						)}
-						{homepageCounter === 2 && (
-							<div className="annual">
-								<div className="heading">
-									City<span>*</span>
-								</div>
-								<select id="city" onChange={(e) => setCity(e.target.value)}>
-									<option value={null} selected disabled hidden>
-										Select
+							<select id="mr-or-mrs" onChange={(e) => setMrOrMs(e.target.value)}>
+								{gender.length > 0 && (
+									<option selected disabled hidden>
+										Mr.
 									</option>
-									{cities.map((city, index) => (
-										<option value={city._id} key={index}>
-											{city.name}
-											{}
-										</option>
-									))}
-								</select>
-								{text === "Other" && (
-									<div>
-										<div style={{ marginTop: 40 }}></div>
-										<div className="heading">
-											Please specify city<span>*</span>
-										</div>
-										<input
-											id="other-city"
-											type="text"
-											className="col-xs-12"
-											value={otherCity}
-											onChange={(e) => setOtherCity(e.target.value)}
-										/>
-									</div>
 								)}
-								<div style={{ marginTop: 40 }}></div>
-								<div className="heading">
-									Business Name<span>*</span>
-								</div>
-								<input
-									id="business-name"
-									type="text"
-									className="col-xs-12"
-									value={businessName}
-									onChange={(e) => setBusinessName(e.target.value)}
-								/>
-								<div style={{ marginTop: 80 }}></div>
+								{gender.map((gen, index) => (
+									<option value={gen._id} key={index}>
+										{gen.name}
+									</option>
+								))}
+							</select>
+							<input
+								type="text"
+								className="col-xs-12"
+								id="name"
+								value={name}
+								onChange={(e) => {
+									setName(e.target.value);
+									localStorage.setItem("name", e.target.value);
+								}}
+							/>
+							<div style={{ marginTop: 40 }}></div>
+							<div className="heading">
+								Business Name<span>*</span>
 							</div>
-						)}
-					</div>
-					<div className="col-lg-1"></div>
-					<div className="col-lg-2 form" style={{ marginLeft: 15 }}>
-						{homepageCounter === 1 && (
-							<div>
-								<div className="heading">
-									Email ID<span>*</span>
+							<input
+								id="business-name"
+								type="text"
+								className="col-xs-12"
+								value={businessName}
+								onChange={(e) => setBusinessName(e.target.value)}
+							/>
+							{/* <div style={{ marginTop: 100 }}></div> */}
+						</div>
+						<div className="annual">
+							<div style={{ marginTop: 40 }}></div>
+							<div className="heading">
+								City<span>*</span>
+							</div>
+							<select
+								id="city"
+								onChange={(e) => {
+									setCity(e.target.value);
+									localStorage.setItem(
+										"cityName",
+										cities.find((val) => val._id === e.target.value).name
+									);
+								}}
+							>
+								<option value={null} selected disabled hidden>
+									Select
+								</option>
+								{cities.map((city, index) => (
+									<option value={city._id} key={index}>
+										{city.name}
+										{}
+									</option>
+								))}
+							</select>
+							{text === "Other" && (
+								<div>
+									<div style={{ marginTop: 40 }}></div>
+									<div className="heading">
+										Please specify city<span>*</span>
+									</div>
+									<input
+										id="other-city"
+										type="text"
+										className="col-xs-12"
+										value={otherCity}
+										onChange={(e) => setOtherCity(e.target.value)}
+									/>
 								</div>
-								<input
-									type="email"
-									id="mail"
-									className="col-xs-12"
-									value={email}
-									onChange={(e) => setEmail(e.target.value)}
-								/>
-								<div className="heading" style={{ marginTop: 100 }}>
+							)}
+							<div style={{ marginTop: 20 }}></div>
+							<div>
+								<div className="heading" style={{ marginTop: 20 }}>
 									Referral Code <span style={{ color: "grey" }}>(optional)</span>
 								</div>
 								<input
@@ -289,12 +258,31 @@ function Home({
 									value={referralCode}
 									onChange={(e) => setReferralCode(e.target.value)}
 								/>
-							</div>
-						)}
 
-						{homepageCounter === 2 && (
-							<div>
-								<div className="heading">
+								<div style={{ marginTop: 40 }}></div>
+							</div>
+						</div>
+					</div>
+					<div className="col-lg-1"></div>
+					<div className="col-lg-2 form" style={{ marginLeft: 15 }}>
+						<div>
+							<div className="heading">
+								Mobile Number<span>*</span>
+							</div>
+							<input
+								id="phone"
+								type="phone"
+								className="col-xs-12"
+								value={mobile}
+								onChange={(e) => {
+									if (e.target.value.length <= 10) {
+										setMobile(e.target.value);
+										localStorage.setItem("mobile", e.target.value);
+									}
+								}}
+							/>
+							<div className="annual">
+								<div className="heading" style={{ marginTop: 40 }}>
 									Industry<span>*</span>
 								</div>
 								<select id="industry" onChange={(e) => setIndustry(e.target.value)}>
@@ -307,127 +295,78 @@ function Home({
 										</option>
 									))}
 								</select>
-
-								<div style={{ marginTop: 40 }}></div>
-
-								<div className="annual">
-									<div style={{ marginTop: 40 }}></div>
-									<div className="heading">
-										Annual Turnover<span>*</span>
-									</div>
-									<select id="turnover" onChange={(e) => setTurnover(e.target.value)}>
-										<option value="" selected disabled hidden>
-											Select
-										</option>
-										{turnoverValues.map((range, index) => (
-											<option value={range._id} key={index}>
-												{range.name}
-											</option>
-										))}
-									</select>
-								</div>
-							</div>
-						)}
-					</div>
-				</div>
-				{homepageCounter === 1 && (
-					<div className="row row2">
-						<div className="col-lg-5" style={{ marginRight: 0 }}></div>
-						<div className="col-lg-7 col-xs-12 tc">
-							<input
-								id="checkbox"
-								className="col-lg-1 col-xs-1"
-								type="checkbox"
-								defaultChecked={isChecked}
-								onChange={() => setCheck(!isChecked)}
-							/>
-							<div className="col-lg-11 col-xs-11">
-								{TERMS_AND_CONDITIONS_1}
-								<a href="https://www.neogrowth.in" target="_blank" rel="noreferrer">
-									<span className="site">
-										<strong>{COMPANY_NAME}</strong>
-									</span>
-								</a>{" "}
-								{TERMS_AND_CONDITIONS_2}
-								<span
-									className="more"
-									onClick={() => {
-										showmore(!more);
-										window.scrollTo(0, 0);
-									}}
-								>
-									{more ? "Less-" : "More+"}
-								</span>
 							</div>
 						</div>
+						<div>
+							<div className="heading" style={{ marginTop: 20 }}>
+								Email id <span>*</span>
+							</div>
+							<input
+								type="text"
+								id="referral"
+								readOnly
+								onFocus={(e) => e.target.removeAttribute("readonly")}
+								autoComplete="off"
+								className="col-xs-12"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
+
+							<div style={{ marginTop: 40 }}></div>
+						</div>
 					</div>
-				)}
+				</div>
+				<div className="row row2">
+					<div className="col-lg-5" style={{ marginRight: 0 }}></div>
+					<div className="col-lg-7 col-xs-12 tc">
+						<input
+							id="checkbox"
+							className="col-lg-1 col-xs-1"
+							type="checkbox"
+							defaultChecked={isChecked}
+							onChange={() => setCheck(!isChecked)}
+						/>
+						<div className="col-lg-11 col-xs-11">
+							{TERMS_AND_CONDITIONS_1}
+							<a href="https://www.neogrowth.in" target="_blank" rel="noreferrer">
+								<span className="site">
+									<strong>{COMPANY_NAME}</strong>
+								</span>
+							</a>{" "}
+							{TERMS_AND_CONDITIONS_2}
+							<span
+								className="more"
+								onClick={() => {
+									showmore(!more);
+									window.scrollTo(0, 0);
+								}}
+							>
+								{more ? "Less-" : "More+"}
+							</span>
+						</div>
+					</div>
+				</div>
 				<div className="row row3">
 					<div className="col-lg-5"></div>
-					{homepageCounter === 2 && (
-						<div className="col-lg-3">
-							<div className="outer-button">
-								<a
-									href=""
-									id="back"
-									onClick={(e) => {
-										e.preventDefault();
-										_back();
-									}}
-								>
-									<div
-										className="button"
-										style={{
-											backgroundColor: "white",
-											borderWidth: 1,
-											borderStyle: "double",
-											borderColor: "green",
-											color: "green",
-										}}
-									>
-										Back
-									</div>
-								</a>
-							</div>
-						</div>
-					)}
 					<div className="col-lg-3">
 						<div className="outer-button">
-							{homepageCounter === 1 && (
-								<a
-									id="next"
-									href=""
-									onClick={(e) => {
-										e.preventDefault();
-										submitLead();
-									}}
-									style={{ display: "block" }}
-								>
-									<div className="button">Next</div>
-								</a>
-							)}
-
-							{homepageCounter === 2 && (
-								<a
-									id="register"
-									href=""
-									onClick={(e) => {
-										e.preventDefault();
-										submitLead();
-									}}
-									style={{ display: "block" }}
-								>
-									<div className="button">Register</div>
-								</a>
-							)}
+							<a
+								id="register"
+								href=""
+								onClick={(e) => {
+									e.preventDefault();
+									submitLead();
+								}}
+								style={{ display: "block" }}
+							>
+								<div className="button">Register</div>
+							</a>
 						</div>
 					</div>
 				</div>
-				{homepageCounter === 1 && (
-					<div className="row">
-						<ContestTAndC />
-					</div>
-				)}
+				<div className="row">
+					<ContestTAndC />
+				</div>
 			</div>
 		</div>
 	);
