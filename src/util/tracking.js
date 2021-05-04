@@ -2,7 +2,7 @@ import ReactGA from "react-ga";
 
 class Tracking {
 	init() {
-		ReactGA.initialize("UA-158848193-1");
+		// ReactGA.initialize("UA-158848193-1");
 	}
 	pageView() {
 		ReactGA.pageview(window.location.pathname + window.location.search);
