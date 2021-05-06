@@ -134,6 +134,7 @@ function Home({
 			gender_master_id: !mrOrMs ? GENDER : mrOrMs,
 			referral_code: referralCode,
 			other_city: otherCity,
+			email,
 		};
 		post_user_details(body, Navigate);
 	};
