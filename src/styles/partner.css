@@ -105,7 +105,7 @@
 	opacity: 1;
 	height: fit-content;
 	padding: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	transition: opacity 1s linear;
 }
 
