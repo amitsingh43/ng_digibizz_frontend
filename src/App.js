@@ -115,11 +115,11 @@ function App({ errorMessage, clear_error, history }) {
 						path={"/services"}
 						render={(props) => <DigitalServices {...props} />}
 					/>
-					<Route
+					{/* <Route
 						exact
 						path={"/services/:category/:partner/reg"}
 						render={(props) => <AvailNowRegistration {...props} />}
-					/>
+					/> */}
 				</Switch>
 				<Footer />
 			</Router>

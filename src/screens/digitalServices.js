@@ -58,6 +58,9 @@ const PartnerCard = (props) => {
 	} = props;
 	const history = useHistory();
 	const _availNow = () => {
+		let updatedTitle = title.split(".").join(" ");
+		history.push(`/services/${heading}/${updatedTitle}/`);
+		return;
 		if (localStorage.getItem("lead_id")) {
 			const body = {
 				lead_id: localStorage.getItem("lead_id"),
@@ -79,7 +82,8 @@ const PartnerCard = (props) => {
 				}
 			}
 		} else {
-			history.push(`/services/${heading}/${title}/reg`);
+			let updatedTitle = title.split(".").join(" ");
+			history.push(`/services/${heading}/${updatedTitle}/reg`);
 		}
 	};
 	const [viewMore, toggleViewMore] = useState(false);
@@ -133,8 +137,9 @@ const PartnerCard = (props) => {
 						display: description.length === 1 ? "none" : "block",
 					}}
 					onClick={() => {
+						let updatedTitle = title.split(".").join(" ");
 						history.push({
-							pathname: `/services/${heading}/${title}`,
+							pathname: `/services/${heading}/${updatedTitle}`,
 							state: {
 								data: {
 									title,

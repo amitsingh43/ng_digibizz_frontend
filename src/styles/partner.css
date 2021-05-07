@@ -1,6 +1,112 @@
+.servicesPartnerPage {
+	display: flex;
+	width: 100%;
+}
 .partner-main {
 	/* min-height: 99vh; */
-	padding: 0px 100px;
+	padding: 0px 40px;
+}
+
+.partner-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+	padding: 0px 30px;
+	margin: 0px 30px;
+	margin-top: 60px;
+	background-color: white;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.partner-form h3 {
+	margin-bottom: 60px;
+}
+
+.partner-form .avail-now {
+	background-color: #28b04b;
+	padding: 10px 20px;
+	width: fit-content;
+	margin: 30px 0px;
+	color: white;
+	cursor: pointer;
+}
+
+.partner-form input {
+	border: 0px;
+	border-bottom: 1px solid black;
+	width: 100%;
+	outline: none;
+	margin-bottom: 30px;
+}
+.partner-form input:focus {
+	border: 0px;
+	border-bottom: 1px solid black;
+}
+
+.partner-main .discount-icon {
+	width: 20px;
+	height: 20px;
+}
+
+.partner-carousel .carousel-main {
+	width: 40vw;
+	margin-top: 30px;
+}
+
+.partner-main .discountSection {
+	display: flex;
+	align-items: center;
+	margin: 20px 0px;
+}
+.partner-main .discountSection span {
+	color: red;
+	font-size: 17px;
+	margin-left: 5px;
+}
+
+.partner-main .partner-details {
+	margin-top: 30px;
+	flex-direction: column;
+	padding: 0px 10px;
+}
+
+.partner-main .descHeading {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	/* width: 100%; */
+}
+
+.partner-main .social-icon {
+	width: 30px;
+	height: 30px;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+.partner-main .description {
+	padding-left: 20px;
+}
+
+.partner-main .star-icon {
+	width: 20px;
+	height: 20px;
+	margin: 0px 5px;
+}
+
+.partner-main .fade {
+	opacity: 0;
+	height: 0px;
+	/* background-color: #e9f7ed; */
+	transition: opacity 0s linear, height 0s linear;
+}
+
+.partner-main .active {
+	opacity: 1;
+	height: fit-content;
+	padding: 10px;
+	margin-bottom: 20px;
+	transition: opacity 1s linear;
 }
 
 .partner-main-title {
@@ -16,16 +122,36 @@
 
 .partner-main-partner-card {
 	display: flex;
-	height: 300px;
-	width: 600px;
-	background-color: #e9f7ed;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	width: 40vw;
+	height: 200px;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
 	margin-top: 30px;
 	border-radius: 16px;
+	/* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+.partner-main-partner-card .carousel-indicators .active {
+	margin: 0px !important;
+	padding: 5px;
+	left: 47%;
+}
+.partner-main-partner-card .carousel-main {
+	margin: 0px;
+	padding-top: 0px;
+	width: 40vw;
+	height: 200px;
+	align-items: center;
+	justify-content: center;
+}
+.partner-main-partner-card .carousel-main .carousel-image {
+	width: 40vw;
+	height: 200px;
+	object-fit: contain;
 }
 .partner-main-partner-card-partner {
 	width: 220px;
-	height: 300px;
+	height: inherit;
 	padding: 0px 10px;
 	display: flex;
 	flex-direction: column;
@@ -33,11 +159,6 @@
 	justify-content: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	border-radius: 16px;
-}
-
-.partner-main-partner-card-partner img {
-	width: 200px;
 	border-radius: 16px;
 }
 
@@ -67,16 +188,25 @@
 }
 
 @media (max-width: 48rem) {
+	.servicesPartnerPage {
+		flex-direction: column;
+	}
 	.partner-main-partner-card-partner img,
 	.partner-main-partner-card-partner {
-		width: 30vw;
+		width: 100%;
 		height: 350px;
 	}
 	.partner-main-partner-card-partner img {
 		height: fit-content;
 	}
 	.partner-main-partner-card {
-		height: 350px;
+		width: 95vw;
+		height: fit-content;
+	}
+	.partner-main-partner-card img {
+		width: 95vw;
+		height: fit-content;
+		margin-top: 0px;
 	}
 	.partner-main {
 		padding: 0px 10px;
@@ -86,5 +216,27 @@
 	}
 	.partner-main-title {
 		font-size: medium;
+	}
+	.partner-main .partner-section {
+		flex-direction: column;
+	}
+	.partner-main .partner-details {
+		display: flex;
+		/* justify-content: cen	ter; */
+		align-items: center;
+		width: 100vw;
+		margin-top: 50px;
+	}
+	.partner-carousel .carousel-main {
+		width: 100%;
+	}
+	.partner-carousel .carousel-main,
+	.partner-main-partner-card,
+	.partner-main-partner-card .carousel-main,
+	.partner-main-partner-card .carousel-main .carousel-image {
+		width: 100%;
+	}
+	.partner-form {
+		margin-top: 30px;
 	}
 }

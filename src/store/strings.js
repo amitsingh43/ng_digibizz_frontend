@@ -2601,15 +2601,27 @@ export const SUCCESSDATA = [
 export const NEAR_STORE = {
 	title: "Near.Store",
 	subTitle: [
-		"Near.Store Lite / Dhandabook App for Free & Store Digitalization Dongle - INR 2400 + GST",
+		"- Free Near.Store Lite / Dhandabook App ",
+		"- Store Digitalization Dongle - INR 2400 + GST",
 	],
 	description: [
 		"Create your online store in minutes with our plug and play device .",
-		"Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
+		"• Get online and go digital in minutes with our plug and play device that easily integrates with your existing POS system and software. Your very own digital storefront is ready to accept orders as soon as you plug in. ",
+		"• With our existing catalogue of over 1 lakh products, you are ready to go from the first minute. Add your own unique offerings to your storefront with a simple barcode scan.",
 	],
 	image: near_store,
 	backgroundColor: "#fff",
 	url: "https://www.ekasta.com",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: near_store,
+		},
+	],
 };
 export const ACCUNITY_SERVICES1 = {
 	title: "Accunity Services",
@@ -2621,6 +2633,16 @@ export const ACCUNITY_SERVICES1 = {
 	image: accunity,
 	backgroundColor: "#fff",
 	url: "http://accunityservices.com/msme.html",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: accunity,
+		},
+	],
 };
 export const ACCUNITY_SERVICES2 = {
 	title: "Accunity Services",
@@ -2632,6 +2654,16 @@ export const ACCUNITY_SERVICES2 = {
 	image: accunity,
 	backgroundColor: "#fff",
 	url: "http://accunityservices.com/msme.html",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: accunity,
+		},
+	],
 };
 export const ACCUNITY_SERVICES3 = {
 	title: "Accunity Services",
@@ -2643,6 +2675,16 @@ export const ACCUNITY_SERVICES3 = {
 	image: accunity,
 	backgroundColor: "#fff",
 	url: "http://accunityservices.com/msme.html",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: accunity,
+		},
+	],
 };
 export const MOBICOMMERCE = {
 	title: "MobiCommerce",
@@ -2660,6 +2702,23 @@ export const MOBICOMMERCE = {
 	image: mobicommerce,
 	backgroundColor: "#fff",
 	url: "https://www.mobicommerce.net/contact-us/",
+	stars: 4.1,
+	socialMedia: {
+		facebook: "https://www.facebook.com/mobi.commerce.platform",
+		twitter: "https://twitter.com/mobicommerceapp",
+		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
+		youtube: "https://www.youtube.com/c/mobicommerce",
+	},
+	testimonials: null,
+	aboutUs: [
+		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
+	],
+	carousel: [
+		{
+			type: "image",
+			source: mobicommerce,
+		},
+	],
 };
 export const MAGICPIN = {
 	title: "Magicpin",
@@ -2670,6 +2729,21 @@ export const MAGICPIN = {
 	image: magic_pin,
 	backgroundColor: "#fff",
 	url: "",
+	stars: 4.1,
+	socialMedia: {
+		facebook: "https://www.facebook.com/mobi.commerce.platform",
+		twitter: "https://twitter.com/mobicommerceapp",
+		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
+		youtube: "https://www.youtube.com/c/mobicommerce",
+	},
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: magic_pin,
+		},
+	],
 };
 export const NEOGROWTH = {
 	title: "NeoGrowth",
@@ -2681,6 +2755,16 @@ export const NEOGROWTH = {
 	image: neogrowth,
 	backgroundColor: "#fff",
 	url: "https://www.neogrowth.in",
+	stars: 4.3,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: neogrowth,
+		},
+	],
 };
 export const MYBILLBOOK = {
 	title: "My BillBook",
@@ -2688,12 +2772,24 @@ export const MYBILLBOOK = {
 		"myBillBook Annual Plan (android & web application) - INR 799 for 12 months & additional 3 months free",
 	],
 	description: [
-		"My BillBook, a product of Flobiz is a free & easy to use mobile application that helps small & medium businesses.",
-		"To manage three key components of their day-to-day operations: GST billing/ invoicing, inventory/ stock management, party & outstanding management. Along with this, MyBillBook also takes care of several other types of business transactions (purchases, sale/ purchase returns, quotations/ estimates and expenses). MyBillBook is currently available in English, Hindi, Gujarati & Tamil.",
+		"My BillBook helps small & medium businesses manage three key components of their day-to-day operations: GST billing/ invoicing, inventory/ stock management, party & outstanding management.",
+		"Along with this, MyBillBook also takes care of several other types of business transactions (purchases, sale/ purchase returns, quotations/ estimates and expenses). MyBillBook is currently available in English, Hindi, Gujarati & Tamil.",
 	],
 	image: mybillbook,
 	backgroundColor: "#fff",
 	url: "",
+	stars: 4.6,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: [
+		"My BillBook, a product of Flobiz is a free & easy to use mobile application that helps small & medium businesses.",
+	],
+	carousel: [
+		{
+			type: "image",
+			source: mybillbook,
+		},
+	],
 };
 export const SNAPBIZZ = {
 	title: "Snapbizz",
@@ -2705,6 +2801,16 @@ export const SNAPBIZZ = {
 	image: snapbizz,
 	backgroundColor: "#fff",
 	url: "https://snapbizz.com/retailers-ng/",
+	stars: 4.2,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: snapbizz,
+		},
+	],
 };
 export const OK_CREDIT = {
 	title: "OkCredit",
@@ -2715,6 +2821,12 @@ export const OK_CREDIT = {
 	image: ok_credit,
 	backgroundColor: "#fff",
 	url: "",
+	carousel: [
+		{
+			type: "image",
+			source: ok_credit,
+		},
+	],
 };
 export const VYAPAR = {
 	title: "Vyapar",
@@ -2723,6 +2835,12 @@ export const VYAPAR = {
 	image: vyapar,
 	backgroundColor: "#fff",
 	url: "",
+	carousel: [
+		{
+			type: "image",
+			source: vyapar,
+		},
+	],
 };
 export const PINNACLE = {
 	title: "Pinnacle Management & Utility Services",
@@ -2736,6 +2854,16 @@ export const PINNACLE = {
 	image: pinnacle,
 	backgroundColor: "#fff",
 	url: "http://www.pinnaclemanagement.in/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: pinnacle,
+		},
+	],
 };
 export const RAZORPAY = {
 	title: "Razorpay",
@@ -2757,6 +2885,20 @@ export const APNA_CO = {
 	image: apna_co,
 	backgroundColor: "#fff",
 	url: "https://l.apna.co/e/digibizz",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: [
+		"Creating opportunities for Bharat.",
+		"At apna - we are building what we call the LinkedIn for Bharat - a professional social network optimized for India's frontline - and offering them opportunities in terms of jobs, gigs, skills, and advice on starting a business.",
+		"Creating opportunities for Bharat.",
+	],
+	carousel: [
+		{
+			type: "image",
+			source: apna_co,
+		},
+	],
 };
 export const SYROW = {
 	title: "Syrow",
@@ -2768,6 +2910,16 @@ export const SYROW = {
 	image: syrow,
 	backgroundColor: "#fff",
 	url: "https://www.syrow.com/partner/neogrowth/mvz/",
+	stars: 3.8,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: syrow,
+		},
+	],
 };
 export const SMARTECH = {
 	title: "Smartech Electronic Systems",
@@ -2778,6 +2930,16 @@ export const SMARTECH = {
 	image: smartech,
 	backgroundColor: "#fff",
 	url: "http://www.smartechelectronics.com/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: smartech,
+		},
+	],
 };
 export const GO_DIGIT = {
 	title: "GoDigit",
@@ -2788,6 +2950,16 @@ export const GO_DIGIT = {
 	image: digit,
 	backgroundColor: "#fff",
 	url: "https://www.godigit.com/partner/neo-growth",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: digit,
+		},
+	],
 };
 export const CARE = {
 	title: "Care",
@@ -2796,18 +2968,52 @@ export const CARE = {
 	image: care,
 	backgroundColor: "#fff",
 	url: "https://www.religareonline.com/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: care,
+		},
+	],
 };
 export const VAKIL_SEARCH = {
 	title: "VakilSearch",
-	subTitle: ["Exclusive Pricing for diGibizz Customers"],
+	subTitle: [
+		"Free GST Registration",
+		"GST Filings at Rs. 2999 onwards",
+		"ITR Filings at Rs.499 onwards",
+	],
 	description: [
 		"Vakilsearch is a technology powered platform for all legal, compliance and accounting needs.",
-		"a. Vakilsearch is a technology powered platform for all legal, compliance and accounting needs. We are India's largest platform, with a dominant market share of 10% in setting up new businesses and 4% in trademark applications. More than 5 lakh clients rely on us for their compliance management, accounting and legal needs",
-		"b.Simple dashboards powered by cutting-edge technology  provide real-time status updates. High levels of automation allows us to keep our prices low up to 75% more affordable than other professionals. 400+ member team with experts across domains  including Lawyers, Chartered Accountants and Company  Secretaries makes us a one-stop solution.",
 	],
 	image: vakilsearch,
 	backgroundColor: "#fff",
 	url: "https://vakilsearch-vs.typeform.com/to/Em9Ir6ag",
+	stars: 4,
+	socialMedia: {
+		instagram: "https://www.instagram.com/vakilsearch_legal",
+		facebook: "https://www.facebook.com/vakilsearch",
+		twitter: "https://twitter.com/Letsvakilsearch",
+		youtube: "https://www.youtube.com/user/legalsolutionsvakil",
+		linkedin: "https://www.linkedin.com/company/vakilsearch-com",
+	},
+	testimonials: null,
+	aboutUs: [
+		"We are India's largest platform, with a dominant market share of 10% in setting up new businesses and 4% in trademark applications. More than 5 lakh clients rely on us for their compliance management, accounting and legal needs",
+	],
+	carousel: [
+		{
+			type: "image",
+			source: vakilsearch,
+		},
+		{
+			type: "image",
+			source: digihealth,
+		},
+	],
 };
 export const BRANDPULSE = {
 	title: "Brandppulse Marketing Services Pvt Ltd",
@@ -2821,17 +3027,39 @@ export const BRANDPULSE = {
 	image: brandpulse,
 	backgroundColor: "#fff",
 	url: "https://www.brandppulse.com",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: brandpulse,
+		},
+	],
 };
 export const DIGI_HEALTH = {
 	title: "DigiHealth",
-	subTitle: null,
+	subTitle: [
+		"Get special rates on medicines, Pre-barcoded Inventory, a Mobile app for your customers to get online orders with India's number 1 pharmacy ERP solution.",
+	],
 	description: [
 		"Empowering Indian Retail Pharmacy against Online Pharmacies.",
-		"Join Digihealth and fight against online pharmacies. Get special rates on medicines, Pre-barcoded Inventory, a Mobile app for your customers to get online orders, India's number 1 pharmacy ERP solution.",
+		"Join Digihealth and fight against online pharmacies. ",
 	],
 	image: digihealth,
 	backgroundColor: "#fff",
 	url: "https://bandhan.digihealth.in/",
+	stars: 5,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: digihealth,
+		},
+	],
 };
 export const PAYU = {
 	title: "PayU",
@@ -2851,14 +3079,25 @@ export const PAYU = {
 	backgroundColor: "#fff",
 	url:
 		"https://onboarding.payumoney.com/app/account?partner_name=Jiten&partner_source=Affiliate+Links&partner_uuid=11eb-0f9f-cfbe6f0c-aa8c-0a696b110fde&source=Partner",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: payu,
+		},
+	],
 };
 
 export const SPACE_OF_JOY = {
 	title: "Space of Joy",
-	subTitle: ["FREE Décor Consultation + FLAT 10% OFF on total bill"],
+	subTitle: [
+		"- FREE Décor Consultation for DiGibizz Users",
+		"- FLAT 10% OFF on total bill",
+	],
 	description: [
-		"Give a new look to your business space with premium quality fully customizable décor products",
-		"• Space of Joy is a new-age décor brand with premium quality, highly customizable, make to order décor products with an end-to-end solution of conceptualization to installation services.",
 		"Our offerings include Wall Coverings, Wall Decals, Backlit Art, Canvas Art, Glass & Ceiling Décor, and Cut Letters.",
 		"• Whether it is your residential space, your office, or an outlet/shop, we are a one-stop solution for a quick revamp of your space with a range of designs and product solutions.",
 		"• With experience of working with MNCs for over 12 years, you can trust the quality of all our products and services.",
@@ -2867,6 +3106,28 @@ export const SPACE_OF_JOY = {
 	image: space_of_joy,
 	backgroundColor: "#fff",
 	url: "https://myspaceofjoy.com/digibuzz-promo/",
+	stars: 5,
+	socialMedia: {
+		facebook: "https://www.facebook.com/myspaceofjoy",
+	},
+	testimonials: [
+		"• For some people, their business is about product or service. But for Gaurav from Space of Joy his business is his Purpose. He understands the customer’s Purpose crystal clear and delivers a Delight. Our Wall literally came alive after the wallpaper installed by SOJ’s Team. The final finished product was elegant and excellent <insert image>",
+		"• Its amazing to see your thoughts converted into a reality, and that too so seamlessly and fast, I can’t thank Team Space of Joy Enough for making my workshop transform.. The pictures should speak for themselves <insert image>",
+	],
+	aboutUs: [
+		"Space of Joy is a new-age décor brand with premium quality, highly customizable, make to order décor products with an end-to-end solution of conceptualization to installation services.",
+		"• Experience of 10+ years in the designing and advertisement industry with renowned corporates",
+		"• In depth experience of working with large Indian and Global Multinational Companies",
+		"• Superb graphic designing capabilities with vast product portfolio and customisation options",
+		"• State of Art Infrastructure for end-to-end management from designing to delivery & installation",
+		"• Pan India coverage supported by long term relationship with all vendors and suppliers",
+	],
+	carousel: [
+		{
+			type: "image",
+			source: space_of_joy,
+		},
+	],
 };
 
 export const PAGARBOOK = {
@@ -2877,16 +3138,27 @@ export const PAGARBOOK = {
 		"• PB Biometric - 20% Off",
 	],
 	description: [
-		"Employee Management at your Finger Tips:  India's Best Payroll and Attendance Management tool for Small & Medium Enterprises",
-		"At PagarBook, we are committed to solving the most challenging problems faced by the SME sector. ",
+		"Employee Management at your Finger Tips: India's Best Payroll and Attendance Management tool for Small & Medium Enterprises",
+	],
+	image: pagar_book,
+	backgroundColor: "#fff",
+	url: "https://pagarbook.com/blog/catalogue-neo-growth/",
+	stars: 4.4,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: [
+		"At PagarBook, we are committed to solving the most challenging problems faced by the SME sector.",
 		"We realized there is no promising solution to manage more than 100 million SME workforce in India. We are striving hard to make the life of SME owners and employees better every day.",
 		"• 2 Million + people use PagarBook to manage their employees.",
 		"• 10 Million + people get managed on PagarBook by their employer.",
 		"• 1 Country - 1 App created within India for every Indian. Serving with pride",
 	],
-	image: pagar_book,
-	backgroundColor: "#fff",
-	url: "https://pagarbook.com/blog/catalogue-neo-growth/",
+	carousel: [
+		{
+			type: "image",
+			source: pagar_book,
+		},
+	],
 };
 
 export const EASY_FILE_ITR = {
@@ -2901,6 +3173,16 @@ export const EASY_FILE_ITR = {
 		" We offer accounting / GST / TDS/ Income Tax and auditing services across PAN India for all individuals and small to medium-sized businesses, corporates and assist finance and accounting professionals to reduce their workloads.",
 	],
 	url: "https://easyfileitr.com/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: easyfileitr,
+		},
+	],
 };
 
 export const HYLO_BIZ = {
@@ -2920,6 +3202,16 @@ export const HYLO_BIZ = {
 	],
 	backgroundColor: "#fff",
 	url: "https://www.hylo.biz/neobank/Login",
+	stars: 5,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: hylo_biz,
+		},
+	],
 };
 
 export const NEOCASH_INSTA = {
@@ -2928,9 +3220,31 @@ export const NEOCASH_INSTA = {
 		"Get your ₹ 1 lakh collateral free business loan approved in 2 minutes with daily repayment of ₹ 250.",
 	],
 	image: neocash_insta,
-	description: ["", ""],
+	description: [
+		"Get collateral free business loan of ₹ 1 lakh in 24 hours!",
+		"Enjoy attractive benefits like:",
+		"✅No Collateral required",
+		"✅Approval in less than 2 minutes",
+		"✅Only KYC documents required ",
+		"✅ Easy repayment of ₹ 250 per day ",
+		"Simple & Super-Fast Process:",
+		"1. Online Application",
+		"2. Instant Approval",
+		"3. Doorstep Document Collection",
+		"4. Get funds into your account",
+	],
 	backgroundColor: "#fff",
 	url: "https://insta.neogrowth.in?utm_source=diGibizz",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: neocash_insta,
+		},
+	],
 };
 
 export const PARTNERS = [
