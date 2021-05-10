@@ -186,7 +186,15 @@ const getRating = (rating) => {
 	return rows;
 };
 
-const PartnerDetails = ({ stars, subTitle, socialMedia, title, _availNow }) => {
+const PartnerDetails = ({
+	heading,
+	stars,
+	subTitle,
+	socialMedia,
+	title,
+	_availNow,
+}) => {
+	const history = useHistory();
 	return (
 		<div className={"partner-details"}>
 			<h3>{title}</h3>
@@ -238,7 +246,13 @@ const PartnerDetails = ({ stars, subTitle, socialMedia, title, _availNow }) => {
 								</a>
 							)}
 							{socialMedia.catalog && (
-								<a href={socialMedia.catalog} target="_blank">
+								<a
+									onClick={(e) => {
+										e.preventDefault();
+										history.push(`/services/${heading}/${title}/catalog`);
+									}}
+									target="_blank"
+								>
 									<img className={"social-icon"} src={Catalog} alt="pdf-icon" />
 								</a>
 							)}
@@ -351,6 +365,7 @@ const Partner = ({
 						carousel={carousel}
 					/>
 					<PartnerDetails
+						heading={heading}
 						title={title}
 						subTitle={subTitle}
 						stars={stars}
