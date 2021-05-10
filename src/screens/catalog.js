@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import { Redirect, useHistory, useParams } from "react-router-dom";
 import { partnerMapping } from "../store/partner_mapping";
+import SpaceofJoyPDF from "../assets/partners/pdfs/space_of_joy.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 // pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -57,13 +58,13 @@ const PdfView = () => {
 				alignItems: "center",
 			}}
 		>
-			{data && (
-				<div style={{ overflow: "scroll" }}>
-					<Document file={data} onLoadSuccess={onDocumentLoadSuccess}>
-						{numPages && <ShowPages />}
-					</Document>
-				</div>
-			)}
+			{/* {data && ( */}
+			<div style={{ overflow: "scroll" }}>
+				<Document file={SpaceofJoyPDF} onLoadSuccess={onDocumentLoadSuccess}>
+					{numPages && <ShowPages />}
+				</Document>
+			</div>
+			{/* )} */}
 		</div>
 	);
 };
