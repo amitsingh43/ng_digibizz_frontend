@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: { app: "./src/index.js" },
@@ -55,6 +56,14 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "public/index.html",
 			favicon: "public/favicon.ico",
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: "node_modules/pdfjs-dist/cmaps/",
+					to: "cmaps/",
+				},
+			],
 		}),
 	],
 	devServer: {
