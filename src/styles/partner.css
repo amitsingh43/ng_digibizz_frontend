@@ -234,6 +234,7 @@
 	}
 	.partner-main-title {
 		font-size: medium;
+		margin-bottom: 30px;
 	}
 	.partner-main .partner-section {
 		flex-direction: column;
@@ -258,7 +259,7 @@
 	.partner-main-partner-card .carousel-main .carousel-image {
 		height: 200px;
 		background-repeat: no-repeat;
-		background-size: 100% 200px;
+		background-size: 99% 200px;
 	}
 	.partner-form {
 		margin-top: 30px;

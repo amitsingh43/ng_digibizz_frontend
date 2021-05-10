@@ -22,7 +22,7 @@ const YouTube = ({ videoId, toggleYoutube }) => {
 						src={`https://www.youtube.com/embed/${videoId}`}
 						frameborder="0"
 						allow="autoplay; encrypted-media"
-						allowfullscreen
+						allowFullScreen
 						title="video"
 					/>
 				</div>

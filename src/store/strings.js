@@ -68,6 +68,12 @@ import knowledge_7 from "../assets/welcome/knowledge_7.svg";
 import knowledge_8 from "../assets/welcome/knowledge_8.svg";
 import knowledge_9 from "../assets/welcome/knowledge_9.svg";
 import knowledge_10 from "../assets/welcome/knowledge_10.svg";
+import SpaceOfJoyOne from "../assets/partners/carousel/space_of_joy/one.png";
+import SpaceOfJoyTwo from "../assets/partners/carousel/space_of_joy/two.png";
+import SpaceOfJoyThree from "../assets/partners/carousel/space_of_joy/three.jpg";
+import SpaceOfJoyFour from "../assets/partners/carousel/space_of_joy/four.jpg";
+import SpaceOfJoyFive from "../assets/partners/carousel/space_of_joy/five.jpg";
+import SpaceOfJoyPDF from "../assets/partners/pdfs/space_of_joy.pdf";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -3111,6 +3117,7 @@ export const SPACE_OF_JOY = {
 	stars: 5,
 	socialMedia: {
 		facebook: "https://www.facebook.com/myspaceofjoy",
+		catalog: SpaceOfJoyPDF,
 	},
 	testimonials: [
 		"• For some people, their business is about product or service. But for Gaurav from Space of Joy his business is his Purpose. He understands the customer’s Purpose crystal clear and delivers a Delight. Our Wall literally came alive after the wallpaper installed by SOJ’s Team. The final finished product was elegant and excellent <insert image>",
@@ -3127,7 +3134,23 @@ export const SPACE_OF_JOY = {
 	carousel: [
 		{
 			type: "image",
-			source: space_of_joy,
+			source: SpaceOfJoyOne,
+		},
+		{
+			type: "image",
+			source: SpaceOfJoyTwo,
+		},
+		{
+			type: "image",
+			source: SpaceOfJoyThree,
+		},
+		{
+			type: "image",
+			source: SpaceOfJoyFour,
+		},
+		{
+			type: "image",
+			source: SpaceOfJoyFive,
 		},
 	],
 };
