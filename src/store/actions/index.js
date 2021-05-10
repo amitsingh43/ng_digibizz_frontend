@@ -334,14 +334,7 @@ export const save_basic_details = (
 		const { lead } = await _post(ENDPOINT, body);
 		show_toast("Thank you", "SUCCESS");
 		dispatch(set_user_details(lead));
-		if (url === NEOCASH_INSTA.url) {
-			window.open(
-				`${url}&name=${lead.full_name}&mobile=${lead.mobile}&city=${cityName}`,
-				"_blank"
-			);
-		} else {
-			window.open(url, "_blank");
-		}
+		window.open(url, "_blank");
 	} catch (error) {
 		let message = "Something went wrong! Please try later.";
 
