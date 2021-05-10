@@ -60,7 +60,7 @@ const PdfView = () => {
 		>
 			{/* {data && ( */}
 			<div style={{ overflow: "scroll" }}>
-				<Document file={SpaceofJoyPDF} onLoadSuccess={onDocumentLoadSuccess}>
+				<Document file={{ url: data }} onLoadSuccess={onDocumentLoadSuccess}>
 					{numPages && <ShowPages />}
 				</Document>
 			</div>
