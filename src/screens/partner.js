@@ -17,6 +17,7 @@ import LinkedIn from "../assets/partner_page/linkedin.png";
 import Star from "../assets/partner_page/star.png";
 import Twitter from "../assets/partner_page/twitter.png";
 import Youtube from "../assets/partner_page/youtube.png";
+import YouTube from "../components/common/youtube";
 
 const Form = ({ masterData, url, save_basic_details }) => {
 	const { cities } = masterData;
@@ -83,8 +84,16 @@ const Form = ({ masterData, url, save_basic_details }) => {
 
 const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 	const [currentDisplayed, setCurrentDisplay] = useState(0);
+	const [showYouTube, toggleYoutube] = useState({ show: false, videoId: null });
 	return (
 		<div className="partner-main-partner-card">
+			{showYouTube.show && (
+				<YouTube
+					videoId={"BcwpX9pzqXY"}
+					toggleYoutube={toggleYoutube}
+					showYouTube={showYouTube}
+				/>
+			)}
 			<div className="carousel-main">
 				<div
 					id="carouselExampleIndicators"
@@ -95,17 +104,29 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 				>
 					<div className="carousel-inner">
 						{carousel &&
-							carousel.map((item, index) => {
-								if (item.type === "image")
-									return (
-										<div
-											key={index}
-											className={`item  ${index === currentDisplayed ? "active" : ""}`}
-										>
-											<img className={"carousel-image"} src={item.source} />
-										</div>
-									);
-							})}
+							carousel.map((item, index) => (
+								<div
+									onClick={() => {
+										if (item.type === "video") {
+											toggleYoutube((showYouTube) => ({
+												...showYouTube,
+												show: true,
+												videoId: item.videoId,
+											}));
+										}
+									}}
+									style={{
+										backgroundImage: `url(${item.source})`,
+										cursor: item.type === "video" ? "pointer" : "auto",
+									}}
+									key={index}
+									className={`item  ${
+										index === currentDisplayed
+											? "active carousel-image"
+											: "carousel-image"
+									}`}
+								></div>
+							))}
 					</div>
 					<div className={`row ${carousel.length === 1 ? "hidden" : ""}`}>
 						<ol className="carousel-indicators">
@@ -165,7 +186,7 @@ const getRating = (rating) => {
 	return rows;
 };
 
-const PartnerDetails = ({ stars, subTitle, socialMedia, title }) => {
+const PartnerDetails = ({ stars, subTitle, socialMedia, title, _availNow }) => {
 	return (
 		<div className={"partner-details"}>
 			<h3>{title}</h3>
@@ -181,6 +202,13 @@ const PartnerDetails = ({ stars, subTitle, socialMedia, title }) => {
 						<div style={{ lineHeight: 1.8 }}>{offer}</div>
 					))}
 				</div>
+				{localStorage.getItem("lead_id") && (
+					<div className="partner-main-avail-now">
+						<span style={{ cursor: "pointer" }} onClick={_availNow}>
+							Avail Now
+						</span>
+					</div>
+				)}
 				<div style={{ flexDirection: "row" }}>
 					{socialMedia && (
 						<div>
@@ -209,8 +237,8 @@ const PartnerDetails = ({ stars, subTitle, socialMedia, title }) => {
 									<img className={"social-icon"} src={LinkedIn} alt="linkedin-icon" />
 								</a>
 							)}
-							{socialMedia.youtube && (
-								<a href={socialMedia.youtube} target="_blank">
+							{socialMedia.catalog && (
+								<a href={socialMedia.catalog} target="_blank">
 									<img className={"social-icon"} src={Catalog} alt="pdf-icon" />
 								</a>
 							)}
@@ -289,18 +317,7 @@ const Partner = ({
 			};
 			update_lead(body);
 			if (title != "NeoGrowth") {
-				if (title === "NeoCash Insta") {
-					window.open(
-						`${url}&name=${localStorage.getItem(
-							"name"
-						)}&mobile=${localStorage.getItem("mobile")}&city=${localStorage.getItem(
-							"cityName"
-						)}`,
-						"_blank"
-					);
-				} else {
-					window.open(url, "_blank");
-				}
+				window.open(url, "_blank");
 			}
 		} else {
 			let updatedTitle = title.split(".").join(" ");
@@ -338,9 +355,10 @@ const Partner = ({
 						subTitle={subTitle}
 						stars={stars}
 						socialMedia={socialMedia}
+						_availNow={_availNow}
 					/>
 				</div>
-				<div style={{ marginTop: 70 }}>
+				<div className={"dataSection"}>
 					<div id={"description"}>
 						{description && (
 							<DataSection
@@ -375,13 +393,6 @@ const Partner = ({
 						)}
 					</div>
 				</div>
-				{localStorage.getItem("lead_id") && (
-					<div className="partner-main-avail-now">
-						<span style={{ cursor: "pointer" }} onClick={_availNow}>
-							Avail Now
-						</span>
-					</div>
-				)}
 			</div>
 			{!localStorage.getItem("lead_id") && (
 				<div style={{ flex: 1 }}>

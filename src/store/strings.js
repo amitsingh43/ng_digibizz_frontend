@@ -2999,6 +2999,7 @@ export const VAKIL_SEARCH = {
 		twitter: "https://twitter.com/Letsvakilsearch",
 		youtube: "https://www.youtube.com/user/legalsolutionsvakil",
 		linkedin: "https://www.linkedin.com/company/vakilsearch-com",
+		catalog: "https://www.linkedin.com/company/vakilsearch-com",
 	},
 	testimonials: null,
 	aboutUs: [
@@ -3010,8 +3011,9 @@ export const VAKIL_SEARCH = {
 			source: vakilsearch,
 		},
 		{
-			type: "image",
+			type: "video",
 			source: digihealth,
+			videoID: "BcwpX9pzqXY",
 		},
 	],
 };
