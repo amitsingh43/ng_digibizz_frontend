@@ -60,7 +60,13 @@ const PdfView = () => {
 		>
 			{/* {data && ( */}
 			<div style={{ overflow: "scroll" }}>
-				<Document file={{ url: data }} onLoadSuccess={onDocumentLoadSuccess}>
+				<Document
+					file={{
+						url:
+							"https://uat.advancesuite.in:3061/api/download_report?lead_id=66ep-ndpi5ivdnbacnnw5a",
+					}}
+					onLoadSuccess={onDocumentLoadSuccess}
+				>
 					{numPages && <ShowPages />}
 				</Document>
 			</div>
