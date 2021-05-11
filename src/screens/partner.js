@@ -210,55 +210,55 @@ const PartnerDetails = ({
 						<div style={{ lineHeight: 1.8 }}>{offer}</div>
 					))}
 				</div>
-				{localStorage.getItem("lead_id") && (
-					<div className="partner-main-avail-now">
-						<span style={{ cursor: "pointer" }} onClick={_availNow}>
-							Avail Now
-						</span>
+			</div>
+			{localStorage.getItem("lead_id") && (
+				<div className="partner-main-avail-now">
+					<span style={{ cursor: "pointer" }} onClick={_availNow}>
+						Avail Now
+					</span>
+				</div>
+			)}
+			<div style={{ flexDirection: "row", marginLeft: 10 }}>
+				{socialMedia && (
+					<div>
+						{socialMedia.instagram && (
+							<a href={socialMedia.instagram} target="_blank">
+								<img className={"social-icon"} src={Instagram} alt="instagram-icon" />
+							</a>
+						)}
+						{socialMedia.facebook && (
+							<a href={socialMedia.facebook} target="_blank">
+								<img className={"social-icon"} src={Facebook} alt="fb-icon" />
+							</a>
+						)}
+						{socialMedia.twitter && (
+							<a href={socialMedia.twitter} target="_blank">
+								<img className={"social-icon"} src={Twitter} alt="twitter-icon" />
+							</a>
+						)}
+						{socialMedia.youtube && (
+							<a href={socialMedia.youtube} target="_blank">
+								<img className={"social-icon"} src={Youtube} alt="yb-icon" />
+							</a>
+						)}
+						{socialMedia.linkedin && (
+							<a href={socialMedia.linkedin} target="_blank">
+								<img className={"social-icon"} src={LinkedIn} alt="linkedin-icon" />
+							</a>
+						)}
+						{socialMedia.catalog && (
+							<a
+								onClick={(e) => {
+									e.preventDefault();
+									history.push(`/services/${heading}/${title}/catalog`);
+								}}
+								target="_blank"
+							>
+								<img className={"social-icon"} src={Catalog} alt="pdf-icon" />
+							</a>
+						)}
 					</div>
 				)}
-				<div style={{ flexDirection: "row" }}>
-					{socialMedia && (
-						<div>
-							{socialMedia.instagram && (
-								<a href={socialMedia.instagram} target="_blank">
-									<img className={"social-icon"} src={Instagram} alt="instagram-icon" />
-								</a>
-							)}
-							{socialMedia.facebook && (
-								<a href={socialMedia.facebook} target="_blank">
-									<img className={"social-icon"} src={Facebook} alt="fb-icon" />
-								</a>
-							)}
-							{socialMedia.twitter && (
-								<a href={socialMedia.twitter} target="_blank">
-									<img className={"social-icon"} src={Twitter} alt="twitter-icon" />
-								</a>
-							)}
-							{socialMedia.youtube && (
-								<a href={socialMedia.youtube} target="_blank">
-									<img className={"social-icon"} src={Youtube} alt="yb-icon" />
-								</a>
-							)}
-							{socialMedia.linkedin && (
-								<a href={socialMedia.linkedin} target="_blank">
-									<img className={"social-icon"} src={LinkedIn} alt="linkedin-icon" />
-								</a>
-							)}
-							{socialMedia.catalog && (
-								<a
-									onClick={(e) => {
-										e.preventDefault();
-										history.push(`/services/${heading}/${title}/catalog`);
-									}}
-									target="_blank"
-								>
-									<img className={"social-icon"} src={Catalog} alt="pdf-icon" />
-								</a>
-							)}
-						</div>
-					)}
-				</div>
 			</div>
 		</div>
 	);
@@ -373,6 +373,15 @@ const Partner = ({
 						_availNow={_availNow}
 					/>
 				</div>
+				{!localStorage.getItem("lead_id") && (
+					<div style={{ flex: 1 }} className={"form-in-mobile"}>
+						<Form
+							masterData={masterData}
+							url={url}
+							save_basic_details={save_basic_details}
+						/>
+					</div>
+				)}
 				<div className={"dataSection"}>
 					<div id={"description"}>
 						{description && (
@@ -410,7 +419,7 @@ const Partner = ({
 				</div>
 			</div>
 			{!localStorage.getItem("lead_id") && (
-				<div style={{ flex: 1 }}>
+				<div style={{ flex: 1 }} className={"form-in-desktop"}>
 					<Form
 						masterData={masterData}
 						url={url}

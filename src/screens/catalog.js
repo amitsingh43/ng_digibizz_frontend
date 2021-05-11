@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import { Redirect, useHistory, useParams } from "react-router-dom";
 import { partnerMapping } from "../store/partner_mapping";
-import SpaceofJoyPDF from "../assets/partners/pdfs/space_of_joy.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 // pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -62,8 +61,7 @@ const PdfView = () => {
 			<div style={{ overflow: "scroll" }}>
 				<Document
 					file={{
-						url:
-							"https://uat.advancesuite.in:3061/api/download_report?lead_id=66ep-ndpi5ivdnbacnnw5a",
+						url: data,
 					}}
 					onLoadSuccess={onDocumentLoadSuccess}
 				>

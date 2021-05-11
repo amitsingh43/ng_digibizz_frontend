@@ -26,6 +26,7 @@ import {
 	EASY_FILE_ITR,
 	HYLO_BIZ,
 	NEOCASH_INSTA,
+	MEDIAQART,
 } from "./strings";
 
 export const partnerMapping = [
@@ -178,5 +179,10 @@ export const partnerMapping = [
 		name: "space of joy",
 		partner: SPACE_OF_JOY,
 		heading: "Business Decor",
+	},
+	{
+		name: "mediaqart",
+		partner: MEDIAQART,
+		heading: "Social Media & Digital Marketing",
 	},
 ];

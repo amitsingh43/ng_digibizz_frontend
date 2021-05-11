@@ -37,6 +37,7 @@ import pagar_book from "../assets/partners/pagar_book.png";
 import easyfileitr from "../assets/partners/easyfileitr.png";
 import hylo_biz from "../assets/partners/hylo_biz.png";
 import neocash_insta from "../assets/partners/neocash_insta.png";
+import mediaqart from "../assets/partners/mediaqart.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -73,7 +74,6 @@ import SpaceOfJoyTwo from "../assets/partners/carousel/space_of_joy/two.png";
 import SpaceOfJoyThree from "../assets/partners/carousel/space_of_joy/three.jpg";
 import SpaceOfJoyFour from "../assets/partners/carousel/space_of_joy/four.jpg";
 import SpaceOfJoyFive from "../assets/partners/carousel/space_of_joy/five.jpg";
-import SpaceOfJoyPDF from "../assets/partners/pdfs/space_of_joy.pdf";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -3005,7 +3005,6 @@ export const VAKIL_SEARCH = {
 		twitter: "https://twitter.com/Letsvakilsearch",
 		youtube: "https://www.youtube.com/user/legalsolutionsvakil",
 		linkedin: "https://www.linkedin.com/company/vakilsearch-com",
-		catalog: "https://www.linkedin.com/company/vakilsearch-com",
 	},
 	testimonials: null,
 	aboutUs: [
@@ -3117,7 +3116,8 @@ export const SPACE_OF_JOY = {
 	stars: 5,
 	socialMedia: {
 		facebook: "https://www.facebook.com/myspaceofjoy",
-		catalog: SpaceOfJoyPDF,
+		// catalog:
+		// 	"https://uat.advancesuite.in:3061/api/download_report?lead_id=66ep-ndpi5ivdnbacnnw5a",
 	},
 	testimonials: [
 		"• For some people, their business is about product or service. But for Gaurav from Space of Joy his business is his Purpose. He understands the customer’s Purpose crystal clear and delivers a Delight. Our Wall literally came alive after the wallpaper installed by SOJ’s Team. The final finished product was elegant and excellent <insert image>",
@@ -3272,6 +3272,42 @@ export const NEOCASH_INSTA = {
 	],
 };
 
+export const MEDIAQART = {
+	title: "Mediaqart",
+	subTitle: [
+		"Increase sales with easy online advertising.",
+		"Get 7.5% Cashback on your wallet fill*",
+		"*Max INR as 10000 cashbacks.",
+	],
+	description: [
+		"Run ads on Google, Facebook, Instagram & YouTube from one place",
+		"- Reach customers interested in your business",
+		"- Show ads in specific regions and localities",
+		"- Improve ROI with accurate performance estimates",
+		"- Create ads using our ready templates",
+		"- Track ad performance in real-time",
+		"- No online advertising skills required",
+		"Mediaqart lets one:",
+		"Launch effective digital ads with one-click audience creation.",
+		"Create ad graphics using built-in Canva and copy templates.",
+		"Manage budget and outcomes by foreseeing campaign results.",
+		"Have full control over campaigns from a single dashboard.",
+	],
+	image: mediaqart,
+	backgroundColor: "#fff",
+	url: "https://mediaqart.com/partners",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: mediaqart,
+		},
+	],
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -3315,7 +3351,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Social Media & Digital Marketing",
-		data: [ACCUNITY_SERVICES2, PINNACLE],
+		data: [ACCUNITY_SERVICES2, PINNACLE, MEDIAQART],
 		tag: "social_media_marketing",
 	},
 	{

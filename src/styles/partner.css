@@ -7,6 +7,14 @@
 	padding: 0px 40px;
 }
 
+.servicesPartnerPage .form-in-desktop {
+	display: block;
+}
+
+.servicesPartnerPage .form-in-mobile {
+	display: none;
+}
+
 .partner-main .dataSection {
 	margin-top: 100px;
 }
@@ -91,6 +99,7 @@
 	height: 30px;
 	margin-top: 30px;
 	margin-right: 10px;
+	opacity: 0.5;
 }
 
 .partner-main .description {
@@ -141,9 +150,15 @@
 	/* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 .partner-main-partner-card .carousel-indicators .active {
-	margin: 0px !important;
-	padding: 5px;
-	left: 47%;
+	/* margin: 0px !important; */
+	padding: 0px;
+	width: 8px;
+	height: 8px;
+	border: 2px solid green;
+	margin-bottom: 1px;
+	z-index: auto;
+	/* margin-right: 2px; */
+	/* left: 47%; */
 }
 .partner-main-partner-card .carousel-main {
 	margin: 0px;
@@ -191,7 +206,7 @@
 }
 
 .partner-main-avail-now {
-	text-align: center;
+	/* text-align: center; */
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 	margin-top: 30px;
 	padding-bottom: 18px;
@@ -266,5 +281,12 @@
 	}
 	.partner-main .dataSection {
 		margin-top: 50px;
+	}
+	.servicesPartnerPage .form-in-desktop {
+		display: none;
+	}
+
+	.servicesPartnerPage .form-in-mobile {
+		display: block;
 	}
 }
