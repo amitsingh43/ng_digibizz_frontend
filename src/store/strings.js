@@ -74,6 +74,8 @@ import SpaceOfJoyTwo from "../assets/partners/carousel/space_of_joy/two.png";
 import SpaceOfJoyThree from "../assets/partners/carousel/space_of_joy/three.jpg";
 import SpaceOfJoyFour from "../assets/partners/carousel/space_of_joy/four.jpg";
 import SpaceOfJoyFive from "../assets/partners/carousel/space_of_joy/five.jpg";
+import SnapbizzOne from "../assets/partners/carousel/snapbizz/one.jpg";
+import SnapbizzTwo from "../assets/partners/carousel/snapbizz/two.png";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -2816,6 +2818,14 @@ export const SNAPBIZZ = {
 			type: "image",
 			source: snapbizz,
 		},
+		{
+			type: "image",
+			source: SnapbizzOne,
+		},
+		{
+			type: "image",
+			source: SnapbizzTwo,
+		},
 	],
 };
 export const OK_CREDIT = {
@@ -3084,8 +3094,7 @@ export const PAYU = {
 	],
 	image: payu,
 	backgroundColor: "#fff",
-	url:
-		"https://onboarding.payumoney.com/app/account?partner_name=Jiten&partner_source=Affiliate+Links&partner_uuid=11eb-0f9f-cfbe6f0c-aa8c-0a696b110fde&source=Partner",
+	url: "https://onboarding.payumoney.com/app/account?partner_name=Jiten&partner_source=Affiliate+Links&partner_uuid=11eb-0f9f-cfbe6f0c-aa8c-0a696b110fde&source=Partner",
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
