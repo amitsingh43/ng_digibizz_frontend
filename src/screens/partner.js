@@ -169,6 +169,11 @@ const DataSection = ({ title, show, toggleShow, data, field }) => {
 			</div>
 			<hr style={{ padding: 0, margin: 0, marginBottom: 10 }} />
 			<div>
+				{field === "description" && (
+					<div className={show[field] ? "hidden" : "active"}>
+						<mark style={{ backgroundColor: "#e9f7ed" }}>{data[0]}</mark>
+					</div>
+				)}
 				{data.map((val, index) => (
 					<div key={index} className={show[field] ? "active" : "hidden"}>
 						<mark style={{ backgroundColor: "#e9f7ed" }}>{val}</mark>

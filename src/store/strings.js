@@ -2710,7 +2710,7 @@ export const MOBICOMMERCE1 = {
 	image: mobicommerce,
 	backgroundColor: "#fff",
 	url: "https://www.mobicommerce.net/contact-us/",
-	stars: 4.1,
+	stars: null,
 	socialMedia: {
 		facebook: "https://www.facebook.com/mobi.commerce.platform",
 		twitter: "https://twitter.com/mobicommerceapp",
@@ -2745,7 +2745,7 @@ export const MOBICOMMERCE2 = {
 	image: mobicommerce,
 	backgroundColor: "#fff",
 	url: "https://www.mobicommerce.net/contact-us/",
-	stars: 4.1,
+	stars: null,
 	socialMedia: {
 		facebook: "https://www.facebook.com/mobi.commerce.platform",
 		twitter: "https://twitter.com/mobicommerceapp",
@@ -2772,7 +2772,7 @@ export const MAGICPIN = {
 	image: magic_pin,
 	backgroundColor: "#fff",
 	url: "",
-	stars: 4.1,
+	stars: null,
 	socialMedia: {
 		facebook: "https://www.facebook.com/mobi.commerce.platform",
 		twitter: "https://twitter.com/mobicommerceapp",
@@ -2798,7 +2798,7 @@ export const NEOGROWTH = {
 	image: neogrowth,
 	backgroundColor: "#fff",
 	url: "https://www.neogrowth.in",
-	stars: 4.3,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
@@ -2821,7 +2821,7 @@ export const MYBILLBOOK = {
 	image: mybillbook,
 	backgroundColor: "#fff",
 	url: "",
-	stars: 4.6,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
@@ -2836,7 +2836,10 @@ export const MYBILLBOOK = {
 };
 export const SNAPBIZZ = {
 	title: "Snapbizz",
-	subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
+	subTitle: [
+		"Up to 13% off on Snapbizz Turbo – POS Solution",
+		"Up to 50% off on Snapbizz Neo, Marchant & ToTo – Software Solution",
+	],
 	description: [
 		"Make your store a smart store",
 		"SnapBizz Store Solutions enables you to take your store online, attract new customers, sell more to your current customers and manage store operations with ease.",
@@ -2844,7 +2847,7 @@ export const SNAPBIZZ = {
 	image: snapbizz,
 	backgroundColor: "#fff",
 	url: "https://snapbizz.com/retailers-ng/",
-	stars: 4.2,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
@@ -2961,7 +2964,7 @@ export const SYROW = {
 	image: syrow,
 	backgroundColor: "#fff",
 	url: "https://www.syrow.com/partner/neogrowth/mvz/",
-	stars: 3.8,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
@@ -3046,7 +3049,7 @@ export const VAKIL_SEARCH = {
 	image: vakilsearch,
 	backgroundColor: "#fff",
 	url: "https://vakilsearch-vs.typeform.com/to/Em9Ir6ag",
-	stars: 4,
+	stars: null,
 	socialMedia: {
 		instagram: "https://www.instagram.com/vakilsearch_legal",
 		facebook: "https://www.facebook.com/vakilsearch",
@@ -3100,7 +3103,7 @@ export const DIGI_HEALTH = {
 	image: digihealth,
 	backgroundColor: "#fff",
 	url: "https://bandhan.digihealth.in/",
-	stars: 5,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
@@ -3143,8 +3146,7 @@ export const PAYU = {
 export const SPACE_OF_JOY = {
 	title: "Space of Joy",
 	subTitle: [
-		"- FREE Décor Consultation for DiGibizz Users",
-		"- FLAT 10% OFF on total bill",
+		"Pan India coverage supported by long term relationship with all vendors and suppliers",
 	],
 	description: [
 		"Our offerings include Wall Coverings, Wall Decals, Backlit Art, Canvas Art, Glass & Ceiling Décor, and Cut Letters.",
@@ -3155,7 +3157,7 @@ export const SPACE_OF_JOY = {
 	image: space_of_joy,
 	backgroundColor: "#fff",
 	url: "https://myspaceofjoy.com/digibuzz-promo/",
-	stars: 5,
+	stars: null,
 	socialMedia: {
 		facebook: "https://www.facebook.com/myspaceofjoy",
 		// catalog:
@@ -3211,7 +3213,7 @@ export const PAGARBOOK = {
 	image: pagar_book,
 	backgroundColor: "#fff",
 	url: "https://pagarbook.com/blog/catalogue-neo-growth/",
-	stars: 4.4,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
@@ -3270,7 +3272,7 @@ export const HYLO_BIZ = {
 	],
 	backgroundColor: "#fff",
 	url: "https://www.hylo.biz/neobank/Login",
-	stars: 5,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
