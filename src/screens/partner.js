@@ -152,7 +152,7 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 const DataSection = ({ title, show, toggleShow, data, field }) => {
 	return (
 		<div>
-			<div className={"descHeading"}>
+			<div className={"descHeading"} key={title}>
 				<h3>{title}</h3>
 				<h3
 					style={{
@@ -169,8 +169,8 @@ const DataSection = ({ title, show, toggleShow, data, field }) => {
 			</div>
 			<hr style={{ padding: 0, margin: 0, marginBottom: 10 }} />
 			<div>
-				{data.map((val) => (
-					<div className={show[field] ? "active" : "fade"}>
+				{data.map((val, index) => (
+					<div key={index} className={show[field] ? "active" : "hidden"}>
 						<mark style={{ backgroundColor: "#e9f7ed" }}>{val}</mark>
 					</div>
 				))}
