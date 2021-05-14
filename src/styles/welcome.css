@@ -20,7 +20,7 @@
 
 .welcome .top-content .banner {
 	margin-left: 15vw;
-	height: 450px;
+	height: 350px;
 }
 
 .welcome .content {
@@ -102,9 +102,12 @@
 	font-size: 25px;
 	line-height: 35px;
 }
+.explore-our-services p {
+	display: none;
+}
 
 .welcome .side-text {
-	padding-top: 100px;
+	padding-top: 25px;
 }
 .welcome .side-text .btn {
 	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.36);
@@ -351,14 +354,14 @@
 	.welcome .side-text {
 		padding: 0px;
 		width: 100vw;
-		padding: 20px 20px;
+		padding: 10px 0px;
 		text-align: center;
 		background-color: rgba(40, 176, 75, 0.1);
 	}
 	.mobile-view {
 		display: grid;
 		grid-template-columns: auto auto auto;
-		padding: 10px;
+		/* padding: 10px; */
 		justify-content: center;
 	}
 	.mobile-view .service {
@@ -396,12 +399,12 @@
 @media (max-width: 48rem) {
 	.welcome .side-text p {
 		font-size: 15px;
-		line-height: 25px;
+		line-height: 22px;
 	}
 	.welcome .side-text .watch-to-know-more {
-		display: flex;
-		width: 100%;
-		justify-content: center;
+		/* display: flex; */
+		/* width: 100%; */
+		/* justify-content: center; */
 		margin-top: 20px;
 		margin-bottom: 0px;
 		padding: 0px;
@@ -446,10 +449,14 @@
 	.explore-our-services .container p {
 		padding: 0px 20px;
 	}
+	.welcome p {
+		padding: 0px;
+	}
 	.welcome h1 {
-		font-size: 20px;
-		line-height: 27px;
+		font-size: 17px;
+		line-height: 23px;
 		font-weight: bold;
+		margin-top: 0px;
 	}
 	.explore-our-services {
 		padding: 20px 0px;
@@ -462,8 +469,8 @@
 		white-space: pre-line;
 	}
 	.explore-our-services img {
-		height: 80px;
-		padding: 19px;
+		height: 63px;
+		padding: 5px;
 	}
 	.question .heading,
 	.user-guide .heading,
@@ -530,6 +537,13 @@
 	.welcome .top-content .banner {
 		margin-left: 0px;
 		width: auto;
-		height: 300px;
+		height: 200px;
+	}
+	.welcome .top-content-line-break {
+		display: none;
+	}
+	.welcome .btn {
+		padding: 11px 17px;
+		margin-top: 0px;
 	}
 }

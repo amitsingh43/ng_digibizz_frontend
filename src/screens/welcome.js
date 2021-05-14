@@ -35,7 +35,8 @@ const SideText = ({
 				Empowering Lives.
 			</h1>
 			<p>
-				Now upgrade your business with the help of our <br />
+				Now upgrade your business with the help of our{" "}
+				<br className={"top-content-line-break"} />
 				customised solutions.{"	"}
 				{show_button && homepage_decrement && (
 					<span

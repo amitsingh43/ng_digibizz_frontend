@@ -3063,11 +3063,6 @@ export const VAKIL_SEARCH = {
 			type: "image",
 			source: vakilsearch,
 		},
-		{
-			type: "video",
-			source: digihealth,
-			videoID: "BcwpX9pzqXY",
-		},
 	],
 };
 export const BRANDPULSE = {
