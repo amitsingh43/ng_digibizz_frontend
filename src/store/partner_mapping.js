@@ -3,7 +3,8 @@ import {
 	ACCUNITY_SERVICES1,
 	ACCUNITY_SERVICES2,
 	ACCUNITY_SERVICES3,
-	MOBICOMMERCE,
+	MOBICOMMERCE1,
+	MOBICOMMERCE2,
 	MAGICPIN,
 	NEOGROWTH,
 	MYBILLBOOK,
@@ -32,7 +33,7 @@ import {
 export const partnerMapping = [
 	{
 		name: "mobicommerce",
-		partner: MOBICOMMERCE,
+		partner: MOBICOMMERCE1,
 		heading: "Sell Online",
 	},
 	{
@@ -72,7 +73,7 @@ export const partnerMapping = [
 	},
 	{
 		name: "mobicommerce",
-		partner: MOBICOMMERCE,
+		partner: MOBICOMMERCE2,
 		heading: "Create Website or Mobile App",
 	},
 	{

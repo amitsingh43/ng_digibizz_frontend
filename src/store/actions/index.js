@@ -334,6 +334,11 @@ export const save_basic_details = (
 		const { lead } = await _post(ENDPOINT, body);
 		show_toast("Thank you", "SUCCESS");
 		dispatch(set_user_details(lead));
+		if(body.partner_availed === "NeoGrowth"){
+			Tracking.trackEvent("CLICK", "NG LOAN LEADS", "APPLY NOW");
+		}else{
+			Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
+		}
 		window.open(url, "_blank");
 	} catch (error) {
 		let message = "Something went wrong! Please try later.";

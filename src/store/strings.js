@@ -2694,10 +2694,45 @@ export const ACCUNITY_SERVICES3 = {
 		},
 	],
 };
-export const MOBICOMMERCE = {
+export const MOBICOMMERCE1 = {
 	title: "MobiCommerce",
 	subTitle: [
 		"10% discount on quotation for Mobicommerce - License (One time cost products) & SAAS Model (Subscription Plans)",
+	],
+	description: [
+		"Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two",
+		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
+		"•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
+		"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
+		"•	Generate profits from the eCommerce website according to business and revenue models",
+		"•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
+	],
+	image: mobicommerce,
+	backgroundColor: "#fff",
+	url: "https://www.mobicommerce.net/contact-us/",
+	stars: 4.1,
+	socialMedia: {
+		facebook: "https://www.facebook.com/mobi.commerce.platform",
+		twitter: "https://twitter.com/mobicommerceapp",
+		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
+		youtube: "https://www.youtube.com/c/mobicommerce",
+	},
+	testimonials: null,
+	aboutUs: [
+		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
+	],
+	carousel: [
+		{
+			type: "image",
+			source: mobicommerce,
+		},
+	],
+};
+export const MOBICOMMERCE2 = {
+	title: "MobiCommerce",
+	subTitle: [
+		"Create your website and mobile apps on Yearly subscription/Rental basis ",
+		"Plans starting from 2990/Month and get additional 15% Discount on yearly payment.",
 	],
 	description: [
 		"Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two",
@@ -2942,6 +2977,7 @@ export const SMARTECH = {
 	subTitle: ["Upto 15% discount on LED Display Screens for store promotion"],
 	description: [
 		"Your simple, easy to use and effective digital tool for attracting customer's attention and promoting products and services in your store",
+		"",
 	],
 	image: smartech,
 	backgroundColor: "#fff",
@@ -2962,6 +2998,7 @@ export const GO_DIGIT = {
 	subTitle: ["Make Insurance Simple"],
 	description: [
 		"Digit Makes Insurance Simple for People & Businesses. We are one of the leading General Insurance companies in India who believe in protecting what you love.  ",
+		"",
 	],
 	image: digit,
 	backgroundColor: "#fff",
@@ -2980,7 +3017,7 @@ export const GO_DIGIT = {
 export const CARE = {
 	title: "Care",
 	subTitle: ["Get health cover for you & your family at an affordable price"],
-	description: ["Secure your family's health with Care Health Insurance"],
+	description: ["Secure your family's health with Care Health Insurance", ""],
 	image: care,
 	backgroundColor: "#fff",
 	url: "https://www.religareonline.com/",
@@ -3004,6 +3041,7 @@ export const VAKIL_SEARCH = {
 	],
 	description: [
 		"Vakilsearch is a technology powered platform for all legal, compliance and accounting needs.",
+		"",
 	],
 	image: vakilsearch,
 	backgroundColor: "#fff",
@@ -3173,6 +3211,7 @@ export const PAGARBOOK = {
 	],
 	description: [
 		"Employee Management at your Finger Tips: India's Best Payroll and Attendance Management tool for Small & Medium Enterprises",
+		"",
 	],
 	image: pagar_book,
 	backgroundColor: "#fff",
@@ -3320,7 +3359,7 @@ export const MEDIAQART = {
 export const PARTNERS = [
 	{
 		category: "Sell Online",
-		data: [MOBICOMMERCE, NEAR_STORE, ACCUNITY_SERVICES1, SNAPBIZZ],
+		data: [MOBICOMMERCE1, NEAR_STORE, ACCUNITY_SERVICES1, SNAPBIZZ],
 		tag: "sell_online",
 	},
 	// {
@@ -3340,7 +3379,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Create Website or Mobile App",
-		data: [MOBICOMMERCE, ACCUNITY_SERVICES2, PINNACLE],
+		data: [MOBICOMMERCE2, ACCUNITY_SERVICES2, PINNACLE],
 		tag: "create_website_and_app",
 	},
 	{
