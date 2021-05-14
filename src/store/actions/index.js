@@ -332,12 +332,14 @@ export const save_basic_details = (
 ) => async (dispatch) => {
 	try {
 		const { lead } = await _post(ENDPOINT, body);
-		show_toast("Thank you", "SUCCESS");
 		dispatch(set_user_details(lead));
 		if(body.partner_availed === "NeoGrowth"){
 			Tracking.trackEvent("CLICK", "NG LOAN LEADS", "APPLY NOW");
+			show_toast("Thank you, someone will get in touch with you", "SUCCESS");
+			return;
 		}else{
 			Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
+			show_toast("Thank you", "SUCCESS");
 		}
 		window.open(url, "_blank");
 	} catch (error) {
