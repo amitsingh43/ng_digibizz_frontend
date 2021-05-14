@@ -19,13 +19,14 @@ import Twitter from "../assets/partner_page/twitter.png";
 import Youtube from "../assets/partner_page/youtube.png";
 import YouTube from "../components/common/youtube";
 
-const Form = ({ masterData, url, save_basic_details }) => {
+const Form = ({ masterData, url, save_basic_details, title }) => {
 	const { cities } = masterData;
 	const [data, setData] = useState({
 		full_name: null,
 		business_name: null,
 		mobile: null,
 		cities_master_id: null,
+		partner_availed: title,
 	});
 	const [cityName, setCityName] = useState(null);
 	return (
@@ -386,6 +387,7 @@ const Partner = ({
 							masterData={masterData}
 							url={url}
 							save_basic_details={save_basic_details}
+							title={title}
 						/>
 					</div>
 				)}
@@ -431,6 +433,7 @@ const Partner = ({
 						masterData={masterData}
 						url={url}
 						save_basic_details={save_basic_details}
+						title={title}
 					/>
 				</div>
 			)}
