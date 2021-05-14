@@ -190,34 +190,32 @@ export const clear_error = () => {
 	};
 };
 
-export const post_user_details = (
-	body,
-	Navigate,
-	ENDPOINT = "/api/save_lead"
-) => async (dispatch) => {
-	try {
-		const response = await _post(ENDPOINT, body);
-		const { lead, questionnaire } = response;
-		localStorage.setItem("lead_id", lead._id);
-		Tracking.trackEvent("CLICK", "REGISTER USER", "REGISTER");
-		dispatch(set_user_details(lead));
-		dispatch(set_questions(questionnaire));
-		Navigate();
-	} catch (error) {
-		let message = "Something went wrong! Please try later.";
+export const post_user_details =
+	(body, Navigate, ENDPOINT = "/api/save_lead") =>
+	async (dispatch) => {
+		try {
+			const response = await _post(ENDPOINT, body);
+			const { lead, questionnaire } = response;
+			localStorage.setItem("lead_id", lead._id);
+			Tracking.trackEvent("CLICK", "REGISTER USER", "REGISTER");
+			dispatch(set_user_details(lead));
+			dispatch(set_questions(questionnaire));
+			Navigate();
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
 
-		if (
-			error &&
-			error.response &&
-			error.response.data &&
-			error.response.data.message
-		) {
-			message = error.response.data.message;
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+			dispatch(add_error(message));
+			// show_toast(message);
 		}
-		dispatch(add_error(message));
-		// show_toast(message);
-	}
-};
+	};
 
 export const reset_user = () => {
 	return {
@@ -225,37 +223,35 @@ export const reset_user = () => {
 	};
 };
 
-export const post_answers = (
-	options,
-	history,
-	ENDPOINT = "/api/save_questionnaire"
-) => async (dispatch) => {
-	try {
-		const response = await _post(ENDPOINT, options);
-		const { questionnaire_take } = response;
-		const { recommendations } = questionnaire_take;
-		Tracking.trackEvent("CLICK", "ASSESSED CUSTOMERS", "SUBMIT");
-		dispatch(set_recommendations_write(recommendations));
-		dispatch(set_results(questionnaire_take));
-		dispatch(reset_questionnaire());
-		localStorage.setItem("report", "true");
-		history.replace("/report");
-	} catch (error) {
-		let message = "Something went wrong! Please try later.";
+export const post_answers =
+	(options, history, ENDPOINT = "/api/save_questionnaire") =>
+	async (dispatch) => {
+		try {
+			const response = await _post(ENDPOINT, options);
+			const { questionnaire_take } = response;
+			const { recommendations } = questionnaire_take;
+			Tracking.trackEvent("CLICK", "ASSESSED CUSTOMERS", "SUBMIT");
+			dispatch(set_recommendations_write(recommendations));
+			dispatch(set_results(questionnaire_take));
+			dispatch(reset_questionnaire());
+			localStorage.setItem("report", "true");
+			history.replace("/report");
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
 
-		if (
-			error &&
-			error.response &&
-			error.response.data &&
-			error.response.data.message
-		) {
-			message = error.response.data.message;
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+
+			dispatch(add_error(message));
+			// show_toast(message);
 		}
-
-		dispatch(add_error(message));
-		// show_toast(message);
-	}
-};
+	};
 
 export const reset_answers = () => {
 	return {
@@ -263,142 +259,142 @@ export const reset_answers = () => {
 	};
 };
 
-export const get_questions = (
-	lead_id,
-	ENDPOINT = "/api/get_questionnaire?lead_id="
-) => async (dispatch) => {
-	try {
-		const response = await _get(ENDPOINT + lead_id);
-		const { lead, questionnaire } = response;
-		dispatch(set_user_details(lead));
-		dispatch(reset_questionnaire());
-		dispatch(set_questions(questionnaire));
-	} catch (error) {
-		let message = "Something went wrong! Please try later.";
+export const get_questions =
+	(lead_id, ENDPOINT = "/api/get_questionnaire?lead_id=") =>
+	async (dispatch) => {
+		try {
+			const response = await _get(ENDPOINT + lead_id);
+			const { lead, questionnaire } = response;
+			dispatch(set_user_details(lead));
+			dispatch(reset_questionnaire());
+			dispatch(set_questions(questionnaire));
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
 
-		if (
-			error &&
-			error.response &&
-			error.response.data &&
-			error.response.data.message
-		) {
-			message = error.response.data.message;
-		}
-		localStorage.clear();
-		dispatch(add_error(message));
-		// show_toast(message);
-	}
-};
-
-export const update_lead = (body, ENDPOINT = "/api/update_lead") => async (
-	dispatch
-) => {
-	try {
-		const { lead } = await _post(ENDPOINT, body);
-		if (body.partner_availed === "NeoGrowth") {
-			if (!localStorage.getItem("NG LOAN LEADS")) {
-				localStorage.setItem("NG LOAN LEADS", "true");
-				Tracking.trackEvent("CLICK", "NG LOAN LEADS", "APPLY NOW");
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
 			}
-			show_toast("Thank you, someone will get in touch with you", "SUCCESS");
-		} else {
-			if (!localStorage.getItem("body.partner_availed")) {
-				localStorage.setItem(body.partner_availed, "true");
+			localStorage.clear();
+			dispatch(add_error(message));
+			// show_toast(message);
+		}
+	};
+
+export const update_lead =
+	(body, ENDPOINT = "/api/update_lead") =>
+	async (dispatch) => {
+		try {
+			const { lead } = await _post(ENDPOINT, body);
+			if (body.partner_availed === "NeoGrowth") {
+				if (!localStorage.getItem("NG LOAN LEADS")) {
+					localStorage.setItem("NG LOAN LEADS", "true");
+					Tracking.trackEvent("CLICK", "NG LOAN LEADS", "APPLY NOW");
+				}
+				show_toast("Thank you, someone will get in touch with you", "SUCCESS");
+			} else {
+				if (!localStorage.getItem("body.partner_availed")) {
+					localStorage.setItem(body.partner_availed, "true");
+					Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
+				}
+				show_toast("Thank you", "SUCCESS");
+			}
+			dispatch(set_user_details(lead));
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
+
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+			dispatch(add_error(message));
+		}
+	};
+
+export const save_basic_details =
+	(body, url, cityName, ENDPOINT = "/api/save_basic_details") =>
+	async (dispatch) => {
+		try {
+			const { lead } = await _post(ENDPOINT, body);
+			show_toast("Thank you", "SUCCESS");
+			dispatch(set_user_details(lead));
+			if (body.partner_availed === "NeoGrowth") {
+				Tracking.trackEvent("CLICK", "NG LOAN LEADS", "APPLY NOW");
+			} else {
 				Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
 			}
-			show_toast("Thank you", "SUCCESS");
+			window.open(url, "_blank");
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
+
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+			dispatch(add_error(message));
 		}
-		dispatch(set_user_details(lead));
-	} catch (error) {
-		let message = "Something went wrong! Please try later.";
+	};
 
-		if (
-			error &&
-			error.response &&
-			error.response.data &&
-			error.response.data.message
-		) {
-			message = error.response.data.message;
+export const get_gender =
+	(ENDPOINT = "/master_data/get_genders") =>
+	async (dispatch) => {
+		try {
+			const gender = await _get(ENDPOINT);
+			dispatch(set_master_data({ gender }));
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
+
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+			dispatch(add_error(message));
 		}
-		dispatch(add_error(message));
-	}
-};
+	};
 
-export const save_basic_details = (
-	body,
-	url,
-	cityName,
-	ENDPOINT = "/api/save_basic_details"
-) => async (dispatch) => {
-	try {
-		const { lead } = await _post(ENDPOINT, body);
-		show_toast("Thank you", "SUCCESS");
-		dispatch(set_user_details(lead));
-		window.open(url, "_blank");
-	} catch (error) {
-		let message = "Something went wrong! Please try later.";
+export const get_results =
+	(lead_id, ENDPOINT = "/api/get_results?lead_id=") =>
+	async (dispatch) => {
+		try {
+			const response = await _get(ENDPOINT + lead_id);
+			const { questionnaire_take, lead } = response;
+			const { display_recommendations } = questionnaire_take;
+			dispatch(set_recommendations_write(display_recommendations));
+			dispatch(set_results(questionnaire_take));
+			dispatch(set_user_details(lead));
+			dispatch(reset_questionnaire());
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
 
-		if (
-			error &&
-			error.response &&
-			error.response.data &&
-			error.response.data.message
-		) {
-			message = error.response.data.message;
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+			localStorage.clear();
+			dispatch(add_error(message));
+			// show_toast(message);
 		}
-		dispatch(add_error(message));
-	}
-};
-
-export const get_gender = (ENDPOINT = "/master_data/get_genders") => async (
-	dispatch
-) => {
-	try {
-		const gender = await _get(ENDPOINT);
-		dispatch(set_master_data({ gender }));
-	} catch (error) {
-		let message = "Something went wrong! Please try later.";
-
-		if (
-			error &&
-			error.response &&
-			error.response.data &&
-			error.response.data.message
-		) {
-			message = error.response.data.message;
-		}
-		dispatch(add_error(message));
-	}
-};
-
-export const get_results = (
-	lead_id,
-	ENDPOINT = "/api/get_results?lead_id="
-) => async (dispatch) => {
-	try {
-		const response = await _get(ENDPOINT + lead_id);
-		const { questionnaire_take, lead } = response;
-		const { display_recommendations } = questionnaire_take;
-		dispatch(set_recommendations_write(display_recommendations));
-		dispatch(set_results(questionnaire_take));
-		dispatch(set_user_details(lead));
-		dispatch(reset_questionnaire());
-	} catch (error) {
-		let message = "Something went wrong! Please try later.";
-
-		if (
-			error &&
-			error.response &&
-			error.response.data &&
-			error.response.data.message
-		) {
-			message = error.response.data.message;
-		}
-		localStorage.clear();
-		dispatch(add_error(message));
-		// show_toast(message);
-	}
-};
+	};
 
 export const downloadReport = (downloadText, setDownloadText) => {
 	if (downloadText === "Downloading...") {

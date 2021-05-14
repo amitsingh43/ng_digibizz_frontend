@@ -3,7 +3,8 @@ import {
 	ACCUNITY_SERVICES1,
 	ACCUNITY_SERVICES2,
 	ACCUNITY_SERVICES3,
-	MOBICOMMERCE,
+	MOBICOMMERCE1,
+	MOBICOMMERCE2,
 	MAGICPIN,
 	NEOGROWTH,
 	MYBILLBOOK,
@@ -26,12 +27,13 @@ import {
 	EASY_FILE_ITR,
 	HYLO_BIZ,
 	NEOCASH_INSTA,
+	MEDIAQART,
 } from "./strings";
 
 export const partnerMapping = [
 	{
 		name: "mobicommerce",
-		partner: MOBICOMMERCE,
+		partner: MOBICOMMERCE1,
 		heading: "Sell Online",
 	},
 	{
@@ -71,7 +73,7 @@ export const partnerMapping = [
 	},
 	{
 		name: "mobicommerce",
-		partner: MOBICOMMERCE,
+		partner: MOBICOMMERCE2,
 		heading: "Create Website or Mobile App",
 	},
 	{
@@ -178,5 +180,10 @@ export const partnerMapping = [
 		name: "space of joy",
 		partner: SPACE_OF_JOY,
 		heading: "Business Decor",
+	},
+	{
+		name: "mediaqart",
+		partner: MEDIAQART,
+		heading: "Social Media & Digital Marketing",
 	},
 ];

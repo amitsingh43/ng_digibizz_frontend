@@ -12,6 +12,7 @@ import Partner from "./screens/partner";
 import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
+import Catalog from "./screens/catalog";
 import AvailNowRegistration from "./screens/availNowRegistration";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
@@ -112,14 +113,19 @@ function App({ errorMessage, clear_error, history }) {
 					/>
 					<Route
 						exact
-						path={"/services"}
-						render={(props) => <DigitalServices {...props} />}
+						path={"/services/:category/:partner/catalog"}
+						render={(props) => <Catalog {...props} />}
 					/>
 					<Route
 						exact
+						path={"/services"}
+						render={(props) => <DigitalServices {...props} />}
+					/>
+					{/* <Route
+						exact
 						path={"/services/:category/:partner/reg"}
 						render={(props) => <AvailNowRegistration {...props} />}
-					/>
+					/> */}
 				</Switch>
 				<Footer />
 			</Router>
