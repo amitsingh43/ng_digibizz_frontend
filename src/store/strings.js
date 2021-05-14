@@ -2711,12 +2711,7 @@ export const MOBICOMMERCE1 = {
 	backgroundColor: "#fff",
 	url: "https://www.mobicommerce.net/contact-us/",
 	stars: null,
-	socialMedia: {
-		facebook: "https://www.facebook.com/mobi.commerce.platform",
-		twitter: "https://twitter.com/mobicommerceapp",
-		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
-		youtube: "https://www.youtube.com/c/mobicommerce",
-	},
+	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
 		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
@@ -2746,12 +2741,7 @@ export const MOBICOMMERCE2 = {
 	backgroundColor: "#fff",
 	url: "https://www.mobicommerce.net/contact-us/",
 	stars: null,
-	socialMedia: {
-		facebook: "https://www.facebook.com/mobi.commerce.platform",
-		twitter: "https://twitter.com/mobicommerceapp",
-		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
-		youtube: "https://www.youtube.com/c/mobicommerce",
-	},
+	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
 		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
@@ -2773,12 +2763,7 @@ export const MAGICPIN = {
 	backgroundColor: "#fff",
 	url: "",
 	stars: null,
-	socialMedia: {
-		facebook: "https://www.facebook.com/mobi.commerce.platform",
-		twitter: "https://twitter.com/mobicommerceapp",
-		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
-		youtube: "https://www.youtube.com/c/mobicommerce",
-	},
+	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
 	carousel: [
@@ -3050,13 +3035,7 @@ export const VAKIL_SEARCH = {
 	backgroundColor: "#fff",
 	url: "https://vakilsearch-vs.typeform.com/to/Em9Ir6ag",
 	stars: null,
-	socialMedia: {
-		instagram: "https://www.instagram.com/vakilsearch_legal",
-		facebook: "https://www.facebook.com/vakilsearch",
-		twitter: "https://twitter.com/Letsvakilsearch",
-		youtube: "https://www.youtube.com/user/legalsolutionsvakil",
-		linkedin: "https://www.linkedin.com/company/vakilsearch-com",
-	},
+	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
 		"We are India's largest platform, with a dominant market share of 10% in setting up new businesses and 4% in trademark applications. More than 5 lakh clients rely on us for their compliance management, accounting and legal needs",
@@ -3158,11 +3137,7 @@ export const SPACE_OF_JOY = {
 	backgroundColor: "#fff",
 	url: "https://myspaceofjoy.com/digibuzz-promo/",
 	stars: null,
-	socialMedia: {
-		facebook: "https://www.facebook.com/myspaceofjoy",
-		// catalog:
-		// 	"https://uat.advancesuite.in:3061/api/download_report?lead_id=66ep-ndpi5ivdnbacnnw5a",
-	},
+	socialMedia: null,
 	testimonials: [
 		"• For some people, their business is about product or service. But for Gaurav from Space of Joy his business is his Purpose. He understands the customer’s Purpose crystal clear and delivers a Delight. Our Wall literally came alive after the wallpaper installed by SOJ’s Team. The final finished product was elegant and excellent <insert image>",
 		"• Its amazing to see your thoughts converted into a reality, and that too so seamlessly and fast, I can’t thank Team Space of Joy Enough for making my workshop transform.. The pictures should speak for themselves <insert image>",
