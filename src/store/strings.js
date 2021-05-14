@@ -2710,13 +2710,8 @@ export const MOBICOMMERCE1 = {
 	image: mobicommerce,
 	backgroundColor: "#fff",
 	url: "https://www.mobicommerce.net/contact-us/",
-	stars: 4.1,
-	socialMedia: {
-		facebook: "https://www.facebook.com/mobi.commerce.platform",
-		twitter: "https://twitter.com/mobicommerceapp",
-		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
-		youtube: "https://www.youtube.com/c/mobicommerce",
-	},
+	stars: null,
+	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
 		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
@@ -2745,13 +2740,8 @@ export const MOBICOMMERCE2 = {
 	image: mobicommerce,
 	backgroundColor: "#fff",
 	url: "https://www.mobicommerce.net/contact-us/",
-	stars: 4.1,
-	socialMedia: {
-		facebook: "https://www.facebook.com/mobi.commerce.platform",
-		twitter: "https://twitter.com/mobicommerceapp",
-		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
-		youtube: "https://www.youtube.com/c/mobicommerce",
-	},
+	stars: null,
+	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
 		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
@@ -2772,13 +2762,8 @@ export const MAGICPIN = {
 	image: magic_pin,
 	backgroundColor: "#fff",
 	url: "",
-	stars: 4.1,
-	socialMedia: {
-		facebook: "https://www.facebook.com/mobi.commerce.platform",
-		twitter: "https://twitter.com/mobicommerceapp",
-		linkedin: "https://www.linkedin.com/company/mobicommerceapp",
-		youtube: "https://www.youtube.com/c/mobicommerce",
-	},
+	stars: null,
+	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
 	carousel: [
@@ -2798,7 +2783,7 @@ export const NEOGROWTH = {
 	image: neogrowth,
 	backgroundColor: "#fff",
 	url: "https://www.neogrowth.in",
-	stars: 4.3,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
@@ -2821,7 +2806,7 @@ export const MYBILLBOOK = {
 	image: mybillbook,
 	backgroundColor: "#fff",
 	url: "",
-	stars: 4.6,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
@@ -2836,7 +2821,10 @@ export const MYBILLBOOK = {
 };
 export const SNAPBIZZ = {
 	title: "Snapbizz",
-	subTitle: ["Upto 17% off on SnapBizz Billing solutions"],
+	subTitle: [
+		"Up to 13% off on Snapbizz Turbo – POS Solution",
+		"Up to 50% off on Snapbizz Neo, Marchant & ToTo – Software Solution",
+	],
 	description: [
 		"Make your store a smart store",
 		"SnapBizz Store Solutions enables you to take your store online, attract new customers, sell more to your current customers and manage store operations with ease.",
@@ -2844,7 +2832,7 @@ export const SNAPBIZZ = {
 	image: snapbizz,
 	backgroundColor: "#fff",
 	url: "https://snapbizz.com/retailers-ng/",
-	stars: 4.2,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
@@ -2961,7 +2949,7 @@ export const SYROW = {
 	image: syrow,
 	backgroundColor: "#fff",
 	url: "https://www.syrow.com/partner/neogrowth/mvz/",
-	stars: 3.8,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
@@ -3046,14 +3034,8 @@ export const VAKIL_SEARCH = {
 	image: vakilsearch,
 	backgroundColor: "#fff",
 	url: "https://vakilsearch-vs.typeform.com/to/Em9Ir6ag",
-	stars: 4,
-	socialMedia: {
-		instagram: "https://www.instagram.com/vakilsearch_legal",
-		facebook: "https://www.facebook.com/vakilsearch",
-		twitter: "https://twitter.com/Letsvakilsearch",
-		youtube: "https://www.youtube.com/user/legalsolutionsvakil",
-		linkedin: "https://www.linkedin.com/company/vakilsearch-com",
-	},
+	stars: null,
+	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
 		"We are India's largest platform, with a dominant market share of 10% in setting up new businesses and 4% in trademark applications. More than 5 lakh clients rely on us for their compliance management, accounting and legal needs",
@@ -3062,11 +3044,6 @@ export const VAKIL_SEARCH = {
 		{
 			type: "image",
 			source: vakilsearch,
-		},
-		{
-			type: "video",
-			source: digihealth,
-			videoID: "BcwpX9pzqXY",
 		},
 	],
 };
@@ -3105,7 +3082,7 @@ export const DIGI_HEALTH = {
 	image: digihealth,
 	backgroundColor: "#fff",
 	url: "https://bandhan.digihealth.in/",
-	stars: 5,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,
@@ -3148,8 +3125,7 @@ export const PAYU = {
 export const SPACE_OF_JOY = {
 	title: "Space of Joy",
 	subTitle: [
-		"- FREE Décor Consultation for DiGibizz Users",
-		"- FLAT 10% OFF on total bill",
+		"Pan India coverage supported by long term relationship with all vendors and suppliers",
 	],
 	description: [
 		"Our offerings include Wall Coverings, Wall Decals, Backlit Art, Canvas Art, Glass & Ceiling Décor, and Cut Letters.",
@@ -3160,12 +3136,8 @@ export const SPACE_OF_JOY = {
 	image: space_of_joy,
 	backgroundColor: "#fff",
 	url: "https://myspaceofjoy.com/digibuzz-promo/",
-	stars: 5,
-	socialMedia: {
-		facebook: "https://www.facebook.com/myspaceofjoy",
-		// catalog:
-		// 	"https://uat.advancesuite.in:3061/api/download_report?lead_id=66ep-ndpi5ivdnbacnnw5a",
-	},
+	stars: null,
+	socialMedia: null,
 	testimonials: [
 		"• For some people, their business is about product or service. But for Gaurav from Space of Joy his business is his Purpose. He understands the customer’s Purpose crystal clear and delivers a Delight. Our Wall literally came alive after the wallpaper installed by SOJ’s Team. The final finished product was elegant and excellent <insert image>",
 		"• Its amazing to see your thoughts converted into a reality, and that too so seamlessly and fast, I can’t thank Team Space of Joy Enough for making my workshop transform.. The pictures should speak for themselves <insert image>",
@@ -3216,7 +3188,7 @@ export const PAGARBOOK = {
 	image: pagar_book,
 	backgroundColor: "#fff",
 	url: "https://pagarbook.com/blog/catalogue-neo-growth/",
-	stars: 4.4,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: [
@@ -3275,7 +3247,7 @@ export const HYLO_BIZ = {
 	],
 	backgroundColor: "#fff",
 	url: "https://www.hylo.biz/neobank/Login",
-	stars: 5,
+	stars: null,
 	socialMedia: null,
 	testimonials: null,
 	aboutUs: null,

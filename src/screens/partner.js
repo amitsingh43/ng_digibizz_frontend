@@ -116,7 +116,7 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 										}
 									}}
 									style={{
-										backgroundImage: `url(${item.source})`,
+										// backgroundImage: `url(${item.source})`,
 										cursor: item.type === "video" ? "pointer" : "auto",
 									}}
 									key={index}
@@ -125,7 +125,9 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 											? "active carousel-image"
 											: "carousel-image"
 									}`}
-								></div>
+								>
+									<img src={item.source} />
+								</div>
 							))}
 					</div>
 					<div className={`row ${carousel.length === 1 ? "hidden" : ""}`}>
@@ -150,7 +152,7 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 const DataSection = ({ title, show, toggleShow, data, field }) => {
 	return (
 		<div>
-			<div className={"descHeading"}>
+			<div className={"descHeading"} key={title}>
 				<h3>{title}</h3>
 				<h3
 					style={{
@@ -167,8 +169,13 @@ const DataSection = ({ title, show, toggleShow, data, field }) => {
 			</div>
 			<hr style={{ padding: 0, margin: 0, marginBottom: 10 }} />
 			<div>
-				{data.map((val) => (
-					<div className={show[field] ? "active" : "fade"}>
+				{field === "description" && (
+					<div className={show[field] ? "hidden" : "active"}>
+						<mark style={{ backgroundColor: "#e9f7ed" }}>{data[0]}</mark>
+					</div>
+				)}
+				{data.map((val, index) => (
+					<div key={index} className={show[field] ? "active" : "hidden"}>
 						<mark style={{ backgroundColor: "#e9f7ed" }}>{val}</mark>
 					</div>
 				))}
@@ -340,7 +347,7 @@ const Partner = ({
 	};
 	return (
 		<div className={"servicesPartnerPage"}>
-			<div className="partner-main" style={{ minHeight: "99vh", flex: 2 }}>
+			<div className="partner-main" style={{ minHeight: "99vh", flex: 2.5 }}>
 				<div className="partner-main-title">
 					<span
 						style={{ color: "grey", fontWeight: "normal", cursor: "pointer" }}
@@ -353,7 +360,7 @@ const Partner = ({
 						flex: 1,
 						display: "flex",
 						// justifyContent: "center",
-						marginTop: 10,
+						marginTop: 30,
 					}}
 					className={"partner-section"}
 				>
