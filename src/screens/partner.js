@@ -86,12 +86,6 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
 const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 	const [currentDisplayed, setCurrentDisplay] = useState(0);
 	const [showYouTube, toggleYoutube] = useState({ show: false, videoId: null });
-	useEffect(() => {
-		if (!window.location.hash) {
-			window.location = window.location + "#loaded";
-			window.location.reload();
-		}
-	}, []);
 	return (
 		<div className="partner-main-partner-card">
 			{showYouTube.show && (
