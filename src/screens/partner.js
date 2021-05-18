@@ -28,7 +28,6 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
 		cities_master_id: null,
 		partner_availed: title,
 	});
-	console.log(data);
 	const [cityName, setCityName] = useState(null);
 	return (
 		<div className={"partner-form"}>
