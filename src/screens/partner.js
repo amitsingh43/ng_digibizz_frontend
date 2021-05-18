@@ -117,7 +117,7 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 										}
 									}}
 									style={{
-										// backgroundImage: `url(${item.source})`,
+										backgroundImage: `url(${item.source})`,
 										cursor: item.type === "video" ? "pointer" : "auto",
 									}}
 									key={index}
@@ -127,23 +127,25 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 											: "carousel-image"
 									}`}
 								>
-									<img src={item.source} />
+									{/* <img src={item.source} /> */}
 								</div>
 							))}
 					</div>
-					<div className={`row ${carousel.length === 1 ? "hidden" : ""}`}>
-						<ol className="carousel-indicators">
-							{carousel.map((val, index) => (
-								<li
-									data-target="#myCarousel"
-									data-slide-to={index}
-									onClick={() => setCurrentDisplay(index)}
-									className={currentDisplayed === index ? `active` : ""}
-									key={index}
-								></li>
-							))}
-						</ol>
-					</div>
+					{carousel.length !== 1 && (
+						<div className={`row `}>
+							<ol className="carousel-indicators">
+								{carousel.map((val, index) => (
+									<li
+										data-target="#myCarousel"
+										data-slide-to={index}
+										onClick={() => setCurrentDisplay(index)}
+										className={currentDisplayed === index ? `active` : ""}
+										key={index}
+									></li>
+								))}
+							</ol>
+						</div>
+					)}
 				</div>
 			</div>
 		</div>
@@ -172,12 +174,12 @@ const DataSection = ({ title, show, toggleShow, data, field }) => {
 			<div>
 				{field === "description" && (
 					<div className={show[field] ? "hidden" : "active"}>
-						<mark style={{ backgroundColor: "#e9f7ed" }}>{data[0]}</mark>
+						<div>{data[0]}</div>
 					</div>
 				)}
 				{data.map((val, index) => (
 					<div key={index} className={show[field] ? "active" : "hidden"}>
-						<mark style={{ backgroundColor: "#e9f7ed" }}>{val}</mark>
+						<div>{val}</div>
 					</div>
 				))}
 			</div>
@@ -201,10 +203,11 @@ const PartnerDetails = ({
 	socialMedia,
 	title,
 	_availNow,
+	carouselLength,
 }) => {
 	const history = useHistory();
 	return (
-		<div className={"partner-details"}>
+		<div className={"partner-details activeIndicators"}>
 			<h3>{title}</h3>
 			<div>{stars && <div>{getRating(stars)}</div>}</div>
 			<div className={"discountSection"}>
@@ -214,9 +217,11 @@ const PartnerDetails = ({
 			</div>
 			<div className={"description"}>
 				<div>
-					{subTitle.map((offer) => (
-						<div style={{ lineHeight: 1.8 }}>{offer}</div>
-					))}
+					<ul>
+						{subTitle.map((offer) => (
+							<li style={{ lineHeight: 1.8 }}>{offer}</li>
+						))}
+					</ul>
 				</div>
 			</div>
 			{localStorage.getItem("lead_id") && (
@@ -379,6 +384,7 @@ const Partner = ({
 						stars={stars}
 						socialMedia={socialMedia}
 						_availNow={_availNow}
+						carouselLength={carousel.length}
 					/>
 				</div>
 				{!localStorage.getItem("lead_id") && (

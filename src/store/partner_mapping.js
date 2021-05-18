@@ -28,6 +28,12 @@ import {
 	HYLO_BIZ,
 	NEOCASH_INSTA,
 	MEDIAQART,
+	THE_ONLINE_TEAM_1,
+	THE_ONLINE_TEAM_2,
+	THE_ONLINE_TEAM_3,
+	THE_ONLINE_TEAM_4,
+	ESTARTUP_INDIA,
+	INSTABILL,
 } from "./strings";
 
 export const partnerMapping = [
@@ -52,6 +58,11 @@ export const partnerMapping = [
 		heading: "Sell Online",
 	},
 	{
+		name: "the online team (tot)",
+		partner: THE_ONLINE_TEAM_1,
+		heading: "Sell Online",
+	},
+	{
 		name: "neogrowth",
 		partner: NEOGROWTH,
 		heading: "Business Loans",
@@ -64,6 +75,11 @@ export const partnerMapping = [
 	{
 		name: "snapbizz",
 		partner: SNAPBIZZ,
+		heading: "Inventory Management",
+	},
+	{
+		name: "instabill(e-startup india)",
+		partner: INSTABILL,
 		heading: "Inventory Management",
 	},
 	{
@@ -84,6 +100,11 @@ export const partnerMapping = [
 	{
 		name: "pinnacle management & utility services",
 		partner: PINNACLE,
+		heading: "Create Website or Mobile App",
+	},
+	{
+		name: "the online team (tot)",
+		partner: THE_ONLINE_TEAM_2,
 		heading: "Create Website or Mobile App",
 	},
 	{
@@ -122,6 +143,11 @@ export const partnerMapping = [
 		heading: "Tax Filing & Legal",
 	},
 	{
+		name: "e-startup india",
+		partner: ESTARTUP_INDIA,
+		heading: "Tax Filing & Legal",
+	},
+	{
 		name: "accunity services",
 		partner: ACCUNITY_SERVICES2,
 		heading: "Social Media & Digital Marketing",
@@ -129,6 +155,11 @@ export const partnerMapping = [
 	{
 		name: "pinnacle management & utility services",
 		partner: PINNACLE,
+		heading: "Social Media & Digital Marketing",
+	},
+	{
+		name: "the online team (tot)",
+		partner: THE_ONLINE_TEAM_3,
 		heading: "Social Media & Digital Marketing",
 	},
 	{
@@ -185,5 +216,10 @@ export const partnerMapping = [
 		name: "mediaqart",
 		partner: MEDIAQART,
 		heading: "Social Media & Digital Marketing",
+	},
+	{
+		name: "the online team (tot)",
+		partner: THE_ONLINE_TEAM_4,
+		heading: "Product Photoshoot",
 	},
 ];

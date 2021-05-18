@@ -16,7 +16,7 @@
 }
 
 .partner-main .dataSection {
-	margin-top: 100px;
+	margin-top: 130px;
 }
 
 .partner-form {
@@ -62,7 +62,7 @@
 
 .partner-carousel .carousel-main {
 	width: 40vw;
-	margin-top: 30px;
+	/* margin-top: 30px; */
 }
 
 .partner-main .discountSection {
@@ -141,10 +141,10 @@
 .partner-main-partner-card {
 	display: flex;
 	width: 40vw;
-	height: 300px;
+	/* height: 300px; */
 	margin-top: 30px;
-	align-items: center;
-	justify-content: center;
+	/* align-items: center; */
+	/* justify-content: center; */
 	background-color: white;
 	/* margin-top: 30px; */
 	border-radius: 16px;
@@ -166,16 +166,14 @@
 	padding-top: 0px;
 	width: 41vw;
 	height: 210px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	background-color: white;
 }
 .partner-main-partner-card .carousel-main .carousel-image {
-	/* width: 40vw; */
-	height: 300px;
-	/* background-repeat: no-repeat; */
-	/* background-size: 40vw 300px; */
+	width: 40vw;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
 }
 
 .partner-main-partner-card .carousel-main .carousel-inner {
@@ -227,6 +225,9 @@
 	padding: 15px 40px;
 	border-radius: 60px;
 }
+.description ul {
+	padding-left: 13px;
+}
 
 @media (max-width: 48rem) {
 	.servicesPartnerPage {
@@ -242,6 +243,7 @@
 	}
 	.partner-main-partner-card {
 		width: 95vw;
+		margin-top: 0px;
 		height: fit-content;
 	}
 	.partner-main-partner-card img {
@@ -265,10 +267,10 @@
 	.partner-main .partner-details {
 		display: flex;
 		/* justify-content: cen	ter; */
-		align-items: center;
 		width: 100vw;
-		/* margin-top: 50px; */
+		margin-top: 10px;
 		margin-left: 0px;
+		padding-left: 0px;
 	}
 	.partner-carousel .carousel-main {
 		width: 100%;
@@ -279,13 +281,18 @@
 	.partner-main-partner-card .carousel-main .carousel-image {
 		width: 100%;
 	}
+	.partner-main-partner-card .carousel-main {
+		height: 180px;
+	}
 	.partner-main-partner-card .carousel-main .carousel-image {
 		height: 200px;
 		background-repeat: no-repeat;
-		background-size: 99% 200px;
+		background-size: contain;
+		/* background-position: center center; */
 	}
 	.partner-form {
 		margin-top: 30px;
+		margin: 0px;
 	}
 	.partner-main .dataSection {
 		margin-top: 50px;
@@ -296,5 +303,14 @@
 
 	.servicesPartnerPage .form-in-mobile {
 		display: block;
+	}
+	.partner-main .discountSection {
+		margin: 10px 0px;
+	}
+	.partner-main-partner-card .carousel-indicators {
+		bottom: 25px;
+	}
+	.partner-section .activeIndicators {
+		margin-top: 50px;
 	}
 }

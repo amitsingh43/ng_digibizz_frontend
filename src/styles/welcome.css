@@ -421,6 +421,9 @@
 		margin-bottom: 0px;
 	}
 	.welcome .side-text .watch-to-know-more {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
 		width: 100%;
 	}
 	.welcome .side-text .watch-to-know-more p {

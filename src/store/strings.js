@@ -38,6 +38,9 @@ import easyfileitr from "../assets/partners/easyfileitr.png";
 import hylo_biz from "../assets/partners/hylo_biz.png";
 import neocash_insta from "../assets/partners/neocash_insta.png";
 import mediaqart from "../assets/partners/mediaqart.png";
+import the_online_team from "../assets/partners/the_online_team.png";
+import estartup_india from "../assets/partners/estartup_india.png";
+import instabill from "../assets/partners/instabill.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -2706,6 +2709,7 @@ export const MOBICOMMERCE1 = {
 		"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
 		"•	Generate profits from the eCommerce website according to business and revenue models",
 		"•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
+		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
 	],
 	image: mobicommerce,
 	backgroundColor: "#fff",
@@ -2713,9 +2717,7 @@ export const MOBICOMMERCE1 = {
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
-	aboutUs: [
-		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
-	],
+	aboutUs: null,
 	carousel: [
 		{
 			type: "image",
@@ -2736,6 +2738,7 @@ export const MOBICOMMERCE2 = {
 		"•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
 		"•	Generate profits from the eCommerce website according to business and revenue models",
 		"•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
+		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
 	],
 	image: mobicommerce,
 	backgroundColor: "#fff",
@@ -2743,9 +2746,7 @@ export const MOBICOMMERCE2 = {
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
-	aboutUs: [
-		"MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
-	],
+	aboutUs: null,
 	carousel: [
 		{
 			type: "image",
@@ -2775,7 +2776,7 @@ export const MAGICPIN = {
 };
 export const NEOGROWTH = {
 	title: "NeoGrowth",
-	subTitle: ["Collateral-free business Loans up to 75 lakhs"],
+	subTitle: ["Collateral-free business Loans up to ₹ 75 lakhs"],
 	description: [
 		"Fund your dreams with NeoGrowth’s flexible business loans!",
 		"Grow your business with quick & hassle-free business loans from NeoGrowth. Quick Disbursal, Door-Step service, Minimum Documentation, Dedicated Customer Support are some of our key features.",
@@ -2802,6 +2803,7 @@ export const MYBILLBOOK = {
 	description: [
 		"My BillBook helps small & medium businesses manage three key components of their day-to-day operations: GST billing/ invoicing, inventory/ stock management, party & outstanding management.",
 		"Along with this, MyBillBook also takes care of several other types of business transactions (purchases, sale/ purchase returns, quotations/ estimates and expenses). MyBillBook is currently available in English, Hindi, Gujarati & Tamil.",
+		"My BillBook, a product of Flobiz is a free & easy to use mobile application that helps small & medium businesses.",
 	],
 	image: mybillbook,
 	backgroundColor: "#fff",
@@ -2809,9 +2811,7 @@ export const MYBILLBOOK = {
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
-	aboutUs: [
-		"My BillBook, a product of Flobiz is a free & easy to use mobile application that helps small & medium businesses.",
-	],
+	aboutUs: null,
 	carousel: [
 		{
 			type: "image",
@@ -2920,6 +2920,9 @@ export const APNA_CO = {
 	description: [
 		"Creating opportunities for Bharat.",
 		"At apna - we are building what we call the LinkedIn for Bharat - a professional social network optimized for India's frontline - and offering them opportunities in terms of jobs, gigs, skills, and advice on starting a business.",
+		"Creating opportunities for Bharat.",
+		"At apna - we are building what we call the LinkedIn for Bharat - a professional social network optimized for India's frontline - and offering them opportunities in terms of jobs, gigs, skills, and advice on starting a business.",
+		"Creating opportunities for Bharat.",
 	],
 	image: apna_co,
 	backgroundColor: "#fff",
@@ -2927,11 +2930,7 @@ export const APNA_CO = {
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
-	aboutUs: [
-		"Creating opportunities for Bharat.",
-		"At apna - we are building what we call the LinkedIn for Bharat - a professional social network optimized for India's frontline - and offering them opportunities in terms of jobs, gigs, skills, and advice on starting a business.",
-		"Creating opportunities for Bharat.",
-	],
+	aboutUs: null,
 	carousel: [
 		{
 			type: "image",
@@ -3029,7 +3028,7 @@ export const VAKIL_SEARCH = {
 	],
 	description: [
 		"Vakilsearch is a technology powered platform for all legal, compliance and accounting needs.",
-		"",
+		"We are India's largest platform, with a dominant market share of 10% in setting up new businesses and 4% in trademark applications. More than 5 lakh clients rely on us for their compliance management, accounting and legal needs",
 	],
 	image: vakilsearch,
 	backgroundColor: "#fff",
@@ -3037,9 +3036,7 @@ export const VAKIL_SEARCH = {
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
-	aboutUs: [
-		"We are India's largest platform, with a dominant market share of 10% in setting up new businesses and 4% in trademark applications. More than 5 lakh clients rely on us for their compliance management, accounting and legal needs",
-	],
+	aboutUs: null,
 	carousel: [
 		{
 			type: "image",
@@ -3124,14 +3121,14 @@ export const PAYU = {
 
 export const SPACE_OF_JOY = {
 	title: "Space of Joy",
-	subTitle: [
-		"Pan India coverage supported by long term relationship with all vendors and suppliers",
-	],
+	subTitle: ["Free Décor Consultation", "Flat 10% off on total bill"],
 	description: [
-		"Our offerings include Wall Coverings, Wall Decals, Backlit Art, Canvas Art, Glass & Ceiling Décor, and Cut Letters.",
-		"• Whether it is your residential space, your office, or an outlet/shop, we are a one-stop solution for a quick revamp of your space with a range of designs and product solutions.",
-		"• With experience of working with MNCs for over 12 years, you can trust the quality of all our products and services.",
-		"• Super quick turnaround within 72 hours of order confirmation across the country",
+		"Give a new look to your Business Space with premium quality fully customizable décor products. Our offerings include Wall Coverings, Wall Decals, Backlit Art, Canvas Art, Glass & Ceiling Décor, and Cut Letters for Stores, Offices & Home.",
+		"Space of Joy is a new-age décor brand with premium quality, highly customizable, make to order décor products with an end-to-end solution of conceptualization to installation services.",
+		"Experience of 10+ years in the designing and advertising industry",
+		"Superb graphic designing capabilities with vast product portfolio and customisation options",
+		"State of Art Infrastructure for end-to-end management from designing to delivery & installation",
+		"Pan India coverage supported by long term relationship with all vendors and suppliers",
 	],
 	image: space_of_joy,
 	backgroundColor: "#fff",
@@ -3142,14 +3139,7 @@ export const SPACE_OF_JOY = {
 		"• For some people, their business is about product or service. But for Gaurav from Space of Joy his business is his Purpose. He understands the customer’s Purpose crystal clear and delivers a Delight. Our Wall literally came alive after the wallpaper installed by SOJ’s Team. The final finished product was elegant and excellent <insert image>",
 		"• Its amazing to see your thoughts converted into a reality, and that too so seamlessly and fast, I can’t thank Team Space of Joy Enough for making my workshop transform.. The pictures should speak for themselves <insert image>",
 	],
-	aboutUs: [
-		"Space of Joy is a new-age décor brand with premium quality, highly customizable, make to order décor products with an end-to-end solution of conceptualization to installation services.",
-		"• Experience of 10+ years in the designing and advertisement industry with renowned corporates",
-		"• In depth experience of working with large Indian and Global Multinational Companies",
-		"• Superb graphic designing capabilities with vast product portfolio and customisation options",
-		"• State of Art Infrastructure for end-to-end management from designing to delivery & installation",
-		"• Pan India coverage supported by long term relationship with all vendors and suppliers",
-	],
+	aboutUs: null,
 	carousel: [
 		{
 			type: "image",
@@ -3183,7 +3173,11 @@ export const PAGARBOOK = {
 	],
 	description: [
 		"Employee Management at your Finger Tips: India's Best Payroll and Attendance Management tool for Small & Medium Enterprises",
-		"",
+		"At PagarBook, we are committed to solving the most challenging problems faced by the SME sector.",
+		"We realized there is no promising solution to manage more than 100 million SME workforce in India. We are striving hard to make the life of SME owners and employees better every day.",
+		"• 2 Million + people use PagarBook to manage their employees.",
+		"• 10 Million + people get managed on PagarBook by their employer.",
+		"• 1 Country - 1 App created within India for every Indian. Serving with pride",
 	],
 	image: pagar_book,
 	backgroundColor: "#fff",
@@ -3191,13 +3185,7 @@ export const PAGARBOOK = {
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
-	aboutUs: [
-		"At PagarBook, we are committed to solving the most challenging problems faced by the SME sector.",
-		"We realized there is no promising solution to manage more than 100 million SME workforce in India. We are striving hard to make the life of SME owners and employees better every day.",
-		"• 2 Million + people use PagarBook to manage their employees.",
-		"• 10 Million + people get managed on PagarBook by their employer.",
-		"• 1 Country - 1 App created within India for every Indian. Serving with pride",
-	],
+	aboutUs: null,
 	carousel: [
 		{
 			type: "image",
@@ -3315,7 +3303,7 @@ export const MEDIAQART = {
 	],
 	image: mediaqart,
 	backgroundColor: "#fff",
-	url: "https://mediaqart.com/partners",
+	url: "https://mediaqart.com/",
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
@@ -3328,10 +3316,174 @@ export const MEDIAQART = {
 	],
 };
 
+export const THE_ONLINE_TEAM_1 = {
+	title: "The Online Team (TOT)",
+	subTitle: ["14 Day Trial with complete account management services."],
+	description: [
+		"Take your offline store online.",
+		"E-commerce marketplace lets you set up an online store and start selling in very little time which allows a business to grow on the online market to the maximum audience reach which in return boosts the sales exponentially high. A brand small or big are equally sold on e-commerce marketplaces if a product offers high quality and customer satisfaction.",
+	],
+	image: the_online_team,
+	backgroundColor: "#fff",
+	url: "https://www.theonlineteam.in/general-8-2",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: the_online_team,
+		},
+	],
+};
+
+export const THE_ONLINE_TEAM_2 = {
+	title: "The Online Team (TOT)",
+	subTitle: ["Offer 30% OFF on the website design & development cost"],
+	description: [
+		"Make way for your customers with a stunning website.",
+		"A website representing your brand value would be designed based on your company’s personality and would be user-friendly in terms of the functionality you would opt for. A website makes your brand talk for itself. ",
+	],
+	image: the_online_team,
+	backgroundColor: "#fff",
+	url: "https://www.theonlineteam.in/general-8",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: the_online_team,
+		},
+	],
+};
+
+export const THE_ONLINE_TEAM_3 = {
+	title: "The Online Team (TOT)",
+	subTitle: ["Offer 10% OFF on social media marketing/account management"],
+	description: [
+		"Let your brand go viral.",
+		"Social media marketing helps to validate your brand. A company's social media presence, when done correctly, tells consumers that their brand is active and focused on thriving communication with consumers. We believe in end-to-end operations; hence, our social media marketing begins from designing the company profile on social media then the graphic designer designs the posts and campaigns that would be scheduled on a daily basis.",
+	],
+	image: the_online_team,
+	backgroundColor: "#fff",
+	url: "https://www.theonlineteam.in/general-8-1",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: the_online_team,
+		},
+	],
+};
+
+export const THE_ONLINE_TEAM_4 = {
+	title: "The Online Team (TOT)",
+	subTitle: ["Offer 10 % Off on total shoot value"],
+	description: [
+		"Capture the perfect shot for your product.",
+		"Capture with quality as a product picture would be the first impression your product would create and surely you wouldn't want it to be down. ",
+	],
+	image: the_online_team,
+	backgroundColor: "#fff",
+	url: "https://www.theonlineteam.in/general-8-3",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: the_online_team,
+		},
+	],
+};
+
+export const ESTARTUP_INDIA = {
+	title: "E-Startup India",
+	subTitle: [
+		"Available Offers",
+		"# GST Registration + GST Software Rs.499/- Rs.3000/-",
+		"# Company Incorporation Rs.4499/- onwards",
+		"# Barcodes Registration Rs.2,000/- onwards",
+		"#  Import Export Code Rs.1500/- Rs.2500/-",
+		"# ISO Certification Flat Discount of Rs.1,000/-",
+	],
+	description: [
+		"E-Startup India is a single window platform for all kinds of business registration, license and accounting & tax compliances.",
+		"E-Startup India is a team of highly professional CA, CS, Lawyers who are driving towards integration of technology with traditional practices to cater the need of MSMEs in the fast moving and cost effective world. We render a range of online services for businesses running in India like Company Incorporation, GST Registration, ISO certification, Import Export Code, MSME Registration, Trademark, Copyright, Patent, Tax Return filing, accounting, legal and financial compliance(s).",
+	],
+	image: estartup_india,
+	backgroundColor: "#fff",
+	url: "https://www.e-startupindia.com/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: estartup_india,
+		},
+	],
+};
+
+export const INSTABILL = {
+	title: "Instabill(E-Startup India)",
+	subTitle: [
+		"Available Offers",
+		"Business Plan - Free for 1 year worth of Rs.1,500/-",
+		"Available for Desktop + Mobile",
+		"GST Return filing available just @ Rs.500/-",
+	],
+	description: [
+		"Easily Create GST Compliant Invoices, Quotation, Purchase Order, Delivery Challan, E-Way Bill, Debit Note, Credit Note, and many more…",
+		"Instantly Share with customers and vendors on Email & WhatsApp.",
+		"Get paid directly to your bank account integrated with powerful #PaymentGateway & #UPI",
+		"Instabill Unique Features",
+		"✓ Set and send auto-reminders to customers for payments.",
+		"✓ Create auto-recurring invoices",
+		"✓ Get Notified when customers open invoice emails.",
+		"✓ Inventory Management 📦 available. Get notified on low stock level.",
+		"✓ Print Invoice, Quotation, Delivery Challan, PO, E-Way Bill from any printer from anywhere.",
+		"✓ Download 30+ Business reports in excel and pdf.",
+		"✓ Customize Invoice template with logo and signature.",
+		"✓ Manage Udhar Bahi Khata of customers & vendors",
+		"✓ GST Compliant, GST Invoice, GST Reports, GST Integration",
+		"✓ Generate reports for GST return filing with this GST accounting software",
+		"✓ Generate E-way bill from this GST billing software.",
+		"✓ Check Day Book for business daily sales, purchase, expenses record & payments.",
+	],
+	image: instabill,
+	backgroundColor: "#fff",
+	url: "https://instabill.co/%20Mobile%20App%20Download%20https://play.google.com/store/apps/details?id=app.instabillpro",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: instabill,
+		},
+	],
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
-		data: [MOBICOMMERCE1, NEAR_STORE, ACCUNITY_SERVICES1, SNAPBIZZ],
+		data: [
+			MOBICOMMERCE1,
+			NEAR_STORE,
+			ACCUNITY_SERVICES1,
+			SNAPBIZZ,
+			THE_ONLINE_TEAM_1,
+		],
 		tag: "sell_online",
 	},
 	// {
@@ -3346,12 +3498,12 @@ export const PARTNERS = [
 	},
 	{
 		category: "Inventory Management",
-		data: [SNAPBIZZ, MYBILLBOOK],
+		data: [SNAPBIZZ, MYBILLBOOK, INSTABILL],
 		tag: "inventory_management",
 	},
 	{
 		category: "Create Website or Mobile App",
-		data: [MOBICOMMERCE2, ACCUNITY_SERVICES2, PINNACLE],
+		data: [MOBICOMMERCE2, ACCUNITY_SERVICES2, PINNACLE, THE_ONLINE_TEAM_2],
 		tag: "create_website_and_app",
 	},
 	{
@@ -3366,12 +3518,12 @@ export const PARTNERS = [
 	// },
 	{
 		category: "Tax Filing & Legal",
-		data: [VAKIL_SEARCH, EASY_FILE_ITR],
+		data: [VAKIL_SEARCH, EASY_FILE_ITR, ESTARTUP_INDIA],
 		tag: "tax_fling_and_legal",
 	},
 	{
 		category: "Social Media & Digital Marketing",
-		data: [ACCUNITY_SERVICES2, PINNACLE, MEDIAQART],
+		data: [ACCUNITY_SERVICES2, PINNACLE, MEDIAQART, THE_ONLINE_TEAM_3],
 		tag: "social_media_marketing",
 	},
 	{
@@ -3398,5 +3550,10 @@ export const PARTNERS = [
 		category: "Business Decor",
 		data: [SPACE_OF_JOY],
 		tag: "business_decor",
+	},
+	{
+		category: "Product Photoshoot",
+		data: [THE_ONLINE_TEAM_4],
+		tag: "product_photoshoot",
 	},
 ];
