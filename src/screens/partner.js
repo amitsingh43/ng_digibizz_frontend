@@ -61,10 +61,7 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
 						setCityName(cities.find((city) => (city._id = e.target.value)).name);
 					}}
 				>
-					<option disabled selected>
-						{" "}
-						Select City
-					</option>
+					<option selected> Select City</option>
 					{cities &&
 						cities.map((city, index) => (
 							<option value={city._id} key={index}>
@@ -98,7 +95,7 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 			<div className="carousel-main">
 				<div
 					id="carouselExampleIndicators"
-					className="carousel slide"
+					className="slide carousel"
 					data-ride="carousel"
 					// data-touch="true"
 					data-interval="4000"
@@ -308,18 +305,7 @@ const Partner = ({
 			get_master_data();
 		}
 	}, []);
-	// if (location && location.state) {
-	// 	var {
-	// 		title,
-	// 		description,
-	// 		image,
-	// 		subTitle,
-	// 		tag,
-	// 		url,
-	// 		backgroundColor,
-	// 		heading,
-	// 	} = location.state.data;
-	// } else {
+
 	var {
 		title,
 		description,
@@ -335,7 +321,7 @@ const Partner = ({
 		carousel,
 	} = data.partner;
 	var { heading } = data;
-	// }
+
 	const _availNow = () => {
 		if (localStorage.getItem("lead_id")) {
 			const body = {
@@ -351,6 +337,7 @@ const Partner = ({
 			history.push(`/services/${heading}/${updatedTitle}/reg`);
 		}
 	};
+
 	return (
 		<div className={"servicesPartnerPage"}>
 			<div className="partner-main" style={{ minHeight: "99vh", flex: 2.5 }}>

@@ -61,30 +61,6 @@ const PartnerCard = (props) => {
 		let updatedTitle = title.split(".").join(" ");
 		history.push(`/services/${heading}/${updatedTitle}/`);
 		return;
-		if (localStorage.getItem("lead_id")) {
-			const body = {
-				lead_id: localStorage.getItem("lead_id"),
-				partner_availed: title,
-			};
-			update_lead(body);
-			if (title !== "NeoGrowth") {
-				if (title === "NeoCash Insta") {
-					window.open(
-						`${url}&name=${localStorage.getItem(
-							"name"
-						)}&mobile=${localStorage.getItem("mobile")}&city=${localStorage.getItem(
-							"cityName"
-						)}`,
-						"_blank"
-					);
-				} else {
-					window.open(url, "_blank");
-				}
-			}
-		} else {
-			let updatedTitle = title.split(".").join(" ");
-			history.push(`/services/${heading}/${updatedTitle}/reg`);
-		}
 	};
 	const [viewMore, toggleViewMore] = useState(false);
 	return (

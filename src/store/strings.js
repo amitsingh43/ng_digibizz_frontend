@@ -3125,20 +3125,17 @@ export const SPACE_OF_JOY = {
 	description: [
 		"Give a new look to your Business Space with premium quality fully customizable décor products. Our offerings include Wall Coverings, Wall Decals, Backlit Art, Canvas Art, Glass & Ceiling Décor, and Cut Letters for Stores, Offices & Home.",
 		"Space of Joy is a new-age décor brand with premium quality, highly customizable, make to order décor products with an end-to-end solution of conceptualization to installation services.",
-		"Experience of 10+ years in the designing and advertising industry",
-		"Superb graphic designing capabilities with vast product portfolio and customisation options",
-		"State of Art Infrastructure for end-to-end management from designing to delivery & installation",
-		"Pan India coverage supported by long term relationship with all vendors and suppliers",
+		"• Experience of 10+ years in the designing and advertising industry",
+		"• Superb graphic designing capabilities with vast product portfolio and customization options",
+		"• State of Art Infrastructure for end-to-end management from designing to delivery & installation",
+		"• Pan India coverage supported by long term relationship with all vendors and suppliers",
 	],
 	image: space_of_joy,
 	backgroundColor: "#fff",
 	url: "https://myspaceofjoy.com/digibuzz-promo/",
 	stars: null,
 	socialMedia: null,
-	testimonials: [
-		"• For some people, their business is about product or service. But for Gaurav from Space of Joy his business is his Purpose. He understands the customer’s Purpose crystal clear and delivers a Delight. Our Wall literally came alive after the wallpaper installed by SOJ’s Team. The final finished product was elegant and excellent <insert image>",
-		"• Its amazing to see your thoughts converted into a reality, and that too so seamlessly and fast, I can’t thank Team Space of Joy Enough for making my workshop transform.. The pictures should speak for themselves <insert image>",
-	],
+	testimonials: null,
 	aboutUs: null,
 	carousel: [
 		{
@@ -3407,12 +3404,11 @@ export const THE_ONLINE_TEAM_4 = {
 export const ESTARTUP_INDIA = {
 	title: "E-Startup India",
 	subTitle: [
-		"Available Offers",
-		"# GST Registration + GST Software Rs.499/- Rs.3000/-",
-		"# Company Incorporation Rs.4499/- onwards",
-		"# Barcodes Registration Rs.2,000/- onwards",
-		"#  Import Export Code Rs.1500/- Rs.2500/-",
-		"# ISO Certification Flat Discount of Rs.1,000/-",
+		"GST Registration + GST Software Rs.499/- Rs.3000/-",
+		"Company Incorporation Rs.4499/- onwards",
+		"Barcodes Registration Rs.2,000/- onwards",
+		"Import Export Code Rs.1500/- Rs.2500/-",
+		"ISO Certification Flat Discount of Rs.1,000/-",
 	],
 	description: [
 		"E-Startup India is a single window platform for all kinds of business registration, license and accounting & tax compliances.",
@@ -3436,7 +3432,6 @@ export const ESTARTUP_INDIA = {
 export const INSTABILL = {
 	title: "Instabill(E-Startup India)",
 	subTitle: [
-		"Available Offers",
 		"Business Plan - Free for 1 year worth of Rs.1,500/-",
 		"Available for Desktop + Mobile",
 		"GST Return filing available just @ Rs.500/-",

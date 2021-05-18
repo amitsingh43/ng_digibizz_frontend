@@ -16,7 +16,7 @@
 }
 
 .partner-main .dataSection {
-	margin-top: 130px;
+	margin-top: 50px;
 }
 
 .partner-form {
@@ -148,7 +148,6 @@
 	background-color: white;
 	/* margin-top: 30px; */
 	border-radius: 16px;
-	/* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 .partner-main-partner-card .carousel-indicators .active {
 	/* margin: 0px !important; */
@@ -170,7 +169,7 @@
 }
 .partner-main-partner-card .carousel-main .carousel-image {
 	width: 40vw;
-	height: 200px;
+	height: 250px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
@@ -178,7 +177,9 @@
 
 .partner-main-partner-card .carousel-main .carousel-inner {
 	background-color: white;
-	/* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	height: 250px;
+	border-radius: 20px;
 	margin-bottom: 60px;
 }
 
@@ -228,6 +229,9 @@
 .description ul {
 	padding-left: 13px;
 }
+.partner-main .partner-section {
+	height: 300px;
+}
 
 @media (max-width: 48rem) {
 	.servicesPartnerPage {
@@ -262,6 +266,7 @@
 		margin-bottom: 30px;
 	}
 	.partner-main .partner-section {
+		height: fit-content;
 		flex-direction: column;
 	}
 	.partner-main .partner-details {
@@ -312,5 +317,8 @@
 	}
 	.partner-section .activeIndicators {
 		margin-top: 50px;
+	}
+	.partner-main-partner-card .carousel-main .carousel-inner {
+		height: 200px;
 	}
 }
