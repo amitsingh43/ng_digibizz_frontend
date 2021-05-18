@@ -28,6 +28,7 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
 		cities_master_id: null,
 		partner_availed: title,
 	});
+	console.log(data);
 	const [cityName, setCityName] = useState(null);
 	return (
 		<div className={"partner-form"}>
@@ -55,13 +56,15 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
 				/>
 				<h5>City</h5>
 				<select
-					value={data.cities_master_id}
 					onChange={(e) => {
 						setData((data) => ({ ...data, cities_master_id: e.target.value }));
 						setCityName(cities.find((city) => (city._id = e.target.value)).name);
 					}}
 				>
-					<option selected> Select City</option>
+					<option selected disabled>
+						{" "}
+						Select City
+					</option>
 					{cities &&
 						cities.map((city, index) => (
 							<option value={city._id} key={index}>
