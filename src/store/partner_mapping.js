@@ -34,6 +34,7 @@ import {
 	THE_ONLINE_TEAM_4,
 	ESTARTUP_INDIA,
 	INSTABILL,
+	URBAN_CFO,
 } from "./strings";
 
 export const partnerMapping = [
@@ -145,6 +146,11 @@ export const partnerMapping = [
 	{
 		name: "e-startup india",
 		partner: ESTARTUP_INDIA,
+		heading: "Tax Filing & Legal",
+	},
+	{
+		name: "urbancfo",
+		partner: URBAN_CFO,
 		heading: "Tax Filing & Legal",
 	},
 	{
