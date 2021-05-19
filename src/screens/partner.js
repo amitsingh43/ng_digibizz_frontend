@@ -85,6 +85,11 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
 const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 	const [currentDisplayed, setCurrentDisplay] = useState(0);
 	const [showYouTube, toggleYoutube] = useState({ show: false, videoId: null });
+	useEffect(() => {
+		$(".carousel").carousel({
+			interval: 4000,
+		});
+	}, []);
 	return (
 		<div className="partner-main-partner-card">
 			{showYouTube.show && (
@@ -97,7 +102,7 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 			<div className="carousel-main">
 				<div
 					id="carouselExampleIndicators"
-					className="slide carousel"
+					className="carousel slide"
 					data-ride="carousel"
 					// data-touch="true"
 					data-interval="4000"
