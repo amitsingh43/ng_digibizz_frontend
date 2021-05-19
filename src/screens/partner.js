@@ -94,7 +94,7 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 		<div className="partner-main-partner-card">
 			{showYouTube.show && (
 				<YouTube
-					videoId={"BcwpX9pzqXY"}
+					videoId={showYouTube.videoId}
 					toggleYoutube={toggleYoutube}
 					showYouTube={showYouTube}
 				/>

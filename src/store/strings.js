@@ -80,6 +80,7 @@ import SpaceOfJoyFour from "../assets/partners/carousel/space_of_joy/four.jpg";
 import SpaceOfJoyFive from "../assets/partners/carousel/space_of_joy/five.jpg";
 import SnapbizzOne from "../assets/partners/carousel/snapbizz/one.jpg";
 import SnapbizzTwo from "../assets/partners/carousel/snapbizz/two.png";
+import HylobizOne from "../assets/partners/carousel/hylo_biz/one.jpeg";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -2701,7 +2702,8 @@ export const ACCUNITY_SERVICES3 = {
 export const MOBICOMMERCE1 = {
 	title: "MobiCommerce",
 	subTitle: [
-		"10% discount on quotation for Mobicommerce - License (One time cost products) & SAAS Model (Subscription Plans)",
+		"Create your website and mobile apps on Yearly subscription/Rental basis.",
+		"Plans starting from 2990/Month and get additional 15% Discount on yearly payment.",
 	],
 	description: [
 		"Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two",
@@ -3241,6 +3243,11 @@ export const HYLO_BIZ = {
 		{
 			type: "image",
 			source: hylo_biz,
+		},
+		{
+			type: "video",
+			source: HylobizOne,
+			videoId: "VEnUiFKaM_Y",
 		},
 	],
 };
