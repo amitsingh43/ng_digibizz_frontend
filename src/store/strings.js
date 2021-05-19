@@ -3164,9 +3164,9 @@ export const SPACE_OF_JOY = {
 export const PAGARBOOK = {
 	title: "PagarBook",
 	subTitle: [
-		"• PB Premium App - INR 999",
-		"• PB Premium Desktop - INR1899",
-		"• PB Biometric - 20% Off",
+		"PB Premium App - INR 999",
+		"PB Premium Desktop - INR1899",
+		"PB Biometric - 20% Off",
 	],
 	description: [
 		"Employee Management at your Finger Tips: India's Best Payroll and Attendance Management tool for Small & Medium Enterprises",
