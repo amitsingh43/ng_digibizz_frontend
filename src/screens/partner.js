@@ -116,7 +116,7 @@ const PartnerCard = ({ image, offer, backgroundColor, title, carousel }) => {
 											toggleYoutube((showYouTube) => ({
 												...showYouTube,
 												show: true,
-												videoId: item.videoId,
+												videoId: item.videoID,
 											}));
 										}
 									}}

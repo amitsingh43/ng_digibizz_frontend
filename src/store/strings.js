@@ -81,6 +81,7 @@ import SpaceOfJoyFive from "../assets/partners/carousel/space_of_joy/five.jpg";
 import SnapbizzOne from "../assets/partners/carousel/snapbizz/one.jpg";
 import SnapbizzTwo from "../assets/partners/carousel/snapbizz/two.png";
 import HylobizOne from "../assets/partners/carousel/hylo_biz/one.jpeg";
+import VakilSearchOne from "../assets/partners/carousel/vakil_search/one.png";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -3045,6 +3046,11 @@ export const VAKIL_SEARCH = {
 			type: "image",
 			source: vakilsearch,
 		},
+		{
+			type: "video",
+			source: VakilSearchOne,
+			videoID: "1C8qpYWjvGo",
+		},
 	],
 };
 export const BRANDPULSE = {
@@ -3247,7 +3253,7 @@ export const HYLO_BIZ = {
 		{
 			type: "video",
 			source: HylobizOne,
-			videoId: "VEnUiFKaM_Y",
+			videoID: "VEnUiFKaM_Y",
 		},
 	],
 };
