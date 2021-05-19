@@ -41,6 +41,7 @@ import mediaqart from "../assets/partners/mediaqart.png";
 import the_online_team from "../assets/partners/the_online_team.png";
 import estartup_india from "../assets/partners/estartup_india.png";
 import instabill from "../assets/partners/instabill.png";
+import urban_cfo from "../assets/partners/urban_cfo.jpg";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -3469,6 +3470,28 @@ export const INSTABILL = {
 	],
 };
 
+export const URBAN_CFO = {
+	title: "urbanCFO",
+	subTitle: ["10-20% off on all services provided by urbanCFO"],
+	description: [
+		"Leave your accounting and compliance worries on us.",
+		"URBANCFO offers custom tailor-made packages for Individuals & Businesses starts from 2499/- per month to help them to be compliant with Laws & Regulations ranging from personal income tax return filing to new business incorporation to getting all regulatory registrations/licenses to Accounting and timely filing of GST MCA TDS & other returns to give you ease on compliances. It helps you to stay focused on your core business.",
+	],
+	image: urban_cfo,
+	backgroundColor: "#fff",
+	url: "https://www.urbancfo.com/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: urban_cfo,
+		},
+	],
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -3513,7 +3536,7 @@ export const PARTNERS = [
 	// },
 	{
 		category: "Tax Filing & Legal",
-		data: [VAKIL_SEARCH, EASY_FILE_ITR, ESTARTUP_INDIA],
+		data: [VAKIL_SEARCH, EASY_FILE_ITR, ESTARTUP_INDIA, URBAN_CFO],
 		tag: "tax_fling_and_legal",
 	},
 	{
