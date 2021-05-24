@@ -71,11 +71,15 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
 							</option>
 						))}
 				</select>
-				<div
-					className={"avail-now"}
-					onClick={() => save_basic_details(data, url, cityName)}
-				>
-					Avail Now
+				<div>
+					<a>
+						<div
+							className={"avail-now"}
+							onClick={() => save_basic_details(data, url, cityName)}
+						>
+							Avail Now
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -229,11 +233,13 @@ const PartnerDetails = ({
 				</div>
 			</div>
 			{localStorage.getItem("lead_id") && (
-				<div className="partner-main-avail-now">
-					<span style={{ cursor: "pointer" }} onClick={_availNow}>
-						Avail Now
-					</span>
-				</div>
+				<a>
+					<div className="partner-main-avail-now">
+						<span style={{ cursor: "pointer" }} onClick={_availNow}>
+							Avail Now
+						</span>
+					</div>
+				</a>
 			)}
 			<div style={{ flexDirection: "row", marginLeft: 10 }}>
 				{socialMedia && (
