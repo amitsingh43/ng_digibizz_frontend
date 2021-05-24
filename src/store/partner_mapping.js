@@ -35,6 +35,7 @@ import {
 	ESTARTUP_INDIA,
 	INSTABILL,
 	URBAN_CFO,
+	MSWIPE,
 } from "./strings";
 
 export const partnerMapping = [
@@ -131,6 +132,11 @@ export const partnerMapping = [
 	{
 		name: "hylo biz",
 		partner: HYLO_BIZ,
+		heading: "Manage Payments",
+	},
+	{
+		name: "mswipe",
+		partner: MSWIPE,
 		heading: "Manage Payments",
 	},
 	{
