@@ -42,6 +42,7 @@ import the_online_team from "../assets/partners/the_online_team.png";
 import estartup_india from "../assets/partners/estartup_india.png";
 import instabill from "../assets/partners/instabill.png";
 import urban_cfo from "../assets/partners/urban_cfo.jpg";
+import mswipe from "../assets/partners/mswipe.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -2615,8 +2616,8 @@ export const SUCCESSDATA = [
 export const NEAR_STORE = {
 	title: "Near.Store",
 	subTitle: [
-		"- Free Near.Store Lite / Dhandabook App ",
-		"- Store Digitalization Dongle - INR 2400 + GST",
+		"Free Near.Store Lite / Dhandabook App ",
+		"Store Digitalization Dongle - INR 2400 + GST",
 	],
 	description: [
 		"Create your online store in minutes with our plug and play device .",
@@ -3505,6 +3506,32 @@ export const URBAN_CFO = {
 	],
 };
 
+export const MSWIPE = {
+	title: "Mswipe",
+	subTitle: [
+		"Get your Zero monthly Rental POS device and accept all digital and contactless payments.",
+		"Grab your Wisepad G2 device on a zero-monthly rental now-One time charge of INR 2000 + GST.",
+	],
+	description: [
+		"Accept all digital and contactless payments. POS solutions for all types of payment acceptance - cards, wallets, mobile payment apps and bank apps, contactless and QR payments. Empower and expand your business with Mswipe.",
+		"With our Pay by Link feature, generate payment links & share via SMS, Whatsapp to collect online payments with ease.",
+		"eg: Now, use a plug and play software to get yourself listed online and deliver faster. Your go-to mobile app / desktop software for managing your stock inventory and billing, easily integrated with thermal printers and scanners. Your go-to platform to reach out to relevant local customers, highlight their uniqueness, reward loyal customers through X points and vouchers",
+	],
+	image: mswipe,
+	backgroundColor: "#fff",
+	url: "https://bit.ly/3w8715g",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: mswipe,
+		},
+	],
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -3559,7 +3586,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Manage Payments",
-		data: [PAYU, HYLO_BIZ],
+		data: [PAYU, HYLO_BIZ, MSWIPE],
 		tag: "manage_payments",
 	},
 	{
