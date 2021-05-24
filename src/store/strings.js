@@ -3422,7 +3422,7 @@ export const ESTARTUP_INDIA = {
 		"GST Registration + GST Software Rs.499/- Rs.3000/-",
 		"Company Incorporation Rs.4499/- onwards",
 		"Barcodes Registration Rs.2,000/- onwards",
-		"Import Export Code Rs.1500/- Rs.2500/-",
+		"Import Export Code Rs.1500/-",
 		"ISO Certification Flat Discount of Rs.1,000/-",
 	],
 	description: [
@@ -3445,7 +3445,7 @@ export const ESTARTUP_INDIA = {
 };
 
 export const INSTABILL = {
-	title: "Instabill(E-Startup India)",
+	title: "Instabill",
 	subTitle: [
 		"Business Plan - Free for 1 year worth of Rs.1,500/-",
 		"Available for Desktop + Mobile",
@@ -3566,7 +3566,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Billing & Accounting",
-		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH, INSTABILL],
 		tag: "billing_and_accounting",
 	},
 	// {
