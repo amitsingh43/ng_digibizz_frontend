@@ -9,10 +9,10 @@ import {
 	header_digital_status,
 	decrement,
 	add_answer,
-	post_answers,
 	get_questions,
 	none_of_the_above,
 	show_toast,
+	createQuestionnare,
 } from "../store/actions";
 import Footer from "../components/main/footer";
 import { useEffect } from "react";
@@ -31,9 +31,9 @@ function Questionnaire({
 	add_answer,
 	answers,
 	questionsList,
-	post_answers,
 	get_questions,
 	none_of_the_above,
+	createQuestionnare,
 }) {
 	const history = useHistory();
 	const { section } = useParams();
@@ -81,15 +81,6 @@ function Questionnaire({
 		history.push("/report");
 		return <div>Redirecting</div>;
 	}
-	const submit = () => {
-		var final = [];
-		answers.filter((answer) => final.push(answer.id));
-		const body = {
-			lead_id: localStorage.getItem("lead_id"),
-			answers: final,
-		};
-		post_answers(body, history);
-	};
 
 	const next = () => {
 		var ss = [];
@@ -105,17 +96,14 @@ function Questionnaire({
 			show_toast("Please answer all the questions");
 			return;
 		}
-		if (topicCounter === 4 && questionsList.length === 4) {
-			submit();
-			return;
-		}
-		if (topicCounter < 5) {
-			increment();
-			window.scrollTo(0, 0);
-		} else {
-			submit();
-			// history.replace("/report");
-		}
+		createQuestionnare(
+			answered.filter((val) => val.section === topicCounter - 1),
+			questionsList[topicCounter - 1]["name"],
+			questionsList[topicCounter - 1]["name"] ===
+				questionsList[questionsList.length - 1]["name"],
+			history
+		);
+		window.scrollTo(0, 0);
 	};
 	const _back = () => {
 		window.scrollTo(0, 0);
@@ -350,7 +338,7 @@ export default connect(mapStateToProps, {
 	header_digital_status,
 	decrement,
 	add_answer,
-	post_answers,
 	get_questions,
 	none_of_the_above,
+	createQuestionnare,
 })(Questionnaire);
