@@ -36,6 +36,7 @@ import {
 	INSTABILL,
 	URBAN_CFO,
 	MSWIPE,
+	BLUE_OCKTOPUS,
 } from "./strings";
 
 export const partnerMapping = [
@@ -207,6 +208,11 @@ export const partnerMapping = [
 	{
 		name: "accunity services",
 		partner: ACCUNITY_SERVICES1,
+		heading: "Customer Loyalty & Promotions",
+	},
+	{
+		name: "blue ocktopus",
+		partner: BLUE_OCKTOPUS,
 		heading: "Customer Loyalty & Promotions",
 	},
 	{
