@@ -3537,7 +3537,7 @@ export const BLUE_OCKTOPUS = {
 	title: "Blue Ocktopus",
 	subTitle: ["Exclusive 10% discount for all digibizz customers"],
 	description: [
-		"A LOYALTY CO.Loyalty, Data Intelligence & Customer Engagement Platform",
+		"A Loyalty, Data Intelligence & Customer Engagement Platform",
 		"Started in 2016, Blue Ocktopus is a young and vibrant Loyalty Technology Firm working with SME retailers & businesses. We create proprietary loyalty and engagement program for your customers. Apart from a robust technology platform, our domain experts bring a lot of science and art in managing Customer Programs.",
 	],
 	image: blue_ocktopus,
