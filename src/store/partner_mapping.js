@@ -81,7 +81,7 @@ export const partnerMapping = [
 		heading: "Inventory Management",
 	},
 	{
-		name: "instabill(e-startup india)",
+		name: "instabill",
 		partner: INSTABILL,
 		heading: "Inventory Management",
 	},
@@ -128,6 +128,11 @@ export const partnerMapping = [
 	{
 		name: "digihealth",
 		partner: DIGI_HEALTH,
+		heading: "Billing & Accounting",
+	},
+	{
+		name: "instabill",
+		partner: INSTABILL,
 		heading: "Billing & Accounting",
 	},
 	{
