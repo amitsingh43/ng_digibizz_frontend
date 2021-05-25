@@ -223,78 +223,92 @@ export const reset_user = () => {
 	};
 };
 
-export const createQuestionnare = (answersArray , step , completed , history ,ENDPOINT="/api/create_questionnaire") => async(dispatch) => {
-	try{
-		let answers = [];
-		answersArray.forEach(answer => answers.push(answer.id));
-		if(step === "Digital Discovery") {
-			const body = {
-			lead_id: localStorage.getItem("lead_id"),
-			answers,
-			step: "Digital Discovery"
-		}
-		await _post(ENDPOINT, body)
-		dispatch(increment());
-	}else{
-		dispatch(updateQuestionnare(answers, step, completed, history))
-	}
-	}catch(error){
-		let message = "Something went wrong! Please try later.";
+export const createQuestionnare =
+	(
+		answersArray,
+		step,
+		completed,
+		history,
+		ENDPOINT = "/api/create_questionnaire"
+	) =>
+	async (dispatch) => {
+		try {
+			let answers = [];
+			answersArray.forEach((answer) => answers.push(answer.id));
+			if (step === "Digital Discovery") {
+				const body = {
+					lead_id: localStorage.getItem("lead_id"),
+					answers,
+					step: "Digital Discovery",
+				};
+				await _post(ENDPOINT, body);
+				dispatch(increment());
+			} else {
+				dispatch(updateQuestionnare(answers, step, completed, history));
+			}
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
+
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+			if (message === "Questionnaire already created.") {
+				dispatch(increment());
+				return;
+			}
 
 			dispatch(add_error(message));
-			// show_toast(message);
 		}
-		if(message === "Questionnaire already created.") {
-			dispatch(increment());
-			return;
+	};
+
+export const updateQuestionnare =
+	(answers, step, completed, history, ENDPOINT = "/api/update_questionnaire") =>
+	async (dispatch) => {
+		try {
+			const body = {
+				lead_id: localStorage.getItem("lead_id"),
+				answers,
+				step,
+				completed,
+			};
+			const response = await _post(ENDPOINT, body);
+			if (completed) {
+				const { questionnaire_take } = response;
+				const { recommendations } = questionnaire_take;
+				Tracking.trackEvent("CLICK", "ASSESSED CUSTOMERS", "SUBMIT");
+				dispatch(set_recommendations_write(recommendations));
+				dispatch(set_results(questionnaire_take));
+				dispatch(reset_questionnaire());
+				localStorage.setItem("report", "true");
+				history.replace("/report");
+			} else {
+				dispatch(increment());
+			}
+			// if(completed){
+			// 	history.replace("/report");
+			// }else{
+			// 	dispatch(increment());
+			// }
+		} catch (error) {
+			let message = "Something went wrong! Please try later.";
+
+			if (
+				error &&
+				error.response &&
+				error.response.data &&
+				error.response.data.message
+			) {
+				message = error.response.data.message;
+			}
+
+			dispatch(add_error(message));
 		}
-
-		dispatch(add_error(message));
-	}
-}
-
-
-export const updateQuestionnare = (answers , step , completed , history ,ENDPOINT="/api/update_questionnaire") => async(dispatch) => {
-	try{
-		const body = {
-			lead_id: localStorage.getItem("lead_id"),
-			answers,
-			step,
-			completed
-		}
-		const response = await _post(ENDPOINT, body)
-		if(completed){
-			const { questionnaire_take } = response;
-			const { recommendations } = questionnaire_take;
-			Tracking.trackEvent("CLICK", "ASSESSED CUSTOMERS", "SUBMIT");
-			dispatch(set_recommendations_write(recommendations));
-			dispatch(set_results(questionnaire_take));
-			dispatch(reset_questionnaire());
-			localStorage.setItem("report", "true");
-			history.replace("/report");
-		}else{
-			dispatch(increment())
-		}
-		// if(completed){
-		// 	history.replace("/report");
-		// }else{
-		// 	dispatch(increment());
-		// }
-	}catch(error){
-		let message = "Something went wrong! Please try later.";
-
-		if (
-			error &&
-			error.response &&
-			error.response.data &&
-			error.response.data.message
-		) {
-			message = error.response.data.message;
-		}
-
-		dispatch(add_error(message));
-	}
-}
+	};
 
 // export const post_answers = (
 // 	options,
