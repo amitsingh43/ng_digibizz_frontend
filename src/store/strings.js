@@ -43,6 +43,7 @@ import estartup_india from "../assets/partners/estartup_india.png";
 import instabill from "../assets/partners/instabill.png";
 import urban_cfo from "../assets/partners/urban_cfo.jpg";
 import mswipe from "../assets/partners/mswipe.png";
+import blue_ocktopus from "../assets/partners/blue_ocktopus.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -3532,6 +3533,28 @@ export const MSWIPE = {
 	],
 };
 
+export const BLUE_OCKTOPUS = {
+	title: "Blue Ocktopus",
+	subTitle: ["Exclusive 10% discount for all digibizz customers"],
+	description: [
+		"A LOYALTY CO.Loyalty, Data Intelligence & Customer Engagement Platform",
+		"Started in 2016, Blue Ocktopus is a young and vibrant Loyalty Technology Firm working with SME retailers & businesses. We create proprietary loyalty and engagement program for your customers. Apart from a robust technology platform, our domain experts bring a lot of science and art in managing Customer Programs.",
+	],
+	image: blue_ocktopus,
+	backgroundColor: "#fff",
+	url: "http://blueocktopus.in/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: blue_ocktopus,
+		},
+	],
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -3596,7 +3619,7 @@ export const PARTNERS = [
 	},
 	{
 		category: "Customer Loyalty & Promotions",
-		data: [SYROW, BRANDPULSE, SMARTECH, ACCUNITY_SERVICES1],
+		data: [SYROW, BRANDPULSE, SMARTECH, ACCUNITY_SERVICES1, BLUE_OCKTOPUS],
 		tag: "customer_loyalty_and_promotions",
 	},
 	{
