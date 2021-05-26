@@ -3560,7 +3560,7 @@ export const TERRAGO_LOGISTICS = {
 	title: "Terrago Logistics",
 	subTitle: ["Exclusive 5% discount for all digibizz customers"],
 	description: [
-		"Integrated Logistics Solutions ProviderSimple, Flexible and Scalable Integrated Logistics Company.",
+		"Integrated Logistics Solutions Provider.",
 		"Terrago offers Simple, Flexible and Scalable Integrated Logistics Solution, across various touch points in India. We enable complete transportation collaboration across shippers and carriers.",
 	],
 	image: terrago,
