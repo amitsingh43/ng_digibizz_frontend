@@ -150,7 +150,7 @@ const ExploreOurServices = () => {
 				<div className="col-md-1 col-sm-1"></div>
 			</div>
 			<div className="row icons">
-				<div className="col-md-3 col-sm-1"></div>
+				<div className="col-md-2 col-sm-1"></div>
 				{services3.map((service) => (
 					<ServiceIcon
 						tag={service.tag}

@@ -13,6 +13,7 @@ import customer_loyalty_and_promotions from "../assets/services/customer_loyalty
 import insurance from "../assets/services/insurance.svg";
 import business_decor from "../assets/services/business_decor.png";
 import product_photoshoot from "../assets/services/product_photoshoot.svg";
+import delivery_and_logistics from "../assets/services/delivery_and_logistics.png";
 
 export const services = [
 	{
@@ -89,5 +90,10 @@ export const services = [
 		image: product_photoshoot,
 		label: "Product Photoshoot",
 		tag: "product_photoshoot",
+	},
+	{
+		image: delivery_and_logistics,
+		label: "Delivery & Logistics",
+		tag: "delivery_and_logistics",
 	},
 ];
