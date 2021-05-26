@@ -3663,6 +3663,6 @@ export const PARTNERS = [
 	{
 		category: "Delivery & Logistics",
 		data: [TERRAGO_LOGISTICS],
-		tag: "delivery_logistics",
+		tag: "delivery_and_logistics",
 	},
 ];
