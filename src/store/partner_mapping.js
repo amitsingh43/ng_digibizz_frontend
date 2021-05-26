@@ -37,6 +37,7 @@ import {
 	URBAN_CFO,
 	MSWIPE,
 	BLUE_OCKTOPUS,
+	TERRAGO_LOGISTICS,
 } from "./strings";
 
 export const partnerMapping = [
@@ -244,5 +245,10 @@ export const partnerMapping = [
 		name: "the online team (tot)",
 		partner: THE_ONLINE_TEAM_4,
 		heading: "Product Photoshoot",
+	},
+	{
+		name: "terrago logistics",
+		partner: TERRAGO_LOGISTICS,
+		heading: "Delivery & Logistics",
 	},
 ];

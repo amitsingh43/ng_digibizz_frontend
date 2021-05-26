@@ -44,6 +44,7 @@ import instabill from "../assets/partners/instabill.png";
 import urban_cfo from "../assets/partners/urban_cfo.jpg";
 import mswipe from "../assets/partners/mswipe.png";
 import blue_ocktopus from "../assets/partners/blue_ocktopus.png";
+import terrago from "../assets/partners/terrago.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -3555,6 +3556,28 @@ export const BLUE_OCKTOPUS = {
 	],
 };
 
+export const TERRAGO_LOGISTICS = {
+	title: "Terrago Logistics",
+	subTitle: ["Exclusive 5% discount for all digibizz customers"],
+	description: [
+		"Integrated Logistics Solutions ProviderSimple, Flexible and Scalable Integrated Logistics Company.",
+		"Terrago offers Simple, Flexible and Scalable Integrated Logistics Solution, across various touch points in India. We enable complete transportation collaboration across shippers and carriers.",
+	],
+	image: terrago,
+	backgroundColor: "#fff",
+	url: "https://www.terrago.asia/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: "image",
+			source: terrago,
+		},
+	],
+};
+
 export const PARTNERS = [
 	{
 		category: "Sell Online",
@@ -3636,5 +3659,10 @@ export const PARTNERS = [
 		category: "Product Photoshoot",
 		data: [THE_ONLINE_TEAM_4],
 		tag: "product_photoshoot",
+	},
+	{
+		category: "Delivery & Logistics",
+		data: [TERRAGO_LOGISTICS],
+		tag: "delivery_and_logistics",
 	},
 ];
