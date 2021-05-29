@@ -3029,8 +3029,7 @@ export const CARE = {
 export const VAKIL_SEARCH = {
 	title: "VakilSearch",
 	subTitle: [
-		"Free GST Registration",
-		"GST Filings at Rs. 2999 onwards",
+		"Free GST Registrations & GST Filings at Rs. 2999 onwards",
 		"ITR Filings at Rs.499 onwards",
 	],
 	description: [
@@ -3421,7 +3420,7 @@ export const THE_ONLINE_TEAM_4 = {
 export const ESTARTUP_INDIA = {
 	title: "E-Startup India",
 	subTitle: [
-		"GST Registration + GST Software Rs.499/- Rs.3000/-",
+		"GST Registration + GST Software Rs.499/-",
 		"Company Incorporation Rs.4499/- onwards",
 		"Barcodes Registration Rs.2,000/- onwards",
 		"Import Export Code Rs.1500/-",
