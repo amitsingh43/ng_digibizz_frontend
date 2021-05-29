@@ -224,7 +224,13 @@ function Questionnaire({
 			topicCounter - 1 !== questionsList.length &&
 			!checked[topicCounter - 1]
 		) {
-			increment();
+			createQuestionnare(
+				answered.filter((val) => val.section === topicCounter - 1),
+				questionsList[topicCounter - 1]["name"],
+				questionsList[topicCounter - 1]["name"] ===
+					questionsList[questionsList.length - 1]["name"],
+				history
+			);
 			checked[topicCounter - 1] = true;
 			count = 0;
 		} else {
