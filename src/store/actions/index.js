@@ -27,8 +27,6 @@ import { _get, _post } from "../api";
 import Tracking from "../../util/tracking";
 // import filedownload from "js-file-download";
 var FileSaver = require("file-saver");
-import { NEOCASH_INSTA } from "../strings";
-
 export const increment = (payload = 0) => {
 	return {
 		type: INCREMENT,
