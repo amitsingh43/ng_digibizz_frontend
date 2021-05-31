@@ -1,3 +1,4 @@
+import React from "react";
 import one from "../assets/knowledge_portal/one.svg";
 import two from "../assets/knowledge_portal/two.svg";
 import three from "../assets/knowledge_portal/three.svg";
@@ -2738,10 +2739,9 @@ export const MOBICOMMERCE2 = {
   ],
   description: [
     "Make your e-commerce sites and mobile apps running with a handful of clicks within a day or two",
-    "MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces.",
     "•	Operate and manage a powerful and user-friendly eCommerce platform with single admin panel, manage your delivery to end users successfully and efficiently.",
     "•	Grab customer attention with discounts and exciting offers and keep them informed using push notifications, facilitate your customer to pay online or at time of delivery.",
-    "•	Generate profits from the eCommerce website according to business and revenue models",
+    "•	Generate profits from the eCommerce website according to business and revenue models.",
     "•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
     "MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
   ],
@@ -3024,7 +3024,7 @@ export const CARE = {
 export const VAKIL_SEARCH = {
   title: "VakilSearch",
   subTitle: [
-    "Free GST Registrations & GST Filings at Rs. 2999 onwards",
+    "Avail Free GST Registration by taking GST Filings at Rs.2999 onwards",
     "ITR Filings at Rs.499 onwards",
   ],
   description: [
@@ -3418,8 +3418,8 @@ export const ESTARTUP_INDIA = {
     "GST Registration + GST Software starting at Rs.499/-",
     "Company Incorporation at Rs.4499/- onwards",
     "Barcodes Registration at Rs.2,000/- onwards",
-    "Import Export Code at Rs.1500/-",
-    "ISO Certification at Flat Discount of Rs.1,000/-",
+    "Import Export Code at Rs.1500/- ",
+    "ISO Certification at a Discount of Rs.1,000/-",
   ],
   description: [
     "E-Startup India is a single window platform for all kinds of business registration, license and accounting & tax compliances.",
@@ -3448,22 +3448,22 @@ export const INSTABILL = {
     "GST return filing available at just Rs.500/-",
   ],
   description: [
-    // "Easily Create GST Compliant Invoices, Quotation, Purchase Order, Delivery Challan, E-Way Bill, Debit Note, Credit Note, and many more…",
-    // "Instantly Share with customers and vendors on Email & WhatsApp.",
-    // "Get paid directly to your bank account integrated with powerful #PaymentGateway & #UPI",
-    // "Instabill Unique Features",
-    // "✓ Set and send auto-reminders to customers for payments.",
-    // "✓ Create auto-recurring invoices",
-    // "✓ Get Notified when customers open invoice emails.",
-    // "✓ Inventory Management 📦 available. Get notified on low stock level.",
-    // "✓ Print Invoice, Quotation, Delivery Challan, PO, E-Way Bill from any printer from anywhere.",
-    // "✓ Download 30+ Business reports in excel and pdf.",
-    // "✓ Customize Invoice template with logo and signature.",
-    // "✓ Manage Udhar Bahi Khata of customers & vendors",
-    // "✓ GST Compliant, GST Invoice, GST Reports, GST Integration",
-    // "✓ Generate reports for GST return filing with this GST accounting software",
-    // "✓ Generate E-way bill from this GST billing software.",
-    // "✓ Check Day Book for business daily sales, purchase, expenses record & payments.",
+    "Easily Create GST Compliant Invoices, Quotation, Purchase Order, Delivery Challan, E-Way Bill, Debit Note, Credit Note, and many more…",
+    "Instantly Share with customers and vendors on Email & WhatsApp.",
+    "Get paid directly to your bank account integrated with powerful #PaymentGateway & #UPI",
+    "Instabill Unique Features",
+    "✓ Set and send auto-reminders to customers for payments.",
+    "✓ Create auto-recurring invoices",
+    "✓ Get Notified when customers open invoice emails.",
+    "✓ Inventory Management 📦 available. Get notified on low stock level.",
+    "✓ Print Invoice, Quotation, Delivery Challan, PO, E-Way Bill from any printer from anywhere.",
+    "✓ Download 30+ Business reports in excel and pdf.",
+    "✓ Customize Invoice template with logo and signature.",
+    "✓ Manage Udhar Bahi Khata of customers & vendors",
+    "✓ GST Compliant, GST Invoice, GST Reports, GST Integration",
+    "✓ Generate reports for GST return filing with this GST accounting software",
+    "✓ Generate E-way bill from this GST billing software.",
+    "✓ Check Day Book for business daily sales, purchase, expenses record & payments.",
   ],
   image: instabill,
   backgroundColor: "#fff",
@@ -3505,8 +3505,10 @@ export const URBAN_CFO = {
 export const MSWIPE = {
   title: "Mswipe",
   subTitle: [
-    "Grab your Wisepad G2 device on a zero-monthly rental now.*",
-    "*terms and conditions apply",
+    <p>
+      {"Grab your Wisepad G2 device on a zero-monthly rental now.*"}
+      <p>{"*terms and conditions apply"}</p>
+    </p>,
   ],
   description: [
     "Accept all digital and contactless payments. POS solutions for all types of payment acceptance - cards, wallets, mobile payment apps and bank apps, contactless and QR payments. Empower and expand your business with Mswipe with your zero rental POS device.",
