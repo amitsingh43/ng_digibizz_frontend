@@ -1,14 +1,13 @@
+import createReducer from "util/createReducer";
 import { SET_USER_DETAILS, RESET_STORE } from "store/actionTypes";
+
 const initialState = { user: null };
-const userDetails = (state = initialState, action) => {
-	switch (action.type) {
-		case RESET_STORE:
-			state = initialState;
-			return state;
-		case SET_USER_DETAILS:
-			return { ...state, user: action.payload };
-		default:
-			return state;
-	}
-};
+const userDetails = createReducer(initialState, {
+  [RESET_STORE]: (state, payload) => {
+    return initialState;
+  },
+  [SET_USER_DETAILS]: (state, payload) => {
+    return { ...state, user: payload };
+  },
+});
 export default userDetails;

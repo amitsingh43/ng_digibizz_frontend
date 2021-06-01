@@ -1,15 +1,13 @@
 import { SET_RESULTS, RESET_RESULT } from "../actionTypes";
+import createReducer from "util/createReducer";
 
-const setResults = (state = {}, action) => {
-	switch (action.type) {
-		case RESET_RESULT:
-			state = {};
-			return state;
-		case SET_RESULTS:
-			state = action.payload;
-			return state;
-		default:
-			return state;
-	}
-};
+const initialState = {};
+const setResults = createReducer(initialState, {
+  [RESET_RESULT]: (state, payload) => {
+    return {};
+  },
+  [SET_RESULTS]: (state, payload) => {
+    return payload;
+  },
+});
 export default setResults;

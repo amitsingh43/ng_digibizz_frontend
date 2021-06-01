@@ -26,6 +26,7 @@ export const get_results =
       dispatch(set_recommendations_write(display_recommendations));
       dispatch(set_results(questionnaire_take));
       dispatch(set_user_details(lead));
+      //TODO: is it required?
       //dispatch(reset_questionnaire());
     } catch (error) {
       let message = "Something went wrong! Please try later.";
