@@ -3,13 +3,11 @@ import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 
 import {
-  homepage_increment,
-  homepage_decrement,
   header_digital_status,
   get_master_data,
-  post_user_details,
   add_error,
 } from "store/actions";
+import { post_user_details } from "screens/questionnaire/store/actions";
 import "styles/home.css";
 import ContestTAndC from "components/contestTAndC";
 import TAndC from "components/termsAndConditions";
@@ -24,9 +22,6 @@ import {
 import contest_banner from "assets/contest_banner.png";
 
 function Home({
-  homepageCounter,
-  homepage_increment,
-  homepage_decrement,
   header_digital_status,
   get_master_data,
   cities,
@@ -36,12 +31,11 @@ function Home({
   add_error,
   gender,
 }) {
-	
   useEffect(() => {
     window.scrollTo(0, 0);
     header_digital_status();
     get_master_data();
-  }, [get_master_data, header_digital_status]);
+  }, []);
 
   const sel = document.getElementById("city");
   const text = sel ? sel.options[sel.selectedIndex].text : null;
@@ -59,7 +53,6 @@ function Home({
   const [more, showmore] = useState(false);
   const [mrOrMs, setMrOrMs] = useState(null);
   const [otherCity, setOtherCity] = useState("");
-
 
   if (localStorage.getItem("report")) {
     history.push("/report");
@@ -146,7 +139,7 @@ function Home({
   if (more) {
     return <TAndC showmore={showmore} setCheck={setCheck} />;
   }
-  
+
   return (
     <div>
       <div className="home-container">
@@ -156,11 +149,11 @@ function Home({
         <div className="row row1">
           <div className="col-lg-3 col-xs-12 about">
             <h1>
-              {homepageCounter === 1 && TELL_ABOUT_YOU}
+              {TELL_ABOUT_YOU}
               {/* {homepageCounter === 2 && TELL_ABOUT_BUSINESS} */}
             </h1>
             <p>
-              {homepageCounter === 1 && TELL_ABOUT_YOU_DESC}
+              {TELL_ABOUT_YOU_DESC}
               {/* {homepageCounter === 2 && TELL_ABOUT_BUSINESS_DESC} */}
             </p>
             <img src={contest_banner} className="contest-banner" alt="banner" />
@@ -400,9 +393,8 @@ const mapStateToProps = (state) => {
     gender,
   };
 };
+
 export default connect(mapStateToProps, {
-  homepage_increment,
-  homepage_decrement,
   header_digital_status,
   get_master_data,
   post_user_details,

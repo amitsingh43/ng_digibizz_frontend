@@ -24,8 +24,9 @@ import Partner from "./screens/partner";
 import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
-import Catalog from "./screens/catalog";
-import { show_toast, clear_error } from "./store/actions";
+//import Catalog from "./screens/catalog";
+import { clear_error } from "./store/actions";
+import show_toast from "./util/showToast";
 
 import Tracking from "./util/tracking";
 

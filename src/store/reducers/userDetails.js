@@ -1,4 +1,4 @@
-import { SET_USER_DETAILS, RESET_STORE } from "../actionTypes";
+import { SET_USER_DETAILS, RESET_STORE } from "store/actionTypes";
 const initialState = { user: null };
 const userDetails = (state = initialState, action) => {
 	switch (action.type) {

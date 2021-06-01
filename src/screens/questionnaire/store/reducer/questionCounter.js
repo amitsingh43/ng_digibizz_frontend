@@ -1,12 +1,12 @@
 import {
 	INCREMENT,
 	DECREMENT,
-	RESET_QUESTIONNAIRE,
-	RESET_STORE,
-} from "../actionTypes/index";
+	RESET_QUESTION_COUNTER,
+} from "../actionTypes";
+
 const questionCounter = (state = 1, action) => {
 	switch (action.type) {
-		case RESET_STORE:
+		case RESET_QUESTION_COUNTER:
 			state = 1;
 			return state;
 		case INCREMENT:
@@ -19,9 +19,6 @@ const questionCounter = (state = 1, action) => {
 		case DECREMENT:
 			if (state === 1) return state;
 			return state - 1;
-		case RESET_QUESTIONNAIRE:
-			state = 1;
-			return state;
 		default:
 			return state;
 	}

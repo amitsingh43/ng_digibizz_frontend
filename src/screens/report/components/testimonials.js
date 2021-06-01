@@ -1,6 +1,7 @@
 import React from "react";
-import TestimonialsCarousal from "./testimonialsCarousal";
-import "../styles/testimonials.css";
+import TestimonialsCarousal from "components/testimonialsCarousal";
+import "styles/testimonials.css";
+
 function Testimonials() {
   return (
     <div className="testimonial-main">

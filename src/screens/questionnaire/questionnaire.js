@@ -1,21 +1,20 @@
 import { useEffect } from "react";
 
-import SectonList from "components/sectionList";
+import SectionList from "components/sectionList";
 import { Link, useHistory, useParams } from "react-router-dom";
 import { connect } from "react-redux";
 
 import "styles/questionnaire.css";
 import Loading from "components/loading";
 import {
-  increment,
-  header_digital_status,
   decrement,
   add_answer,
-  get_questions,
   none_of_the_above,
-  show_toast,
   createQuestionnare,
-} from "store/actions";
+  get_questions
+} from "./store/actions";
+import show_toast from "util/showToast";
+import { header_digital_status } from "store/actions";
 import contest_banner from "assets/contest_banner.png";
 
 const answered = [];
@@ -26,9 +25,7 @@ let prevTopicCounter = -1;
 
 function Questionnaire({
   topicCounter,
-  increment,
   header_digital_status,
-  userDetails,
   decrement,
   add_answer,
   answers,
@@ -189,11 +186,11 @@ function Questionnaire({
     return a;
   };
 
-  const _selectAll = (name, listOfAnswers) => {
-    listOfAnswers.forEach((ans) => {
-      updateAnswers(name, ans._id, "checkbox");
-    });
-  };
+  // const _selectAll = (name, listOfAnswers) => {
+  //   listOfAnswers.forEach((ans) => {
+  //     updateAnswers(name, ans._id, "checkbox");
+  //   });
+  // };
   const getQuestionsLength = () => {
     var length = 0;
     questionsList.map((sections) => {
@@ -269,7 +266,7 @@ function Questionnaire({
       <div className="main-content-questions">
         <div className="row">
           <div className="col-lg-4 col-xs-12">
-            <SectonList
+            <SectionList
               contest_banner={contest_banner}
               section={topicCounter}
             />
@@ -282,25 +279,6 @@ function Questionnaire({
                 ].map((question, index) => (
                   <div className="questions" key={index}>
                     <li key={question._id}>{question.name}</li>
-                    {/* {question.multiple && (
-										<div className="options">
-											<input
-												id={question._id}
-												value={topicCounter}
-												name={topicCounter}
-												type="checkbox"
-												onChange={() =>
-													_selectAll(
-														question.name,
-														question.questionnaire_section_answers
-													)
-												}
-											/>
-											<label name={question._id}>
-												Select All {topicCounter}
-											</label>
-										</div>
-									)} */}
                     {question.questionnaire_section_answers.map(
                       (option, index) => (
                         <div className="options" key={index}>
@@ -354,7 +332,6 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  increment,
   header_digital_status,
   decrement,
   add_answer,

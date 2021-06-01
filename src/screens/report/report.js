@@ -3,13 +3,16 @@ import { connect } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import "styles/report.css";
-import MainReport from "components/mainReport";
-import UnderstandReport from "components/understandReport";
-import RecommendationsReports from "components/recommendationsReports";
-import Testimonials from "components/testimonials";
+import {
+  MainReport,
+  UnderstandReport,
+  RecommendationsReports,
+  Testimonials,
+} from "./components";
 import Loading from "components/loading";
 
-import { header_digital_status, get_results } from "store/actions";
+import { header_digital_status } from "store/actions";
+import { get_results} from "./store/actions";
 
 function Report({
   header_digital_status,
@@ -20,6 +23,9 @@ function Report({
   lead_id,
   get_results,
 }) {
+  const [downloadText, setDownloadText] = useState("Download Report");
+  const history = useHistory();
+
   useEffect(() => {
     if (localStorage.getItem("report") && userDetails.user === null) {
       get_results(localStorage.getItem("lead_id"));
@@ -27,9 +33,6 @@ function Report({
     header_digital_status();
     window.scrollTo(0, 0);
   }, []);
-
-  const [downloadText, setDownloadText] = useState("Download Report");
-  const history = useHistory();
 
   if (
     localStorage.getItem("lead_id") &&
