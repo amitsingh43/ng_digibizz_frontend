@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 import {
   questionCounter,
   questionsList,
@@ -8,7 +10,6 @@ import headerState from "./headerState";
 import userDetails from "./userDetails";
 import masterData from "./masterData";
 import errorMessage from "./errorMessage";
-import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
   questionCounter: questionCounter,
