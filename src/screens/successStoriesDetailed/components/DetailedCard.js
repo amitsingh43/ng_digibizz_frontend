@@ -1,5 +1,5 @@
-import punctuation1 from "../assets/punctuation1.svg";
-import punctuation2 from "../assets/punctuation2.svg";
+import punctuation1 from "assets/punctuation1.svg";
+import punctuation2 from "assets/punctuation2.svg";
 
 const DetailedCard = ({ story }) => {
 	const videoID = "LVUEIz-AAi4";

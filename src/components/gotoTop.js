@@ -20,7 +20,7 @@ const GotoTop = () => {
       }}
       id="go-to-top"
     >
-      <img src={gotoTop} />
+      <img src={gotoTop} alt="" />
     </div>
   );
 };

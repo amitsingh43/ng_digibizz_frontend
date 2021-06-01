@@ -2,13 +2,14 @@ import React from "react";
 import { useEffect } from "react";
 import { connect } from "react-redux";
 
-import "../styles/successStories.css";
-import { header_success_stories } from "../store/actions";
-import SuccessCard from "../components/successStories/successCard";
-import { SUCCESSDATA } from "../store/strings";
+import "styles/successStories.css";
+import { header_success_stories } from "store/actions";
+import SuccessCard from "components/successStories/successCard";
+import { SUCCESSDATA } from "store/strings";
 import { Content } from "./components";
 
 function SuccessStories({ header_success_stories }) {
+	
 	useEffect(() => {
 		header_success_stories();
 		window.scrollTo(0, 0);

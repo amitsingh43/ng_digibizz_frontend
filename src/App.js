@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 import { connect } from "react-redux";
 
 import "regenerator-runtime/runtime.js";
@@ -47,7 +52,7 @@ function App({ errorMessage, clear_error, history }) {
       clear_error();
     }
   }, [clear_error, errorMessage]);
-  
+
   useEffect(() => {
     Tracking.init();
     Tracking.pageView();
@@ -116,21 +121,17 @@ function App({ errorMessage, clear_error, history }) {
             path={"/services/:category/:partner"}
             render={(props) => <Partner {...props} />}
           />
-          <Route
+          {/* <Route
             exact
             path={"/services/:category/:partner/catalog"}
             render={(props) => <Catalog {...props} />}
-          />
+          /> */}
           <Route
             exact
             path={"/services"}
             render={(props) => <DigitalServices {...props} />}
           />
-          {/* <Route
-						exact
-						path={"/services/:category/:partner/reg"}
-						render={(props) => <AvailNowRegistration {...props} />}
-					/> */}
+          <Redirect to="/" />
         </Switch>
         <Footer />
       </Router>

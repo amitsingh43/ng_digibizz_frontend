@@ -17,7 +17,7 @@ function UserGuideDetailed({ header_user_guide, match }) {
 
   const history = useHistory();
   const knowledge = KNOWLEDGE_CENTER.find(
-    (know) => know.id === match.params.id
+    (know) => know.id == match.params.id
   );
 
   if (knowledge === undefined) {

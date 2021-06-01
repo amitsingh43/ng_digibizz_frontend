@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const Form = ({ masterData, url, save_basic_details, title }) => {
   const { cities } = masterData;
+
   const [data, setData] = useState({
     full_name: null,
     business_name: null,
@@ -10,6 +11,7 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
     partner_availed: title,
   });
   const [cityName, setCityName] = useState(null);
+
   return (
     <div className={"partner-form"}>
       <div className={"form-body"}>
@@ -18,14 +20,14 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
         <input
           value={data.full_name}
           onChange={(e) =>
-            setData((data) => ({ data, full_name: e.target.value }))
+            setData((data) => ({ ...data, full_name: e.target.value }))
           }
         />
         <h5>Business Name</h5>
         <input
           value={data.business_name}
           onChange={(e) =>
-            setData((data) => ({ data, business_name: e.target.value }))
+            setData((data) => ({ ...data, business_name: e.target.value }))
           }
         />
         <h5>Mobile Number</h5>
@@ -33,20 +35,19 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
           value={data.mobile}
           maxLength={10}
           onChange={(e) =>
-            setData((data) => ({ data, mobile: e.target.value }))
+            setData((data) => ({ ...data, mobile: e.target.value }))
           }
         />
         <h5>City</h5>
         <select
           onChange={(e) => {
-            setData((data) => ({ data, cities_master_id: e.target.value }));
+            setData((data) => ({ ...data, cities_master_id: e.target.value }));
             setCityName(
               cities.find((city) => (city._id = e.target.value)).name
             );
           }}
         >
           <option selected disabled>
-            {" "}
             Select City
           </option>
           {cities &&

@@ -406,9 +406,10 @@ export const save_basic_details = (
 	cityName,
 	ENDPOINT = "/api/save_basic_details"
 ) => async (dispatch) => {
+	console.log(url);
 	try {
 		const { lead } = await _post(ENDPOINT, body);
-		dispatch(set_user_details(lead));
+		dispatch(set_user_details(body));
 		if(body.partner_availed === "NeoGrowth"){
 			Tracking.trackEvent("CLICK", "NG LOAN LEADS", "APPLY NOW");
 			show_toast("Thank you, someone will get in touch with you", "SUCCESS");
