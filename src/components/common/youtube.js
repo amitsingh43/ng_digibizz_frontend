@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/common/youtube.css";
 
 const YouTube = ({ videoId, toggleYoutube }) => {

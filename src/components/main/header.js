@@ -1,11 +1,12 @@
-import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+
 import logo from "../../assets/logo.png";
 import header_menu from "../../assets/header_menu.svg";
 import header_close from "../../assets/header_close.svg";
 import "../../styles/header.css";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+
 import {
 	header_reset,
 	homepage_decrement,

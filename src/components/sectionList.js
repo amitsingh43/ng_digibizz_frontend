@@ -1,7 +1,7 @@
-import React from "react";
+import { connect } from "react-redux";
+
 import "../styles/sectionList.css";
 import { increment } from "../store/actions";
-import { connect } from "react-redux";
 
 const VerticalList = (props) => {
 	const { section, questionsList, increment } = props;

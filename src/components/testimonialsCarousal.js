@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+
 import "../styles/carousel.css";
 import play_icon from "../assets/play_icon.svg";
 import punctuation1 from "../assets/punctuation1.svg";
 import punctuation2 from "../assets/punctuation2.svg";
 
 import { SUCCESSDATA } from "../store/strings";
-import { Link, useHistory } from "react-router-dom";
 function TestimonialsCarousal() {
 	const [currentDisplayed, setCurrentDisplay] = useState(0);
 	const history = useHistory();

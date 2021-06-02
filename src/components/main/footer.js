@@ -1,4 +1,3 @@
-import React from "react";
 import "../../styles/footer.css";
 import fb from "../../assets/fb.svg";
 import insta from "../../assets/insta.svg";

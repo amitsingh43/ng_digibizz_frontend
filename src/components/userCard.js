@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import "../styles/userCard.css";
 function UserCard(props) {
 	const { heading, desc, image, id } = props;

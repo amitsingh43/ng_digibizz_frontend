@@ -1,6 +1,6 @@
-import React from "react";
 import "../styles/gotoTop.css";
 import gotoTop from "../assets/gotoTop.png";
+
 const GotoTop = () => {
   window.onscroll = function () {
     if (
