@@ -19,7 +19,7 @@ import Twitter from "../assets/partner_page/twitter.png";
 import Youtube from "../assets/partner_page/youtube.png";
 import YouTube from "../components/common/youtube";
 
-const Form = ({ masterData, url, save_basic_details, title }) => {
+const Form = ({ masterData, url, save_basic_details, title, availNowResponseText }) => {
 	const { cities } = masterData;
 	const [data, setData] = useState({
 		full_name: null,
@@ -75,7 +75,7 @@ const Form = ({ masterData, url, save_basic_details, title }) => {
 					<a>
 						<div
 							className={"avail-now"}
-							onClick={() => save_basic_details(data, url, cityName)}
+							onClick={() => save_basic_details(data, url, cityName,availNowResponseText)}
 						>
 							Avail Now
 						</div>
@@ -332,6 +332,7 @@ const Partner = ({
 		testimonials,
 		aboutUs,
 		carousel,
+		availNowResponseText
 	} = data.partner;
 	var { heading } = data;
 
@@ -440,6 +441,7 @@ const Partner = ({
 						url={url}
 						save_basic_details={save_basic_details}
 						title={title}
+						availNowResponseText={availNowResponseText}
 					/>
 				</div>
 			)}
