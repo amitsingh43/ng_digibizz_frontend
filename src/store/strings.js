@@ -3505,10 +3505,10 @@ export const URBAN_CFO = {
 export const MSWIPE = {
   title: "Mswipe",
   subTitle: [
-    <p>
+    <>
       {"Grab your Wisepad G2 device on a zero-monthly rental now.*"}
-      <p>{"*terms and conditions apply"}</p>
-    </p>,
+      <div>{"*terms and conditions apply"}</div>
+    </>,
   ],
   description: [
     "Accept all digital and contactless payments. POS solutions for all types of payment acceptance - cards, wallets, mobile payment apps and bank apps, contactless and QR payments. Empower and expand your business with Mswipe with your zero rental POS device.",
