@@ -276,9 +276,10 @@ function Home({
 								className="col-xs-12"
 								value={mobile}
 								onChange={(e) => {
-									if (e.target.value.length <= 10) {
-										setMobile(e.target.value);
-										localStorage.setItem("mobile", e.target.value);
+									const value=e.target.value.replace(/\D/g, "");;
+									if(value.length <= 10) {
+										setMobile(value);
+										localStorage.setItem("mobile", value);
 									}
 								}}
 							/>
