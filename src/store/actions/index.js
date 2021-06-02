@@ -501,7 +501,7 @@ export const downloadReport = (downloadText, setDownloadText) => {
   const method = "GET";
   setDownloadText("Downloading...");
   const url =
-    "https://uat.advancesuite.in:3061/api/download_report?lead_id=" +
+    "https://app.advancesuite.in:3061/api/download_report?lead_id=" +
     localStorage.getItem("lead_id");
   axios
     .request({
