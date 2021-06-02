@@ -3527,6 +3527,7 @@ export const MSWIPE = {
       source: mswipe,
     },
   ],
+  availNowResponseText:"Thank you for your interest. An executive from Mswipe will reach out to you shortly."
 };
 
 export const BLUE_OCKTOPUS = {

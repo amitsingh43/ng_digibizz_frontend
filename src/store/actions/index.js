@@ -406,6 +406,7 @@ export const save_basic_details = (
 	body,
 	url,
 	cityName,
+	availNowResponseText,
 	ENDPOINT = "/api/save_basic_details"
 ) => async (dispatch) => {
 	try {
@@ -417,7 +418,7 @@ export const save_basic_details = (
 			return;
 		}else{
 			Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
-			show_toast("Thank you", "SUCCESS");
+			show_toast(availNowResponseText || "Thank you", "SUCCESS");
 		}
 		window.open(url, "_blank");
 	} catch (error) {
