@@ -409,13 +409,7 @@ export const update_lead =
 	};
 
 export const save_basic_details =
-	(
-		body,
-		url,
-		cityName,
-		availNowResponseText,
-		ENDPOINT = "/api/save_basic_details"
-	) =>
+	(body, url, cityName, ENDPOINT = "/api/save_basic_details") =>
 	async (dispatch) => {
 		try {
 			const { lead } = await _post(ENDPOINT, body);
@@ -426,8 +420,7 @@ export const save_basic_details =
 				return;
 			} else {
 				Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
-				show_toast(availNowResponseText || "Thank you", "SUCCESS");
-				if (body.partner_availed === "Mswipe") return;
+				show_toast("Thank you", "SUCCESS");
 			}
 			window.open(url, "_blank");
 		} catch (error) {
