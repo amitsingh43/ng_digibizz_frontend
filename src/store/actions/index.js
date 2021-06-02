@@ -427,6 +427,7 @@ export const save_basic_details =
       } else {
         Tracking.trackEvent("CLICK", "PARTNER LEADS", body.partner_availed);
         show_toast(availNowResponseText || "Thank you", "SUCCESS");
+        if (body.partner_availed==="Mswipe") return;
       }
       window.open(url, "_blank");
     } catch (error) {
