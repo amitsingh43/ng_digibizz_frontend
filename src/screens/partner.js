@@ -51,7 +51,13 @@ const Form = ({ masterData, url, save_basic_details, title, availNowResponseText
 				<input
 					value={data.mobile}
 					maxLength={10}
-					onChange={(e) => setData((data) => ({ ...data, mobile: e.target.value }))}
+					onChange={(e) => {
+						const value=e.target.value.replace(/\D/g, "");;
+						if(value.length <= 10){
+						setData(data=> ({ ...data, mobile: value}));
+						}
+					}
+					}
 				/>
 				<h5>City</h5>
 				<select

@@ -112,25 +112,26 @@ const PartnerCard = (props) => {
 						cursor: "pointer",
 						display: description.length === 1 ? "none" : "block",
 					}}
-					onClick={() => {
-						let updatedTitle = title.split(".").join(" ");
-						history.push({
-							pathname: `/services/${heading}/${updatedTitle}`,
-							state: {
-								data: {
-									title,
-									description,
-									image,
-									subTitle,
-									tag,
-									url,
-									backgroundColor,
-									heading,
-								},
-							},
-						});
-						// toggleViewMore(!viewMore);
-					}}
+					onClick={_availNow}
+					// 	() => {
+					// 	// let updatedTitle = title.split(".").join(" ");
+					// 	// history.push({
+					// 	// 	pathname: `/services/${heading}/${updatedTitle}/`,
+					// 	// 	state: {
+					// 	// 		data: {
+					// 	// 			title,
+					// 	// 			description,
+					// 	// 			image,
+					// 	// 			subTitle,
+					// 	// 			tag,
+					// 	// 			url,
+					// 	// 			backgroundColor,
+					// 	// 			heading,
+					// 	// 		},
+					// 	// 	},
+					// 	// });
+					// 	// toggleViewMore(!viewMore);
+					// }}
 				>
 					{viewMore ? "View Less-" : "View more+"}
 				</span>
