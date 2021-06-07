@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import "styles/report.css";
@@ -12,27 +12,24 @@ import {
 import Loading from "components/loading";
 
 import { header_digital_status } from "store/actions";
-import { get_results} from "./store/actions";
+import { get_results } from "./store/actions";
 
-function Report({
-  header_digital_status,
-  userDetails,
-  display_recommendations,
-  percentage,
-  section_results,
-  lead_id,
-  get_results,
-}) {
+export default function Report() {
   const [downloadText, setDownloadText] = useState("Download Report");
   const history = useHistory();
+  const setResults = useSelector((state) => state.setResults);
+  const userDetails=useSelector(state=>state.userDetails);
+  const { section_results, percentage, display_recommendations, lead_id } =
+    setResults;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (localStorage.getItem("report") && userDetails.user === null) {
-      get_results(localStorage.getItem("lead_id"));
+      dispatch(get_results(localStorage.getItem("lead_id")));
     }
-    header_digital_status();
+    dispatch(header_digital_status());
     window.scrollTo(0, 0);
-  }, []);
+  }, [dispatch, userDetails.user]);
 
   if (
     localStorage.getItem("lead_id") &&
@@ -90,21 +87,3 @@ function Report({
     );
   }
 }
-
-const mapStateToProps = (state) => {
-  const { setResults } = state;
-  const { section_results, percentage, display_recommendations, lead_id } =
-    setResults;
-  return {
-    userDetails: state.userDetails,
-    display_recommendations,
-    section_results,
-    lead_id,
-    percentage,
-  };
-};
-
-export default connect(mapStateToProps, {
-  header_digital_status,
-  get_results,
-})(Report);

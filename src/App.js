@@ -6,7 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import { connect } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 
 import "regenerator-runtime/runtime.js";
 import "react-toastify/dist/ReactToastify.css";
@@ -31,7 +31,9 @@ import show_toast from "./util/showToast";
 import Tracking from "./util/tracking";
 
 // import ExitPopUp from "./components/main/exitPopup";
-function App({ errorMessage, clear_error, history }) {
+export default function App({ history }) {
+  const dispatch = useDispatch();
+  const errorMessage = useSelector((state) => state.errorMessage);
   // const [showPopUp, togglePopUp] = useState(false);
   //window.onbeforeunload = (e) => {
   // togglePopUp(!showPopUp);
@@ -50,9 +52,9 @@ function App({ errorMessage, clear_error, history }) {
   useEffect(() => {
     if (errorMessage !== "") {
       show_toast(errorMessage);
-      clear_error();
+      dispatch(clear_error());
     }
-  }, [clear_error, errorMessage]);
+  }, [dispatch, errorMessage]);
 
   useEffect(() => {
     Tracking.init();
@@ -139,12 +141,3 @@ function App({ errorMessage, clear_error, history }) {
     </div>
   );
 }
-
-const mapStateToProps = (state) => {
-  const { errorMessage } = state;
-  return {
-    errorMessage,
-  };
-};
-
-export default connect(mapStateToProps, { clear_error })(App);

@@ -1,12 +1,13 @@
-import { Link, useHistory } from "react-router-dom";
-import { connect } from "react-redux";
+import { Link, useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import "styles/successCard.css";
-import punctuation1 from "assets/punctuation1.svg";
-import punctuation2 from "assets/punctuation2.svg";
-import youtube from "assets/youtube.svg";
+import 'styles/successCard.css';
+import punctuation1 from 'assets/punctuation1.svg';
+import punctuation2 from 'assets/punctuation2.svg';
+import youtube from 'assets/youtube.svg';
 
-function SuccessCard({ headerState, name, heading, image, content, id, type }) {
+export default function SuccessCard({ name, heading, image, content, id, type }) {
+	const headerState = useSelector((state) => state.headerState);
 	const history = useHistory();
 	return (
 		<div className="success-card row">
@@ -20,12 +21,15 @@ function SuccessCard({ headerState, name, heading, image, content, id, type }) {
 							// height: 300,
 						}}
 					>
-						{type === "video" && (
+						{type === 'video' && (
 							<img
 								className="play-button"
 								src={youtube}
 								alt="Play button"
-								onClick={() => {	console.log(id);history.push(`successStories/${id}`)}}
+								onClick={() => {
+									console.log(id);
+									history.push(`successStories/${id}`);
+								}}
 							/>
 						)}
 					</div>
@@ -41,8 +45,8 @@ function SuccessCard({ headerState, name, heading, image, content, id, type }) {
 						</p>
 						<Link className="a" to={`/successStories/${id}`}>
 							<div className="view-more">
-								{headerState !== 3 && "View more"}
-								{headerState === 3 && "Read full story"}
+								{headerState !== 3 && 'View more'}
+								{headerState === 3 && 'Read full story'}
 							</div>
 						</Link>
 					</span>
@@ -51,11 +55,3 @@ function SuccessCard({ headerState, name, heading, image, content, id, type }) {
 		</div>
 	);
 }
-
-const mapStateToProps = (state) => {
-	return {
-		headerState: state.headerState,
-	};
-};
-
-export default connect(mapStateToProps, null)(SuccessCard);

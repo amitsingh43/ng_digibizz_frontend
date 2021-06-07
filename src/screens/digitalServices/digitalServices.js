@@ -1,12 +1,12 @@
-import {  useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { connect } from "react-redux";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
-import "styles/digitalServices.css";
-import { header_digital_services, update_lead } from "store/actions";
-import { services } from "store/services_mapping";
-import { PARTNERS } from "store/strings";
-import { Services, TopContent} from "./components";
+import 'styles/digitalServices.css';
+import { header_digital_services, update_lead } from 'store/actions';
+import { services } from 'store/services_mapping';
+import { PARTNERS } from 'store/strings';
+import { Services, TopContent } from './components';
 
 // TODO: handle counter
 let counter = 0;
@@ -32,7 +32,9 @@ const ServicesCategory = () => {
 	);
 };
 
-function DigitalServices({ header_digital_services, user, update_lead }) {
+export default function DigitalServices() {
+	const dispatch = useDispatch();
+	const { user } = useSelector((state) => state.userDetails);
 	const location = useLocation();
 
 	window.onpopstate = function () {
@@ -40,24 +42,24 @@ function DigitalServices({ header_digital_services, user, update_lead }) {
 			window.history.go(-1);
 			counter = 0;
 		}
-		if (window.location.href.includes("#")) {
+		if (window.location.href.includes('#')) {
 			counter++;
 		}
 	};
 
+	const updateLead = function () {
+		dispatch(update_lead(...arguments));
+	};
+
 	useEffect(() => {
 		// window.scrollTo(0, 0);
-		header_digital_services();
-		var PATH = "";
-		for (
-			var i = window.location.href.lastIndexOf("=");
-			i < window.location.href.length - 1;
-			i++
-		) {
+		dispatch(header_digital_services());
+		var PATH = '';
+		for (var i = window.location.href.lastIndexOf('='); i < window.location.href.length - 1; i++) {
 			if (i === -1) break;
 			PATH += window.location.href[i + 1];
 		}
-		if (location.state || PATH !== "") {
+		if (location.state || PATH !== '') {
 			PATH = location.state ? location.state.id : PATH;
 			window.location.href = `#${PATH}`;
 		}
@@ -76,7 +78,7 @@ function DigitalServices({ header_digital_services, user, update_lead }) {
 							user={user}
 							heading={partner.category}
 							cardData={partner.data}
-							update_lead={update_lead}
+							update_lead={updateLead}
 						/>
 					</div>
 				))}
@@ -84,15 +86,3 @@ function DigitalServices({ header_digital_services, user, update_lead }) {
 		</div>
 	);
 }
-
-const mapStateToProps = (state) => {
-	const { userDetails } = state;
-	return {
-		user: userDetails.user,
-	};
-};
-
-export default connect(mapStateToProps, {
-	header_digital_services,
-	update_lead,
-})(DigitalServices);

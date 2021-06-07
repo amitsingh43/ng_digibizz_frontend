@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 import "styles/successStoriesDetailed.css";
@@ -9,11 +9,12 @@ import { header_user_guide } from "store/actions";
 import { KNOWLEDGE_CENTER } from "store/strings";
 import { TopContent, Image, MainContent } from "./components";
 
-function UserGuideDetailed({ header_user_guide, match }) {
+export default function UserGuideDetailed({ match }) {
+  const dispatch =useDispatch();
   useEffect(() => {
-    header_user_guide();
+    dispatch(header_user_guide());
     window.scrollTo(0, 0);
-  }, []);
+  }, [dispatch]);
 
   const history = useHistory();
   const knowledge = KNOWLEDGE_CENTER.find(
@@ -46,5 +47,3 @@ function UserGuideDetailed({ header_user_guide, match }) {
     </div>
   );
 }
-
-export default connect(null, { header_user_guide })(UserGuideDetailed);

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import "styles/mainReport.css";
 import email_icon from "assets/email.svg";
@@ -16,20 +16,17 @@ import {
 } from "screens/questionnaire/store/actions";
 import { reset_results, reset_recommendations } from "../store/actions";
 
-function MainReport({
+export default function MainReport({
   userDetails,
   percentage,
   downloadText,
   setDownloadText,
-  emailReport,
-  reset_answers,
-  reset_questions,
-  reset_user,
-  reset_results,
-  reset_recommendations,
 }) {
+  const dispatch = useDispatch();
   const { full_name, email, business_name, gender } = userDetails.user;
   const [reportImg, setReportImg] = useState(report1);
+  const history = useHistory();
+
   useEffect(() => {
     var intPercent = parseInt(percentage);
     if (intPercent >= 0 && intPercent <= 25) {
@@ -42,7 +39,7 @@ function MainReport({
       setReportImg(report4);
     }
   }, [percentage]);
-  const history = useHistory();
+
   return (
     <div className="main-report">
       <div className="namaste">Hello!</div>
@@ -66,7 +63,7 @@ function MainReport({
             <img src={download} alt="download" />
           </span>
         </span>
-        <span className="btns" onClick={() => emailReport()}>
+        <span className="btns" onClick={() => dispatch(emailReport())}>
           Email Report
           <span>
             <img src={email_icon} alt="email" />
@@ -84,7 +81,7 @@ function MainReport({
           </div>
         </div>
         <div className="outer-btn">
-          <div className="btns-small" onClick={() => emailReport()}>
+          <div className="btns-small" onClick={() => dispatch(emailReport())}>
             Email Report
             <span>
               <img src={email_icon} alt="download" />
@@ -99,11 +96,11 @@ function MainReport({
           onClick={() => {
             history.push("/");
             localStorage.clear();
-            reset_answers();
-            reset_questions();
-            reset_user();
-            reset_results();
-            reset_recommendations();
+            dispatch(reset_answers());
+            dispatch(reset_questions());
+            dispatch(reset_user());
+            dispatch(reset_results());
+            dispatch(reset_recommendations());
           }}
         >
           Exit
@@ -117,12 +114,3 @@ function MainReport({
     </div>
   );
 }
-
-export default connect(null, {
-  emailReport,
-  reset_answers,
-  reset_questions,
-  reset_user,
-  reset_results,
-  reset_recommendations,
-})(MainReport);

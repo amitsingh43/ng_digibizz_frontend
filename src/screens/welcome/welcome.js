@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "styles/welcome.css";
 import { header_reset, homepage_decrement } from "store/actions";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   ExploreOurServices,
   UserGuide,
@@ -11,27 +11,33 @@ import {
   MobileView,
 } from "./components";
 
-function Welcome({ header_reset, homepage_decrement, userDetails }) {
+export default function Welcome() {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    header_reset();
+    dispatch(header_reset());
     // const options = {
     // 	autoConfig: true, // set pixel's autoConfig
     // 	debug: false, // enable logs
     // };
     // ReactPixel.init("281787519125313", options);
-  }, [header_reset]);
+  }, [dispatch]);
+
+  const homepageDecrement = function () {
+    dispatch(homepage_decrement);
+  };
   return (
     <div style={{ fontFamily: "Rubik" }}>
       <div className="welcome">
-        <TopContent homepage_decrement={homepage_decrement} />
+        <TopContent homepage_decrement={homepageDecrement} />
       </div>
       <div className="explore-our-services">
         <ExploreOurServices />
         <MobileView />
       </div>
       <div className="question">
-        <Question homepage_decrement={homepage_decrement} />
+        <Question homepage_decrement={homepageDecrement} />
       </div>
       <div className="user-guide">
         {/* <UserGuide /> */}
@@ -43,14 +49,3 @@ function Welcome({ header_reset, homepage_decrement, userDetails }) {
     </div>
   );
 }
-
-const mapStateToProps = (state) => {
-  return {
-    userDetails: state.userDetails,
-  };
-};
-
-export default connect(mapStateToProps, {
-  header_reset,
-  homepage_decrement,
-})(Welcome);

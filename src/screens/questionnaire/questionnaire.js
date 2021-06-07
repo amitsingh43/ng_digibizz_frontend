@@ -1,21 +1,15 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import SectionList from "components/sectionList";
-import { Link, useHistory, useParams } from "react-router-dom";
-import { connect } from "react-redux";
+import SectionList from 'components/sectionList';
+import { Link, useHistory, useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
-import "styles/questionnaire.css";
-import Loading from "components/loading";
-import {
-  decrement,
-  add_answer,
-  none_of_the_above,
-  createQuestionnare,
-  get_questions
-} from "./store/actions";
-import show_toast from "util/showToast";
-import { header_digital_status } from "store/actions";
-import contest_banner from "assets/contest_banner.png";
+import 'styles/questionnaire.css';
+import Loading from 'components/loading';
+import { decrement, add_answer, none_of_the_above, createQuestionnare, get_questions } from './store/actions';
+import show_toast from 'util/showToast';
+import { header_digital_status } from 'store/actions';
+import contest_banner from 'assets/contest_banner.png';
 
 const answered = [];
 const distinct = [];
@@ -23,319 +17,274 @@ let count = 0;
 const checked = {};
 let prevTopicCounter = -1;
 
-function Questionnaire({
-  topicCounter,
-  header_digital_status,
-  decrement,
-  add_answer,
-  answers,
-  questionsList,
-  get_questions,
-  none_of_the_above,
-  createQuestionnare,
-}) {
-  const history = useHistory();
-  const { section } = useParams();
+export default function Questionnaire() {
+	const topicCounter = useSelector((state) => state.topicCounter);
+	const answers = useSelector((state) => state.answers);
+	const questionsList = useSelector((state) => state.questionsList);
+	const dispatch = useDispatch();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    header_digital_status();
-    if (questionsList.length === 0 && localStorage.getItem("lead_id")) {
-      get_questions(localStorage.getItem("lead_id"));
-    }
-  }, []);
+	const history = useHistory();
+	const { section } = useParams();
 
-  useEffect(() => {
-    let urlName = section;
-    if (questionsList[0] && questionsList[0].name) {
-      let data = questionsList.find((val) => {
-        let secName = val.name;
-        secName = secName.split(" ")[1].toLowerCase();
-        return urlName === secName;
-      });
-      if (!data) {
-        history.replace(`/questionnaire/discovery`);
-      }
-    }
-  }, [section, questionsList]);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+		dispatch(header_digital_status());
+		if (questionsList.length === 0 && localStorage.getItem('lead_id')) {
+			dispatch(get_questions(localStorage.getItem('lead_id')));
+		}
+	}, []);
 
-  useEffect(() => {
-    if (
-      prevTopicCounter !== topicCounter &&
-      questionsList[topicCounter - 1] &&
-      questionsList[topicCounter - 1].name
-    ) {
-      prevTopicCounter = topicCounter;
-      let sectionName = questionsList[topicCounter - 1].name
-        .split(" ")[1]
-        .toLowerCase();
-      history.replace(`/questionnaire/${sectionName}`);
-    }
-  }, [topicCounter]);
+	useEffect(() => {
+		let urlName = section;
+		if (questionsList[0] && questionsList[0].name) {
+			let data = questionsList.find((val) => {
+				let secName = val.name;
+				secName = secName.split(' ')[1].toLowerCase();
+				return urlName === secName;
+			});
+			if (!data) {
+				history.replace(`/questionnaire/discovery`);
+			}
+		}
+	}, [section, questionsList]);
 
-  if (localStorage.getItem("lead_id") === null) {
-    history.push("/knowStatus");
-    return <div>Redirecting</div>;
-  }
-  if (localStorage.getItem("report") === "true") {
-    history.push("/report");
-    return <div>Redirecting</div>;
-  }
+	useEffect(() => {
+		if (
+			prevTopicCounter !== topicCounter &&
+			questionsList[topicCounter - 1] &&
+			questionsList[topicCounter - 1].name
+		) {
+			prevTopicCounter = topicCounter;
+			let sectionName = questionsList[topicCounter - 1].name.split(' ')[1].toLowerCase();
+			history.replace(`/questionnaire/${sectionName}`);
+		}
+	}, [topicCounter]);
 
-  const next = () => {
-    var ss = [];
-    answered.forEach((val) => {
-      if (val.section === topicCounter - 1) {
-        ss.push(val);
-      }
-    });
-    if (
-      ss.length <
-      questionsList[topicCounter - 1]["questionnaire_section_questions"].length
-    ) {
-      show_toast("Please answer all the questions");
-      return;
-    }
-    createQuestionnare(
-      answered.filter((val) => val.section === topicCounter - 1),
-      questionsList[topicCounter - 1]["name"],
-      questionsList[topicCounter - 1]["name"] ===
-        questionsList[questionsList.length - 1]["name"],
-      history
-    );
-    window.scrollTo(0, 0);
-  };
+	if (localStorage.getItem('lead_id') === null) {
+		history.push('/knowStatus');
+		return <div>Redirecting</div>;
+	}
+	if (localStorage.getItem('report') === 'true') {
+		history.push('/report');
+		return <div>Redirecting</div>;
+	}
 
-  const _back = () => {
-    window.scrollTo(0, 0);
-    decrement();
-  };
+	const next = () => {
+		var ss = [];
+		answered.forEach((val) => {
+			if (val.section === topicCounter - 1) {
+				ss.push(val);
+			}
+		});
+		if (ss.length < questionsList[topicCounter - 1]?.questionnaire_section_questions.length) {
+			show_toast('Please answer all the questions');
+			return;
+		}
+		dispatch(
+			createQuestionnare(
+				answered.filter((val) => val.section === topicCounter - 1),
+				questionsList[topicCounter - 1]['name'],
+				questionsList[topicCounter - 1]['name'] === questionsList[questionsList.length - 1]['name'],
+				history
+			)
+		);
+		window.scrollTo(0, 0);
+	};
 
-  const isChecked = (id) => {
-    let length = answers.filter((val) => val.id === id).length;
-    if (length) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+	const _back = () => {
+		window.scrollTo(0, 0);
+		dispatch(decrement());
+	};
 
-  const updateAnswers = (question, id, type) => {
-    add_answer({ question, id, type });
-    var x = answered.find((val) => val.question === question && val.id === id);
-    if (x !== undefined) {
-      answered.splice(answered.indexOf(x), 1);
-      distinct.splice(distinct.indexOf(x), 1);
-    } else {
-      answered.push({
-        question: question,
-        id: id,
-        section: topicCounter - 1,
-        type,
-      });
-    }
-  };
+	const isChecked = (id) => {
+		let length = answers.filter((val) => val.id === id).length;
+		if (length) {
+			return true;
+		} else {
+			return false;
+		}
+	};
 
-  const DESELECT_ALL = (question, id, type, optionName) => {
-    none_of_the_above({ question, id, type });
-    var x = answered.find((val) => val.question === question && val.id === id);
-    if (x !== undefined) {
-      answered.splice(answered.indexOf(x), 1);
-    } else {
-      answered.push({
-        question: question,
-        id: id,
-        section: topicCounter - 1,
-        optionName,
-        type: "checkbox",
-      });
-    }
-  };
+	const updateAnswers = (question, id, type) => {
+		dispatch(add_answer({ question, id, type }));
+		var x = answered.find((val) => val.question === question && val.id === id);
+		if (x !== undefined) {
+			answered.splice(answered.indexOf(x), 1);
+			distinct.splice(distinct.indexOf(x), 1);
+		} else {
+			answered.push({
+				question: question,
+				id: id,
+				section: topicCounter - 1,
+				type,
+			});
+		}
+	};
 
-  const inputProps = (question, option) => {
-    const a = {
-      type: question.multiple ? "checkbox" : "radio",
-      id: option.id,
-      // name: option.id,
-      name: question._id,
-      value: option._id,
-      onChange: (e) => {
-        if (
-          option.name.toLowerCase() === "none of the above" ||
-          option.name.toLowerCase() === "i don't deliver currently"
-        ) {
-          DESELECT_ALL(
-            question.name,
-            e.target.value,
-            "none",
-            option.name.toLowerCase()
-          );
-        } else {
-          updateAnswers(
-            question.name,
-            e.target.value,
-            question.multiple ? "checkbox" : "radio"
-          );
-        }
-      },
-    };
-    if (isChecked(option._id) === true) {
-      a["checked"] = "true";
-    }
+	const DESELECT_ALL = (question, id, type, optionName) => {
+		dispatch(none_of_the_above({ question, id, type }));
+		var x = answered.find((val) => val.question === question && val.id === id);
+		if (x !== undefined) {
+			answered.splice(answered.indexOf(x), 1);
+		} else {
+			answered.push({
+				question: question,
+				id: id,
+				section: topicCounter - 1,
+				optionName,
+				type: 'checkbox',
+			});
+		}
+	};
 
-    return a;
-  };
+	const inputProps = (question, option) => {
+		const a = {
+			type: question.multiple ? 'checkbox' : 'radio',
+			id: option.id,
+			// name: option.id,
+			name: question._id,
+			value: option._id,
+			onChange: (e) => {
+				if (
+					option.name.toLowerCase() === 'none of the above' ||
+					option.name.toLowerCase() === "i don't deliver currently"
+				) {
+					DESELECT_ALL(question.name, e.target.value, 'none', option.name.toLowerCase());
+				} else {
+					updateAnswers(question.name, e.target.value, question.multiple ? 'checkbox' : 'radio');
+				}
+			},
+		};
+		if (isChecked(option._id) === true) {
+			a['checked'] = 'true';
+		}
 
-  // const _selectAll = (name, listOfAnswers) => {
-  //   listOfAnswers.forEach((ans) => {
-  //     updateAnswers(name, ans._id, "checkbox");
-  //   });
-  // };
-  const getQuestionsLength = () => {
-    var length = 0;
-    questionsList.map((sections) => {
-      length += sections["questionnaire_section_questions"].length;
-    });
-    return length;
-  };
+		return a;
+	};
 
-  const getAnsweredQuestionsLength = () => {
-    answered.map((answer) => {
-      if (!distinct.includes(answer.question)) {
-        distinct.push(answer.question);
-      }
-    });
-    return distinct.length;
-  };
+	// const _selectAll = (name, listOfAnswers) => {
+	//   listOfAnswers.forEach((ans) => {
+	//     updateAnswers(name, ans._id, "checkbox");
+	//   });
+	// };
+	const getQuestionsLength = () => {
+		var length = 0;
+		questionsList.map((sections) => {
+			length += sections['questionnaire_section_questions'].length;
+		});
+		return length;
+	};
 
-  const autoPopulate = () => {
-    var xx = answered.filter((answer) => answer.section === topicCounter - 1);
-    xx.forEach((val) => {
-      if (val.type === "checkbox") {
-        if (val.optionName === "none of the above") {
-          count++;
-        }
-      }
-      if (val.type === "radio") {
-        count++;
-      }
-    });
-    if (
-      count !== 0 &&
-      count === xx.length &&
-      count ===
-        questionsList[topicCounter - 1]["questionnaire_section_questions"]
-          .length &&
-      topicCounter - 1 !== questionsList.length &&
-      !checked[topicCounter - 1]
-    ) {
-      createQuestionnare(
-        answered.filter((val) => val.section === topicCounter - 1),
-        questionsList[topicCounter - 1]["name"],
-        questionsList[topicCounter - 1]["name"] ===
-          questionsList[questionsList.length - 1]["name"],
-        history
-      );
-      checked[topicCounter - 1] = true;
-      count = 0;
-    } else {
-      count = 0;
-    }
-  };
+	const getAnsweredQuestionsLength = () => {
+		answered.map((answer) => {
+			if (!distinct.includes(answer.question)) {
+				distinct.push(answer.question);
+			}
+		});
+		return distinct.length;
+	};
 
-  if (questionsList.length === 0) {
-    return <Loading />;
-  }
+	const autoPopulate = () => {
+		var xx = answered.filter((answer) => answer.section === topicCounter - 1);
+		xx.forEach((val) => {
+			if (val.type === 'checkbox') {
+				if (val.optionName === 'none of the above') {
+					count++;
+				}
+			}
+			if (val.type === 'radio') {
+				count++;
+			}
+		});
+		if (
+			count !== 0 &&
+			count === xx.length &&
+			count === questionsList[topicCounter - 1]?.questionnaire_section_questions.length &&
+			topicCounter - 1 !== questionsList.length &&
+			!checked[topicCounter - 1]
+		) {
+			dispatch(
+				createQuestionnare(
+					answered.filter((val) => val.section === topicCounter - 1),
+					questionsList[topicCounter - 1]['name'],
+					questionsList[topicCounter - 1]['name'] === questionsList[questionsList.length - 1]['name'],
+					history
+				)
+			);
+			checked[topicCounter - 1] = true;
+			count = 0;
+		} else {
+			count = 0;
+		}
+	};
 
-  return (
-    <div className="main">
-      {autoPopulate()}
+	if (questionsList.length === 0) {
+		return <Loading />;
+	}
 
-      <div style={{ height: 3, width: "100vw", backgroundColor: "grey" }}>
-        <div
-          style={{
-            height: 3,
-            width: `${
-              (100 * getAnsweredQuestionsLength()) / getQuestionsLength()
-            }vw`,
-            backgroundColor: "lightgreen",
-          }}
-        ></div>
-      </div>
+	return (
+		<div className="main">
+			{autoPopulate()}
 
-      <div className="main-content-questions">
-        <div className="row">
-          <div className="col-lg-4 col-xs-12">
-            <SectionList
-              contest_banner={contest_banner}
-              section={topicCounter}
-            />
-          </div>
-          <div className="col-lg-7 col-xs-12 ques">
-            <ol>
-              {questionsList.length > 0 &&
-                questionsList[topicCounter - 1][
-                  "questionnaire_section_questions"
-                ].map((question, index) => (
-                  <div className="questions" key={index}>
-                    <li key={question._id}>{question.name}</li>
-                    {question.questionnaire_section_answers.map(
-                      (option, index) => (
-                        <div className="options" key={index}>
-                          <input {...inputProps(question, option)} required />
-                          <label name={option._id}>{option.name}</label>
-                        </div>
-                      )
-                    )}
-                  </div>
-                ))}
-            </ol>
-          </div>
-          <div className="col-lg-1"></div>
-        </div>
-        <div className="row row2">
-          <div className="col-lg-4"></div>
-          {topicCounter !== 1 && (
-            <div className="col-lg-2 col-sm-6">
-              <Link className="a">
-                <div className="button back" onClick={_back}>
-                  Back
-                </div>
-              </Link>
-            </div>
-          )}
+			<div style={{ height: 3, width: '100vw', backgroundColor: 'grey' }}>
+				<div
+					style={{
+						height: 3,
+						width: `${(100 * getAnsweredQuestionsLength()) / getQuestionsLength()}vw`,
+						backgroundColor: 'lightgreen',
+					}}
+				></div>
+			</div>
 
-          <div className="col-lg-2 col-sm-6">
-            <div className="button" onClick={next}>
-              {((topicCounter < 5 && questionsList.length === 5) ||
-                (topicCounter < 4 && questionsList.length === 4)) &&
-                "Next"}
-              {((topicCounter === 5 && questionsList.length === 5) ||
-                (topicCounter == 4 && questionsList.length === 4)) &&
-                "Submit"}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+			<div className="main-content-questions">
+				<div className="row">
+					<div className="col-lg-4 col-xs-12">
+						<SectionList contest_banner={contest_banner} section={topicCounter} />
+					</div>
+					<div className="col-lg-7 col-xs-12 ques">
+						<ol>
+							{questionsList.length > 0 &&
+								questionsList[topicCounter - 1]['questionnaire_section_questions'].map(
+									(question, index) => (
+										<div className="questions" key={index}>
+											<li key={question._id}>{question.name}</li>
+											{question.questionnaire_section_answers.map((option, index) => (
+												<div className="options" key={index}>
+													<input {...inputProps(question, option)} required />
+													<label name={option._id}>{option.name}</label>
+												</div>
+											))}
+										</div>
+									)
+								)}
+						</ol>
+					</div>
+					<div className="col-lg-1"></div>
+				</div>
+				<div className="row row2">
+					<div className="col-lg-4"></div>
+					{topicCounter !== 1 && (
+						<div className="col-lg-2 col-sm-6">
+							<Link className="a">
+								<div className="button back" onClick={_back}>
+									Back
+								</div>
+							</Link>
+						</div>
+					)}
+
+					<div className="col-lg-2 col-sm-6">
+						<div className="button" onClick={next}>
+							{((topicCounter < 5 && questionsList.length === 5) ||
+								(topicCounter < 4 && questionsList.length === 4)) &&
+								'Next'}
+							{((topicCounter === 5 && questionsList.length === 5) ||
+								(topicCounter == 4 && questionsList.length === 4)) &&
+								'Submit'}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
-
-const mapStateToProps = (state) => {
-  const { questionCounter, userDetails, answers, questionsList } = state;
-  return {
-    topicCounter: questionCounter,
-    userDetails: userDetails,
-    answers: answers,
-    questionsList: questionsList,
-  };
-};
-
-export default connect(mapStateToProps, {
-  header_digital_status,
-  decrement,
-  add_answer,
-  get_questions,
-  none_of_the_above,
-  createQuestionnare,
-})(Questionnaire);

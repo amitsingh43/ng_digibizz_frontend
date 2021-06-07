@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import "styles/successStories.css";
 import { header_success_stories } from "store/actions";
@@ -8,12 +8,13 @@ import SuccessCard from "components/successStories/successCard";
 import { SUCCESSDATA } from "store/strings";
 import { Content } from "./components";
 
-function SuccessStories({ header_success_stories }) {
-	
+export default function SuccessStories() {
+	const dispatch=useDispatch();
+
 	useEffect(() => {
-		header_success_stories();
+		dispatch(header_success_stories());
 		window.scrollTo(0, 0);
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<div className="success-stories">
@@ -35,5 +36,3 @@ function SuccessStories({ header_success_stories }) {
 		</div>
 	);
 }
-
-export default connect(null, { header_success_stories })(SuccessStories);

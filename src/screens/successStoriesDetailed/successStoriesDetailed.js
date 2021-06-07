@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { header_success_stories } from "store/actions";
 import "styles/successStoriesDetailed.css";
@@ -8,12 +8,13 @@ import { SUCCESSDATA } from "store/strings";
 import { useHistory } from "react-router-dom";
 import { MainContent, TopContent, DetailedCard } from "./components";
 
-function SuccessStoriesDetailed({ header_success_stories, match }) {
-	
+export default function SuccessStoriesDetailed({ match }) {
+	const dispatch=useDispatch();
+
   useEffect(() => {
-    header_success_stories();
+    dispatch(header_success_stories());
     window.scrollTo(0, 0);
-  }, []);
+  }, [dispatch]);
 
   const history = useHistory();
   if (!match) return <div>Hello</div>;
@@ -39,7 +40,3 @@ function SuccessStoriesDetailed({ header_success_stories, match }) {
     </div>
   );
 }
-
-export default connect(null, { header_success_stories })(
-  SuccessStoriesDetailed
-);
