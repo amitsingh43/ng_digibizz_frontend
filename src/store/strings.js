@@ -3019,7 +3019,7 @@ export const CARE = {
   description: ["Secure your family's health with Care Health Insurance", ""],
   image: care,
   backgroundColor: "#fff",
-  url: "https://www.religareonline.com/",
+  url: "https://www.careinsurance.com/",
   stars: null,
   socialMedia: null,
   testimonials: null,
