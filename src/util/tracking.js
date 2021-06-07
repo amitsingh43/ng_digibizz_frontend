@@ -2,7 +2,9 @@ import ReactGA from "react-ga";
 
 class Tracking {
 	init() {
-		ReactGA.initialize("UA-158848193-1");
+		if (process.env.isProd === "yes") {
+			ReactGA.initialize(process.env.REACT_APP_GA_ID);
+		}
 	}
 	pageView() {
 		ReactGA.pageview(window.location.pathname + window.location.search);
