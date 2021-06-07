@@ -349,7 +349,7 @@ const Partner = ({
 				partner_availed: title,
 			};
 			update_lead(body);
-			if (title != "NeoGrowth") {
+			if (title != "NeoGrowth" && url) {
 				window.open(url, "_blank");
 			}
 		} else {
