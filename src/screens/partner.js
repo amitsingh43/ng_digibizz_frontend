@@ -314,6 +314,8 @@ const Partner = ({
 			val.name === partner.toLowerCase().split(".").join(" ") &&
 			val.heading === category
 	);
+	//console.log(category,partner,partnerMapping);
+	console.log(data);
 	if ((!location || !location.state) && !data) {
 		return <Redirect to="/services" />;
 	}
@@ -349,7 +351,7 @@ const Partner = ({
 				partner_availed: title,
 			};
 			update_lead(body);
-			if (title != "NeoGrowth") {
+			if (title != "NeoGrowth" && url) {
 				window.open(url, "_blank");
 			}
 		} else {
