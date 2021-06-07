@@ -2642,7 +2642,11 @@ export const NEAR_STORE = {
 };
 export const ACCUNITY_SERVICES1 = {
   title: "Accunity Services",
-  subTitle: ["10% off on all our services."],
+  subTitle: [
+    "Google, Facebook & Instagram Account Creation & 5 Posts at Rs. 999/-", 
+    "Learn Digital Marketing to grow your business at Rs. 599/-",
+    "Try Free 1 Month GST Billing Software"
+],
   description: [
     "List your business on digital selling platforms to boost your sales.",
     "Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
@@ -2663,8 +2667,11 @@ export const ACCUNITY_SERVICES1 = {
 };
 export const ACCUNITY_SERVICES2 = {
   title: "Accunity Services",
-  subTitle: ["10% off on all our services."],
-  description: [
+  subTitle: [
+    "Google, Facebook & Instagram Account Creation & 5 Posts at Rs. 999/-", 
+    "Learn Digital Marketing to grow your business at Rs. 599/-",
+    "Try Free 1 Month GST Billing Software"
+],  description: [
     "Digital Marketing & Social Media Management for Small Businesses.",
     "Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
   ],
@@ -2684,8 +2691,11 @@ export const ACCUNITY_SERVICES2 = {
 };
 export const ACCUNITY_SERVICES3 = {
   title: "Accunity Services",
-  subTitle: ["10% off on all our services."],
-  description: [
+  subTitle: [
+    "Google, Facebook & Instagram Account Creation & 5 Posts at Rs. 999/-", 
+    "Learn Digital Marketing to grow your business at Rs. 599/-",
+    "Try Free 1 Month GST Billing Software"
+],  description: [
     "Billing & Accounting Software Services for Small Businesses.",
     "Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
   ],
