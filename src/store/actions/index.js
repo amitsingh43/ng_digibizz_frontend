@@ -290,9 +290,9 @@ export const updateQuestionnare =
         dispatch(increment());
       }
       // if(completed){
-      // 	history.replace("/report");
+      //  history.replace("/report");
       // }else{
-      // 	dispatch(increment());
+      //  dispatch(increment());
       // }
     } catch (error) {
       let message = "Something went wrong! Please try later.";
@@ -311,35 +311,35 @@ export const updateQuestionnare =
   };
 
 // export const post_answers = (
-// 	options,
-// 	history,
-// 	ENDPOINT = "/api/save_questionnaire"
+//  options,
+//  history,
+//  ENDPOINT = "/api/save_questionnaire"
 // ) => async (dispatch) => {
-// 	try {
-// 		const response = await _post(ENDPOINT, options);
-// 		const { questionnaire_take } = response;
-// 		const { recommendations } = questionnaire_take;
-// 		Tracking.trackEvent("CLICK", "ASSESSED CUSTOMERS", "SUBMIT");
-// 		dispatch(set_recommendations_write(recommendations));
-// 		dispatch(set_results(questionnaire_take));
-// 		dispatch(reset_questionnaire());
-// 		localStorage.setItem("report", "true");
-// 		history.replace("/report");
-// 	} catch (error) {
-// 		let message = "Something went wrong! Please try later.";
+//  try {
+//    const response = await _post(ENDPOINT, options);
+//    const { questionnaire_take } = response;
+//    const { recommendations } = questionnaire_take;
+//    Tracking.trackEvent("CLICK", "ASSESSED CUSTOMERS", "SUBMIT");
+//    dispatch(set_recommendations_write(recommendations));
+//    dispatch(set_results(questionnaire_take));
+//    dispatch(reset_questionnaire());
+//    localStorage.setItem("report", "true");
+//    history.replace("/report");
+//  } catch (error) {
+//    let message = "Something went wrong! Please try later.";
 
-// 		if (
-// 			error &&
-// 			error.response &&
-// 			error.response.data &&
-// 			error.response.data.message
-// 		) {
-// 			message = error.response.data.message;
-// 		}
+//    if (
+//      error &&
+//      error.response &&
+//      error.response.data &&
+//      error.response.data.message
+//    ) {
+//      message = error.response.data.message;
+//    }
 
-// 		dispatch(add_error(message));
-// 		// show_toast(message);
-// 	}
+//    dispatch(add_error(message));
+//    // show_toast(message);
+//  }
 // };
 
 export const reset_answers = () => {
@@ -501,7 +501,7 @@ export const downloadReport = (downloadText, setDownloadText) => {
   const method = "GET";
   setDownloadText("Downloading...");
   const url =
-    "https://uat.advancesuite.in:3061/api/download_report?lead_id=" +
+    `${process.env.REACT_APP_BACKEND_URL}/api/download_report?lead_id=` +
     localStorage.getItem("lead_id");
   axios
     .request({

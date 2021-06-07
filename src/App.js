@@ -36,10 +36,12 @@ function App({ errorMessage, clear_error, history }) {
 
 	window.onload = () => {
 		const tagManagerArgs = {
-			gtmId: "GTM-ND3D7FG",
+			gtmId: process.env.REACT_APP_GTM_ID,
 		};
 
-		// TagManager.initialize(tagManagerArgs);
+		if (process.env.isProd === "yes") {
+			TagManager.initialize(tagManagerArgs);
+		}
 	};
 	useEffect(() => {
 		if (errorMessage !== "") {
