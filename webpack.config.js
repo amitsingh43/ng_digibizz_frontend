@@ -1,14 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { DefinePlugin } = require("webpack");
-const dotenv = require("dotenv");
 
-const env = dotenv.config().parsed;
-const envKeys = Object.keys(env).reduce((prev, next) => {
-	prev[`process.env.${next}`] = JSON.stringify(env[next]);
-	return prev;
-}, {});
 module.exports = {
 	entry: { app: "./src/index.js" },
 	output: {
@@ -72,7 +65,6 @@ module.exports = {
 				},
 			],
 		}),
-		new DefinePlugin(envKeys),
 	],
 	devServer: {
 		historyApiFallback: true,

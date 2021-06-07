@@ -1,8 +1,7 @@
 // import { BACKEND_URL } from "#constants";
 import axios from "axios";
-const { REACT_APP_BACKEND_URL } = process.env;
 const axiosInstance = axios.create({
-	baseURL: REACT_APP_BACKEND_URL,
+	baseURL: "https://uat.advancesuite.in:3061",
 	headers: {
 		"Access-Control-Allow-Origin": "*",
 		"Content-Type": "application/json",
