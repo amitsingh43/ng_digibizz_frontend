@@ -28,6 +28,7 @@ import Tracking from "../../util/tracking";
 // import filedownload from "js-file-download";
 var FileSaver = require("file-saver");
 import { NEOCASH_INSTA } from "../strings";
+const { REACT_APP_BACKEND_URL } = process.env;
 
 export const increment = (payload = 0) => {
   return {
@@ -501,7 +502,7 @@ export const downloadReport = (downloadText, setDownloadText) => {
   const method = "GET";
   setDownloadText("Downloading...");
   const url =
-    "https://uat.advancesuite.in:3061/api/download_report?lead_id=" +
+  `${REACT_APP_BACKEND_URL}/api/download_report?lead_id=` +
     localStorage.getItem("lead_id");
   axios
     .request({
