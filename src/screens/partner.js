@@ -314,8 +314,6 @@ const Partner = ({
 			val.name === partner.toLowerCase().split(".").join(" ") &&
 			val.heading === category
 	);
-	//console.log(category,partner,partnerMapping);
-	console.log(data);
 	if ((!location || !location.state) && !data) {
 		return <Redirect to="/services" />;
 	}
