@@ -6,6 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import PrivateRoute from "components/privateRoute";
 import { useDispatch,useSelector } from "react-redux";
 
 import "regenerator-runtime/runtime.js";
@@ -24,6 +25,10 @@ import Partner from "./screens/partner";
 import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
+import Login from "./screens/login";
+import Settings from "./screens/settings";
+
+
 //import Catalog from "./screens/catalog";
 import { clear_error } from "./store/actions";
 import show_toast from "./util/showToast";
@@ -83,56 +88,66 @@ export default function App({ history }) {
         {/* {showPopUp && <ExitPopUp />} */}
         <Header />
         <Switch>
-          <Route exact path={"/"} render={(props) => <Welcome {...props} />} />
-          <Route
+          <PrivateRoute exact path={"/"} component={Welcome} />
+          <PrivateRoute
             exact
             path={"/knowStatus"}
-            render={(props) => <Home {...props} />}
+            component={Home}
           />
-          <Route
+          <PrivateRoute
             exact
             path={"/questionnaire/:section"}
-            render={(props) => <Questionnaire {...props} />}
+            component={Questionnaire}
           />
-          <Route
+          <PrivateRoute
             exact
             path={"/report"}
-            render={(props) => <Report {...props} />}
+            component={Report}
           />
-          <Route
+          <PrivateRoute
             exact
             path={"/knowledgeCenter"}
-            render={(props) => <UserGuide {...props} />}
+            component={UserGuide}
           />
-          <Route
+          <PrivateRoute
             exact
             path={"/knowledgeCenter/:id"}
-            render={(props) => <UserGuideDetailed {...props} />}
+            component={UserGuideDetailed}
           />
-          <Route
+          <PrivateRoute
             // exact
             path={"/successStories/:id"}
-            render={(props) => <SuccessStoriesDetailed {...props} />}
+            component={SuccessStoriesDetailed}
           />
-          <Route
+          <PrivateRoute
             exact
             path={"/successStories"}
-            render={(props) => <SuccessStories {...props} />}
+            component={SuccessStories}
           />
-          <Route
+          <PrivateRoute
             exact
             path={"/services/:category/:partner"}
-            render={(props) => <Partner {...props} />}
+            component={Partner}
           />
-          {/* <Route
+          {/* <PrivateRoute
             exact
             path={"/services/:category/:partner/catalog"}
             render={(props) => <Catalog {...props} />}
           /> */}
-          <Route
+          <PrivateRoute
             exact
             path={"/services"}
-            render={(props) => <DigitalServices {...props} />}
+            component={DigitalServices}
+          />
+           <Route
+            exact
+            path={"/login"}
+            render={(props) => <Login {...props} />}
+          />
+          <PrivateRoute
+            exact
+            path={"/settings"}
+            component={Settings}
           />
           <Redirect to="/" />
         </Switch>

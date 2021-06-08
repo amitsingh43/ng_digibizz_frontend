@@ -81,6 +81,14 @@ export default function Header() {
 								Success Stories
 							</Link>
 						</li>
+						<li>
+							<Link
+								className={headerState === 3 ? "a active" : "a"}
+								to="/settings"
+							>
+								Login/Signup
+							</Link>
+						</li>
 					</ul>
 				</div>
 			</div>
