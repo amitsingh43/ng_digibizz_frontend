@@ -6,7 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import PrivateRoute from "components/privateRoute";
+//import SecureRoute from "components/secureRoute";
 import { useDispatch,useSelector } from "react-redux";
 
 import "regenerator-runtime/runtime.js";
@@ -25,8 +25,8 @@ import Partner from "./screens/partner";
 import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
-import Login from "./screens/login";
-import Settings from "./screens/settings";
+// import Login from "./screens/login";
+// import Settings from "./screens/settings";
 
 
 //import Catalog from "./screens/catalog";
@@ -88,67 +88,62 @@ export default function App({ history }) {
         {/* {showPopUp && <ExitPopUp />} */}
         <Header />
         <Switch>
-          <PrivateRoute exact path={"/"} component={Welcome} />
-          <PrivateRoute
+          <Route exact path={"/"} component={Welcome} />
+          <Route
             exact
             path={"/knowStatus"}
             component={Home}
           />
-          <PrivateRoute
+          <Route
             exact
             path={"/questionnaire/:section"}
             component={Questionnaire}
           />
-          <PrivateRoute
+          <Route
             exact
             path={"/report"}
             component={Report}
           />
-          <PrivateRoute
+          <Route
             exact
             path={"/knowledgeCenter"}
             component={UserGuide}
           />
-          <PrivateRoute
+          <Route
             exact
             path={"/knowledgeCenter/:id"}
             component={UserGuideDetailed}
           />
-          <PrivateRoute
+          <Route
             // exact
             path={"/successStories/:id"}
             component={SuccessStoriesDetailed}
           />
-          <PrivateRoute
+          <Route
             exact
             path={"/successStories"}
             component={SuccessStories}
           />
-          <PrivateRoute
+          <Route
             exact
             path={"/services/:category/:partner"}
             component={Partner}
           />
-          {/* <PrivateRoute
-            exact
-            path={"/services/:category/:partner/catalog"}
-            render={(props) => <Catalog {...props} />}
-          /> */}
-          <PrivateRoute
+          <Route
             exact
             path={"/services"}
             component={DigitalServices}
           />
-           <Route
+           {/* <Route
             exact
             path={"/login"}
-            render={(props) => <Login {...props} />}
+            component={Login}
           />
-          <PrivateRoute
+          <Route
             exact
             path={"/settings"}
             component={Settings}
-          />
+          /> */}
           <Redirect to="/" />
         </Switch>
         <Footer />

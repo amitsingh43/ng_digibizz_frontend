@@ -7,6 +7,7 @@ import { post_user_details } from 'screens/questionnaire/store/actions';
 import 'styles/home.css';
 import ContestTAndC from 'components/contestTAndC';
 import TAndC from 'components/termsAndConditions';
+import OTPInput from "components/OTPInput";
 
 import {
 	TELL_ABOUT_YOU,
@@ -16,6 +17,7 @@ import {
 	TERMS_AND_CONDITIONS_1,
 } from 'store/strings';
 import contest_banner from 'assets/contest_banner.png';
+
 
 export default function Home() {
 	const dispatch = useDispatch();
@@ -27,6 +29,7 @@ export default function Home() {
 		dispatch(header_digital_status());
 		dispatch(get_master_data());
 	}, []);
+	
 
 	const sel = document.getElementById('city');
 	const text = sel ? sel.options[sel.selectedIndex].text : null;
@@ -36,6 +39,7 @@ export default function Home() {
 	const [name, setName] = useState(null);
 	const [email, setEmail] = useState(null);
 	const [mobile, setMobile] = useState(null);
+	const [otp, setOTP] = useState(null);
 	const [referralCode, setReferralCode] = useState(null);
 	const [city, setCity] = useState(null);
 	const [industry, setIndustry] = useState(null);
@@ -72,17 +76,20 @@ export default function Home() {
 		var NumberRegex = /^[0-9]*$/;
 		var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		var nameRegex = /^[a-zA-Z ]+$/;
-		if (!name || name.length === 0) {
+
+		if (!mobile || mobile.length !== 10 || !NumberRegex.test(mobile) || mobile[0] === '0') {
+			dispatch(add_error('Please enter a valid mobile number'));
+			return;
+		} else if (!otp || otp.length !== 6) {
+			dispatch(add_error('Please enter a valid OTP'));
+			return;
+		} else if (!name || name.length === 0) {
 			dispatch(add_error('Please enter your full name'));
 			return;
 		} else if (!nameRegex.test(name)) {
 			dispatch(add_error('Please enter a valid name'));
 			return;
-		} else if (!mobile || mobile.length !== 10 || !NumberRegex.test(mobile) || mobile[0] === '0') {
-			dispatch(add_error('Please enter a valid mobile number'));
-			return;
-		}
-		if (!businessName || businessName.length === 0) {
+		} else if (!businessName || businessName.length === 0) {
 			dispatch(add_error('Please enter a valid Business Name'));
 			return;
 		}
@@ -148,30 +155,43 @@ export default function Home() {
 						<span>* </span> All fields are mandatory
 					</div>
 					<div className="col-lg-2  form" style={{ marginLeft: 15 }}>
+						<div className="heading">
+							Mobile Number<span>*</span>
+						</div>
+						{/* <div className="number-wrapper">
+							<input
+								id="phone"
+								type="phone"
+								className="col-xs-12"
+								value={mobile}
+								onChange={(e) => {
+									const value = e.target.value.replace(/\D/g, '');
+									if (value.length <= 10) {
+										setMobile(value);
+										localStorage.setItem('mobile', value);
+									}
+								}}
+							/>
+							<span className="send-otp" onClick={handleOTP}>
+								{otpState.text}
+							</span>
+						</div> */}
+						<OTPInput setValue={setMobile} value={mobile}/>
 						<div>
 							<div className="heading">
-								Full Name<span>*</span>
+								OTP<span>*</span>
 							</div>
-							<select id="mr-or-mrs" onChange={(e) => setMrOrMs(e.target.value)}>
-								{gender.length > 0 && (
-									<option selected disabled hidden>
-										Mr.
-									</option>
-								)}
-								{gender.map((gen, index) => (
-									<option value={gen._id} key={index}>
-										{gen.name}
-									</option>
-								))}
-							</select>
 							<input
-								type="text"
+								id="otp"
+								type="phone"
 								className="col-xs-12"
-								id="name"
-								value={name}
+								value={otp}
 								onChange={(e) => {
-									setName(e.target.value);
-									localStorage.setItem('name', e.target.value);
+									const value = e.target.value.replace(/\D/g, '');
+									if (value.length <= 6) {
+										setOTP(value);
+										localStorage.setItem('otp', value);
+									}
 								}}
 							/>
 							<div style={{ marginTop: 40 }}></div>
@@ -208,7 +228,6 @@ export default function Home() {
 								{cities.map((city, index) => (
 									<option value={city._id} key={index}>
 										{city.name}
-										{}
 									</option>
 								))}
 							</select>
@@ -228,42 +247,34 @@ export default function Home() {
 								</div>
 							)}
 							<div style={{ marginTop: 20 }}></div>
-							<div>
-								<div className="heading" style={{ marginTop: 20 }}>
-									Referral Code <span style={{ color: 'grey' }}>(optional)</span>
-								</div>
-								<input
-									type="text"
-									id="referral"
-									readOnly
-									onFocus={(e) => e.target.removeAttribute('readonly')}
-									autoComplete="off"
-									className="col-xs-12"
-									value={referralCode}
-									onChange={(e) => setReferralCode(e.target.value)}
-								/>
-
-								<div style={{ marginTop: 40 }}></div>
-							</div>
 						</div>
 					</div>
 					<div className="col-lg-1"></div>
 					<div className="col-lg-2 form" style={{ marginLeft: 15 }}>
 						<div>
 							<div className="heading">
-								Mobile Number<span>*</span>
+								Full Name<span>*</span>
 							</div>
+							<select id="mr-or-mrs" onChange={(e) => setMrOrMs(e.target.value)}>
+								{gender.length > 0 && (
+									<option selected disabled hidden>
+										Mr.
+									</option>
+								)}
+								{gender.map((gen, index) => (
+									<option value={gen._id} key={index}>
+										{gen.name}
+									</option>
+								))}
+							</select>
 							<input
-								id="phone"
-								type="phone"
+								type="text"
 								className="col-xs-12"
-								value={mobile}
+								id="name"
+								value={name}
 								onChange={(e) => {
-									const value=e.target.value.replace(/\D/g, "");;
-									if(value.length <= 10) {
-										setMobile(value);
-										localStorage.setItem("mobile", value);
-									}
+									setName(e.target.value);
+									localStorage.setItem('name', e.target.value);
 								}}
 							/>
 							<div className="annual">
@@ -298,6 +309,23 @@ export default function Home() {
 							/>
 
 							<div style={{ marginTop: 40 }}></div>
+							<div>
+								<div className="heading" style={{ marginTop: 20 }}>
+									Referral Code <span style={{ color: 'grey' }}>(optional)</span>
+								</div>
+								<input
+									type="text"
+									id="referral"
+									readOnly
+									onFocus={(e) => e.target.removeAttribute('readonly')}
+									autoComplete="off"
+									className="col-xs-12"
+									value={referralCode}
+									onChange={(e) => setReferralCode(e.target.value)}
+								/>
+
+								<div style={{ marginTop: 40 }}></div>
+							</div>
 						</div>
 					</div>
 				</div>

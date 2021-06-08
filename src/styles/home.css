@@ -1,6 +1,6 @@
 .home-container {
 	color: #68696a;
-	font-family: "Rubik", sans-serif;
+	font-family: 'Rubik', sans-serif;
 	min-height: 85vh;
 }
 
@@ -55,7 +55,7 @@
 	padding-left: 50px;
 }
 
-.home-container input[type="checkbox"] {
+.home-container input[type='checkbox'] {
 	width: 20px;
 	height: 20px;
 	float: left;
@@ -89,9 +89,9 @@ select {
 	font-weight: lighter;
 	margin-top: 2rem;
 }
-.form input[type="email"],
-.form input[type="text"],
-.form input[type="phone"] {
+.form input[type='email'],
+.form input[type='text'],
+.form input[type='phone'] {
 	margin-bottom: 20px;
 	/* margin-left: 20px; */
 	padding: 0px;
@@ -234,9 +234,9 @@ select {
 		line-height: 29px;
 		text-align: left;
 	}
-	.form input[type="email"],
-	.form input[type="text"],
-	.form input[type="phone"] {
+	.form input[type='email'],
+	.form input[type='text'],
+	.form input[type='phone'] {
 		margin-left: 0px;
 	}
 	.mandatory-small {
