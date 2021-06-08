@@ -46,6 +46,7 @@ import urban_cfo from "../assets/partners/urban_cfo.jpg";
 import mswipe from "../assets/partners/mswipe.png";
 import blue_ocktopus from "../assets/partners/blue_ocktopus.png";
 import terrago from "../assets/partners/terrago.png";
+import porter from "../assets/partners/porter.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -86,6 +87,56 @@ import SnapbizzOne from "../assets/partners/carousel/snapbizz/one.jpg";
 import SnapbizzTwo from "../assets/partners/carousel/snapbizz/two.png";
 import HylobizOne from "../assets/partners/carousel/hylo_biz/one.jpeg";
 import VakilSearchOne from "../assets/partners/carousel/vakil_search/one.png";
+
+import AccunityOne from "../assets/partners/carousel/Accunity/one.jpg";
+import AccunityTwo from "../assets/partners/carousel/Accunity/two.png";
+import AccunityThree from "../assets/partners/carousel/Accunity/three.png";
+import AccunityFour from "../assets/partners/carousel/Accunity/four.png";
+
+import ApnaOne from "../assets/partners/carousel/Apna/one.jpg";
+import ApnaTwo from "../assets/partners/carousel/Apna/two.jpg";
+
+import BluoOcktopusOne from "../assets/partners/carousel/BluOcktopus/one.jpg";
+import BluoOcktopusTwo from "../assets/partners/carousel/BluOcktopus/two.jpg";
+
+
+import Care_HealthOne from "../assets/partners/carousel/Care_Health/one.jpg";
+import Care_HealthTwo from "../assets/partners/carousel/Care_Health/two.jpg";
+
+import EasyFileITROne from "../assets/partners/carousel/EasyFileITR/one.jpg";
+
+import E_Startup_IndiaOne from "../assets/partners/carousel/E_Startup_India/one.jpg";
+import E_Startup_IndiaTwo from "../assets/partners/carousel/E_Startup_India/two.jpg";
+
+
+import goDigitOne from "../assets/partners/carousel/goDigit/one.jpg";
+import goDigitTwo from "../assets/partners/carousel/goDigit/two.jpg";
+
+import InstabillOne from "../assets/partners/carousel/Instabill/one.jpg";
+import InstabillTwo from "../assets/partners/carousel/Instabill/two.jpg";
+
+import MediaqartOne from "../assets/partners/carousel/Mediaqart/one.jpg";
+import MediaqartTwo from "../assets/partners/carousel/Mediaqart/two.jpg";
+
+import MobicommerceOne from "../assets/partners/carousel/Mobicommerce/one.jpg";
+import MobicommerceTwo from "../assets/partners/carousel/Mobicommerce/two.jpg";
+
+import MswipeOne from "../assets/partners/carousel/Mswipe/one.jpg";
+import MswipeTwo from "../assets/partners/carousel/Mswipe/two.jpg";
+
+import MybillBookOne from "../assets/partners/carousel/MybillBook/one.jpg";
+import MybillBookTwo from "../assets/partners/carousel/MybillBook/two.jpg";
+
+import Near_StoreOne from "../assets/partners/carousel/Near_Store/one.jpg";
+
+import PagarbookOne from "../assets/partners/carousel/Pagarbook/one.jpg";
+import PagarbookTwo from "../assets/partners/carousel/Pagarbook/two.jpg";
+import PagarbookThree from "../assets/partners/carousel/Pagarbook/three.jpg";
+
+import PayUOne from "../assets/partners/carousel/PayU/one.jpg";
+
+import PinnacleOne from "../assets/partners/carousel/Pinnacle/one.jpg";
+
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -2636,13 +2687,17 @@ export const NEAR_STORE = {
   carousel: [
     {
       type: "image",
-      source: near_store,
+      source: Near_StoreOne,
     },
   ],
 };
 export const ACCUNITY_SERVICES1 = {
   title: "Accunity Services",
-  subTitle: ["10% off on all our services."],
+  subTitle: [
+    "Google, Facebook & Instagram Account Creation & 5 Posts at Rs. 999/-", 
+    "Learn Digital Marketing to grow your business at Rs. 599/-",
+    "Try Free 1 Month GST Billing Software"
+],
   description: [
     "List your business on digital selling platforms to boost your sales.",
     "Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
@@ -2657,14 +2712,29 @@ export const ACCUNITY_SERVICES1 = {
   carousel: [
     {
       type: "image",
-      source: accunity,
+      source: AccunityOne,
     },
+    {
+      type: "image",
+      source: AccunityTwo,
+    },
+    {
+      type: "image",
+      source: AccunityThree,
+    },
+    {
+      type: "image",
+      source: AccunityFour,
+    }
   ],
 };
 export const ACCUNITY_SERVICES2 = {
   title: "Accunity Services",
-  subTitle: ["10% off on all our services."],
-  description: [
+  subTitle: [
+    "Google, Facebook & Instagram Account Creation & 5 Posts at Rs. 999/-", 
+    "Learn Digital Marketing to grow your business at Rs. 599/-",
+    "Try Free 1 Month GST Billing Software"
+],  description: [
     "Digital Marketing & Social Media Management for Small Businesses.",
     "Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
   ],
@@ -2678,14 +2748,29 @@ export const ACCUNITY_SERVICES2 = {
   carousel: [
     {
       type: "image",
-      source: accunity,
+      source: AccunityOne,
     },
+    {
+      type: "image",
+      source: AccunityTwo,
+    },
+    {
+      type: "image",
+      source: AccunityThree,
+    },
+    {
+      type: "image",
+      source: AccunityFour,
+    }
   ],
 };
 export const ACCUNITY_SERVICES3 = {
   title: "Accunity Services",
-  subTitle: ["10% off on all our services."],
-  description: [
+  subTitle: [
+    "Google, Facebook & Instagram Account Creation & 5 Posts at Rs. 999/-", 
+    "Learn Digital Marketing to grow your business at Rs. 599/-",
+    "Try Free 1 Month GST Billing Software"
+],  description: [
     "Billing & Accounting Software Services for Small Businesses.",
     "Now market your products & services digitally to increase their brand reach and also generate higher sales revenue. Our WiseInvoice Billing Software will help you ensure seamless invoicing, Quotation, Inventory & Expense Management with detailed monitoring.",
   ],
@@ -2699,8 +2784,20 @@ export const ACCUNITY_SERVICES3 = {
   carousel: [
     {
       type: "image",
-      source: accunity,
+      source: AccunityOne,
     },
+    {
+      type: "image",
+      source: AccunityTwo,
+    },
+    {
+      type: "image",
+      source: AccunityThree,
+    },
+    {
+      type: "image",
+      source: AccunityFour,
+    }
   ],
 };
 export const MOBICOMMERCE1 = {
@@ -2727,7 +2824,11 @@ export const MOBICOMMERCE1 = {
   carousel: [
     {
       type: "image",
-      source: mobicommerce,
+      source: MobicommerceOne,
+    },
+    {
+      type: "image",
+      source: MobicommerceTwo,
     },
   ],
 };
@@ -2755,7 +2856,11 @@ export const MOBICOMMERCE2 = {
   carousel: [
     {
       type: "image",
-      source: mobicommerce,
+      source: MobicommerceOne,
+    },
+    {
+      type: "image",
+      source: MobicommerceTwo,
     },
   ],
 };
@@ -2820,8 +2925,12 @@ export const MYBILLBOOK = {
   carousel: [
     {
       type: "image",
-      source: mybillbook,
+      source: MybillBookOne,
     },
+    {
+      type: "image",
+      source: MybillBookTwo,
+    }
   ],
 };
 export const SNAPBIZZ = {
@@ -2905,7 +3014,7 @@ export const PINNACLE = {
   carousel: [
     {
       type: "image",
-      source: pinnacle,
+      source: PinnacleOne,
     },
   ],
 };
@@ -2936,7 +3045,11 @@ export const APNA_CO = {
   carousel: [
     {
       type: "image",
-      source: apna_co,
+      source: ApnaOne,
+    },
+    {
+      type: "image",
+      source: ApnaTwo,
     },
   ],
 };
@@ -2999,7 +3112,11 @@ export const GO_DIGIT = {
   carousel: [
     {
       type: "image",
-      source: digit,
+      source: goDigitOne,
+    },
+    {
+      type: "image",
+      source: goDigitTwo,
     },
   ],
 };
@@ -3009,7 +3126,7 @@ export const CARE = {
   description: ["Secure your family's health with Care Health Insurance", ""],
   image: care,
   backgroundColor: "#fff",
-  url: "https://www.religareonline.com/",
+  url: "https://www.careinsurance.com/",
   stars: null,
   socialMedia: null,
   testimonials: null,
@@ -3017,7 +3134,11 @@ export const CARE = {
   carousel: [
     {
       type: "image",
-      source: care,
+      source: Care_HealthOne,
+    },
+    {
+      type: "image",
+      source: Care_HealthTwo,
     },
   ],
 };
@@ -3120,7 +3241,7 @@ export const PAYU = {
   carousel: [
     {
       type: "image",
-      source: payu,
+      source: PayUOne,
     },
   ],
 };
@@ -3192,8 +3313,16 @@ export const PAGARBOOK = {
   carousel: [
     {
       type: "image",
-      source: pagar_book,
+      source: PagarbookOne,
     },
+    {
+      type: "image",
+      source: PagarbookTwo,
+    },
+    {
+      type: "image",
+      source: PagarbookThree,
+    }
   ],
 };
 
@@ -3216,7 +3345,7 @@ export const EASY_FILE_ITR = {
   carousel: [
     {
       type: "image",
-      source: easyfileitr,
+      source: EasyFileITROne,
     },
   ],
 };
@@ -3319,7 +3448,11 @@ export const MEDIAQART = {
   carousel: [
     {
       type: "image",
-      source: mediaqart,
+      source: MediaqartOne,
+    },
+    {
+      type: "image",
+      source: MediaqartTwo,
     },
   ],
 };
@@ -3435,7 +3568,11 @@ export const ESTARTUP_INDIA = {
   carousel: [
     {
       type: "image",
-      source: estartup_india,
+      source: E_Startup_IndiaOne,
+    },
+    {
+      type: "image",
+      source: E_Startup_IndiaTwo,
     },
   ],
 };
@@ -3475,7 +3612,11 @@ export const INSTABILL = {
   carousel: [
     {
       type: "image",
-      source: instabill,
+      source: InstabillOne,
+    },
+    {
+      type: "image",
+      source: InstabillTwo,
     },
   ],
 };
@@ -3505,10 +3646,10 @@ export const URBAN_CFO = {
 export const MSWIPE = {
   title: "Mswipe",
   subTitle: [
-    <p>
+    <>
       {"Grab your Wisepad G2 device on a zero-monthly rental now.*"}
-      <p>{"*terms and conditions apply"}</p>
-    </p>,
+      <div>{"*terms and conditions apply"}</div>
+    </>,
   ],
   description: [
     "Accept all digital and contactless payments. POS solutions for all types of payment acceptance - cards, wallets, mobile payment apps and bank apps, contactless and QR payments. Empower and expand your business with Mswipe with your zero rental POS device.",
@@ -3524,9 +3665,14 @@ export const MSWIPE = {
   carousel: [
     {
       type: "image",
-      source: mswipe,
+      source: MswipeOne,
+    },
+    {
+      type: "image",
+      source: MswipeTwo,
     },
   ],
+  availNowResponseText:"Thank you for your interest. An executive from Mswipe will reach out to you shortly."
 };
 
 export const BLUE_OCKTOPUS = {
@@ -3546,7 +3692,11 @@ export const BLUE_OCKTOPUS = {
   carousel: [
     {
       type: "image",
-      source: blue_ocktopus,
+      source: BluoOcktopusOne,
+    },
+    {
+      type: "image",
+      source: BluoOcktopusTwo,
     },
   ],
 };
@@ -3569,6 +3719,28 @@ export const TERRAGO_LOGISTICS = {
     {
       type: "image",
       source: terrago,
+    },
+  ],
+};
+
+export const PORTER = {
+  title: "Porter",
+  subTitle: ["Deliver goods starting from just Rs 50!"],
+  description: [
+    "India's Largest Marketplace for Intracity Logistics.",
+    "Started off as a platform to address inefficiencies in the last mile logistics sector and transform the way goods are transported around cities; Poter is enabling lakhs of businesses move anything on-demand today. Porter is on a journey to optimiselogistics and fleet management using cutting edge technology",
+  ],
+  image: porter,
+  backgroundColor: "#fff",
+  url: "https://porter.in/",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
+    {
+      type: "image",
+      source: porter,
     },
   ],
 };
@@ -3657,7 +3829,7 @@ export const PARTNERS = [
   },
   {
     category: "Delivery & Logistics",
-    data: [TERRAGO_LOGISTICS],
+    data: [TERRAGO_LOGISTICS, PORTER],
     tag: "delivery_and_logistics",
   },
 ];
