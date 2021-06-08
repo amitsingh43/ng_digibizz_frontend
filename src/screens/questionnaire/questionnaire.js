@@ -18,9 +18,10 @@ const checked = {};
 let prevTopicCounter = -1;
 
 export default function Questionnaire() {
-	const topicCounter = useSelector((state) => state.topicCounter);
+	const topicCounter = useSelector((state) => state.questionCounter);
 	const answers = useSelector((state) => state.answers);
 	const questionsList = useSelector((state) => state.questionsList);
+	console.log(questionsList);
 	const dispatch = useDispatch();
 
 	const history = useHistory();
@@ -238,13 +239,13 @@ export default function Questionnaire() {
 
 			<div className="main-content-questions">
 				<div className="row">
-					<div className="col-lg-4 col-xs-12">
+					<div className="col-lg-4 col-xs-12">	
 						<SectionList contest_banner={contest_banner} section={topicCounter} />
 					</div>
 					<div className="col-lg-7 col-xs-12 ques">
 						<ol>
 							{questionsList.length > 0 &&
-								questionsList[topicCounter - 1]['questionnaire_section_questions'].map(
+								questionsList[topicCounter - 1]?.questionnaire_section_questions.map(
 									(question, index) => (
 										<div className="questions" key={index}>
 											<li key={question._id}>{question.name}</li>
