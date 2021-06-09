@@ -10,8 +10,6 @@ class Tracking {
 		ReactGA.pageview(window.location.pathname + window.location.search);
 	}
 	trackEvent(action, category, label = "") {
-		console.log(ReactGA.event);
-
 		ReactGA.event({
 			action: action,
 			category: category,
