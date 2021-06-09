@@ -1,5 +1,5 @@
-import "../styles/gotoTop.css";
-import gotoTop from "../assets/gotoTop.png";
+import "styles/gotoTop.css";
+import gotoTop from "assets/gotoTop.png";
 
 const GotoTop = () => {
   window.onscroll = function () {

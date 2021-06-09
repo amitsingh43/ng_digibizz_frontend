@@ -1,4 +1,4 @@
-import "../styles/card.css";
+import "styles/card.css";
 const Percetage = ({ score }) => {
 	return (
 		<div className="percent">

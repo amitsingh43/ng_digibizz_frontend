@@ -1,8 +1,8 @@
-import "../../styles/footer.css";
-import fb from "../../assets/fb.svg";
-import insta from "../../assets/insta.svg";
-import twitter from "../../assets/twitter.svg";
-import linkedin from "../../assets/linkedin.svg";
+import "styles/footer.css";
+import fb from "assets/fb.svg";
+import insta from "assets/insta.svg";
+import twitter from "assets/twitter.svg";
+import linkedin from "assets/linkedin.svg";
 
 function Footer() {
 	return (

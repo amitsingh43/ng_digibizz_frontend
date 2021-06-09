@@ -1,19 +1,19 @@
-import sell_online from "../assets/services/sell_online.svg";
-import delivery_services from "../assets/services/delivery_services.svg";
-import billing_and_accounting from "../assets/services/billing_and_accounting.svg";
-import business_loans from "../assets/services/business_loans.svg";
-import manage_stock from "../assets/services/manage_stock.svg";
-import create_website_and_app from "../assets/services/website.svg";
-import digital_khata from "../assets/services/digital_khata.svg";
-import tax_fling_and_legal from "../assets/services/tax.svg";
-import social_media_marketing from "../assets/services/social_media_marketing.svg";
-import manage_payments from "../assets/services/manage_payments.svg";
-import manage_staff from "../assets/services/manage_staff.svg";
-import customer_loyalty_and_promotions from "../assets/services/customer_loyalty_and_promotions.svg";
-import insurance from "../assets/services/insurance.svg";
-import business_decor from "../assets/services/business_decor.png";
-import product_photoshoot from "../assets/services/product_photoshoot.svg";
-import delivery_and_logistics from "../assets/services/delivery_and_logistics.png";
+import sell_online from "assets/services/sell_online.svg";
+import delivery_services from "assets/services/delivery_services.svg";
+import billing_and_accounting from "assets/services/billing_and_accounting.svg";
+import business_loans from "assets/services/business_loans.svg";
+import manage_stock from "assets/services/manage_stock.svg";
+import create_website_and_app from "assets/services/website.svg";
+import digital_khata from "assets/services/digital_khata.svg";
+import tax_fling_and_legal from "assets/services/tax.svg";
+import social_media_marketing from "assets/services/social_media_marketing.svg";
+import manage_payments from "assets/services/manage_payments.svg";
+import manage_staff from "assets/services/manage_staff.svg";
+import customer_loyalty_and_promotions from "assets/services/customer_loyalty_and_promotions.svg";
+import insurance from "assets/services/insurance.svg";
+import business_decor from "assets/services/business_decor.png";
+import product_photoshoot from "assets/services/product_photoshoot.svg";
+import delivery_and_logistics from "assets/services/delivery_and_logistics.png";
 
 export const services = [
 	{

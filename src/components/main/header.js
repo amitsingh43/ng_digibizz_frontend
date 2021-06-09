@@ -2,15 +2,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 
-import logo from "../../assets/logo.png";
-import header_menu from "../../assets/header_menu.svg";
-import header_close from "../../assets/header_close.svg";
-import "../../styles/header.css";
+import logo from "assets/logo.png";
+import header_menu from "assets/header_menu.svg";
+import header_close from "assets/header_close.svg";
+import "styles/header.css";
 
 import {
 	header_reset,
 	homepage_decrement
-} from "../../store/actions";
+} from "store/actions";
 export default function Header() {
 	const dispatch = useDispatch();
 	const headerState = useSelector((state) => state.headerState);

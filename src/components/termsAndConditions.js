@@ -1,4 +1,4 @@
-import "../styles/tAndC.css";
+import "styles/tAndC.css";
 import Footer from "./main/footer";
 
 const TAndC = ({ showmore, setCheck }) => {
