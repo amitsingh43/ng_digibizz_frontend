@@ -1,7 +1,6 @@
 import {
     ADD_ERROR,
     CLEAR_ERROR,
-    RESET_USER,
   } from "store/actionTypes";
 
 export const add_error = (error) => {
@@ -17,8 +16,3 @@ export const add_error = (error) => {
     };
   };
   
-  export const reset_user = () => {
-    return {
-      type: RESET_USER,
-    };
-  };

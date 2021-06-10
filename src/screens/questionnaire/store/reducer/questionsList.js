@@ -1,4 +1,4 @@
-import { SET_QUESTIONS, GET_QUESTIONS, RESET_QUESTION } from "../actionTypes";
+import { SET_QUESTIONS, GET_QUESTIONS, RESET_QUESTIONS } from "../actionTypes";
 import createReducer from "util/createReducer";
 
 const initialState = [];
@@ -9,7 +9,7 @@ const questionsList = createReducer(initialState, {
   [GET_QUESTIONS]: (state, payload) => {
     return [...state];
   },
-  [RESET_QUESTION]: (state, payload) => {
+  [RESET_QUESTIONS]: (state, payload) => {
     return [];
   },
 });

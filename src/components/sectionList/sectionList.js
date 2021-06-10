@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import "styles/sectionList.css";
-import { increment } from "store/actions";
+import { increment } from "screens/questionnaire/store/actions";
 import VerticalList from "./verticalList";
 import HorizontalSectionList from "./horizontalSectionList";
 

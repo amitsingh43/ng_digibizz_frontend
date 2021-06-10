@@ -63,7 +63,7 @@ const Partner = () => {
 				partner_availed: title,
 			};
 			dispatch(update_lead(body));
-			if ((title !== 'NeoGrowth') & url) {
+			if (title !== 'NeoGrowth' && url != "") {
 				window.open(url, '_blank');
 			}
 		} else {
