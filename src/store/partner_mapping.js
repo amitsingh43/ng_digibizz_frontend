@@ -261,6 +261,6 @@ export const partnerMapping = [
 	{
 		name: "digit",
 		partner: DIGIT,
-		heading: "Insurence"
+		heading: "Insurance"
 	},
 ];

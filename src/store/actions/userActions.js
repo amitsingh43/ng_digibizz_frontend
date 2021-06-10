@@ -2,7 +2,7 @@ import show_toast from 'util/showToast';
 import { _post } from 'store/api';
 import { add_error } from './errorActions';
 import Tracking from 'util/tracking';
-import { SET_USER_DETAILS } from 'store/actionTypes';
+import { SET_USER_DETAILS, RESET_USER } from 'store/actionTypes';
 
 export const set_user_details = (details) => {
 	return {
@@ -10,6 +10,11 @@ export const set_user_details = (details) => {
 		payload: details,
 	};
 };
+export const reset_user = () => {
+    return {
+      type: RESET_USER,
+    };
+  };
 
 export const update_lead =
 	(body, ENDPOINT = '/api/update_lead') =>

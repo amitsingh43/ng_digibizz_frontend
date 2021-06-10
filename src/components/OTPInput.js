@@ -11,7 +11,7 @@ const otpStateTypes = {
 };
 const timer = 60;
 
-const initialState = { type: otpStateTypes.INITIAL, text: 'get OTP', value: timer };
+const initialState = { type: otpStateTypes.INITIAL, text: 'Get OTP', value: timer };
 
 function reducer(state, action) {
 	switch (action.type) {
@@ -20,7 +20,7 @@ function reducer(state, action) {
 		case 'reset':
 			return initialState;
 		case 'resend':
-			return { ...state, type: otpStateTypes.ACTIVE, text: 'resend OTP', value: timer };
+			return { ...state, type: otpStateTypes.ACTIVE, text: 'Resend OTP', value: timer };
 		default:
 			throw new Error();
 	}
