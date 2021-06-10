@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 //import SecureRoute from "components/secureRoute";
 import { useDispatch,useSelector } from "react-redux";
+import TagManager from "react-gtm-module";
 
 import "regenerator-runtime/runtime.js";
 import "react-toastify/dist/ReactToastify.css";
@@ -47,13 +48,14 @@ export default function App({ history }) {
   // return false;
   //};
 
-  // window.onload = () => {
-  // 	const tagManagerArgs = {
-  // 		gtmId: "GTM-ND3D7FG",
-  // 	};
-
-  // 	// TagManager.initialize(tagManagerArgs);
-  // };
+  window.onload = () => {
+    const tagManagerArgs = {
+        gtmId: process.env.REACT_APP_GTM_ID,
+    };
+    if (process.env.isProd === "yes") {
+        TagManager.initialize(tagManagerArgs);
+    }
+};
   useEffect(() => {
     if (errorMessage !== "") {
       show_toast(errorMessage);

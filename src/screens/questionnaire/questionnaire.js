@@ -21,7 +21,6 @@ export default function Questionnaire() {
 	const topicCounter = useSelector((state) => state.questionCounter);
 	const answers = useSelector((state) => state.answers);
 	const questionsList = useSelector((state) => state.questionsList);
-	console.log(questionsList);
 	const dispatch = useDispatch();
 
 	const history = useHistory();

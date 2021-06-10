@@ -38,7 +38,8 @@ import {
 	MSWIPE,
 	BLUE_OCKTOPUS,
 	TERRAGO_LOGISTICS,
-	PORTER
+	PORTER,
+	DIGIT
 } from "./strings";
 
 export const partnerMapping = [
@@ -256,5 +257,10 @@ export const partnerMapping = [
 		name: "porter",
 		partner: PORTER,
 		heading: "Delivery & Logistics"
-	}
+	},
+	{
+		name: "digit",
+		partner: DIGIT,
+		heading: "Insurence"
+	},
 ];
