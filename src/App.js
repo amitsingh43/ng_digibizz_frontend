@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 //import SecureRoute from "components/secureRoute";
 import { useDispatch,useSelector } from "react-redux";
+import TagManager from "react-gtm-module";
 
 import "regenerator-runtime/runtime.js";
 import "react-toastify/dist/ReactToastify.css";

@@ -28,7 +28,6 @@ const Partner = () => {
 	const saveBasicDetails = function () {
 		dispatch(save_basic_details(...arguments));
 	};
-
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		dispatch(header_digital_services());
@@ -64,7 +63,7 @@ const Partner = () => {
 				partner_availed: title,
 			};
 			dispatch(update_lead(body));
-			if (title !== 'NeoGrowth' & url) {
+			if ((title !== 'NeoGrowth') & url) {
 				window.open(url, '_blank');
 			}
 		} else {

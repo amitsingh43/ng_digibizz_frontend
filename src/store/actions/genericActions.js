@@ -22,7 +22,6 @@ export const downloadReport = (downloadText, setDownloadText) => {
     })
     .then(({ data }) => {
       setDownloadText("Downloaded Report");
-      console.log(data);
       // filedownload(data, "DiGiBizz Score Report.pdf");
       var blob = new Blob([data], { type: "application/pdf" });
       FileSaver.saveAs(blob, "DiGibizz Score Report.pdf");

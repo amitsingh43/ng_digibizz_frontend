@@ -8,21 +8,26 @@ const Form = ({ masterData, url, save_basic_details, title, availNowResponseText
 		full_name: null,
 		business_name: null,
 		mobile: null,
-		otp: null,
+		//otp: null,
 		cities_master_id: null,
 		partner_availed: title,
 	});
 	const [cityName, setCityName] = useState(null);
-	const setMobileNumber = function (mobile) {
-		setData({ ...data, mobile });
-	};
+	// const setMobileNumber = function (mobile) {
+	// 	setData({ ...data, mobile });
+	// };
+
+
+	// const setOTPNumber = function (otp) {
+	// 	setData({ ...data, otp });
+	// };
 
 	return (
 		<div className={'partner-form'}>
 			<div className={'form-body'}>
 				<h3>Inquire Now</h3>
 				<h5>Mobile Number</h5>
-				{/* <input
+				<input
           value={data.mobile}
           maxLength={10}
           onChange={(e) => {
@@ -32,8 +37,8 @@ const Form = ({ masterData, url, save_basic_details, title, availNowResponseText
 						}
 					}
 					}
-        /> */}
-				<OTPInput value={data.mobile} setValue={setMobileNumber} className='wrapper'/>
+        />
+				{/* <OTPInput value={data.mobile} setValue={setMobileNumber} className='wrapper' setOTP={setOTPValue}/>
 				<h5>OTP</h5>
 				<input
 					value={data.otp}
@@ -44,7 +49,7 @@ const Form = ({ masterData, url, save_basic_details, title, availNowResponseText
 							setData((data) => ({ ...data, otp: value }));
 						}
 					}}
-				/>
+				/> */}
 				<h5>Full name</h5>
 				<input
 					value={data.full_name}

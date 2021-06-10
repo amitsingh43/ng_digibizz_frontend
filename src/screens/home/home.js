@@ -119,6 +119,7 @@ export default function Home() {
 			industry_master_id: industry,
 			full_name: name,
 			mobile: mobile,
+			otp:otp,
 			business_name: businessName,
 			gender_master_id: !mrOrMs ? GENDER : mrOrMs,
 			referral_code: referralCode,
@@ -176,7 +177,7 @@ export default function Home() {
 								{otpState.text}
 							</span>
 						</div> */}
-						<OTPInput setValue={setMobile} value={mobile}/>
+						<OTPInput setValue={setMobile} value={mobile} setOTP={setOTP}/>
 						<div>
 							<div className="heading">
 								OTP<span>*</span>
