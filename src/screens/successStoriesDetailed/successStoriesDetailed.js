@@ -18,7 +18,6 @@ export default function SuccessStoriesDetailed({ match }) {
 
   const history = useHistory();
   if (!match) return <div>Hello</div>;
-  console.log(match);
   const story = SUCCESSDATA.find((data) => data.id == match.params.id);
   if (story === undefined) {
     history.push("/successStories");

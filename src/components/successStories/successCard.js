@@ -27,7 +27,6 @@ export default function SuccessCard({ name, heading, image, content, id, type })
 								src={youtube}
 								alt="Play button"
 								onClick={() => {
-									console.log(id);
 									history.push(`successStories/${id}`);
 								}}
 							/>
