@@ -11,10 +11,10 @@ import show_toast from 'util/showToast';
 import { header_digital_status } from 'store/actions';
 import contest_banner from 'assets/contest_banner.png';
 
-const answered = [];
-const distinct = [];
+let answered = [];
+let distinct = [];
 let count = 0;
-const checked = {};
+let checked = {};
 let prevTopicCounter = -1;
 
 export default function Questionnaire() {
@@ -32,6 +32,11 @@ export default function Questionnaire() {
 		if (questionsList.length === 0 && localStorage.getItem('lead_id')) {
 			dispatch(get_questions(localStorage.getItem('lead_id')));
 		}
+		answered = [];
+		distinct = [];
+		count = 0;
+		checked = {};
+		prevTopicCounter = -1;
 	}, []);
 
 	useEffect(() => {
@@ -238,7 +243,7 @@ export default function Questionnaire() {
 
 			<div className="main-content-questions">
 				<div className="row">
-					<div className="col-lg-4 col-xs-12">	
+					<div className="col-lg-4 col-xs-12">
 						<SectionList contest_banner={contest_banner} section={topicCounter} />
 					</div>
 					<div className="col-lg-7 col-xs-12 ques">
