@@ -3111,6 +3111,42 @@ export const GO_DIGIT = {
 		},
 	],
 };
+export const DIGIT = {
+	title: 'digit',
+	subTitle: ['Get Rs. 50,000 Insurance Cover for just Rs. 591 instantly'],
+	description: [
+		'Protect yourself & family against unexpected COVID expenses',
+		'Benefits of digit Covid Insurance Plan:',
+		'1. No Medical Tests',
+		'2. No Room Rent restriction or ICU limit',
+		'3. No Co-Pay requirement',
+		'4. Same premium for all age groups',
+		'5. Waiting period of only 15 days',
+		'6. Fully digital application process with no physical documentation',
+		'7. Claim documents can be submitted/uploaded online'
+	],
+	image: digit,
+	backgroundColor: '#fff',
+	url: 'https://www.godigit.com/illness-group-insurance?ts_v=202106309203309&api_key=12E1N6D6RY2J4QCTPA1V6POIUQ4TSBJZ&imd_code=1041086&utm_source=Partner&utm_medium=NEOGROWTH&utm_campaign=corona&utm_content=1041086',
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: 'image',
+			source: digit,
+		},
+		{
+			type: 'image',
+			source: goDigitOne,
+		},
+		{
+			type: 'image',
+			source: goDigitTwo,
+		},
+	],
+};
 export const CARE = {
 	title: 'Care',
 	subTitle: ['Get health cover for you & your family at an affordable price'],
@@ -3856,7 +3892,7 @@ export const PARTNERS = [
 	},
 	{
 		category: 'Insurance',
-		data: [CARE, GO_DIGIT],
+		data: [CARE, GO_DIGIT, DIGIT],
 		tag: 'insurance',
 	},
 	{
