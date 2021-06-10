@@ -1,6 +1,6 @@
-import React from "react";
-import "../styles/tAndC.css";
+import "styles/tAndC.css";
 import Footer from "./main/footer";
+
 const TAndC = ({ showmore, setCheck }) => {
 	return (
 		<div style={{ width: "100vw", height: "100vh" }}>

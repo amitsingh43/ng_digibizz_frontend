@@ -1,8 +1,7 @@
-import React from "react";
 
 const contestTAndC = () => {
 	return (
-		<React.Fragment>
+		<>
 			<div
 				style={{ color: "black", fontSize: 17, marginBottom: 10, marginTop: 10 }}
 			>
@@ -50,7 +49,7 @@ const contestTAndC = () => {
 					Contest.
 				</li>
 			</ul>
-		</React.Fragment>
+		</>
 	);
 };
 

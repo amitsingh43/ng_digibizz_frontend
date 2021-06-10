@@ -1,0 +1,19 @@
+.number-wrapper {
+	display: flex;
+	padding-right: 50;
+	margin-bottom: 20px;
+	border-bottom-width: 0.2px;
+	border-bottom-color: #68696a;
+	border-bottom-style: ridge;
+}
+.number-wrapper > input[type='phone'] {
+	margin: 0;
+	flex: 1;
+	border: none;
+}
+.number-wrapper  .send-otp {
+	color: #28b04b;
+	cursor: pointer;
+	display: inline;
+	font-size: 13px;
+}

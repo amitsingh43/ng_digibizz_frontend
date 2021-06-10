@@ -1,16 +1,13 @@
+import createReducer from "util/createReducer";
 import { ADD_ERROR, CLEAR_ERROR } from "../actionTypes";
 
 const initialState = "";
-const errorMessage = (state = initialState, action) => {
-	switch (action.type) {
-		case ADD_ERROR:
-			state = action.payload;
-			return state;
-		case CLEAR_ERROR:
-			state = "";
-			return state;
-		default:
-			return state;
-	}
-};
+const errorMessage = createReducer(initialState, {
+  [ADD_ERROR]: (state, payload) => {
+    return payload;
+  },
+  [CLEAR_ERROR]: (state, payload) => {
+    return "";
+  },
+});
 export default errorMessage;

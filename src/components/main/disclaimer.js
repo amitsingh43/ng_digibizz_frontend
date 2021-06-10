@@ -1,5 +1,4 @@
-import React from "react";
-import "../../styles/disclaimer.css";
+import "styles/disclaimer.css";
 
 const Disclaimer = () => {
 	return (
