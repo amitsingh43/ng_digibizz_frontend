@@ -7,7 +7,7 @@ import { post_user_details } from 'screens/questionnaire/store/actions';
 import 'styles/home.css';
 import ContestTAndC from 'components/contestTAndC';
 import TAndC from 'components/termsAndConditions';
-import OTPInput from "components/OTPInput";
+import OTPInput from 'components/OTPInput';
 
 import {
 	TELL_ABOUT_YOU,
@@ -17,7 +17,6 @@ import {
 	TERMS_AND_CONDITIONS_1,
 } from 'store/strings';
 import contest_banner from 'assets/contest_banner.png';
-
 
 export default function Home() {
 	const dispatch = useDispatch();
@@ -29,7 +28,6 @@ export default function Home() {
 		dispatch(header_digital_status());
 		dispatch(get_master_data());
 	}, []);
-	
 
 	const sel = document.getElementById('city');
 	const text = sel ? sel.options[sel.selectedIndex].text : null;
@@ -119,7 +117,7 @@ export default function Home() {
 			industry_master_id: industry,
 			full_name: name,
 			mobile: mobile,
-			otp:otp,
+			otp: otp,
 			business_name: businessName,
 			gender_master_id: !mrOrMs ? GENDER : mrOrMs,
 			referral_code: referralCode,
@@ -155,164 +153,132 @@ export default function Home() {
 					<div className="mandatory-small">
 						<span>* </span> All fields are mandatory
 					</div>
-					<div className="col-lg-2  form" style={{ marginLeft: 15 }}>
-						<div className="heading">
-							Mobile Number<span>*</span>
-						</div>
-						{/* <div className="number-wrapper">
-							<input
-								id="phone"
-								type="phone"
-								className="col-xs-12"
-								value={mobile}
-								onChange={(e) => {
-									const value = e.target.value.replace(/\D/g, '');
-									if (value.length <= 10) {
-										setMobile(value);
-										localStorage.setItem('mobile', value);
-									}
-								}}
-							/>
-							<span className="send-otp" onClick={handleOTP}>
-								{otpState.text}
-							</span>
-						</div> */}
-						<OTPInput setValue={setMobile} value={mobile} setOTP={setOTP}/>
-						<div>
+					<div className="visible-lg">
+						<div className="col-lg-2 form" style={{ marginLeft: 15 }}>
 							<div className="heading">
-								OTP<span>*</span>
+								Mobile Number<span>*</span>
 							</div>
-							<input
-								id="otp"
-								type="phone"
-								className="col-xs-12"
-								value={otp}
-								onChange={(e) => {
-									const value = e.target.value.replace(/\D/g, '');
-									if (value.length <= 6) {
-										setOTP(value);
-										localStorage.setItem('otp', value);
-									}
-								}}
-							/>
-							<div style={{ marginTop: 40 }}></div>
-							<div className="heading">
-								Business Name<span>*</span>
-							</div>
-							<input
-								id="business-name"
-								type="text"
-								className="col-xs-12"
-								value={businessName}
-								onChange={(e) => setBusinessName(e.target.value)}
-							/>
-							{/* <div style={{ marginTop: 100 }}></div> */}
-						</div>
-						<div className="annual">
-							<div style={{ marginTop: 40 }}></div>
-							<div className="heading">
-								City<span>*</span>
-							</div>
-							<select
-								id="city"
-								onChange={(e) => {
-									setCity(e.target.value);
-									localStorage.setItem(
-										'cityName',
-										cities.find((val) => val._id === e.target.value).name
-									);
-								}}
-							>
-								<option value={null} selected disabled hidden>
-									Select
-								</option>
-								{cities.map((city, index) => (
-									<option value={city._id} key={index}>
-										{city.name}
-									</option>
-								))}
-							</select>
-							{text === 'Other' && (
-								<div>
-									<div style={{ marginTop: 40 }}></div>
-									<div className="heading">
-										Please specify city<span>*</span>
-									</div>
-									<input
-										id="other-city"
-										type="text"
-										className="col-xs-12"
-										value={otherCity}
-										onChange={(e) => setOtherCity(e.target.value)}
-									/>
+							<OTPInput setValue={setMobile} value={mobile} setOTP={setOTP} />
+							<div>
+								<div className="heading">
+									Full Name<span>*</span>
 								</div>
-							)}
-							<div style={{ marginTop: 20 }}></div>
-						</div>
-					</div>
-					<div className="col-lg-1"></div>
-					<div className="col-lg-2 form" style={{ marginLeft: 15 }}>
-						<div>
-							<div className="heading">
-								Full Name<span>*</span>
-							</div>
-							<select id="mr-or-mrs" onChange={(e) => setMrOrMs(e.target.value)}>
-								{gender.length > 0 && (
-									<option selected disabled hidden>
-										Mr.
-									</option>
-								)}
-								{gender.map((gen, index) => (
-									<option value={gen._id} key={index}>
-										{gen.name}
-									</option>
-								))}
-							</select>
-							<input
-								type="text"
-								className="col-xs-12"
-								id="name"
-								value={name}
-								onChange={(e) => {
-									setName(e.target.value);
-									localStorage.setItem('name', e.target.value);
-								}}
-							/>
-							<div className="annual">
-								<div className="heading" style={{ marginTop: 40 }}>
-									Industry<span>*</span>
-								</div>
-								<select id="industry" onChange={(e) => setIndustry(e.target.value)}>
-									<option value="" selected disabled hidden>
-										Select
-									</option>
-									{industries.map((industry, index) => (
-										<option value={industry._id} key={index}>
-											{industry.name}
+								<select id="mr-or-mrs" onChange={(e) => setMrOrMs(e.target.value)}>
+									{gender.length > 0 && (
+										<option selected disabled hidden>
+											Mr.
+										</option>
+									)}
+									{gender.map((gen, index) => (
+										<option value={gen._id} key={index}>
+											{gen.name}
 										</option>
 									))}
 								</select>
+								<input
+									type="text"
+									className="col-xs-12"
+									id="name"
+									value={name}
+									onChange={(e) => {
+										setName(e.target.value);
+										localStorage.setItem('name', e.target.value);
+									}}
+								/>
+
+								<div style={{ marginTop: 40 }}></div>
+								<div className="heading">
+									Business Name<span>*</span>
+								</div>
+								<input
+									id="business-name"
+									type="text"
+									className="col-xs-12"
+									value={businessName}
+									onChange={(e) => setBusinessName(e.target.value)}
+								/>
+								{/* <div style={{ marginTop: 100 }}></div> */}
+							</div>
+							<div className="annual">
+								<div style={{ marginTop: 40 }}></div>
+								<div className="heading">
+									City<span>*</span>
+								</div>
+								<select
+									id="city"
+									onChange={(e) => {
+										setCity(e.target.value);
+										localStorage.setItem(
+											'cityName',
+											cities.find((val) => val._id === e.target.value).name
+										);
+									}}
+								>
+									<option value={null} selected disabled hidden>
+										Select
+									</option>
+									{cities.map((city, index) => (
+										<option value={city._id} key={index}>
+											{city.name}
+										</option>
+									))}
+								</select>
+								{text === 'Other' && (
+									<div>
+										<div style={{ marginTop: 40 }}></div>
+										<div className="heading">
+											Please specify city<span>*</span>
+										</div>
+										<input
+											id="other-city"
+											type="text"
+											className="col-xs-12"
+											value={otherCity}
+											onChange={(e) => setOtherCity(e.target.value)}
+										/>
+									</div>
+								)}
+								<div style={{ marginTop: 20 }}></div>
 							</div>
 						</div>
-						<div>
-							<div className="heading" style={{ marginTop: 20 }}>
-								Email id <span>*</span>
+						<div className="col-lg-1"></div>
+						<div className="col-lg-2 form" style={{ marginLeft: 15 }}>
+							<div>
+								<div className="heading">
+									OTP<span>*</span>
+								</div>
+								<input
+									id="otp"
+									type="phone"
+									className="col-xs-12"
+									value={otp}
+									onChange={(e) => {
+										const value = e.target.value.replace(/\D/g, '');
+										if (value.length <= 6) {
+											setOTP(value);
+											localStorage.setItem('otp', value);
+										}
+									}}
+								/>
+								<div className="annual">
+									<div className="heading" style={{ marginTop: 40 }}>
+										Industry<span>*</span>
+									</div>
+									<select id="industry" onChange={(e) => setIndustry(e.target.value)}>
+										<option value="" selected disabled hidden>
+											Select
+										</option>
+										{industries.map((industry, index) => (
+											<option value={industry._id} key={index}>
+												{industry.name}
+											</option>
+										))}
+									</select>
+								</div>
 							</div>
-							<input
-								type="text"
-								id="referral"
-								readOnly
-								onFocus={(e) => e.target.removeAttribute('readonly')}
-								autoComplete="off"
-								className="col-xs-12"
-								value={email}
-								onChange={(e) => setEmail(e.target.value)}
-							/>
-
-							<div style={{ marginTop: 40 }}></div>
 							<div>
 								<div className="heading" style={{ marginTop: 20 }}>
-									Referral Code <span style={{ color: 'grey' }}>(optional)</span>
+									Email id <span>*</span>
 								</div>
 								<input
 									type="text"
@@ -321,11 +287,187 @@ export default function Home() {
 									onFocus={(e) => e.target.removeAttribute('readonly')}
 									autoComplete="off"
 									className="col-xs-12"
-									value={referralCode}
-									onChange={(e) => setReferralCode(e.target.value)}
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
 								/>
 
 								<div style={{ marginTop: 40 }}></div>
+								<div>
+									<div className="heading" style={{ marginTop: 20 }}>
+										Referral Code <span style={{ color: 'grey' }}>(optional)</span>
+									</div>
+									<input
+										type="text"
+										id="referral"
+										readOnly
+										onFocus={(e) => e.target.removeAttribute('readonly')}
+										autoComplete="off"
+										className="col-xs-12"
+										value={referralCode}
+										onChange={(e) => setReferralCode(e.target.value)}
+									/>
+
+									<div style={{ marginTop: 40 }}></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div className="hidden-lg">
+						<div className="col-sm-12 form" style={{ marginLeft: 15 }}>
+							<div className="heading">
+								Mobile Number<span>*</span>
+							</div>
+							<OTPInput setValue={setMobile} value={mobile} setOTP={setOTP} />
+							<div>
+								<div className="heading">
+									OTP<span>*</span>
+								</div>
+								<input
+									id="otp"
+									type="phone"
+									className="col-xs-12"
+									value={otp}
+									onChange={(e) => {
+										const value = e.target.value.replace(/\D/g, '');
+										if (value.length <= 6) {
+											setOTP(value);
+											localStorage.setItem('otp', value);
+										}
+									}}
+								/>
+								<div style={{ marginTop: 40 }}></div>
+
+								{/* <div style={{ marginTop: 100 }}></div> */}
+							</div>
+							<div className="annual">
+								<div style={{ marginTop: 40 }}></div>
+								<div className="heading">
+									Full Name<span>*</span>
+								</div>
+								<select id="mr-or-mrs" onChange={(e) => setMrOrMs(e.target.value)}>
+									{gender.length > 0 && (
+										<option selected disabled hidden>
+											Mr.
+										</option>
+									)}
+									{gender.map((gen, index) => (
+										<option value={gen._id} key={index}>
+											{gen.name}
+										</option>
+									))}
+								</select>
+								<input
+									type="text"
+									className="col-xs-12"
+									id="name"
+									value={name}
+									onChange={(e) => {
+										setName(e.target.value);
+										localStorage.setItem('name', e.target.value);
+									}}
+								/>
+								<div className="heading">
+									Business Name<span>*</span>
+								</div>
+								<input
+									id="business-name"
+									type="text"
+									className="col-xs-12"
+									value={businessName}
+									onChange={(e) => setBusinessName(e.target.value)}
+								/>
+								<div style={{ marginTop: 20 }}></div>
+							</div>
+						</div>
+						<div className="col-sm-12 form" style={{ marginLeft: 15 }}>
+							<div>
+								<div className="heading">
+									City<span>*</span>
+								</div>
+								<select
+									id="city"
+									onChange={(e) => {
+										setCity(e.target.value);
+										localStorage.setItem(
+											'cityName',
+											cities.find((val) => val._id === e.target.value).name
+										);
+									}}
+								>
+									<option value={null} selected disabled hidden>
+										Select
+									</option>
+									{cities.map((city, index) => (
+										<option value={city._id} key={index}>
+											{city.name}
+										</option>
+									))}
+								</select>
+								{text === 'Other' && (
+									<div>
+										<div style={{ marginTop: 40 }}></div>
+										<div className="heading">
+											Please specify city<span>*</span>
+										</div>
+										<input
+											id="other-city"
+											type="text"
+											className="col-xs-12"
+											value={otherCity}
+											onChange={(e) => setOtherCity(e.target.value)}
+										/>
+									</div>
+								)}
+								<div className="annual">
+									<div className="heading" style={{ marginTop: 40 }}>
+										Industry<span>*</span>
+									</div>
+									<select id="industry" onChange={(e) => setIndustry(e.target.value)}>
+										<option value="" selected disabled hidden>
+											Select
+										</option>
+										{industries.map((industry, index) => (
+											<option value={industry._id} key={index}>
+												{industry.name}
+											</option>
+										))}
+									</select>
+								</div>
+							</div>
+							<div>
+								<div className="heading" style={{ marginTop: 20 }}>
+									Email id <span>*</span>
+								</div>
+								<input
+									type="text"
+									id="referral"
+									readOnly
+									onFocus={(e) => e.target.removeAttribute('readonly')}
+									autoComplete="off"
+									className="col-xs-12"
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
+								/>
+
+								<div style={{ marginTop: 40 }}></div>
+								<div>
+									<div className="heading" style={{ marginTop: 20 }}>
+										Referral Code <span style={{ color: 'grey' }}>(optional)</span>
+									</div>
+									<input
+										type="text"
+										id="referral"
+										readOnly
+										onFocus={(e) => e.target.removeAttribute('readonly')}
+										autoComplete="off"
+										className="col-xs-12"
+										value={referralCode}
+										onChange={(e) => setReferralCode(e.target.value)}
+									/>
+
+									<div style={{ marginTop: 40 }}></div>
+								</div>
 							</div>
 						</div>
 					</div>
