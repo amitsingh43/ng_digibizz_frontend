@@ -39,7 +39,7 @@ import {
 	BLUE_OCKTOPUS,
 	TERRAGO_LOGISTICS,
 	PORTER,
-	DIGIT
+	COVID_COVER
 } from "./strings";
 
 export const partnerMapping = [
@@ -259,8 +259,8 @@ export const partnerMapping = [
 		heading: "Delivery & Logistics"
 	},
 	{
-		name: "digit",
-		partner: DIGIT,
+		name: "covid cover",
+		partner: COVID_COVER,
 		heading: "Insurance"
 	},
 ];
