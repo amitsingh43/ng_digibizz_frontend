@@ -25,6 +25,7 @@ import smartech from '../assets/partners/smartech.svg';
 import pinnacle from '../assets/partners/pinnacle.svg';
 import syrow from '../assets/partners/syrow.svg';
 import digit from '../assets/partners/digit.jpg';
+import covid_cover from '../assets/partners/digit.jpg';
 import care from '../assets/partners/care.svg';
 import razorpay from '../assets/partners/razorpay.svg';
 import vyapar from '../assets/partners/vyapar.svg';
@@ -110,8 +111,8 @@ import E_Startup_IndiaTwo from '../assets/partners/carousel/E_Startup_India/two.
 import goDigitOne from '../assets/partners/carousel/goDigit/one.jpg';
 import goDigitTwo from '../assets/partners/carousel/goDigit/two.jpg';
 
-import DigitOne from '../assets/partners/carousel/Digit/one.png';
-import DigitTwo from '../assets/partners/carousel/Digit/two.png';
+import covidCoverOne from '../assets/partners/carousel/Covid_cover/one.png';
+import covidCoverTwo from '../assets/partners/carousel/Covid_cover/two.png';
 
 import InstabillOne from '../assets/partners/carousel/Instabill/one.jpg';
 import InstabillTwo from '../assets/partners/carousel/Instabill/two.jpg';
@@ -3114,9 +3115,9 @@ export const GO_DIGIT = {
 		},
 	],
 };
-export const DIGIT = {
-	title: 'digit',
-	subTitle: ['Get Rs. 50,000 Insurance Cover for just Rs. 591 instantly'],
+export const COVID_COVER = {
+	title: 'COVID Cover',
+	subTitle: ['Get Rs.50,000 Covid Insurance Cover for just Rs.591 instantly'],
 	description: [
 		'Protect yourself & family against unexpected COVID expenses',
 		'Benefits of digit Covid Insurance Plan:',
@@ -3128,7 +3129,7 @@ export const DIGIT = {
 		'6. Fully digital application process with no physical documentation',
 		'7. Claim documents can be submitted/uploaded online'
 	],
-	image: digit,
+	image: covid_cover,
 	backgroundColor: '#fff',
 	url: 'https://www.godigit.com/illness-group-insurance?ts_v=202106309203309&api_key=12E1N6D6RY2J4QCTPA1V6POIUQ4TSBJZ&imd_code=1041086&utm_source=Partner&utm_medium=NEOGROWTH&utm_campaign=corona&utm_content=1041086',
 	stars: null,
@@ -3138,15 +3139,15 @@ export const DIGIT = {
 	carousel: [
 		{
 			type: 'image',
-			source: digit,
+			source: covid_cover,
 		},
 		{
 			type: 'image',
-			source: DigitOne,
+			source: covidCoverOne,
 		},
 		{
 			type: 'image',
-			source: DigitTwo,
+			source: covidCoverTwo,
 		},
 	],
 };
@@ -3895,7 +3896,7 @@ export const PARTNERS = [
 	},
 	{
 		category: 'Insurance',
-		data: [CARE, GO_DIGIT, DIGIT],
+		data: [CARE, GO_DIGIT, COVID_COVER],
 		tag: 'insurance',
 	},
 	{

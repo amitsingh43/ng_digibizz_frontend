@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory, useLocation, useParams } from 'react-router-dom';
 
 import 'styles/partner.css';
-import { header_digital_services, update_lead, get_master_data, save_basic_details } from 'store/actions';
+import { header_digital_services, update_lead, get_master_data, save_basic_details, show_form } from 'store/actions';
 import { partnerMapping } from 'store/partner_mapping';
 import { Form, DataSection, PartnerCard, PartnerDetails } from './components';
 
@@ -19,6 +19,7 @@ const Partner = () => {
 		testimonials: false,
 		about: false,
 	});
+	const [isFormVisible, toggleForm] = useState(false);
 
 	var { partner, category } = useParams();
 	var data = partnerMapping.find(
@@ -28,11 +29,23 @@ const Partner = () => {
 	const saveBasicDetails = function () {
 		dispatch(save_basic_details(...arguments));
 	};
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		dispatch(header_digital_services());
 		if (masterData.cities.length === 0) {
 			dispatch(get_master_data());
+		}
+		const leadID=localStorage.getItem('lead_id');
+
+		async function showForm(){
+			const isFormShown=await dispatch(show_form(leadID));
+			toggleForm(!isFormShown); 
+		}
+		if(leadID){
+			showForm();
+		} else{
+			toggleForm(true);
 		}
 	}, []);
 
@@ -63,7 +76,7 @@ const Partner = () => {
 				partner_availed: title,
 			};
 			dispatch(update_lead(body));
-			if (title !== 'NeoGrowth' && url != "") {
+			if (title !== 'NeoGrowth' && url != '') {
 				window.open(url, '_blank');
 			}
 		} else {
@@ -108,7 +121,7 @@ const Partner = () => {
 						carouselLength={carousel.length}
 					/>
 				</div>
-				{!localStorage.getItem('lead_id') && (
+				{isFormVisible && (
 					<div style={{ flex: 1 }} className={'form-in-mobile'}>
 						<Form masterData={masterData} url={url} save_basic_details={saveBasicDetails} title={title} />
 					</div>
@@ -149,7 +162,7 @@ const Partner = () => {
 					</div>
 				</div>
 			</div>
-			{!localStorage.getItem('lead_id') && (
+			{isFormVisible && (
 				<div style={{ flex: 1 }} className={'form-in-desktop'}>
 					<Form masterData={masterData} url={url} save_basic_details={saveBasicDetails} title={title} />
 				</div>

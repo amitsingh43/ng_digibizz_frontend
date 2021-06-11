@@ -1,5 +1,5 @@
 import show_toast from 'util/showToast';
-import { _post } from 'store/api';
+import { _post, _get } from 'store/api';
 import { add_error } from './errorActions';
 import Tracking from 'util/tracking';
 import { SET_USER_DETAILS, RESET_USER } from 'store/actionTypes';
@@ -11,10 +11,10 @@ export const set_user_details = (details) => {
 	};
 };
 export const reset_user = () => {
-    return {
-      type: RESET_USER,
-    };
-  };
+	return {
+		type: RESET_USER,
+	};
+};
 
 export const update_lead =
 	(body, ENDPOINT = '/api/update_lead') =>
@@ -75,10 +75,25 @@ export const getOTP =
 	async (dispatch) => {
 		try {
 			const res = await _post(ENDPOINT, { phone });
-      if(process.env.isProd === "no"){
-        localStorage.setItem('otp', res.data.password);
-      }
-      show_toast(res.message, 'SUCCESS');
+			if (process.env.isProd === 'no') {
+				localStorage.setItem('otp', res.data.password);
+			}
+			show_toast(res.message, 'SUCCESS');
+		} catch (error) {
+			let message = 'Something went wrong! Please try later.';
+
+			if (error && error.response && error.response.data && error.response.data.message) {
+				message = error.response.data.message;
+			}
+			dispatch(add_error(message));
+		}
+	};
+export const show_form =
+	(leadID, ENDPOINT = '/api/get_lead/') =>
+	async (dispatch) => {
+		try {
+			const { mobile_verified } = await _get(ENDPOINT + leadID);
+			return mobile_verified;
 		} catch (error) {
 			let message = 'Something went wrong! Please try later.';
 
