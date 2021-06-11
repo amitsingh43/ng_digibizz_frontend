@@ -36,7 +36,12 @@ const Form = ({ masterData, url, save_basic_details, title, availNowResponseText
 						}
 					}}
 				/> */}
-				<OTPInput value={data.mobile} setValue={setMobileNumber} className="wrapper" setOTP={setOTPValue} />
+				<OTPInput
+					value={data.mobile}
+					setValue={setMobileNumber}
+					className="wrapper"
+					setOTP={setOTPValue}
+				/>
 				<h5>OTP</h5>
 				<input
 					value={data.otp}
@@ -79,7 +84,9 @@ const Form = ({ masterData, url, save_basic_details, title, availNowResponseText
 					<a>
 						<div
 							className={'avail-now'}
-							onClick={() => save_basic_details(data, url, cityName, availNowResponseText)}
+							onClick={() => {
+								save_basic_details(data, url, cityName, availNowResponseText);
+							}}
 						>
 							Avail Now
 						</div>

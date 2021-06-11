@@ -11,6 +11,9 @@
 	flex: 1;
 	border: none;
 }
+.number-wrapper > input[type='phone']:focus {
+	border: none;
+}
 .number-wrapper  .send-otp {
 	color: #28b04b;
 	cursor: pointer;

@@ -18,7 +18,7 @@ function reducer(state, action) {
 		case 'decrement':
 			return { ...state, type: otpStateTypes.WAITING, value: state.value - 1, text: `retry in ${state.value}s` };
 		case 'reset':
-			return initialState;
+			return { ...initialState };
 		case 'resend':
 			return { ...state, type: otpStateTypes.ACTIVE, text: 'Resend OTP', value: timer };
 		default:
@@ -54,6 +54,10 @@ export default function OTPInput({ setValue, value, className, setOTP }) {
 				}
 				dispatchOtp({ type: 'decrement' });
 			}, 1000);
+		} else if (otpState.type === otpStateTypes.RESET) {
+			if (timer) {
+				clearInterval(timer);
+			}
 		}
 
 		return () => {
@@ -88,3 +92,4 @@ export default function OTPInput({ setValue, value, className, setOTP }) {
 		</div>
 	);
 }
+

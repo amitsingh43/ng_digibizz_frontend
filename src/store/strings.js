@@ -110,6 +110,9 @@ import E_Startup_IndiaTwo from '../assets/partners/carousel/E_Startup_India/two.
 import goDigitOne from '../assets/partners/carousel/goDigit/one.jpg';
 import goDigitTwo from '../assets/partners/carousel/goDigit/two.jpg';
 
+import DigitOne from '../assets/partners/carousel/Digit/one.png';
+import DigitTwo from '../assets/partners/carousel/Digit/two.png';
+
 import InstabillOne from '../assets/partners/carousel/Instabill/one.jpg';
 import InstabillTwo from '../assets/partners/carousel/Instabill/two.jpg';
 
@@ -3139,11 +3142,11 @@ export const DIGIT = {
 		},
 		{
 			type: 'image',
-			source: goDigitOne,
+			source: DigitOne,
 		},
 		{
 			type: 'image',
-			source: goDigitTwo,
+			source: DigitTwo,
 		},
 	],
 };
