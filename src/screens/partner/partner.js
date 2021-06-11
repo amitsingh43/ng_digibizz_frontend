@@ -29,6 +29,7 @@ const Partner = () => {
 	const saveBasicDetails = function () {
 		dispatch(save_basic_details(...arguments));
 	};
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 		dispatch(header_digital_services());
@@ -36,9 +37,10 @@ const Partner = () => {
 			dispatch(get_master_data());
 		}
 		const leadID=localStorage.getItem('lead_id');
+
 		async function showForm(){
 			const isFormShown=await dispatch(show_form(leadID));
-			toggleForm(isFormShown); 
+			toggleForm(!isFormShown); 
 		}
 		if(leadID){
 			showForm();
@@ -160,7 +162,7 @@ const Partner = () => {
 					</div>
 				</div>
 			</div>
-			{!localStorage.getItem('lead_id') && (
+			{isFormVisible && (
 				<div style={{ flex: 1 }} className={'form-in-desktop'}>
 					<Form masterData={masterData} url={url} save_basic_details={saveBasicDetails} title={title} />
 				</div>
