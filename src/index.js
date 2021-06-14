@@ -1,26 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import reportWebVitals from "./reportWebVitals";
-import allReducers from "./store/reducers";
 import { createBrowserHistory } from "history";
 
+import reportWebVitals from "./reportWebVitals";
+import allReducers from "./store/reducers";
+import App from "./App";
+
+
+const history = createBrowserHistory();
 const store = createStore(
-	allReducers,
-	composeWithDevTools(applyMiddleware(thunk))
+  allReducers,
+  composeWithDevTools(applyMiddleware(thunk))
 );
 
 ReactDOM.render(
-	<React.StrictMode>
-		<Provider store={store}>
-			<App history={history} />
-		</Provider>
-	</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>
+    <Provider store={store}>
+      <App history={history} />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

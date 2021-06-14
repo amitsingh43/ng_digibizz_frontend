@@ -1,30 +1,23 @@
-import React from "react";
 import { useState } from "react";
-import logo from "../../assets/logo.png";
-import header_menu from "../../assets/header_menu.svg";
-import header_close from "../../assets/header_close.svg";
-import "../../styles/header.css";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
+
+import logo from "assets/logo.png";
+import header_menu from "assets/header_menu.svg";
+import header_close from "assets/header_close.svg";
+import "styles/header.css";
+
 import {
 	header_reset,
-	homepage_decrement,
-	reset_answers,
-	reset_questions,
-	reset_user,
-	reset_results,
-	reset_recommendations,
-} from "../../store/actions";
-function Header({
-	headerState,
-	header_reset,
-	homepage_decrement,
-	reset_answers,
-	reset_questions,
-	reset_user,
-	reset_results,
-	reset_recommendations,
-}) {
+	homepage_decrement
+} from "store/actions";
+export default function Header() {
+	const dispatch = useDispatch();
+	const headerState = useSelector((state) => state.headerState);
+	const headerReset=function(){
+		dispatch(header_reset());
+	}
+
 	const [menuOpened, changeMenuOpened] = useState(false);
 	return (
 		<nav className="navbar navbar-default" id="header-main">
@@ -49,7 +42,7 @@ function Header({
 							alt="menu"
 						/>
 					</div>
-					<Link onClick={header_reset} className="navbar-brand a" to="/">
+					<Link onClick={headerReset} className="navbar-brand a" to="/">
 						<img src={logo} alt="Logo" />
 					</Link>
 				</div>
@@ -59,7 +52,7 @@ function Header({
 							<Link
 								className={headerState === 0 ? "a active" : "a"}
 								to="/knowStatus"
-								onClick={() => homepage_decrement()}
+								onClick={() => dispatch(homepage_decrement())}
 							>
 								Know Your Digital Status
 							</Link>
@@ -88,25 +81,17 @@ function Header({
 								Success Stories
 							</Link>
 						</li>
+						{/* <li>
+							<Link
+								className={headerState === 3 ? "a active" : "a"}
+								to="/settings"
+							>
+								Login/Signup
+							</Link>
+						</li> */}
 					</ul>
 				</div>
 			</div>
 		</nav>
 	);
 }
-
-const mapStateToProps = (state) => {
-	return {
-		headerState: state.headerState,
-	};
-};
-
-export default connect(mapStateToProps, {
-	header_reset,
-	homepage_decrement,
-	reset_answers,
-	reset_questions,
-	reset_user,
-	reset_results,
-	reset_recommendations,
-})(Header);

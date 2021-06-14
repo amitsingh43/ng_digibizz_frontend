@@ -25,6 +25,7 @@ import smartech from '../assets/partners/smartech.svg';
 import pinnacle from '../assets/partners/pinnacle.svg';
 import syrow from '../assets/partners/syrow.svg';
 import digit from '../assets/partners/digit.jpg';
+import covid_cover from '../assets/partners/digit.jpg';
 import care from '../assets/partners/care.svg';
 import razorpay from '../assets/partners/razorpay.svg';
 import vyapar from '../assets/partners/vyapar.svg';
@@ -109,6 +110,9 @@ import E_Startup_IndiaTwo from '../assets/partners/carousel/E_Startup_India/two.
 
 import goDigitOne from '../assets/partners/carousel/goDigit/one.jpg';
 import goDigitTwo from '../assets/partners/carousel/goDigit/two.jpg';
+
+import covidCoverOne from '../assets/partners/carousel/Covid_cover/one.png';
+import covidCoverTwo from '../assets/partners/carousel/Covid_cover/two.png';
 
 import InstabillOne from '../assets/partners/carousel/Instabill/one.jpg';
 import InstabillTwo from '../assets/partners/carousel/Instabill/two.jpg';
@@ -3111,6 +3115,42 @@ export const GO_DIGIT = {
 		},
 	],
 };
+export const COVID_COVER = {
+	title: 'COVID Cover',
+	subTitle: ['Get Rs.50,000 Covid Insurance Cover for just Rs.591 instantly'],
+	description: [
+		'Protect yourself & family against unexpected COVID expenses',
+		'Benefits of digit Covid Insurance Plan:',
+		'1. No Medical Tests',
+		'2. No Room Rent restriction or ICU limit',
+		'3. No Co-Pay requirement',
+		'4. Same premium for all age groups',
+		'5. Waiting period of only 15 days',
+		'6. Fully digital application process with no physical documentation',
+		'7. Claim documents can be submitted/uploaded online'
+	],
+	image: covid_cover,
+	backgroundColor: '#fff',
+	url: 'https://www.godigit.com/illness-group-insurance?ts_v=202106309203309&api_key=12E1N6D6RY2J4QCTPA1V6POIUQ4TSBJZ&imd_code=1041086&utm_source=Partner&utm_medium=NEOGROWTH&utm_campaign=corona&utm_content=1041086',
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+		{
+			type: 'image',
+			source: covid_cover,
+		},
+		{
+			type: 'image',
+			source: covidCoverOne,
+		},
+		{
+			type: 'image',
+			source: covidCoverTwo,
+		},
+	],
+};
 export const CARE = {
 	title: 'Care',
 	subTitle: ['Get health cover for you & your family at an affordable price'],
@@ -3856,7 +3896,7 @@ export const PARTNERS = [
 	},
 	{
 		category: 'Insurance',
-		data: [CARE, GO_DIGIT],
+		data: [CARE, GO_DIGIT, COVID_COVER],
 		tag: 'insurance',
 	},
 	{

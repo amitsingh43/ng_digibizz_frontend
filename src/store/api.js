@@ -1,4 +1,4 @@
-import axiosInstance from "../util/axiosInstance";
+import axiosInstance from "util/axiosInstance";
 
 export const _get = async (ENDPOINT) => {
 	return await axiosInstance.get(ENDPOINT);

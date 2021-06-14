@@ -55,6 +55,13 @@
 	border-bottom: 1px solid black;
 }
 
+.partner-form .wrapper{
+	margin-bottom:30px;
+}
+.partner-form .wrapper input[type='phone'] {
+	padding:0
+}
+
 .partner-main .discount-icon {
 	width: 20px;
 	height: 20px;

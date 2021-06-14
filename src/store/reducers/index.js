@@ -1,26 +1,26 @@
-import questionCounter from "./questionCounter";
-import homepageCounter from "./homePage";
-import headerState from "./headerState";
-import userDetails from "./userDetails";
-import answers from "./answers";
-import questionsList from "./questions";
-import recommendations from "./recommendations";
-import masterData from "./masterData";
-import setResults from "./setResults";
-import errorMessage from "./errorMessage";
 import { combineReducers } from "redux";
 
+import {
+  questionCounter,
+  questionsList,
+  answers
+} from "screens/questionnaire/store/reducer";
+import { recommendations, results } from "screens/report/store/reducer";
+import headerState from "./headerState";
+import userDetails from "./userDetails";
+import masterData from "./masterData";
+import errorMessage from "./errorMessage";
+
 const allReducers = combineReducers({
-	questionCounter: questionCounter,
-	homepageCounter: homepageCounter,
-	headerState: headerState,
-	userDetails: userDetails,
-	answers: answers,
-	questionsList: questionsList,
-	recommendations: recommendations,
-	masterData: masterData,
-	setResults: setResults,
-	errorMessage: errorMessage,
+  questionCounter: questionCounter,
+  headerState: headerState,
+  userDetails: userDetails,
+  answers: answers,
+  questionsList: questionsList,
+  recommendations: recommendations,
+  masterData: masterData,
+  setResults: results,
+  errorMessage: errorMessage,
 });
 
 export default allReducers;
