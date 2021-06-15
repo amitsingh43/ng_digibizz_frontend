@@ -3119,7 +3119,7 @@ export const COVID_COVER = {
 	title: 'COVID Cover',
 	subTitle: ['Get Rs.50,000 Covid Insurance Cover for just Rs.591 instantly'],
 	description: [
-		'Protect yourself & family against unexpected COVID expenses',
+		'Protect yourself & family against unexpected COVID related hospitalization expenses',
 		'Benefits of digit Covid Insurance Plan:',
 		'1. No Medical Tests',
 		'2. No Room Rent restriction or ICU limit',
