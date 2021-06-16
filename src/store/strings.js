@@ -3392,7 +3392,7 @@ export const EASY_FILE_ITR = {
 
 export const HYLO_BIZ = {
 	title: 'Hylo.biz',
-	subTitle: ['Life time free offer on SaaS fee waiver’ for customers who are onboarded till June.'],
+	subTitle: ['Lifetime free offer on SaaS fee.'],
 	image: hylo_biz,
 	description: [
 		'Hylobiz is a Powerful & Simplified tool to:',
