@@ -3131,7 +3131,7 @@ export const COVID_COVER = {
 	],
 	image: covid_cover,
 	backgroundColor: '#fff',
-	url: 'https://www.godigit.com/illness-group-insurance?ts_v=202106309203309&api_key=12E1N6D6RY2J4QCTPA1V6POIUQ4TSBJZ&imd_code=1041086&utm_source=Partner&utm_medium=NEOGROWTH&utm_campaign=corona&utm_content=1041086',
+	url: 'https://www.godigit.com/illness-group-insurance?api_key=12E1N6D6RY2J4QCTPA1V6POIUQ4TSBJZ&imd_code=1041086&utm_source=Partner&utm_medium=NEOGROWTH&utm_campaign=corona&utm_content=1070050',
 	stars: null,
 	socialMedia: null,
 	testimonials: null,
