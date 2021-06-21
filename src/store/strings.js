@@ -2965,7 +2965,7 @@ export const VYAPAR = {
 	description: ['Manage your complete business with Vyapar. Best software for billing, inventory & accounting.Most simple, secure & easy Software. Download Now!'],
 	image: vyapar,
 	backgroundColor: '#fff',
-	url: '',
+	url: 'https://vyaparapp.in/?referrer_code=DIGIBI',
 	carousel: [
 		{
 			type: 'image',
