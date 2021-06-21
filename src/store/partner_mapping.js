@@ -139,6 +139,11 @@ export const partnerMapping = [
 		heading: "Billing & Accounting",
 	},
 	{
+		name: "vyapar",
+		partner: VYAPAR,
+		heading: "Billing & Accounting",
+	},
+	{
 		name: "hylo biz",
 		partner: HYLO_BIZ,
 		heading: "Manage Payments",
