@@ -2960,7 +2960,7 @@ export const OK_CREDIT = {
 };
 export const VYAPAR = {
 	title: 'Vyapar',
-	subTitle: ['Get free access to out Vyapar android mobile app.',
+	subTitle: ['Get free access to our Vyapar android mobile app.',
 				'Enjoy 1 Month Free Trial Vyapar Business Accounting Desktop App to enhance your business.'],
 	description: ['Manage your complete business with Vyapar. Best software for billing, inventory & accounting.Most simple, secure & easy Software. Download Now!'],
 	image: vyapar,
