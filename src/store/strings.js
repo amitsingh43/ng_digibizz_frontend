@@ -2960,11 +2960,13 @@ export const OK_CREDIT = {
 };
 export const VYAPAR = {
 	title: 'Vyapar',
-	subTitle: ['Upto XX% off on Vyapar services.'],
-	description: ['GST Billing Software for small businesses.'],
+	subTitle: ['Get free access to our Vyapar android mobile app.',
+				'Enjoy 1 Month Free Trial Vyapar Business Accounting Desktop App to enhance your business.'],
+	description: ['Free GST Billing Software & App for Small Businesses',
+		'Manage your complete business with Vyapar. Best software for billing, inventory & accounting.Most simple, secure & easy Software. Download Now!'],
 	image: vyapar,
 	backgroundColor: '#fff',
-	url: '',
+	url: 'https://vyaparapp.in/?referrer_code=DIGIBI',
 	carousel: [
 		{
 			type: 'image',
@@ -3861,7 +3863,7 @@ export const PARTNERS = [
 	},
 	{
 		category: 'Billing & Accounting',
-		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH, INSTABILL],
+		data: [SNAPBIZZ, ACCUNITY_SERVICES3, MYBILLBOOK, DIGI_HEALTH, INSTABILL,VYAPAR],
 		tag: 'billing_and_accounting',
 	},
 	// {
