@@ -41,6 +41,7 @@ import hylo_biz from "../assets/partners/hylo_biz.png";
 import neocash_insta from "../assets/partners/neocash_insta.png";
 import mediaqart from "../assets/partners/mediaqart.png";
 import the_online_team from "../assets/partners/the_online_team.png";
+import websitez from "../assets/partners/websitez.png";
 import estartup_india from "../assets/partners/estartup_india.png";
 import instabill from "../assets/partners/instabill.png";
 import urban_cfo from "../assets/partners/urban_cfo.jpg";
@@ -3630,6 +3631,29 @@ export const THE_ONLINE_TEAM_2 = {
   ],
 };
 
+export const WEBSITEZ = {
+	title: "Websitez",
+	subTitle: ["Website design and development starting at Rs. 299 / Month."],
+	description: [
+	  "Professional Website in your budget",
+	  "We are a website design company helping small businesses and start-ups to get a better return from the website and online marketing. We design and develop stunning websites at low cost. We help in designing online marketing strategies. Our friendly support team and developers will give full control of your business go online.",
+	],
+	image: websitez,
+	backgroundColor: "#fff",
+	url: "https://www.websitez.in/",
+	stars: null,
+	socialMedia: null,
+	testimonials: null,
+	aboutUs: null,
+	carousel: [
+	  {
+		type: "image",
+		source: websitez,
+	  },
+	],
+  };
+
+
 export const THE_ONLINE_TEAM_3 = {
   title: "The Online Team (TOT)",
   subTitle: ["Offer 10% OFF on social media marketing/account management"],
@@ -3944,7 +3968,7 @@ export const PARTNERS = [
   },
   {
     category: "Create Website or Mobile App",
-    data: [MOBICOMMERCE2, ACCUNITY_SERVICES2, PINNACLE, THE_ONLINE_TEAM_2],
+    data: [MOBICOMMERCE2, ACCUNITY_SERVICES2, PINNACLE, THE_ONLINE_TEAM_2, WEBSITEZ],
     tag: "create_website_and_app",
   },
   {

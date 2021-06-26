@@ -39,7 +39,8 @@ import {
 	BLUE_OCKTOPUS,
 	TERRAGO_LOGISTICS,
 	PORTER,
-	COVID_COVER
+	COVID_COVER,
+	WEBSITEZ
 } from "./strings";
 
 export const partnerMapping = [
@@ -111,6 +112,11 @@ export const partnerMapping = [
 	{
 		name: "the online team (tot)",
 		partner: THE_ONLINE_TEAM_2,
+		heading: "Create Website or Mobile App",
+	},
+	{
+		name: "websitez",
+		partner: WEBSITEZ,
 		heading: "Create Website or Mobile App",
 	},
 	{
