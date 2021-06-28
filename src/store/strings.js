@@ -123,6 +123,7 @@ import MediaqartTwo from "../assets/partners/carousel/Mediaqart/two.jpg";
 
 import MobicommerceOne from "../assets/partners/carousel/Mobicommerce/one.jpg";
 import MobicommerceTwo from "../assets/partners/carousel/Mobicommerce/two.jpg";
+import MobicommerceThree from "../assets/partners/carousel/Mobicommerce/three.jpg";
 
 import MswipeOne from "../assets/partners/carousel/Mswipe/one.jpg";
 import MswipeTwo from "../assets/partners/carousel/Mswipe/two.jpg";
@@ -2845,6 +2846,12 @@ export const MOBICOMMERCE1 = {
     "•	Generate profits from the eCommerce website according to business and revenue models.",
     "•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
     "MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
+	<>
+	{"Subscribe Now on Youtube - "}
+		<a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw">
+			{"https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw"}
+		</a>
+	</>
   ],
   image: mobicommerce,
   backgroundColor: "#fff",
@@ -2859,13 +2866,18 @@ export const MOBICOMMERCE1 = {
       source: mobicommerce,
     },
     {
-      type: "image",
-      source: MobicommerceOne,
+	  type: "video",
+	  source: MobicommerceOne,
+      videoID: "g-nbUlSsDuo",
     },
     {
       type: "image",
       source: MobicommerceTwo,
     },
+	{
+		type: "image",
+		source: MobicommerceThree,
+	},
   ],
 };
 export const MOBICOMMERCE2 = {
@@ -2881,6 +2893,12 @@ export const MOBICOMMERCE2 = {
     "•	Generate profits from the eCommerce website according to business and revenue models.",
     "•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
     "MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
+	<>
+	{"Subscribe Now on Youtube - "}
+		<a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw">
+			{"https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw"}
+		</a>
+	</>
   ],
   image: mobicommerce,
   backgroundColor: "#fff",
@@ -2895,13 +2913,18 @@ export const MOBICOMMERCE2 = {
       source: mobicommerce,
     },
     {
-      type: "image",
-      source: MobicommerceOne,
+        type: "video",
+	  source: MobicommerceOne,
+      videoID: "g-nbUlSsDuo",
     },
     {
       type: "image",
       source: MobicommerceTwo,
     },
+	{
+		type: "image",
+		source: MobicommerceThree,
+	},
   ],
 };
 export const MAGICPIN = {
