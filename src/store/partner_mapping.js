@@ -40,7 +40,8 @@ import {
 	TERRAGO_LOGISTICS,
 	PORTER,
 	COVID_COVER,
-	WEBSITEZ
+	WEBSITEZ,
+	PRINTHOUSE
 } from "./strings";
 
 export const partnerMapping = [
@@ -273,5 +274,10 @@ export const partnerMapping = [
 		name: "covid cover",
 		partner: COVID_COVER,
 		heading: "Insurance"
+	},
+	{
+		name: "printhouse",
+		partner: PRINTHOUSE,
+		heading: "Business Essentials"
 	},
 ];

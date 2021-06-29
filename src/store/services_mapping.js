@@ -14,6 +14,7 @@ import insurance from "assets/services/insurance.svg";
 import business_decor from "assets/services/business_decor.png";
 import product_photoshoot from "assets/services/product_photoshoot.svg";
 import delivery_and_logistics from "assets/services/delivery_and_logistics.png";
+import business_essentials from "assets/services/business_essentials.png";
 
 export const services = [
 	{
@@ -95,5 +96,10 @@ export const services = [
 		image: delivery_and_logistics,
 		label: "Delivery & Logistics",
 		tag: "delivery_and_logistics",
+	},
+	{
+		image: business_essentials,
+		label: "Business Essentials",
+		tag: "business_essentials",
 	},
 ];
