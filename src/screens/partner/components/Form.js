@@ -11,6 +11,7 @@ const Form = ({ masterData, url, save_basic_details, title, availNowResponseText
 		//otp: null,
 		cities_master_id: null,
 		partner_availed: title,
+		referral_code: null
 	});
 	const [cityName, setCityName] = useState(null);
 	const setMobileNumber = function (mobile) {
@@ -80,6 +81,11 @@ const Form = ({ masterData, url, save_basic_details, title, availNowResponseText
 							</option>
 						))}
 				</select>
+				<h5>Referral Code (Optional)</h5>
+				<input
+					value={data.referral_code}
+					onChange={(e) => setData((data) => ({ ...data, referral_code: e.target.value }))}
+				/>
 				<div>
 					<a>
 						<div
