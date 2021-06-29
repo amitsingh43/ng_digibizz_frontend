@@ -31,7 +31,7 @@
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .partner-form h3 {
-	margin-bottom: 60px;
+	margin-bottom: 30px;
 }
 
 .partner-form .avail-now {
@@ -39,6 +39,7 @@
 	padding: 10px 20px;
 	width: fit-content;
 	margin: 30px 0px;
+	margin-top: 0px;
 	color: white;
 	cursor: pointer;
 }
@@ -50,16 +51,19 @@
 	outline: none;
 	margin-bottom: 30px;
 }
+.partner-form select {
+	margin-bottom: 30px;
+}
 .partner-form input:focus {
 	border: 0px;
 	border-bottom: 1px solid black;
 }
 
-.partner-form .wrapper{
-	margin-bottom:30px;
+.partner-form .wrapper {
+	margin-bottom: 30px;
 }
 .partner-form .wrapper input[type='phone'] {
-	padding:0
+	padding: 0;
 }
 
 .partner-main .discount-icon {
