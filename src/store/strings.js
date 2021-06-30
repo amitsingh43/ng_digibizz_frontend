@@ -49,6 +49,7 @@ import mswipe from "../assets/partners/mswipe.png";
 import blue_ocktopus from "../assets/partners/blue_ocktopus.png";
 import terrago from "../assets/partners/terrago.png";
 import porter from "../assets/partners/porter.png";
+import printhouse from "../assets/partners/printhouse.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
 import threee from "../assets/knowledge_portal/one/three.svg";
@@ -152,6 +153,12 @@ import TOTone from "../assets/partners/carousel/TOT/one.jpg";
 
 import UrbanCfoOne from "../assets/partners/carousel/UrbanCfo/one.jpg";
 import UrbanCfoTwo from "../assets/partners/carousel/UrbanCfo/two.jpg";
+
+import PrintHouseOne from "../assets/partners/carousel/PrintHouse/one.png";
+import PrintHouseTwo from "../assets/partners/carousel/PrintHouse/two.png";
+
+import WebsiteZOne from "../assets/partners/carousel/WebsiteZ/one.png";
+
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -3659,7 +3666,7 @@ export const WEBSITEZ = {
 	subTitle: ["Website design and development starting at Rs. 299 / Month."],
 	description: [
 	  "Professional Website in your budget",
-	  "We are a website design company helping small businesses and start-ups to get a better return from the website and online marketing. We design and develop stunning websites at low cost. We help in designing online marketing strategies. Our friendly support team and developers will give full control of your business go online.",
+	  "Websitez is a website design company helping small businesses and start-ups to get better returns from their website and online marketing. They design and develop stunning websites at low cost and also help in designing online marketing strategies. Websitez team ensures that you have full control over your business migrating online.",
 	],
 	image: websitez,
 	backgroundColor: "#fff",
@@ -3673,6 +3680,10 @@ export const WEBSITEZ = {
 		type: "image",
 		source: websitez,
 	  },
+    {
+      type: "image",
+      source: WebsiteZOne
+    }
 	],
   };
 
@@ -3962,6 +3973,39 @@ export const PORTER = {
   ],
 };
 
+export const PRINTHOUSE = {
+  title: "Printhouse",
+  subTitle: ["Visiting card printing- 100 quantity at Rs. 100/-",
+  "Leaflets printing- 100 quantity at Rs. 350/-",
+  "Poster printing starting from Rs 12/-"],
+  description: [
+    "All types of printing and corporate gifting at reasonable price.",
+    "Print House is synonymous with quality printing, excellence, and commitment. With superiority as our philosophy and excellence our goal, we embarked into the printing business in the year 1995. Using state of the art technology, we produce brochures, catalogues, posters, stationary, visual aids, annual reports, magazines, books, pharma labels, cartons, calendars and much more.",
+  ],
+  image: printhouse,
+  backgroundColor: "#fff",
+  url: "https://printhouse.net.in/",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
+    {
+      type: "image",
+      source: printhouse,
+    },
+    {
+      type: "image",
+      source: PrintHouseOne
+    },
+    {
+      type: "image",
+      source: PrintHouseTwo
+    }
+  ],
+};
+
+
 export const PARTNERS = [
   {
     category: "Sell Online",
@@ -4055,5 +4099,10 @@ export const PARTNERS = [
     category: "Delivery & Logistics",
     data: [TERRAGO_LOGISTICS, PORTER],
     tag: "delivery_and_logistics",
+  },
+  {
+    category: "Business Essentials",
+    data: [PRINTHOUSE],
+    tag: "business_essentials",
   },
 ];
