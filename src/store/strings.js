@@ -157,6 +157,8 @@ import UrbanCfoTwo from "../assets/partners/carousel/UrbanCfo/two.jpg";
 import PrintHouseOne from "../assets/partners/carousel/PrintHouse/one.png";
 import PrintHouseTwo from "../assets/partners/carousel/PrintHouse/two.png";
 
+import WebsiteZOne from "../assets/partners/carousel/WebsiteZ/one.png";
+
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -3664,7 +3666,7 @@ export const WEBSITEZ = {
 	subTitle: ["Website design and development starting at Rs. 299 / Month."],
 	description: [
 	  "Professional Website in your budget",
-	  "We are a website design company helping small businesses and start-ups to get a better return from the website and online marketing. We design and develop stunning websites at low cost. We help in designing online marketing strategies. Our friendly support team and developers will give full control of your business go online.",
+	  "Websitez is a website design company helping small businesses and start-ups to get better returns from their website and online marketing. They design and develop stunning websites at low cost and also help in designing online marketing strategies. Websitez team ensures that you have full control over your business migrating online.",
 	],
 	image: websitez,
 	backgroundColor: "#fff",
@@ -3678,6 +3680,10 @@ export const WEBSITEZ = {
 		type: "image",
 		source: websitez,
 	  },
+    {
+      type: "image",
+      source: WebsiteZOne
+    }
 	],
   };
 
