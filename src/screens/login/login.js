@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { add_error, header_login } from "store/actions";
 import "styles/login.css";
 import login_banner from "assets/login_banner.png";
 import OTPInput from "components/OTPInput";
 import { post_user_details } from "screens/questionnaire/store/actions";
+import {
+  COMPANY_NAME,
+  TERMS_AND_CONDITIONS_2,
+  TERMS_AND_CONDITIONS_1,
+} from "store/strings";
+import TAndC from "components/termsAndConditions";
 
 export default function Login() {
   const dispatch = useDispatch();
-  const masterData = useSelector((state) => state.masterData);
   const history = useHistory();
 
   useEffect(() => {
@@ -18,10 +23,11 @@ export default function Login() {
     // dispatch(get_master_data());
   }, []);
 
-  const sel = document.getElementById("city");
-
   const [mobile, setMobile] = useState(null);
   const [otp, setOTP] = useState(null);
+  const [more, showmore] = useState(false);
+  const [isChecked, setCheck] = useState(false);
+  const [signup, setSignup] = useState(false);
 
   const _next = () => {
     var NumberRegex = /^[0-9]*$/;
@@ -46,6 +52,10 @@ export default function Login() {
     // dispatch(post_user_details(body, Navigate));
   };
 
+  if (more) {
+    return <TAndC showmore={showmore} setCheck={setCheck} />;
+  }
+
   return (
     <div>
       <div className="login-container">
@@ -57,7 +67,9 @@ export default function Login() {
                 <h5>Begin The Upgrade Now</h5>
               </div>
 
-              <h3 style={{ margin: "3rem 0" }}>Register to Continue</h3>
+              <h3 style={{ margin: "3rem 0" }}>
+                {signup ? "Register" : "Login"} to Continue
+              </h3>
             </div>
 
             <div className=" form" style={{ marginTop: "5rem" }}>
@@ -83,6 +95,44 @@ export default function Login() {
                 }}
               />
 
+              {signup ? (
+                <div className="col-lg-12">
+                  <input
+                    id="checkbox"
+                    className="col-lg-1 col-xs-1"
+                    type="checkbox"
+                    defaultChecked={isChecked}
+                    onChange={() => setCheck(!isChecked)}
+                  />
+                  <div className="col-lg-11 col-xs-11">
+                    {TERMS_AND_CONDITIONS_1}
+                    <a
+                      href="https://www.neogrowth.in"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="site">
+                        <strong>{COMPANY_NAME}</strong>
+                      </span>
+                    </a>
+                    {TERMS_AND_CONDITIONS_2}
+                    <span
+                      className="more"
+                      onClick={() => {
+                        showmore(!more);
+                        window.scrollTo(0, 0);
+                      }}
+                    >
+                      {more ? "Less-" : "More+"}
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                <h5 className="text-center" style={{ marginTop: "20px" }}>
+                  New to DiGibizz?{" "}
+                  <span onClick={() => setSignup(!signup)}> Register Now!</span>{" "}
+                </h5>
+              )}
               <div className="col-lg-12">
                 <div className="outer-button">
                   <a
