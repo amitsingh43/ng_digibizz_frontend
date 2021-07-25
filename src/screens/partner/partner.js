@@ -97,88 +97,103 @@ const Partner = () => {
 
   return (
     <div className={"servicesPartnerPage"}>
-      {!more && (
-        <div className="partner-main" style={{ minHeight: "99vh", flex: 2.5 }}>
-          <div className="partner-main-title">
-            <span
-              style={{ color: "grey", fontWeight: "normal", cursor: "pointer" }}
-              onClick={() => history.goBack()}
-            >{`Explore services  >>  ${heading}  >>`}</span>
-            <span>{`  ${title}`}</span>
-          </div>
-          <div
-            style={{
-              flex: 1,
-              display: "flex",
-              // justifyContent: "center",
-              marginTop: 30,
-            }}
-            className={"partner-section"}
-          >
-            <PartnerCard
-              image={image}
+      <div
+        className="partner-main"
+        style={{
+          minHeight: "99vh",
+          flex: more ? 0 : 2.5,
+          padding: more ? 0 : "0 40px",
+        }}
+      >
+        <div
+          style={{ display: more ? "none" : "" }}
+          className="partner-main-title"
+        >
+          <span
+            style={{ color: "grey", fontWeight: "normal", cursor: "pointer" }}
+            onClick={() => history.goBack()}
+          >{`Explore services  >>  ${heading}  >>`}</span>
+          <span>{`  ${title}`}</span>
+        </div>
+        <div
+          style={{
+            flex: 1,
+            display: more ? "none" : "flex",
+            // display: "flex",
+            // justifyContent: "center",
+            marginTop: 30,
+          }}
+          className={"partner-section"}
+        >
+          <PartnerCard
+            image={image}
+            title={title}
+            offer={subTitle}
+            backgroundColor={backgroundColor}
+            carousel={carousel}
+          />
+          <PartnerDetails
+            heading={heading}
+            title={title}
+            subTitle={subTitle}
+            stars={stars}
+            socialMedia={socialMedia}
+            _availNow={_availNow}
+            carouselLength={carousel.length}
+          />
+        </div>
+        {isFormVisible && (
+          <div style={{ flex: 1 }} className={"form-in-mobile"}>
+            <Form
+              masterData={masterData}
+              url={url}
+              save_basic_details={saveBasicDetails}
               title={title}
-              offer={subTitle}
-              backgroundColor={backgroundColor}
-              carousel={carousel}
-            />
-            <PartnerDetails
-              heading={heading}
-              title={title}
-              subTitle={subTitle}
-              stars={stars}
-              socialMedia={socialMedia}
-              _availNow={_availNow}
-              carouselLength={carousel.length}
+              more={more}
+              showmore={showmore}
             />
           </div>
-          {isFormVisible && (
-            <div style={{ flex: 1 }} className={"form-in-mobile"}>
-              <Form
-                masterData={masterData}
-                url={url}
-                save_basic_details={saveBasicDetails}
-                title={title}
+        )}
+        <div
+          style={{ display: more ? "none" : "grid" }}
+          className={"dataSection"}
+        >
+          <div id={"description"}>
+            {description && (
+              <DataSection
+                title={"Description"}
+                data={description}
+                show={show}
+                toggleShow={toggleShow}
+                field={"description"}
               />
-            </div>
-          )}
-          <div className={"dataSection"}>
-            <div id={"description"}>
-              {description && (
-                <DataSection
-                  title={"Description"}
-                  data={description}
-                  show={show}
-                  toggleShow={toggleShow}
-                  field={"description"}
-                />
-              )}
-            </div>
-            <div id={"testimonials"}>
-              {testimonials && (
-                <DataSection
-                  title={"Testimonials"}
-                  data={testimonials}
-                  show={show}
-                  toggleShow={toggleShow}
-                  field={"testimonials"}
-                />
-              )}
-            </div>
-            <div id={"about"}>
-              {aboutUs && (
-                <DataSection
-                  title={"About"}
-                  data={aboutUs}
-                  show={show}
-                  toggleShow={toggleShow}
-                  field={"about"}
-                />
-              )}
-            </div>
+            )}
+          </div>
+          <div id={"testimonials"}>
+            {testimonials && (
+              <DataSection
+                title={"Testimonials"}
+                data={testimonials}
+                show={show}
+                toggleShow={toggleShow}
+                field={"testimonials"}
+              />
+            )}
+          </div>
+          <div id={"about"}>
+            {aboutUs && (
+              <DataSection
+                title={"About"}
+                data={aboutUs}
+                show={show}
+                toggleShow={toggleShow}
+                field={"about"}
+              />
+            )}
           </div>
         </div>
-      )}{" "}
+      </div>
+
       {isFormVisible && (
         <div style={{ flex: 1 }} className={"form-in-desktop"}>
           <Form
