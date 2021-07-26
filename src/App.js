@@ -7,7 +7,7 @@ import {
   Switch,
 } from "react-router-dom";
 //import SecureRoute from "components/secureRoute";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import TagManager from "react-gtm-module";
 
 import "regenerator-runtime/runtime.js";
@@ -26,9 +26,9 @@ import Partner from "./screens/partner";
 import UserGuide from "./screens/userGuide";
 import UserGuideDetailed from "./screens/userGuideDetailed";
 import SuccessStoriesDetailed from "./screens/successStoriesDetailed";
-// import Login from "./screens/login";
+import Login from "./screens/login";
+import Register from "./screens/login/register";
 // import Settings from "./screens/settings";
-
 
 //import Catalog from "./screens/catalog";
 import { clear_error } from "./store/actions";
@@ -50,12 +50,12 @@ export default function App({ history }) {
 
   window.onload = () => {
     const tagManagerArgs = {
-        gtmId: process.env.REACT_APP_GTM_ID,
+      gtmId: process.env.REACT_APP_GTM_ID,
     };
     if (process.env.isProd === "yes") {
-        TagManager.initialize(tagManagerArgs);
+      TagManager.initialize(tagManagerArgs);
     }
-};
+  };
   useEffect(() => {
     if (errorMessage !== "") {
       show_toast(errorMessage);
@@ -91,26 +91,14 @@ export default function App({ history }) {
         <Header />
         <Switch>
           <Route exact path={"/"} component={Welcome} />
-          <Route
-            exact
-            path={"/knowStatus"}
-            component={Home}
-          />
+          <Route exact path={"/knowStatus"} component={Home} />
           <Route
             exact
             path={"/questionnaire/:section"}
             component={Questionnaire}
           />
-          <Route
-            exact
-            path={"/report"}
-            component={Report}
-          />
-          <Route
-            exact
-            path={"/knowledgeCenter"}
-            component={UserGuide}
-          />
+          <Route exact path={"/report"} component={Report} />
+          <Route exact path={"/knowledgeCenter"} component={UserGuide} />
           <Route
             exact
             path={"/knowledgeCenter/:id"}
@@ -121,27 +109,16 @@ export default function App({ history }) {
             path={"/successStories/:id"}
             component={SuccessStoriesDetailed}
           />
-          <Route
-            exact
-            path={"/successStories"}
-            component={SuccessStories}
-          />
+          <Route exact path={"/successStories"} component={SuccessStories} />
           <Route
             exact
             path={"/services/:category/:partner"}
             component={Partner}
           />
-          <Route
-            exact
-            path={"/services"}
-            component={DigitalServices}
-          />
-           {/* <Route
-            exact
-            path={"/login"}
-            component={Login}
-          />
-          <Route
+          <Route exact path={"/services"} component={DigitalServices} />
+          <Route exact path={"/login"} component={Login} />
+          <Route exact path={"/register/:customerId"} component={Register} />
+          {/*  <Route
             exact
             path={"/settings"}
             component={Settings}
