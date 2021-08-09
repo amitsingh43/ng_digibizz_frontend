@@ -30,6 +30,8 @@ import care from "../assets/partners/care.svg";
 import razorpay from "../assets/partners/razorpay.svg";
 import vyapar from "../assets/partners/vyapar.svg";
 import zikzuk from "../assets/partners/zikzuk.png";
+import vyaparOne from "../assets/partners/vyaparOne.png";
+import vyaparTwo from "../assets/partners/vyaparTwo.png";
 import ok_credit from "../assets/partners/ok_credit.svg";
 import neogrowth from "../assets/partners/neogrowth.jpg";
 import digihealth from "../assets/partners/digihealth.png";
@@ -50,6 +52,7 @@ import mswipe from "../assets/partners/mswipe.png";
 import blue_ocktopus from "../assets/partners/blue_ocktopus.png";
 import terrago from "../assets/partners/terrago.png";
 import porter from "../assets/partners/porter.png";
+import porterTwo from "../assets/partners/porterTwo.png";
 import printhouse from "../assets/partners/printhouse.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
@@ -3084,6 +3087,14 @@ export const VYAPAR = {
       type: "image",
       source: vyapar,
     },
+    {
+      type: "image",
+      source: vyaparOne,
+    },
+    {
+      type: "image",
+      source: vyaparTwo,
+    },
   ],
 };
 
@@ -4009,6 +4020,10 @@ export const PORTER = {
     {
       type: "image",
       source: porter,
+    },
+    {
+      type: "image",
+      source: porterTwo,
     },
   ],
 };

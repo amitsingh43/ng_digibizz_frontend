@@ -4,6 +4,7 @@ import {
   HEADER_DIGITAL_STATUS,
   HEADER_USER_GUIDE,
   HEADER_SUCCESS_STORIES,
+  HEADER_LOGIN,
   HEADER_RESET,
 } from "../actionTypes/index";
 
@@ -23,6 +24,10 @@ const headerState = createReducer(initialState, {
   },
   [HEADER_SUCCESS_STORIES]: (state, payload) => {
     state = state - state + 3;
+    return state;
+  },
+  [HEADER_LOGIN]: (state, payload) => {
+    state = state - state + 4;
     return state;
   },
   [HEADER_RESET]: (state, payload) => {
