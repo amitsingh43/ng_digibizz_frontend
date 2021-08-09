@@ -29,6 +29,7 @@ import covid_cover from "../assets/partners/digit.jpg";
 import care from "../assets/partners/care.svg";
 import razorpay from "../assets/partners/razorpay.svg";
 import vyapar from "../assets/partners/vyapar.svg";
+import zikzuk from "../assets/partners/zikzuk.png";
 import vyaparOne from "../assets/partners/vyaparOne.png";
 import vyaparTwo from "../assets/partners/vyaparTwo.png";
 import ok_credit from "../assets/partners/ok_credit.svg";
@@ -161,6 +162,9 @@ import PrintHouseOne from "../assets/partners/carousel/PrintHouse/one.png";
 import PrintHouseTwo from "../assets/partners/carousel/PrintHouse/two.png";
 
 import WebsiteZOne from "../assets/partners/carousel/WebsiteZ/one.png";
+
+import ZikZukOne from "../assets/partners/carousel/zikzuk/one.jpg";
+import ZikZukTwo from "../assets/partners/carousel/zikzuk/two.jpg";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -3093,6 +3097,32 @@ export const VYAPAR = {
     },
   ],
 };
+
+export const ZIKZUK = {
+  title: "ZikZuk",
+  subTitle: ["Offer: 50% off on Business Finance Manager BFM."],
+  description: [
+    "An AI ML data driven smart platform that seamlessly sync with tally and empower SME to focus on business and its growth by managing their business finance.",
+  ],
+  image: zikzuk,
+  backgroundColor: "#fff",
+  url: "http://www.zikzuk.com/bfm",
+  carousel: [
+    {
+      type: "image",
+      source: zikzuk,
+    },
+    {
+      type: "image",
+      source: ZikZukOne,
+    },
+    {
+      type: "image",
+      source: ZikZukTwo,
+    },
+  ],
+};
+
 export const PINNACLE = {
   title: "Pinnacle Management & Utility Services",
   subTitle: [
@@ -4079,6 +4109,7 @@ export const PARTNERS = [
       DIGI_HEALTH,
       INSTABILL,
       VYAPAR,
+      ZIKZUK,
     ],
     tag: "billing_and_accounting",
   },

@@ -41,7 +41,8 @@ import {
 	PORTER,
 	COVID_COVER,
 	WEBSITEZ,
-	PRINTHOUSE
+	PRINTHOUSE,
+	ZIKZUK
 } from "./strings";
 
 export const partnerMapping = [
@@ -148,6 +149,11 @@ export const partnerMapping = [
 	{
 		name: "vyapar",
 		partner: VYAPAR,
+		heading: "Billing & Accounting",
+	},
+	{
+		name: "zikzuk",
+		partner: ZIKZUK,
 		heading: "Billing & Accounting",
 	},
 	{
