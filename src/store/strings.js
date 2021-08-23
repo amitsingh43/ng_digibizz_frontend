@@ -29,6 +29,9 @@ import covid_cover from "../assets/partners/digit.jpg";
 import care from "../assets/partners/care.svg";
 import razorpay from "../assets/partners/razorpay.svg";
 import vyapar from "../assets/partners/vyapar.svg";
+import zikzuk from "../assets/partners/zikzuk.png";
+import vyaparOne from "../assets/partners/vyaparOne.png";
+import vyaparTwo from "../assets/partners/vyaparTwo.png";
 import ok_credit from "../assets/partners/ok_credit.svg";
 import neogrowth from "../assets/partners/neogrowth.jpg";
 import digihealth from "../assets/partners/digihealth.png";
@@ -49,6 +52,7 @@ import mswipe from "../assets/partners/mswipe.png";
 import blue_ocktopus from "../assets/partners/blue_ocktopus.png";
 import terrago from "../assets/partners/terrago.png";
 import porter from "../assets/partners/porter.png";
+import porterTwo from "../assets/partners/porterTwo.png";
 import printhouse from "../assets/partners/printhouse.png";
 import onee from "../assets/knowledge_portal/one/one.svg";
 import twoo from "../assets/knowledge_portal/one/two.svg";
@@ -159,6 +163,8 @@ import PrintHouseTwo from "../assets/partners/carousel/PrintHouse/two.png";
 
 import WebsiteZOne from "../assets/partners/carousel/WebsiteZ/one.png";
 
+import ZikZukOne from "../assets/partners/carousel/zikzuk/one.jpg";
+import ZikZukTwo from "../assets/partners/carousel/zikzuk/two.jpg";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -2853,12 +2859,16 @@ export const MOBICOMMERCE1 = {
     "•	Generate profits from the eCommerce website according to business and revenue models.",
     "•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
     "MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
-	<>
-	{"Subscribe Now on Youtube - "}
-		<a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw">
-			{"https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw"}
-		</a>
-	</>
+    <>
+      {"Subscribe Now on Youtube - "}
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw"
+      >
+        {"https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw"}
+      </a>
+    </>,
   ],
   image: mobicommerce,
   backgroundColor: "#fff",
@@ -2873,18 +2883,18 @@ export const MOBICOMMERCE1 = {
       source: mobicommerce,
     },
     {
-	  type: "video",
-	  source: MobicommerceOne,
+      type: "video",
+      source: MobicommerceOne,
       videoID: "g-nbUlSsDuo",
     },
     {
       type: "image",
       source: MobicommerceTwo,
     },
-	{
-		type: "image",
-		source: MobicommerceThree,
-	},
+    {
+      type: "image",
+      source: MobicommerceThree,
+    },
   ],
 };
 export const MOBICOMMERCE2 = {
@@ -2900,12 +2910,16 @@ export const MOBICOMMERCE2 = {
     "•	Generate profits from the eCommerce website according to business and revenue models.",
     "•	We have ready-made, mobile-enabled solutions for multiple industries. In addition, the solutions are scalable and customizable to fit each business’ unique needs.",
     "MobiCommerce is the trusted and leading provider of next-generation E-commerce website portal and mobile app solution for B2C and B2B businesses as well as multi-vendor marketplaces",
-	<>
-	{"Subscribe Now on Youtube - "}
-		<a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw">
-			{"https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw"}
-		</a>
-	</>
+    <>
+      {"Subscribe Now on Youtube - "}
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw"
+      >
+        {"https://www.youtube.com/channel/UCPljjVqNRIkD-awA6ov1TQw"}
+      </a>
+    </>,
   ],
   image: mobicommerce,
   backgroundColor: "#fff",
@@ -2920,18 +2934,18 @@ export const MOBICOMMERCE2 = {
       source: mobicommerce,
     },
     {
-        type: "video",
-	  source: MobicommerceOne,
+      type: "video",
+      source: MobicommerceOne,
       videoID: "g-nbUlSsDuo",
     },
     {
       type: "image",
       source: MobicommerceTwo,
     },
-	{
-		type: "image",
-		source: MobicommerceThree,
-	},
+    {
+      type: "image",
+      source: MobicommerceThree,
+    },
   ],
 };
 export const MAGICPIN = {
@@ -3073,8 +3087,42 @@ export const VYAPAR = {
       type: "image",
       source: vyapar,
     },
+    {
+      type: "image",
+      source: vyaparOne,
+    },
+    {
+      type: "image",
+      source: vyaparTwo,
+    },
   ],
 };
+
+export const ZIKZUK = {
+  title: "ZikZuk",
+  subTitle: ["Offer: 50% off on Business Finance Manager BFM."],
+  description: [
+    "An AI ML data driven smart platform that seamlessly sync with tally and empower SME to focus on business and its growth by managing their business finance.",
+  ],
+  image: zikzuk,
+  backgroundColor: "#fff",
+  url: "http://www.zikzuk.com/bfm",
+  carousel: [
+    {
+      type: "image",
+      source: zikzuk,
+    },
+    {
+      type: "image",
+      source: ZikZukOne,
+    },
+    {
+      type: "image",
+      source: ZikZukTwo,
+    },
+  ],
+};
+
 export const PINNACLE = {
   title: "Pinnacle Management & Utility Services",
   subTitle: [
@@ -3508,9 +3556,13 @@ export const HYLO_BIZ = {
       <p>{"1. Automate payment reminders"}</p>
       <p>{"2. Fast track your way to invoice collections"}</p>
       <p>{"3. Auto-reconciliations of receivables"}</p>
-      <p>{"4. Pre-configured for seamless integration with popular ERPs to make your work easier"}</p>
+      <p>
+        {
+          "4. Pre-configured for seamless integration with popular ERPs to make your work easier"
+        }
+      </p>
     </>,
-	"Make Hylobiz your business assistant and improve your business cashflows and collections efficiency.",
+    "Make Hylobiz your business assistant and improve your business cashflows and collections efficiency.",
     "Hylobiz ke saath aapka business jodiye & #godigital",
   ],
   backgroundColor: "#fff",
@@ -3662,31 +3714,30 @@ export const THE_ONLINE_TEAM_2 = {
 };
 
 export const WEBSITEZ = {
-	title: "Websitez",
-	subTitle: ["Website design and development starting at Rs. 299 / Month."],
-	description: [
-	  "Professional Website in your budget",
-	  "Websitez is a website design company helping small businesses and start-ups to get better returns from their website and online marketing. They design and develop stunning websites at low cost and also help in designing online marketing strategies. Websitez team ensures that you have full control over your business migrating online.",
-	],
-	image: websitez,
-	backgroundColor: "#fff",
-	url: "https://www.websitez.in/",
-	stars: null,
-	socialMedia: null,
-	testimonials: null,
-	aboutUs: null,
-	carousel: [
-	  {
-		type: "image",
-		source: websitez,
-	  },
+  title: "Websitez",
+  subTitle: ["Website design and development starting at Rs. 299 / Month."],
+  description: [
+    "Professional Website in your budget",
+    "Websitez is a website design company helping small businesses and start-ups to get better returns from their website and online marketing. They design and develop stunning websites at low cost and also help in designing online marketing strategies. Websitez team ensures that you have full control over your business migrating online.",
+  ],
+  image: websitez,
+  backgroundColor: "#fff",
+  url: "https://www.websitez.in/",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
     {
       type: "image",
-      source: WebsiteZOne
-    }
-	],
-  };
-
+      source: websitez,
+    },
+    {
+      type: "image",
+      source: WebsiteZOne,
+    },
+  ],
+};
 
 export const THE_ONLINE_TEAM_3 = {
   title: "The Online Team (TOT)",
@@ -3970,14 +4021,20 @@ export const PORTER = {
       type: "image",
       source: porter,
     },
+    {
+      type: "image",
+      source: porterTwo,
+    },
   ],
 };
 
 export const PRINTHOUSE = {
   title: "Printhouse",
-  subTitle: ["Visiting card printing- 100 quantity at Rs. 100/-",
-  "Leaflets printing- 100 quantity at Rs. 350/-",
-  "Poster printing starting from Rs 12/-"],
+  subTitle: [
+    "Visiting card printing- 100 quantity at Rs. 100/-",
+    "Leaflets printing- 100 quantity at Rs. 350/-",
+    "Poster printing starting from Rs 12/-",
+  ],
   description: [
     "All types of printing and corporate gifting at reasonable price.",
     "Print House is synonymous with quality printing, excellence, and commitment. With superiority as our philosophy and excellence our goal, we embarked into the printing business in the year 1995. Using state of the art technology, we produce brochures, catalogues, posters, stationary, visual aids, annual reports, magazines, books, pharma labels, cartons, calendars and much more.",
@@ -3996,15 +4053,14 @@ export const PRINTHOUSE = {
     },
     {
       type: "image",
-      source: PrintHouseOne
+      source: PrintHouseOne,
     },
     {
       type: "image",
-      source: PrintHouseTwo
-    }
+      source: PrintHouseTwo,
+    },
   ],
 };
-
 
 export const PARTNERS = [
   {
@@ -4035,7 +4091,13 @@ export const PARTNERS = [
   },
   {
     category: "Create Website or Mobile App",
-    data: [MOBICOMMERCE2, ACCUNITY_SERVICES2, PINNACLE, THE_ONLINE_TEAM_2, WEBSITEZ],
+    data: [
+      MOBICOMMERCE2,
+      ACCUNITY_SERVICES2,
+      PINNACLE,
+      THE_ONLINE_TEAM_2,
+      WEBSITEZ,
+    ],
     tag: "create_website_and_app",
   },
   {
@@ -4047,6 +4109,7 @@ export const PARTNERS = [
       DIGI_HEALTH,
       INSTABILL,
       VYAPAR,
+      ZIKZUK,
     ],
     tag: "billing_and_accounting",
   },
