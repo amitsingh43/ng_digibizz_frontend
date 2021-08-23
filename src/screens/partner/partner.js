@@ -28,6 +28,8 @@ const Partner = () => {
   });
   const [isFormVisible, toggleForm] = useState(false);
 
+  const [more, showmore] = useState(false);
+
   var { partner, category } = useParams();
   var data = partnerMapping.find(
     (val) =>
@@ -100,11 +102,20 @@ const Partner = () => {
     <div className={"servicesPartnerPage"}>
       <div
         className={showNewDesign ? "partner-main" : ""}
-        style={{ minHeight: "99vh", flex: 2.5 }}
+        style={{
+          minHeight: "99vh",
+          flex: more ? 0 : 2.5,
+          padding: more ? 0 : "0 40px",
+        }}
       >
         {showNewDesign ? (
           <>
-            <div className="partner-main-title">
+            <div
+              className="partner-main-title"
+              style={{
+                display: more ? "none" : "",
+              }}
+            >
               <span
                 style={{
                   color: "grey",
@@ -118,8 +129,7 @@ const Partner = () => {
             <div
               style={{
                 flex: 1,
-                display: "flex",
-                // justifyContent: "center",
+                display: more ? "none" : "flex", // justifyContent: "center",
                 marginTop: 30,
               }}
               className={"partner-section"}
@@ -153,6 +163,8 @@ const Partner = () => {
         {showNewDesign && isFormVisible ? (
           <div style={{ flex: 1 }} className={"form-in-mobile"}>
             <Form
+              showmore={showmore}
+              more={more}
               masterData={masterData}
               url={url}
               save_basic_details={saveBasicDetails}
@@ -162,7 +174,10 @@ const Partner = () => {
         ) : null}
 
         {showNewDesign ? (
-          <div className={"dataSection"}>
+          <div
+            style={{ display: more ? "none" : "grid" }}
+            className={"dataSection"}
+          >
             <div id={"description"}>
               {description && (
                 <DataSection
@@ -213,6 +228,8 @@ const Partner = () => {
           className={"form-in-desktop"}
         >
           <Form
+            showmore={showmore}
+            more={more}
             masterData={masterData}
             url={url}
             save_basic_details={saveBasicDetails}

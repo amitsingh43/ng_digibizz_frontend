@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import EligibilityCriteria from "./EligibilityCriteria";
 import HowItWorks from "./HowItWorks";
 import InstantLoan from "./InstantLoan";
@@ -10,6 +10,8 @@ import "styles/App.scss";
 import FooterTerms from "./FooterTerms";
 
 function LandingPage({ masterData, url, saveBasicDetails, title }) {
+  const [more, showmore] = useState(false);
+
   return (
     <React.Fragment>
       <FormArea
@@ -17,17 +19,25 @@ function LandingPage({ masterData, url, saveBasicDetails, title }) {
         url={url}
         saveBasicDetails={saveBasicDetails}
         title={title}
+        more={more}
+        showmore={showmore}
       />
-      <KeyBenefits title={title} />
-      {title !== "NeoGrowth" && (
+
+      {!more && (
         <>
-          <EligibilityCriteria />
-          <HowItWorks />
+          {" "}
+          <KeyBenefits title={title} />
+          {title !== "NeoGrowth" && (
+            <>
+              <EligibilityCriteria />
+              <HowItWorks />
+            </>
+          )}
+          <WhyNeoGrowth />
+          <PartnerSuccessStories />
+          <InstantLoan title={title} />
         </>
       )}
-      <WhyNeoGrowth />
-      <PartnerSuccessStories />
-      <InstantLoan title={title} />
       <FooterTerms />
     </React.Fragment>
   );

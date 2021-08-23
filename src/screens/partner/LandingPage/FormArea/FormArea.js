@@ -4,8 +4,24 @@ import { Form } from "screens/partner/components";
 import InstaBg from "assets/images/background.png";
 import LoansBg from "assets/images/background1.png";
 
-const FormArea = ({ masterData, url, saveBasicDetails, title }) => {
-  return (
+const FormArea = ({
+  masterData,
+  url,
+  saveBasicDetails,
+  title,
+  more,
+  showmore,
+}) => {
+  return more ? (
+    <Form
+      masterData={masterData}
+      url={url}
+      save_basic_details={saveBasicDetails}
+      title={title}
+      more={more}
+      showmore={showmore}
+    />
+  ) : (
     <div
       className={`formMainArea`}
       style={{
@@ -28,6 +44,8 @@ const FormArea = ({ masterData, url, saveBasicDetails, title }) => {
               url={url}
               save_basic_details={saveBasicDetails}
               title={title}
+              more={more}
+              showmore={showmore}
             />
           </div>
         </div>
