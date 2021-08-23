@@ -25,7 +25,6 @@ function LandingPage({ masterData, url, saveBasicDetails, title }) {
 
       {!more && (
         <>
-          {" "}
           <KeyBenefits title={title} />
           {title !== "NeoGrowth" && (
             <>
