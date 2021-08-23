@@ -22,31 +22,29 @@ const FormArea = ({
       showmore={showmore}
     />
   ) : (
-    <div
-      className={`formMainArea`}
-      style={{
-        flexWrap: "wrap",
-        background: `url(${title === "NeoGrowth" ? LoansBg : InstaBg})`,
-        backgroundSize: "101vw auto",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className={"col-md-7 col-xs-12 imageOfGirl"}></div>
-      <div className={"col-md-4 col-xs-12 basicForm"}>
-        <div className={"col-md-11"}>
-          <div
-            style={{
-              flex: 1,
-            }}
-          >
-            <Form
-              masterData={masterData}
-              url={url}
-              save_basic_details={saveBasicDetails}
-              title={title}
-              more={more}
-              showmore={showmore}
-            />
+    <div style={{ backgroundColor: "rgb(234, 247, 237)" }}>
+      <div
+        className={`formMainArea`}
+        style={{
+          flexWrap: "wrap",
+          background: `url(${title === "NeoGrowth" ? LoansBg : InstaBg})`,
+          backgroundSize: "101vw auto",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className={"col-md-7 col-xs-12 imageOfGirl"}></div>
+        <div className={"col-md-4 col-xs-12 basicForm"}>
+          <div className={"col-md-12"}>
+            <div>
+              <Form
+                masterData={masterData}
+                url={url}
+                save_basic_details={saveBasicDetails}
+                title={title}
+                more={more}
+                showmore={showmore}
+              />
+            </div>
           </div>
         </div>
       </div>

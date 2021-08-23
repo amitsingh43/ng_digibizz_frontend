@@ -105,7 +105,7 @@ const Partner = () => {
         style={{
           minHeight: "99vh",
           flex: more ? 0 : 2.5,
-          padding: more ? 0 : "0 40px",
+          padding: more ? 0 : showNewDesign ? "0 40px" : "",
         }}
       >
         {showNewDesign ? (
@@ -217,16 +217,7 @@ const Partner = () => {
         )}
       </div>
       {isFormVisible && showNewDesign ? (
-        <div
-          style={{
-            flex: 1,
-            width: "100%",
-            height: "fit-content",
-            position: "sticky",
-            top: 0,
-          }}
-          className={"form-in-desktop"}
-        >
+        <div className={"form-in-desktop"}>
           <Form
             showmore={showmore}
             more={more}
