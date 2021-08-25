@@ -9,7 +9,7 @@ import FormArea from "./FormArea";
 import "styles/App.scss";
 import FooterTerms from "./FooterTerms";
 
-function LandingPage({ masterData, url, saveBasicDetails, title }) {
+function LandingPage({ masterData, url, save_basic_details, title }) {
   const [more, showmore] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ function LandingPage({ masterData, url, saveBasicDetails, title }) {
       <FormArea
         masterData={masterData}
         url={url}
-        saveBasicDetails={saveBasicDetails}
+        save_basic_details={save_basic_details}
         title={title}
         more={more}
         showmore={showmore}

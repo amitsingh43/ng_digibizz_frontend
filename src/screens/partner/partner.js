@@ -111,10 +111,8 @@ const Partner = () => {
         {showNewDesign ? (
           <>
             <div
+              style={{ display: more ? "none" : "" }}
               className="partner-main-title"
-              style={{
-                display: more ? "none" : "",
-              }}
             >
               <span
                 style={{
@@ -129,7 +127,7 @@ const Partner = () => {
             <div
               style={{
                 flex: 1,
-                display: more ? "none" : "flex", // justifyContent: "center",
+                display: more ? "none" : "flex",
                 marginTop: 30,
               }}
               className={"partner-section"}
@@ -160,20 +158,21 @@ const Partner = () => {
             title={title}
           />
         )}
+
         {showNewDesign && isFormVisible ? (
           <div style={{ flex: 1 }} className={"form-in-mobile"}>
             <Form
-              showmore={showmore}
-              more={more}
               masterData={masterData}
               url={url}
               save_basic_details={saveBasicDetails}
               title={title}
+              more={more}
+              showmore={showmore}
             />
           </div>
         ) : null}
 
-        {showNewDesign ? (
+        {showNewDesign && (
           <div
             style={{ display: more ? "none" : "grid" }}
             className={"dataSection"}
@@ -212,19 +211,18 @@ const Partner = () => {
               )}
             </div>
           </div>
-        ) : (
-          ""
         )}
       </div>
+
       {isFormVisible && showNewDesign ? (
-        <div className={"form-in-desktop"}>
+        <div style={{ flex: 1 }} className={"form-in-desktop"}>
           <Form
-            showmore={showmore}
-            more={more}
             masterData={masterData}
             url={url}
             save_basic_details={saveBasicDetails}
             title={title}
+            more={more}
+            showmore={showmore}
           />
         </div>
       ) : null}

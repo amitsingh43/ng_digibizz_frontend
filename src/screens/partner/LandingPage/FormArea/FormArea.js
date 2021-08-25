@@ -1,13 +1,12 @@
 import React from "react";
 import { Form } from "screens/partner/components";
-// import LoanGirl from "#images/loangirl.png";
 import InstaBg from "assets/images/background.png";
 import LoansBg from "assets/images/background1.png";
 
 const FormArea = ({
   masterData,
   url,
-  saveBasicDetails,
+  save_basic_details,
   title,
   more,
   showmore,
@@ -16,7 +15,7 @@ const FormArea = ({
     <Form
       masterData={masterData}
       url={url}
-      save_basic_details={saveBasicDetails}
+      save_basic_details={save_basic_details}
       title={title}
       more={more}
       showmore={showmore}
@@ -39,7 +38,7 @@ const FormArea = ({
               <Form
                 masterData={masterData}
                 url={url}
-                save_basic_details={saveBasicDetails}
+                save_basic_details={save_basic_details}
                 title={title}
                 more={more}
                 showmore={showmore}
