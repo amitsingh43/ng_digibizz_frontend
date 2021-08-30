@@ -42,6 +42,7 @@ import pagar_book from "../assets/partners/pagar_book.png";
 import easyfileitr from "../assets/partners/easyfileitr.png";
 import hylo_biz from "../assets/partners/hylo_biz.png";
 import neocash_insta from "../assets/partners/neocash_insta.png";
+import neocashPlus from "../assets/partners/neocashPlus.jpg";
 import mediaqart from "../assets/partners/mediaqart.png";
 import the_online_team from "../assets/partners/the_online_team.png";
 import websitez from "../assets/partners/websitez.png";
@@ -3617,6 +3618,25 @@ export const NEOCASH_INSTA = {
   ],
 };
 
+export const NEOGROWTH_PLUS = {
+  title: "NeoGrowth Plus loans",
+  subTitle: ["Get business loan more than the value of your property!"],
+  description: ["Loans starting from ₹20 lakhs to ₹1.5 crores!"],
+  image: neocashPlus,
+  backgroundColor: "#fff",
+  url: "https://www.neogrowth.in",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
+    {
+      type: "image",
+      source: neocashPlus,
+    },
+  ],
+};
+
 export const MEDIAQART = {
   title: "Mediaqart",
   subTitle: [
@@ -4081,7 +4101,7 @@ export const PARTNERS = [
   // },
   {
     category: "Business Loans",
-    data: [NEOGROWTH, NEOCASH_INSTA],
+    data: [NEOGROWTH, NEOCASH_INSTA, NEOGROWTH_PLUS],
     tag: "business_loans",
   },
   {
