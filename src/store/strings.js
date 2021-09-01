@@ -166,6 +166,7 @@ import WebsiteZOne from "../assets/partners/carousel/WebsiteZ/one.png";
 
 import ZikZukOne from "../assets/partners/carousel/zikzuk/one.jpg";
 import ZikZukTwo from "../assets/partners/carousel/zikzuk/two.jpg";
+import ZikZukThree from "../assets/partners/carousel/zikzuk/three.png";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -3120,6 +3121,10 @@ export const ZIKZUK = {
     {
       type: "image",
       source: ZikZukTwo,
+    },
+    {
+      type: "image",
+      source: ZikZukThree
     },
   ],
 };

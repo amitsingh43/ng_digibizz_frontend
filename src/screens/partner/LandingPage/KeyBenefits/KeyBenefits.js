@@ -29,6 +29,21 @@ export default function KeyBenefits({ title }) {
     },
   ];
 
+  const loandsPlusList = [
+    {
+      label: "Loan amount more than the value of property*",
+      image: OnlyKyc,
+    },
+    {
+      label: "Loan against Residential, Commercial & Industrial Property",
+      image: EasyRepayment,
+    },
+    {
+      label: "Balance Transfer & Top-Up Available 4. Tenure up to 60 months",
+      image: OneDayDisbursal,
+    },
+  ];
+
   const loansList = [
     {
       label: " Collateral Free",
@@ -52,7 +67,11 @@ export default function KeyBenefits({ title }) {
     },
   ];
 
-  const listData = title === "NeoGrowth" ? loansList : instaList;
+  const listData = {
+    NeoGrowth: loansList,
+    "NeoCash Insta": instaList,
+    "NeoGrowth Plus loans": loandsPlusList,
+  };
 
   return (
     <div className={"infoArea"} style={{ backgroundColor: "#EAF7ED" }}>
@@ -63,10 +82,10 @@ export default function KeyBenefits({ title }) {
         </div>
       </div>
       <div className={"row infoPoints"}>
-        {listData.map((x, i) => (
+        {listData[title].map((x, i) => (
           <div key={i} className={"col-md-4 infoPoint"} style={style.flex}>
             <img src={x.image} className={"onedaydisbursal"} />
-            <div className={"label"}>{x.label}</div>
+            <div className={"label"} style={{whiteSpace:'pre-wrap'}}>{x.label}</div>
           </div>
         ))}
       </div>
