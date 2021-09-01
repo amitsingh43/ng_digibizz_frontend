@@ -96,7 +96,11 @@ const Partner = () => {
     }
   };
 
-  const showNewDesign = !["NeoCash Insta", "NeoGrowth"].includes(title);
+  const showNewDesign = ![
+    "NeoCash Insta",
+    "NeoGrowth",
+    "NeoGrowth Plus loans",
+  ].includes(title);
 
   return (
     <div className={"servicesPartnerPage"}>

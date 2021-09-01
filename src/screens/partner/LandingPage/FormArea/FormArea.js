@@ -2,6 +2,7 @@ import React from "react";
 import { Form } from "screens/partner/components";
 import InstaBg from "assets/images/background.png";
 import LoansBg from "assets/images/background1.png";
+import LoansPlusBg from "assets/images/background2.png";
 
 const FormArea = ({
   masterData,
@@ -11,6 +12,11 @@ const FormArea = ({
   more,
   showmore,
 }) => {
+  const imageBg = {
+    NeoGrowth: LoansBg,
+    "NeoCash Insta": InstaBg,
+    "NeoGrowth Plus loans": LoansPlusBg,
+  };
   return more ? (
     <Form
       masterData={masterData}
@@ -26,7 +32,7 @@ const FormArea = ({
         className={`formMainArea`}
         style={{
           flexWrap: "wrap",
-          background: `url(${title === "NeoGrowth" ? LoansBg : InstaBg})`,
+          background: `url(${imageBg[title]})`,
           backgroundSize: "101vw auto",
           backgroundRepeat: "no-repeat",
         }}

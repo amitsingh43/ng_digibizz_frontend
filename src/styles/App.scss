@@ -311,7 +311,7 @@ body {
 }
 
 .infoPoints {
-  display: flex;
+  // display: flex;
   justify-content: center;
   padding: 0px 180px;
   align-items: center;
@@ -612,6 +612,7 @@ body {
     }
     .testimony {
       height: 130px;
+      width: 130px;
       border-radius: 50%;
       margin: 10px;
     }
@@ -995,4 +996,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+.carousel-main img{
+  width: auto;
 }

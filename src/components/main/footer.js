@@ -3,11 +3,13 @@ import fb from "assets/fb.svg";
 import insta from "assets/insta.svg";
 import twitter from "assets/twitter.svg";
 import linkedin from "assets/linkedin.svg";
-import {  withRouter } from "react-router-dom/cjs/react-router-dom.min";
+import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
-function Footer({history}) {
+function Footer({ history }) {
   const loc = history.location.pathname.split("/")[3];
-  const show = !["NeoCash Insta", "NeoGrowth"].includes(loc);
+  const show = !["NeoCash Insta", "NeoGrowth", "NeoGrowth Plus loans"].includes(
+    loc
+  );
 
   return (
     <div className="fixed-bottom" style={{ display: show ? "flex" : "none" }}>

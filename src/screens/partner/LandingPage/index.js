@@ -26,7 +26,7 @@ function LandingPage({ masterData, url, save_basic_details, title }) {
       {!more && (
         <>
           <KeyBenefits title={title} />
-          {title !== "NeoGrowth" && (
+          {title === "NeoCash Insta" && (
             <>
               <EligibilityCriteria />
               <HowItWorks />

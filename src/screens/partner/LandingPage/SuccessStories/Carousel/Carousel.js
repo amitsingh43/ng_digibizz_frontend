@@ -79,7 +79,7 @@ const Carousel = () => {
                     src={item.userImage}
                     alt="testimonial"
                   />
-                  <img src={Underline} />
+                  <img src={Underline}  style={{display:'grid'}}  />
                   <h5>{item.user}</h5>
                   <h6>{item.desc}</h6>
                   <div style={{ display: "flex" }}>
