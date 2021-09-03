@@ -14,6 +14,7 @@ import {
 } from "store/actions";
 import { partnerMapping } from "store/partner_mapping";
 import { Form, DataSection, PartnerCard, PartnerDetails } from "./components";
+import LandingPage from "./LandingPage";
 
 const Partner = () => {
   const masterData = useSelector((state) => state.masterData);
@@ -95,54 +96,74 @@ const Partner = () => {
     }
   };
 
+  const showNewDesign = ![
+    "NeoCash Insta",
+    "NeoGrowth",
+    "NeoGrowth Plus loans",
+  ].includes(title);
+
   return (
     <div className={"servicesPartnerPage"}>
       <div
-        className="partner-main"
+        className={showNewDesign ? "partner-main" : ""}
         style={{
           minHeight: "99vh",
           flex: more ? 0 : 2.5,
-          padding: more ? 0 : "0 40px",
+          padding: more ? 0 : showNewDesign ? "0 40px" : "",
         }}
       >
-        <div
-          style={{ display: more ? "none" : "" }}
-          className="partner-main-title"
-        >
-          <span
-            style={{ color: "grey", fontWeight: "normal", cursor: "pointer" }}
-            onClick={() => history.goBack()}
-          >{`Explore services  >>  ${heading}  >>`}</span>
-          <span>{`  ${title}`}</span>
-        </div>
-        <div
-          style={{
-            flex: 1,
-            display: more ? "none" : "flex",
-            // display: "flex",
-            // justifyContent: "center",
-            marginTop: 30,
-          }}
-          className={"partner-section"}
-        >
-          <PartnerCard
-            image={image}
+        {showNewDesign ? (
+          <>
+            <div
+              style={{ display: more ? "none" : "" }}
+              className="partner-main-title"
+            >
+              <span
+                style={{
+                  color: "grey",
+                  fontWeight: "normal",
+                  cursor: "pointer",
+                }}
+                onClick={() => history.goBack()}
+              >{`Explore services  >>  ${heading}  >>`}</span>
+              <span>{`  ${title}`}</span>
+            </div>
+            <div
+              style={{
+                flex: 1,
+                display: more ? "none" : "flex",
+                marginTop: 30,
+              }}
+              className={"partner-section"}
+            >
+              <PartnerCard
+                image={image}
+                title={title}
+                offer={subTitle}
+                backgroundColor={backgroundColor}
+                carousel={carousel}
+              />
+              <PartnerDetails
+                heading={heading}
+                title={title}
+                subTitle={subTitle}
+                stars={stars}
+                socialMedia={socialMedia}
+                _availNow={_availNow}
+                carouselLength={carousel.length}
+              />
+            </div>
+          </>
+        ) : (
+          <LandingPage
+            masterData={masterData}
+            url={url}
+            save_basic_details={saveBasicDetails}
             title={title}
-            offer={subTitle}
-            backgroundColor={backgroundColor}
-            carousel={carousel}
           />
-          <PartnerDetails
-            heading={heading}
-            title={title}
-            subTitle={subTitle}
-            stars={stars}
-            socialMedia={socialMedia}
-            _availNow={_availNow}
-            carouselLength={carousel.length}
-          />
-        </div>
-        {isFormVisible && (
+        )}
+
+        {showNewDesign && isFormVisible ? (
           <div style={{ flex: 1 }} className={"form-in-mobile"}>
             <Form
               masterData={masterData}
@@ -153,48 +174,51 @@ const Partner = () => {
               showmore={showmore}
             />
           </div>
+        ) : null}
+
+        {showNewDesign && (
+          <div
+            style={{ display: more ? "none" : "grid" }}
+            className={"dataSection"}
+          >
+            <div id={"description"}>
+              {description && (
+                <DataSection
+                  title={"Description"}
+                  data={description}
+                  show={show}
+                  toggleShow={toggleShow}
+                  field={"description"}
+                />
+              )}
+            </div>
+            <div id={"testimonials"}>
+              {testimonials && (
+                <DataSection
+                  title={"Testimonials"}
+                  data={testimonials}
+                  show={show}
+                  toggleShow={toggleShow}
+                  field={"testimonials"}
+                />
+              )}
+            </div>
+            <div id={"about"}>
+              {aboutUs && (
+                <DataSection
+                  title={"About"}
+                  data={aboutUs}
+                  show={show}
+                  toggleShow={toggleShow}
+                  field={"about"}
+                />
+              )}
+            </div>
+          </div>
         )}
-        <div
-          style={{ display: more ? "none" : "grid" }}
-          className={"dataSection"}
-        >
-          <div id={"description"}>
-            {description && (
-              <DataSection
-                title={"Description"}
-                data={description}
-                show={show}
-                toggleShow={toggleShow}
-                field={"description"}
-              />
-            )}
-          </div>
-          <div id={"testimonials"}>
-            {testimonials && (
-              <DataSection
-                title={"Testimonials"}
-                data={testimonials}
-                show={show}
-                toggleShow={toggleShow}
-                field={"testimonials"}
-              />
-            )}
-          </div>
-          <div id={"about"}>
-            {aboutUs && (
-              <DataSection
-                title={"About"}
-                data={aboutUs}
-                show={show}
-                toggleShow={toggleShow}
-                field={"about"}
-              />
-            )}
-          </div>
-        </div>
       </div>
 
-      {isFormVisible && (
+      {isFormVisible && showNewDesign ? (
         <div style={{ flex: 1 }} className={"form-in-desktop"}>
           <Form
             masterData={masterData}
@@ -205,7 +229,7 @@ const Partner = () => {
             showmore={showmore}
           />
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

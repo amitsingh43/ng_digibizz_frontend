@@ -1,0 +1,1003 @@
+body {
+  font-family: "Helvetica" "Rubik", "Roboto";
+}
+
+.header {
+  background-color: #fff;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  padding: 20px 80px;
+  .logo {
+    height: 53px;
+  }
+  .headerLogo {
+    flex: 1;
+  }
+}
+
+.confirmationWarning {
+  color: red;
+  font-size: 13px;
+  margin-left: 25px;
+  // margin-top: 10px;
+  vertical-align: middle;
+}
+
+.enachModal {
+  width: 600px;
+  padding: 20px;
+}
+
+.step4PopupHead {
+  cursor: pointer;
+  position: relative;
+  margin: 10px 0px;
+  padding: 10px;
+  padding-bottom: 10px !important;
+  box-shadow: 0px 0px 3px 0px #a69795;
+  -webkit-box-shadow: 0px 0px 3px 0px #a69795;
+  -moz-box-shadow: 0px 0px 3px 0px #a69795;
+  .status {
+    font-size: 13px;
+    font-weight: normal;
+  }
+  img {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}
+
+.step4Card {
+  margin-bottom: 10px;
+  .heading {
+    display: flex;
+    flex: 1;
+    span {
+      flex: 1;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .body {
+    transition: opacity 0.5s linear, height 0.7s linear;
+    padding: 0px 2px;
+    .enachField {
+      display: flex;
+      flex: 1;
+      border: 1px solid #8dc63f;
+      border-radius: 10px;
+      padding: 10px;
+      .label {
+        flex: 2;
+      }
+      .value {
+        flex: 3;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+.gstInfoText {
+  display: flex;
+  width: inherit;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 1px solid #8dc63f;
+  margin: 10px 0px;
+  border-radius: 10px;
+  padding: 10px 70px 10px 10px;
+  .text,
+  .text2 {
+    flex: 1;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .text2 {
+    overflow: auto;
+    white-space: normal;
+    padding-left: 10px;
+  }
+}
+
+.step0 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .inputSection {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    .inputBG {
+      // background-color: #d9d9d9;
+      width: 200px;
+    }
+  }
+  .line {
+    height: 60vh;
+    width: 3px;
+    background-color: #7f7f7f;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  .sectionImage {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+  .docOptionsRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // padding: 0px 20px;
+    .input {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 20;
+    }
+  }
+}
+
+.gstCard {
+  // margin: 20px 100px;
+  padding: 20px;
+  margin-bottom: 30px;
+  // background-image: linear-gradient(#ccff91, #91da2c);
+  border-radius: 20px;
+  // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid darken(#8fc232, 2%);
+  position: relative;
+  .gstCardRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    // justify-content: space-between;
+    margin-bottom: 13px;
+    cursor: pointer;
+    .radio {
+      border-radius: 20px;
+      height: 25px;
+      margin-right: 10px;
+      width: 25px;
+      background: transparent;
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .radioActive {
+      height: 15px;
+      width: 15px;
+      background-color: black;
+      border-radius: 15px;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+    .addressIcon {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+    .businessName {
+      font-size: 15px;
+    }
+    .natureOfBusiness {
+      font-size: 13px;
+      margin-left: 25px;
+    }
+    .addressName {
+      font-size: 13px;
+    }
+  }
+}
+
+.restrictionsText {
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.badge-secondary {
+  background-color: #fff;
+  color: black;
+  border: 1px solid;
+}
+
+.form-group {
+  position: relative;
+  margin: 20px 0px;
+  label {
+    position: absolute;
+    top: 6px;
+    left: 13px;
+    color: grey;
+    cursor: text;
+    transition: top 0.1s;
+  }
+  .active {
+    top: -13px;
+    background-color: white;
+    padding: 0px 5px;
+    font-size: 11px;
+    z-index: 99;
+  }
+  .mobile {
+    left: 65px;
+    z-index: 99;
+  }
+}
+
+.businessRegistration {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  margin-bottom: 20px;
+  .businessRegistrationLabel {
+    position: relative;
+    flex: 1;
+  }
+  .businessRegistrationValue {
+    flex: 2;
+    width: 100%;
+    border: 1px solid grey;
+  }
+}
+
+.footer {
+  bottom: 0px;
+  width: 100%;
+  background-color: #ffe04b;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-direction: column;
+  a {
+    color: #000;
+  }
+}
+
+.infoArea {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+  .onlyKYC {
+    margin-top: 20px;
+  }
+  .sectionTitle {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    color: #043d05;
+    .titleWithUnderline {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      img {
+        width: 100px;
+      }
+    }
+  }
+  .sectionWithArrow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: inherit;
+    .arrow {
+      width: 50px;
+      height: auto;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.infoPoints {
+  display: flex;
+  justify-content: center;
+  padding: 0px 180px;
+  align-items: center;
+  .infoPoint {
+    padding: 20px;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    .onedaydisbursal {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 20px;
+    }
+    .happyCustomers {
+      width: 150px;
+    }
+    .locationImage {
+      width: 130px;
+    }
+    .whyNG {
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      width: inherit;
+      text-align: left;
+      img {
+        width: 120px;
+        height: 120px;
+        background-color: #e2e7e2;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+    }
+    .label {
+      margin-top: 25px;
+      color: #000;
+    }
+  }
+  .point {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.formMainArea {
+//   background: url("../assets/images/background.png");
+  // padding-top: 80px;
+  // padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 101vw auto;
+  background-repeat: no-repeat;
+  min-height: auto;
+}
+
+.imageOfGirl {
+  color: white;
+  font-size: 36px;
+  padding: 20px;
+  img {
+    width: 100%;
+    max-width: 630px;
+  }
+}
+.form-check {
+  height: 40px;
+  overflow-y: scroll;
+  font-size: 13px;
+}
+
+.formWrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+  h3 {
+    text-align: center;
+    color: #00854a;
+    padding: 20px 0px;
+    font-weight: bold;
+    font-size: 35px;
+  }
+}
+
+.input-group-text {
+  background-color: white;
+}
+
+.ngSubmit {
+  background-color: #8fc232;
+  border: 1px solid darken(#8fc232, 1%);
+  color: white;
+  &:hover {
+    background-color: darken(#8fc232, 2%);
+    border: 1px solid darken(#8fc232, 2%);
+    color: white;
+  }
+}
+
+.docUpload {
+  width: 100px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.instantLoanArea {
+  padding: 10px;
+  font-size: 36px;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.instantTextApply {
+  margin-left: 40px;
+  background-color: #008648;
+  color: black;
+  border: 1px solid #008648;
+}
+
+.successStories {
+  background-color: #dadf5c;
+  .sectionTitle {
+    font-size: 36px;
+  }
+}
+
+.applicationFormWrapper {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 0 auto 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.welcomeText {
+  font-size: 30px;
+}
+
+.stepText {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.badge {
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.pillSelectWrapper {
+  display: flex;
+  padding: 5px 10px 20px 10px;
+  padding-left: 0px;
+  .pillSelectLabel {
+    padding-right: 10px;
+  }
+  a {
+    cursor: pointer;
+  }
+}
+
+.pillStyle {
+  height: 20px;
+}
+
+.loader {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.inlineFields {
+  display: flex;
+  .date {
+    width: 20px !important;
+    border: none;
+    border-bottom: 1px solid grey;
+  }
+  .disabledText {
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 85px !important;
+  }
+}
+
+.sizeOfBusiness {
+  select {
+    width: 150px;
+    margin-left: 20px;
+  }
+}
+
+.declarationList {
+  padding-left: 16px !important;
+  margin-top: 10px;
+  li {
+    margin-top: 10px;
+  }
+}
+
+.rejectApproveImageArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  flex: 1;
+  h2 {
+    margin-bottom: 100px;
+    text-align: justify;
+    // padding-right: 10px;
+    white-space: pre-wrap;
+  }
+}
+
+.rejectApproveImageArea {
+  img {
+    width: 50vw;
+    margin: 20px 0px;
+  }
+}
+
+.miniTitle {
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.negativeMarginTitle {
+  margin-left: -20px !important;
+}
+
+.children {
+  min-height: 90vh;
+}
+
+.lastPopUp {
+  text-align: center;
+  padding: 40px;
+  h4 {
+    padding: 10px 0px;
+  }
+}
+
+.successStoriesCarousel {
+  .carousel {
+    background-color: #dadf5c;
+    min-height: 300px;
+    margin-top: 15px;
+    .carouselItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 300px;
+      flex-direction: column;
+      h5 {
+        padding: 20px 0px;
+        color: black;
+      }
+      h6 {
+        width: 80%;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        .readMore {
+          width: 200px;
+          font-size: 17px;
+          margin-top: 20px;
+          padding: 10px;
+          border-radius: 20px;
+          background-color: #8fc232;
+          font-weight: normal;
+          margin: 10px 10px 0px 10px;
+        }
+      }
+    }
+    .testimony {
+      height: 130px;
+      width: 130px;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    .jayanti {
+      margin: 0px;
+      height: 150px;
+    }
+    .nextButton {
+      .next {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+.congratulations {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bolder;
+  .congratsTopBanner {
+    width: 100vw;
+  }
+  .contentBox {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 50%;
+    .imgTitle {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: flex-start;
+      img {
+        // width: 40px;
+        height: 35px;
+        margin-bottom: 33px;
+        margin-right: 14px;
+      }
+    }
+    .content {
+      display: flex;
+      flex: 1;
+      padding: 10px;
+      border-radius: 10px;
+      h5 {
+        width: 80%;
+        background-color: #44a634;
+        margin-left: 10%;
+        padding: 7px;
+        padding-left: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+  .footer {
+    color: white;
+    background-color: #44a634;
+    margin-bottom: 30px;
+    height: fit-content;
+    font-size: small;
+    padding: 15px 0px;
+  }
+}
+
+.regret {
+  width: 100%;
+  font-family: "Poppins";
+  .dearCustomer {
+    text-align: justify;
+    margin: 20px 80px 0px 80px;
+    p {
+      margin-top: 20px;
+    }
+  }
+  .reasons {
+    background-color: #44a634;
+    color: white;
+    text-align: center;
+    padding: 5px 0px;
+  }
+  .reasonsRow {
+    display: flex;
+    .bannerContainer {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 30px;
+      .digibizzBanner {
+        height: 300px;
+        width: auto;
+      }
+    }
+  }
+  .reason {
+    margin: 20px 80px 0px 80px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    height: 50px;
+    img {
+      width: 60px;
+      margin-right: 10px;
+    }
+  }
+  .footer {
+    height: 30px;
+    background-color: #44a634;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1285px) {
+  .infoPoints {
+    padding: 0px 100px;
+  }
+}
+
+@media (min-width: 771px) and (max-width: 964px) {
+  .infoPoints {
+    padding: 0px;
+    .infoPoint {
+      // font-size: 13px;
+      img {
+        width: 70px;
+        height: 70px;
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .rejectApproveImageArea {
+    h2 {
+      font-size: 2.5vw;
+    }
+  }
+}
+
+@media (max-width: 963px) {
+  .infoArea {
+    .onlyKYC {
+      margin-top: 0px;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .header {
+    padding: 15px 20px;
+    .logo {
+      height: 10vw;
+    }
+  }
+  .rejectApproveImageArea {
+    img {
+      width: 100vw;
+      padding: 0px 10px;
+    }
+  }
+  .infoArea {
+    .sectionWithArrow {
+      flex-direction: column;
+      .arrow {
+        transform: rotate(90deg);
+        margin-top: 30px;
+      }
+    }
+  }
+  .formMainArea {
+    // background-size: 100vw auto;
+    // height: auto;
+    padding: 0px;
+    background: none;
+    height: auto;
+    min-height: auto;
+    .imageOfGirl {
+      background: url("../assets/images/background.png");
+      background-size: 105vw auto;
+      // margin-left: 3vw;
+      background-repeat: no-repeat;
+      height: 50vw;
+    }
+    .basicForm {
+      width: 100vw;
+      // margin-top: 280px;
+      padding: 10px;
+      background-color: #eaf7ed;
+    }
+  }
+  .formWrapper {
+    h2 {
+      padding: 20px 0px;
+    }
+  }
+  .infoPoints {
+    flex-direction: column;
+    .infoPoint {
+      font-size: 4vw;
+      .whyNG {
+        width: 100vw;
+        padding: 0px 30px;
+        text-align: left;
+        img {
+          width: 25vw;
+          height: 25vw;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .instantLoanArea {
+    font-size: 2.8vw;
+  }
+  .successStoriesCarousel {
+    .carousel {
+      .carouselItem {
+        h5 {
+          width: 67%;
+        }
+        h6 {
+          width: 67%;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          .readMore {
+            width: 41vw;
+          }
+        }
+      }
+    }
+  }
+  .congratulations {
+    .contentBox {
+      width: 100%;
+      height: 100px;
+      h5 {
+        font-size: 3.9vw;
+      }
+      .imgTitle {
+        height: auto;
+        img {
+          width: 12vw !important;
+          height: auto !important;
+          margin-right: 0px;
+        }
+      }
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 10px;
+      padding: 15px;
+    }
+  }
+  .regret {
+    .dearCustomer,
+    .reason {
+      margin: 20px;
+    }
+    .reasonsRow {
+      flex-direction: column;
+      .bannerContainer {
+        margin-right: 0px;
+        .digibizzBanner {
+          width: 100vw;
+          height: auto;
+        }
+      }
+    }
+  }
+  .step0 {
+    h5 {
+      font-size: 4.5vw;
+    }
+    flex-direction: column;
+    .inputSection {
+      flex-direction: column;
+      align-items: flex-start !important;
+      justify-content: center;
+      .inputBG {
+        width: 70vw;
+        margin-top: 10px;
+        margin-left: 13vw;
+      }
+    }
+    .line {
+      width: 93vw;
+      height: 3px;
+      margin-bottom: 20px;
+    }
+    .docOptionsRow {
+      flex-direction: column;
+    }
+    .sectionImage {
+      width: 10vw;
+      height: 10vw;
+      margin-right: 10px;
+    }
+  }
+  .gstCard {
+    h4 {
+      font-size: 2.5vw;
+      margin-top: 0.5vw;
+    }
+    .gstCardRow {
+      margin-bottom: 2.7vw;
+      .radio {
+        width: 4vw;
+        height: 4vw;
+        border-radius: 2vw;
+      }
+      .radioActive {
+        width: 2vw;
+        height: 2vw;
+        border-radius: 1.5vw;
+      }
+      .icon {
+        width: 6vw;
+        height: 6vw;
+      }
+      .businessName {
+        font-size: 2vw;
+      }
+      .natureOfBusiness {
+        font-size: 1.9vw;
+        margin-left: 7.1vw;
+        margin-top: 0px;
+      }
+      .addressName {
+        font-size: 1.9vw;
+      }
+    }
+  }
+  .enachModal {
+    width: 80vw;
+    font-size: 2.4vw;
+    option {
+      font-size: 2.4vw;
+    }
+  }
+  .step4Card {
+    .body {
+      .enachField {
+        .label {
+          flex: 3;
+        }
+      }
+    }
+  }
+  .form-control {
+    font-size: inherit;
+  }
+  .docUpload {
+    width: 20vw;
+    height: 10vw;
+  }
+  .lastPopUp {
+    h4 {
+      font-size: 3.5vw;
+    }
+  }
+  .businessKYCDropDown {
+    width: 95vw;
+  }
+  .confirmationWarning {
+    font-size: 2.3vw;
+  }
+  .gstInfoText {
+    font-size: 2.8vw;
+    .text,
+    .text2 {
+      font-size: 2.8vw;
+      white-space: normal;
+    }
+  }
+  .businessRegistration {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.carousel-main img{
+  width: auto;
+}
