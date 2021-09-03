@@ -9,7 +9,7 @@ const InstantLoan = ({ title }) => {
   const text = {
     NeoGrowth: "Get Collateral Free Business Loans Up To ₹75 Lakhs Now!",
     "NeoCash Insta": "Get Instant INR 1 Lakh Business Loan in 24 Hours!",
-    "NeoGrowth Plus loans": "Get Secured Business Loans up to ₹1.5 crores",
+    "NeoGrowth Plus loans": "Get Secured Business Loans up to ₹1.5 crores!",
   };
 
   return (
