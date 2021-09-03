@@ -21,7 +21,7 @@ function FooterTerms() {
           Credit at Sole Discretion of NeoGrowth |{" "}
           <a
             style={linkColor}
-            href="https://www.neogrowth.in/interestratepolicy/"
+            href="https://insta.neogrowth.in/ourInterestPolicy"
             target="_blank"
           >
             Our Interest Policy

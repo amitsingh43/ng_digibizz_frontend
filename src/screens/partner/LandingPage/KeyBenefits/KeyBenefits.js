@@ -31,16 +31,21 @@ export default function KeyBenefits({ title }) {
 
   const loandsPlusList = [
     {
-      label: "Loan amount more than the value of property*",
+      label: `Loan amount more than the value of property.`,
       image: OnlyKyc,
+      footerNote: true,
     },
     {
       label: "Loan against Residential, Commercial & Industrial Property",
       image: EasyRepayment,
     },
     {
-      label: "Balance Transfer & Top-Up Available 4. Tenure up to 60 months",
+      label: "Balance Transfer & Top-Up Available",
       image: OneDayDisbursal,
+    },
+    {
+      label: "Tenure up to 60 months",
+      image: Approval_2minutes,
     },
   ];
 
@@ -85,7 +90,14 @@ export default function KeyBenefits({ title }) {
         {listData[title].map((x, i) => (
           <div key={i} className={"col-md-4 infoPoint"} style={style.flex}>
             <img src={x.image} className={"onedaydisbursal"} />
-            <div className={"label"} style={{whiteSpace:'pre-wrap'}}>{x.label}</div>
+            <div className={"label"} style={{ whiteSpace: "pre-wrap" }}>
+              {x.label}
+            </div>
+            {x?.footerNote ? (
+              <small style={{ fontSize: "9px" }}>
+               * terms and conditions apply.{" "}
+              </small>
+            ) : null}
           </div>
         ))}
       </div>
