@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Form } from "screens/partner/components";
 import InstaBg from "assets/images/background.png";
 import LoansBg from "assets/images/background1.png";
@@ -17,6 +17,22 @@ const FormArea = ({
     "NeoCash Insta": InstaBg,
     "NeoGrowth Plus loans": LoansPlusBg,
   };
+
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  let isMobile = width <= 768;
+
+  console.log(isMobile, "----");
+
   return more ? (
     <Form
       masterData={masterData}
@@ -37,7 +53,19 @@ const FormArea = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className={"col-md-7 col-xs-12 imageOfGirl"}></div>
+        {isMobile ? (
+          <div
+            className={"col-xs-12"}
+            style={{
+              background: `url(${imageBg[title]})`,
+              backgroundSize: "101vw auto",
+              backgroundRepeat: "no-repeat",
+              height: "50vw",
+            }}
+          ></div>
+        ) : (
+          <div className={"col-md-7 col-xs-12 imageOfGirl"}></div>
+        )}
         <div className={"col-md-4 col-xs-12 basicForm"}>
           <div className={"col-md-12"}>
             <div>

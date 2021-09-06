@@ -4160,7 +4160,7 @@ export const PARTNERS = [
   },
   {
     category: "Manage Staff",
-    data: [APNA_CO, PAGARBOOK],
+    data: [ PAGARBOOK],
     tag: "manage_staff",
   },
   {
