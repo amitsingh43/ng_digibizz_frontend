@@ -82,7 +82,7 @@ const Carousel = () => {
                   <img src={Underline}  style={{display:'grid'}}  />
                   <h5>{item.user}</h5>
                   <h6>{item.desc}</h6>
-                  <div style={{ display: "flex" }}>
+                  <div style={{ display: "flex", marginBottom:'2rem' }}>
                     {item.watchMore && (
                       <a href={item.watchMore} target="_blank">
                         <div className="readMore">Watch More</div>
