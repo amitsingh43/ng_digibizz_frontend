@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import OTPInput from "components/OTPInput";
 import {
   TERMS_AND_CONDITIONS_1,
@@ -43,22 +43,7 @@ const Form = ({
   if (more) {
     return <TAndC showmore={showmore} setCheck={setCheck} />;
   }
-
-  const [width, setWidth] = useState(window.innerWidth);
-
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
-  }
-
-  useEffect(() => {
-    window.addEventListener("resize", handleWindowSizeChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowSizeChange);
-    };
-  }, []);
-
-  let isMobile = width <= 768;
-
+  console.log(more, "more");
   return (
     <div className={"partner-form"}>
       <div className={"form-body"}>
@@ -136,7 +121,7 @@ const Form = ({
           <input
             id="checkbox"
             type="checkbox"
-            style={isMobile ? {} : { width: "auto", marginRight: 15 }}
+            style={{ width: "auto", marginRight: 15 }}
             defaultChecked={isChecked}
             onChange={() => setCheck(!isChecked)}
           />
