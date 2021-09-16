@@ -2733,7 +2733,7 @@ export const MONEYFY = {
   subTitle: [],
   description: [
     "One Stop Solution for your Investment needs!",
-    "Moneyfy is an app designed to aid uers with their Investments. One can invest in Mutual Funds, start an SIP, Invest in FD, and start a NPS.  There are more options available to get ones #MoneyInAction with Moneyfy. Intuitive Interface, hassle-free account opening, paperless KYC, assistance just a call away, view your portfolio in just a click are just a few of the features that make Moneyfy the easiest to use Investment app. Download and Explore right away!",
+    "Moneyfy is an app designed to aid users with their Investments. One can invest in Mutual Funds, start an SIP, Invest in FD, and start a NPS.  There are more options available to get ones #MoneyInAction with Moneyfy. Intuitive Interface, hassle-free account opening, paperless KYC, assistance just a call away, view your portfolio in just a click are just a few of the features that make Moneyfy the easiest to use Investment app. Download and Explore right away!",
   ],
   image: MoneyfyOne,
   backgroundColor: "#fff",
