@@ -43,7 +43,8 @@ import {
   WEBSITEZ,
   PRINTHOUSE,
   ZIKZUK,
-  NEOGROWTH_PLUS,MONEYFY
+  NEOGROWTH_PLUS,
+  MONEYFY,
 } from "./strings";
 
 export const partnerMapping = [
@@ -75,7 +76,7 @@ export const partnerMapping = [
   {
     name: "moneyfy",
     partner: MONEYFY,
-    heading: "Sell Online",
+    heading: "Investments",
   },
   {
     name: "neogrowth",
