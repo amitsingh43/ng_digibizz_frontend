@@ -97,6 +97,8 @@ import HylobizOne from "../assets/partners/carousel/hylo_biz/one.jpeg";
 import VakilSearchOne from "../assets/partners/carousel/vakil_search/one.png";
 
 import MoneyfyOne from "../assets/partners/moneyfy.png";
+import MoneyfyTwo from "../assets/partners/moneyfyTwo.png";
+import MoneyfyThree from "../assets/partners/moneyfyThree.png";
 
 import AccunityOne from "../assets/partners/carousel/Accunity/one.jpg";
 import AccunityTwo from "../assets/partners/carousel/Accunity/two.png";
@@ -2739,15 +2741,22 @@ export const MONEYFY = {
   backgroundColor: "#fff",
   url: "https://www.tatacapital.com/blog/moneyfy/investments/",
   stars: null,
-  socialMedia: {
-    youtube: "https://www.youtube.com/watch?v=AZZDPcDZUMw",
-  },
+  socialMedia: null,
   testimonials: null,
   aboutUs: null,
   carousel: [
     {
       type: "image",
       source: MoneyfyOne,
+    },
+    {
+      type: "video",
+      source: MoneyfyTwo,
+      videoID: "AZZDPcDZUMw",
+    },
+    {
+      type: "image",
+      source: MoneyfyThree,
     },
   ],
 };
@@ -4225,5 +4234,4 @@ export const PARTNERS = [
     data: [PRINTHOUSE],
     tag: "business_essentials",
   },
- 
 ];

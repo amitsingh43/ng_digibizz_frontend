@@ -49,15 +49,15 @@ export const save_basic_details =
 	(body, url, cityName, ENDPOINT = '/api/save_basic_details') =>
 	async (dispatch) => {
 		try {
-			const { lead } = await _post(ENDPOINT, body);
+			const { lead, message } = await _post(ENDPOINT, body);
 			dispatch(set_user_details(body));
 			if (body.partner_availed === 'NeoGrowth') {
 				Tracking.trackEvent('CLICK', 'NG LOAN LEADS', 'APPLY NOW');
-				show_toast('Thank you, someone will get in touch with you', 'SUCCESS');
+				show_toast(message, 'SUCCESS');
 				return;
 			} else {
 				Tracking.trackEvent('CLICK', 'PARTNER LEADS', body.partner_availed);
-				show_toast('Thank you', 'SUCCESS');
+				show_toast(message, 'SUCCESS');
 			}
 			window.open(url, '_blank');
 		} catch (error) {

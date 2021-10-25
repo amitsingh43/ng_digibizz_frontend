@@ -10,6 +10,7 @@ import {
   SuccessStories,
   MobileView,
 } from "./components";
+import LoansPlusBg from "assets/banner.png";
 
 export default function Welcome() {
   const dispatch = useDispatch();
@@ -36,6 +37,9 @@ export default function Welcome() {
         <ExploreOurServices />
         <MobileView />
       </div>
+      {/* <div className="explore-our-services">
+          <img style={{ width:'100%', height:'auto'}} src={'https://www.tatacapital.com/content/dam/tata-capital/other-and-home-page-banner/home-page/TC_PL_Dussehra_homepage_1920x350_banner.jpg'} />
+      </div> */}
       <div className="question">
         <Question homepage_decrement={homepageDecrement} />
       </div>

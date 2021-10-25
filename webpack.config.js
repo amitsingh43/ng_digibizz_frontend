@@ -15,6 +15,10 @@ envKeys = Object.keys(env).reduce((prev, next) => {
 }, {});
 module.exports = {
 	entry: { app: "./src/index.js" },
+	devServer: {
+	    static: './dist',
+	    hot: true,
+	  },
 	output: {
 		path: path.join(__dirname, "dist"),
 		filename: "index_bundle.js",

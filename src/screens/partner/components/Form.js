@@ -153,7 +153,7 @@ const Form = ({
                 save_basic_details(data, url, cityName, availNowResponseText);
               }}
             >
-              Avail Now
+              {title === "Moneyfy" ? "Download App Now" : "Avail Now"}
             </div>
           </a>
         </div>
