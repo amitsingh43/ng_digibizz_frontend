@@ -2739,7 +2739,7 @@ export const MONEYFY = {
   ],
   image: MoneyfyOne,
   backgroundColor: "#fff",
-  url: "https://www.tatacapital.com/blog/moneyfy/investments/",
+  url: "https://www.tatacapital.com/blog/moneyfy/investments",
   stars: null,
   socialMedia: null,
   testimonials: null,
