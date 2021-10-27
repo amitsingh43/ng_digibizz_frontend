@@ -40,7 +40,7 @@ const PartnerDetails = ({
             anytime!
           </p>
 
-          <div style={{ display: "flex", marginBottom: 20, marginTop: 20 }}>
+          {/* <div style={{ display: "flex", marginBottom: 20, marginTop: 20 }}>
             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.tatacapital.moneyfy">
               <img
                 style={{ marginRight: 20 }}
@@ -50,7 +50,7 @@ const PartnerDetails = ({
             <a target="_blank" href="https://apps.apple.com/app/id1479549912?mt=8">
               <img src="https://www.tatacapital.com/moneyfy/assets/images/loan/app-store.svg" />
             </a>
-          </div>
+          </div> */}
         </div>
       )}
 
