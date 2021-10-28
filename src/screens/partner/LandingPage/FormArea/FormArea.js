@@ -31,8 +31,6 @@ const FormArea = ({
 
   let isMobile = width <= 768;
 
-  console.log(isMobile, "----");
-
   return more ? (
     <Form
       masterData={masterData}

@@ -99,6 +99,7 @@ import VakilSearchOne from "../assets/partners/carousel/vakil_search/one.png";
 import MoneyfyOne from "../assets/partners/moneyfy.png";
 import MoneyfyTwo from "../assets/partners/MoneyfyTwo.png";
 import MoneyfyThree from "../assets/partners/MoneyfyThree.png";
+import smBanner from "../assets/Promotions/banner-lg.jpeg";
 
 import AccunityOne from "../assets/partners/carousel/Accunity/one.jpg";
 import AccunityTwo from "../assets/partners/carousel/Accunity/two.png";
@@ -2745,6 +2746,10 @@ export const MONEYFY = {
   testimonials: null,
   aboutUs: null,
   carousel: [
+    {
+      type: "image",
+      source: smBanner,
+    },
     {
       type: "image",
       source: MoneyfyOne,
