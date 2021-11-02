@@ -49,17 +49,26 @@ export const save_basic_details =
 	(body, url, cityName, ENDPOINT = '/api/save_basic_details') =>
 	async (dispatch) => {
 		try {
-			const { lead } = await _post(ENDPOINT, body);
+			const { lead, message } = await _post(ENDPOINT, body);
 			dispatch(set_user_details(body));
 			if (body.partner_availed === 'NeoGrowth') {
 				Tracking.trackEvent('CLICK', 'NG LOAN LEADS', 'APPLY NOW');
-				show_toast('Thank you, someone will get in touch with you', 'SUCCESS');
+				show_toast(message, 'SUCCESS');
 				return;
 			} else {
+				const txt = 'A download link of the Moneyfy app has been sent to your registered mobile number. Thank you for your interest!';				
 				Tracking.trackEvent('CLICK', 'PARTNER LEADS', body.partner_availed);
-				show_toast('Thank you', 'SUCCESS');
+				if(body.partner_availed === 'Moneyfy'){
+					show_toast(txt, 'SUCCESS', 20000);
+					// window.location.reload()
+				} else{
+					show_toast(message, 'SUCCESS', 3000);
+				}
 			}
-			window.open(url, '_blank');
+
+			if(body.partner_availed !== 'Moneyfy'){
+				window.open(url, '_blank');
+			}
 		} catch (error) {
 			let message = 'Something went wrong! Please try later.';
 

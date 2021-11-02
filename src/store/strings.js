@@ -96,6 +96,11 @@ import SnapbizzTwo from "../assets/partners/carousel/snapbizz/two.png";
 import HylobizOne from "../assets/partners/carousel/hylo_biz/one.jpeg";
 import VakilSearchOne from "../assets/partners/carousel/vakil_search/one.png";
 
+import MoneyfyOne from "../assets/partners/moneyfy.png";
+import MoneyfyTwo from "../assets/partners/MoneyfyTwo.png";
+import MoneyfyThree from "../assets/partners/MoneyfyThree.png";
+import smBanner from "../assets/Promotions/banner-lg.jpeg";
+
 import AccunityOne from "../assets/partners/carousel/Accunity/one.jpg";
 import AccunityTwo from "../assets/partners/carousel/Accunity/two.png";
 import AccunityThree from "../assets/partners/carousel/Accunity/three.png";
@@ -2725,6 +2730,43 @@ export const NEAR_STORE = {
     },
   ],
 };
+
+export const MONEYFY = {
+  title: "Moneyfy",
+  subTitle: [],
+  description: [
+    "One Stop Solution for your Investment needs!",
+    "Moneyfy is an app designed to aid users with their Investments. One can invest in Mutual Funds, start an SIP, Invest in FD, and start a NPS.  There are more options available to get ones #MoneyInAction with Moneyfy. Intuitive Interface, hassle-free account opening, paperless KYC, assistance just a call away, view your portfolio in just a click are just a few of the features that make Moneyfy the easiest to use Investment app. Download and Explore right away!",
+  ],
+  image: MoneyfyOne,
+  backgroundColor: "#fff",
+  url: "https://www.tatacapital.com/blog/moneyfy/investments",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
+    {
+      type: "image",
+      source: smBanner,
+    },
+    {
+      type: "image",
+      source: MoneyfyOne,
+    },
+    {
+      type: "video",
+      source: MoneyfyTwo,
+      videoID: "AZZDPcDZUMw",
+    },
+    {
+      type: "image",
+      source: MoneyfyThree,
+    },
+  ],
+  tAndc:true
+};
+
 export const ACCUNITY_SERVICES1 = {
   title: "Accunity Services",
   subTitle: [
@@ -3124,7 +3166,7 @@ export const ZIKZUK = {
     },
     {
       type: "image",
-      source: ZikZukThree
+      source: ZikZukThree,
     },
   ],
 };
@@ -4110,6 +4152,11 @@ export const PARTNERS = [
     tag: "business_loans",
   },
   {
+    category: "Investments",
+    data: [MONEYFY],
+    tag: "investments",
+  },
+  {
     category: "Inventory Management",
     data: [SNAPBIZZ, MYBILLBOOK, INSTABILL],
     tag: "inventory_management",
@@ -4160,7 +4207,7 @@ export const PARTNERS = [
   },
   {
     category: "Manage Staff",
-    data: [ PAGARBOOK],
+    data: [PAGARBOOK],
     tag: "manage_staff",
   },
   {

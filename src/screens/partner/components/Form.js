@@ -43,7 +43,7 @@ const Form = ({
   if (more) {
     return <TAndC showmore={showmore} setCheck={setCheck} />;
   }
-  console.log(more, "more");
+
   return (
     <div className={"partner-form"}>
       <div className={"form-body"}>
@@ -153,7 +153,7 @@ const Form = ({
                 save_basic_details(data, url, cityName, availNowResponseText);
               }}
             >
-              Avail Now
+              {title === "Moneyfy" ? "Download App Now" : "Avail Now"}
             </div>
           </a>
         </div>
