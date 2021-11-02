@@ -43,7 +43,7 @@ const Form = ({
   if (more) {
     return <TAndC showmore={showmore} setCheck={setCheck} />;
   }
-  console.log(more, "more");
+
   return (
     <div className={"partner-form"}>
       <div className={"form-body"}>

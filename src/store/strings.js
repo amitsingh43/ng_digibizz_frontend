@@ -2764,6 +2764,7 @@ export const MONEYFY = {
       source: MoneyfyThree,
     },
   ],
+  tAndc:true
 };
 
 export const ACCUNITY_SERVICES1 = {

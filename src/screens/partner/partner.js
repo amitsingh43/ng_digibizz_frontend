@@ -15,6 +15,7 @@ import {
 import { partnerMapping } from "store/partner_mapping";
 import { Form, DataSection, PartnerCard, PartnerDetails } from "./components";
 import LandingPage from "./LandingPage";
+import PartnerTandc from "components/partnerTandc";
 
 const Partner = () => {
   const masterData = useSelector((state) => state.masterData);
@@ -29,6 +30,8 @@ const Partner = () => {
   const [isFormVisible, toggleForm] = useState(false);
 
   const [more, showmore] = useState(false);
+
+  const [view, setView] = useState(false);
 
   var { partner, category } = useParams();
   var data = partnerMapping.find(
@@ -101,6 +104,10 @@ const Partner = () => {
     "NeoGrowth",
     "NeoGrowth Plus loans",
   ].includes(title);
+
+  if (view) {
+    return <PartnerTandc showmore={setView} setCheck={()=>console.log('')} />;
+  }
 
   return (
     <div className={"servicesPartnerPage"}>
@@ -189,6 +196,9 @@ const Partner = () => {
                   show={show}
                   toggleShow={toggleShow}
                   field={"description"}
+                  partner={title}
+                  tAndc={true}
+                  setView={setView}
                 />
               )}
             </div>

@@ -56,7 +56,7 @@ export const save_basic_details =
 				show_toast(message, 'SUCCESS');
 				return;
 			} else {
-				const txt = 'A download link of the Moneyfy app has been sent to your registered mobile number. Thank you for your interest';				
+				const txt = 'A download link of the Moneyfy app has been sent to your registered mobile number. Thank you for your interest!';				
 				Tracking.trackEvent('CLICK', 'PARTNER LEADS', body.partner_availed);
 				if(body.partner_availed === 'Moneyfy'){
 					show_toast(txt, 'SUCCESS', 20000);
