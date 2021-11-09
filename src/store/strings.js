@@ -171,7 +171,8 @@ import WebsiteZOne from "../assets/partners/carousel/WebsiteZ/one.png";
 
 import ZikZukOne from "../assets/partners/carousel/zikzuk/one.jpg";
 import ZikZukTwo from "../assets/partners/carousel/zikzuk/two.jpg";
-import ZikZukThree from "../assets/partners/carousel/zikzuk/three.png";
+import ZikZukThree from "../assets/partners/carousel/zikzuk/three.jpg";
+import ZikZukFour from "../assets/partners/carousel/zikzuk/four.jpg";
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -2764,7 +2765,7 @@ export const MONEYFY = {
       source: MoneyfyThree,
     },
   ],
-  tAndc:true
+  tAndc: true
 };
 
 export const ACCUNITY_SERVICES1 = {
@@ -3144,10 +3145,20 @@ export const VYAPAR = {
 
 export const ZIKZUK = {
   title: "ZikZuk",
-  subTitle: ["Offer: 50% off on Business Finance Manager BFM."],
-  description: [
-    "An AI ML data driven smart platform that seamlessly sync with tally and empower SME to focus on business and its growth by managing their business finance.",
-  ],
+  subTitle: ["Offer: 50% off on Business Finance Manager BFM.", "Platform fee: INR 3600,  Offer Price: INR 1800"],
+  description: ["An AI/ML data-driven business intelligence platform that syncs with multiple accounting software like Tally, and empowers SMEs to focus on business and its growth by managing their business finances"],
+  points: {
+    title: 'Why use BFM?',
+    list: [
+      "360 Degree Visibility of your Business Finances",
+      "Automated payment reminders via Email, SMS & WhatsApp",
+      "Business Calendar that helps to manage daily business activities",
+      "Cash flow Management",
+      "Create Tally Entries",
+      "Avail Credit",
+      "100% Data security"
+    ]
+  },
   image: zikzuk,
   backgroundColor: "#fff",
   url: "http://www.zikzuk.com/bfm",
@@ -3166,7 +3177,11 @@ export const ZIKZUK = {
     },
     {
       type: "image",
-      source: ZikZukThree,
+      source: ZikZukThree
+    },
+    {
+      type: "image",
+      source: ZikZukFour
     },
   ],
 };

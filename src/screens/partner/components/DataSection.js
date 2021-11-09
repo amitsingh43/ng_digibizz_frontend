@@ -5,8 +5,7 @@ const DataSection = ({
   data,
   field,
   tAndc,
-  partner,
-  setView,
+  setView, points
 }) => {
   return (
     <div>
@@ -38,9 +37,21 @@ const DataSection = ({
           </div>
         ))}
 
+        {show[field] && points.title &&
+          <div style={{ paddingLeft: 10 }}>
+            <h5>{points.title}</h5>
+            <ul>
+              {points.list.map((x, i) =>
+                <li key={i}>{x}</li>
+              )}
+            </ul>
+          </div>
+
+        }
+
         {tAndc && (
           <div>
-            <a onClick={() => setView(true)} style={{paddingLeft:10}}>
+            <a onClick={() => setView(true)} style={{ paddingLeft: 10 }}>
               Click here{" "}
             </a>
             for Terms and Conditions

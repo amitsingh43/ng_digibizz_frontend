@@ -60,9 +60,14 @@ const PartnerDetails = ({
           <div className={"description"}>
             <div>
               <ul>
-                {subTitle.map((offer) => (
-                  <li style={{ lineHeight: 1.8 }}>{offer}</li>
-                ))}
+                {title === 'ZikZuk' ?
+                  <>
+                    <li style={{ lineHeight: 1.8 }}>Offer: <b> 50% off on Business Finance Manager BFM</b></li>
+                    <li style={{ lineHeight: 1.8 }}>Platform fee: INR 3600, Offer Price: INR 1800</li>
+                  </>
+                  : subTitle.map((offer) => (
+                    <li style={{ lineHeight: 1.8 }}>{offer}</li>
+                  ))}
               </ul>
             </div>
           </div>
