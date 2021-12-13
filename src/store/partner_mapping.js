@@ -45,6 +45,7 @@ import {
   ZIKZUK,
   NEOGROWTH_PLUS,
   MONEYFY,
+  ONSURITY,
 } from "./strings";
 
 export const partnerMapping = [
@@ -254,14 +255,19 @@ export const partnerMapping = [
     heading: "Customer Loyalty & Promotions",
   },
   {
+    name: "onsurity",
+    partner: ONSURITY,
+    heading: "Protection & Employee Healthcare",
+  },
+  {
     name: "care",
     partner: CARE,
-    heading: "Insurance",
+    heading: "Protection & Employee Healthcare",
   },
   {
     name: "godigit",
     partner: GO_DIGIT,
-    heading: "Insurance",
+    heading: "Protection & Employee Healthcare",
   },
   {
     name: "space of joy",
@@ -291,7 +297,7 @@ export const partnerMapping = [
   {
     name: "covid cover",
     partner: COVID_COVER,
-    heading: "Insurance",
+    heading: "Protection & Employee Healthcare",
   },
   {
     name: "printhouse",

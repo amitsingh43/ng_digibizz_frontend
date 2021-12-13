@@ -173,6 +173,10 @@ import ZikZukOne from "../assets/partners/carousel/zikzuk/one.jpg";
 import ZikZukTwo from "../assets/partners/carousel/zikzuk/two.jpg";
 import ZikZukThree from "../assets/partners/carousel/zikzuk/three.png";
 
+import OnsurityInterface from "../assets/partners/carousel/Onsurity/OnsurityInterface.png";
+import OnsurityLogo from "../assets/partners/carousel/Onsurity/OnsurityLogo.png";
+import OnsurityPlans from "../assets/partners/carousel/Onsurity/OnsurityPlans.png";
+
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
 export const TELL_ABOUT_YOU_DESC =
@@ -180,7 +184,7 @@ export const TELL_ABOUT_YOU_DESC =
 export const TELL_ABOUT_BUSINESS_DESC =
   "Before you begin the survey, we would require some additional information from you. Please fill in the details below and you can begin the evaluation shortly.";
 export const COMPANY_NAME = "NeoGrowth Credit Pvt. Ltd.";
-export const TERMS_AND_CONDITIONS_1 = "I hearby consent to ";
+export const TERMS_AND_CONDITIONS_1 = "I hereby consent to ";
 export const TERMS_AND_CONDITIONS_2 =
   "to receive information / service etc for marketing purpose through telephone or email or SMS directly or through any service provider.";
 export const TERMS_AND_CONDITIONS_DETAILED1 =
@@ -2764,7 +2768,7 @@ export const MONEYFY = {
       source: MoneyfyThree,
     },
   ],
-  tAndc:true
+  tAndc: true
 };
 
 export const ACCUNITY_SERVICES1 = {
@@ -3375,6 +3379,35 @@ export const CARE = {
     {
       type: "image",
       source: Care_HealthTwo,
+    },
+  ],
+};
+export const ONSURITY = {
+  title: "Onsurity",
+  subTitle: ["Comprehensive and affordable employee healthcare benefitse"],
+  description: [
+    "Onsurity employee healthcare membership a comprehensive and affordable solution for your team with several healthcare and wellness benefits including access to group health insurance, group personal accident insurance, discounted medicines and doctor teleconsultations, health check-ups, gym memberships, exclusive webinars and much more. All of this can be given to your employees in just 2 minutes.",
+    "",
+  ],
+  image: OnsurityLogo,
+  backgroundColor: "#fff",
+  url: "https://www.onsurity.health/neogrowth",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
+    {
+      type: "image",
+      source: OnsurityLogo,
+    },
+    {
+      type: "image",
+      source: OnsurityPlans,
+    },
+    {
+      type: "image",
+      source: OnsurityInterface,
     },
   ],
 };
@@ -4216,9 +4249,9 @@ export const PARTNERS = [
     tag: "customer_loyalty_and_promotions",
   },
   {
-    category: "Insurance",
-    data: [CARE, GO_DIGIT, COVID_COVER],
-    tag: "insurance",
+    category: "Protection & Employee Healthcare",
+    data: [CARE, GO_DIGIT, COVID_COVER, ONSURITY],
+    tag: "protection",
   },
   {
     category: "Business Decor",

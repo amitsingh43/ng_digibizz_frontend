@@ -85,8 +85,8 @@ export const services = [
   },
   {
     image: insurance,
-    label: "Insurance",
-    tag: "insurance",
+    label: "Protection & Employee Healthcare",
+    tag: "protection",
   },
   {
     image: business_decor,
