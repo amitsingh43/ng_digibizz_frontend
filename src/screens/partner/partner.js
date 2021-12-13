@@ -80,7 +80,6 @@ const Partner = () => {
     testimonials,
     aboutUs,
     carousel,
-    points
   } = data.partner;
   var { heading } = data;
 
@@ -107,7 +106,7 @@ const Partner = () => {
   ].includes(title);
 
   if (view) {
-    return <PartnerTandc showmore={setView} setCheck={() => console.log('')} />;
+    return <PartnerTandc showmore={setView} setCheck={()=>console.log('')} />;
   }
 
   return (
@@ -197,9 +196,9 @@ const Partner = () => {
                   show={show}
                   toggleShow={toggleShow}
                   field={"description"}
-                  tAndc={title === 'Moneyfy' ? true : false}
+                  partner={title}
+                  tAndc={title === "Moneyfy"}
                   setView={setView}
-                  points={points}
                 />
               )}
             </div>

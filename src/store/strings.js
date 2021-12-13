@@ -174,6 +174,11 @@ import ZikZukTwo from "../assets/partners/carousel/zikzuk/two.jpg";
 import ZikZukThree from "../assets/partners/carousel/zikzuk/three.jpg";
 import ZikZukFour from "../assets/partners/carousel/zikzuk/four.jpg";
 
+import OnsurityInterface from "../assets/partners/carousel/Onsurity/OnsurityInterface.png";
+import OnsurityLogo from "../assets/partners/carousel/Onsurity/OnsurityLogo.png";
+import OnsurityPlans from "../assets/partners/carousel/Onsurity/OnsurityPlans.png";
+
+
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
 export const TELL_ABOUT_YOU_DESC =
@@ -3393,6 +3398,36 @@ export const CARE = {
     },
   ],
 };
+export const ONSURITY = {
+  title: "Onsurity",
+  subTitle: ["Comprehensive and affordable employee healthcare benefitse"],
+  description: [
+    "Onsurity employee healthcare membership a comprehensive and affordable solution for your team with several healthcare and wellness benefits including access to group health insurance, group personal accident insurance, discounted medicines and doctor teleconsultations, health check-ups, gym memberships, exclusive webinars and much more. All of this can be given to your employees in just 2 minutes.",
+    "",
+  ],
+  image: OnsurityLogo,
+  backgroundColor: "#fff",
+  url: "https://www.onsurity.health/neogrowth",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
+    {
+      type: "image",
+      source: OnsurityLogo,
+    },
+    {
+      type: "image",
+      source: OnsurityPlans,
+    },
+    {
+      type: "image",
+      source: OnsurityInterface,
+    },
+  ],
+};
+
 export const VAKIL_SEARCH = {
   title: "VakilSearch",
   subTitle: [
@@ -4231,9 +4266,9 @@ export const PARTNERS = [
     tag: "customer_loyalty_and_promotions",
   },
   {
-    category: "Insurance",
-    data: [CARE, GO_DIGIT, COVID_COVER],
-    tag: "insurance",
+    category: "Protection & Employee Healthcare",
+    data: [CARE, GO_DIGIT, COVID_COVER,ONSURITY],
+    tag: "protection",
   },
   {
     category: "Business Decor",
