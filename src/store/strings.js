@@ -171,7 +171,13 @@ import WebsiteZOne from "../assets/partners/carousel/WebsiteZ/one.png";
 
 import ZikZukOne from "../assets/partners/carousel/zikzuk/one.jpg";
 import ZikZukTwo from "../assets/partners/carousel/zikzuk/two.jpg";
-import ZikZukThree from "../assets/partners/carousel/zikzuk/three.png";
+import ZikZukThree from "../assets/partners/carousel/zikzuk/three.jpg";
+import ZikZukFour from "../assets/partners/carousel/zikzuk/four.jpg";
+
+import OnsurityInterface from "../assets/partners/carousel/Onsurity/OnsurityInterface.png";
+import OnsurityLogo from "../assets/partners/carousel/Onsurity/OnsurityLogo.png";
+import OnsurityPlans from "../assets/partners/carousel/Onsurity/OnsurityPlans.png";
+
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -180,7 +186,7 @@ export const TELL_ABOUT_YOU_DESC =
 export const TELL_ABOUT_BUSINESS_DESC =
   "Before you begin the survey, we would require some additional information from you. Please fill in the details below and you can begin the evaluation shortly.";
 export const COMPANY_NAME = "NeoGrowth Credit Pvt. Ltd.";
-export const TERMS_AND_CONDITIONS_1 = "I hearby consent to ";
+export const TERMS_AND_CONDITIONS_1 = "I hereby consent to ";
 export const TERMS_AND_CONDITIONS_2 =
   "to receive information / service etc for marketing purpose through telephone or email or SMS directly or through any service provider.";
 export const TERMS_AND_CONDITIONS_DETAILED1 =
@@ -2764,7 +2770,7 @@ export const MONEYFY = {
       source: MoneyfyThree,
     },
   ],
-  tAndc:true
+  tAndc: true
 };
 
 export const ACCUNITY_SERVICES1 = {
@@ -3144,10 +3150,20 @@ export const VYAPAR = {
 
 export const ZIKZUK = {
   title: "ZikZuk",
-  subTitle: ["Offer: 50% off on Business Finance Manager BFM."],
-  description: [
-    "An AI ML data driven smart platform that seamlessly sync with tally and empower SME to focus on business and its growth by managing their business finance.",
-  ],
+  subTitle: ["Offer: 50% off on Business Finance Manager BFM.", "Platform fee: INR 3600,  Offer Price: INR 1800"],
+  description: ["An AI/ML data-driven business intelligence platform that syncs with multiple accounting software like Tally, and empowers SMEs to focus on business and its growth by managing their business finances"],
+  points: {
+    title: 'Why use BFM?',
+    list: [
+      "360 Degree Visibility of your Business Finances",
+      "Automated payment reminders via Email, SMS & WhatsApp",
+      "Business Calendar that helps to manage daily business activities",
+      "Cash flow Management",
+      "Create Tally Entries",
+      "Avail Credit",
+      "100% Data security"
+    ]
+  },
   image: zikzuk,
   backgroundColor: "#fff",
   url: "http://www.zikzuk.com/bfm",
@@ -3166,7 +3182,11 @@ export const ZIKZUK = {
     },
     {
       type: "image",
-      source: ZikZukThree,
+      source: ZikZukThree
+    },
+    {
+      type: "image",
+      source: ZikZukFour
     },
   ],
 };
@@ -3378,6 +3398,36 @@ export const CARE = {
     },
   ],
 };
+export const ONSURITY = {
+  title: "Onsurity",
+  subTitle: ["Comprehensive and affordable employee healthcare benefits"],
+  description: [
+    "Onsurity employee healthcare membership a comprehensive and affordable solution for your team with several healthcare and wellness benefits including access to group health insurance, group personal accident insurance, discounted medicines and doctor teleconsultations, health check-ups, gym memberships, exclusive webinars and much more. All of this can be given to your employees in just 2 minutes.",
+    "",
+  ],
+  image: OnsurityLogo,
+  backgroundColor: "#fff",
+  url: "https://www.onsurity.health/neogrowth",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
+    {
+      type: "image",
+      source: OnsurityLogo,
+    },
+    {
+      type: "image",
+      source: OnsurityPlans,
+    },
+    {
+      type: "image",
+      source: OnsurityInterface,
+    },
+  ],
+};
+
 export const VAKIL_SEARCH = {
   title: "VakilSearch",
   subTitle: [
@@ -4216,9 +4266,9 @@ export const PARTNERS = [
     tag: "customer_loyalty_and_promotions",
   },
   {
-    category: "Insurance",
-    data: [CARE, GO_DIGIT, COVID_COVER],
-    tag: "insurance",
+    category: "Protection & Employee Healthcare",
+    data: [CARE, GO_DIGIT, COVID_COVER,ONSURITY],
+    tag: "protection",
   },
   {
     category: "Business Decor",
