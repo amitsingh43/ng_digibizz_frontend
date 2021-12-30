@@ -100,6 +100,7 @@ import MoneyfyOne from "../assets/partners/moneyfy.jpg";
 import MoneyfyTwo from "../assets/partners/carousel/Moneyfy/one.jpg";
 import MoneyfyThree from "../assets/partners/carousel/Moneyfy/two.jpg";
 import smBanner from "../assets/Promotions/banner-sm.png";
+import MoneyfyVideo from "../assets/partners/MoneyfyTwo.png";
 
 import AccunityOne from "../assets/partners/carousel/Accunity/one.jpg";
 import AccunityTwo from "../assets/partners/carousel/Accunity/two.png";
@@ -2762,13 +2763,16 @@ export const MONEYFY = {
     {
       type: "image",
       source: MoneyfyTwo,
-      // videoID: "AZZDPcDZUMw",
     },
     {
       type: "image",
       source: MoneyfyThree,
     },
-
+    {
+      type: "video",
+      source: MoneyfyVideo,
+      videoID: "AZZDPcDZUMw",
+    },
   ],
   tAndc: true
 };
