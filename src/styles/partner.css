@@ -239,9 +239,9 @@
 .description ul {
 	padding-left: 13px;
 }
-.partner-main .partner-section {
+/* .partner-main .partner-section {
 	height: 300px;
-}
+} */
 
 @media (max-width: 48rem) {
 	.servicesPartnerPage {
