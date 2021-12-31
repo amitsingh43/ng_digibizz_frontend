@@ -101,6 +101,7 @@ import MoneyfyTwo from "../assets/partners/carousel/Moneyfy/one.jpg";
 import MoneyfyThree from "../assets/partners/carousel/Moneyfy/two.jpg";
 import smBanner from "../assets/Promotions/banner-sm.png";
 import MoneyfyVideo from "../assets/partners/MoneyfyTwo.png";
+import MoneyfyFour from "../assets/partners/MoneyfyFour.png";
 
 import AccunityOne from "../assets/partners/carousel/Accunity/one.jpg";
 import AccunityTwo from "../assets/partners/carousel/Accunity/two.png";
@@ -2750,7 +2751,7 @@ export const MONEYFY = {
   ],
   image: MoneyfyOne,
   backgroundColor: "#fff",
-  url: "https://secure-web.cisco.com/1Is1pv376VczTMSzuxubotyUNJcAKHRblxsnpP8yDit4HkQJlPfgjFGo_67p4nSHF-IruZODKe6lSnSmhDz37OkvMLtwnSX9s0oR76eCbQ1c6fGbSROQL2812Rx3w2ypIlHQ6P2_ESJltBN8fRyF4ZmsdVcA_0jDn0TuGMfABp28Wxip24F-xE5Om-qy-nWzS_OF8w8tSfLRAvoA52UwtmiYanWAw82GUlpHcpevdOZ3Cw9-XIqBthQdqMhQVkLhy_clRv_cuWS837TvH7EJVSNCJBz-peU9jFEigDEI1_j-UT-H71Wlb86adnoKuGJqsyZ83F5PJP5qBJDwmaz4PoDk71dsQPQKxpmwjCDgPVR8fnMVO8V-LSUbqEmJ_OCXAnz8yNGYj8njVmHaXKWG7pg/https%3A%2F%2Fbit.ly%2F3kfeRXX",
+  url: "https://tinyurl.com/tscwbka2",
   stars: null,
   socialMedia: null,
   testimonials: null,
@@ -2772,6 +2773,11 @@ export const MONEYFY = {
       type: "video",
       source: MoneyfyVideo,
       videoID: "AZZDPcDZUMw",
+    },
+    {
+      type: "video",
+      source: MoneyfyFour,
+      videoID: "8orM-FgrmAs",
     },
   ],
   tAndc: true
