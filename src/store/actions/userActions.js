@@ -18,100 +18,95 @@ export const reset_user = () => {
 
 export const update_lead =
 	(body, ENDPOINT = '/api/update_lead') =>
-	async (dispatch) => {
-		try {
-			const { lead } = await _post(ENDPOINT, body);
-			if (body.partner_availed === 'NeoGrowth') {
-				if (!localStorage.getItem('NG LOAN LEADS')) {
-					localStorage.setItem('NG LOAN LEADS', 'true');
-					Tracking.trackEvent('CLICK', 'NG LOAN LEADS', 'APPLY NOW');
+		async (dispatch) => {
+			try {
+				const { lead } = await _post(ENDPOINT, body);
+				if (body.partner_availed === 'NeoGrowth') {
+					if (!localStorage.getItem('NG LOAN LEADS')) {
+						localStorage.setItem('NG LOAN LEADS', 'true');
+						Tracking.trackEvent('CLICK', 'NG LOAN LEADS', 'APPLY NOW');
+					}
+					show_toast('Thank you, someone will get in touch with you', 'SUCCESS');
+				} else {
+					if (!localStorage.getItem('body.partner_availed')) {
+						localStorage.setItem(body.partner_availed, 'true');
+						Tracking.trackEvent('CLICK', 'PARTNER LEADS', body.partner_availed);
+					}
+					show_toast('Thank you', 'SUCCESS');
 				}
-				show_toast('Thank you, someone will get in touch with you', 'SUCCESS');
-			} else {
-				if (!localStorage.getItem('body.partner_availed')) {
-					localStorage.setItem(body.partner_availed, 'true');
-					Tracking.trackEvent('CLICK', 'PARTNER LEADS', body.partner_availed);
-				}
-				show_toast('Thank you', 'SUCCESS');
-			}
-			dispatch(set_user_details(lead));
-		} catch (error) {
-			let message = 'Something went wrong! Please try later.';
+				dispatch(set_user_details(lead));
+			} catch (error) {
+				let message = 'Something went wrong! Please try later.';
 
-			if (error && error.response && error.response.data && error.response.data.message) {
-				message = error.response.data.message;
+				if (error && error.response && error.response.data && error.response.data.message) {
+					message = error.response.data.message;
+				}
+				dispatch(add_error(message));
 			}
-			dispatch(add_error(message));
-		}
-	};
+		};
 
 export const save_basic_details =
 	(body, url, cityName, ENDPOINT = '/api/save_basic_details') =>
-	async (dispatch) => {
-		try {
-			const { lead, message } = await _post(ENDPOINT, body);
-			dispatch(set_user_details(body));
-			if (body.partner_availed === 'NeoGrowth') {
-				Tracking.trackEvent('CLICK', 'NG LOAN LEADS', 'APPLY NOW');
-				show_toast(message, 'SUCCESS');
-				return;
-			} else {
-				const txt = 'A download link of the Moneyfy app has been sent to your registered mobile number. Thank you for your interest!';				
-				Tracking.trackEvent('CLICK', 'PARTNER LEADS', body.partner_availed);
-				if(body.partner_availed === 'Moneyfy'){
-					show_toast(txt, 'SUCCESS', 20000);
-					// window.location.reload()
-				} else{
-					show_toast(message, 'SUCCESS', 3000);
+		async (dispatch) => {
+			try {
+				const { lead, message } = await _post(ENDPOINT, body);
+				dispatch(set_user_details(body));
+				if (body.partner_availed === 'NeoGrowth') {
+					Tracking.trackEvent('CLICK', 'NG LOAN LEADS', 'APPLY NOW');
+					show_toast(message, 'SUCCESS');
+					return;
+				} else {
+					Tracking.trackEvent('CLICK', 'PARTNER LEADS', body.partner_availed);
+					if (body.partner_availed === 'Moneyfy') {
+						show_toast(message, 'SUCCESS', 20000);
+					} else {
+						show_toast(message, 'SUCCESS', 3000);
+					}
 				}
-			}
-
-			if(body.partner_availed !== 'Moneyfy'){
 				window.open(url, '_blank');
-			}
-		} catch (error) {
-			let message = 'Something went wrong! Please try later.';
+			} catch (error) {
+				let message = 'Something went wrong! Please try later.';
 
-			if (error && error.response && error.response.data && error.response.data.message) {
-				message = error.response.data.message;
+				if (error && error.response && error.response.data && error.response.data.message) {
+					message = error.response.data.message;
+				}
+				dispatch(add_error(message));
 			}
-			dispatch(add_error(message));
-		}
-	};
+		};
 
 export const getOTP =
 	(phone, ENDPOINT = '/send_otp') =>
-	async (dispatch) => {
-		try {
-			const res = await _post(ENDPOINT, { phone });
-			if (process.env.isProd === 'no') {
-				localStorage.setItem('otp', res.data.password);
-			}
-			show_toast(res.message, 'SUCCESS');
-		} catch (error) {
-			let message = 'Something went wrong! Please try later.';
+		async (dispatch) => {
+			try {
+				const res = await _post(ENDPOINT, { phone });
+				if (process.env.isProd === 'no') {
+					localStorage.setItem('otp', res.data.password);
+				}
+				show_toast(res.message, 'SUCCESS');
+			} catch (error) {
+				let message = 'Something went wrong! Please try later.';
 
-			if (error && error.response && error.response.data && error.response.data.message) {
-				message = error.response.data.message;
+				if (error && error.response && error.response.data && error.response.data.message) {
+					message = error.response.data.message;
+				}
+				dispatch(add_error(message));
 			}
-			dispatch(add_error(message));
-		}
-	};
+		};
 export const show_form =
 	(leadID, ENDPOINT = '/api/get_lead/') =>
-	async (dispatch) => {
-		try {
-			const { mobile_verified } = await _get(ENDPOINT + leadID);
-			return mobile_verified;
-		} catch (error) {
-			let message = 'Something went wrong! Please try later.';
+		async (dispatch) => {
+			try {
+				const { mobile_verified } = await _get(ENDPOINT + leadID);
+				return mobile_verified;
+			} catch (error) {
+				let message = 'Something went wrong! Please try later.';
 
-			if (error && error.response && error.response.data && error.response.data.message) {
-				message = error.response.data.message;
+				if (error && error.response && error.response.data && error.response.data.message) {
+					message = error.response.data.message;
+				}
+				dispatch(add_error(message));
 			}
-			dispatch(add_error(message));
-		}
-	};
+		};
 
 // export const get_gender =
 //   (ENDPOINT = "/master_data/get_genders") =>

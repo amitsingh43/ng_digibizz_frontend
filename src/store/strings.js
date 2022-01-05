@@ -96,10 +96,12 @@ import SnapbizzTwo from "../assets/partners/carousel/snapbizz/two.png";
 import HylobizOne from "../assets/partners/carousel/hylo_biz/one.jpeg";
 import VakilSearchOne from "../assets/partners/carousel/vakil_search/one.png";
 
-import MoneyfyOne from "../assets/partners/moneyfy.png";
-import MoneyfyTwo from "../assets/partners/MoneyfyTwo.png";
-import MoneyfyThree from "../assets/partners/MoneyfyThree.png";
-import smBanner from "../assets/Promotions/banner-lg.jpeg";
+import MoneyfyOne from "../assets/partners/moneyfy.jpg";
+import MoneyfyTwo from "../assets/partners/carousel/Moneyfy/one.jpg";
+import MoneyfyThree from "../assets/partners/carousel/Moneyfy/two.jpg";
+import smBanner from "../assets/Promotions/banner-sm.png";
+import MoneyfyVideo from "../assets/partners/MoneyfyTwo.png";
+import MoneyfyFour from "../assets/partners/MoneyfyFour.png";
 
 import AccunityOne from "../assets/partners/carousel/Accunity/one.jpg";
 import AccunityTwo from "../assets/partners/carousel/Accunity/two.png";
@@ -2739,14 +2741,17 @@ export const NEAR_STORE = {
 
 export const MONEYFY = {
   title: "Moneyfy",
-  subTitle: [],
+  subTitle: [
+    "Rs. 500 Amazon Voucher on investing with Mutual Funds through Moneyfy "
+  ],
   description: [
     "One Stop Solution for your Investment needs!",
-    "Moneyfy is an app designed to aid users with their Investments. One can invest in Mutual Funds, start an SIP, Invest in FD, and start a NPS.  There are more options available to get ones #MoneyInAction with Moneyfy. Intuitive Interface, hassle-free account opening, paperless KYC, assistance just a call away, view your portfolio in just a click are just a few of the features that make Moneyfy the easiest to use Investment app. Download and Explore right away!",
+    "Why let your money waste it’s time just lying around in your pocket or account? Moneyfy is an app designed to aid you with your Investments. You can invest in Mutual Funds, start an SIP, Invest in Fixed deposits, and start a national pension scheme.  There are more options available to get your #MoneyInAction with Moneyfy.",
+    "Intuitive Interface, hassle-free account opening, paperless KYC, assistance just a call away, view your portfolio in just a click are just a few of the features that make Moneyfy the easiest to use Investment app. Download and Explore right away!"
   ],
   image: MoneyfyOne,
   backgroundColor: "#fff",
-  url: "https://www.tatacapital.com/blog/moneyfy/investments",
+  url: "https://tinyurl.com/tscwbka2",
   stars: null,
   socialMedia: null,
   testimonials: null,
@@ -2758,16 +2763,21 @@ export const MONEYFY = {
     },
     {
       type: "image",
-      source: MoneyfyOne,
-    },
-    {
-      type: "video",
       source: MoneyfyTwo,
-      videoID: "AZZDPcDZUMw",
     },
     {
       type: "image",
       source: MoneyfyThree,
+    },
+    {
+      type: "video",
+      source: MoneyfyVideo,
+      videoID: "AZZDPcDZUMw",
+    },
+    {
+      type: "video",
+      source: MoneyfyFour,
+      videoID: "8orM-FgrmAs",
     },
   ],
   tAndc: true
@@ -4267,7 +4277,7 @@ export const PARTNERS = [
   },
   {
     category: "Protection & Employee Healthcare",
-    data: [CARE, GO_DIGIT, COVID_COVER,ONSURITY],
+    data: [CARE, GO_DIGIT, COVID_COVER, ONSURITY],
     tag: "protection",
   },
   {

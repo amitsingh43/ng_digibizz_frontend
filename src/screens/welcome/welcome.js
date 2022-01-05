@@ -10,8 +10,8 @@ import {
   SuccessStories,
   MobileView,
 } from "./components";
-import lgBanner from "assets/Promotions/banner-lg.jpeg";
-import smBanner from "assets/Promotions/banner-sm.jpeg";
+import lgBanner from "assets/Promotions/banner-lg.png";
+import smBanner from "assets/Promotions/banner-sm.png";
 import { Link } from "react-router-dom";
 
 export default function Welcome() {
