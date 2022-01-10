@@ -2751,7 +2751,7 @@ export const MONEYFY = {
   ],
   image: MoneyfyOne,
   backgroundColor: "#fff",
-  url: "https://tinyurl.com/tscwbka2",
+  url: "https://app.adjust.net.in/ks18j96?fallback=https%3A%2F%2Fwww.tatacapital.com%2Fmoneyfy%2F",
   stars: null,
   socialMedia: null,
   testimonials: null,
