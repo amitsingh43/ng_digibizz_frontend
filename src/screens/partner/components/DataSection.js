@@ -120,6 +120,20 @@ const DataSection = ({
           </div>
         </div>}
 
+        {partner === "ZikZuk" && <div className={show[field] ? "active" : "hidden"}> 
+         <b> Why use BFM? </b>
+
+         <ul>
+           <li>360 Degree Visibility of your Business Finances</li>
+           <li>Automated payment reminders via Email, SMS & WhatsApp</li>
+           <li>Business Calendar that helps to manage daily business activities</li>
+           <li>Cash flow Management</li>
+           <li>Create Tally Entries</li>
+           <li>Avail Credit</li>
+           <li>100% Data security</li>
+         </ul>    
+        </div>}
+
         {tAndc && (
           <div>
             <a onClick={() => setView(true)} style={{ paddingLeft: 10 }}>
