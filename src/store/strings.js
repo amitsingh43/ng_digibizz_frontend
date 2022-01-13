@@ -4272,7 +4272,7 @@ export const PARTNERS = [
   },
   {
     category: "Customer Loyalty & Promotions",
-    data: [SYROW, BRANDPULSE, SMARTECH, ACCUNITY_SERVICES1, BLUE_OCKTOPUS],
+    data: [SYROW, BRANDPULSE, ACCUNITY_SERVICES1, BLUE_OCKTOPUS],
     tag: "customer_loyalty_and_promotions",
   },
   {
