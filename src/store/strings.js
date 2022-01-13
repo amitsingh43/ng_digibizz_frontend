@@ -3160,7 +3160,7 @@ export const VYAPAR = {
 
 export const ZIKZUK = {
   title: "ZikZuk",
-  subTitle: ["Offer: 50% off on Business Finance Manager BFM.", "Platform fee: INR 3600,  Offer Price: INR 1800"],
+  subTitle: ["Offer: 50% off on Business Finance Manager (BFM).", "Platform fee: INR 3600,  Offer Price: INR 1800"],
   description: ["An AI/ML data-driven business intelligence platform that syncs with multiple accounting software like Tally, and empowers SMEs to focus on business and its growth by managing their business finances"],
   points: {
     title: 'Why use BFM?',
