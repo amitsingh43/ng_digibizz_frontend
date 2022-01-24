@@ -21,6 +21,7 @@ import brandpulse from "../assets/partners/brandpulse.jpg";
 import snapbizz from "../assets/partners/snapbizz.svg";
 import quikaf from "../assets/partners/quikaf.png";
 import quikaf1 from "../assets/partners/carousel/Quikaf/quikaf1.png";
+import quikaf2 from "../assets/partners/carousel/Quikaf/quikaf2.png";
 import flobiz from "../assets/partners/flobiz.svg";
 import accunity from "../assets/partners/accunity.svg";
 import smartech from "../assets/partners/smartech.svg";
@@ -3143,6 +3144,10 @@ export const QUIKAF = {
     {
       type: "image",
       source: quikaf1,
+    },
+    {
+      type: "image",
+      source: quikaf2,
     },
   ],
 };
