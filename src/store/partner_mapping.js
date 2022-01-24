@@ -9,6 +9,7 @@ import {
   NEOGROWTH,
   MYBILLBOOK,
   SNAPBIZZ,
+  QUIKAF,
   OK_CREDIT,
   VYAPAR,
   PINNACLE,
@@ -97,6 +98,11 @@ export const partnerMapping = [
   {
     name: "snapbizz",
     partner: SNAPBIZZ,
+    heading: "Inventory Management",
+  },
+  {
+    name: "quikaf",
+    partner: QUIKAF,
     heading: "Inventory Management",
   },
   {
@@ -292,6 +298,11 @@ export const partnerMapping = [
   {
     name: "porter",
     partner: PORTER,
+    heading: "Delivery & Logistics",
+  },
+  {
+    name: "quikaf",
+    partner: QUIKAF,
     heading: "Delivery & Logistics",
   },
   {
