@@ -28,27 +28,40 @@ const PartnerDetails = ({
   carouselLength,
 }) => {
   const history = useHistory();
+
+  const MoneyfyDiv = () => {
+    return (
+      <div>
+        <h4>It’s time to get your #MoneyInAction</h4>
+        <p>
+          A quick and easy solution for your financial needs - anywhere,
+          anytime!
+        </p>
+
+        <div style={{ display: "flex", marginBottom: 20, marginTop: 20 }}>
+          <img
+            style={{ marginRight: 20 }}
+            src="https://www.tatacapital.com/moneyfy/assets/images/loan/play-store.svg"
+          />
+          <img src="https://www.tatacapital.com/moneyfy/assets/images/loan/app-store.svg" />
+        </div>
+      </div>
+    );
+  };
+
+  const QUIKAFDiv = () => (
+    <h4>We store, pick, pack, and deliver your order in 30 minutes!</h4>
+  );
+
   return (
     <div className={"partner-details activeIndicators"}>
       <h3>{title}</h3>
       <div>{stars && <div>{getRating(stars)}</div>}</div>
-      {title === "Moneyfy" && (
-        <div>
-          <h4>It’s time to get your #MoneyInAction</h4>
-          <p>
-            A quick and easy solution for your financial needs - anywhere,
-            anytime!
-          </p>
-
-          <div style={{ display: "flex", marginBottom: 20, marginTop: 20 }}>
-            <img
-              style={{ marginRight: 20 }}
-              src="https://www.tatacapital.com/moneyfy/assets/images/loan/play-store.svg"
-            />
-            <img src="https://www.tatacapital.com/moneyfy/assets/images/loan/app-store.svg" />
-          </div>
-        </div>
-      )}
+      {title === "Moneyfy"
+        ? MoneyfyDiv()
+        : title === "QUIKAF"
+        ? QUIKAFDiv()
+        : null}
 
       {subTitle.length > 0 && (
         <>
@@ -60,14 +73,20 @@ const PartnerDetails = ({
           <div className={"description"}>
             <div>
               <ul>
-                {title === 'ZikZuk' ?
+                {title === "ZikZuk" ? (
                   <>
-                    <li style={{ lineHeight: 1.8 }}>Offer: <b> 50% off on Business Finance Manager (BFM)</b></li>
-                    <li style={{ lineHeight: 1.8 }}>Platform fee: INR 3600, Offer Price: INR 1800</li>
+                    <li style={{ lineHeight: 1.8 }}>
+                      Offer: <b> 50% off on Business Finance Manager (BFM)</b>
+                    </li>
+                    <li style={{ lineHeight: 1.8 }}>
+                      Platform fee: INR 3600, Offer Price: INR 1800
+                    </li>
                   </>
-                  : subTitle.map((offer) => (
+                ) : (
+                  subTitle.map((offer) => (
                     <li style={{ lineHeight: 1.8 }}>{offer}</li>
-                  ))}
+                  ))
+                )}
               </ul>
             </div>
           </div>
