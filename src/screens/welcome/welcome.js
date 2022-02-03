@@ -48,8 +48,8 @@ export default function Welcome() {
   return (
     <div style={{ fontFamily: "Rubik" }}>
       <div className="welcome">
-        {/*<TopContent homepage_decrement={homepageDecrement} />*/}
-          <TopCarousel homepage_decrement={homepageDecrement}/>
+        <TopContent homepage_decrement={homepageDecrement} />
+          {/* <TopCarousel homepage_decrement={homepageDecrement}/> */}
       </div>
       <div className="explore-our-services">
         <ExploreOurServices />
