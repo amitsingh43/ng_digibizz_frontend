@@ -9,6 +9,7 @@ import {
   Question,
   SuccessStories,
   MobileView,
+  TopCarousel,
 } from "./components";
 import lgBanner from "assets/Promotions/banner-lg.png";
 import smBanner from "assets/Promotions/banner-sm.png";
@@ -48,6 +49,7 @@ export default function Welcome() {
     <div style={{ fontFamily: "Rubik" }}>
       <div className="welcome">
         <TopContent homepage_decrement={homepageDecrement} />
+          {/* <TopCarousel homepage_decrement={homepageDecrement}/> */}
       </div>
       <div className="explore-our-services">
         <ExploreOurServices />

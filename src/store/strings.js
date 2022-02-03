@@ -19,6 +19,9 @@ import apna_co from "../assets/partners/apna_co.png";
 import vakilsearch from "../assets/partners/vakilsearch.png";
 import brandpulse from "../assets/partners/brandpulse.jpg";
 import snapbizz from "../assets/partners/snapbizz.svg";
+import quikaf from "../assets/partners/quikaf.png";
+import quikaf1 from "../assets/partners/carousel/Quikaf/quikaf1.png";
+import quikaf2 from "../assets/partners/carousel/Quikaf/quikaf2.png";
 import flobiz from "../assets/partners/flobiz.svg";
 import accunity from "../assets/partners/accunity.svg";
 import smartech from "../assets/partners/smartech.svg";
@@ -179,7 +182,6 @@ import ZikZukFour from "../assets/partners/carousel/zikzuk/four.jpg";
 import OnsurityInterface from "../assets/partners/carousel/Onsurity/OnsurityInterface.png";
 import OnsurityLogo from "../assets/partners/carousel/Onsurity/OnsurityLogo.png";
 import OnsurityPlans from "../assets/partners/carousel/Onsurity/OnsurityPlans.png";
-
 
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
@@ -2742,12 +2744,12 @@ export const NEAR_STORE = {
 export const MONEYFY = {
   title: "Moneyfy",
   subTitle: [
-    "Rs. 500 Amazon Voucher on investing with Mutual Funds through Moneyfy "
+    "Rs. 500 Amazon Voucher on investing with Mutual Funds through Moneyfy ",
   ],
   description: [
     "One Stop Solution for your Investment needs!",
     "Why let your money waste it’s time just lying around in your pocket or account? Moneyfy is an app designed to aid you with your Investments. You can invest in Mutual Funds, start an SIP, Invest in Fixed deposits, and start a national pension scheme.  There are more options available to get your #MoneyInAction with Moneyfy.",
-    "Intuitive Interface, hassle-free account opening, paperless KYC, assistance just a call away, view your portfolio in just a click are just a few of the features that make Moneyfy the easiest to use Investment app. Download and Explore right away!"
+    "Intuitive Interface, hassle-free account opening, paperless KYC, assistance just a call away, view your portfolio in just a click are just a few of the features that make Moneyfy the easiest to use Investment app. Download and Explore right away!",
   ],
   image: MoneyfyOne,
   backgroundColor: "#fff",
@@ -2780,7 +2782,7 @@ export const MONEYFY = {
       videoID: "8orM-FgrmAs",
     },
   ],
-  tAndc: true
+  tAndc: true,
 };
 
 export const ACCUNITY_SERVICES1 = {
@@ -3113,6 +3115,42 @@ export const SNAPBIZZ = {
     },
   ],
 };
+export const QUIKAF = {
+  title: "QUIKAF",
+  subTitle: [
+    "Storage Charges – INR 50 per Cu.ft. per month.",
+    "Delivery Charges – INR 60 per delivery.",
+    "COD Management Charges – 2% of amount collected. ",
+  ],
+  description: [
+    "Same day commerce order delivery across Mumbai with returns and COD management.",
+    "Local warehousing in Mumbai and same day delivery across Mumbai.",
+    "Integration with commerce channels - shopify and woo commerce.",
+    "Real time dashboard for inventory and delivery tracking.",
+    "QUIKAF is a software platform for express e-commerce fulfilment. The Company’s easy-to-use, cloud-based software platform is integrated within strategically located fulfilment centres, enabling fast, affordable, omnichannel fulfilment, across major cities.",
+  ],
+  image: quikaf,
+  backgroundColor: "#fff",
+  url: "https://www.quikaf.com",
+  stars: null,
+  socialMedia: null,
+  testimonials: null,
+  aboutUs: null,
+  carousel: [
+    {
+      type: "image",
+      source: quikaf,
+    },
+    {
+      type: "image",
+      source: quikaf1,
+    },
+    {
+      type: "image",
+      source: quikaf2,
+    },
+  ],
+};
 export const OK_CREDIT = {
   title: "OkCredit",
   subTitle: ["Upto XX% off on OkCredit services."],
@@ -3160,10 +3198,15 @@ export const VYAPAR = {
 
 export const ZIKZUK = {
   title: "ZikZuk",
-  subTitle: ["Offer: 50% off on Business Finance Manager (BFM).", "Platform fee: INR 3600,  Offer Price: INR 1800"],
-  description: ["An AI/ML data-driven business intelligence platform that syncs with multiple accounting software like Tally, and empowers SMEs to focus on business and its growth by managing their business finances"],
+  subTitle: [
+    "Offer: 50% off on Business Finance Manager (BFM).",
+    "Platform fee: INR 3600,  Offer Price: INR 1800",
+  ],
+  description: [
+    "An AI/ML data-driven business intelligence platform that syncs with multiple accounting software like Tally, and empowers SMEs to focus on business and its growth by managing their business finances",
+  ],
   points: {
-    title: 'Why use BFM?',
+    title: "Why use BFM?",
     list: [
       "360 Degree Visibility of your Business Finances",
       "Automated payment reminders via Email, SMS & WhatsApp",
@@ -3171,8 +3214,8 @@ export const ZIKZUK = {
       "Cash flow Management",
       "Create Tally Entries",
       "Avail Credit",
-      "100% Data security"
-    ]
+      "100% Data security",
+    ],
   },
   image: zikzuk,
   backgroundColor: "#fff",
@@ -3192,11 +3235,11 @@ export const ZIKZUK = {
     },
     {
       type: "image",
-      source: ZikZukThree
+      source: ZikZukThree,
     },
     {
       type: "image",
-      source: ZikZukFour
+      source: ZikZukFour,
     },
   ],
 };
@@ -4192,13 +4235,7 @@ export const PRINTHOUSE = {
 export const PARTNERS = [
   {
     category: "Sell Online",
-    data: [
-      MOBICOMMERCE1,
-      NEAR_STORE,
-      ACCUNITY_SERVICES1,
-      SNAPBIZZ,
-      THE_ONLINE_TEAM_1,
-    ],
+    data: [MOBICOMMERCE1, ACCUNITY_SERVICES1, SNAPBIZZ, THE_ONLINE_TEAM_1],
     tag: "sell_online",
   },
   // {
@@ -4218,7 +4255,7 @@ export const PARTNERS = [
   },
   {
     category: "Inventory Management",
-    data: [SNAPBIZZ, MYBILLBOOK, INSTABILL],
+    data: [SNAPBIZZ, MYBILLBOOK, INSTABILL, QUIKAF],
     tag: "inventory_management",
   },
   {
@@ -4292,7 +4329,7 @@ export const PARTNERS = [
   },
   {
     category: "Delivery & Logistics",
-    data: [TERRAGO_LOGISTICS, PORTER],
+    data: [TERRAGO_LOGISTICS, PORTER, QUIKAF],
     tag: "delivery_and_logistics",
   },
   {
