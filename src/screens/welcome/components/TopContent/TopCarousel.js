@@ -36,7 +36,7 @@ export const TopCarousel = (props) => {
                 id="myCarousel"
                 className="carousel slide"
                 data-ride="carousel"
-                data-interval="44000"
+                data-interval="4000"
             >
                 <div className="carousel-inner">
                     {carouselData.map((item, index) => (
