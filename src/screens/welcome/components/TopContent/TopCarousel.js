@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {TopContent} from "../index";
 import smBanner from "../../../../assets/Promotions/banner-sm.png";
+import mdBanner from "../../../../assets/Promotions/banner-md.png";
 import lgBanner from "../../../../assets/Promotions/banner-lg.png";
 import {Link} from "react-router-dom";
 
@@ -35,7 +36,7 @@ export const TopCarousel = (props) => {
                 id="myCarousel"
                 className="carousel slide"
                 data-ride="carousel"
-                data-interval="4000"
+                data-interval="44000"
             >
                 <div className="carousel-inner">
                     {carouselData.map((item, index) => (
@@ -56,11 +57,15 @@ export const TopCarousel = (props) => {
                                 <Link to='/services/Investments/Moneyfy'>
                                     <div
                                         className="d-none explore-our-services"
-                                        style={{ paddingBottom: 0 }}
+                                        style={{ paddingBottom: 0}}
                                     >
                                         <img
-                                            style={{ width: "100%", height: "auto" }}
-                                            src={isMobile ? smBanner : lgBanner}
+                                            style={{ width: "100%",
+                                                height: isMobile ? 'auto' : width <= 1100 ? "394px" : width <= 1630 ? "330px" : "auto",
+                                                objectFit: isMobile ? '' : width <= 1630 ? 'contain' : '',
+                                                //objectFit: 'contain'
+                                        }}
+                                            src={isMobile ? smBanner : width <= 1250 ? mdBanner : lgBanner}
                                         />
                                     </div>
                                 </Link>
