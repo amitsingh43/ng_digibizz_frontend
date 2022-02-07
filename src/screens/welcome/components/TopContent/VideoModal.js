@@ -1,6 +1,6 @@
 const VideoModal = ({ showVideo, toggleVideo }) => (
 	<div
-		style={{ display: "flex", flexDirection: "row", height: "400px" }}
+		style={{ display: "flex", flexDirection: "row", height: "350px" }}
 		className="img-responsive"
 	>
 		<div style={{ cursor: "pointer" }} onClick={() => toggleVideo(!showVideo)}>
