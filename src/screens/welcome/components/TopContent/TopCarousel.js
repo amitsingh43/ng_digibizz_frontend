@@ -3,7 +3,9 @@ import {TopContent} from "../index";
 import smBanner from "../../../../assets/Promotions/banner-sm.png";
 import mdBanner from "../../../../assets/Promotions/banner-md.png";
 import lgBanner from "../../../../assets/Promotions/banner-lg.png";
+import lgBannerBlank from "../../../../assets/Promotions/banner-lg-blank.png";
 import {Link} from "react-router-dom";
+import welcome_youtube from "../../../../assets/welcome/welcome_youtube.svg";
 
 
 export const TopCarousel = (props) => {
@@ -36,7 +38,7 @@ export const TopCarousel = (props) => {
                 id="myCarousel"
                 className="carousel slide"
                 data-ride="carousel"
-                data-interval="4000"
+                data-interval="44000"
             >
                 <div className="carousel-inner">
                     {carouselData.map((item, index) => (
@@ -57,16 +59,23 @@ export const TopCarousel = (props) => {
                                 <Link to='/services/Investments/Moneyfy'>
                                     <div
                                         className="d-none explore-our-services"
-                                        style={{ paddingBottom: 0}}
-                                    >
-                                        <img
-                                            style={{ width: "100%",
-                                                height: isMobile ? 'auto' : width <= 1100 ? "394px" : width <= 1630 ? "330px" : "auto",
-                                                objectFit: isMobile ? '' : width <= 1630 ? 'contain' : '',
-                                                //objectFit: 'contain'
-                                        }}
-                                            src={isMobile ? smBanner : width <= 1250 ? mdBanner : lgBanner}
-                                        />
+                                        style={{ paddingBottom: 0, paddingTop: '10px'}}>
+                                        <div
+                                            style={{
+                                                width: "100%",
+                                                backgroundImage: `linear-gradient(to right, #1968B3, #1968B3)`,
+                                                height: isMobile ? 'auto' : width <= 1100 ? "394px" : width <= 1630 ? "340px" : "auto",
+                                            }}>
+                                            <img
+                                                style={{ width: "100%",
+                                                    height: isMobile ? 'auto' : width <= 1100 ? "394px" : width <= 1630 ? "330px" : "auto",
+                                                    objectFit: isMobile ? '' : width <= 1630 ? 'contain' : '',
+                                                    //objectFit: 'contain'
+                                                }}
+                                                src={isMobile ? smBanner : width <= 1250 ? lgBanner : lgBanner}
+                                            />
+                                        </div>
+
                                     </div>
                                 </Link>
                             }
