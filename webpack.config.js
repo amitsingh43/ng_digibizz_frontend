@@ -85,6 +85,7 @@ module.exports = {
 		new DefinePlugin(envKeys),
 	],
 	devServer: {
+		//host: "192.168.1.59",
 		historyApiFallback: true,
 		hot: true,
 		headers: {
