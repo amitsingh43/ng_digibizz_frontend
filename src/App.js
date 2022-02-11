@@ -61,6 +61,11 @@ export default function App({ history }) {
       show_toast(errorMessage);
       dispatch(clear_error());
     }
+
+    const msg = null;
+
+    console.log(msg ?? 'Hello Sasi')
+
   }, [dispatch, errorMessage]);
 
   useEffect(() => {
