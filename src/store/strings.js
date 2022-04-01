@@ -143,6 +143,7 @@ import MobicommerceTwo from "../assets/partners/carousel/Mobicommerce/two.jpg";
 import MobicommerceThree from "../assets/partners/carousel/Mobicommerce/three.jpg";
 
 import ZohocommerceOne from "../assets/partners/carousel/Zohocommerce/one.png";
+import ZohocommerceTwo from "../assets/partners/carousel/Zohocommerce/two.png";
 
 import MswipeOne from "../assets/partners/carousel/Mswipe/one.jpg";
 import MswipeTwo from "../assets/partners/carousel/Mswipe/two.jpg";
@@ -3031,6 +3032,10 @@ export const ZOHOCOMMERCE1 = {
   testimonials: null,
   aboutUs: null,
   carousel: [
+    {
+      type: "image",
+      source: ZohocommerceTwo,
+    },
     {
       type: "image",
       source: zohocommerce,
