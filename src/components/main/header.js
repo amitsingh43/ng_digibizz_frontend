@@ -78,14 +78,14 @@ export default function Header() {
                 Success Stories
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 className={headerState === 4 ? "a active" : "a"}
                 to="/login"
               >
                 Login/Signup
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

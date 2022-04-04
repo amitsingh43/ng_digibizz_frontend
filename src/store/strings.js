@@ -15,7 +15,6 @@ import sthree from "../assets/success_stories/three.svg";
 import near_store from "../assets/partners/near_store.svg";
 import magic_pin from "../assets/partners/magic_pin.svg";
 import mobicommerce from "../assets/partners/mobicommerce.svg";
-import zohocommerce from "../assets/partners/zohocommerce.png";
 import apna_co from "../assets/partners/apna_co.png";
 import vakilsearch from "../assets/partners/vakilsearch.png";
 import brandpulse from "../assets/partners/brandpulse.jpg";
@@ -141,9 +140,6 @@ import MediaqartTwo from "../assets/partners/carousel/Mediaqart/two.jpg";
 import MobicommerceOne from "../assets/partners/carousel/Mobicommerce/one.jpg";
 import MobicommerceTwo from "../assets/partners/carousel/Mobicommerce/two.jpg";
 import MobicommerceThree from "../assets/partners/carousel/Mobicommerce/three.jpg";
-
-import ZohocommerceOne from "../assets/partners/carousel/Zohocommerce/one.png";
-import ZohocommerceTwo from "../assets/partners/carousel/Zohocommerce/two.png";
 
 import MswipeOne from "../assets/partners/carousel/Mswipe/one.jpg";
 import MswipeTwo from "../assets/partners/carousel/Mswipe/two.jpg";
@@ -3014,38 +3010,6 @@ export const MOBICOMMERCE2 = {
     },
   ],
 };
-export const ZOHOCOMMERCE1 = {
-  title: "Zoho Commerce",
-  subTitle: [
-    "10% discount on Zoho Commerce.",
-  ],
-  description: [
-    "Zoho Commerce contains all the tools you need to build, market, and manage an ecommerce website in under 60 minutes.",
-    "With professional templates and a site wide visual editor, our platform helps anyone, anywhere build their dream store in minutes. Control all your products, inventory, payment, tax, shipping, and fulfilment from one place.",
-    "Boost profits with marketing tools and seamless integrations with the Zoho ecosystem, giving you everything to grow your business.",
-  ],
-  image: zohocommerce,
-  backgroundColor: "#fff",
-  url: "https://www.mobicommerce.net/contact-us/",
-  stars: null,
-  socialMedia: null,
-  testimonials: null,
-  aboutUs: null,
-  carousel: [
-    {
-      type: "image",
-      source: ZohocommerceTwo,
-    },
-    {
-      type: "image",
-      source: zohocommerce,
-    },
-    {
-      type: "image",
-      source: ZohocommerceOne,
-    },
-  ],
-};
 export const MAGICPIN = {
   title: "Magicpin",
   subTitle: ["Upto XX% off on Magic Pin services"],
@@ -4271,7 +4235,7 @@ export const PRINTHOUSE = {
 export const PARTNERS = [
   {
     category: "Sell Online",
-    data: [MOBICOMMERCE1, ACCUNITY_SERVICES1, SNAPBIZZ, THE_ONLINE_TEAM_1, ZOHOCOMMERCE1],
+    data: [MOBICOMMERCE1, ACCUNITY_SERVICES1, SNAPBIZZ, THE_ONLINE_TEAM_1],
     tag: "sell_online",
   },
   // {
@@ -4302,7 +4266,6 @@ export const PARTNERS = [
       PINNACLE,
       THE_ONLINE_TEAM_2,
       WEBSITEZ,
-      ZOHOCOMMERCE1
     ],
     tag: "create_website_and_app",
   },
