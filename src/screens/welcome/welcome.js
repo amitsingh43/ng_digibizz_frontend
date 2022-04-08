@@ -48,7 +48,7 @@ export default function Welcome() {
 
   return (
     <div style={{ fontFamily: "Rubik" }}>
-      <ExitPopup />
+     {/* <ExitPopup />*/}
       <div className="welcome">
         {/*<TopContent homepage_decrement={homepageDecrement} />*/}
           <TopCarousel homepage_decrement={homepageDecrement}/>

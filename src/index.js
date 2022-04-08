@@ -9,6 +9,7 @@ import { createBrowserHistory } from "history";
 import reportWebVitals from "./reportWebVitals";
 import allReducers from "./store/reducers";
 import App from "./App";
+import ExitPopup from "./components/common/exitPopup";
 
 
 const history = createBrowserHistory();
@@ -20,6 +21,7 @@ const store = createStore(
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+        <ExitPopup />
       <App history={history} />
     </Provider>
   </React.StrictMode>,
