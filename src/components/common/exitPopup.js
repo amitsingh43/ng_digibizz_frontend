@@ -8,7 +8,7 @@ function ExitPopup() {
     const [noNeed, setNoneed] = useState(false);
 
     useEffect(() => {
-        document.addEventListener("mouseleave", function (event) {
+        document.querySelector("body").addEventListener("mouseleave", function (event) {
             if (event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight)) {
                 //alertUser();
                 updateShowExit(true);
@@ -18,7 +18,7 @@ function ExitPopup() {
         });
         //window.addEventListener("beforeunload", alertUser);
         return () => {
-            document.addEventListener("mouseleave", function (event) {
+            document.querySelector("body").addEventListener("mouseleave", function (event) {
                 if (event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight)) {
                     //alertUser();
                     updateShowExit(true);
@@ -47,6 +47,19 @@ function ExitPopup() {
             <ModalBackground onClick={()=> updateShowExit(false)}/>
             <ModalContent>
                 <h3 style={{marginBottom: "1rem"}}>Are you sure want to exit the application?</h3>
+                <button
+                    onClick={()=> updateShowExit(false)}
+                    style={{
+                        position: 'absolute',
+                        background: 'red',
+                        color: 'white',
+                        top: '5px',
+                        right: '5px',
+                        borderRadius: '30px',
+                        borderColor: 'red'
+                    }}>
+                    X
+                </button>
                 <a
                     onClick={() => {
                         window.removeEventListener("beforeunload", alertUser);
