@@ -48,7 +48,7 @@ export default function Welcome() {
 
   return (
     <div style={{ fontFamily: "Rubik" }}>
-     {/* <ExitPopup />*/}
+
       <div className="welcome">
         {/*<TopContent homepage_decrement={homepageDecrement} />*/}
           <TopCarousel homepage_decrement={homepageDecrement}/>
@@ -64,6 +64,7 @@ export default function Welcome() {
           style={{ paddingBottom: 0 }}
         >
           <img
+              alt=""
             style={{ width: "100%", height: "auto" }}
             src={isMobile ? smBanner : lgBanner}
           />
