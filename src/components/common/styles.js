@@ -83,7 +83,7 @@ export const ModalBackground = styled.div`
 export const ModalContent = styled.div`
   margin: 0 20px;
   max-height: calc(100vh - 160px);
-  width:50%;
+  width:35%;
   overflow: auto;
   position: relative;
   background-color: white;

@@ -12,7 +12,9 @@ function ExitPopup() {
       .querySelector("body")
       .addEventListener("mouseout", function (event) {
         if (!event.toElement && !event.relatedTarget) {
-          updateShowExit(true);
+          setTimeout(() => {
+            updateShowExit(true);
+          }, 1000);
         }
       });
     return () => {
@@ -20,7 +22,9 @@ function ExitPopup() {
         .querySelector("body")
         .addEventListener("mouseout", function (event) {
           if (!event.toElement && !event.relatedTarget) {
-            updateShowExit(true);
+            setTimeout(() => {
+              updateShowExit(true);
+            }, 1000);
           }
         });
     };
@@ -42,7 +46,7 @@ function ExitPopup() {
       <ModalBackground onClick={() => updateShowExit(false)} />
       <ModalContent>
         <h3 style={{ marginBottom: "1rem" }}>
-          Are you sure want to exit the application?
+          Are you sure, you want to exit?
         </h3>
         <button
           onClick={() => {
@@ -64,8 +68,12 @@ function ExitPopup() {
         <a
           onClick={() => {
             window.removeEventListener("beforeunload", alertUser);
-            window.location.href =
-              "http://instauat.neogrowth.in/?utm_source=DIGIBIZZ&utm_medium=exit-banner&utm_campaign=DIGIBIZZ&utm_id=DIGIBIZZ-EP&utm_term=DIGIBIZZ&utm_content=DIGIBIZZ";
+            window
+              .open(
+                "http://instauat.neogrowth.in/?utm_source=DIGIBIZZ&utm_medium=exit-banner&utm_campaign=DIGIBIZZ&utm_id=DIGIBIZZ-EP&utm_term=DIGIBIZZ&utm_content=DIGIBIZZ",
+                "_blank"
+              )
+              .focus();
           }}
         >
           <img style={{ width: "100%" }} src={Image} />
@@ -84,7 +92,10 @@ function ExitPopup() {
                 marginRight: "1rem",
               }}
               className="next buttons"
-              onClick={() => updateShowExit(false)}
+              onClick={() => {
+                updateShowExit(false);
+                setNoneed(false)
+              }}
             >
               Continue
             </div>
