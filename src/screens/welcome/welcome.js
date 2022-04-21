@@ -49,19 +49,20 @@ export default function Welcome() {
     <div style={{ fontFamily: "Rubik" }}>
       <div className="welcome">
         {/* <TopContent homepage_decrement={homepageDecrement} /> */}
-          <TopCarousel homepage_decrement={homepageDecrement}/>
+        <TopCarousel homepage_decrement={homepageDecrement} />
       </div>
       <div className="explore-our-services">
         <ExploreOurServices />
         <MobileView />
       </div>
 
-      <Link to='/services/Investments/Moneyfy'>
+      <Link to="/services/Investments/Moneyfy">
         <div
           className="d-none explore-our-services"
           style={{ paddingBottom: 0 }}
         >
           <img
+            alt=""
             style={{ width: "100%", height: "auto" }}
             src={isMobile ? smBanner : lgBanner}
           />

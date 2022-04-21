@@ -3480,7 +3480,6 @@ export const ONSURITY = {
     },
   ],
 };
-
 export const VAKIL_SEARCH = {
   title: "VakilSearch",
   subTitle: [

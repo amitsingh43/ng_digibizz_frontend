@@ -261,6 +261,11 @@ export const partnerMapping = [
     heading: "Customer Loyalty & Promotions",
   },
   {
+    name: "onsurity",
+    partner: ONSURITY,
+    heading: "Protection & Employee Healthcare",
+  },
+  {
     name: "care",
     partner: CARE,
     heading: "Protection & Employee Healthcare",
