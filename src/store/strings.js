@@ -187,6 +187,10 @@ import OnsurityInterface from "../assets/partners/carousel/Onsurity/OnsurityInte
 import OnsurityLogo from "../assets/partners/carousel/Onsurity/OnsurityLogo.png";
 import OnsurityPlans from "../assets/partners/carousel/Onsurity/OnsurityPlans.png";
 
+import OnsurityInterface from "../assets/partners/carousel/Onsurity/OnsurityInterface.png";
+import OnsurityLogo from "../assets/partners/carousel/Onsurity/OnsurityLogo.png";
+import OnsurityPlans from "../assets/partners/carousel/Onsurity/OnsurityPlans.png";
+
 export const TELL_ABOUT_YOU = "Tell us more about You!";
 export const TELL_ABOUT_BUSINESS = "Tell Us More About Your Business!";
 export const TELL_ABOUT_YOU_DESC =
@@ -3516,7 +3520,6 @@ export const ONSURITY = {
     },
   ],
 };
-
 export const VAKIL_SEARCH = {
   title: "VakilSearch",
   subTitle: [
