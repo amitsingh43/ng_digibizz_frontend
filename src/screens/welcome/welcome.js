@@ -14,7 +14,6 @@ import {
 import lgBanner from "assets/Promotions/banner-lg.png";
 import smBanner from "assets/Promotions/banner-sm.png";
 import { Link } from "react-router-dom";
-import ExitPopup from "components/common/exitPopup";
 
 export default function Welcome() {
   const dispatch = useDispatch();
@@ -48,23 +47,22 @@ export default function Welcome() {
 
   return (
     <div style={{ fontFamily: "Rubik" }}>
-
       <div className="welcome">
-        {/*<TopContent homepage_decrement={homepageDecrement} />*/}
-          <TopCarousel homepage_decrement={homepageDecrement}/>
+        {/* <TopContent homepage_decrement={homepageDecrement} /> */}
+        <TopCarousel homepage_decrement={homepageDecrement} />
       </div>
       <div className="explore-our-services">
         <ExploreOurServices />
         <MobileView />
       </div>
 
-      <Link to='/services/Investments/Moneyfy'>
+      <Link to="/services/Investments/Moneyfy">
         <div
           className="d-none explore-our-services"
           style={{ paddingBottom: 0 }}
         >
           <img
-              alt=""
+            alt=""
             style={{ width: "100%", height: "auto" }}
             src={isMobile ? smBanner : lgBanner}
           />

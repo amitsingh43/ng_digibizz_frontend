@@ -59,15 +59,11 @@ export const save_basic_details =
 					Tracking.trackEvent('CLICK', 'PARTNER LEADS', body.partner_availed);
 					if (body.partner_availed === 'Moneyfy') {
 						show_toast(message, 'SUCCESS', 20000);
-					} else if (body.partner_availed === 'Zoho Commerce'){
-						show_toast('Thank you for reaching out someone shall get in touch with you shortly', 'SUCCESS', 3000);
 					} else {
 						show_toast(message, 'SUCCESS', 3000);
 					}
 				}
-				if (body.partner_availed !== 'Zoho Commerce'){
-					window.open(url, '_blank');
-				}
+				window.open(url, '_blank');
 			} catch (error) {
 				let message = 'Something went wrong! Please try later.';
 
