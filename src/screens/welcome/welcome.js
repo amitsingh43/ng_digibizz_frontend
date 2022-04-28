@@ -15,6 +15,7 @@ import lgBanner from "assets/Promotions/banner-lg.png";
 import smBanner from "assets/Promotions/banner-sm.png";
 import { Link } from "react-router-dom";
 import ExitPopup from "components/common/exitPopup";
+import MetaTags from "react-meta-tags";
 
 export default function Welcome() {
   const dispatch = useDispatch();
@@ -47,40 +48,48 @@ export default function Welcome() {
   let isMobile = width <= 768;
 
   return (
-    <div style={{ fontFamily: "Rubik" }}>
+      <>
+          <MetaTags>
+              <title>Transform & Grow Your Business Digitally with DiGibizz</title>
+              <meta name="keywords" content="digibizz, online services, app creation, business loans, healthcare, investments, tax filing, sell online, product photoshoot"/>
+              <meta name="description" content="Is your business Digital Ready? We help empower, enable and transform small businesses in their digital journey towards growth through DiGibizz Platform." />
+          </MetaTags>
 
-      <div className="welcome">
-        {/*<TopContent homepage_decrement={homepageDecrement} />*/}
-          <TopCarousel homepage_decrement={homepageDecrement}/>
-      </div>
-      <div className="explore-our-services">
-        <ExploreOurServices />
-        <MobileView />
-      </div>
+          <div style={{ fontFamily: "Rubik" }}>
 
-      <Link to='/services/Investments/Moneyfy'>
-        <div
-          className="d-none explore-our-services"
-          style={{ paddingBottom: 0 }}
-        >
-          <img
-              alt=""
-            style={{ width: "100%", height: "auto" }}
-            src={isMobile ? smBanner : lgBanner}
-          />
-        </div>
-      </Link>
+              <div className="welcome">
+                  {/*<TopContent homepage_decrement={homepageDecrement} />*/}
+                  <TopCarousel homepage_decrement={homepageDecrement}/>
+              </div>
+              <div className="explore-our-services">
+                  <ExploreOurServices />
+                  <MobileView />
+              </div>
 
-      <div className="question">
-        <Question homepage_decrement={homepageDecrement} />
-      </div>
-      <div className="user-guide">
-        {/* <UserGuide /> */}
-        <UserGuide />
-      </div>
-      <div className="success-stories1">
-        <SuccessStories />
-      </div>
-    </div>
+              <Link to='/services/Investments/Moneyfy'>
+                  <div
+                      className="d-none explore-our-services"
+                      style={{ paddingBottom: 0 }}
+                  >
+                      <img
+                          alt=""
+                          style={{ width: "100%", height: "auto" }}
+                          src={isMobile ? smBanner : lgBanner}
+                      />
+                  </div>
+              </Link>
+
+              <div className="question">
+                  <Question homepage_decrement={homepageDecrement} />
+              </div>
+              <div className="user-guide">
+                  {/* <UserGuide /> */}
+                  <UserGuide />
+              </div>
+              <div className="success-stories1">
+                  <SuccessStories />
+              </div>
+          </div>
+      </>
   );
 }
