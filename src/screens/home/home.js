@@ -9,6 +9,8 @@ import ContestTAndC from 'components/contestTAndC';
 import TAndC from 'components/termsAndConditions';
 import OTPInput from 'components/OTPInput';
 
+import MetaTags from 'react-meta-tags';
+
 import {
 	TELL_ABOUT_YOU,
 	TELL_ABOUT_YOU_DESC,
@@ -133,6 +135,12 @@ export default function Home() {
 
 	return (
 		<div>
+			<MetaTags>
+				<title>Know Your Digital Status To Begin Your Survey | DiGibizz</title>
+				<meta name="keywords" content="digibizz, online services, app creation, business loans, healthcare, investments, tax filing, sell online, product photoshoot"/>
+				<meta name="description" content="To know your Digital Status, just fill in some basic information, before you begin your survey. Register now and get ready to transform your business digitally." />
+			</MetaTags>
+
 			<div className="home-container">
 				<div className="mandatory">
 					<span>* </span> All fields are mandatory

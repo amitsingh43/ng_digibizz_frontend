@@ -7,6 +7,7 @@ import { header_digital_services, update_lead } from "store/actions";
 import { services } from "store/services_mapping";
 import { PARTNERS } from "store/strings";
 import { Services, TopContent } from "./components";
+import MetaTags from "react-meta-tags";
 
 // TODO: handle counter
 let counter = 0;
@@ -70,23 +71,32 @@ export default function DigitalServices() {
   }, []);
 
   return (
-    <div className="services-main">
-      <div className="row">
-        <TopContent />
-        <ServicesCategory />
-      </div>
-      <div>
-        {PARTNERS.map((partner, index) => (
-          <div id={partner.tag} className="row sell-online" key={index}>
-            <Services
-              user={user}
-              heading={partner.category}
-              cardData={partner.data}
-              update_lead={updateLead}
-            />
+      <>
+        <MetaTags>
+          <title>Explore Services Offered By Our Digital Partners| DiGibizz</title>
+          <meta name="keywords" content="digibizz, online services, app creation, business loans, healthcare, investments, tax filing, sell online, product photoshoot"/>
+          <meta name="description" content="Reimagine & transform your business with a full range of services offered by our digital partners, crafted exclusively for you with special offers & discounts." />
+        </MetaTags>
+
+        <div className="services-main">
+
+          <div className="row">
+            <TopContent />
+            <ServicesCategory />
           </div>
-        ))}
-      </div>
-    </div>
+          <div>
+            {PARTNERS.map((partner, index) => (
+                <div id={partner.tag} className="row sell-online" key={index}>
+                  <Services
+                      user={user}
+                      heading={partner.category}
+                      cardData={partner.data}
+                      update_lead={updateLead}
+                  />
+                </div>
+            ))}
+          </div>
+        </div>
+      </>
   );
 }
