@@ -3,6 +3,11 @@ import { Modal, ModalBackground, ModalContent } from "./styles";
 
 import Image from "../../assets/exitPromo.jpg";
 
+let redirectUrl = "http://instauat.neogrowth.in/?utm_source=DIGIBIZZ&utm_medium=exit-banner&utm_campaign=DIGIBIZZ&utm_id=DIGIBIZZ-EP&utm_term=DIGIBIZZ&utm_content=DIGIBIZZ";
+if (process.env.isProd === "yes"){
+    redirectUrl = "http://insta.neogrowth.in/?utm_source=DIGIBIZZ&utm_medium=exit-banner&utm_campaign=DIGIBIZZ&utm_id=DIGIBIZZ-EP&utm_term=DIGIBIZZ&utm_content=DIGIBIZZ";
+}
+
 function ExitPopup() {
   const [showExit, updateShowExit] = useState(false);
   const [noNeed, setNoneed] = useState(true);
@@ -68,12 +73,7 @@ function ExitPopup() {
         <a
           onClick={() => {
             window.removeEventListener("beforeunload", alertUser);
-            window
-              .open(
-                "http://instauat.neogrowth.in/?utm_source=DIGIBIZZ&utm_medium=exit-banner&utm_campaign=DIGIBIZZ&utm_id=DIGIBIZZ-EP&utm_term=DIGIBIZZ&utm_content=DIGIBIZZ",
-                "_blank"
-              )
-              .focus();
+            window.open(redirectUrl, "_blank").focus();
           }}
         >
           <img style={{ width: "100%" }} src={Image} />
