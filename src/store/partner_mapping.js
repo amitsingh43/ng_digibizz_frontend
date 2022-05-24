@@ -5,7 +5,6 @@ import {
   ACCUNITY_SERVICES3,
   MOBICOMMERCE1,
   MOBICOMMERCE2,
-  ZOHOCOMMERCE1,
   MAGICPIN,
   NEOGROWTH,
   MYBILLBOOK,
@@ -54,11 +53,6 @@ export const partnerMapping = [
   {
     name: "mobicommerce",
     partner: MOBICOMMERCE1,
-    heading: "Sell Online",
-  },
-  {
-    name: "zoho commerce",
-    partner: ZOHOCOMMERCE1,
     heading: "Sell Online",
   },
   {
@@ -144,11 +138,6 @@ export const partnerMapping = [
   {
     name: "websitez",
     partner: WEBSITEZ,
-    heading: "Create Website or Mobile App",
-  },
-  {
-    name: "zoho commerce",
-    partner: ZOHOCOMMERCE1,
     heading: "Create Website or Mobile App",
   },
   {
@@ -270,6 +259,11 @@ export const partnerMapping = [
     name: "blue ocktopus",
     partner: BLUE_OCKTOPUS,
     heading: "Customer Loyalty & Promotions",
+  },
+  {
+    name: "onsurity",
+    partner: ONSURITY,
+    heading: "Protection & Employee Healthcare",
   },
   {
     name: "care",

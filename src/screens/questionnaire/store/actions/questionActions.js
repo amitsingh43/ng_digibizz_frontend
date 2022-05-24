@@ -11,14 +11,14 @@ import {
     set_user_details,
   } from "store/actions";
 
-  
+
   export const get_section_questions = (counter) => {
     return {
       type: GET_QUESTIONS,
       payload: counter,
     };
   };
-  
+
   export const get_questions =
     (lead_id, ENDPOINT = "/api/get_questionnaire?lead_id=") =>
     async (dispatch) => {
@@ -30,7 +30,7 @@ import {
         dispatch(set_questions(questionnaire));
       } catch (error) {
         let message = "Something went wrong! Please try later.";
-  
+
         if (
           error &&
           error.response &&
@@ -44,21 +44,49 @@ import {
         // show_toast(message);
       }
     };
-  
+
+export const get_questions_two =
+    (lead_id, Navigate, ENDPOINT = "/api/get_questionnaire?lead_id=") =>
+        async (dispatch) => {
+          try {
+            const response = await _get(ENDPOINT + lead_id);
+            const { lead, questionnaire } = response;
+            localStorage.setItem("lead_id", lead_id);
+            dispatch(set_user_details(lead));
+            //dispatch(reset_questionnaire());
+            dispatch(set_questions(questionnaire));
+            Navigate();
+          } catch (error) {
+            let message = "Something went wrong! Please try later.";
+
+            if (
+                error &&
+                error.response &&
+                error.response.data &&
+                error.response.data.message
+            ) {
+              message = error.response.data.message;
+            }
+            localStorage.clear();
+            dispatch(add_error(message));
+            // show_toast(message);
+          }
+        };
+
   export const set_questions = (questions) => {
     return {
       type: SET_QUESTIONS,
       payload: questions,
     };
   };
-  
+
   export const reset_questions = () => {
     return {
       type: RESET_QUESTIONS,
     };
   };
-  
-  
+
+
   export const post_user_details =
     (body, Navigate, ENDPOINT = "/api/save_lead") =>
     async (dispatch) => {
@@ -72,7 +100,7 @@ import {
         Navigate();
       } catch (error) {
         let message = "Something went wrong! Please try later.";
-  
+
         if (
           error &&
           error.response &&
@@ -85,4 +113,3 @@ import {
         // show_toast(message);
       }
     };
-  

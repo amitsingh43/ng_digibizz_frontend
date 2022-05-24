@@ -40,6 +40,13 @@ import Tracking from "./util/tracking";
 export default function App({ history }) {
   const dispatch = useDispatch();
   const errorMessage = useSelector((state) => state.errorMessage);
+  // const [showPopUp, togglePopUp] = useState(false);
+  //window.onbeforeunload = (e) => {
+  // togglePopUp(!showPopUp);
+  // e.preventDefault();
+  // e.stopPropagation();
+  // return false;
+  //};
 
   window.onload = () => {
     const tagManagerArgs = {
@@ -54,6 +61,10 @@ export default function App({ history }) {
       show_toast(errorMessage);
       dispatch(clear_error());
     }
+
+    const msg = null;
+
+    console.log(msg ?? 'Hello Sasi')
 
   }, [dispatch, errorMessage]);
 
@@ -86,10 +97,16 @@ export default function App({ history }) {
         <Switch>
           <Route exact path={"/"} component={Welcome} />
           <Route exact path={"/knowStatus"} component={Home} />
+          <Route exact path={"/knowStatus/:lead_id"} component={Home} />
           <Route
             exact
             path={"/questionnaire/:section"}
             component={Questionnaire}
+          />
+          <Route
+              exact
+              path={"/questionnaire_r/:section/:lead_id"}
+              component={Questionnaire}
           />
           <Route exact path={"/report"} component={Report} />
           <Route exact path={"/knowledgeCenter"} component={UserGuide} />

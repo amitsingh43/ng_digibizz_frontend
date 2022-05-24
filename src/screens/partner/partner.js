@@ -106,7 +106,7 @@ const Partner = () => {
   ].includes(title);
 
   if (view) {
-    return <PartnerTandc showmore={setView} setCheck={()=>console.log('')} />;
+    return <PartnerTandc showmore={setView} setCheck={() => console.log("")} />;
   }
 
   return (
