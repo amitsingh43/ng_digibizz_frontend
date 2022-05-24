@@ -97,10 +97,16 @@ export default function App({ history }) {
         <Switch>
           <Route exact path={"/"} component={Welcome} />
           <Route exact path={"/knowStatus"} component={Home} />
+          <Route exact path={"/knowStatus/:lead_id"} component={Home} />
           <Route
             exact
             path={"/questionnaire/:section"}
             component={Questionnaire}
+          />
+          <Route
+              exact
+              path={"/questionnaire_r/:section/:lead_id"}
+              component={Questionnaire}
           />
           <Route exact path={"/report"} component={Report} />
           <Route exact path={"/knowledgeCenter"} component={UserGuide} />
