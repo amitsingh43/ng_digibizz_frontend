@@ -6,12 +6,20 @@ import "styles/login.css";
 import login_banner from "assets/login_banner.png";
 import OTPInput from "components/OTPInput";
 import { post_user_details } from "screens/questionnaire/store/actions";
+import { GoogleLogin } from 'react-google-login';
+
 import {
   COMPANY_NAME,
   TERMS_AND_CONDITIONS_2,
   TERMS_AND_CONDITIONS_1,
 } from "store/strings";
 import TAndC from "components/termsAndConditions";
+
+
+const responseGoogle = (response) => {
+  console.log(response);
+}
+
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -146,6 +154,39 @@ export default function Login() {
                   >
                     <div className="button">Continue</div>
                   </a>
+                </div>
+              </div>
+              <div className="col-lg-12">
+                <div className="text-center" style={{flexDirection: "row"}}>
+                  <button type="button"
+                          style={{width: '280px', height: '50px', borderRadius: '50px', marginLeft: '15px',
+                            marginRight: '15px',
+                            marginTop: '10px',
+                            marginBottom: '10px'
+                  }} className="btn">
+                    Facebook
+                  </button>
+
+                  <GoogleLogin
+                      clientId="243451522541-m0j4cm5brc41br32hdl0uvh0udiu4iad.apps.googleusercontent.com"
+                      render={renderProps => (
+                          <button type="button"
+                                  onClick={renderProps.onClick}
+                                  disabled={renderProps.disabled}
+                                  style={{
+                                    width: '280px', height: '50px', borderRadius: '50px', marginLeft: '15px', marginRight: '15px',
+                                    marginTop: '10px',
+                                    marginBottom: '10px'
+                          }} className="btn">
+                            Google
+                          </button>
+                      )}
+                      buttonText="Login"
+                      onSuccess={responseGoogle}
+                      onFailure={responseGoogle}
+                      cookiePolicy={'single_host_origin'}
+                  />
+
                 </div>
               </div>
             </div>
