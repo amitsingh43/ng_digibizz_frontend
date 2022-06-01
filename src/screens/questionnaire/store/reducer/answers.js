@@ -1,4 +1,4 @@
-import { ADD_ANSWER, NONE_OF_THE_ABOVE, RESET_ANSWERS } from "../actionTypes";
+import { ADD_ANSWER, NONE_OF_THE_ABOVE, RESET_ANSWERS, ADD_ANSWERS } from "../actionTypes";
 import createReducer from "util/createReducer";
 
 const initialState = [];
@@ -63,5 +63,8 @@ const answers = createReducer(initialState, {
       }
     }
   },
+  [ADD_ANSWERS]: (state, payload) => {
+    return payload;
+  }
 });
 export default answers;

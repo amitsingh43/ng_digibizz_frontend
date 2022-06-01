@@ -69,7 +69,7 @@ export default function Home() {
 	useEffect(() => {
 		if (lead_id){
 			//localStorage.setItem("lead_id", lead_id);
-			dispatch(get_questions_two(lead_id, Navigate));
+			dispatch(get_questions_two(lead_id, true, Navigate));
 			//history.push('/questionnaire/discovery');
 			//return <h1>Redirecting</h1>;
 		}
