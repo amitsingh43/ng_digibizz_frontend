@@ -55,7 +55,7 @@ export const createQuestionnare =
                     await _post(ENDPOINT, body);
                     dispatch(increment());
                 } else {
-                    dispatch(updateQuestionnare(answers, step, completed, history));
+                    dispatch(updateQuestionnare(lead_id, answers, step, completed, history));
                 }
             } catch (error) {
                 let message = "Something went wrong! Please try later.";
