@@ -9,6 +9,7 @@ import {
   import {
     add_error,
     set_user_details,
+    set_topic_counter,
   } from "store/actions";
 import {add_answers} from "./answerActions";
 
@@ -51,8 +52,22 @@ export const get_questions_two =
         async (dispatch) => {
           try {
             const response = await _get(ENDPOINT + lead_id);
-            const { lead, questionnaire } = response;
+            const { lead, questionnaire, step } = response;
             localStorage.setItem("lead_id", lead_id);
+
+            if (step === "Digital Discovery"){
+              dispatch(set_topic_counter(1));
+            }else if (step === "Digital Fulfilment"){
+              dispatch(set_topic_counter(2));
+            }else if (step === "Digital Transactions"){
+              dispatch(set_topic_counter(3));
+            }else if (step === "Digital Operations"){
+              dispatch(set_topic_counter(4));
+            }else if (step === "Digital Engagement"){
+              dispatch(set_topic_counter(5));
+            }
+
+
             if (questionnaire.length > 0 ){
               console.log({questionnaire: questionnaire});
               let state_list = [];
@@ -80,6 +95,8 @@ export const get_questions_two =
               //console.log({state_list: state_list});
               dispatch(add_answers(state_list));
             }
+
+
             dispatch(set_user_details(lead));
             //dispatch(reset_questionnaire());
             dispatch(set_questions(questionnaire));

@@ -34,6 +34,7 @@ export default function Questionnaire() {
 
     const history = useHistory();
     const {section} = useParams();
+    console.log({topicCounter: topicCounter});
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -131,12 +132,28 @@ export default function Questionnaire() {
     };
 
     const isChecked = (id) => {
+
+        let ret = false;
+
+        for (let j = 0; j < answers.length; j++) {
+            let ans = answers[j];
+            //console.log({fr: ans});
+            if (ans.id == id){
+                ret = true;
+                console.log({id: ans.id});
+            }
+        }
+
+        return ret;
+
+        /*
+
         let length = answers.filter((val) => val.id === id).length;
         if (length) {
             return true;
         } else {
             return false;
-        }
+        }*/
     };
 
     const updateAnswers = (question, id, type) => {
@@ -173,7 +190,7 @@ export default function Questionnaire() {
         }
     };
 
-    const inputProps = (questionsList, question, option) => {
+    const inputProps = (answerss, question, option) => {
         const a = {
             type: question.multiple ? "checkbox" : "radio",
             id: option.id,
@@ -201,8 +218,13 @@ export default function Questionnaire() {
             },
         };
 
+        /*let length = answerss.filter((val) => val === option._id).length;
+        if (length) {
+            a["checked"] = "true";
+        }*/
 
         if (isChecked(option._id) === true) {
+            //alert('checked');
             a["checked"] = "true";
         }
 
@@ -316,23 +338,23 @@ export default function Questionnaire() {
                     </div>
                     <div className="col-lg-7 col-xs-12 ques">
                         <ol>
-                            {questionsList.length > 0 &&
-                                questionsList[
-                                topicCounter - 1
-                                    ]?.questionnaire_section_questions.map((question, index) => (
+                            {topicCounter > 1 && questionsList.length > 0 && questionsList[topicCounter - 1]?.questionnaire_section_questions.map((question, index) => {
+
+                                return(
                                     <div className="questions" key={index}>
                                         <li key={question._id}>{question.name}</li>
                                         {question.questionnaire_section_answers.map(
                                             (option, index) => (
                                                 <div className="options" key={index}>
-                                                    <input {...inputProps(questionsList[topicCounter - 1], question, option)}
+                                                    <input {...inputProps(questionsList[topicCounter - 1].answers , question, option)}
                                                            required/>
-                                                    <label name={option._id}>{option.name}</label>
+                                                    <label name={option._id}>{option.name} - {option._id}</label>
                                                 </div>
                                             )
                                         )}
                                     </div>
-                                ))}
+                                )
+                            })}
                         </ol>
                     </div>
                     <div className="col-lg-1"></div>

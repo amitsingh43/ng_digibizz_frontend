@@ -1,5 +1,6 @@
 export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
+export const SET_TOPIC_COUNTER = "SET_TOPIC_COUNTER";
 export const SET_QUESTIONS = "SET_QUESTIONS";
 
 export const GET_QUESTIONS = "GET_QUESTIONS";
