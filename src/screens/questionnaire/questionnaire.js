@@ -218,7 +218,7 @@ export default function Questionnaire() {
             },
         };
 
-        /*let length = answerss.filter((val) => val === option._id).length;
+       /* let length = answerss.filter((val) => val === option._id).length;
         if (length) {
             a["checked"] = "true";
         }*/
@@ -338,7 +338,7 @@ export default function Questionnaire() {
                     </div>
                     <div className="col-lg-7 col-xs-12 ques">
                         <ol>
-                            {topicCounter > 1 && questionsList.length > 0 && questionsList[topicCounter - 1]?.questionnaire_section_questions.map((question, index) => {
+                            {questionsList.length > 0 && questionsList[topicCounter - 1]?.questionnaire_section_questions.map((question, index) => {
 
                                 return(
                                     <div className="questions" key={index}>
@@ -348,7 +348,7 @@ export default function Questionnaire() {
                                                 <div className="options" key={index}>
                                                     <input {...inputProps(questionsList[topicCounter - 1].answers , question, option)}
                                                            required/>
-                                                    <label name={option._id}>{option.name} - {option._id}</label>
+                                                    <label name={option._id}>{option.name}</label>
                                                 </div>
                                             )
                                         )}
