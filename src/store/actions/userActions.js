@@ -3,6 +3,7 @@ import { _post, _get } from 'store/api';
 import { add_error } from './errorActions';
 import Tracking from 'util/tracking';
 import { SET_USER_DETAILS, RESET_USER } from 'store/actionTypes';
+import {SET_TOPIC_COUNTER} from "../../screens/questionnaire/store/actionTypes";
 
 export const set_user_details = (details) => {
 	return {
@@ -13,6 +14,13 @@ export const set_user_details = (details) => {
 export const reset_user = () => {
 	return {
 		type: RESET_USER,
+	};
+};
+
+export const set_topic_counter = (count) => {
+	return {
+		type: SET_TOPIC_COUNTER,
+		payload: count,
 	};
 };
 

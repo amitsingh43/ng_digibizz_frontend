@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET_QUESTION_COUNTER } from "../actionTypes";
+import { INCREMENT, DECREMENT, RESET_QUESTION_COUNTER, SET_TOPIC_COUNTER } from "../actionTypes";
 import createReducer from "util/createReducer";
 
 const initialState = 1;
@@ -17,6 +17,9 @@ const questionCounter = createReducer(initialState, {
   [DECREMENT]: (state, payload) => {
     if (state === 1) return state;
     return state - 1;
+  },
+  [SET_TOPIC_COUNTER]: (state, payload) => {
+    return payload;
   },
 });
 
