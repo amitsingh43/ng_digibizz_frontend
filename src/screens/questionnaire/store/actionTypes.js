@@ -1,5 +1,6 @@
 export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
+export const SET_TOPIC_COUNTER = "SET_TOPIC_COUNTER";
 export const SET_QUESTIONS = "SET_QUESTIONS";
 
 export const GET_QUESTIONS = "GET_QUESTIONS";
@@ -9,3 +10,4 @@ export const RESET_QUESTION_COUNTER="RESET_QUESTION_COUNTER";
 export const ADD_ANSWER = "ADD_ANSWER";
 export const NONE_OF_THE_ABOVE = "NONE_OF_THE_ABOVE";
 export const RESET_ANSWERS="RESET_ANSWERS";
+export const ADD_ANSWERS = "ADD_ANSWERS";

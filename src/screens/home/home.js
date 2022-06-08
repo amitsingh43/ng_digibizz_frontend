@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { header_digital_status, get_master_data, add_error } from 'store/actions';
+import { get_questions_two } from '../questionnaire/store/actions';
 import { post_user_details } from 'screens/questionnaire/store/actions';
 import 'styles/home.css';
 import ContestTAndC from 'components/contestTAndC';
@@ -49,6 +50,8 @@ export default function Home() {
 	const [mrOrMs, setMrOrMs] = useState(null);
 	const [otherCity, setOtherCity] = useState('');
 
+	const { lead_id } = useParams();
+
 	if (localStorage.getItem('report')) {
 		history.push('/report');
 		return <h1>Redirecting</h1>;
@@ -62,6 +65,15 @@ export default function Home() {
 	const Navigate = () => {
 		history.push('/questionnaire/discovery');
 	};
+
+	useEffect(() => {
+		if (lead_id){
+			//localStorage.setItem("lead_id", lead_id);
+			dispatch(get_questions_two(lead_id, true, Navigate));
+			//history.push('/questionnaire/discovery');
+			//return <h1>Redirecting</h1>;
+		}
+	}, [lead_id]);
 
 	const submitLead = async () => {
 		if (!isChecked) {

@@ -2743,9 +2743,7 @@ export const NEAR_STORE = {
 
 export const MONEYFY = {
   title: "Moneyfy",
-  subTitle: [
-    "Rs. 500 Amazon Voucher on investing with Mutual Funds through Moneyfy ",
-  ],
+  subTitle: [],
   description: [
     "One Stop Solution for your Investment needs!",
     "Why let your money waste it’s time just lying around in your pocket or account? Moneyfy is an app designed to aid you with your Investments. You can invest in Mutual Funds, start an SIP, Invest in Fixed deposits, and start a national pension scheme.  There are more options available to get your #MoneyInAction with Moneyfy.",
@@ -2759,10 +2757,10 @@ export const MONEYFY = {
   testimonials: null,
   aboutUs: null,
   carousel: [
-    {
+    /*{
       type: "image",
       source: smBanner,
-    },
+    },*/
     {
       type: "image",
       source: MoneyfyTwo,
