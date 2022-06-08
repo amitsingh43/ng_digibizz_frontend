@@ -9,7 +9,7 @@ const TopContent = ({ story }) => {
 					style={{ cursor: "pointer", float: "left" }}
 					onClick={() => history.push("/successStories")}
 				>
-					{"Success Stories    >>   "}
+					{"Customer Success Stories    >>   "}
 				</div>
 				<span style={{ clear: "both" }}>{story.topContent}</span>
 			</div>
