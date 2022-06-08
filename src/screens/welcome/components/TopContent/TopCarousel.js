@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {TopContent} from "../index";
-import smBanner from "../../../../assets/Promotions/banner-sm.png";
+import smBanner from "../../../../assets/Promotions/banner-sm-2.png";
 import mdBanner from "../../../../assets/Promotions/banner-md.png";
-import lgBanner from "../../../../assets/Promotions/banner-lg.png";
+import lgBanner from "../../../../assets/Promotions/banner-lg-2.png";
 import lgBannerBlank from "../../../../assets/Promotions/banner-lg-blank.png";
 import {Link} from "react-router-dom";
 import welcome_youtube from "../../../../assets/welcome/welcome_youtube.svg";

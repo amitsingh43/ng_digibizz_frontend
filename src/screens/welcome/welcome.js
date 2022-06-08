@@ -11,8 +11,8 @@ import {
   MobileView,
   TopCarousel,
 } from "./components";
-import lgBanner from "assets/Promotions/banner-lg.png";
-import smBanner from "assets/Promotions/banner-sm.png";
+import lgBanner from "assets/Promotions/banner-lg-2.png";
+import smBanner from "assets/Promotions/banner-sm-2.png";
 import { Link } from "react-router-dom";
 
 export default function Welcome() {
