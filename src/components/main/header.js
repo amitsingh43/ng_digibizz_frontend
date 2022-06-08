@@ -67,7 +67,7 @@ export default function Header() {
                 className={headerState === 2 ? "a active" : "a"}
                 to="/knowledgeCenter"
               >
-                Knowledge Center
+                Knowledge Series
               </Link>
             </li>
             <li>
@@ -75,7 +75,7 @@ export default function Header() {
                 className={headerState === 3 ? "a active" : "a"}
                 to="/successStories"
               >
-                Success Stories
+                Customer Success Stories
               </Link>
             </li>
             <li>
