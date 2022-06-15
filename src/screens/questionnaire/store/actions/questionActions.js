@@ -97,6 +97,10 @@ export const get_questions_two =
             }
 
 
+            //for drop_off sms
+            lead.medium = 'drop_off';
+
+            console.log({leadss: lead});
             dispatch(set_user_details(lead));
             //dispatch(reset_questionnaire());
             dispatch(set_questions(questionnaire));
