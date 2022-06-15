@@ -35,6 +35,7 @@ export const reset_questionnaire = () => {
 
 export const createQuestionnare =
     (
+        medium,
         lead_id,
         answersArray,
         step,
@@ -55,7 +56,7 @@ export const createQuestionnare =
                     await _post(ENDPOINT, body);
                     dispatch(increment());
                 } else {
-                    dispatch(updateQuestionnare(lead_id, answers, step, completed, history));
+                    dispatch(updateQuestionnare(medium, lead_id, answers, step, completed, history));
                 }
             } catch (error) {
                 let message = "Something went wrong! Please try later.";
@@ -69,7 +70,7 @@ export const createQuestionnare =
                     message = error.response.data.message;
                 }
                 if (message === "Questionnaire already created.") {
-                    dispatch(updateQuestionnare(lead_id, answers, step, completed, history));
+                    dispatch(updateQuestionnare(medium, lead_id, answers, step, completed, history));
                     //dispatch(increment());
                     return;
                 }
@@ -79,7 +80,7 @@ export const createQuestionnare =
         };
 
 export const updateQuestionnare =
-    (lead_id, answers, step, completed, history, ENDPOINT = "/api/update_questionnaire") =>
+    (medium, lead_id, answers, step, completed, history, ENDPOINT = "/api/update_questionnaire") =>
         async (dispatch) => {
             try {
                 const body = {
@@ -87,6 +88,7 @@ export const updateQuestionnare =
                     answers,
                     step,
                     completed,
+                    medium: medium ? "drop_off":"null"
                 };
                 const response = await _post(ENDPOINT, body);
                 if (completed) {
