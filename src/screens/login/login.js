@@ -6,12 +6,17 @@ import "styles/login.css";
 import login_banner from "assets/login_banner.png";
 import OTPInput from "components/OTPInput";
 import { post_user_details } from "screens/questionnaire/store/actions";
+import { GoogleLogin } from 'react-google-login';
+
 import {
   COMPANY_NAME,
   TERMS_AND_CONDITIONS_2,
   TERMS_AND_CONDITIONS_1,
 } from "store/strings";
 import TAndC from "components/termsAndConditions";
+
+
+
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -28,6 +33,18 @@ export default function Login() {
   const [more, showmore] = useState(false);
   const [isChecked, setCheck] = useState(false);
   const [signup, setSignup] = useState(false);
+  const [googleR, setGoogleR] = useState({});
+
+
+  const responseGoogleOnFail = (response) => {
+    console.log({fail: response});
+    //setGoogleR(response)
+  }
+
+  const responseGoogleOnSuccess = (response) => {
+    console.log({success: response});
+    setGoogleR({success: response})
+  }
 
   const _next = () => {
     var NumberRegex = /^[0-9]*$/;
@@ -146,6 +163,41 @@ export default function Login() {
                   >
                     <div className="button">Continue</div>
                   </a>
+                </div>
+              </div>
+              <div className="col-lg-12">
+                <div className="text-center" style={{flexDirection: "row"}}>
+                  {/*<button type="button"
+                          style={{width: '280px', height: '50px', borderRadius: '50px', marginLeft: '15px',
+                            marginRight: '15px',
+                            marginTop: '10px',
+                            marginBottom: '10px'
+                  }} className="btn">
+                    Facebook
+                  </button>*/}
+
+                  <GoogleLogin
+                      clientId="433334840233-0h51mclvusdm3153q3r74174pa8r61u6.apps.googleusercontent.com"
+                      /*render={renderProps => (
+                          <button type="button"
+                                  onClick={renderProps.onClick}
+                                  disabled={renderProps.disabled}
+                                  style={{
+                                    width: '280px', height: '50px', borderRadius: '50px', marginLeft: '15px', marginRight: '15px',
+                                    marginTop: '10px',
+                                    marginBottom: '10px'
+                          }} className="btn">
+                            Google
+                          </button>
+                      )}*/
+                      buttonText="Login with google"
+                      onSuccess={responseGoogleOnSuccess}
+                      onFailure={responseGoogleOnFail}
+                      cookiePolicy={'single_host_origin'}
+                  />
+
+                  {googleR}
+
                 </div>
               </div>
             </div>
