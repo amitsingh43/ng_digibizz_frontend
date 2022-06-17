@@ -43,7 +43,7 @@ export default function Login() {
 
   const responseGoogleOnSuccess = (response) => {
     console.log({success: response});
-    setGoogleR({success: response})
+    //setGoogleR(response)
   }
 
   const _next = () => {
@@ -196,7 +196,9 @@ export default function Login() {
                       cookiePolicy={'single_host_origin'}
                   />
 
-                  {googleR}
+                  <br/>
+                  <br/>
+                  {googleR && JSON.stringify(googleR)}
 
                 </div>
               </div>
