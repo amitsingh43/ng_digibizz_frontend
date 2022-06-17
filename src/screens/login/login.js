@@ -16,9 +16,6 @@ import {
 import TAndC from "components/termsAndConditions";
 
 
-const responseGoogle = (response) => {
-  console.log(response);
-}
 
 
 export default function Login() {
@@ -36,6 +33,18 @@ export default function Login() {
   const [more, showmore] = useState(false);
   const [isChecked, setCheck] = useState(false);
   const [signup, setSignup] = useState(false);
+  const [googleR, setGoogleR] = useState({});
+
+
+  const responseGoogleOnFail = (response) => {
+    console.log({fail: response});
+    //setGoogleR(response)
+  }
+
+  const responseGoogleOnSuccess = (response) => {
+    console.log({success: response});
+    setGoogleR({success: response})
+  }
 
   const _next = () => {
     var NumberRegex = /^[0-9]*$/;
@@ -158,18 +167,18 @@ export default function Login() {
               </div>
               <div className="col-lg-12">
                 <div className="text-center" style={{flexDirection: "row"}}>
-                  <button type="button"
+                  {/*<button type="button"
                           style={{width: '280px', height: '50px', borderRadius: '50px', marginLeft: '15px',
                             marginRight: '15px',
                             marginTop: '10px',
                             marginBottom: '10px'
                   }} className="btn">
                     Facebook
-                  </button>
+                  </button>*/}
 
                   <GoogleLogin
-                      clientId="243451522541-m0j4cm5brc41br32hdl0uvh0udiu4iad.apps.googleusercontent.com"
-                      render={renderProps => (
+                      clientId="433334840233-0h51mclvusdm3153q3r74174pa8r61u6.apps.googleusercontent.com"
+                      /*render={renderProps => (
                           <button type="button"
                                   onClick={renderProps.onClick}
                                   disabled={renderProps.disabled}
@@ -180,12 +189,14 @@ export default function Login() {
                           }} className="btn">
                             Google
                           </button>
-                      )}
-                      buttonText="Login"
-                      onSuccess={responseGoogle}
-                      onFailure={responseGoogle}
+                      )}*/
+                      buttonText="Login with google"
+                      onSuccess={responseGoogleOnSuccess}
+                      onFailure={responseGoogleOnFail}
                       cookiePolicy={'single_host_origin'}
                   />
+
+                  {googleR}
 
                 </div>
               </div>
