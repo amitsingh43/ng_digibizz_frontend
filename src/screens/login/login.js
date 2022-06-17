@@ -43,7 +43,7 @@ export default function Login() {
 
   const responseGoogleOnSuccess = (response) => {
     console.log({success: response});
-    //setGoogleR(response)
+    setGoogleR(response)
   }
 
   const _next = () => {
