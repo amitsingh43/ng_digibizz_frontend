@@ -4,6 +4,27 @@
   min-height: 85vh;
 }
 
+.facebook-button {
+  width: 280px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 10px 8px;
+  background: #1A77F2;
+  color: white;
+  font-weight: bold;
+}
+
+.google-button {
+  width: 280px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 10px 8px;
+  background: #DD4B39;
+  color: white;
+  font-weight: bold;
+}
+
+
 .login-intro {
   text-align: center;
 }
