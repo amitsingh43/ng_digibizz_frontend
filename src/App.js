@@ -125,6 +125,7 @@ export default function App({ history }) {
           <Route exact path={"/services"} component={DigitalServices} />
           <Route exact path={"/login"} component={Login} />
           <Route exact path={"/register/:customerId"} component={Register} />
+          <Route exact path={"/register/:email/:full_name"} component={Register} />
           {/*  <Route
             exact
             path={"/settings"}

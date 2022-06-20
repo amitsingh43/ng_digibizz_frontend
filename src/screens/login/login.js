@@ -5,7 +5,7 @@ import { add_error, header_login } from "store/actions";
 import "styles/login.css";
 import login_banner from "assets/login_banner.png";
 import OTPInput from "components/OTPInput";
-import { post_user_details } from "screens/questionnaire/store/actions";
+import { post_user_details, socialLoginUpdate } from "screens/questionnaire/store/actions";
 import { GoogleLogin } from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
 
@@ -42,11 +42,23 @@ export default function Login() {
     //setGoogleR(response)
   }
 
+  const Navigate = (body) => {
+    history.push(`/register/${body.email}/${body.full_name}`);
+  };
+
   const responseGoogleOnSuccess = (response) => {
     console.log({success: response});
     if (response.accessToken){
       let profileDetail = response.profileObj;
-      console.log({profileObj: response.profileObj});
+      console.log({profileObj: profileDetail});
+
+      let requestData = {
+        full_name: profileDetail.name,
+        email: profileDetail.email,
+        token: response.accessToken,
+        login_type: "google"
+      }
+      dispatch(socialLoginUpdate(requestData, Navigate));
     }
     setGoogleR(response)
   }
@@ -54,7 +66,13 @@ export default function Login() {
   const responseFacebook = (response) => {
     console.log(response);
     if(response.status !== 'unknown'){
-
+      let requestData = {
+        full_name: response.name,
+        email: response.email,
+        token: response.accessToken,
+        login_type: "facebook"
+      }
+      dispatch(socialLoginUpdate(requestData, Navigate));
     }
   }
 
@@ -82,7 +100,7 @@ export default function Login() {
 
     history.push(`/register/${mobile}`);
 
-    // dispatch(post_user_details(body, Navigate));
+    //dispatch(post_user_details(body, Navigate));
   };
 
   if (more) {

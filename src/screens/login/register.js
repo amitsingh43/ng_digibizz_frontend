@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { get_master_data, add_error, header_login } from "store/actions";
 import "styles/home.css";
 
 import { TELL_ABOUT_YOU, TELL_ABOUT_YOU_DESC } from "store/strings";
 
-export default function Register() {
+export default function Register({match}) {
+  console.log({match: match});
   const dispatch = useDispatch();
   const masterData = useSelector((state) => state.masterData);
   const { cities, industries, gender } = masterData;
@@ -20,8 +21,8 @@ export default function Register() {
   const sel = document.getElementById("city");
   const text = sel ? sel.options[sel.selectedIndex].text : null;
 
-  const [name, setName] = useState(null);
-  const [email, setEmail] = useState(null);
+  const [name, setName] = useState(match.params.full_name ? match.params.full_name : null );
+  const [email, setEmail] = useState(match.params.email ? match.params.email : null );
   const [mobile, setMobile] = useState(null);
   const [otp, setOTP] = useState(null);
   const [referralCode, setReferralCode] = useState(null);
