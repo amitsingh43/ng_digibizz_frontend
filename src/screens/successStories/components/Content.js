@@ -1,7 +1,7 @@
 const Content = () => {
 	return (
 		<div>
-			<h1>Success Stories</h1>
+			<h1>Customer Success Stories</h1>
 			<div className="row">
 				<p className="col-lg-8">
 					DiGibizz has created a long lasting impact on our customers on how

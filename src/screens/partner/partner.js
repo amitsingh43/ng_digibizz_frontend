@@ -197,7 +197,7 @@ const Partner = () => {
                   toggleShow={toggleShow}
                   field={"description"}
                   partner={title}
-                  tAndc={title === "Moneyfy"}
+                  /**tAndc={title === "Moneyfy"}**/
                   setView={setView}
                 />
               )}
