@@ -7,6 +7,7 @@ import login_banner from "assets/login_banner.png";
 import OTPInput from "components/OTPInput";
 import { post_user_details } from "screens/questionnaire/store/actions";
 import { GoogleLogin } from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
 
 import {
   COMPANY_NAME,
@@ -43,7 +44,22 @@ export default function Login() {
 
   const responseGoogleOnSuccess = (response) => {
     console.log({success: response});
+    if (response.accessToken){
+      let profileDetail = response.profileObj;
+      console.log({profileObj: response.profileObj});
+    }
     setGoogleR(response)
+  }
+
+  const responseFacebook = (response) => {
+    console.log(response);
+    if(response.status !== 'unknown'){
+
+    }
+  }
+
+  const componentClicked = () => {
+    console.log('Facebook btn clicked');
   }
 
   const _next = () => {
@@ -166,7 +182,7 @@ export default function Login() {
                 </div>
               </div>
               <div className="col-lg-12">
-                <div className="text-center" style={{flexDirection: "row"}}>
+                <div className="text-center" style={{flexDirection: "row", marginTop: '30px'}}>
                   {/*<button type="button"
                           style={{width: '280px', height: '50px', borderRadius: '50px', marginLeft: '15px',
                             marginRight: '15px',
@@ -176,20 +192,27 @@ export default function Login() {
                     Facebook
                   </button>*/}
 
+                  <FacebookLogin
+                      appId="1177352973113795"
+                      cssClass="btn facebook-button"
+                      autoLoad={true}
+                      icon={<i className="bi bi-facebook"></i>}
+                      fields="name,email,picture"
+                      scope="public_profile, email, user_birthday"
+                      textButton={"Facebook"}
+                      onClick={componentClicked}
+                      callback={responseFacebook} />
+
                   <GoogleLogin
                       clientId="433334840233-0h51mclvusdm3153q3r74174pa8r61u6.apps.googleusercontent.com"
-                      /*render={renderProps => (
+                      render={renderProps => (
                           <button type="button"
                                   onClick={renderProps.onClick}
                                   disabled={renderProps.disabled}
-                                  style={{
-                                    width: '280px', height: '50px', borderRadius: '50px', marginLeft: '15px', marginRight: '15px',
-                                    marginTop: '10px',
-                                    marginBottom: '10px'
-                          }} className="btn">
+                                   className="btn google-button">
                             Google
                           </button>
-                      )}*/
+                      )}
                       buttonText="Login with google"
                       onSuccess={responseGoogleOnSuccess}
                       onFailure={responseGoogleOnFail}
@@ -198,7 +221,7 @@ export default function Login() {
 
                   <br/>
                   <br/>
-                  {googleR && JSON.stringify(googleR)}
+                 {/* {googleR && JSON.stringify(googleR)}*/}
 
                 </div>
               </div>
