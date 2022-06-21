@@ -24,7 +24,7 @@ const UserGuide = () => {
   return (
     <div style={{ marginBottom: 30 }}>
       <div className="row" style={{ textAlign: "center" }}>
-        <div className="heading">Knowledge Center</div>
+        <div className="heading">Knowledge Series</div>
         <p>
           Know how to transform your business through our blogs and updates on
           latest industry trends.

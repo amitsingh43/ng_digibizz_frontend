@@ -13,6 +13,7 @@ import OTPInput from 'components/OTPInput';
 import MetaTags from 'react-meta-tags';
 
 import {
+	KNOW_YOUR_DIGITAL_STATUS,
 	TELL_ABOUT_YOU,
 	TELL_ABOUT_YOU_DESC,
 	TERMS_AND_CONDITIONS_2,
@@ -160,9 +161,10 @@ export default function Home() {
 				<div className="row row1">
 					<div className="col-lg-3 col-xs-12 about">
 						<h1>
-							{TELL_ABOUT_YOU}
+							{KNOW_YOUR_DIGITAL_STATUS}
 							{/* {homepageCounter === 2 && TELL_ABOUT_BUSINESS} */}
 						</h1>
+						<h3 style={{color: '#696969'}}>{TELL_ABOUT_YOU}</h3>
 						<p>
 							{TELL_ABOUT_YOU_DESC}
 							{/* {homepageCounter === 2 && TELL_ABOUT_BUSINESS_DESC} */}
