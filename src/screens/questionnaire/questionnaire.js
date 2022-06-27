@@ -29,6 +29,7 @@ export default function Questionnaire() {
     const[lead, setLead] = useState(localStorage.getItem("lead_id"));
     const topicCounter = useSelector((state) => state.questionCounter);
     const answers = useSelector((state) => state.answers);
+    const lead_data = useSelector((state) => state.userDetails);
     const questionsList = useSelector((state) => state.questionsList);
     const dispatch = useDispatch();
 
@@ -36,6 +37,7 @@ export default function Questionnaire() {
     const {section} = useParams();
     console.log({topicCounter: topicCounter});
     console.log({answers: answers});
+    console.log({lead_data: lead_data && lead_data.user});
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -116,12 +118,13 @@ export default function Questionnaire() {
 
         dispatch(
             createQuestionnare(
+                lead_data && lead_data.user && lead_data.user.medium === "drop_off" ? true : false,
                 lead,
                 answers.filter((val) => val.section === topicCounter - 1),
                 questionsList[topicCounter - 1]["name"],
                 questionsList[topicCounter - 1]["name"] ===
                 questionsList[questionsList.length - 1]["name"],
-                history
+                history,
             )
         );
         window.scrollTo(0, 0);
