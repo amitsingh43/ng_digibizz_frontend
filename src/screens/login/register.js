@@ -12,6 +12,7 @@ export default function Register({match}) {
   const masterData = useSelector((state) => state.masterData);
   const { cities, industries, gender } = masterData;
 
+
   useEffect(() => {
     window.scrollTo(0, 0);
     dispatch(header_login());
@@ -23,7 +24,7 @@ export default function Register({match}) {
 
   const [name, setName] = useState(match.params.full_name ? match.params.full_name : null );
   const [email, setEmail] = useState(match.params.email ? match.params.email : null );
-  const [mobile, setMobile] = useState(null);
+  const [mobile, setMobile] = useState(match.params.customerId ? match.params.customerId : null);
   const [otp, setOTP] = useState(null);
   const [referralCode, setReferralCode] = useState(null);
   const [city, setCity] = useState(null);
@@ -223,8 +224,8 @@ export default function Register({match}) {
                     id="business-name"
                     type="text"
                     className="col-xs-12"
-                    value={businessName}
-                    onChange={(e) => setBusinessName(e.target.value)}
+                    value={mobile}
+                    onChange={(e) => setMobile(e.target.value)}
                   />
                 </div>
               </div>
