@@ -200,15 +200,8 @@ export default function Login() {
                 </div>
               </div>
               <div className="col-lg-12">
+                <div className="or"><span>OR</span></div>
                 <div className="text-center" style={{flexDirection: "row", marginTop: '30px'}}>
-                  {/*<button type="button"
-                          style={{width: '280px', height: '50px', borderRadius: '50px', marginLeft: '15px',
-                            marginRight: '15px',
-                            marginTop: '10px',
-                            marginBottom: '10px'
-                  }} className="btn">
-                    Facebook
-                  </button>*/}
 
                   <FacebookLogin
                       appId="1177352973113795"
