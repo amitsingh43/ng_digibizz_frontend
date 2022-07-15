@@ -5,13 +5,19 @@ import { add_error, header_login } from "store/actions";
 import "styles/login.css";
 import login_banner from "assets/login_banner.png";
 import OTPInput from "components/OTPInput";
-import { post_user_details } from "screens/questionnaire/store/actions";
+import { post_user_details, socialLoginUpdate } from "screens/questionnaire/store/actions";
+import { GoogleLogin } from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
+
 import {
   COMPANY_NAME,
   TERMS_AND_CONDITIONS_2,
   TERMS_AND_CONDITIONS_1,
 } from "store/strings";
 import TAndC from "components/termsAndConditions";
+
+
+
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -28,6 +34,51 @@ export default function Login() {
   const [more, showmore] = useState(false);
   const [isChecked, setCheck] = useState(false);
   const [signup, setSignup] = useState(false);
+  const [googleR, setGoogleR] = useState({});
+
+
+  const responseGoogleOnFail = (response) => {
+    console.log({fail: response});
+    //setGoogleR(response)
+  }
+
+  const Navigate = (body) => {
+    history.push(`/register/${body.email}/${body.full_name}`);
+  };
+
+  const responseGoogleOnSuccess = (response) => {
+    console.log({success: response});
+    if (response.accessToken){
+      let profileDetail = response.profileObj;
+      console.log({profileObj: profileDetail});
+
+      let requestData = {
+        full_name: profileDetail.name,
+        email: profileDetail.email,
+        token: response.accessToken,
+        login_type: "google"
+      }
+      dispatch(socialLoginUpdate(requestData, Navigate));
+    }
+    setGoogleR(response)
+  }
+
+  const responseFacebook = (response) => {
+    console.log(response);
+    if(response.status !== 'unknown'){
+      let requestData = {
+        full_name: response.name,
+        email: response.email,
+        token: response.accessToken,
+        login_type: "facebook"
+      }
+      dispatch(socialLoginUpdate(requestData, Navigate));
+    }
+  }
+
+  const componentClicked = () => {
+    console.log('Facebook btn clicked');
+  }
 
   const _next = () => {
     var NumberRegex = /^[0-9]*$/;
@@ -49,7 +100,7 @@ export default function Login() {
 
     history.push(`/register/${mobile}`);
 
-    // dispatch(post_user_details(body, Navigate));
+    //dispatch(post_user_details(body, Navigate));
   };
 
   if (more) {
@@ -146,6 +197,43 @@ export default function Login() {
                   >
                     <div className="button">Continue</div>
                   </a>
+                </div>
+              </div>
+              <div className="col-lg-12">
+                <div className="or"><span>OR</span></div>
+                <div className="text-center" style={{flexDirection: "row", marginTop: '30px'}}>
+
+                  <FacebookLogin
+                      appId="1177352973113795"
+                      cssClass="btn facebook-button"
+                      autoLoad={true}
+                      icon={<i className="bi bi-facebook"></i>}
+                      fields="name,email,picture"
+                      scope="public_profile, email, user_birthday"
+                      textButton={"Facebook"}
+                      onClick={componentClicked}
+                      callback={responseFacebook} />
+
+                  <GoogleLogin
+                      clientId="433334840233-0h51mclvusdm3153q3r74174pa8r61u6.apps.googleusercontent.com"
+                      render={renderProps => (
+                          <button type="button"
+                                  onClick={renderProps.onClick}
+                                  disabled={renderProps.disabled}
+                                   className="btn google-button">
+                            Google
+                          </button>
+                      )}
+                      buttonText="Login with google"
+                      onSuccess={responseGoogleOnSuccess}
+                      onFailure={responseGoogleOnFail}
+                      cookiePolicy={'single_host_origin'}
+                  />
+
+                  <br/>
+                  <br/>
+                 {/* {googleR && JSON.stringify(googleR)}*/}
+
                 </div>
               </div>
             </div>

@@ -6,6 +6,7 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import { gapi } from "gapi-script";
 //import SecureRoute from "components/secureRoute";
 import { useDispatch, useSelector } from "react-redux";
 import TagManager from "react-gtm-module";
@@ -77,6 +78,18 @@ export default function App({ history }) {
     }
   }, []);
 
+
+  useEffect(()=>{
+    function start(){
+      gapi.client.init({
+        clientId: '433334840233-0h51mclvusdm3153q3r74174pa8r61u6.apps.googleusercontent.com',
+        scope: ""
+      })
+    };
+
+    gapi.load('client:auth2', start);
+  })
+
   return (
     <div style={{ minHeight: "100vh" }}>
       <Router history={history}>
@@ -129,6 +142,7 @@ export default function App({ history }) {
           <Route exact path={"/services"} component={DigitalServices} />
           <Route exact path={"/login"} component={Login} />
           <Route exact path={"/register/:customerId"} component={Register} />
+          <Route exact path={"/register/:email/:full_name"} component={Register} />
           {/*  <Route
             exact
             path={"/settings"}

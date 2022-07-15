@@ -165,3 +165,31 @@ export const get_questions_two =
         // show_toast(message);
       }
     };
+
+
+export const socialLoginUpdate =
+    (body, Navigate, ENDPOINT = "/api/social_login") =>
+        async (dispatch) => {
+          try {
+            const response = await _post(ENDPOINT, body);
+            const { lead, questionnaire } = response;
+            /*localStorage.setItem("lead_id", lead._id);
+            Tracking.trackEvent("CLICK", "REGISTER USER", "REGISTER");
+            dispatch(set_user_details(lead));*/
+            Navigate(body);
+          } catch (error) {
+            let message = "Something went wrong! Please try later.";
+
+            if (
+                error &&
+                error.response &&
+                error.response.data &&
+                error.response.data.message
+            ) {
+              message = error.response.data.message;
+            }
+            Navigate(body);
+            dispatch(add_error(message));
+            // show_toast(message);
+          }
+        };
