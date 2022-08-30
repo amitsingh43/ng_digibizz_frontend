@@ -3,7 +3,7 @@ const contestTAndC = () => {
 	return (
 		<>
 			<div
-				style={{ color: "black", fontSize: 17, marginBottom: 10, marginTop: 10 }}
+				style={{ color: "black", fontSize: 17, marginBottom: 10, marginTop: 35 }}
 			>
 				Contest {"T&C"}
 			</div>
