@@ -45,7 +45,8 @@ export default function Questionnaire() {
         if (questionsList.length === 0 && localStorage.getItem("lead_id")){
             dispatch(get_questions(localStorage.getItem("lead_id")));
             //dispatch(get_questions_two(localStorage.getItem("lead_id"), false, null));
-        }else{
+        }
+        else{
             localStorage.clear();
         }
         /*if (questionsList.length === 0 && localStorage.getItem("lead_id")) {
