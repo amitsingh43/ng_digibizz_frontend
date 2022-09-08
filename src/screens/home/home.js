@@ -20,7 +20,7 @@ import {
 	COMPANY_NAME,
 	TERMS_AND_CONDITIONS_1,
 } from 'store/strings';
-import contest_banner from 'assets/contest_banner.png';
+import contest_banner from 'assets/contest.png';
 
 export default function Home() {
 	const dispatch = useDispatch();
@@ -102,14 +102,12 @@ export default function Home() {
 		} else if (!nameRegex.test(name)) {
 			dispatch(add_error('Please enter a valid name'));
 			return;
-		} else if (!businessName || businessName.length === 0) {
-			dispatch(add_error('Please enter a valid Business Name'));
-			return;
 		}
 		if (!industry) {
 			dispatch(add_error('Please select your industry'));
 			return;
 		}
+
 		if (!city) {
 			dispatch(add_error('Please select your city'));
 			return;
@@ -118,11 +116,7 @@ export default function Home() {
 			dispatch(add_error('Please specify your city.'));
 			return;
 		}
-		if (!email) {
-			dispatch(add_error('Please enter an email address'));
-			return;
-		}
-		if (!emailRegex.test(email)) {
+		if (email && !emailRegex.test(email)) {
 			dispatch(add_error('Please enter a valid email address'));
 			return;
 		}
@@ -210,7 +204,7 @@ export default function Home() {
 
 								<div style={{ marginTop: 40 }}></div>
 								<div className="heading">
-									Business Name<span>*</span>
+									Business Name<span style={{ color: 'grey' }}>(optional)</span>
 								</div>
 								<input
 									id="business-name"
@@ -300,7 +294,7 @@ export default function Home() {
 							</div>
 							<div>
 								<div className="heading" style={{ marginTop: 20 }}>
-									Email id <span>*</span>
+									Email id <span style={{ color: 'grey' }}>(optional)</span>
 								</div>
 								<input
 									type="text"
@@ -390,7 +384,7 @@ export default function Home() {
 									}}
 								/>
 								<div className="heading">
-									Business Name<span>*</span>
+									Business Name <span style={{ color: 'grey' }}>(optional)</span>
 								</div>
 								<input
 									id="business-name"
@@ -459,7 +453,7 @@ export default function Home() {
 							</div>
 							<div>
 								<div className="heading" style={{ marginTop: 20 }}>
-									Email id <span>*</span>
+									Email id <span style={{ color: 'grey' }}>(optional)</span>
 								</div>
 								<input
 									type="text"

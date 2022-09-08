@@ -23,7 +23,7 @@ export default function MainReport({
   setDownloadText,
 }) {
   const dispatch = useDispatch();
-  const { full_name, email, business_name, gender } = userDetails.user;
+  const { full_name, email, gender, business_name } = userDetails.user;
   const [reportImg, setReportImg] = useState(report1);
   const history = useHistory();
 

@@ -100,6 +100,7 @@ export const updateQuestionnare =
                     // TODO: is it required?
                     dispatch(reset_questionnaire());
                     localStorage.setItem("report", "true");
+                    localStorage.setItem("lead_id", lead_id);
                     history.replace("/report");
                 } else {
                     dispatch(increment());
