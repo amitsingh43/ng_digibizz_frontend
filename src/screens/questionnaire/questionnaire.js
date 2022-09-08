@@ -45,7 +45,8 @@ export default function Questionnaire() {
         if (questionsList.length === 0 && localStorage.getItem("lead_id")){
             dispatch(get_questions(localStorage.getItem("lead_id")));
             //dispatch(get_questions_two(localStorage.getItem("lead_id"), false, null));
-        }else{
+        }
+        else{
             localStorage.clear();
         }
         /*if (questionsList.length === 0 && localStorage.getItem("lead_id")) {
@@ -93,8 +94,12 @@ export default function Questionnaire() {
         return <div>Redirecting</div>;
     }
     if (localStorage.getItem("report") === "true") {
-        history.push("/report");
-        return <div>Redirecting</div>;
+        console.log("this one called");
+        setTimeout(function () {
+            history.push("/report");
+            return <div>Redirecting</div>;
+        }, 1000);
+
     }
 
     const next = () => {

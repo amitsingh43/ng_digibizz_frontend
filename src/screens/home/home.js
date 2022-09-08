@@ -102,11 +102,12 @@ export default function Home() {
 		} else if (!nameRegex.test(name)) {
 			dispatch(add_error('Please enter a valid name'));
 			return;
-		} 
+		}
 		if (!industry) {
 			dispatch(add_error('Please select your industry'));
 			return;
 		}
+
 		if (!city) {
 			dispatch(add_error('Please select your city'));
 			return;
@@ -388,7 +389,6 @@ export default function Home() {
 								<input
 									id="business-name"
 									type="text"
-									readOnly
 									className="col-xs-12"
 									value={businessName}
 									onChange={(e) => setBusinessName(e.target.value)}
