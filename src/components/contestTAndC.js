@@ -13,12 +13,11 @@ const contestTAndC = () => {
 					participation in this contest is purely voluntary.
 				</li>
 				<li>
-					Mandatory requirements include a valid business name, participant/owner
-					name, location, contact number {"&"} e-mail id.
+				Mandatory requirements include a participant/owner name, valid business name (optional) location/city, 
+				contact number, e-mail id (optional)
 				</li>
 				<li>
-					All the questions in the contest form are to be answered mandatorily and
-					will be strictly examined.
+				All the mandatory questions in the registration form are to be answered correctly. 
 				</li>
 				<li>
 					NeoGrowth shall not be liable in any manner whatsoever for any claims,
