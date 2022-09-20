@@ -19,12 +19,15 @@ export default function Report() {
   const history = useHistory();
   const setResults = useSelector((state) => state.setResults);
   const userDetails=useSelector(state=>state.userDetails);
+  console.log({setResultssssss: setResults});
+  console.log({userDetailsssss: userDetails});
   const { section_results, percentage, display_recommendations, lead_id } =
     setResults;
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (localStorage.getItem("report") && userDetails.user === null) {
+      console.log("user details is null");
       dispatch(get_results(localStorage.getItem("lead_id")));
     }
     dispatch(header_digital_status());
@@ -39,9 +42,9 @@ export default function Report() {
     return <div>Redirecting</div>;
   }
 
-  if (localStorage.getItem("lead_id") === null) {
-    history.push("/knowStatus");
-    return <div>Redirecting</div>;
+  if (localStorage.getItem("report") !== true) {
+    /*history.push("/knowStatus");
+    return <div>Redirecting</div>;*/
   }
 
   if (userDetails.user === null) {
