@@ -197,6 +197,7 @@ export default function Home() {
 										</option>
 									))}
 								</select>
+
 								<input
 									type="text"
 									className="col-xs-12"
@@ -210,7 +211,7 @@ export default function Home() {
 
 								<div style={{ marginTop: 40 }}></div>
 								<div className="heading">
-									Business Name<span>*</span>
+									Business Name <span>*</span>
 								</div>
 								<input
 									id="business-name"
