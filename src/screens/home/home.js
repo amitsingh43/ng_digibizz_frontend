@@ -204,7 +204,7 @@ export default function Home() {
 
 								<div style={{ marginTop: 40 }}></div>
 								<div className="heading">
-									Business Name <span style={{ color: 'grey' }}>(optional)</span>
+                    Business Name <span style={{ color: 'grey' }}>(optional)</span>
 								</div>
 								<input
 									id="business-name"
