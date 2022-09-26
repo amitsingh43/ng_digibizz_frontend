@@ -18,6 +18,7 @@ import {
 import show_toast from "util/showToast";
 import {header_digital_status} from "store/actions";
 import contest_banner from "assets/contest_banner.png";
+import Tracking from "../../util/tracking";
 
 let answered = [];
 let distinct = [];
@@ -308,6 +309,25 @@ export default function Questionnaire() {
         event.preventDefault();
         event.returnValue = "";
     };
+
+    function activateGTM(){
+        let firstTime = window.localStorage.getItem('discovery');
+        if (firstTime === 'true'){
+            window.localStorage.setItem('discovery', 'done');
+            Tracking.gtmFix();
+        }else if (firstTime === 'done'){
+            //do nothing because gtm already executed
+        }else {
+            window.localStorage.setItem('discovery', 'true');
+            window.location.reload();
+        }
+    }
+
+    useEffect(() => {
+        if (section === "discovery"){
+            activateGTM();
+        }
+    }, [section]);
 
     return (
         <div className="main">

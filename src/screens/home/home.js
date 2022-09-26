@@ -9,6 +9,7 @@ import 'styles/home.css';
 import ContestTAndC from 'components/contestTAndC';
 import TAndC from 'components/termsAndConditions';
 import OTPInput from 'components/OTPInput';
+import Tracking from "../../util/tracking";
 
 import MetaTags from 'react-meta-tags';
 
@@ -135,6 +136,23 @@ export default function Home() {
 		};
 		dispatch(post_user_details(body, Navigate));
 	};
+
+	function activateGTM(){
+		let firstTime = window.localStorage.getItem('knowStatus');
+		if (firstTime === 'true'){
+			window.localStorage.setItem('knowStatus', 'done');
+			Tracking.gtmFix();
+		}else if (firstTime === 'done'){
+			//do nothing because gtm already executed
+		}else {
+			window.localStorage.setItem('knowStatus', 'true');
+			window.location.reload();
+		}
+	}
+
+	useEffect(() => {
+		activateGTM();
+	}, []);
 
 	if (more) {
 		return <TAndC showmore={showmore} setCheck={setCheck} />;

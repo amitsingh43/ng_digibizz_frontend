@@ -1,4 +1,5 @@
 import ReactGA from "react-ga";
+import TagManager from "react-gtm-module";
 
 class Tracking {
 	init() {
@@ -8,6 +9,15 @@ class Tracking {
 	}
 	pageView() {
 		ReactGA.pageview(window.location.pathname + window.location.search);
+	}
+	gtmFix(){
+		const tagManagerArgs = {
+			gtmId: process.env.REACT_APP_GTM_ID,
+		};
+
+		if (process.env.isProd === "no") {
+			TagManager.initialize(tagManagerArgs);
+		}
 	}
 	trackEvent(action, category, label = "") {
 		ReactGA.event({
