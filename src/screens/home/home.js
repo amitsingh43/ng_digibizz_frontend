@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { header_digital_status, get_master_data, add_error } from 'store/actions';
@@ -22,6 +22,7 @@ import {
 	TERMS_AND_CONDITIONS_1,
 } from 'store/strings';
 import contest_banner from 'assets/contest.png';
+
 
 export default function Home() {
 	const dispatch = useDispatch();
@@ -52,7 +53,35 @@ export default function Home() {
 	const [mrOrMs, setMrOrMs] = useState(null);
 	const [otherCity, setOtherCity] = useState('');
 
+
 	const { lead_id } = useParams();
+
+	const location = useLocation()
+
+	const urlSearchParams = new URLSearchParams(location.search)
+
+	const source = urlSearchParams.get("utm_source");
+	const medium = urlSearchParams.get("utm_medium");
+	const campain = urlSearchParams.get("utm_campain");
+	const content = urlSearchParams.get("utm_content");
+	const term = urlSearchParams.get("utm_term");
+
+
+
+
+
+	useEffect(() => {
+		if (lead_id) {
+			//localStorage.setItem("lead_id", lead_id);
+			dispatch(get_questions_two(lead_id, true, Navigate));
+			//history.push('/questionnaire/discovery');
+			//return <h1>Redirecting</h1>;
+		}
+	}, [lead_id]);
+
+	useEffect(() => {
+		activateGTM();
+	}, []);
 
 	if (localStorage.getItem('report')) {
 		history.push('/report');
@@ -68,14 +97,7 @@ export default function Home() {
 		history.push('/questionnaire/discovery');
 	};
 
-	useEffect(() => {
-		if (lead_id){
-			//localStorage.setItem("lead_id", lead_id);
-			dispatch(get_questions_two(lead_id, true, Navigate));
-			//history.push('/questionnaire/discovery');
-			//return <h1>Redirecting</h1>;
-		}
-	}, [lead_id]);
+
 
 	const submitLead = async () => {
 		if (!isChecked) {
@@ -133,26 +155,31 @@ export default function Home() {
 			referral_code: referralCode,
 			other_city: otherCity,
 			email,
+			utm_parameters: {
+				source: { source },
+				medium: { medium },
+				campain: { campain },
+				term: { term },
+				content: { content }
+			}
 		};
 		dispatch(post_user_details(body, Navigate));
 	};
 
-	function activateGTM(){
+
+	function activateGTM() {
 		let firstTime = window.localStorage.getItem('knowStatus');
-		if (firstTime === 'true'){
+		if (firstTime === 'true') {
 			window.localStorage.setItem('knowStatus', 'done');
 			Tracking.gtmFix();
-		}else if (firstTime === 'done'){
+		} else if (firstTime === 'done') {
 			//do nothing because gtm already executed
-		}else {
+		} else {
 			window.localStorage.setItem('knowStatus', 'true');
 			window.location.reload();
 		}
 	}
 
-	useEffect(() => {
-		activateGTM();
-	}, []);
 
 	if (more) {
 		return <TAndC showmore={showmore} setCheck={setCheck} />;
@@ -162,7 +189,7 @@ export default function Home() {
 		<div>
 			<MetaTags>
 				<title>Know Your Digital Status To Begin Your Survey | DiGibizz</title>
-				<meta name="keywords" content="digibizz, online services, app creation, business loans, healthcare, investments, tax filing, sell online, product photoshoot"/>
+				<meta name="keywords" content="digibizz, online services, app creation, business loans, healthcare, investments, tax filing, sell online, product photoshoot" />
 				<meta name="description" content="To know your Digital Status, just fill in some basic information, before you begin your survey. Register now and get ready to transform your business digitally." />
 			</MetaTags>
 
@@ -176,7 +203,7 @@ export default function Home() {
 							{KNOW_YOUR_DIGITAL_STATUS}
 							{/* {homepageCounter === 2 && TELL_ABOUT_BUSINESS} */}
 						</h1>
-						<h3 style={{color: '#696969'}}>{TELL_ABOUT_YOU}</h3>
+						<h3 style={{ color: '#696969' }}>{TELL_ABOUT_YOU}</h3>
 						<p>
 							{TELL_ABOUT_YOU_DESC}
 							{/* {homepageCounter === 2 && TELL_ABOUT_BUSINESS_DESC} */}
