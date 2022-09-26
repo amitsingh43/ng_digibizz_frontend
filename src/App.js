@@ -54,7 +54,7 @@ export default function App({ history }) {
       gtmId: process.env.REACT_APP_GTM_ID,
     };
     if (process.env.isProd === "yes") {
-      TagManager.initialize(tagManagerArgs);
+      //TagManager.initialize(tagManagerArgs);
     }
   };
   useEffect(() => {
