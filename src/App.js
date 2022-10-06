@@ -38,6 +38,7 @@ import show_toast from "./util/showToast";
 import Tracking from "./util/tracking";
 
 // import ExitPopUp from "./components/main/exitPopup";
+
 export default function App({ history }) {
   const dispatch = useDispatch();
   const errorMessage = useSelector((state) => state.errorMessage);
@@ -62,33 +63,37 @@ export default function App({ history }) {
       show_toast(errorMessage);
       dispatch(clear_error());
     }
-
-    const msg = null;
-
-    console.log(msg ?? 'Hello Sasi')
-
   }, [dispatch, errorMessage]);
 
   useEffect(() => {
+    let params = new URLSearchParams(window.location.search);
+    let utmSource = params.get("utm_source");
+
     Tracking.init();
     Tracking.pageView();
     if (!localStorage.getItem("VISITED")) {
+      console.log("VISITED");
       localStorage.setItem("VISITED", "true");
       Tracking.trackEvent("PAGE VIEW", "PLATFORM VISIT");
     }
+    if (utmSource && !sessionStorage.getItem("HOME PAGE")) {
+      console.log("VISITED - utmSource", utmSource);
+      sessionStorage.setItem("HOME PAGE", utmSource);
+      Tracking.trackEvent("PAGE VIEW", "HOME PAGE", utmSource);
+    }
   }, []);
 
-
-  useEffect(()=>{
-    function start(){
+  useEffect(() => {
+    function start() {
       gapi.client.init({
-        clientId: '433334840233-0h51mclvusdm3153q3r74174pa8r61u6.apps.googleusercontent.com',
-        scope: ""
-      })
-    };
+        clientId:
+          "433334840233-0h51mclvusdm3153q3r74174pa8r61u6.apps.googleusercontent.com",
+        scope: "",
+      });
+    }
 
-    gapi.load('client:auth2', start);
-  })
+    gapi.load("client:auth2", start);
+  });
 
   return (
     <div style={{ minHeight: "100vh" }}>
@@ -117,9 +122,9 @@ export default function App({ history }) {
             component={Questionnaire}
           />
           <Route
-              exact
-              path={"/questionnaire_r/:section/:lead_id"}
-              component={Questionnaire}
+            exact
+            path={"/questionnaire_r/:section/:lead_id"}
+            component={Questionnaire}
           />
           <Route exact path={"/report"} component={Report} />
           <Route exact path={"/knowledgeCenter"} component={UserGuide} />
@@ -142,7 +147,11 @@ export default function App({ history }) {
           <Route exact path={"/services"} component={DigitalServices} />
           <Route exact path={"/login"} component={Login} />
           <Route exact path={"/register/:customerId"} component={Register} />
-          <Route exact path={"/register/:email/:full_name"} component={Register} />
+          <Route
+            exact
+            path={"/register/:email/:full_name"}
+            component={Register}
+          />
           {/*  <Route
             exact
             path={"/settings"}
