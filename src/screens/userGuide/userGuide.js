@@ -23,8 +23,8 @@ export default function UserGuide() {
 
     Tracking.init();
     Tracking.pageView();
-    if (window.location.search.includes("utm_source")) {
-      Tracking.trackEvent("PAGE VIEW", "PLATFORM VISIT FROM", utmSource);
+    if (!sessionStorage.getItem("PLATFORM VISIT FROM")) {
+      Tracking.trackEvent("PAGE VIEW", "KNOWLEDGE CENTER", utmSource);
     }
   }, []);
 

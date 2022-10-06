@@ -79,7 +79,7 @@ export default function App({ history }) {
       localStorage.setItem("VISITED", "true");
       Tracking.trackEvent("PAGE VIEW", "PLATFORM VISIT");
     }
-    if (window.location.search.includes("utm_source")) {
+    if (!sessionStorage.getItem("PLATFORM VISIT FROM")) {
       sessionStorage.setItem("PLATFORM VISIT FROM", utmSource);
       Tracking.trackEvent("PAGE VIEW", "PLATFORM VISIT FROM", utmSource);
     }
