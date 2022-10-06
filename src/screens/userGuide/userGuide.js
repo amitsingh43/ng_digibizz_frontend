@@ -21,9 +21,9 @@ export default function UserGuide() {
     let params = new URLSearchParams(window.location.search);
     let utmSource = params.get("utm_source");
 
-    Tracking.init();
     Tracking.pageView();
-    if (!sessionStorage.getItem("PLATFORM VISIT FROM")) {
+    if (utmSource && !sessionStorage.getItem("KNOWLEDGE CENTER")) {
+      sessionStorage.setItem("KNOWLEDGE CENTER", utmSource);
       Tracking.trackEvent("PAGE VIEW", "KNOWLEDGE CENTER", utmSource);
     }
   }, []);

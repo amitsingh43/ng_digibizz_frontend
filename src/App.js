@@ -63,10 +63,6 @@ export default function App({ history }) {
       show_toast(errorMessage);
       dispatch(clear_error());
     }
-
-    const msg = null;
-
-    console.log(msg ?? "Hello Sasi");
   }, [dispatch, errorMessage]);
 
   useEffect(() => {
@@ -76,12 +72,14 @@ export default function App({ history }) {
     Tracking.init();
     Tracking.pageView();
     if (!localStorage.getItem("VISITED")) {
+      console.log("VISITED");
       localStorage.setItem("VISITED", "true");
       Tracking.trackEvent("PAGE VIEW", "PLATFORM VISIT");
     }
-    if (!sessionStorage.getItem("PLATFORM VISIT FROM")) {
-      sessionStorage.setItem("PLATFORM VISIT FROM", utmSource);
-      Tracking.trackEvent("PAGE VIEW", "PLATFORM VISIT FROM", utmSource);
+    if (utmSource && !sessionStorage.getItem("HOME PAGE")) {
+      console.log("VISITED - utmSource", utmSource);
+      sessionStorage.setItem("HOME PAGE", utmSource);
+      Tracking.trackEvent("PAGE VIEW", "HOME PAGE", utmSource);
     }
   }, []);
 
