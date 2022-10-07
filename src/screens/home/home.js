@@ -154,7 +154,7 @@ export default function Home() {
         ? {
             source: utmParams.utm_source || null,
             medium: utmParams.utm_medium || null,
-            campain: utmParams.utm_campaign || null,
+            campaign: utmParams.utm_campaign || null,
             term: utmParams.utm_term || null,
             content: utmParams.utm_content || null,
           }
