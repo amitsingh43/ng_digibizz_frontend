@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory, useParams, useLocation } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
@@ -26,6 +26,7 @@ import {
   TERMS_AND_CONDITIONS_1,
 } from "store/strings";
 import contest_banner from "assets/contest.png";
+import QueryString from "query-string";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -58,17 +59,7 @@ export default function Home() {
 
   const { lead_id } = useParams();
 
-  const location = useLocation();
-
-  const urlSearchParams = new URLSearchParams(location.search);
-
-  const source = urlSearchParams.get("utm_source");
-  const medium = urlSearchParams.get("utm_medium");
-  const campain = urlSearchParams.get("utm_campain");
-  const content = urlSearchParams.get("utm_content");
-  const term = urlSearchParams.get("utm_term");
-
-  console.log(source, medium, campain, content, term);
+  let utmParams = QueryString.parse(window.location.search);
 
   useEffect(() => {
     if (lead_id) {
@@ -159,13 +150,15 @@ export default function Home() {
       referral_code: referralCode,
       other_city: otherCity,
       email,
-      utm_parameters: {
-        source,
-        medium,
-        campain,
-        term,
-        content,
-      },
+      utm_parameters: utmParams.utm_source
+        ? {
+            source: utmParams.utm_source || null,
+            medium: utmParams.utm_medium || null,
+            name: utmParams.utm_campaign || null,
+            term: utmParams.utm_term || null,
+            content: utmParams.utm_content || null,
+          }
+        : {},
     };
     dispatch(post_user_details(body, Navigate));
   };
