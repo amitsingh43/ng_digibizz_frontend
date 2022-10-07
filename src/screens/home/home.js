@@ -61,6 +61,7 @@ export default function Home() {
 
   let utmParams = QueryString.parse(window.location.search);
 
+
   useEffect(() => {
     if (lead_id) {
       //localStorage.setItem("lead_id", lead_id);
