@@ -60,7 +60,6 @@ export default function Home() {
   const { lead_id } = useParams();
 
   let utmParams = QueryString.parse(window.location.search);
-  console.log(utmParams.utm_source);
 
   useEffect(() => {
     if (lead_id) {
