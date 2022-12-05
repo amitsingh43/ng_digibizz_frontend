@@ -42,13 +42,8 @@ import Tracking from "./util/tracking";
 export default function App({ history }) {
   const dispatch = useDispatch();
   const errorMessage = useSelector((state) => state.errorMessage);
-  // const [showPopUp, togglePopUp] = useState(false);
-  //window.onbeforeunload = (e) => {
-  // togglePopUp(!showPopUp);
-  // e.preventDefault();
-  // e.stopPropagation();
-  // return false;
-  //};
+  let params = new URLSearchParams(window.location.search);
+  let utmSource = params.get("utm_source");
 
   window.onload = () => {
     const tagManagerArgs = {

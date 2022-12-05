@@ -21,6 +21,7 @@ export default function UserGuide() {
     let params = new URLSearchParams(window.location.search);
     let utmSource = params.get("utm_source");
 
+    Tracking.init();
     Tracking.pageView();
     if (utmSource && !sessionStorage.getItem("KNOWLEDGE CENTER")) {
       sessionStorage.setItem("KNOWLEDGE CENTER", utmSource);
